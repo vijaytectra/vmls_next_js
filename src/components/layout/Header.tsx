@@ -1,0 +1,228 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const menuItems = [
+  { name: "Home", href: "/" },
+  {
+    name: "About",
+    hasDropdown: true,
+    subItems: [
+      { name: "About VMRF", href: "/about-vmrf" },
+      { name: "About VMLS", href: "/about-vmls" },
+      { name: "Founder", href: "/founder" },
+      { name: "Chancellor", href: "/chancellor" },
+      { name: "Dean", href: "/dean" },
+    ]
+  },
+  {
+    name: "Admission",
+    hasDropdown: true,
+    subItems: [
+      { name: "LL.B. Admissions", href: "/admissions/llb" },
+      { name: "LL.M. Admissions", href: "/admissions/llm" },
+      { name: "Admission Process", href: "/admissions/process" },
+    ]
+  },
+  { name: "Scholarships", href: "/scholarships" },
+
+  { name: "Collaborations", href: "/collaborations" },
+  { name: "International conference", href: "/international-conference" },
+  { name: "Internship and Career Services", href: "/internship-and-career-services" },
+  {
+    name: "Academics",
+    hasDropdown: true,
+    subItems: [
+      { name: "Undergraduate Programme", href: "/admissions/llb" },
+      { name: "Postgraduate Programme", href: "/admissions/llm" },
+    ]
+  },
+  {
+    name: "Leadership",
+    hasDropdown: true,
+    subItems: [
+      { name: "Board of Advisors", href: "/board-of-advisors" },
+      { name: "Mentoring Committee", href: "/mentoring-committee" },
+    ]
+  },
+  {
+    name: "Faculty",
+    hasDropdown: true,
+    subItems: [
+      { name: "Faculty Profiles", href: "/faculty-profiles" },
+      { name: "Faculty Achievements", href: "/faculty-achievements" },
+      { name: "Guest Lecturers", href: "/guest-lecturers" },
+    ]
+  },
+  { name: "Campus Life", href: "/campus-life" },
+  { name: "Library", href: "/library" },
+  { name: "Student Affairs", href: "/student-affairs" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "Contact Us", href: "/contact-us" },
+];
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = (name: string) => {
+    setOpenDropdown(openDropdown === name ? null : name);
+  };
+
+  return (
+    <>
+      <header className="w-full bg-white sticky top-0 z-[1000] shadow-[0_2px_20px_-5px_rgba(0,0,0,0.1)] border-t-[5px] border-[#a31f34] transition-all duration-300 px-0 md:px-0 md:pr-[5%] md:pl-0">
+        <div className="w-full flex justify-between items-center h-16 md:h-20">
+          {/* Left Side: VMRF Logo & Accreditation */}
+          <div className="flex items-center pl-2 md:pl-20">
+            <Link href="/">
+              <Image
+                src="/images/headerleft.webp"
+                alt="Vinayaka Mission's Research Foundation"
+                height={100}
+                width={250}
+                className="h-8 md:h-[51px] w-auto max-w-[140px] md:max-w-none object-contain"
+                priority
+              />
+            </Link>
+          </div>
+
+          {/* Right Side: VMLS Logo and Refined Menu Button */}
+          <div className="flex items-center gap-1 md:gap-4 pr-0 md:pr-0">
+            <div className="flex-shrink-0 border-r border-gray-100 pr-1 md:pr-4">
+              <Image
+                src="/images/headerright.webp"
+                alt="VMLS Vinayaka Mission's Law School"
+                height={85}
+                width={190}
+                className="h-8 md:h-[51px] w-auto max-w-[100px] md:max-w-none object-contain"
+                priority
+              />
+            </div>
+
+            <button
+              onClick={() => setIsMenuOpen(true)}
+              className="group relative flex items-center gap-2 md:gap-3 bg-[#a31f34] text-white px-3 md:px-6 py-2 md:py-3 rounded-full font-inter font-bold text-[10px] md:text-sm uppercase tracking-[0.15em] transition-all duration-500 hover:bg-[#801829] hover:shadow-[0_15px_30px_rgba(163,31,52,0.3)] hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)] active:scale-95 border border-[#fbb03b]/20 mr-2 md:mr-6"
+            >
+              <div className="flex flex-col gap-1 md:gap-1.5 w-5 md:w-6 h-3 md:h-4 justify-center items-center">
+                <span className="block h-0.5 w-full bg-white rounded-full group-hover:bg-[#fbb03b] transition-all duration-300"></span>
+                <span className="block h-0.5 w-3 md:w-4 bg-white rounded-full group-hover:w-full group-hover:bg-[#fbb03b] transition-all duration-300 ml-auto"></span>
+                <span className="block h-0.5 w-full bg-white rounded-full group-hover:bg-[#fbb03b] transition-all duration-300"></span>
+              </div>
+              <span className="hidden md:inline group-hover:text-[#fbb03b] transition-colors duration-300">Menu</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Side Drawer Menu Overlay */}
+      <div
+        className={`fixed inset-0 bg-black/20 z-[5000] transition-opacity duration-300 ${isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"}`}
+        onClick={() => setIsMenuOpen(false)}
+      >
+        {/* Drawer Panel */}
+        <div
+          className={`absolute top-0 right-0 h-full w-full max-w-[450px] bg-white shadow-2xl transition-transform duration-500 ease-out flex flex-col ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+          onClick={(e) => e.stopPropagation()}
+        >
+          {/* Drawer Header */}
+          <div className="flex justify-between items-center p-6 border-b border-gray-100">
+            <h2 className="font-playfair text-[#a31f34] text-2xl font-bold">VMLS Menu</h2>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="p-2 bg-gray-100 hover:bg-[#a31f34] hover:text-white rounded-full transition-all duration-300"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          {/* Menu Items */}
+          <div className="flex-1 overflow-y-auto px-8 py-6">
+            <div className="space-y-1">
+              {menuItems.map((item, index) => (
+                <div key={index} className="flex flex-col border-b border-gray-50 last:border-0">
+                  <div className="group py-3.5 flex justify-between items-center hover:pl-2 transition-all duration-300 cursor-pointer"
+                    onClick={() => item.hasDropdown ? toggleDropdown(item.name) : setIsMenuOpen(false)}>
+                    {item.href ? (
+                      <Link
+                        href={item.href}
+                        className="text-lg font-inter font-semibold text-gray-800 group-hover:text-[#a31f34] transition-colors w-full"
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <span className="text-lg font-inter font-semibold text-gray-800 group-hover:text-[#a31f34] transition-colors">
+                        {item.name}
+                      </span>
+                    )}
+
+                    {item.hasDropdown && (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a31f34" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+                        className={`transition-transform duration-300 ${openDropdown === item.name ? "rotate-180" : ""}`}>
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    )}
+                  </div>
+
+                  {/* Sub-items (Dropdown) */}
+                  {item.hasDropdown && item.subItems && (
+                    <div className={`overflow-hidden transition-all duration-500 bg-gray-50/50 rounded-lg ${openDropdown === item.name ? "max-h-[500px] mb-4 opacity-100" : "max-h-0 opacity-0"}`}>
+                      {item.subItems.map((sub, sIndex) => (
+                        <Link
+                          key={sIndex}
+                          href={sub.href}
+                          onClick={(e) => {
+                            if (sub.href !== "#") {
+                              setIsMenuOpen(false);
+                            }
+                          }}
+                          className="block py-3 px-6 text-base font-inter font-medium text-gray-600 hover:text-[#a31f34] hover:bg-gray-100 transition-all border-l-2 border-transparent hover:border-[#a31f34] w-full"
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Drawer Footer */}
+          <div className="p-8 border-t border-gray-100 bg-gray-50">
+            <div className="space-y-4">
+              <div className="space-y-1">
+                <p className="text-[#a31f34] font-bold text-xs tracking-widest uppercase">Contact Us</p>
+                <p className="text-gray-700 font-medium text-sm">+91 73582 01234</p>
+                <p className="text-gray-600 text-sm">admissions@vmls.edu.in</p>
+              </div>
+              <div className="flex gap-4 pt-2">
+                {[
+                  { name: "FB", href: "https://www.facebook.com/vinayakamissionslawschool/" },
+                  { name: "IG", href: "https://www.instagram.com/vinayakamissionslawschool/" },
+                  { name: "TW", href: "https://x.com/Vmlschennai" },
+                  { name: "LI", href: "https://www.linkedin.com/company/vinayakamissionslawschool/" },
+                  { name: "YT", href: "https://www.youtube.com/@VinayakaMissionsLawSchoolVMLS" }
+                ].map((social) => (
+                  <Link
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[11px] font-bold text-gray-500 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34] transition-all cursor-pointer"
+                  >
+                    {social.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
