@@ -289,7 +289,7 @@ const facultyData: FacultyMember[] = [
 
 export default function FacultyGrid() {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-10">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-10">
       {facultyData.map((member, index) => {
         const CardContent = (
           <div className="flex flex-col items-center bg-white rounded-xl md:rounded-2xl border border-gray-100 shadow-md md:shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group h-full">
