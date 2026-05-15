@@ -3,6 +3,9 @@ import Link from "next/link";
 import { Phone, Mail } from "lucide-react";
 
 export default function Footer() {
+  const campusMapUrl = "https://www.google.com/maps/place/AARUPADAI+VEEDU+INSTITUTE+OF+TECHNOLOGY/@12.65669,80.180111,12z/data=!4m6!3m5!1s0x3a52666a3b419c71:0xbf0f1882c4b4ceb1!8m2!3d12.65669!4d80.1801109!16s%2Fg%2F1tfkzmj4?hl=en&entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D";
+  const cityOfficeMapUrl = "https://www.google.com/maps/search/Vinayaka+Missions+University+City+Office+Kilpauk/@13.0784,80.2415,17z";
+
   return (
     <footer className="bg-[#f4f4f4] pt-12 pb-8 px-[5%] border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
@@ -82,36 +85,46 @@ export default function Footer() {
           {/* Addresses Column */}
           <div className="md:col-span-4 space-y-6 md:space-y-10">
             <div className="space-y-5">
-              <h4 className="font-inter font-bold text-[#a31f34] flex items-center gap-3 uppercase tracking-wider text-base">
-                <Image 
-                  src="/images/footer/map.webp" 
-                  alt="Map" 
-                  width={20} 
-                  height={20} 
-                  className="object-contain" 
-                  style={{ width: 'auto', height: 'auto' }} 
-                />
-                VMLS Campus Address
-              </h4>
-              <p className="text-[#333] text-base leading-relaxed font-medium max-w-sm">
-                Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road), Paiyanoor, Chennai - 603104, Tamil Nadu, India
-              </p>
+              <Link 
+                href={campusMapUrl} 
+                target="_blank"
+                className="group block"
+              >
+                <h4 className="font-inter font-bold text-[#a31f34] flex items-center gap-3 uppercase tracking-wider text-base group-hover:underline">
+                  <Image 
+                    src="/images/footer/map.webp" 
+                    alt="Map" 
+                    width={20} 
+                    height={20} 
+                    className="object-contain" 
+                  />
+                  VMLS Campus Address
+                </h4>
+                <p className="text-[#333] text-base leading-relaxed font-medium max-w-sm mt-4 hover:text-[#a31f34] transition-colors">
+                  Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road), Paiyanoor, Chennai - 603104, Tamil Nadu, India
+                </p>
+              </Link>
             </div>
             <div className="space-y-5">
-              <h4 className="font-inter font-bold text-[#a31f34] flex items-center gap-3 uppercase tracking-wider text-base">
-                <Image 
-                  src="/images/footer/map.webp" 
-                  alt="Map" 
-                  width={20} 
-                  height={20} 
-                  className="object-contain" 
-                  style={{ width: 'auto', height: 'auto' }} 
-                />
-                Corporate Office Address
-              </h4>
-              <p className="text-[#333] text-base leading-relaxed font-medium max-w-sm">
-                No: 213, Old No: 160, Behind Doshi Tower, Poonamallee High Road, Kilpauk, Chennai - 600010, Tamil Nadu, India
-              </p>
+              <Link 
+                href={cityOfficeMapUrl} 
+                target="_blank"
+                className="group block"
+              >
+                <h4 className="font-inter font-bold text-[#a31f34] flex items-center gap-3 uppercase tracking-wider text-base group-hover:underline">
+                  <Image 
+                    src="/images/footer/map.webp" 
+                    alt="Map" 
+                    width={20} 
+                    height={20} 
+                    className="object-contain" 
+                  />
+                  Corporate Office Address
+                </h4>
+                <p className="text-[#333] text-base leading-relaxed font-medium max-w-sm mt-4 hover:text-[#a31f34] transition-colors">
+                  No: 213, Old No: 160, Behind Doshi Tower, Poonamallee High Road, Kilpauk, Chennai - 600010, Tamil Nadu, India
+                </p>
+              </Link>
             </div>
           </div>
 

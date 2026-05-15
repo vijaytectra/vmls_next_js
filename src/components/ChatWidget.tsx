@@ -21,7 +21,7 @@ export default function ChatWidget() {
 
   return (
     <div className="fixed bottom-6 right-6 z-[999] opacity-100 transition-opacity duration-500">
-      <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-[320px] overflow-hidden relative">
+      <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-[280px] md:w-[320px] overflow-hidden relative">
         {/* Close Button */}
         <button 
           onClick={() => setIsVisible(false)}

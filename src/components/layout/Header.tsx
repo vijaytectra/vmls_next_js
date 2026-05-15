@@ -25,6 +25,7 @@ const menuItems = [
       { name: "Admission Process", href: "/admissions/process" },
     ]
   },
+  { name: "VLAT Exam", href: "https://vmls.edu.in/vlat/" },
   { name: "Scholarships", href: "/scholarships" },
 
   { name: "Collaborations", href: "/collaborations" },
