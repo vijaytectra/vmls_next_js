@@ -10,6 +10,23 @@ const GTM_ID = "GTM-TDRKCK4P";
 const GA_ID = "G-VQXVM6ER4R";
 const FB_PIXEL_ID = "609012521626024";
 
+const productSchema = {
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  name: "Law College in Chennai, India | LL.B & LL.M Programs",
+  image: "https://vmls.edu.in/",
+  description:
+    "Apply Today! Vinayaka Mission's Law School, the best Law College in Chennai, India, offers LL.B. and LL.M. programs in Corporate & Financial Laws and Commercial Dispute Resolution.",
+  brand: { "@type": "Brand", name: "Vinayaka Mission's Law School (VMLS)" },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.9,
+    bestRating: 5,
+    worstRating: 1,
+    ratingCount: 2567,
+  },
+};
+
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@id": "https://vmls.edu.in/",
@@ -111,6 +128,12 @@ export default function RootLayout({
           fbq('track', 'PageView');
         `}</Script>
 
+        <Script
+          id="ld-product"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        />
         <Script
           id="ld-localbusiness"
           type="application/ld+json"
