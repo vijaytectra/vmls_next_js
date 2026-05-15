@@ -121,7 +121,7 @@ export default function FloatingActions() {
               border: 'none',
               cursor: 'pointer',
               fontSize: '12px',
-              mdFontSize: '14px', // Handled by tailwind
+              mdFontSize: '14px',
               fontWeight: '600',
               letterSpacing: '0.5px',
               borderTopRightRadius: '8px',
@@ -147,7 +147,7 @@ export default function FloatingActions() {
               border: 'none',
               cursor: 'pointer',
               fontSize: '12px',
-              mdFontSize: '14px', // Handled by tailwind
+              mdFontSize: '14px',
               fontWeight: '600',
               letterSpacing: '0.5px',
               borderTopRightRadius: '8px',

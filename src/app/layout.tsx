@@ -53,7 +53,7 @@ export default function RootLayout({
           {children}
         </div>
         <Footer />
-        <FloatingActions />
+            <FloatingActions />   
         <Script id="npf-config" strategy="afterInteractive">
           {`
             var npf_d='https://admissions.vmls.edu.in';
@@ -65,7 +65,6 @@ export default function RootLayout({
             document.head.appendChild(s);
           `}
         </Script>
-
       </body>
     </html>
   );
