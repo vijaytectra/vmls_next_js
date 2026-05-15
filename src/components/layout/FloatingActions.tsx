@@ -68,7 +68,7 @@ export default function FloatingActions() {
       <div className="fixed left-0 top-1/2 -translate-y-1/2 z-[2000]">
         <Link
           href="/chat-with-student"
-          className="block text-[11px] md:text-[14px] font-inter font-bold tracking-wider uppercase bg-[#ae0808] text-white py-4 md:py-6 px-2 md:px-3 rounded-r-lg shadow-xl hover:bg-[#800000] transition-all duration-300"
+          className="block text-[9px] md:text-[12px] font-inter font-bold tracking-wider uppercase bg-[#ae0808] text-white py-2 md:py-4 px-1 md:px-1.5 rounded-r-lg shadow-xl hover:bg-[#800000] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
@@ -83,7 +83,7 @@ export default function FloatingActions() {
         <Link 
           href="https://admissions.vmls.edu.in/" 
           target="_blank" 
-          className="block text-[11px] md:text-[14px] font-inter font-bold tracking-wider uppercase bg-[#ae0808] text-white py-4 md:py-6 px-2 md:px-3 rounded-l-lg shadow-xl hover:bg-[#800000] transition-all duration-300"
+          className="block text-[9px] md:text-[12px] font-inter font-bold tracking-wider uppercase bg-[#ae0808] text-white py-2 md:py-4 px-1 md:px-1.5 rounded-l-lg shadow-xl hover:bg-[#800000] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
@@ -94,7 +94,7 @@ export default function FloatingActions() {
         </Link>
         
         <span 
-          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[11px] md:text-[14px] font-inter font-bold tracking-wider uppercase bg-[#8b0000] text-white py-4 md:py-6 px-2 md:px-3 rounded-l-lg shadow-xl cursor-pointer hover:bg-[#600000] transition-all duration-300"
+          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[9px] md:text-[12px] font-inter font-bold tracking-wider uppercase bg-[#8b0000] text-white py-2 md:py-4 px-1 md:px-1.5 rounded-l-lg shadow-xl cursor-pointer hover:bg-[#600000] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
