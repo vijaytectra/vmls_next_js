@@ -21,10 +21,7 @@ const infraItems = [
     video: "/videos/corridor.mp4",
     href: "/main-building"
   }
-
 ];
-
-
 
 export default function InfrastructureSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -41,13 +38,13 @@ export default function InfrastructureSection() {
   }, []);
 
   return (
-    <section className="pt-2 pb-4 md:pt-4 md:pb-4 bg-white overflow-hidden">
+    <section className="pt-2 pb-4 md:pt-4 md:pb-4 bg-white overflow-hidden text-black">
       <div className="max-w-[1600px] mx-auto px-[5%]">
         <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a] mb-2 md:mb-16 text-center">
           Our Infrastructure
         </h2>
 
-        <div className="flex flex-col lg:flex-row h-[600px] lg:h-[550px] gap-4">
+        <div className="flex flex-col lg:flex-row h-[900px] lg:h-[550px] gap-4">
           {infraItems.map((item, index) => {
             const isHovered = hoveredIndex === index;
             const isAnyHovered = hoveredIndex !== null;
@@ -93,7 +90,6 @@ export default function InfrastructureSection() {
                       </div>
 
                       <Link href={item.href} className="flex items-center gap-3 text-white font-inter text-xs font-bold uppercase tracking-widest group/btn">
-
                         <span>Read More</span>
                         <span className="w-8 h-[1px] bg-white transition-all group-hover/btn:w-12"></span>
                       </Link>

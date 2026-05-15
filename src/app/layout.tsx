@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   title: "VMLS – Best Law College in Chennai offering LL.B. (Hons.), B.A. LL.B (Hons.), B.B.A.LL.B. (Hons.), B.Com.LL.B. (Hons.), and 1-year LL.M. programmes.",
   description: "Vinayaka Mission's Law School (VMLS) is one of the best law colleges in Chennai, offering world-class legal education with international collaborations and modern infrastructure.",
   icons: {
-    icon: "/images/headerright.webp",
-    shortcut: "/images/headerright.webp",
-    apple: "/images/headerright.webp",
+    icon: "/images/favicon.ico",
+    shortcut: "/images/favicon.ico",
+    apple: "/images/favicon.ico",
   }
 };
 
