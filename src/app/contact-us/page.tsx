@@ -2,6 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function ContactUsPage() {
+  const mapUrl = "https://www.google.com/maps/place/AARUPADAI+VEEDU+INSTITUTE+OF+TECHNOLOGY/@12.65669,80.180111,12z/data=!4m6!3m5!1s0x3a52666a3b419c71:0xbf0f1882c4b4ceb1!8m2!3d12.65669!4d80.1801109!16s%2Fg%2F1tfkzmj4?hl=en&entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D";
+  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.3644342416!2d80.177536!3d12.65669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52666a3b419c71%3A0xbf0f1882c4b4ceb1!2sAARUPADAI%20VEEDU%20INSTITUTE%20OF%20TECHNOLOGY!5e0!3m2!1sen!2sin!4v1715162400000!5m2!1sen!2sin";
+
   return (
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
@@ -15,7 +18,6 @@ export default function ContactUsPage() {
 
       {/* Hero Header with Background Image */}
       <header className="relative py-20 md:py-32 px-[5%] overflow-hidden">
-        {/* Background Image & Overlay */}
         <div className="absolute inset-0">
           <Image
             src="/images/vmls/frame-1@3x.webp"
@@ -53,10 +55,16 @@ export default function ContactUsPage() {
                 VMLS Campus Address
               </h2>
               <div className="font-inter text-gray-600 space-y-4 text-base md:text-lg leading-relaxed">
-                <p>
-                  Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road),<br />
-                  Paiyanoor, Chennai - 603104, Tamil Nadu, India.
-                </p>
+                <Link 
+                  href={mapUrl}
+                  target="_blank"
+                  className="block hover:text-[#a31f34] transition-colors group"
+                >
+                  <p className="group-hover:underline decoration-[#a31f34] underline-offset-4">
+                    Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road),<br />
+                    Paiyanoor, Chennai - 603104, Tamil Nadu, India.
+                  </p>
+                </Link>
               </div>
             </div>
 
@@ -112,10 +120,10 @@ export default function ContactUsPage() {
               </div>
             </div>
 
-            {/* Map Snippet (Simulated) */}
-            <div className="relative aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-xl border border-gray-100">
+            {/* Map Snippet */}
+            <div className="relative aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-xl border border-gray-100 group">
                <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31135.21528620245!2d80.123!3d12.678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDQwJzQwLjgiTiA4MMKwMDcnMjIuOCJF!5e0!3m2!1sen!2sin!4v1715162400000!5m2!1sen!2sin" 
+                src={mapEmbedUrl}
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
@@ -124,6 +132,17 @@ export default function ContactUsPage() {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="grayscale-[0.5] hover:grayscale-0 transition-all duration-700"
               ></iframe>
+              {/* Open in Maps Overlay Button */}
+              <Link 
+                href={mapUrl}
+                target="_blank"
+                className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-gray-100 flex items-center gap-2 text-sm font-bold text-[#a31f34] hover:bg-white transition-all transform hover:scale-105 active:scale-95 z-10"
+              >
+                Open in Maps
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </Link>
             </div>
           </div>
         </div>
