@@ -68,7 +68,7 @@ export default function FloatingActions() {
       <div className="fixed left-0 top-1/2 -translate-y-1/2 z-[2000]">
         <Link
           href="/chat-with-student"
-          className="block text-[14px] md:text-[16px] font-inter font-medium bg-[#ae0808] text-white py-6 md:py-8 px-2 md:px-3 rounded-none shadow-lg hover:bg-[#800000] transition-all duration-300"
+          className="block text-[14px] md:text-[16px] font-inter font-medium bg-[#ae0808] text-white py-2 md:py-3 px-1 md:px-0.5 rounded-none shadow-lg hover:bg-[#800000] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
@@ -80,9 +80,9 @@ export default function FloatingActions() {
 
       {/* Right Side Sticky Buttons: Apply & Enquire */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[2000] flex flex-col gap-0.5">
-        <Link 
-          href="https://admissions.vmls.edu.in/" 
-          target="_blank" 
+        <Link
+          href="https://admissions.vmls.edu.in/"
+          target="_blank"
           className="block text-[14px] md:text-[16px] font-inter font-medium bg-[#ae0808] text-white py-6 md:py-8 px-2 md:px-3 rounded-none shadow-lg hover:bg-[#800000] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
@@ -92,9 +92,9 @@ export default function FloatingActions() {
         >
           Apply Now!
         </Link>
-        
-        <span 
-          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[14px] md:text-[16px] font-inter font-medium bg-[#8b0000] text-white py-6 md:py-8 px-2 md:px-3 rounded-none shadow-lg cursor-pointer hover:bg-[#600000] transition-all duration-300"
+
+        <span
+          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[14px] md:text-[16px] font-inter font-medium bg-[#8b0000] text-white py-6 md:py-8 px-5 md:px-3 rounded-none shadow-lg cursor-pointer hover:bg-[#600000] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
