@@ -38,7 +38,6 @@ export default function FloatingActions() {
       chatDiv.setAttribute("data-w", "1189388fc18c4ac0952bc3816b615524");
       chatDiv.style.display = "none";
       document.body.appendChild(chatDiv);
-
       const chatbotScript = document.createElement("script");
       chatbotScript.type = "text/javascript";
       chatbotScript.async = true;
