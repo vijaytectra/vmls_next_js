@@ -182,7 +182,7 @@ export default function Footer() {
             <Link href="/terms-conditions" className="hover:text-[#a31f34] transition-colors">Terms and Conditions</Link>
           </div>
           <p className="text-[10px] md:text-sm font-medium text-gray-400 tracking-widest">
-            COPYRIGHT © 2025 VMLS
+            COPYRIGHT © 2026 VMLS
           </p>
         </div>
       </div>
