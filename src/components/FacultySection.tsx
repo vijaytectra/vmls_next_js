@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function FacultySection() {
   return (
-    <section className="py-8 md:pt-12 md:pb-4 px-[5%] bg-[#ffffff] overflow-hidden">
+    <section className="py-6 md:pt-8 md:pb-4 px-[5%] bg-[#ffffff] overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
         
         {/* Left Side: Content */}
@@ -13,7 +13,7 @@ export default function FacultySection() {
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
             
             <div className="pl-10">
-              <h2 className="font-playfair text-3xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-6 md:mb-8 leading-tight">
+              <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a] mb-6 md:mb-8 leading-tight">
                 Faculty at VMLS
               </h2>
               
@@ -51,7 +51,6 @@ export default function FacultySection() {
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 border-[8px] border-white/10 pointer-events-none"></div>
           </div>
         </div>
 

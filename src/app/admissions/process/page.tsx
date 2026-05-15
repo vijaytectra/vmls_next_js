@@ -37,7 +37,7 @@ export default function AdmissionProcessPage() {
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
             <div className="pl-6 md:pl-10">
-              <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-6 leading-tight">
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
                 Admission Process
               </h1>
               <p className="font-inter text-lg md:text-xl text-gray-800 max-w-2xl leading-relaxed font-medium">
@@ -188,7 +188,7 @@ export default function AdmissionProcessPage() {
 
         <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-12">
-            <h2 className="font-playfair text-3xl md:text-4xl text-[#1a1a1a] mb-4">Admission Process</h2>
+            <h2 className="font-playfair text-2xl md:text-3xl text-[#1a1a1a] mb-2">Admission Process</h2>
             <div className="w-16 h-1 bg-[#a31f34] mx-auto rounded-full"></div>
           </div>
 
@@ -237,7 +237,7 @@ export default function AdmissionProcessPage() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-100/30 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
           
           <div className="relative z-10">
-            <h2 className="font-playfair text-2xl md:text-3xl text-[#1a1a1a] mb-6 border-b border-yellow-200 pb-4">
+            <h2 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mb-6 border-b border-yellow-200 pb-4">
               VLAT- (Vinayaka Mission's Law Admissions Test)
             </h2>
             <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed mb-8">
@@ -275,10 +275,10 @@ export default function AdmissionProcessPage() {
       {/* Closing CTA Section */}
       <section className="px-[5%] pt-2 pb-6 bg-white">
         <div className="max-w-4xl mx-auto text-center py-12 bg-[#f8f9fa] border border-gray-100 rounded-3xl shadow-sm">
-          <h2 className="font-playfair text-2xl md:text-3xl text-[#1a1a1a] mb-4">Need Help with Admissions?</h2>
+          <h2 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mb-4">Need Help with Admissions?</h2>
           <p className="font-inter text-sm text-gray-600 mb-8 max-w-xl mx-auto">Our admissions team is here to guide you through every step of the process. Reach out to us for any clarifications.</p>
           <div className="flex flex-wrap justify-center gap-4">
-             <Link href="/contact" className="px-6 py-2.5 bg-[#a31f34] text-white font-inter font-bold rounded-lg hover:bg-[#801829] transition-all text-sm">Contact Us</Link>
+             <Link href="/contact-us" className="px-6 py-2.5 bg-[#a31f34] text-white font-inter font-bold rounded-lg hover:bg-[#801829] transition-all text-sm">Contact Us</Link>
              <Link href="https://admissions.vmls.edu.in/" className="px-6 py-2.5 border-2 border-[#a31f34] text-[#a31f34] font-inter font-bold rounded-lg hover:bg-[#a31f34] hover:text-white transition-all text-sm">Apply Now</Link>
           </div>
         </div>

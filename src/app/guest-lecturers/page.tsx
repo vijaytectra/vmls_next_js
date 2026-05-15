@@ -19,7 +19,7 @@ export default function GuestLecturersPage() {
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-[450px]">
           <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight whitespace-nowrap">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-nowrap">
               Guest <span className="text-[#fbb03b]">Lecturers</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">

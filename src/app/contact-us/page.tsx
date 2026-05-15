@@ -97,7 +97,7 @@ export default function ContactUsPage() {
           {/* Right: Visuals */}
           <div className="space-y-12">
             {/* Campus Image */}
-            <div className="relative aspect-video md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border-[12px] border-white">
+            <div className="relative aspect-video md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group">
               <Image
                 src="/images/vmrf/vmrf-header.webp"
                 alt="VMLS Campus Building"

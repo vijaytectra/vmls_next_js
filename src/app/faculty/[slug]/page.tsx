@@ -97,7 +97,10 @@ const facultyData: FacultyData[] = [
     slug: "shenbagavalli",
     email: "shenbagavalli@vmls.edu.in",
     bio: [
-      "Dr. Shenbagavalli is a high-energy professional and an excellent communicator with exceptional interpersonal and problem-solving skills and a history of excelling across academic and corporate sectors; poised for challenging assignments in Research, Training & Development, and Teaching with an organization of high repute. A perfect blend of academics, research, and industry experience. The rich experience acquired over the 26 years made her an enthusiastic individual possessing zeal for learning with excellent communication. She is keen, conscientious, with a friendly disposition; and has been placed in positions of trust with a great deal of responsibility. She is an efficient and reliable individual who can work alone or as part of a team, work well under extreme pressure, and remain calm with the ability to prioritize. Her proven ability to organize, prioritize, and work in a team and by herself has always made her a stand-out member of the department. She has been appreciated for her excellent Teaching Capacity and Counseling power. Her excellence has been recognized by the institutions and deputed her for different administrative roles in placement, admissions, accreditation, and training. She takes self-initiative through innovative teaching practices such as Case Study Method, Simulation classes, Application-based learning, Project-based learning, and Movie Reviews. She is working as a reviewer for 26 US and UK-based journals. She holds a lifetime membership in the International Society for Development and Sustainability (ISDS)."
+      "Dr. Shenbagavalli is a high-energy professional and an excellent communicator with exceptional interpersonal and problem-solving skills and a history of excelling across academic and corporate sectors; poised for challenging assignments in Research, Training & Development, and Teaching with an organization of high repute.",
+      "A perfect blend of academics, research, and industry experience, she brings over 26 years of rich experience. She is an enthusiastic individual possessing zeal for learning with excellent communication, keen, conscientious, and with a friendly disposition.",
+      "She has been placed in positions of trust with a great deal of responsibility, proving herself to be an efficient and reliable individual who can work alone or as part of a team, work well under extreme pressure, and remain calm with the ability to prioritize.",
+      "Her excellence has been recognized by various institutions, leading to administrative roles in placement, admissions, accreditation, and training. She takes self-initiative through innovative teaching practices such as the Case Study Method, Simulation classes, and Application-based learning. She is currently a reviewer for 26 US and UK-based journals and holds a lifetime membership in the International Society for Development and Sustainability (ISDS)."
     ]
   },
   {
@@ -597,9 +600,9 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
           {/* Left Side: Photo */}
-          <div className="lg:w-[40%] w-full order-1 flex justify-center items-center mb-8 lg:mb-0">
-            <div className="relative w-[75%] max-w-[280px] md:w-full md:max-w-[420px] aspect-[3/4] bg-white p-1 shadow-[0_30px_70px_rgba(0,0,0,0.12)] border border-gray-100 transition-transform duration-500 hover:-translate-y-2">
-              <div className="relative w-full h-full overflow-hidden border border-gray-200">
+          <div className="lg:w-[35%] w-full order-1 flex justify-center items-center mb-8 lg:mb-0">
+            <div className="relative w-[65%] max-w-[240px] md:w-full md:max-w-[340px] aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
+              <div className="relative w-full h-full overflow-hidden">
                 <Image
                   src={faculty.image}
                   alt={faculty.name}
@@ -613,9 +616,9 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
           </div>
 
           {/* Right Side: Content */}
-          <div className="lg:w-[60%] order-2 flex flex-col justify-center">
+          <div className="lg:w-[65%] order-2 flex flex-col justify-center">
             <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Faculty Member</h3>
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-6 leading-tight">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
               {faculty.name}
             </h1>
 

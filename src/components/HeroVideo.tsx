@@ -19,13 +19,13 @@ export default function HeroVideo() {
 
       {/* Main Content (Top/Center) */}
       <div className="relative z-10 px-[5%] pb-4 md:pb-[10px] text-shadow-lg">
-        <h1 className="text-[clamp(1.5rem,7vw,4.5rem)] font-normal mb-2 md:mb-[15px] leading-tight font-playfair">
+        <h1 className="text-[clamp(1.5rem,6vw,3.8rem)] font-normal mb-2 md:mb-[15px] leading-tight font-playfair">
           Vinayaka Mission's Law School
         </h1>
-        <p className="text-[clamp(0.75rem,2.2vw,1.4rem)] mb-2 md:mb-[15px] font-medium font-inter tracking-wide opacity-90">
+        <p className="text-[clamp(0.75rem,1.8vw,1.2rem)] mb-2 md:mb-[15px] font-medium font-inter tracking-wide opacity-90">
           Bilingual Excellence | Global Standards | Inclusive Justice
         </p>
-        <h2 className="text-[clamp(1.2rem,4vw,2.5rem)] font-normal font-playfair">
+        <h2 className="text-[clamp(1rem,3.5vw,2.2rem)] font-normal font-playfair">
           Law School of the Future
         </h2>
       </div>

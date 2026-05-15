@@ -143,13 +143,13 @@ export default function LibraryPage() {
                       <button
                         key={item.label}
                         onClick={(e) => { e.preventDefault(); setIsTurnitinModalOpen(true); }}
-                        className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#a31f34] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md text-left"
+                        className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md text-left"
                       >
                         {item.label}
                         <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
                       </button>
                     ) : (
-                      <Link key={item.label} href={item.href} target={item.href !== '#' ? "_blank" : undefined} rel={item.href !== '#' ? "noopener noreferrer" : undefined} className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#a31f34] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md">
+                      <Link key={item.label} href={item.href} target={item.href !== '#' ? "_blank" : undefined} rel={item.href !== '#' ? "noopener noreferrer" : undefined} className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md">
                         {item.label}
                         <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
                       </Link>
@@ -334,12 +334,14 @@ export default function LibraryPage() {
                     'Remote Access', 'Inter-Library Loan', 'Book Display', 'Thematic Display',
                     'Career Corner', 'Excellence Collection', 'Textbook Procurement', 'Newspaper Service', 'Reprography Service'
                   ].map((service) => {
+                    const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
+                    
                     if (service === 'Reference Service') {
                       return (
                         <button
                           key={service}
                           onClick={() => setIsReferenceModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -350,7 +352,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsCourseGuideModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -361,7 +363,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsNewArrivalsModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -372,7 +374,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsRemoteAccessModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -383,7 +385,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsILLModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -394,7 +396,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsBookDisplayModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -405,7 +407,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsThematicDisplayModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -416,7 +418,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsCareerCornerModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -427,7 +429,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsExcellenceCollectionModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -438,7 +440,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsTextbookProcurementModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -449,7 +451,7 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsNewspaperServiceModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
@@ -460,14 +462,14 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsReprographyServiceModalOpen(true)}
-                          className="p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight"
+                          className={buttonStyles}
                         >
                           {service}
                         </button>
                       );
                     }
                     return (
-                      <Link key={service} href={service === 'OPAC' ? "https://opac.vmls.edu.in/" : "#"} target={service === 'OPAC' ? "_blank" : undefined} rel={service === 'OPAC' ? "noopener noreferrer" : undefined} className="p-2 bg-[#1a1a1a] text-white text-[11px] md:text-[9px] font-bold uppercase text-center rounded hover:bg-[#a31f34] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[55px] shadow-sm hover:shadow-md leading-tight">
+                      <Link key={service} href={service === 'OPAC' ? "https://opac.vmls.edu.in/" : "#"} target={service === 'OPAC' ? "_blank" : undefined} rel={service === 'OPAC' ? "noopener noreferrer" : undefined} className={buttonStyles}>
                         {service}
                       </Link>
                     );

@@ -11,7 +11,7 @@ const centres = [
 
 export default function CentresOfExcellenceSection() {
   return (
-    <section className="py-6 md:py-8 px-[5%] bg-[#fafafa] relative overflow-hidden">
+    <section className="py-4 md:py-6 px-[5%] bg-[#fafafa] relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#a31f34]/[0.02] rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
       
@@ -23,7 +23,7 @@ export default function CentresOfExcellenceSection() {
             <span className="text-[#a31f34] text-xs font-bold uppercase tracking-[0.3em]">Research & Innovation</span>
             <div className="w-8 h-[1px] bg-[#a31f34]"></div>
           </div>
-          <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6">
+          <h2 className="font-playfair text-3xl md:text-5xl text-gray-900 mb-6">
             Centres of Excellence
           </h2>
           <div className="w-20 h-1 bg-[#a31f34] mx-auto"></div>
@@ -34,7 +34,7 @@ export default function CentresOfExcellenceSection() {
           {centres.map((centre, index) => {
             const content = (
               <div 
-                className={`group relative aspect-square w-full bg-white shadow-[0_15px_40px_-20px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2 border border-gray-100/50 flex flex-col items-center justify-center p-3 md:p-4 overflow-hidden ${centre.href ? 'cursor-pointer' : ''}`}
+                className={`group relative aspect-square w-full bg-white shadow-[0_15px_40px_-20px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2 flex flex-col items-center justify-center overflow-hidden ${centre.href ? 'cursor-pointer' : ''}`}
               >
                 {/* Image Container */}
                 <div className="relative w-full h-full transition-all duration-500 group-hover:scale-110 group-hover:opacity-20">

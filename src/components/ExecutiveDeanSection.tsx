@@ -6,8 +6,8 @@ export default function ExecutiveDeanSection() {
       <div className="flex flex-col lg:flex-row min-h-[450px]">
         {/* Left Side: Framed Image Container */}
         <div className="lg:w-[40%] relative min-h-[320px] md:min-h-[400px] lg:min-h-full bg-white/5 flex items-center justify-center p-6 lg:p-12">
-          <div className="relative w-full h-full max-w-[420px] aspect-[3/4] bg-white p-1 shadow-2xl transition-transform duration-500 hover:-translate-y-2">
-            <div className="relative w-full h-full overflow-hidden border border-gray-200">
+          <div className="relative w-full h-full max-w-[420px] aspect-[3/4] shadow-2xl transition-transform duration-500 hover:-translate-y-2">
+            <div className="relative w-full h-full overflow-hidden">
               <Image
                 src="/images/mentor.webp"
                 alt="Mr. Siddharth Raja, Executive Dean"
@@ -27,7 +27,7 @@ export default function ExecutiveDeanSection() {
         <div className="lg:w-[60%] p-6 md:p-12 lg:p-16 flex flex-col justify-center text-white relative">
           <div className="max-w-3xl space-y-6">
             <header className="text-left">
-              <h2 className="font-playfair text-2xl md:text-4xl lg:text-5xl mb-4 leading-tight">
+              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl mb-4 leading-tight">
                 From the Executive Dean's Desk
               </h2>
               <div className="space-y-1">

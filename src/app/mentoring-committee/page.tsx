@@ -24,7 +24,7 @@ export default function MentoringCommitteePage() {
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-[450px]">
           <div className="lg:w-[45%] p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
               Mentoring <br />
               <span className="text-[#fbb03b]">Committee</span>
             </h1>
@@ -51,7 +51,7 @@ export default function MentoringCommitteePage() {
           <div className="relative mb-8">
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
             <div className="pl-6 md:pl-10">
-              <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#800000] mb-8 leading-tight">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-6 leading-tight">
                 A Unique Mentorship Framework
               </h2>
               <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl mb-10 text-justify">
@@ -60,8 +60,8 @@ export default function MentoringCommitteePage() {
             </div>
           </div>
 
-          <div className="mt-16">
-            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-10 text-center">
+          <div className="mt-10">
+            <h3 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-8 text-center">
               Salient Features of the Mentorship Framework
             </h3>
             

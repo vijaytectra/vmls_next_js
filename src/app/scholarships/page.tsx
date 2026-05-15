@@ -60,7 +60,7 @@ export default function ScholarshipsPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative px-[5%] py-20 md:py-32 overflow-hidden">
+      <section className="relative px-[5%] py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/scholorship-bg.webp"
@@ -75,7 +75,7 @@ export default function ScholarshipsPage() {
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#fbb03b]"></div>
             <div className="pl-6 md:pl-10">
-              <h1 className="font-playfair text-4xl md:text-5xl lg:text-7xl mb-6 leading-tight font-bold">
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl mb-6 leading-tight font-bold">
                 Scholarships & <br />Financial Aid
               </h1>
               <p className="font-inter text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium">
@@ -87,17 +87,17 @@ export default function ScholarshipsPage() {
       </section>
 
       {/* Overview Section */}
-      <section className="pt-20 pb-8 px-[5%] bg-white">
+      <section className="pt-10 pb-8 px-[5%] bg-white">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
-          <div className="lg:w-1/2 space-y-8">
-            <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] leading-tight">
+          <div className="lg:w-1/2 space-y-6">
+            <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl text-[#1a1a1a] leading-tight">
               A ₹60 Lakhs Commitment <br />to Your Future
             </h2>
-            <div className="w-20 h-1.5 bg-[#a31f34]"></div>
-            <p className="font-inter text-lg text-gray-700 leading-relaxed">
+            <div className="w-16 h-1 bg-[#a31f34]"></div>
+            <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
               At Vinayaka Mission's Law School (VMLS), we believe that every talented student deserves access to world-class legal education. Our comprehensive scholarship program is designed to recognize academic excellence, support diversity, and provide a safety net for those in need.
             </p>
-            <p className="font-inter text-lg text-gray-700 leading-relaxed font-medium text-[#a31f34]">
+            <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed font-medium text-[#a31f34]">
               Over 140 scholarships are awarded annually through the VLAT performance and merit screening process.
             </p>
           </div>
@@ -128,33 +128,33 @@ export default function ScholarshipsPage() {
       </section>
 
       {/* Categories Grid */}
-      <section className="pt-10 pb-20 px-[5%] bg-white">
+      <section className="pt-8 pb-16 px-[5%] bg-white">
         <div className="max-w-[1400px] mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-6">
+          <div className="text-center mb-10">
+            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-4">
               Scholarship Categories
             </h2>
-            <div className="w-24 h-1.5 bg-[#fbb03b] mx-auto rounded-full"></div>
+            <div className="w-20 h-1 bg-[#fbb03b] mx-auto rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {scholarshipCategories.map((cat, idx) => (
               <div 
                 key={idx} 
-                className="bg-white border border-gray-100 rounded-3xl p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group flex flex-col h-full"
+                className="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group flex flex-col h-full"
               >
                 {/* Accent Line on Hover */}
                 <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#a31f34] to-[#fbb03b] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
                 
-                <div className="w-16 h-16 rounded-2xl bg-gray-50 flex items-center justify-center text-3xl mb-8 group-hover:bg-orange-50 group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-xl mb-4 group-hover:bg-orange-50 group-hover:scale-110 transition-all duration-300">
                   {cat.icon}
                 </div>
                 
-                <h3 className="font-playfair font-bold text-2xl md:text-3xl text-[#1a1a1a] mb-4 leading-tight">
+                <h3 className="font-playfair font-bold text-lg md:text-xl lg:text-2xl text-[#1a1a1a] mb-2 leading-tight">
                   {cat.title}
                 </h3>
                 
-                <p className="font-inter text-gray-600 leading-relaxed md:text-lg mt-auto">
+                <p className="font-inter text-gray-600 leading-relaxed text-xs md:text-sm mt-auto">
                   {cat.description}
                 </p>
               </div>

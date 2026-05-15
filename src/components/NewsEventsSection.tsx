@@ -30,9 +30,9 @@ const events = [
 
 export default function NewsEventsSection() {
   return (
-    <section className="py-6 md:py-8 px-[5%] bg-[#f4f4f4]">
+    <section className="py-4 md:py-6 px-[5%] bg-[#f4f4f4]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="font-playfair text-4xl md:text-5xl text-gray-900 mb-8 md:mb-16 text-left">
+        <h2 className="font-playfair text-3xl md:text-5xl text-gray-900 mb-8 md:mb-16 text-left">
           News & Events
         </h2>
 
@@ -70,7 +70,7 @@ export default function NewsEventsSection() {
                 <p className="font-inter text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em]">
                   March 20, 2026
                 </p>
-                <h3 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-[1.1] mb-6">
+                <h3 className="font-playfair text-3xl md:text-5xl text-gray-900 leading-[1.1] mb-6">
                   VMLS Newsletter February to March 2026
                 </h3>
                 <p className="font-inter text-lg text-gray-700 leading-relaxed max-w-2xl text-justify">
@@ -83,7 +83,7 @@ export default function NewsEventsSection() {
                     href="/images/newsletter/Newsletter-feb-march-2026.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-full md:w-[280px] h-14 border-2 border-[#a31f34] text-[#a31f34] font-inter text-sm font-bold uppercase tracking-wider transition-all hover:bg-[#a31f34] hover:text-white hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
+                    className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
                   >
                     View English Newsletter
                   </a>
@@ -91,7 +91,7 @@ export default function NewsEventsSection() {
                     href="/images/newsletter/NewsLetterNovemberToDecember-2025 (Tamil).pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-full md:w-[280px] h-14 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider transition-all hover:bg-[#a31f34] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
+                    className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
                   >
                     View Tamil Newsletter
                   </a>

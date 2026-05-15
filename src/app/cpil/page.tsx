@@ -152,7 +152,7 @@ export default function CPILPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             {/* Event 1 */}
             <Link href="/news/why-international-law-matters-inaugural-session" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/cpil/guest-lecture.webp"
                   alt="Guest Lecture on Public Interest Litigation"
@@ -172,7 +172,7 @@ export default function CPILPage() {
 
             {/* Event 2 */}
             <Link href="/news/international-conference-on-rivers" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/cpil/rivers.webp"
                   alt="Workshop on Environmental Law & River Conservation"

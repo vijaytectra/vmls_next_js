@@ -24,7 +24,7 @@ export default function FacultyProfilesPage() {
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-[450px]">
           <div className="lg:w-[45%] p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight whitespace-nowrap">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-nowrap">
               Faculty <span className="text-[#fbb03b]">Profiles</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
@@ -49,7 +49,7 @@ export default function FacultyProfilesPage() {
       <section className="pt-4 md:pt-6 pb-8 px-[5%]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center mb-6">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-4">
+            <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#1a1a1a] mb-3">
               Core Faculty
             </h2>
             <div className="w-16 h-1 bg-[#800000]"></div>

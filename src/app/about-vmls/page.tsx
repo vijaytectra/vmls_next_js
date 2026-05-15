@@ -16,7 +16,7 @@ export default function AboutVMLS() {
       <hr className="border-gray-100" />
 
       {/* Content Section (Mirrored from VMRF style) */}
-      <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-[#f8f9fa] overflow-hidden">
+      <section className="pb-6 md:pb-8 pt-8 md:pt-12 px-[5%] bg-[#f8f9fa] overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           
           {/* Left Side: Content */}
@@ -26,7 +26,7 @@ export default function AboutVMLS() {
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
               
               <div className="pl-6 md:pl-10 h-full flex flex-col justify-center">
-                <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-8 leading-tight">
+                <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-8 leading-tight">
                   About VMLS
                 </h2>
                 
@@ -53,7 +53,7 @@ export default function AboutVMLS() {
 
           {/* Right Side: Framed Image */}
           <div className="lg:w-[45%] w-full order-1 lg:order-2 flex justify-center items-center">
-            <div className="relative w-full aspect-[16/10] bg-white p-3 shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:-translate-y-2 border border-gray-200">
+            <div className="relative w-full aspect-[16/10] shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:-translate-y-2">
               <div className="relative w-full h-full overflow-hidden">
                 <Image 
                   src="/images/vmls/frame-1@3x.webp"
@@ -71,7 +71,7 @@ export default function AboutVMLS() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="bg-white px-[5%] pt-12 md:pt-16 pb-12 md:pb-24">
+      <section className="bg-white px-[5%] pt-6 md:pt-8 pb-12 md:pb-24">
         <div className="max-w-5xl mx-auto text-center">
           <div className="flex flex-col items-center mb-12">
             <h2 className="font-playfair text-4xl md:text-5xl text-[#1a1a1a] mb-4">Our Vision</h2>

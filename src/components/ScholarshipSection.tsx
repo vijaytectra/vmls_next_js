@@ -22,6 +22,7 @@ export default function ScholarshipSection() {
                   Over 140 scholarships worth ₹60 Lakhs available through VLAT, including 
                   merit-based, need-based, and female-focused awards. 
                 </p>
+
                 <p className="font-inter text-lg text-gray-700 leading-relaxed text-justify">
                   Connect with our Program Advisor to learn more about how we support 
                   our students' academic journeys through various financial aid programs.

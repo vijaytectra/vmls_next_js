@@ -46,7 +46,7 @@ export default function MentoringExOfficio() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {exOfficioMembers.map((member, index) => (
             <div key={index} className="flex flex-col group animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
-              <div className="relative aspect-square w-full bg-white p-3 shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-gray-100 transition-transform duration-500 group-hover:-translate-y-2">
+              <div className="relative aspect-square w-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-transform duration-500 group-hover:-translate-y-2">
                 <div className="relative w-full h-full overflow-hidden bg-white">
                   <Image
                     src={member.image}
@@ -60,7 +60,7 @@ export default function MentoringExOfficio() {
 
               <div className="mt-6 flex flex-col h-full">
                 <div className="min-h-[40px] flex flex-col justify-end gap-2">
-                  <h3 className="font-playfair font-bold text-lg leading-tight text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors duration-300">
+                  <h3 className="font-playfair font-bold text-base leading-tight text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors duration-300">
                     {member.name}
                   </h3>
                   <div className="w-8 h-[2px] bg-[#a31f34]/30 group-hover:w-12 group-hover:bg-[#a31f34] transition-all duration-500"></div>

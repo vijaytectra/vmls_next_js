@@ -155,7 +155,7 @@ export default function CentreForJusticeThroughTechnologyPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Event 1 */}
             <Link href="/news/ai-for-justice-vmls-setu-law-workshop" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/justice/ai-center-of-justice.webp"
                   alt="AI & Justice Systems Summit 2025"
@@ -175,7 +175,7 @@ export default function CentreForJusticeThroughTechnologyPage() {
 
             {/* Event 2 */}
             <Link href="/news/e-filing" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/justice/e-filling.webp"
                   alt="National Workshop on E-Filing & Digital Judiciary"
@@ -195,7 +195,7 @@ export default function CentreForJusticeThroughTechnologyPage() {
 
             {/* Event 3 */}
             <Link href="/news/flip-case-legal-design-challenge" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/justice/flip-case.webp"
                   alt="Legal Technology Innovation & Case Analysis"

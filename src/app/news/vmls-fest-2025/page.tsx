@@ -28,7 +28,7 @@ export default function VMLSFestPage() {
           </div>
           <div className="lg:w-[55%] relative min-h-[300px]">
             <Image
-              src="/images/studentaff/e2.png"
+              src="/images/studentaff/thumbnail.webp"
               alt="VMLS Fest 2025"
               fill
               priority

@@ -163,7 +163,7 @@ export default function MaritimeLawPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Event 1 */}
             <Link href="/news/maritime-law-summit-2025" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/maritime/maritime.webp"
                   alt="Maritime Law Summit 2025"
@@ -183,7 +183,7 @@ export default function MaritimeLawPage() {
 
             {/* Event 2 */}
             <Link href="/news/special-lecture-international-maritime-law" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/maritime/special-lecture-maritime.webp"
                   alt="Special Lecture on International Maritime Law"
@@ -203,7 +203,7 @@ export default function MaritimeLawPage() {
 
             {/* Event 3 */}
             <Link href="/news/distinguished-guest-lecture-series-law-of-the-sea" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/maritime/distinguish-guest.webp"
                   alt="Distinguished Guest Lecture Series on the Law of the Sea"

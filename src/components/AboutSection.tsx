@@ -5,7 +5,7 @@ export default function AboutSection() {
   return (
     <section 
       id="about"
-      className="relative py-8 md:py-10 px-[5%] overflow-hidden bg-[#fdfdfd]"
+      className="relative py-6 md:py-8 px-[5%] overflow-hidden bg-[#fdfdfd]"
       style={{
         backgroundImage: `radial-gradient(circle at 2px 2px, rgba(163, 31, 52, 0.03) 1px, transparent 0)`,
         backgroundSize: '40px 40px'
@@ -34,21 +34,18 @@ export default function AboutSection() {
           <div className="relative w-full max-w-[600px] group">
             {/* Background Decorative Accent */}
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#a31f34] opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity duration-700"></div>
-            <div className="absolute top-12 -right-6 w-full h-full border-2 border-[#a31f34] opacity-5 -z-10 translate-x-4 translate-y-4"></div>
             
             {/* The Main Image Container */}
-            <div className="relative z-10 bg-white p-2 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:-translate-y-2">
-              <div className="border border-gray-100 overflow-hidden">
-                <Image 
-                  src="/images/career-about-img.webp" 
-                  alt="About VMLS" 
-                  width={800} 
-                  height={600} 
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="w-full h-auto object-contain"
-                  style={{ width: '100%', height: 'auto' }}
-                />
-              </div>
+            <div className="relative z-10 overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:-translate-y-2">
+              <Image 
+                src="/images/career-about-img.webp" 
+                alt="About VMLS" 
+                width={800} 
+                height={600} 
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="w-full h-auto object-contain"
+                style={{ width: '100%', height: 'auto' }}
+              />
             </div>
           </div>
         </div>
@@ -63,7 +60,7 @@ export default function AboutSection() {
                   The Law School of the Future
                 </span>
               </div>
-              <h2 className="font-playfair text-4xl md:text-6xl text-gray-900 leading-tight mb-4 md:mb-6">
+              <h2 className="font-playfair text-2xl md:text-4xl text-gray-900 leading-tight mb-4 md:mb-6">
                 About Us
               </h2>
             </div>
@@ -81,13 +78,13 @@ export default function AboutSection() {
             <div className="flex flex-wrap gap-4 pt-4">
               <Link 
                 href="/about-vmrf"
-                className="px-10 py-4 bg-[#a31f34] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#800000] hover:shadow-xl hover:-translate-y-1 inline-block text-center"
+                className="px-10 py-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 inline-block text-center"
               >
                 About VMRF
               </Link>
               <Link 
                 href="/about-vmls"
-                className="px-10 py-4 border-2 border-[#a31f34] text-[#a31f34] font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:shadow-xl hover:-translate-y-1 inline-block text-center"
+                className="px-10 py-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 inline-block text-center"
               >
                 About VMLS
               </Link>

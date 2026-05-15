@@ -155,7 +155,7 @@ export default function GlobalTamilLawCentrePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Event 1 */}
             <Link href="/news/international-tamil-law-conference-2025" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/global/inter-tamil-law.webp"
                   alt="International Tamil Law Conference 2025"
@@ -175,7 +175,7 @@ export default function GlobalTamilLawCentrePage() {
 
             {/* Event 2 */}
             <Link href="/news/state-level-tamil-family-law-moot-court-competition" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/global/in8.webp"
                   alt="State-Level Tamil Family Law Moot Court Competition"
@@ -195,7 +195,7 @@ export default function GlobalTamilLawCentrePage() {
 
             {/* Event 3 */}
             <Link href="/news/intra-trail-tamil-moot-court" className="flex flex-col group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6 border border-white/50">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-lg mb-6">
                 <Image
                   src="/images/global/tamil-moot.webp"
                   alt="Intra Trail Tamil Moot Court"

@@ -34,7 +34,7 @@ export default function LLBAdmissionsPage() {
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
             <div className="pl-6 md:pl-10">
 
-              <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-6 leading-tight">
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
                 LL.B. Admissions
               </h1>
               <p className="font-inter text-lg md:text-xl text-gray-800 max-w-2xl leading-relaxed font-medium">
@@ -51,8 +51,8 @@ export default function LLBAdmissionsPage() {
           
           {/* Left Side: Framed Image */}
           <div className="lg:w-[45%] w-full flex justify-center items-center">
-            <div className="relative w-full aspect-[16/10] bg-white p-1 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2 border border-gray-100">
-              <div className="relative w-full h-full overflow-hidden border border-gray-100">
+            <div className="relative w-full aspect-[16/10] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
+              <div className="relative w-full h-full overflow-hidden">
                 <Image 
                   src="/images/llb/1.webp"
                   alt="LL.B. Program Classroom" 
@@ -66,7 +66,7 @@ export default function LLBAdmissionsPage() {
 
           {/* Right Side: Content */}
           <div className="lg:w-[55%] flex flex-col justify-center">
-            <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-8 leading-tight">
+            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
               LL.B. Program
             </h2>
             
@@ -109,7 +109,7 @@ export default function LLBAdmissionsPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Section Header */}
           <div className="text-center mb-10">
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-8 leading-tight">
+            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
               Undergraduate Law Programmes
             </h2>
             
@@ -127,8 +127,8 @@ export default function LLBAdmissionsPage() {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
             {/* Left Side: Image with Frame */}
             <div className="lg:w-[50%] flex justify-center items-center">
-              <div className="relative w-full aspect-[4/3] bg-white p-1 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2 border border-gray-100">
-                <div className="relative w-full h-full overflow-hidden border border-gray-100">
+              <div className="relative w-full aspect-[4/3] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
+                <div className="relative w-full h-full overflow-hidden">
                   <Image 
                     src="/images/llb/2.webp"
                     alt="VMLS Learning Environment" 
@@ -182,7 +182,7 @@ export default function LLBAdmissionsPage() {
         </div>
       </section>
       {/* Credit Structure and Minimum Requirements Section */}
-      <section className="pb-0 px-[5%] bg-white">
+      <section className="pb-6 md:pb-8 px-[5%] bg-white">
         <div className="max-w-3xl mx-auto">
           {/* Main Container with Stylish Border - Scaled Down */}
           <div className="bg-white border-t-8 border-[#a31f34] shadow-[0_30px_70px_-20px_rgba(0,0,0,0.1)] p-6 md:p-10 relative z-20">
@@ -229,13 +229,13 @@ export default function LLBAdmissionsPage() {
       </section>
 
       {/* Compulsory Pre-Law Courses Section */}
-      <section className="pt-4 pb-12 px-[5%] bg-gradient-to-b from-[#fcf8f2] to-white relative overflow-hidden">
+      <section className="pt-6 md:pt-8 pb-12 px-[5%] bg-gradient-to-b from-[#fcf8f2] to-white relative overflow-hidden">
         {/* Decorative Background Element */}
         <div className="absolute right-[-5%] top-[10%] w-[400px] h-[400px] bg-[#a31f34] opacity-[0.02] rounded-full blur-[100px] pointer-events-none"></div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-4">
+            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-2">
               Compulsory Pre-Law Courses
             </h2>
             <div className="w-24 h-1 bg-[#a31f34] mx-auto"></div>

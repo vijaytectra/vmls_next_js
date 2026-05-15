@@ -67,7 +67,7 @@ export default function MentoringCommitteeGrid() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {members.map((member, index) => (
             <div key={index} className="flex flex-col group animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
-              <div className="relative aspect-square w-full bg-white p-3 shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-gray-100 transition-transform duration-500 group-hover:-translate-y-2">
+              <div className="relative aspect-square w-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-transform duration-500 group-hover:-translate-y-2">
                 <div className="relative w-full h-full overflow-hidden bg-white">
                   <Image
                     src={member.image}

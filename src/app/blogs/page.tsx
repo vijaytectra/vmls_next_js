@@ -499,11 +499,6 @@ export default function BlogsPage() {
                 })}
           </div>
 
-          {/* ── All Blogs divider ── */}
-          <div className="flex items-center gap-3 mb-6">
-            <span className="font-inter font-bold text-gray-500 text-xs uppercase tracking-widest">All Articles</span>
-            <div className="flex-1 h-px bg-gray-200" />
-          </div>
 
           {/* Existing static blogs */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">

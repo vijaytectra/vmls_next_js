@@ -31,11 +31,11 @@ body {
 }
 
 .animate-marquee {
-  animation: marquee 150s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 .animate-marquee-reverse {
-  animation: marquee 150s linear infinite reverse;
+  animation: marquee 40s linear infinite reverse;
 }
 
 .animate-marquee:hover, .animate-marquee-reverse:hover {
@@ -62,4 +62,5 @@ body {
 
 html {
   scroll-behavior: smooth;
+  font-size: 90%;
 }

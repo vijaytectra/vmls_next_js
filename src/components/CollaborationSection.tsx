@@ -16,9 +16,9 @@ const marquee2 = [...row2, ...row2];
 
 export default function CollaborationSection() {
   return (
-    <section className="pt-6 pb-8 md:pb-10 bg-white border-t border-gray-50 overflow-hidden">
+    <section className="pt-4 pb-6 md:pb-8 bg-white border-t border-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-[5%] mb-4 md:mb-6 text-center">
-        <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a]">
+        <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a]">
           Institutional Collaboration
         </h2>
 

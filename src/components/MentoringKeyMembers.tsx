@@ -31,7 +31,7 @@ export default function MentoringKeyMembers() {
           {keyMembers.map((member, index) => (
             <div key={index} className="flex flex-col group animate-fade-in-up" style={{ animationDelay: `${index * 200}ms` }}>
               {/* Photo Container with Role Banner */}
-              <div className="relative aspect-square w-full overflow-hidden shadow-lg border border-gray-100 group-hover:shadow-2xl transition-all duration-500">
+              <div className="relative aspect-square w-full overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-500">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -50,7 +50,7 @@ export default function MentoringKeyMembers() {
 
               {/* Text Details */}
               <div className="mt-6 space-y-2">
-                <h3 className="font-inter font-bold text-xl md:text-2xl text-[#1a1a1a]">
+                <h3 className="font-inter font-bold text-lg md:text-xl text-[#1a1a1a]">
                   {member.name}
                 </h3>
                 <p className="font-inter text-gray-600 text-sm md:text-base leading-snug">

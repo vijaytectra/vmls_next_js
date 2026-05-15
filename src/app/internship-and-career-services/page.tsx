@@ -19,7 +19,7 @@ export default function InternshipAndCareerServices() {
         <section className="relative w-full bg-white border-b border-gray-100">
           <div className="flex flex-col lg:flex-row min-h-[450px]">
             <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-              <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
                 Internship and <span className="text-[#fbb03b]">Career Services</span>
               </h1>
               <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
@@ -41,7 +41,7 @@ export default function InternshipAndCareerServices() {
         </section>
 
         {/* Dean's Message Section */}
-        <section className="pt-16 pb-6 px-[5%] bg-white">
+        <section className="pt-10 pb-6 px-[5%] bg-white">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-start">
             {/* Image and Title Side */}
             <div className="w-full md:w-1/3 flex flex-col items-center text-center">
@@ -63,12 +63,12 @@ export default function InternshipAndCareerServices() {
 
             {/* Message Text Side */}
             <div className="w-full md:w-2/3">
-              <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8 leading-tight">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4 leading-tight">
                 Message from the Desk of Executive Dean, Office of Career Services and Placements
               </h2>
               
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify">
-                <p className="font-bold text-gray-900 text-lg">Welcome to the Office of Career Services and Placements!</p>
+              <div className="space-y-1 font-inter text-gray-700 leading-relaxed text-justify">
+                <p className="font-bold text-gray-900 text-base md:text-lg mb-2">Welcome to the Office of Career Services and Placements!</p>
                 
                 <p>
                   I am excited to connect with you as we embark on this journey together. Our office is dedicated to empowering students and alumni to achieve their career aspirations through personalized support and resources.
@@ -95,15 +95,59 @@ export default function InternshipAndCareerServices() {
             </div>
           </div>
         </section>
+        
+        {/* About Us Section */}
+        <section className="py-10 px-[5%] bg-white border-t border-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000]">
+                About Us
+              </h2>
+              <div className="w-16 h-1 bg-[#fbb03b] mx-auto mt-3"></div>
+            </div>
+            
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              {/* Text Side */}
+              <div className="lg:w-1/2">
+                <div className="relative pl-6 md:pl-8">
+                  {/* Vertical Accent Line */}
+                  <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#a31f34]"></div>
+                  
+                  <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-justify">
+                    <p>
+                      The Office of Career Services and Placements is committed to empowering students and alumni as they navigate their career paths. We understand that the transition from education to the workforce can be both exciting and daunting. We are here to provide comprehensive support that equips you with the skills, knowledge, and confidence needed to succeed in today’s competitive job market.
+                    </p>
+                    <p>
+                      We at VMLS are dedicated to guide you through every step of your career journey. Whether you are just starting your professional exploration or looking to advance in your current field, we offer a range of services designed to meet your unique needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Image Side */}
+              <div className="lg:w-1/2 w-full">
+                <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-xl border border-gray-100">
+                  <Image
+                    src="/images/career-about-img.webp"
+                    alt="VMLS Campus"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Our Services Section */}
-        <section className="pt-6 pb-6 px-[5%] bg-gray-50 border-t border-gray-100">
+        <section className="pt-4 pb-6 px-[5%] bg-gray-50 border-t border-gray-100">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-4">
-              <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-[#800000] mb-4">
+            <div className="text-center mb-6">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-3">
                 Our Services
               </h2>
-              <div className="w-24 h-1 bg-[#fbb03b] mx-auto"></div>
+              <div className="w-16 h-1 bg-[#fbb03b] mx-auto"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -165,13 +209,13 @@ export default function InternshipAndCareerServices() {
         </section>
 
         {/* Internship Opportunities and Collaborations Section */}
-        <section className="pt-6 pb-20 px-[5%] bg-white">
+        <section className="pt-4 pb-16 px-[5%] bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-6">
-              <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-[#800000] mb-6">
+            <div className="text-center mb-4">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4">
                 Internship Opportunities and Collaborations
               </h2>
-              <p className="font-inter text-gray-700 text-lg md:text-xl max-w-5xl mx-auto leading-relaxed mb-12">
+              <p className="font-inter text-gray-700 text-base md:text-lg max-w-5xl mx-auto leading-relaxed mb-8">
                 To enhance your career development experience, we have established partnerships with various organizations that offer valuable internship opportunities. These collaborations not only provide hands-on experience but also help you build a professional network within your field of interest. Some of our esteemed internship partners include:
               </p>
             </div>

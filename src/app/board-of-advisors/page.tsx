@@ -23,7 +23,7 @@ export default function BoardOfAdvisorsPage() {
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-[450px]">
           <div className="lg:w-[45%] p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
               Board of <br />
               <span className="text-[#fbb03b]">Advisors</span>
             </h1>

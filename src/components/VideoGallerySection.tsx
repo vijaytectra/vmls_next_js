@@ -14,7 +14,7 @@ const row2 = [
 
 export default function VideoGallerySection() {
   return (
-    <section className="pt-6 pb-8 px-[5%] bg-white">
+    <section className="pt-4 pb-6 px-[5%] bg-white">
       <div className="max-w-[1400px] mx-auto">
         {/* Row 1: 3 Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6 mb-6">

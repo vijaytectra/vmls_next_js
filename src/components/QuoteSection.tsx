@@ -1,6 +1,6 @@
 export default function QuoteSection() {
   return (
-    <section className="py-6 md:py-8 px-[5%] bg-[#a31f34] text-white">
+    <section className="py-4 md:py-6 px-[5%] bg-[#a31f34] text-white">
       <div className="max-w-4xl mx-auto text-center space-y-6">
         {/* Quotation Marks Icon */}
         <div className="flex justify-center">

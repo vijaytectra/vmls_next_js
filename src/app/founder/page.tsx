@@ -20,8 +20,8 @@ export default function FounderPage() {
           
           {/* Left Side: Founder Image */}
           <div className="lg:w-[40%] w-full order-1 flex justify-center items-center">
-            <div className="relative w-full max-w-[420px] aspect-[3/4] bg-white p-1 shadow-[0_30px_70px_rgba(0,0,0,0.12)] border border-gray-100 transition-transform duration-500 hover:-translate-y-2">
-              <div className="relative w-full h-full overflow-hidden border border-gray-200">
+            <div className="relative w-full max-w-[420px] aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
+              <div className="relative w-full h-full overflow-hidden">
                 <Image 
                   src="/images/vmrf/Frame-53135.webp" 
                   alt="Dr. A. Shanmugasundaram" 
@@ -37,7 +37,7 @@ export default function FounderPage() {
           {/* Right Side: Founder Content */}
           <div className="lg:w-[60%] order-2 flex flex-col justify-center">
             <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Our Visionary Founder</h3>
-            <h1 className="font-playfair text-3xl md:text-5xl lg:text-5xl xl:text-6xl text-[#1a1a1a] mb-8 leading-tight lg:whitespace-nowrap">
+            <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-8 leading-tight lg:whitespace-nowrap">
               Dr. A. Shanmugasundaram
             </h1>
             
@@ -68,8 +68,8 @@ export default function FounderPage() {
 
       {/* Founder's Message Section */}
       <section className="bg-white px-[5%] py-12 md:py-16 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="relative bg-white p-8 md:p-12 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden group transition-all duration-500 hover:shadow-[0_60px_120px_-20px_rgba(0,0,0,0.16)] hover:-translate-y-1">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative bg-white p-6 md:p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden group transition-all duration-500 hover:shadow-[0_60px_120px_-20px_rgba(0,0,0,0.16)] hover:-translate-y-1">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-[#a31f34] opacity-[0.03] rounded-full -translate-x-12 -translate-y-12 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-[0.05]"></div>
             <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#a31f34] opacity-[0.02] rounded-full transition-transform duration-700 group-hover:scale-110 group-hover:opacity-[0.04]"></div>
@@ -80,7 +80,7 @@ export default function FounderPage() {
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-10 transition-transform duration-500 group-hover:translate-x-2">
                 <div className="w-16 h-[2px] bg-[#a31f34]"></div>
-                <h4 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] italic">
+                <h4 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] italic">
                   Founder's Message
                 </h4>
               </div>

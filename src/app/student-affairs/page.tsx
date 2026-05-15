@@ -143,7 +143,7 @@ export default function StudentAffairsPage() {
               <div className="absolute bottom-0 right-0 w-32 h-32 bg-white/5 -mb-12 -mr-12 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
               <div>
                 <h3 className="font-playfair text-2xl font-bold mb-6 pb-2 border-b border-white/20">Clubs at VMLS</h3>
-                <ul className="space-y-4 text-xs font-bold uppercase tracking-wider text-white/80 group-hover:text-white transition-colors">
+                <ul className="space-y-4 text-xs font-medium uppercase tracking-wider text-white/80 group-hover:text-white transition-colors">
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#fbb03b] rounded-full"></span> 8 Vibrant Student Clubs</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#fbb03b] rounded-full"></span> Led by 7 Dynamic Convenors</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#fbb03b] rounded-full"></span> Jointly Managed by Faculty & Students</li>
@@ -163,7 +163,7 @@ export default function StudentAffairsPage() {
               </div>
               <div>
                 <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-100">Houses</h3>
-                <ul className="space-y-4 text-xs font-bold uppercase tracking-wider text-gray-500 group-hover:text-gray-900 transition-colors">
+                <ul className="space-y-4 text-xs font-medium uppercase tracking-wider text-gray-500 group-hover:text-gray-900 transition-colors">
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Red, Blue, Green, & Yellow</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Student Run & Managed</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span> Team Spirit & Healthy Competition</li>
@@ -179,7 +179,7 @@ export default function StudentAffairsPage() {
               <div className="absolute top-0 left-0 w-full h-1 bg-white/20"></div>
               <div>
                 <h3 className="font-playfair text-2xl font-bold mb-6 pb-2 border-b border-white/20">Student Support</h3>
-                <ul className="space-y-4 text-xs font-bold uppercase tracking-wider text-white/80 group-hover:text-white transition-colors">
+                <ul className="space-y-4 text-xs font-medium uppercase tracking-wider text-white/80 group-hover:text-white transition-colors">
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-white rounded-full"></span> 24/7 Professional Access</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-white rounded-full"></span> Dedicated Mentor-Mentee Program</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-white rounded-full"></span> Faculty-led Personal Guidance</li>
@@ -195,7 +195,7 @@ export default function StudentAffairsPage() {
               <div className="absolute top-0 left-0 w-32 h-32 bg-black/5 -mt-12 -ml-12 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
               <div>
                 <h3 className="font-playfair text-2xl font-bold mb-6 pb-2 border-b border-black/10">Anti-Ragging Cell</h3>
-                <ul className="space-y-4 text-xs font-bold uppercase tracking-wider text-[#1a1a1a]/70 group-hover:text-[#1a1a1a] transition-colors">
+                <ul className="space-y-4 text-xs font-medium uppercase tracking-wider text-[#1a1a1a]/70 group-hover:text-[#1a1a1a] transition-colors">
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#800000] rounded-full"></span> Active Monitoring Cell</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#800000] rounded-full"></span> Prevention & Quick Redressal</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#800000] rounded-full"></span> Continuous Faculty Oversight</li>
@@ -212,7 +212,7 @@ export default function StudentAffairsPage() {
             <div className="flex-1 bg-[#c5a676] p-8 text-gray-900 flex flex-col justify-between group hover:flex-[1.5] transition-all duration-500 overflow-hidden relative">
               <div>
                 <h3 className="font-playfair text-2xl font-bold mb-6 pb-2 border-b border-black/10">Student Council</h3>
-                <ul className="space-y-4 text-xs font-bold uppercase tracking-wider text-black/60 group-hover:text-black transition-colors">
+                <ul className="space-y-4 text-xs font-medium uppercase tracking-wider text-black/60 group-hover:text-black transition-colors">
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-white rounded-full"></span> Voice of the Student Body</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-white rounded-full"></span> Coordinates Flagship Events</li>
                   <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-white rounded-full"></span> Bridges Students & Institution</li>
@@ -271,13 +271,13 @@ export default function StudentAffairsPage() {
                 {
                   title: "Law School Premier League (LSPL)",
                   sub: "Season 2 Launch - The ultimate sports arena.",
-                  img: "/images/studentaff/e2.png",
+                  img: "/images/studentaff/sports.webp",
                   href: "/news/lspl"
                 },
                 {
                   title: "International Conference on Women & AI",
                   sub: "Students secure prestigious awards for research excellence.",
-                  img: "/images/studentaff/e3.png",
+                  img: "/images/studentaff/Women and AI_02.webp",
                   href: "/news/women-and-ai-conference"
                 }
               ].map((event, idx) => (

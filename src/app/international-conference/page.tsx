@@ -20,7 +20,7 @@ export default function InternationalConferencePage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="relative px-[5%] py-20 md:py-32 overflow-hidden">
+        <section className="relative px-[5%] py-12 md:py-20 overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/collab/img5.webp"
@@ -37,7 +37,7 @@ export default function InternationalConferencePage() {
             <div className="relative">
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#fbb03b]"></div>
               <div className="pl-6 md:pl-10">
-                <h1 className="font-playfair text-4xl md:text-5xl lg:text-7xl mb-6 leading-tight font-bold">
+                <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl mb-6 leading-tight font-bold">
                   International Conference
                 </h1>
                 <p className="font-inter text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium">
@@ -49,9 +49,9 @@ export default function InternationalConferencePage() {
         </section>
 
         {/* Aims and Scope Section */}
-        <section className="pt-10 pb-4 px-[5%] bg-white border-b border-gray-50">
+        <section className="pt-8 pb-2 px-[5%] bg-white border-b border-gray-50">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-[#800000] mb-6">
+            <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4">
               Aims and scope of the International Conference
             </h2>
             <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-justify">
@@ -61,11 +61,11 @@ export default function InternationalConferencePage() {
         </section>
 
         {/* About VMLS Section */}
-        <section className="pt-4 pb-10 px-[5%] bg-[#f8f9fa] overflow-hidden">
+        <section className="pt-4 pb-2 px-[5%] bg-[#f8f9fa] overflow-hidden">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
             {/* Left Side: Circular Image */}
             <div className="flex-1 w-full flex justify-center lg:justify-start">
-              <div className="relative w-full max-w-[350px] aspect-square rounded-full overflow-hidden shadow-xl border-4 border-white">
+              <div className="relative w-full max-w-[350px] aspect-square rounded-full overflow-hidden shadow-xl">
                 <Image
                   src="/images/career-about-img.webp"
                   alt="VMLS Building"
@@ -83,7 +83,7 @@ export default function InternationalConferencePage() {
                 <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#a31f34]"></div>
                 
                 <div className="pl-6 md:pl-8">
-                  <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#800000] mb-6 leading-tight font-bold">
+                  <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl text-[#800000] mb-4 leading-tight font-bold">
                     About VMLS
                   </h2>
                   
@@ -102,14 +102,14 @@ export default function InternationalConferencePage() {
         </section>
 
         {/* Knowledge Partners Section */}
-        <section className="pt-8 pb-4 px-[5%] bg-white border-b border-gray-50">
+        <section className="pt-6 pb-2 px-[5%] bg-white border-b border-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
               <div className="md:w-1/3">
-                <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-[#1a1a1a] leading-tight text-center md:text-left">
+                <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#1a1a1a] leading-tight text-center md:text-left">
                   Our Knowledge Partners
                 </h2>
-                <div className="w-16 h-1 bg-[#a31f34] mt-4 mx-auto md:mx-0"></div>
+                <div className="w-16 h-1 bg-[#a31f34] mt-2 mx-auto md:mx-0"></div>
               </div>
               <div className="md:w-2/3 w-full">
                 <div className="relative h-16 md:h-20 lg:h-24 w-full">
@@ -127,13 +127,13 @@ export default function InternationalConferencePage() {
         </section>
 
         {/* CPIL Section */}
-        <section className="pt-4 pb-4 px-[5%] bg-white">
+        <section className="pt-4 pb-2 px-[5%] bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-6">
-              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-[#800000] mb-3">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-3">
                 About Centre for the Promotion of International Law (CPIL)
               </h2>
-              <div className="w-20 h-1 bg-[#fbb03b] mx-auto"></div>
+              <div className="w-16 h-1 bg-[#fbb03b] mx-auto"></div>
             </div>
 
             {/* CPIL Image */}
@@ -170,13 +170,13 @@ export default function InternationalConferencePage() {
         </section>
 
         {/* Sub Themes Section */}
-        <section className="pt-4 pb-6 px-[5%] bg-gray-50">
+        <section className="pt-4 pb-4 px-[5%] bg-gray-50">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-8">
-              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-[#800000] mb-3">
+            <div className="text-center mb-6">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-3">
                 Sub Themes
               </h2>
-              <div className="w-20 h-1 bg-[#fbb03b] mx-auto mb-6"></div>
+              <div className="w-16 h-1 bg-[#fbb03b] mx-auto mb-4"></div>
               <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed max-w-5xl mx-auto text-justify">
                 We welcome abstracts and full length quality research papers on the broad theme of Rivers. The below mentioned are few sub themes which may be considered. Please note that this is not an exhaustive list of topics. You are welcome to submit abstracts on any topic of your interest as long as it falls within an area of concern on River.
               </p>
@@ -252,10 +252,10 @@ export default function InternationalConferencePage() {
               </div>
               
               <div className="lg:w-1/2 w-full">
-                <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8 leading-tight">
+                <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4 leading-tight">
                   Guidelines for Abstract Submission
                 </h2>
-                <div className="space-y-6 font-inter text-lg text-gray-700 leading-relaxed text-justify">
+                <div className="space-y-1 font-inter text-lg text-gray-700 leading-relaxed text-justify">
                   <p>
                     Authors should write an abstract between 250 to 300 words relating to the themes of the Conference.
                   </p>
@@ -270,13 +270,13 @@ export default function InternationalConferencePage() {
             </div>
 
             {/* Full Paper Submission Guidelines */}
-            <div className="pt-8 border-t border-gray-100">
-              <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-6 leading-tight">
+            <div className="pt-6 border-t border-gray-100">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4 leading-tight">
                 Guidelines for Full Paper Submission upon selection of Abstract
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 font-inter text-base md:text-lg text-gray-700 leading-relaxed text-justify">
-                <div className="space-y-6">
+                <div className="space-y-1">
                   <p>
                     The main text of the full paper should be written in <span className="font-semibold text-gray-900">Times New Roman font size 12</span>, with 1.5 line spacing, and footnotes in Times New Roman font size 10, with a line spacing of 1.0.
                   </p>
@@ -288,7 +288,7 @@ export default function InternationalConferencePage() {
                   </p>
                 </div>
                 
-                <div className="space-y-6">
+                <div className="space-y-1">
                   <p>
                     The word limit for the full papers should remain between <span className="font-semibold text-gray-900">5000-6000 words</span>, including footnotes (excluding abstract and bibliography).
                   </p>
@@ -302,8 +302,8 @@ export default function InternationalConferencePage() {
               </div>
 
               {/* Additional Formatting Guidelines */}
-              <div className="mt-8 pt-8 border-t border-gray-100">
-                <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 mb-4">
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <h3 className="font-playfair text-lg md:text-xl font-bold text-gray-900 mb-3">
                   Authors should strictly adhere to the following formatting guidelines:
                 </h3>
                 <ul className="list-disc pl-6 space-y-2 font-inter text-base md:text-lg text-gray-700">
@@ -315,9 +315,9 @@ export default function InternationalConferencePage() {
               </div>
 
               {/* Peer Review & Publication Ethics Links */}
-              <div className="mt-12 flex flex-col md:flex-row items-stretch border-t border-gray-100">
-                <div className="flex-1 py-8 flex flex-col sm:flex-row items-center justify-between gap-6 md:pr-8 lg:pr-12">
-                  <h4 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 leading-tight text-center sm:text-left max-w-xs">
+              <div className="mt-8 flex flex-col md:flex-row items-stretch border-t border-gray-100">
+                <div className="flex-1 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 md:pr-8 lg:pr-12">
+                  <h4 className="font-playfair text-lg md:text-xl font-bold text-gray-900 leading-tight text-center sm:text-left max-w-xs">
                     Peer Review Process for Conference Proceedings
                   </h4>
                   <a 
@@ -331,8 +331,8 @@ export default function InternationalConferencePage() {
                 
                 <div className="hidden md:block w-px bg-gray-200"></div>
                 
-                <div className="flex-1 py-8 flex flex-col sm:flex-row items-center justify-between gap-6 md:pl-8 lg:pl-12 border-t md:border-t-0 border-gray-100">
-                  <h4 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 leading-tight text-center sm:text-left">
+                <div className="flex-1 py-6 flex flex-col sm:flex-row items-center justify-between gap-6 md:pl-8 lg:pl-12 border-t md:border-t-0 border-gray-100">
+                  <h4 className="font-playfair text-lg md:text-xl font-bold text-gray-900 leading-tight text-center sm:text-left">
                     Publication Ethics
                   </h4>
                   <a 
@@ -352,12 +352,12 @@ export default function InternationalConferencePage() {
         <section className="py-8 px-[5%] bg-gray-50">
           <div className="max-w-7xl mx-auto">
             {/* Important Deadlines */}
-            <div className="mb-8">
-              <div className="text-center mb-6">
-                <h2 className="font-playfair text-2xl md:text-3xl font-bold text-[#800000] mb-3">
+            <div className="mb-6">
+              <div className="text-center mb-4">
+                <h2 className="font-playfair text-xl md:text-2xl font-bold text-[#800000] mb-3">
                   Important Deadlines
                 </h2>
-                <div className="w-20 h-1 bg-[#fbb03b] mx-auto"></div>
+                <div className="w-16 h-1 bg-[#fbb03b] mx-auto"></div>
               </div>
               
               <div className="max-w-4xl mx-auto overflow-hidden rounded-xl shadow-xl bg-white border border-gray-100">
@@ -385,7 +385,7 @@ export default function InternationalConferencePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {/* Accommodation and Travel */}
               <div className="relative p-6 bg-white rounded-2xl shadow-lg border-t-4 border-[#800000] h-full flex flex-col justify-center">
-                <h2 className="font-playfair text-2xl md:text-3xl font-bold text-[#800000] mb-4">
+                <h2 className="font-playfair text-xl md:text-2xl font-bold text-[#800000] mb-4">
                   Accommodation and Travel
                 </h2>
                 <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
@@ -402,7 +402,7 @@ export default function InternationalConferencePage() {
 
               {/* Registration */}
               <div className="relative p-6 bg-white rounded-2xl shadow-lg border-t-4 border-[#fbb03b] h-full">
-                <h2 className="font-playfair text-2xl md:text-3xl font-bold text-[#800000] mb-4">
+                <h2 className="font-playfair text-xl md:text-2xl font-bold text-[#800000] mb-4">
                   Registration Fees
                 </h2>
                 <div className="space-y-3 font-inter text-sm md:text-base">

@@ -15,7 +15,7 @@ const committeeMembers = [
 
 export default function MentoringCommittee() {
   return (
-    <section className="py-8 md:py-10 px-[5%] bg-[#f8f9fa] overflow-hidden">
+    <section className="py-6 md:py-8 px-[5%] bg-[#f8f9fa] overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-16">
         {/* Left Side: Content */}
         <div className="flex-1">
@@ -24,7 +24,7 @@ export default function MentoringCommittee() {
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
             
             <div className="pl-6 md:pl-10">
-              <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-6 md:mb-8 leading-tight">
+              <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a] mb-6 md:mb-8 leading-tight">
                 Mentoring Committee
               </h2>
               

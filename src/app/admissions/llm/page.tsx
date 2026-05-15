@@ -80,7 +80,7 @@ export default function LLMAdmissionsPage() {
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
             <div className="pl-6 md:pl-10">
-              <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-6 leading-tight">
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
                 LL.M. Admissions
               </h1>
               <p className="font-inter text-lg md:text-xl text-gray-800 max-w-2xl leading-relaxed font-medium">
@@ -97,8 +97,8 @@ export default function LLMAdmissionsPage() {
 
           {/* Left Side: Framed Image */}
           <div className="lg:w-[45%] w-full flex justify-center items-center">
-            <div className="relative w-full aspect-[16/10] bg-white p-1 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2 border border-gray-100">
-              <div className="relative w-full h-full overflow-hidden border border-gray-100">
+            <div className="relative w-full aspect-[16/10] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
+              <div className="relative w-full h-full overflow-hidden">
                 <Image
                   src="/images/llm/1.webp"
                   alt="LL.M. Program Discussion"
@@ -112,7 +112,7 @@ export default function LLMAdmissionsPage() {
 
           {/* Right Side: Content */}
           <div className="lg:w-[55%] flex flex-col justify-center">
-            <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-8 leading-tight">
+            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
               LL.M. Program
             </h2>
 
@@ -154,7 +154,7 @@ export default function LLMAdmissionsPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Section Header */}
           <div className="text-center">
-            <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-8 leading-tight">
+            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
               Postgraduate Specializations
             </h2>
 
@@ -190,7 +190,7 @@ export default function LLMAdmissionsPage() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-10 text-center">
+          <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-10 text-center">
             Why Choose VMLS for Your LL.M.?
           </h2>
 
@@ -236,225 +236,225 @@ export default function LLMAdmissionsPage() {
           </div>
         </div>
       </section>
-      {/* Detailed Curriculum Section: All Specializations in 2x2 Grid */}
-      <section className="pt-4 pb-4 md:pt-6 md:pb-6 px-[4%] bg-[#f8f9fa] border-t border-gray-100">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-            
-            {/* Box 1: Corporate and Financial Laws */}
-            <div className="bg-white border-t-8 border-[#a31f34] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-6 md:p-8 relative z-10 flex flex-col">
-              <div className="mb-8">
-                <h2 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mb-4 leading-tight font-bold">
-                  LL.M. in Corporate and Financial Laws
-                </h2>
-                <p className="font-inter text-gray-700 leading-relaxed text-xs">
-                  Immerse yourself in the specialized LL.M. in Corporate and Financial Laws. This focused LL.M. program examines Comparative Corporate Governance, Financial Policy, and global issues in law and regulation.
-                </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-auto">
-                <div>
-                  <h3 className="font-inter font-black text-[10px] text-[#1a1a1a] mb-4 uppercase tracking-widest border-b border-[#a31f34] pb-1 inline-block">Sem 1</h3>
-                  <div className="space-y-2">
-                    {[
-                      { name: "Research Methods", credits: "3" },
-                      { name: "Law & Justice", credits: "3" },
-                      { name: "Public Law", credits: "3" },
-                      { name: "Corp Governance", credits: "2" },
-                      { name: "M&A", credits: "2" },
-                      { name: "Dissertation I", credits: "1" },
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex justify-between items-center text-[10px] md:text-xs border-b border-gray-50 pb-1">
-                        <span className="text-gray-700 truncate pr-2">{item.name}</span>
-                        <span className="text-gray-400 font-bold shrink-0">{item.credits}C</span>
-                      </div>
-                    ))}
-                  </div>
+      {/* Detailed Curriculum Section: Table-based Layout */}
+      <section className="pt-8 pb-4 px-[5%] bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="space-y-20">
+            {[
+              {
+                title: "LL.M. in Corporate and Financial Laws",
+                intro: "Immerse yourself in the specialized LL.M. in Corporate and Financial Laws. This focused LL.M. program examines Comparative Corporate Governance, Financial Policy, and global issues in law and regulation.",
+                sem1: [
+                  { n: "Research Methods and Legal Writing", t: "Compulsory (General)", c: 3 },
+                  { n: "Law and Justice in a Globalizing World", t: "Compulsory (General)", c: 3 },
+                  { n: "Comparative Public Law and Governance", t: "Compulsory (General)", c: 3 },
+                  { n: "Corporate Governance", t: "Core (Specialization)", c: 2 },
+                  { n: "Mergers and Acquisitions", t: "Core (Specialization)", c: 2 },
+                  { n: "Dissertation Writing Course - I", t: "Compulsory (General)", c: 1 },
+                ],
+                sem2: [
+                  { n: "Corporate Insolvency", t: "Core (Specialization)", c: 2 },
+                  { n: "Optional Course I", t: "Optional", c: 1 },
+                  { n: "Optional Course II", t: "Optional", c: 2 },
+                  { n: "Capstone & Internship", t: "Compulsory (General)", c: 3 },
+                  { n: "Dissertation", t: "Compulsory (General)", c: 3 },
+                  { n: "Dissertation Writing Course - II", t: "Compulsory (General)", c: 1 },
+                ]
+              },
+              {
+                title: "LL.M. in Commercial Dispute Resolution",
+                intro: "Crafted for those aspiring to master litigation and arbitration. Gain practice ready skills in resolving commercial disputes through specialized modules.",
+                sem1: [
+                  { n: "Research Methods and Legal Writing", t: "Compulsory (General)", c: 3 },
+                  { n: "Law and Justice in a Globalizing World", t: "Compulsory (General)", c: 3 },
+                  { n: "Comparative Public Law and Governance", t: "Compulsory (General)", c: 3 },
+                  { n: "Arbitration", t: "Core (Specialization)", c: 2 },
+                  { n: "Commercial Courts", t: "Core (Specialization)", c: 2 },
+                  { n: "Dissertation Writing Course - I", t: "Compulsory (General)", c: 1 },
+                ],
+                sem2: [
+                  { n: "Corporate Insolvency", t: "Core (Specialization)", c: 2 },
+                  { n: "Optional Course I", t: "Optional", c: 1 },
+                  { n: "Optional Course II", t: "Optional", c: 2 },
+                  { n: "Capstone & Internship", t: "Compulsory (General)", c: 3 },
+                  { n: "Dissertation", t: "Compulsory (General)", c: 3 },
+                  { n: "Dissertation Writing Course - II", t: "Compulsory (General)", c: 1 },
+                ]
+              },
+              {
+                title: "LL.M. in Criminal Law and Practice",
+                intro: "Grow into a skilled criminal law specialist with theoretical knowledge and hands-on litigation abilities focused on today's dynamic arena.",
+                sem1: [
+                  { n: "Research Methods and Legal Writing", t: "Compulsory (General)", c: 3 },
+                  { n: "Law and Justice in a Globalizing World", t: "Compulsory (General)", c: 3 },
+                  { n: "Comparative Public Law and Governance", t: "Compulsory (General)", c: 3 },
+                  { n: "Criminal Theory", t: "Core (Specialization)", c: 2 },
+                  { n: "Advanced Criminal Practice I", t: "Core (Specialization)", c: 2 },
+                  { n: "Dissertation Writing Course - I", t: "Compulsory (General)", c: 1 },
+                ],
+                sem2: [
+                  { n: "Advanced Criminal Practice II", t: "Core (Specialization)", c: 2 },
+                  { n: "Technology & Criminal Laws", t: "Core (Specialization)", c: 2 },
+                  { n: "Criminal Drafting", t: "Core (Specialization)", c: 2 },
+                  { n: "Forensic Law", t: "Core (Specialization)", c: 2 },
+                  { n: "Dissertation", t: "Compulsory (General)", c: 3 },
+                  { n: "Internship", t: "Compulsory (General)", c: 3 },
+                  { n: "Dissertation Writing Course - II", t: "Compulsory (General)", c: 1 },
+                ]
+              },
+              {
+                title: "LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights",
+                intro: "This visionary LL.M. course explores the interface between legal expertise, technology, and innovation. Your LL.M. journey begins with foundational courses in AI, Technology & Law, and Privacy & Data Protection Law. Progressing through the LL.M. program, you'll specialize in AI and Intellectual Property Law and select electives to refine your tech law focus.",
+                sem1: [
+                  { n: "Research Methods and Legal Writing", t: "Compulsory (General)", c: 3 },
+                  { n: "Comparative Public Law and Governance", t: "Compulsory (General)", c: 3 },
+                  { n: "Law and Justice in a Globalizing World", t: "Compulsory (General)", c: 3 },
+                  { n: "AI, Technology and Law: Concepts and Challenges", t: "Core (Specialization)", c: 2 },
+                  { n: "Privacy and Data Protection Law", t: "Core (Specialization)", c: 2 },
+                  { n: "Dissertation Writing Course - I", t: "Compulsory (General)", c: 1 },
+                ],
+                sem2: [
+                  { n: "AI and Intellectual Property Law", t: "Core (Specialization)", c: 2 },
+                  { n: "Optional Course I", t: "Optional", c: 2 },
+                  { n: "Optional Course II", t: "Optional", c: 2 },
+                  { n: "Dissertation", t: "Compulsory (General)", c: 3 },
+                  { n: "Internship", t: "Compulsory (General)", c: 3 },
+                  { n: "Dissertation Writing Course - II", t: "Compulsory (General)", c: 1 },
+                ]
+              }
+            ].map((spec, sIdx) => (
+              <div key={sIdx} className="space-y-8">
+                <div className="max-w-4xl">
+                  <h2 className="font-playfair text-2xl md:text-3xl text-[#1a1a1a] mb-4 font-bold border-l-4 border-[#a31f34] pl-6">
+                    {spec.title}
+                  </h2>
+                  <p className="font-inter text-gray-700 leading-relaxed text-sm md:text-base pl-10">
+                    {spec.intro}
+                  </p>
                 </div>
-                <div>
-                  <h3 className="font-inter font-black text-[10px] text-[#1a1a1a] mb-4 uppercase tracking-widest border-b border-[#a31f34] pb-1 inline-block">Sem 2</h3>
-                  <div className="space-y-2">
-                    {[
-                      { name: "Corp Insolvency", credits: "2" },
-                      { name: "Optional I", credits: "1" },
-                      { name: "Optional II", credits: "2" },
-                      { name: "Capstone & Intern", credits: "3" },
-                      { name: "Dissertation", credits: "3" },
-                      { name: "Dissertation II", credits: "1" },
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex justify-between items-center text-[10px] md:text-xs border-b border-gray-50 pb-1">
-                        <span className="text-gray-700 truncate pr-2">{item.name}</span>
-                        <span className="text-gray-400 font-bold shrink-0">{item.credits}C</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Box 2: Commercial Dispute Resolution */}
-            <div className="bg-white border-t-8 border-[#a31f34] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-6 md:p-8 relative z-10 flex flex-col">
-              <div className="mb-8">
-                <h2 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mb-4 leading-tight font-bold">
-                  LL.M. in Commercial Dispute Resolution
-                </h2>
-                <p className="font-inter text-gray-700 leading-relaxed text-xs">
-                  Crafted for those aspiring to master litigation and arbitration. Gain practice ready skills in resolving commercial disputes through specialized modules.
-                </p>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-auto">
-                <div>
-                  <h3 className="font-inter font-black text-[10px] text-[#1a1a1a] mb-4 uppercase tracking-widest border-b border-[#a31f34] pb-1 inline-block">Sem 1</h3>
-                  <div className="space-y-2">
-                    {[
-                      { name: "Research Methods", credits: "3" },
-                      { name: "Law & Justice", credits: "3" },
-                      { name: "Public Law", credits: "3" },
-                      { name: "Arbitration", credits: "2" },
-                      { name: "Comm. Courts", credits: "2" },
-                      { name: "Dissertation I", credits: "1" },
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex justify-between items-center text-[10px] md:text-xs border-b border-gray-50 pb-1">
-                        <span className="text-gray-700 truncate pr-2">{item.name}</span>
-                        <span className="text-gray-400 font-bold shrink-0">{item.credits}C</span>
+                <div className="space-y-12">
+                  {[
+                    { label: "SEMESTER 1", courses: spec.sem1 },
+                    { label: "SEMESTER 2", courses: spec.sem2 }
+                  ].map((sem, semIdx) => (
+                    <div key={semIdx}>
+                      <h3 className="font-inter font-bold text-sm md:text-base text-gray-900 mb-4 px-4 uppercase tracking-wider">{sem.label}</h3>
+                      <div className="overflow-x-auto">
+                        <table className="w-full text-left border-collapse bg-[#fcf5e5]">
+                          <thead>
+                            <tr className="text-[#1a365d] text-sm md:text-base font-bold">
+                              <th className="px-6 py-4 w-[50%]">Course Title</th>
+                              <th className="px-6 py-4 w-[35%]">Nature of the Course</th>
+                              <th className="px-6 py-4 w-[15%] text-right">Credits</th>
+                            </tr>
+                          </thead>
+                          <tbody className="text-gray-700 text-sm md:text-base">
+                            {sem.courses.map((course, cIdx) => (
+                              <tr key={cIdx} className="border-t border-[#e8dfc9]">
+                                <td className="px-6 py-3 font-medium">{course.n}</td>
+                                <td className="px-6 py-3">{course.t}</td>
+                                <td className="px-6 py-3 text-right font-bold">{course.c}</td>
+                              </tr>
+                            ))}
+                            <tr className="border-t-2 border-[#d6cbb0] bg-[#f7eed8]">
+                              <td className="px-6 py-4 font-bold" colSpan={2}>Total</td>
+                              <td className="px-6 py-4 text-right font-bold text-[#a31f34]">
+                                {sem.courses.reduce((acc, curr) => acc + curr.c, 0)}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-inter font-black text-[10px] text-[#1a1a1a] mb-4 uppercase tracking-widest border-b border-[#a31f34] pb-1 inline-block">Sem 2</h3>
-                  <div className="space-y-2">
-                    {[
-                      { name: "Corp Insolvency", credits: "2" },
-                      { name: "Optional I", credits: "1" },
-                      { name: "Optional II", credits: "2" },
-                      { name: "Capstone & Intern", credits: "3" },
-                      { name: "Dissertation", credits: "3" },
-                      { name: "Dissertation II", credits: "1" },
-                    ].map((item, idx) => (
-                      <div key={idx} className="flex justify-between items-center text-[10px] md:text-xs border-b border-gray-50 pb-1">
-                        <span className="text-gray-700 truncate pr-2">{item.name}</span>
-                        <span className="text-gray-400 font-bold shrink-0">{item.credits}C</span>
-                      </div>
-                    ))}
+                    </div>
+                  ))}
+                  
+                  <div className="bg-[#1a1a1a] text-white p-4 md:p-6 flex justify-between items-center">
+                    <span className="font-bold text-base md:text-lg uppercase tracking-widest">Total Programme credits</span>
+                    <span className="text-[#fbb03b] font-black text-xl md:text-2xl">
+                      {spec.sem1.reduce((acc, curr) => acc + curr.c, 0) + spec.sem2.reduce((acc, curr) => acc + curr.c, 0)} Credits
+                    </span>
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Box 3: Criminal Law and Practice */}
-            <div className="bg-white border-t-8 border-[#a31f34] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-6 md:p-8 relative z-10 flex flex-col">
-              <div className="mb-8">
-                <h2 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mb-4 leading-tight font-bold">
-                  LL.M. in Criminal Law and Practice
-                </h2>
-                <p className="font-inter text-gray-700 leading-relaxed text-xs">
-                  Grow into a skilled criminal law specialist with theoretical knowledge and hands-on litigation abilities focused on today&apos;s dynamic arena.
-                </p>
-              </div>
-              <div className="space-y-6 mt-auto">
-                <div>
-                  <h3 className="font-inter font-black text-[10px] text-[#1a1a1a] mb-2 uppercase tracking-widest border-b border-[#a31f34] pb-1 inline-block">Semester 1</h3>
-                  <div className="space-y-1">
-                    {[
-                      { n: "Research Methods", c: "3" },
-                      { n: "Public Law", c: "3" },
-                      { n: "Law & Justice", c: "3" },
-                      { n: "Criminal Theory", c: "2" },
-                      { n: "Adv. Criminal Practice I", c: "2" },
-                    ].map((i, idx) => (
-                      <div key={idx} className="flex justify-between text-[10px] border-b border-gray-50 pb-0.5">
-                        <span className="text-gray-700">{i.n}</span>
-                        <span className="text-gray-900 font-bold">{i.c}C</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-inter font-black text-[10px] text-[#1a1a1a] mb-2 uppercase tracking-widest border-b border-[#a31f34] pb-1 inline-block">Semester 2</h3>
-                  <div className="space-y-1">
-                    {[
-                      { n: "Adv. Criminal Practice II", c: "2" },
-                      { n: "Tech & Criminal Laws", c: "2" },
-                      { n: "Criminal Drafting", c: "2" },
-                      { n: "Forensic Law", c: "2" },
-                      { n: "Dissertation", c: "3" },
-                      { n: "Internship", c: "3" },
-                    ].map((i, idx) => (
-                      <div key={idx} className="flex justify-between text-[10px] border-b border-gray-50 pb-0.5">
-                        <span className="text-gray-700">{i.n}</span>
-                        <span className="text-gray-900 font-bold">{i.c}C</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Box 4: AI, Emerging Technologies and IP Rights */}
-            <div className="bg-white border-t-8 border-[#a31f34] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] p-6 md:p-8 relative z-10 flex flex-col">
-              <div className="mb-8">
-                <h2 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mb-4 leading-tight font-bold">
-                  LL.M. in AI, Emerging Tech & IP
-                </h2>
-                <p className="font-inter text-gray-700 leading-relaxed text-xs">
-                  Visionary course exploring the interface between legal expertise and technology innovation. Regulate and shape digital frameworks.
-                </p>
-              </div>
-              <div className="space-y-6 mt-auto">
-                <div>
-                  <h3 className="font-inter font-black text-[10px] text-[#1a1a1a] mb-2 uppercase tracking-widest border-b border-[#a31f34] pb-1 inline-block">Semester 1</h3>
-                  <div className="space-y-1">
-                    {[
-                      { n: "Research Methods", c: "3" },
-                      { n: "Public Law", c: "3" },
-                      { n: "Law & Justice", c: "3" },
-                      { n: "AI & Law", c: "2" },
-                      { n: "Privacy & Data Law", c: "2" },
-                      { n: "Dissertation I", c: "1" },
-                    ].map((i, idx) => (
-                      <div key={idx} className="flex justify-between text-[10px] border-b border-gray-50 pb-0.5">
-                        <span className="text-gray-700">{i.n}</span>
-                        <span className="text-gray-900 font-bold">{i.c}C</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <h3 className="font-inter font-black text-[10px] text-[#1a1a1a] mb-2 uppercase tracking-widest border-b border-[#a31f34] pb-1 inline-block">Semester 2</h3>
-                  <div className="space-y-1">
-                    {[
-                      { n: "AI & IP Law", c: "2" },
-                      { n: "Optional I", c: "2" },
-                      { n: "Optional II", c: "2" },
-                      { n: "Dissertation", c: "3" },
-                      { n: "Internship", c: "3" },
-                      { n: "Dissertation II", c: "1" },
-                    ].map((i, idx) => (
-                      <div key={idx} className="flex justify-between text-[10px] border-b border-gray-50 pb-0.5">
-                        <span className="text-gray-700">{i.n}</span>
-                        <span className="text-gray-900 font-bold">{i.c}C</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
+
+      {/* Key Program Features Section */}
+      <section className="py-6 px-[5%] bg-[#f8f9fa] relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-4 text-center">
+            Key Program Features
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "One-Year, Full-Time Format",
+                content: "The intensive LL.M. program allows you to master advanced concepts and practical skills efficiently, perfect for those seeking fast-tracked career advancement."
+              },
+              {
+                title: "Capstone Projects & Internships",
+                content: "Complete a major LL.M. capstone project and compulsory internship in collaboration with top law firms, corporates, or regulatory agencies gaining real-world legal experience."
+              },
+              {
+                title: "Research & Dissertation",
+                content: "Sharpen your expertise by conducting high-quality legal research on niche topics, culminating in a dissertation that addresses pressing legal and social challenges."
+              },
+              {
+                title: "Career Services & Placement",
+                content: "VMLS delivers placement support, industry partnerships, and a dedicated career services team to help every LL.M. graduate secure top opportunities."
+              },
+              {
+                title: "Cutting-Edge Electives",
+                content: "Customize your LL.M. pathway with electives in dispute resolution, tech law, capital markets, mediation, and more align your degree with your ambitions."
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-white p-8 relative border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300">
+                {/* Yellow Side Accent */}
+                <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#fbb03b]"></div>
+
+                <h3 className="font-inter font-bold text-lg text-[#1a1a1a] mb-4 leading-snug">
+                  {feature.title}
+                </h3>
+                <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed">
+                  {feature.content}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Alumni Success & Career Opportunities Section */}
+      <section className="py-4 pb-6 px-[5%] bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-4 text-center">
+            Alumni Success & Career Opportunities
+          </h2>
+          
+          <div className="bg-gray-50 rounded-xl p-8 md:p-12 border border-gray-100 shadow-sm">
+            <p className="font-inter text-gray-700 text-base md:text-lg leading-relaxed text-center max-w-5xl mx-auto">
+              Joining the VMLS LL.M. program means joining a vibrant academic community and a growing alumni network. Graduates work in top law firms, judicial services, global corporates, and government agencies, or pursue further research and teaching roles. The LL.M. at VMLS sets you up for lifelong learning and leadership in today&apos;s highly competitive legal domain.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action Section */}
-      <section className="px-[5%] py-12 md:py-16">
-        <div className="max-w-7xl mx-auto bg-[#fbb03b] rounded-2xl py-16 px-6 md:px-12 text-center shadow-sm">
-          <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-6 font-bold leading-tight">
+      <section className="px-[5%] py-2 md:py-4">
+        <div className="max-w-5xl mx-auto bg-[#fbb03b] rounded-2xl py-10 px-6 md:px-10 text-center shadow-sm">
+          <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-4 font-bold leading-tight">
             Ready to transform your legal career?
           </h2>
-          <p className="font-inter text-lg md:text-xl text-gray-900 mb-10 max-w-3xl mx-auto font-medium">
+          <p className="font-inter text-base md:text-lg text-gray-900 mb-6 max-w-2xl mx-auto font-medium">
             Apply now to the VMLS LL.M. program — one year, infinite possibilities.
           </p>
           <Link 
             href="https://admissions.vmls.edu.in/" 
-            className="inline-block px-10 py-4 bg-black text-white font-inter font-bold rounded-lg hover:bg-gray-900 transition-all duration-300 shadow-xl hover:-translate-y-1"
+            className="inline-block px-8 py-3.5 bg-black text-white font-inter font-bold rounded-lg hover:bg-gray-900 transition-all duration-300 shadow-xl hover:-translate-y-1 text-sm md:text-base"
           >
             Apply Now
           </Link>

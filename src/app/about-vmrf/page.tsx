@@ -16,7 +16,7 @@ export default function AboutVMRF() {
       <hr className="border-gray-100" />
 
       {/* Content Section (Re-styled like Mentoring Committee) */}
-      <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-[#f8f9fa] overflow-hidden">
+      <section className="pb-6 md:pb-8 pt-8 md:pt-12 px-[5%] bg-[#f8f9fa] overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           
           {/* Left Side: Content */}
@@ -26,7 +26,7 @@ export default function AboutVMRF() {
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
               
               <div className="pl-6 md:pl-10 h-full flex flex-col justify-center">
-                <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-[#1a1a1a] mb-8 leading-tight">
+                <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-8 leading-tight">
                   About VMRF
                 </h2>
                 
@@ -50,7 +50,7 @@ export default function AboutVMRF() {
 
           {/* Right Side: Framed Image */}
           <div className="lg:w-[45%] w-full order-1 lg:order-2 flex justify-center items-center">
-            <div className="relative w-full aspect-[16/10] bg-white p-3 shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:-translate-y-2 border border-gray-200">
+            <div className="relative w-full aspect-[16/10] shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:-translate-y-2">
               <div className="relative w-full h-full overflow-hidden">
                 <Image 
                   src="/images/vmrf/vmrf-header.webp" 
@@ -67,7 +67,7 @@ export default function AboutVMRF() {
       </section>
 
       {/* Leadership Section */}
-      <section className="bg-white px-[5%] pt-12 md:pt-16 pb-8 md:pb-12">
+      <section className="bg-white px-[5%] pt-6 md:pt-8 pb-8 md:pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col items-center mb-16">
             <h2 className="font-playfair text-4xl md:text-5xl text-[#1a1a1a] mb-4">Leadership @VMRF</h2>
@@ -77,8 +77,8 @@ export default function AboutVMRF() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 max-w-5xl mx-auto">
             {/* Founder */}
             <div className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full">
-              <div className="relative aspect-square bg-white p-1 shadow-[0_15px_35px_rgba(0,0,0,0.1)] border border-gray-100 group-hover:shadow-2xl transition-all duration-300">
-                <div className="relative w-full h-full overflow-hidden border border-gray-200">
+              <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300">
+                <div className="relative w-full h-full overflow-hidden">
                   <Image 
                     src="/images/vmrf/Frame-53135.webp" 
                     alt="Dr. A. Shanmugasundaram" 
@@ -96,8 +96,8 @@ export default function AboutVMRF() {
 
             {/* Chancellor */}
             <div className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full">
-              <div className="relative aspect-square bg-white p-1 shadow-[0_15px_35px_rgba(0,0,0,0.1)] border border-gray-100 group-hover:shadow-2xl transition-all duration-300">
-                <div className="relative w-full h-full overflow-hidden border border-gray-200">
+              <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300">
+                <div className="relative w-full h-full overflow-hidden">
                   <Image 
                     src="/images/vmrf/Frame-53136.webp" 
                     alt="Dr. A. S. Ganesan" 
@@ -115,8 +115,8 @@ export default function AboutVMRF() {
 
             {/* Vice President */}
             <div className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full">
-              <div className="relative aspect-square bg-white p-1 shadow-[0_15px_35px_rgba(0,0,0,0.1)] border border-gray-100 group-hover:shadow-2xl transition-all duration-300">
-                <div className="relative w-full h-full overflow-hidden border border-gray-200">
+              <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300">
+                <div className="relative w-full h-full overflow-hidden">
                   <Image 
                     src="/images/vmrf/image-100.webp" 
                     alt="Dr. Anuradha Ganesan" 

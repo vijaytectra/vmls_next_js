@@ -53,7 +53,7 @@ export default function BoardOfAdvisors() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
           {directors.map((director, index) => (
             <div key={index} className="flex flex-col group animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
-              <div className="relative aspect-square w-full bg-white p-3 shadow-[0_15px_40px_rgba(0,0,0,0.08)] border border-gray-100 transition-transform duration-500 group-hover:-translate-y-2">
+              <div className="relative aspect-square w-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-transform duration-500 group-hover:-translate-y-2">
                 <div className="relative w-full h-full overflow-hidden bg-white">
                   <Image
                     src={director.image}
@@ -67,7 +67,7 @@ export default function BoardOfAdvisors() {
 
               <div className="mt-2 flex flex-col h-full">
                 <div className="min-h-[40px] md:min-h-[50px] flex flex-col justify-end gap-2">
-                  <h3 className="font-playfair font-bold text-lg md:text-xl lg:text-[22px] tracking-tight text-[#1a1a1a] leading-tight group-hover:text-[#a31f34] transition-colors duration-300">
+                  <h3 className="font-playfair font-bold text-base md:text-lg lg:text-xl tracking-tight text-[#1a1a1a] leading-tight group-hover:text-[#a31f34] transition-colors duration-300">
                     {director.name}
                   </h3>
                   <div className="w-8 h-[2px] bg-[#a31f34]/30 group-hover:w-16 group-hover:bg-[#a31f34] transition-all duration-500"></div>

@@ -16,7 +16,7 @@ export default function CollaborationsPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative px-[5%] py-20 md:py-32 overflow-hidden">
+      <section className="relative px-[5%] py-12 md:py-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/collab/Frame-53245.webp"
@@ -33,7 +33,7 @@ export default function CollaborationsPage() {
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#fbb03b]"></div>
             <div className="pl-6 md:pl-10">
-              <h1 className="font-playfair text-4xl md:text-5xl lg:text-7xl mb-6 leading-tight font-bold">
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl mb-6 leading-tight font-bold">
                 Collaborations
               </h1>
               <p className="font-inter text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium">
@@ -45,9 +45,9 @@ export default function CollaborationsPage() {
       </section>
 
       {/* Academic Collaborations Section */}
-      <section className="pt-8 pb-4 px-[5%] bg-white">
+      <section className="pt-6 pb-2 px-[5%] bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-6">
+          <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4">
             Academic Collaborations
           </h2>
 
@@ -79,16 +79,16 @@ export default function CollaborationsPage() {
       </section>
 
       {/* Mentorship Framework Section */}
-      <section className="pt-6 pb-8 px-[5%] bg-gray-50">
+      <section className="pt-4 pb-6 px-[5%] bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-center text-[#800000] mb-6">
+          <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-center text-[#800000] mb-4">
             A Unique Mentorship Framework
           </h2>
           <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg mb-10 text-justify">
             Vinayaka Mission's Law School is unique not only in its vision – excellence through inclusivity, and a steadfast emphasis on digital futures and climate transitions – but also its governance model. We are the first Indian legal education institution to be formally mentored by another private law school, arguably India's finest at that – the Jindal Global Law School, and Jindal Global University, an institution of eminence. The active Mentoring Committee created under this one-of-its-kind mentorship agreement consists of eminent senior lawyers and distinguished academics, who steer VMLS towards its goals and vision.
           </p>
 
-          <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-4">
+          <h3 className="font-playfair text-lg md:text-xl lg:text-2xl font-bold text-[#1a1a1a] mb-2">
             Salient Features of the Mentorship Framework
           </h3>
           <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg mb-6 text-justify">
@@ -128,7 +128,7 @@ export default function CollaborationsPage() {
 
           {/* Text Content */}
           <div className="lg:w-1/2 w-full">
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-4">
+            <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4">
               Sri Ragini Dharmasthaapanam
             </h2>
             <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify">
@@ -161,7 +161,7 @@ export default function CollaborationsPage() {
 
           {/* Text Content */}
           <div className="lg:w-1/2 w-full">
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-4">
+            <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4">
               VMLS Signs International MoU with Roger Williams University School of Law (RWU Law)
             </h2>
             <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify">
@@ -223,7 +223,7 @@ export default function CollaborationsPage() {
 
           {/* Text Content */}
           <div className="lg:w-1/2 w-full">
-            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-4">
+            <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4">
               VMLS Signs International MoU with University of San Diego to Foster Global Legal Education
             </h2>
             <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-base text-justify">
@@ -256,7 +256,7 @@ export default function CollaborationsPage() {
           
           {/* Text Content */}
           <div className="lg:w-1/2 w-full overflow-hidden">
-            <h2 className="font-playfair text-[22px] sm:text-2xl md:text-3xl lg:text-[28px] xl:text-4xl font-bold text-[#800000] mb-4 whitespace-nowrap">
+            <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4">
               Seattle University in Washington, U.S.
             </h2>
             <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-base text-justify">
