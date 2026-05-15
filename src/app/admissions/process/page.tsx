@@ -2,10 +2,42 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
+
+const howToSchema = {
+  "@context": "https://schema.org/",
+  "@type": "HowTo",
+  name: "Admission Process",
+  step: [
+    { "@type": "HowToStep", text: "Register yourself and verify email." },
+    { "@type": "HowToStep", text: "Fill Application Form Online" },
+    { "@type": "HowToStep", text: "Pay Application Fee" },
+    {
+      "@type": "HowToStep",
+      text: "Submission of Application with all required documents",
+    },
+    {
+      "@type": "HowToStep",
+      text: "Submitted Application will be processed internally",
+    },
+    {
+      "@type": "HowToStep",
+      text: "Release of Admission Offer Letter/Hall Ticket",
+    },
+    { "@type": "HowToStep", text: "VLAT Exam" },
+    { "@type": "HowToStep", text: "Release of Provisional Admission Letter" },
+  ],
+};
 
 export default function AdmissionProcessPage() {
   return (
     <main className="min-h-screen bg-white">
+      <Script
+        id="ld-howto-admission"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
