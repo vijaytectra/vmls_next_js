@@ -128,11 +128,12 @@ export default function Header() {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Drawer Header */}
-          <div className="flex justify-between items-center p-6 border-b border-gray-100">
-            <h2 className="font-playfair text-[#a31f34] text-2xl font-bold">VMLS Menu</h2>
+          <div className="flex justify-between items-center p-5 md:p-6 border-b border-gray-100 sticky top-0 bg-white z-20">
+            <h2 className="font-playfair text-[#a31f34] text-xl md:text-2xl font-bold">VMLS Menu</h2>
             <button
               onClick={() => setIsMenuOpen(false)}
-              className="p-2 bg-gray-100 hover:bg-[#a31f34] hover:text-white rounded-full transition-all duration-300"
+              className="p-3 md:p-2 bg-gray-100 hover:bg-[#a31f34] hover:text-white rounded-full transition-all duration-300 flex items-center justify-center shadow-sm"
+              aria-label="Close menu"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="18" y1="6" x2="6" y2="18"></line>

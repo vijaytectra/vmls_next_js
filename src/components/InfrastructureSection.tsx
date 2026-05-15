@@ -84,7 +84,7 @@ export default function InfrastructureSection() {
                       </h3>
 
                       <div className={`overflow-hidden transition-all duration-500 ${isHovered ? "max-h-[300px] opacity-100 mb-6" : "max-h-0 opacity-0"}`}>
-                        <p className="font-inter text-gray-200 text-lg leading-relaxed max-w-2xl text-justify">
+                        <p className="font-inter text-gray-200 text-base md:text-lg leading-relaxed max-w-2xl text-justify">
                           {item.description}
                         </p>
                       </div>

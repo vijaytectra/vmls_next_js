@@ -31,19 +31,19 @@ export default function AboutVMLS() {
                 </h2>
                 
                 <div className="space-y-6 text-justify">
-                   <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                   <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                     Vinayaka Mission’s Law School (VMLS) has been established by Vinayaka Missions Research Foundation – Deemed to be University (VMRF-DU) to impart legal education and legal skills relevant to the evolving needs of the local, national and global communities.
                   </p>
-                  <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                  <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                     With the founding vision of creating the law school of the future, VMLS admitted its first cohort of students in 2021. Mentorship from India's finest law school, <span className="font-bold text-[#a31f34]">Jindal Global Law School</span>, and a committed team of full-time faculty members, many of whom are trained in globally renowned institutions, have resulted in pedagogic innovations at VMLS that make it a frontrunner in equipping learners with the skills, knowledge, exposure, and specializations required for professional success in the AI age.
                   </p>
-                  <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                  <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                     The state-of-the-art infrastructure, including smart classrooms, a well-stocked library with a strong digital backbone, and a regal moot court hall, support in this endeavour by creating the ambience for our students to immerse in the vibrant campus life.
                   </p>
-                  <p className="font-inter text-lg text-gray-800 leading-relaxed border-l-2 border-[#a31f34] pl-4 py-3 bg-white/50">
+                  <p className="font-inter text-base md:text-lg text-gray-800 leading-relaxed border-l-2 border-[#a31f34] pl-4 py-3 bg-white/50">
                     As a <span className="font-bold text-[#a31f34]">bilingual law school in Chennai</span>, VMLS offers students the unique advantage of studying law in both <span className="font-bold">English and Tamil</span>, preparing them for a global legal career while staying rooted in the local context. 
                   </p>
-                  <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                  <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                     VMLS prides itself in its focus on inclusivity so that no learner is left behind.
                   </p>
                 </div>

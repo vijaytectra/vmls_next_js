@@ -60,30 +60,29 @@ export default function LLMAdmissionsPage() {
         </div>
       </nav>
 
-      {/* Hero / Header Section */}
-      <section className="relative px-[5%] pt-10 md:pt-16 pb-8 md:pb-12 overflow-hidden bg-white">
-        {/* Background Image with Overlay */}
+      {/* Hero / Header Section - Increased Size */}
+      <section className="relative px-[5%] pt-16 md:pt-28 pb-12 md:pb-20 overflow-hidden bg-white">
+        {/* Background Image with Black Overlay for Premium Contrast */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/llm/llm-header.webp"
             alt="LL.M. Admissions Background"
             fill
-            className="object-cover object-center opacity-100 contrast-[1.02] brightness-75"
+            className="object-cover object-center opacity-100 contrast-[1.05] brightness-90"
             priority
           />
-          {/* Subtle Overlays for Readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/20 to-transparent"></div>
-          <div className="absolute inset-0 bg-black/10"></div>
+          {/* Black Gradient Overlay */}
+          <div className="absolute inset-0 bg-black/60 md:bg-gradient-to-r md:from-black/80 md:via-black/40 md:to-transparent"></div>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
             <div className="pl-6 md:pl-10">
-              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
+              <h1 className="font-playfair text-3xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
                 LL.M. Admissions
               </h1>
-              <p className="font-inter text-lg md:text-xl text-gray-800 max-w-2xl leading-relaxed font-medium">
+              <p className="font-inter text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium">
                 Specialized legal education for professionals looking to deepen their expertise in specific branches of law and academic research.
               </p>
             </div>

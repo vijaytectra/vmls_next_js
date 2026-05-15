@@ -11,8 +11,6 @@ import CentresOfExcellenceSection from "@/components/CentresOfExcellenceSection"
 import InfrastructureSection from "@/components/InfrastructureSection";
 import VideoGallerySection from "@/components/VideoGallerySection";
 import QuoteSection from "@/components/QuoteSection";
-import ChatWidget from "@/components/ChatWidget";
-
 export default function Home() {
   return (
     <div>
@@ -29,7 +27,6 @@ export default function Home() {
       <InfrastructureSection />
       <VideoGallerySection />
       <QuoteSection />
-      <ChatWidget />
     </div>
   );
 }

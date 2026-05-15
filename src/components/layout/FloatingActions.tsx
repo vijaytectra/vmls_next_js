@@ -13,27 +13,7 @@ export default function FloatingActions() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // 1. Load VMLS Custom Widget Script
-    const vmlsWidgetScript = document.createElement("script");
-    vmlsWidgetScript.src = "https://universitywidgets.blob.core.windows.net/widgetstore/vmls-widget.js";
-    vmlsWidgetScript.async = true;
-    document.body.appendChild(vmlsWidgetScript);
-
-    // 2. Load Nia Chatbot after 5 seconds delay
-    const chatbotTimer = setTimeout(() => {
-      const chatDiv = document.createElement("div");
-      chatDiv.className = "npf_chatbots";
-      chatDiv.setAttribute("data-w", "1189388fc18c4ac0952bc3816b615524");
-      chatDiv.style.display = "none";
-      document.body.appendChild(chatDiv);
-      const chatbotScript = document.createElement("script");
-      chatbotScript.type = "text/javascript";
-      chatbotScript.async = true;
-      chatbotScript.src = "https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/5747642c1669bd257/1189388fc18c4ac0952bc3816b615524";
-      document.body.appendChild(chatbotScript);
-    }, 5000);
-
-    // 3. Load NPF Widget script for Enquiry Popup
+    // 1. Load NPF Widget script for Enquiry Popup
     const script = document.createElement("script");
     script.src = "https://in8cdn.npfs.co/js/widget/npfwpopup.js";
     script.async = true;
@@ -52,8 +32,6 @@ export default function FloatingActions() {
 
     return () => {
       if (document.body.contains(script)) document.body.removeChild(script);
-      if (document.body.contains(vmlsWidgetScript)) document.body.removeChild(vmlsWidgetScript);
-      clearTimeout(chatbotTimer);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -68,7 +46,7 @@ export default function FloatingActions() {
       <div className="fixed left-0 top-1/2 -translate-y-1/2 z-[2000]">
         <Link
           href="/chat-with-student"
-          className="block text-[14px] md:text-[16px] font-inter font-medium bg-[#ae0808] text-white py-2 md:py-3 px-1 md:px-0.5 rounded-none shadow-lg hover:bg-[#800000] transition-all duration-300"
+          className="block text-[10px] md:text-[13px] font-inter font-bold tracking-wider uppercase bg-[#8b0000] text-white py-3 md:py-5 px-1.5 md:px-2 rounded-none shadow-xl hover:bg-[#600000] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
@@ -78,12 +56,12 @@ export default function FloatingActions() {
         </Link>
       </div>
 
-      {/* Right Side Sticky Buttons: Apply & Enquire */}
+      {/* Right Side Sticky Buttons */}
       <div className="fixed right-0 top-1/2 -translate-y-1/2 z-[2000] flex flex-col gap-0.5">
         <Link
           href="https://admissions.vmls.edu.in/"
           target="_blank"
-          className="block text-[14px] md:text-[16px] font-inter font-medium bg-[#ae0808] text-white py-6 md:py-8 px-2 md:px-3 rounded-none shadow-lg hover:bg-[#800000] transition-all duration-300"
+          className="block text-[10px] md:text-[13px] font-inter font-bold tracking-wider uppercase bg-[#8b0000] text-white py-3 md:py-5 px-1.5 md:px-2 rounded-none shadow-xl hover:bg-[#600000] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
@@ -94,7 +72,7 @@ export default function FloatingActions() {
         </Link>
 
         <span
-          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[14px] md:text-[16px] font-inter font-medium bg-[#8b0000] text-white py-6 md:py-8 px-5 md:px-3 rounded-none shadow-lg cursor-pointer hover:bg-[#600000] transition-all duration-300"
+          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[10px] md:text-[13px] font-inter font-bold tracking-wider uppercase bg-[#700000] text-white py-3 md:py-5 px-1.5 md:px-2 rounded-none shadow-xl cursor-pointer hover:bg-[#500000] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',

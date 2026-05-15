@@ -13,31 +13,29 @@ export default function LLBAdmissionsPage() {
         </div>
       </nav>
 
-      {/* Hero / Header Section */}
-      <section className="relative px-[5%] pt-8 md:pt-12 pb-6 md:pb-8 overflow-hidden bg-white">
-        {/* Background Image with Overlay */}
+      {/* Hero / Header Section - Increased Size */}
+      <section className="relative px-[5%] pt-16 md:pt-28 pb-12 md:pb-20 overflow-hidden bg-white">
+        {/* Background Image with Black Overlay for Premium Contrast */}
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/llb/3.webp" 
             alt="LL.B. Admissions Background" 
             fill
-            className="object-cover object-center opacity-100 contrast-[1.02]"
+            className="object-cover object-center opacity-100 contrast-[1.05] brightness-90"
             priority
           />
-          {/* Very Subtle Overlays for Readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/30 to-transparent"></div>
-          <div className="absolute inset-0 bg-white/5"></div>
+          {/* Black Gradient Overlay */}
+          <div className="absolute inset-0 bg-black/60 md:bg-gradient-to-r md:from-black/80 md:via-black/40 md:to-transparent"></div>
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
             <div className="pl-6 md:pl-10">
-
-              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
+              <h1 className="font-playfair text-3xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
                 LL.B. Admissions
               </h1>
-              <p className="font-inter text-lg md:text-xl text-gray-800 max-w-2xl leading-relaxed font-medium">
+              <p className="font-inter text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium">
                 Start your journey into the legal profession with our comprehensive LL.B. programmes designed for future-ready legal experts.
               </p>
             </div>
