@@ -169,18 +169,6 @@ export default function RootLayout({
         <div className="animate-page-fade">{children}</div>
         <Footer />
         <FloatingActions />
-
-        <Script id="npf-config" strategy="afterInteractive">
-          {`
-            var npf_d='https://admissions.vmls.edu.in';
-            var npf_c='87feca6bc65be091ed018757c6c58029';
-            var s=document.createElement("script");
-            s.type="text/javascript";
-            s.async=true;
-            s.src="https://widgets.nopaperforms.com/em-widget.js";
-            document.head.appendChild(s);
-          `}
-        </Script>
       </body>
     </html>
   );

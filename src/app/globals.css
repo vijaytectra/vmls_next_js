@@ -64,3 +64,46 @@ html {
   scroll-behavior: smooth;
   font-size: 90%;
 }
+
+.applyknow1,
+.applyknow {
+  position: fixed;
+  right: 0;
+  z-index: 2000;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.applyknow1 {
+  top: calc(50% - 110px);
+  background-color: #ae0808;
+}
+
+.applyknow {
+  top: calc(50% + 25px);
+  background-color: #8b0000;
+}
+
+.applyknow1 a,
+.applyknow .npfWidgetButton {
+  display: block;
+  padding: 25px 12px;
+  color: #ffffff !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .applyknow1,
+  .applyknow {
+    display: block;
+  }
+}

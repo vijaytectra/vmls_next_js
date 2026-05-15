@@ -87,63 +87,24 @@ export default function FloatingActions() {
         </Link>
       </div>
 
-      {/* Right Side Sticky Buttons: Apply & Enquire */}
-      <div className="hidden md:flex" style={{
-        position: 'fixed',
-        right: 0,
-        top: '50%',
-        transform: 'translateY(-50%)',
-        flexDirection: 'column',
-        gap: '2px',
-        zIndex: 2000
-      }}>
-        <div className="applyknow1">
-          <Link href="https://admissions.vmls.edu.in/" target="_blank" className="font-inter" style={{
-            backgroundColor: '#ae0808',
-            color: 'white',
-            padding: '25px 12px',
-            writingMode: 'vertical-rl',
-            textOrientation: 'mixed',
-            transform: 'rotate(180deg)',
-            border: 'none',
-            cursor: 'pointer',
-            fontSize: '14px',
-            fontWeight: '600',
-            letterSpacing: '0.5px',
-            borderTopRightRadius: '8px',
-            borderBottomRightRadius: '8px',
-            textDecoration: 'none',
-            display: 'block',
-            boxShadow: '-4px 0 15px rgba(0,0,0,0.1)'
-          }}>
-            Apply Now!
-          </Link>
-        </div>
-        
-        <div className="applyknow">
-          <span 
-            className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 font-inter"
-            style={{
-              backgroundColor: '#8b0000',
-              color: 'white',
-              padding: '25px 12px',
-              writingMode: 'vertical-rl',
-              textOrientation: 'mixed',
-              transform: 'rotate(180deg)',
-              border: 'none',
-              cursor: 'pointer',
-              fontSize: '14px',
-              fontWeight: '600',
-              letterSpacing: '0.5px',
-              borderTopRightRadius: '8px',
-              borderBottomRightRadius: '8px',
-              display: 'block',
-              boxShadow: '-4px 0 15px rgba(0,0,0,0.1)'
-            }}
-          >
-            Enquire Now!
-          </span>
-        </div>
+      {/* Apply & Enquire buttons */}
+      <div className="applyknow1">
+        <a
+          href="https://admissions.vmls.edu.in/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: '#ffffff', backgroundColor: '#ffffff00' }}
+        >
+          Apply Now!
+        </a>
+      </div>
+      <div className="applyknow">
+        <span
+          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029"
+          style={{ backgroundColor: '#ffffff00' }}
+        >
+          Enquire Now!
+        </span>
       </div>
 
       {/* Bottom Left: WhatsApp */}
