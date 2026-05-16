@@ -97,6 +97,7 @@ export default function Footer() {
                     width={20} 
                     height={20} 
                     className="object-contain" 
+                    style={{ width: 'auto', height: 'auto' }}
                   />
                   VMLS Campus Address
                 </h4>
@@ -118,6 +119,7 @@ export default function Footer() {
                     width={20} 
                     height={20} 
                     className="object-contain" 
+                    style={{ width: 'auto', height: 'auto' }}
                   />
                   Corporate Office Address
                 </h4>

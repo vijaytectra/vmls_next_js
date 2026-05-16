@@ -45,6 +45,7 @@ export default function HeroVideo() {
               height={100} 
               className="w-[140px] md:w-[300px] object-contain"
               style={{ width: 'auto', height: 'auto' }}
+              priority
             />
             {/* Mobile Only: Law School Logo grouping */}
             <Image 

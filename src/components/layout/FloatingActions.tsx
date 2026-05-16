@@ -13,25 +13,30 @@ export default function FloatingActions() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // 1. Load NPF Widget script for Enquiry Popup
-    const script = document.createElement("script");
-    script.src = "https://in8cdn.npfs.co/js/widget/npfwpopup.js";
-    script.async = true;
-    script.onload = () => {
-      if ((window as any).NpfWidgetsInit) {
-        new (window as any).NpfWidgetsInit({
-          widgetId: "87feca6bc65be091ed018757c6c58029",
-          baseurl: "widgets.in8.nopaperforms.com",
-          formTitle: "Enquiry Form",
-          titleColor: "#FF0033",
-          autoPopup: false,
-        });
-      }
-    };
-    document.body.appendChild(script);
+    // 1. Load NPF Widget script for Enquiry Popup after 3s delay to prioritize main content
+    const timer = setTimeout(() => {
+      const script = document.createElement("script");
+      script.src = "https://in8cdn.npfs.co/js/widget/npfwpopup.js";
+      script.async = true;
+      script.onload = () => {
+        if ((window as any).NpfWidgetsInit) {
+          new (window as any).NpfWidgetsInit({
+            widgetId: "87feca6bc65be091ed018757c6c58029",
+            baseurl: "widgets.in8.nopaperforms.com",
+            formTitle: "Enquiry Form",
+            titleColor: "#FF0033",
+            autoPopup: false,
+          });
+        }
+      };
+      document.body.appendChild(script);
+      (window as any).npfScript = script;
+    }, 3000);
 
     return () => {
-      if (document.body.contains(script)) document.body.removeChild(script);
+      clearTimeout(timer);
+      const script = (window as any).npfScript;
+      if (script && document.body.contains(script)) document.body.removeChild(script);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -46,7 +51,7 @@ export default function FloatingActions() {
       <div className="fixed left-0 top-1/2 -translate-y-1/2 z-[2000]">
         <Link
           href="/chat-with-student"
-          className="block text-[10px] md:text-[13px] font-inter font-bold tracking-wider uppercase bg-[#8b0000] text-white py-3 md:py-5 px-1.5 md:px-2 rounded-none shadow-xl hover:bg-[#600000] transition-all duration-300"
+          className="block text-[8px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-1 md:px-7 rounded-none shadow-xl hover:bg-[#a31f34] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
@@ -61,7 +66,7 @@ export default function FloatingActions() {
         <Link
           href="https://admissions.vmls.edu.in/"
           target="_blank"
-          className="block text-[10px] md:text-[13px] font-inter font-bold tracking-wider uppercase bg-[#8b0000] text-white py-3 md:py-5 px-1.5 md:px-2 rounded-none shadow-xl hover:bg-[#600000] transition-all duration-300"
+          className="block text-[8px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-1 md:px-7 rounded-none shadow-xl hover:bg-[#a31f34] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
@@ -72,7 +77,7 @@ export default function FloatingActions() {
         </Link>
 
         <span
-          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[10px] md:text-[13px] font-inter font-bold tracking-wider uppercase bg-[#700000] text-white py-3 md:py-5 px-1.5 md:px-2 rounded-none shadow-xl cursor-pointer hover:bg-[#500000] transition-all duration-300"
+          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[8px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-1 md:px-7 rounded-none shadow-xl cursor-pointer hover:bg-[#a31f34] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',

@@ -84,6 +84,7 @@ export default function Header() {
                 height={100}
                 width={250}
                 className="h-8 md:h-[51px] w-auto max-w-[140px] md:max-w-none object-contain"
+                style={{ width: 'auto', height: 'auto' }}
                 priority
               />
             </Link>
@@ -98,6 +99,7 @@ export default function Header() {
                 height={85}
                 width={190}
                 className="h-8 md:h-[51px] w-auto max-w-[100px] md:max-w-none object-contain"
+                style={{ width: 'auto', height: 'auto' }}
                 priority
               />
             </div>
