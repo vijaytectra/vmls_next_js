@@ -51,7 +51,7 @@ export default function FloatingActions() {
       <div className="fixed left-0 top-1/2 -translate-y-1/2 z-[2000]">
         <Link
           href="/chat-with-student"
-          className="block text-[8px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-1 md:px-7 rounded-none shadow-xl hover:bg-[#a31f34] transition-all duration-300"
+          className="block text-[10px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-2 md:px-7 rounded-none shadow-xl hover:bg-[#a31f34] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
@@ -66,7 +66,7 @@ export default function FloatingActions() {
         <Link
           href="https://admissions.vmls.edu.in/"
           target="_blank"
-          className="block text-[8px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-1 md:px-7 rounded-none shadow-xl hover:bg-[#a31f34] transition-all duration-300"
+          className="block text-[10px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-2 md:px-7 rounded-none shadow-xl hover:bg-[#a31f34] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
@@ -77,7 +77,7 @@ export default function FloatingActions() {
         </Link>
 
         <span
-          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[8px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-1 md:px-7 rounded-none shadow-xl cursor-pointer hover:bg-[#a31f34] transition-all duration-300"
+          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[10px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-2 md:px-7 rounded-none shadow-xl cursor-pointer hover:bg-[#a31f34] transition-all duration-300"
           style={{
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',

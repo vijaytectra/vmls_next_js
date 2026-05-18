@@ -124,7 +124,7 @@ export default function NewsEventsSection() {
                     {event.description}
                   </p>
                   <Link href={event.link}>
-                    <button className="mt-4 px-6 py-2.5 border-2 border-gray-200 text-gray-700 font-inter text-xs font-bold uppercase tracking-widest transition-all hover:border-[#a31f34] hover:text-[#a31f34] hover:bg-[#a31f34]/5">
+                    <button className="mt-4 px-6 py-2.5 border-2 border-[#a31f34] text-[#a31f34] font-inter text-xs font-bold uppercase tracking-widest transition-all hover:bg-[#a31f34]/5">
                       {event.linkText}
                     </button>
                   </Link>

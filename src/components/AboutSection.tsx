@@ -78,13 +78,13 @@ export default function AboutSection() {
             <div className="flex flex-wrap gap-4 pt-4">
               <Link 
                 href="/about-vmrf"
-                className="px-10 py-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 inline-block text-center"
+                className="px-7 py-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 inline-block text-center"
               >
                 About VMRF
               </Link>
               <Link 
                 href="/about-vmls"
-                className="px-10 py-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 inline-block text-center"
+                className="px-7 py-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 inline-block text-center"
               >
                 About VMLS
               </Link>

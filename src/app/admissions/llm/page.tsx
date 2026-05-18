@@ -324,10 +324,10 @@ export default function LLMAdmissionsPage() {
             ].map((spec, sIdx) => (
               <div key={sIdx} className="space-y-8">
                 <div className="max-w-4xl">
-                  <h2 className="font-playfair text-2xl md:text-3xl text-[#1a1a1a] mb-4 font-bold border-l-4 border-[#a31f34] pl-6">
+                  <h2 className="font-playfair text-2xl md:text-3xl text-[#1a1a1a] mb-4 font-bold">
                     {spec.title}
                   </h2>
-                  <p className="font-inter text-gray-700 leading-relaxed text-sm md:text-base pl-10">
+                  <p className="font-inter text-gray-700 leading-relaxed text-sm md:text-base">
                     {spec.intro}
                   </p>
                 </div>

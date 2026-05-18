@@ -17,9 +17,9 @@ export default function LLBAdmissionsPage() {
       <section className="relative px-[5%] pt-16 md:pt-28 pb-12 md:pb-20 overflow-hidden bg-white">
         {/* Background Image with Black Overlay for Premium Contrast */}
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/images/llb/3.webp" 
-            alt="LL.B. Admissions Background" 
+          <Image
+            src="/images/llb/3.webp"
+            alt="LL.B. Admissions Background"
             fill
             className="object-cover object-center opacity-100 contrast-[1.05] brightness-90"
             priority
@@ -46,14 +46,14 @@ export default function LLBAdmissionsPage() {
       {/* LL.B. Program Detail Section */}
       <section className="pt-6 md:pt-8 pb-4 md:pb-6 px-[5%] bg-[#f8f9fa] overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-          
+
           {/* Left Side: Framed Image */}
           <div className="lg:w-[45%] w-full flex justify-center items-center">
             <div className="relative w-full aspect-[16/10] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
               <div className="relative w-full h-full overflow-hidden">
-                <Image 
+                <Image
                   src="/images/llb/1.webp"
-                  alt="LL.B. Program Classroom" 
+                  alt="LL.B. Program Classroom"
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"
@@ -67,7 +67,7 @@ export default function LLBAdmissionsPage() {
             <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
               LL.B. Program
             </h2>
-            
+
             <div className="space-y-8">
               {/* Highlighted Intro Paragraph */}
               <div className="relative">
@@ -96,21 +96,21 @@ export default function LLBAdmissionsPage() {
       <section className="pt-4 md:pt-6 pb-6 md:pb-8 px-[5%] bg-white relative overflow-hidden">
         {/* Faded Background Image Wrapper */}
         <div className="absolute top-0 left-0 right-0 h-[400px] opacity-[0.07] pointer-events-none">
-          <Image 
-            src="/images/llb/3.webp" 
-            alt="Background Texture" 
-            fill 
+          <Image
+            src="/images/llb/3.webp"
+            alt="Background Texture"
+            fill
             className="object-cover object-top grayscale"
           />
         </div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           {/* Section Header */}
           <div className="text-center mb-10">
             <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
               Undergraduate Law Programmes
             </h2>
-            
+
             {/* Polished Flat Programme Buttons */}
             <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:justify-center md:gap-6">
               {['LL.B. (Hons.)', 'B.A. LL.B. (Hons.)', 'B.B.A. LL.B. (Hons.)', 'B.Com. LL.B. (Hons.)'].map((prog) => (
@@ -127,9 +127,9 @@ export default function LLBAdmissionsPage() {
             <div className="lg:w-[50%] flex justify-center items-center">
               <div className="relative w-full aspect-[4/3] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
                 <div className="relative w-full h-full overflow-hidden">
-                  <Image 
+                  <Image
                     src="/images/llb/2.webp"
-                    alt="VMLS Learning Environment" 
+                    alt="VMLS Learning Environment"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover transition-transform duration-700 hover:scale-105"
@@ -190,7 +190,7 @@ export default function LLBAdmissionsPage() {
               </h2>
               <p className="text-gray-500 font-inter text-xs uppercase tracking-[0.2em] font-bold">and Minimum Requirements</p>
             </div>
-            
+
             <div className="space-y-0 relative">
               {[
                 { label: "Law (BCI Core and Compulsories)", value: "96" },
@@ -200,18 +200,18 @@ export default function LLBAdmissionsPage() {
                 { label: "English Language Courses", value: "08" },
                 { label: "Laboratory and Practical Sessions", value: "08" },
               ].map((item, index) => (
-                <div key={index} className="group flex justify-between items-center py-4 border-b border-gray-100 hover:bg-gray-50/80 px-4 transition-all duration-300 rounded-lg">
-                  <div className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#a31f34]/30 group-hover:bg-[#a31f34] transition-colors"></div>
-                    <span className="font-inter text-gray-700 text-sm md:text-base font-medium">{item.label}</span>
+                <div key={index} className="group flex justify-between items-start py-3.5 border-b border-gray-100 hover:bg-gray-50/80 px-2 sm:px-4 transition-all duration-300 rounded-lg gap-4">
+                  <div className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#a31f34]/30 group-hover:bg-[#a31f34] transition-colors mt-2 flex-shrink-0"></div>
+                    <span className="font-inter text-gray-700 text-xs sm:text-sm md:text-base font-medium leading-relaxed">{item.label}</span>
                   </div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-inter text-[#1a1a1a] font-bold text-xl md:text-2xl">{item.value}</span>
-                    <span className="font-inter text-gray-400 text-[10px] uppercase font-bold tracking-widest">credits</span>
+                  <div className="flex items-baseline gap-1 sm:gap-2 flex-shrink-0 pt-0.5">
+                    <span className="font-inter text-[#1a1a1a] font-bold text-base sm:text-xl md:text-2xl">{item.value}</span>
+                    <span className="font-inter text-gray-400 text-[8px] sm:text-[10px] uppercase font-bold tracking-widest">credits</span>
                   </div>
                 </div>
               ))}
-              
+
               {/* Stylish Total Row - Scaled Down */}
               <div className="mt-10 p-5 sm:p-6 bg-[#f8f9fa] flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0 rounded-xl border border-gray-100 shadow-inner group overflow-hidden relative">
                 <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#a31f34]"></div>
@@ -230,7 +230,7 @@ export default function LLBAdmissionsPage() {
       <section className="pt-6 md:pt-8 pb-12 px-[5%] bg-gradient-to-b from-[#fcf8f2] to-white relative overflow-hidden">
         {/* Decorative Background Element */}
         <div className="absolute right-[-5%] top-[10%] w-[400px] h-[400px] bg-[#a31f34] opacity-[0.02] rounded-full blur-[100px] pointer-events-none"></div>
-        
+
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-2">
@@ -238,7 +238,7 @@ export default function LLBAdmissionsPage() {
             </h2>
             <div className="w-24 h-1 bg-[#a31f34] mx-auto"></div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               "Political Science I: Introduction to Fundamentals",
@@ -253,13 +253,13 @@ export default function LLBAdmissionsPage() {
               "Additional Compulsory Core Offerings",
               "Economics II: Law and Economics"
             ].map((course, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="group relative bg-white p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-1 border border-gray-100 flex items-center min-h-[100px]"
               >
                 {/* Side Accent Line */}
                 <div className="absolute left-0 top-0 bottom-0 w-0 group-hover:w-[6px] bg-[#a31f34] transition-all duration-300"></div>
-                
+
                 <div className="pl-2 group-hover:pl-4 transition-all duration-300">
                   <span className="font-inter text-gray-800 text-[15px] md:text-base font-semibold leading-relaxed group-hover:text-[#a31f34] transition-colors">
                     {course}

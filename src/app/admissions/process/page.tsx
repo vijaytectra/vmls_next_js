@@ -242,7 +242,7 @@ export default function AdmissionProcessPage() {
                 <div key={index} className={`relative flex flex-col md:flex-row items-start md:items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                   
                   {/* Step Number Bubble */}
-                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 bg-white border-2 border-gray-100 rounded-full z-20 flex items-center justify-center font-playfair font-bold text-sm text-[#a31f34] shadow-sm">
+                  <div className="absolute left-0 -translate-x-1/2 md:left-1/2 md:-translate-x-1/2 w-8 h-8 bg-white border-2 border-gray-100 rounded-full z-20 flex items-center justify-center font-playfair font-bold text-sm text-[#a31f34] shadow-sm">
                     {index + 1}
                   </div>
 
