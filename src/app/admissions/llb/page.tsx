@@ -213,9 +213,9 @@ export default function LLBAdmissionsPage() {
               ))}
               
               {/* Stylish Total Row - Scaled Down */}
-              <div className="mt-10 p-6 bg-[#f8f9fa] flex justify-between items-center rounded-xl border border-gray-100 shadow-inner group overflow-hidden relative">
+              <div className="mt-10 p-5 sm:p-6 bg-[#f8f9fa] flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0 rounded-xl border border-gray-100 shadow-inner group overflow-hidden relative">
                 <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#a31f34]"></div>
-                <span className="font-inter text-[#1a1a1a] font-bold text-lg uppercase tracking-widest relative z-10">Total Requirement</span>
+                <span className="font-inter text-[#1a1a1a] font-bold text-sm sm:text-lg uppercase tracking-widest relative z-10">Total Requirement</span>
                 <div className="flex items-baseline gap-2 relative z-10">
                   <span className="font-inter text-[#a31f34] font-extrabold text-3xl md:text-4xl">230</span>
                   <span className="font-inter text-[#a31f34]/60 font-bold text-xs uppercase tracking-widest">credits</span>
