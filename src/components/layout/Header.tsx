@@ -60,7 +60,6 @@ const menuItems = [
   { name: "Library", href: "/library" },
   { name: "Student Affairs", href: "/student-affairs" },
   { name: "Blogs", href: "/blogs" },
-  { name: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Header() {
@@ -145,7 +144,7 @@ export default function Header() {
           </div>
 
           {/* Menu Items */}
-          <div className="flex-1 overflow-y-auto px-8 py-6">
+          <div className="flex-1 overflow-y-auto px-8 pt-6 pb-0">
             <div className="space-y-1">
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col border-b border-gray-50 last:border-0">
@@ -197,14 +196,13 @@ export default function Header() {
           </div>
 
           {/* Drawer Footer */}
-          <div className="p-8 border-t border-gray-100 bg-gray-50">
-            <div className="space-y-4">
-              <div className="space-y-1">
-                <p className="text-[#a31f34] font-bold text-xs tracking-widest uppercase">Contact Us</p>
-                <p className="text-gray-700 font-medium text-sm">+91 73582 01234</p>
-                <p className="text-gray-600 text-sm">admissions@vmls.edu.in</p>
+          <div className="py-4 px-8 border-t border-gray-100 bg-gray-50">
+            <div className="space-y-2">
+              <div className="flex flex-row items-center justify-between gap-2 w-full">
+                <a href="tel:+917358201234" className="text-gray-800 font-bold text-[11px] md:text-sm hover:text-[#a31f34] transition-colors shrink-0">+91 73582 01234</a>
+                <a href="mailto:admissions@vmls.edu.in" className="text-gray-600 font-bold text-[11px] md:text-sm hover:text-[#a31f34] transition-colors truncate">admissions@vmls.edu.in</a>
               </div>
-              <div className="flex gap-4 pt-2">
+              <div className="flex gap-4">
                 {[
                   { 
                     name: "Facebook", 
