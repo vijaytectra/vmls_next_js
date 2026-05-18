@@ -40,9 +40,12 @@ export default function AboutVMRF() {
                   <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                     With campuses at Chennai, Salem, and Pondicherry, VMRF's scenic campuses are known for their state-of-the-art facilities, including modern classrooms, advanced laboratories, well-stocked libraries, and sports complexes.
                   </p>
-                  <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed italic border-l-2 border-[#a31f34] pl-4 py-2 bg-white/50">
-                    VMRF has nearly 15,000 students and over 2,000 professionals graduate from its campuses annually, supported by over 5,000 expert staff members.
-                  </p>
+                  <div className="relative p-6 bg-gradient-to-r from-[#fcf8f2] to-white border border-gray-100/80 border-l-4 border-l-[#a31f34] rounded-r-2xl shadow-[0_4px_20px_rgba(163,31,52,0.03)] group overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(163,31,52,0.06)]">
+                    <div className="absolute right-0 top-0 w-24 h-24 bg-gradient-to-br from-[#a31f34]/5 to-transparent rounded-full blur-xl pointer-events-none transition-transform duration-500 group-hover:scale-125"></div>
+                    <p className="font-inter text-base md:text-lg text-gray-800 leading-relaxed font-medium relative z-10">
+                      VMRF has nearly <span className="text-[#a31f34] font-bold">15,000 students</span> and over <span className="text-[#a31f34] font-bold">2,000 professionals</span> graduate from its campuses annually, supported by over <span className="text-[#a31f34] font-bold">5,000 expert staff members</span>.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

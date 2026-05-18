@@ -40,9 +40,12 @@ export default function AboutVMLS() {
                   <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                     The state-of-the-art infrastructure, including smart classrooms, a well-stocked library with a strong digital backbone, and a regal moot court hall, support in this endeavour by creating the ambience for our students to immerse in the vibrant campus life.
                   </p>
-                  <p className="font-inter text-base md:text-lg text-gray-800 leading-relaxed border-l-2 border-[#a31f34] pl-4 py-3 bg-white/50">
-                    As a <span className="font-bold text-[#a31f34]">bilingual law school in Chennai</span>, VMLS offers students the unique advantage of studying law in both <span className="font-bold">English and Tamil</span>, preparing them for a global legal career while staying rooted in the local context. 
-                  </p>
+                  <div className="relative p-6 bg-gradient-to-r from-[#fcf8f2] to-white border border-gray-100/80 border-l-4 border-l-[#a31f34] rounded-r-2xl shadow-[0_4px_20px_rgba(163,31,52,0.03)] group overflow-hidden transition-all duration-300 hover:shadow-[0_8px_30px_rgba(163,31,52,0.06)]">
+                    <div className="absolute right-0 top-0 w-24 h-24 bg-gradient-to-br from-[#a31f34]/5 to-transparent rounded-full blur-xl pointer-events-none transition-transform duration-500 group-hover:scale-125"></div>
+                    <p className="font-inter text-base md:text-lg text-gray-800 leading-relaxed font-medium relative z-10">
+                      As a <span className="text-[#a31f34] font-bold">bilingual law school in Chennai</span>, VMLS offers students the unique advantage of studying law in both <span className="text-[#a31f34] font-bold">English and Tamil</span>, preparing them for a global legal career while staying rooted in the local context.
+                    </p>
+                  </div>
                   <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                     VMLS prides itself in its focus on inclusivity so that no learner is left behind.
                   </p>
