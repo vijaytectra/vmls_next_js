@@ -247,7 +247,7 @@ export default function AdmissionProcessPage() {
                   </div>
 
                   {/* Content Card - Even more Compact */}
-                  <div className={`w-full md:w-[38%] ml-10 md:ml-0 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                  <div className={`w-[calc(100%-2.5rem)] md:w-[38%] ml-10 md:ml-0 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     <div className="bg-white/95 backdrop-blur-sm p-4 md:p-5 shadow-sm hover:shadow-xl transition-all duration-500 rounded-xl border-l-4 group hover:-translate-y-1 relative z-10" style={{ borderLeftColor: step.color }}>
                       <span className="font-inter text-[9px] uppercase tracking-widest text-gray-400 mb-1 block font-bold">Step {index + 1}</span>
                       <h3 className="font-playfair text-sm md:text-base text-[#1a1a1a] font-bold leading-tight group-hover:text-[#a31f34] transition-colors">
