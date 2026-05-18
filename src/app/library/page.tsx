@@ -103,14 +103,14 @@ export default function LibraryPage() {
                 </div>
 
                 <div className="p-6">
-                  <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-gray-50 border border-gray-100 rounded-none mb-4 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white">
+                  <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-black text-white border border-black md:bg-gray-50 md:text-gray-800 md:border-gray-100 rounded-none mb-4 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34]">
                     <span className="font-inter font-bold text-xs uppercase tracking-widest">Access Main Portal</span>
                     <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </Link>
 
                   <div className="space-y-1">
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-4 flex items-center gap-2">
-                      <span className="w-6 h-[1px] bg-gray-200"></span> E-Databases
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-4 flex items-center gap-2">
+                      <span className="w-6 h-[1px] bg-black"></span> E-Databases
                     </h4>
                     <div className="grid grid-cols-2 gap-2">
                       {['SCC Online', 'Hein Online', 'Manupatra', 'LexisNexis', 'Scopus', 'Web of Science', 'JSTOR', 'DELNET', 'Scival', 'E-Books'].map((db) => (

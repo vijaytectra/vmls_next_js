@@ -393,20 +393,33 @@ export default function BlogsPage() {
 
   return (
     <main className="min-h-screen bg-[#f5f3ef]">
-      {/* Header Section */}
-      <section className="bg-[#800000] text-white py-24 px-[5%]">
-        <div className="max-w-7xl mx-auto">
-          <nav className="flex items-center gap-2 text-[#fbb03b] mb-8 font-bold uppercase tracking-widest text-xs">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span className="text-white/30">/</span>
-            <span>Blogs</span>
-          </nav>
-          <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            VMLS <span className="text-[#fbb03b]">Blogs</span>
-          </h1>
-          <p className="text-xl opacity-90 max-w-3xl font-inter leading-relaxed">
-            Insights, academic perspectives, and legal discourse from the Vinayaka Mission&apos;s Law School community.
-          </p>
+      {/* Hero Section */}
+      <section className="relative w-full bg-white border-b border-gray-100">
+        <div className="flex flex-col lg:flex-row min-h-[450px]">
+          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+            <nav className="flex items-center gap-2 text-[#fbb03b] mb-8 font-bold uppercase tracking-widest text-xs">
+              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+              <span className="text-white/30">/</span>
+              <span>Blogs</span>
+            </nav>
+            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              VMLS <span className="text-[#fbb03b]">Blogs</span>
+            </h1>
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
+              Insights, academic perspectives, and legal discourse from the Vinayaka Mission&apos;s Law School community.
+            </p>
+          </div>
+          <div className="lg:w-[55%] relative min-h-[300px]">
+            <Image
+              src="/images/career-about-img.webp"
+              alt="VMLS Blogs"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 55vw"
+            />
+            <div className="absolute inset-0 bg-black/15"></div>
+          </div>
         </div>
       </section>
 
@@ -420,7 +433,7 @@ export default function BlogsPage() {
             <div className="flex-1 h-px bg-gray-200" />
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 mb-12">
             {wpLoading
               ? Array.from({ length: 8 }).map((_, i) => (
                   <div key={i} className="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 animate-pulse">
@@ -501,7 +514,7 @@ export default function BlogsPage() {
 
 
           {/* Existing static blogs */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
             {blogPosts.map((post, index) => (
               <Link
                 key={index}
