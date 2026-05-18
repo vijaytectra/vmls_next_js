@@ -112,9 +112,9 @@ export default function LLBAdmissionsPage() {
             </h2>
             
             {/* Polished Flat Programme Buttons */}
-            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            <div className="flex flex-row overflow-x-auto no-scrollbar md:flex-wrap justify-start md:justify-center gap-4 md:gap-6 px-4 -mx-4 md:px-0 md:mx-0 pb-4 md:pb-0">
               {['LL.B. (Hons.)', 'B.A. LL.B. (Hons.)', 'B.B.A. LL.B. (Hons.)', 'B.Com. LL.B. (Hons.)'].map((prog) => (
-                <div key={prog} className="px-8 py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-sm md:text-base shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default">
+                <div key={prog} className="px-6 py-3.5 md:px-8 md:py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-sm md:text-base shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default flex-shrink-0 whitespace-nowrap">
                   {prog}
                 </div>
               ))}
