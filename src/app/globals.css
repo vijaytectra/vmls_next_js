@@ -62,7 +62,12 @@ body {
 
 html {
   scroll-behavior: smooth;
-  font-size: 90%;
+  /* Keep root at 16px so Tailwind rem-based text-* utilities scale consistently.
+     Do not shrink html globally — it made rem text smaller while px arbitrary
+     values (text-[10px]) stayed fixed, causing uneven sizing across devices. */
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .applyknow1,
