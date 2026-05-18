@@ -103,7 +103,7 @@ export default function ScholarshipsPage() {
           </div>
           <div className="lg:w-1/2 flex flex-col sm:flex-row gap-6 h-auto sm:h-[300px] md:h-[380px] w-full mt-8 lg:mt-0">
             {/* Left Image (Infographic) */}
-            <div className="relative w-full h-[220px] sm:h-full flex-1 flex items-center justify-center">
+            <div className="relative w-full h-[220px] sm:h-full sm:flex-1 flex items-center justify-center">
               <div className="relative w-full h-full">
                 <Image
                   src="/images/schlorship/01.webp"
@@ -115,7 +115,7 @@ export default function ScholarshipsPage() {
             </div>
             
             {/* Right Image (Photo) */}
-            <div className="relative w-full h-[260px] sm:h-full flex-1 rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-500">
+            <div className="relative w-full h-[260px] sm:h-full sm:flex-1 rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-500">
               <Image
                 src="/images/schlorship/02.webp"
                 alt="Academic Excellence"
