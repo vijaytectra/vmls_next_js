@@ -6,7 +6,7 @@ export default function LibraryRulesPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <Link href="/library" className="text-gray-500 hover:text-[#a31f34] transition-colors">Library</Link>
@@ -47,10 +47,10 @@ export default function LibraryRulesPage() {
             <div className="max-w-2xl">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-[2px] bg-[#a31f34]"></div>
-                <span className="font-inter font-bold uppercase tracking-widest text-[#a31f34]">Member Benefits</span>
+                <span className="font-inter text-sm font-bold uppercase tracking-widest text-[#a31f34]">Member Benefits</span>
               </div>
               <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a] font-bold leading-tight">Borrowing Privileges</h2>
-              <p className="mt-4 text-gray-500 font-inter md:text-base leading-relaxed">
+              <p className="mt-4 text-gray-500 font-inter text-sm md:text-base leading-relaxed">
                 VMLS offers comprehensive borrowing rights tailored to the academic needs of each member category. Review your specific entitlements below.
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function LibraryRulesPage() {
                   <th className="p-5 font-playfair text-base font-bold text-center">H</th>
                 </tr>
               </thead>
-              <tbody className="font-inter">
+              <tbody className="text-sm font-inter">
                 {[
                   { cat: 'Undergraduate', items: [{ it: 'Books', tn: 2, d: 15, od: 1, rd: 7, h: 2 }, { it: 'Textbooks*', tn: 2, d: 7, od: 1, rd: 0, h: 0 }] },
                   { cat: 'Masters', items: [{ it: 'Books', tn: 8, d: 15, od: 1, rd: 7, h: 0 }] },

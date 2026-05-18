@@ -22,11 +22,11 @@ export default function InternationalTamilLawConferencePage() {
           <div className="flex flex-wrap items-center gap-6 text-white/80 py-4 border-y border-white/10">
             <div className="flex items-center gap-2">
               <User className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">By Global Tamil Law Centre (GTLC)</span>
+              <span className="text-sm font-medium uppercase tracking-widest">By Global Tamil Law Centre (GTLC)</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">March 18, 2025</span>
+              <span className="text-sm font-medium uppercase tracking-widest">March 18, 2025</span>
             </div>
           </div>
         </div>
@@ -111,7 +111,7 @@ export default function InternationalTamilLawConferencePage() {
                         />
                       </div>
                       <div className="flex flex-col justify-center">
-                        <h4 className="font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
+                        <h4 className="text-sm font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
                           {news.title}
                         </h4>
                         <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold flex items-center gap-1">
@@ -128,7 +128,7 @@ export default function InternationalTamilLawConferencePage() {
               <div className="bg-[#800000] rounded-3xl p-8 text-white relative overflow-hidden group">
                 <div className="relative z-10">
                   <h3 className="font-playfair text-2xl font-bold mb-4 leading-tight">Admissions Open 2025</h3>
-                  <p className="text-white/80 mb-8 leading-relaxed">
+                  <p className="text-white/80 mb-8 text-sm leading-relaxed">
                     Join the league of future legal professionals. Apply now for our various LL.B. and LL.M. programmes.
                   </p>
                   <Link href="https://admissions.vmls.edu.in/" className="inline-block bg-[#fbb03b] text-[#800000] px-8 py-3 rounded-xl font-bold hover:bg-white transition-all shadow-lg transform hover:-translate-y-1">

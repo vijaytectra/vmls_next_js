@@ -22,11 +22,11 @@ export default function InternationalConferenceOnRiversPage() {
           <div className="flex flex-wrap items-center gap-6 text-white/80 py-4 border-y border-white/10">
             <div className="flex items-center gap-2">
               <User className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">By Centre for Public Interest Litigation</span>
+              <span className="text-sm font-medium uppercase tracking-widest">By Centre for Public Interest Litigation</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">October 19, 2024</span>
+              <span className="text-sm font-medium uppercase tracking-widest">October 19, 2024</span>
             </div>
           </div>
         </div>
@@ -110,7 +110,7 @@ export default function InternationalConferenceOnRiversPage() {
                         />
                       </div>
                       <div className="flex flex-col justify-center">
-                        <h4 className="font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
+                        <h4 className="text-sm font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
                           {news.title}
                         </h4>
                         <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold flex items-center gap-1">

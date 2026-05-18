@@ -42,11 +42,11 @@ export default function PrivacyPolicyPage() {
               
               <div className="bg-white border border-gray-100 shadow-xl rounded-2xl p-8 grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-4 uppercase tracking-wider">Campus Location</h3>
+                  <h3 className="font-bold text-gray-900 mb-4 uppercase tracking-wider text-sm">Campus Location</h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <MapPin className="text-[#fbb03b] flex-shrink-0" size={20} />
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 text-sm">
                         Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road),<br />
                         Paiyanoor, Chennai – 603104, Tamil Nadu, India
                       </p>
@@ -54,24 +54,24 @@ export default function PrivacyPolicyPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-4 uppercase tracking-wider">Contact Details</h3>
+                  <h3 className="font-bold text-gray-900 mb-4 uppercase tracking-wider text-sm">Contact Details</h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <Phone className="text-[#fbb03b] flex-shrink-0" size={20} />
-                      <p className="text-gray-600">Toll-Free: 1800 309 4350</p>
+                      <p className="text-gray-600 text-sm">Toll-Free: 1800 309 4350</p>
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="text-[#fbb03b] flex-shrink-0" size={20} />
-                      <p className="text-gray-600">+91 73582 01234</p>
+                      <p className="text-gray-600 text-sm">+91 73582 01234</p>
                     </div>
                     <div className="flex items-center gap-3">
                       <Mail className="text-[#fbb03b] flex-shrink-0" size={20} />
-                      <p className="text-gray-600">admissions@vmls.edu.in</p>
+                      <p className="text-gray-600 text-sm">admissions@vmls.edu.in</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <p className="text-gray-500 italic">
+              <p className="text-sm text-gray-500 italic">
                 Feel free to reach out for any admission inquiries or further information about our programs, recognitions, and affiliations (including Bar Council of India approvals).
               </p>
             </div>
@@ -189,11 +189,11 @@ export default function PrivacyPolicyPage() {
             <div className="grid md:grid-cols-2 gap-8 pt-8">
               <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
                 <h3 className="font-playfair text-xl font-bold text-[#800000] mb-4 text-justify">7. Online Privacy Policy Only</h3>
-                <p className="text-gray-600 leading-relaxed text-justify">This Privacy Policy applies only to information collected through our website and not to any data collected offline.</p>
+                <p className="text-gray-600 text-sm leading-relaxed text-justify">This Privacy Policy applies only to information collected through our website and not to any data collected offline.</p>
               </div>
               <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
                 <h3 className="font-playfair text-xl font-bold text-[#800000] mb-4 text-justify">8. Your Consent</h3>
-                <p className="text-gray-600 leading-relaxed text-justify">By using our site, you consent to this Privacy Policy in its entirety. This includes consenting to our right to contact you by phone, SMS, email, or WhatsApp regarding our offerings, even if your number is on a DND list, when you have voluntarily provided your contact details.</p>
+                <p className="text-gray-600 text-sm leading-relaxed text-justify">By using our site, you consent to this Privacy Policy in its entirety. This includes consenting to our right to contact you by phone, SMS, email, or WhatsApp regarding our offerings, even if your number is on a DND list, when you have voluntarily provided your contact details.</p>
               </div>
             </div>
 
@@ -222,7 +222,7 @@ export default function PrivacyPolicyPage() {
                     <p className="text-gray-600">Email: admissions@vmls.edu.in</p>
                   </div>
                 </div>
-                <p className="text-gray-500 italic mt-4">
+                <p className="text-sm text-gray-500 italic mt-4">
                   Feel free to reach out for any admission inquiries or further information.
                 </p>
               </div>

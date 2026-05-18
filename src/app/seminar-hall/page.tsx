@@ -63,7 +63,7 @@ export default function SeminarHallPage() {
                 />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Academic Dialogue</h3>
-              <p className="font-inter text-[#1a237e] font-semibold uppercase tracking-wider">
+              <p className="font-inter text-[#1a237e] font-semibold text-sm uppercase tracking-wider">
                 Fostering Intellectual Growth
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function SeminarHallPage() {
                   <div className="w-16 h-16 rounded-full bg-[#e8eaf6] flex items-center justify-center text-2xl">📢</div>
                   <div>
                     <p className="font-playfair font-bold text-gray-900 text-xl">VMLS Academic Excellence</p>
-                    <p className="text-gray-500 font-medium italic">Empowering minds through global perspectives.</p>
+                    <p className="text-sm text-gray-500 font-medium italic">Empowering minds through global perspectives.</p>
                   </div>
                 </div>
               </div>

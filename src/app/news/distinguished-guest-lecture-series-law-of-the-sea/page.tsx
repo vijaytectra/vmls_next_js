@@ -22,11 +22,11 @@ export default function DistinguishedGuestLectureLawOfTheSeaPage() {
           <div className="flex flex-wrap items-center gap-6 text-white/80 py-4 border-y border-white/10">
             <div className="flex items-center gap-2">
               <User className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">By Centre for Maritime Law</span>
+              <span className="text-sm font-medium uppercase tracking-widest">By Centre for Maritime Law</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">03rd June, 2024</span>
+              <span className="text-sm font-medium uppercase tracking-widest">03rd June, 2024</span>
             </div>
           </div>
         </div>
@@ -59,14 +59,14 @@ export default function DistinguishedGuestLectureLawOfTheSeaPage() {
                 <div className="bg-[#fcfbf9] p-8 rounded-3xl border-t-4 border-[#a31f34] shadow-sm">
                   <BookOpen className="text-[#a31f34] mb-4" size={32} />
                   <h4 className="font-playfair text-xl font-bold mb-4 text-gray-900">History of UNCLOS</h4>
-                  <p className="leading-relaxed text-gray-600">
+                  <p className="text-sm leading-relaxed text-gray-600">
                     The lectures provided students with a comprehensive overview of the historical context, development, and significance of UNCLOS, one of the most crucial international agreements governing the world&apos;s oceans.
                   </p>
                 </div>
                 <div className="bg-[#fcfbf9] p-8 rounded-3xl border-t-4 border-gray-400 shadow-sm">
                   <Target className="text-gray-500 mb-4" size={32} />
                   <h4 className="font-playfair text-xl font-bold mb-4 text-gray-900">Delineation of Maritime Zones</h4>
-                  <p className="leading-relaxed text-gray-600">
+                  <p className="text-sm leading-relaxed text-gray-600">
                     Participants were guided through the legal frameworks for defining maritime zones, including territorial seas, EEZs, and continental shelves, emphasizing their importance in international law.
                   </p>
                 </div>
@@ -129,7 +129,7 @@ export default function DistinguishedGuestLectureLawOfTheSeaPage() {
                         />
                       </div>
                       <div className="flex flex-col justify-center">
-                        <h4 className="font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
+                        <h4 className="text-sm font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
                           {news.title}
                         </h4>
                         <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold flex items-center gap-1">

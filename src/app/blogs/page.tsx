@@ -486,11 +486,11 @@ export default function BlogsPage() {
                       {/* Content */}
                       <div className="p-3 md:p-6 flex flex-col flex-grow">
                         <h3
-                          className="font-inter md:text-lg font-semibold text-[#1a1a1a] mb-2 md:mb-4 leading-tight min-h-[2.5rem] md:min-h-[3rem] group-hover:text-[#a31f34] transition-colors line-clamp-2"
+                          className="font-inter text-sm md:text-lg font-semibold text-[#1a1a1a] mb-2 md:mb-4 leading-tight min-h-[2.5rem] md:min-h-[3rem] group-hover:text-[#a31f34] transition-colors line-clamp-2"
                           dangerouslySetInnerHTML={{ __html: title }}
                         />
                         <div className="mt-auto pt-4 border-t border-gray-50 flex items-center justify-between">
-                          <span className="font-medium text-gray-400">{date}</span>
+                          <span className="text-sm font-medium text-gray-400">{date}</span>
                           <span className="text-[10px] font-inter text-[#a31f34] font-semibold uppercase tracking-wide">Read →</span>
                         </div>
                       </div>
@@ -523,11 +523,11 @@ export default function BlogsPage() {
 
                 {/* Content */}
                 <div className="p-3 md:p-6 flex flex-col flex-grow">
-                  <h3 className="font-inter md:text-lg font-semibold text-[#1a1a1a] mb-2 md:mb-4 leading-tight min-h-[2.5rem] md:min-h-[3rem] group-hover:text-[#a31f34] transition-colors line-clamp-2">
+                  <h3 className="font-inter text-sm md:text-lg font-semibold text-[#1a1a1a] mb-2 md:mb-4 leading-tight min-h-[2.5rem] md:min-h-[3rem] group-hover:text-[#a31f34] transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   <div className="mt-auto pt-4 border-t border-gray-50">
-                    <span className="font-medium text-gray-400">
+                    <span className="text-sm font-medium text-gray-400">
                       {post.date}
                     </span>
                   </div>

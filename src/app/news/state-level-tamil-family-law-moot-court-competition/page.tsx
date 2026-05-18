@@ -22,11 +22,11 @@ export default function StateLevelMootCourtPage() {
           <div className="flex flex-wrap items-center gap-6 text-white/80 py-4 border-y border-white/10">
             <div className="flex items-center gap-2">
               <Gavel className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">Surana & Surana International Attorneys</span>
+              <span className="text-sm font-medium uppercase tracking-widest">Surana & Surana International Attorneys</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">October 19, 2024</span>
+              <span className="text-sm font-medium uppercase tracking-widest">October 19, 2024</span>
             </div>
           </div>
         </div>
@@ -62,14 +62,14 @@ export default function StateLevelMootCourtPage() {
                 <div className="bg-[#fcfbf9] p-8 rounded-3xl border-t-4 border-[#a31f34] shadow-sm">
                   <Award className="text-[#a31f34] mb-4" size={32} />
                   <h4 className="font-playfair text-xl font-bold mb-4 text-gray-900">Winners: GLC Madurai</h4>
-                  <p className="leading-relaxed text-gray-600">
+                  <p className="text-sm leading-relaxed text-gray-600">
                     Emerging victorious with a cash prize of ₹25,000, the team comprised Priyadharshini R, Gokula Krishnakumari K, and Siva Subramanian R.
                   </p>
                 </div>
                 <div className="bg-[#fcfbf9] p-8 rounded-3xl border-t-4 border-gray-400 shadow-sm">
                   <Users className="text-gray-500 mb-4" size={32} />
                   <h4 className="font-playfair text-xl font-bold mb-4 text-gray-900">Runners: GLC Salem</h4>
-                  <p className="leading-relaxed text-gray-600">
+                  <p className="text-sm leading-relaxed text-gray-600">
                     Securing the runner-up position and ₹15,000, the team included Siva Prashaath K, Sri Gugan S, and Jerom Stuward J.
                   </p>
                 </div>
@@ -123,7 +123,7 @@ export default function StateLevelMootCourtPage() {
                         />
                       </div>
                       <div className="flex flex-col justify-center">
-                        <h4 className="font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
+                        <h4 className="text-sm font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
                           {news.title}
                         </h4>
                         <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold flex items-center gap-1">

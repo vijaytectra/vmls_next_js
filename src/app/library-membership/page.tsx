@@ -6,7 +6,7 @@ export default function LibraryMembershipPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <Link href="/library" className="text-gray-500 hover:text-[#a31f34] transition-colors">Library</Link>
@@ -79,7 +79,7 @@ export default function LibraryMembershipPage() {
                     <th className="py-4 px-6 font-playfair text-lg font-bold">Eligibility</th>
                   </tr>
                 </thead>
-                <tbody className="font-inter md:text-base">
+                <tbody className="font-inter text-sm md:text-base">
                   {[
                     { cat: 'Undergraduate', elig: 'Students of LLB (3 years), B.A LLB, BBA LLB and B.Com LLB (5 years) and any other Bachelor\'s degree Programmes at VMLS' },
                     { cat: 'Masters', elig: 'Students of Master Degree Programmes at VMLS' },

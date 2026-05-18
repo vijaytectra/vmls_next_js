@@ -22,11 +22,11 @@ export default function EFilingPage() {
           <div className="flex flex-wrap items-center gap-6 text-white/80 py-4 border-y border-white/10">
             <div className="flex items-center gap-2">
               <User className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">By Centre for Justice through Technology (CJT)</span>
+              <span className="text-sm font-medium uppercase tracking-widest">By Centre for Justice through Technology (CJT)</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#fbb03b]" />
-              <span className="font-medium uppercase tracking-widest">April 30, 2024</span>
+              <span className="text-sm font-medium uppercase tracking-widest">April 30, 2024</span>
             </div>
           </div>
         </div>
@@ -69,14 +69,14 @@ export default function EFilingPage() {
                 <div className="bg-[#fcfbf9] p-8 rounded-3xl border-t-4 border-[#a31f34] shadow-sm">
                   <CheckCircle2 className="text-[#a31f34] mb-4" size={32} />
                   <h4 className="font-playfair text-xl font-bold mb-4 text-gray-900">Introduction to E-Filing</h4>
-                  <p className="leading-relaxed text-gray-600">
+                  <p className="text-sm leading-relaxed text-gray-600">
                     Advocate Uma Maheswari began by introducing the participants to the concept of e-filing, explaining its importance in the modern legal landscape, especially in the aftermath of the pandemic, when the judiciary transitioned many operations to online platforms.
                   </p>
                 </div>
                 <div className="bg-[#fcfbf9] p-8 rounded-3xl border-t-4 border-gray-400 shadow-sm">
                   <MonitorPlay className="text-gray-500 mb-4" size={32} />
                   <h4 className="font-playfair text-xl font-bold mb-4 text-gray-900">Step-by-Step Demonstration</h4>
-                  <p className="leading-relaxed text-gray-600">
+                  <p className="text-sm leading-relaxed text-gray-600">
                     The resource person provided a comprehensive, step-by-step demonstration on how to file cases digitally. This included the preparation of documents, uploading them to the relevant court portals, and addressing common challenges faced during the process.
                   </p>
                 </div>
@@ -132,7 +132,7 @@ export default function EFilingPage() {
                         />
                       </div>
                       <div className="flex flex-col justify-center">
-                        <h4 className="font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
+                        <h4 className="text-sm font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
                           {news.title}
                         </h4>
                         <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold flex items-center gap-1">

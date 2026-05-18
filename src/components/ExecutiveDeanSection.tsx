@@ -58,7 +58,7 @@ export default function ExecutiveDeanSection() {
               <h4 className="font-inter font-bold uppercase tracking-widest text-[11px] mb-4 border-b border-white/10 pb-1.5 inline-block text-gray-300">
                 Academic Qualifications
               </h4>
-              <ul className="space-y-3 font-inter md:text-base text-gray-200">
+              <ul className="space-y-3 font-inter text-sm md:text-base text-gray-200">
                 <li className="flex gap-2.5">
                   <span className="text-white/60 font-bold">•</span>
                   <span>LL.M., University of Warwick School of Law, UK (Chevening & J. N. Tata Scholar).</span>

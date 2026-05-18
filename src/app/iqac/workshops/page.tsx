@@ -43,7 +43,7 @@ export default function WorkshopsPage() {
       {/* Hero Section */}
       <section className="bg-[#800000] text-white py-12 px-[5%]">
         <div className="max-w-7xl mx-auto">
-          <Link href="/iqac" className="inline-flex items-center gap-2 text-[#fbb03b] hover:text-white transition-colors mb-6 font-bold uppercase tracking-wider">
+          <Link href="/iqac" className="inline-flex items-center gap-2 text-[#fbb03b] hover:text-white transition-colors mb-6 font-bold uppercase tracking-wider text-sm">
             <ArrowLeft size={18} />
             Back to IQAC
           </Link>

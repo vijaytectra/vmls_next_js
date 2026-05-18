@@ -63,7 +63,7 @@ export default function AtriumPage() {
                 />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Architectural Grandeur</h3>
-              <p className="font-inter text-[#003366] font-semibold">
+              <p className="font-inter text-[#003366] font-semibold text-sm">
                 A Space for Collaboration and Reflection
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function AtriumPage() {
                   <div className="w-16 h-16 rounded-full bg-[#f0f7ff] flex items-center justify-center text-2xl">🏛️</div>
                   <div>
                     <p className="font-playfair font-bold text-gray-900 text-xl">VMLS Community Hub</p>
-                    <p className="text-gray-500 font-medium italic">Fostering connections and creative dialogue.</p>
+                    <p className="text-sm text-gray-500 font-medium italic">Fostering connections and creative dialogue.</p>
                   </div>
                 </div>
               </div>

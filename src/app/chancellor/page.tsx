@@ -36,7 +36,7 @@ export default function ChancellorPage() {
 
           {/* Right Side: Chancellor Content */}
           <div className="lg:w-[60%] order-2 flex flex-col justify-center">
-            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] font-bold mb-4">Leadership</h3>
+            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Leadership</h3>
             <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-8 leading-tight">
               Dr. A. S. Ganesan
             </h1>

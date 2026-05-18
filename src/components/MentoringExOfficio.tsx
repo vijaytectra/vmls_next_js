@@ -65,7 +65,7 @@ export default function MentoringExOfficio() {
                   </h3>
                   <div className="w-8 h-[2px] bg-[#a31f34]/30 group-hover:w-12 group-hover:bg-[#a31f34] transition-all duration-500"></div>
                 </div>
-                <p className="mt-4 font-inter text-gray-500 text-[13px] leading-relaxed tracking-tight">
+                <p className="mt-4 font-inter text-gray-500 text-[13px] md:text-sm leading-relaxed tracking-tight">
                   {member.designation}
                 </p>
               </div>

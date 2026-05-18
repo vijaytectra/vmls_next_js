@@ -12,7 +12,7 @@ export default function GlobalTamilLawCentrePage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-gray-500">Centres of Excellence</span>
@@ -166,7 +166,7 @@ export default function GlobalTamilLawCentrePage() {
               </div>
               <div className="flex items-center gap-2 text-gray-900 mb-3 font-semibold">
                 <Calendar size={20} strokeWidth={2.2} className="text-[#a31f34]" />
-                <span className="tracking-wide">March 18, 2025</span>
+                <span className="text-sm tracking-wide">March 18, 2025</span>
               </div>
               <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 leading-snug group-hover:text-[#a31f34] transition-colors">
                 International Tamil Law Conference 2025
@@ -186,7 +186,7 @@ export default function GlobalTamilLawCentrePage() {
               </div>
               <div className="flex items-center gap-2 text-gray-900 mb-3 font-semibold">
                 <Calendar size={20} strokeWidth={2.2} className="text-[#a31f34]" />
-                <span className="tracking-wide">October 19, 2024</span>
+                <span className="text-sm tracking-wide">October 19, 2024</span>
               </div>
               <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 leading-snug group-hover:text-[#a31f34] transition-colors">
                 State-Level Tamil Family Law Moot Court Competition
@@ -206,7 +206,7 @@ export default function GlobalTamilLawCentrePage() {
               </div>
               <div className="flex items-center gap-2 text-gray-900 mb-3 font-semibold">
                 <Calendar size={20} strokeWidth={2.2} className="text-[#a31f34]" />
-                <span className="tracking-wide">03rd June, 2024</span>
+                <span className="text-sm tracking-wide">03rd June, 2024</span>
               </div>
               <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 leading-snug group-hover:text-[#a31f34] transition-colors">
                 Intra Trail Tamil Moot Court

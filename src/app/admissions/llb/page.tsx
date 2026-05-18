@@ -114,7 +114,7 @@ export default function LLBAdmissionsPage() {
             {/* Polished Flat Programme Buttons */}
             <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:justify-center md:gap-6">
               {['LL.B. (Hons.)', 'B.A. LL.B. (Hons.)', 'B.B.A. LL.B. (Hons.)', 'B.Com. LL.B. (Hons.)'].map((prog) => (
-                <div key={prog} className="px-2 py-3.5 md:px-8 md:py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-[11px] md:text-base text-center flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default">
+                <div key={prog} className="px-2 py-3.5 md:px-8 md:py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-[11px] sm:text-sm md:text-base text-center flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default">
                   {prog}
                 </div>
               ))}
@@ -143,37 +143,37 @@ export default function LLBAdmissionsPage() {
               {/* Card 1: Red */}
               <div className="bg-[#a31f34] p-8 flex flex-col items-center justify-center text-center text-white space-y-4 border border-[#801829] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <span className="text-4xl font-inter font-extrabold tracking-tight">12</span>
-                <p className="font-inter font-medium leading-snug opacity-90">Undergraduate Courses from Respective Bachelor's Stream</p>
+                <p className="font-inter text-sm font-medium leading-snug opacity-90">Undergraduate Courses from Respective Bachelor's Stream</p>
               </div>
 
               {/* Card 2: Gray */}
               <div className="bg-[#f8f9fa] p-8 flex flex-col items-center justify-center text-center text-gray-800 space-y-4 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <span className="text-4xl font-inter font-extrabold tracking-tight">24</span>
-                <p className="font-inter font-medium leading-snug opacity-90">Law Core and Compulsory Courses</p>
+                <p className="font-inter text-sm font-medium leading-snug opacity-90">Law Core and Compulsory Courses</p>
               </div>
 
               {/* Card 3: Blue */}
               <div className="bg-[#007ba8] p-8 flex flex-col items-center justify-center text-center text-white space-y-4 border border-[#005a7d] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <span className="text-4xl font-inter font-extrabold tracking-tight">05</span>
-                <p className="font-inter font-medium leading-snug opacity-90">Clinical Courses</p>
+                <p className="font-inter text-sm font-medium leading-snug opacity-90">Clinical Courses</p>
               </div>
 
               {/* Card 4: Blue */}
               <div className="bg-[#007ba8] p-8 flex flex-col items-center justify-center text-center text-white space-y-4 border border-[#005a7d] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <span className="text-4xl font-inter font-extrabold tracking-tight">10</span>
-                <p className="font-inter font-medium leading-snug opacity-90">Electives (including 8 honors papers)</p>
+                <p className="font-inter text-sm font-medium leading-snug opacity-90">Electives (including 8 honors papers)</p>
               </div>
 
               {/* Card 5: Gray */}
               <div className="bg-[#f8f9fa] p-8 flex flex-col items-center justify-center text-center text-gray-800 space-y-4 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <span className="text-4xl font-inter font-extrabold tracking-tight">02</span>
-                <p className="font-inter font-medium leading-snug opacity-90">English Language Courses</p>
+                <p className="font-inter text-sm font-medium leading-snug opacity-90">English Language Courses</p>
               </div>
 
               {/* Card 6: Red */}
               <div className="bg-[#a31f34] p-8 flex flex-col items-center justify-center text-center text-white space-y-4 border border-[#801829] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 <span className="text-4xl font-inter font-extrabold tracking-tight text-center leading-none">100%</span>
-                <p className="font-inter font-medium leading-snug opacity-90">Mandatory Internships and Professional Skill Labs</p>
+                <p className="font-inter text-sm font-medium leading-snug opacity-90">Mandatory Internships and Professional Skill Labs</p>
               </div>
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function LLBAdmissionsPage() {
                 <div key={index} className="group flex justify-between items-center py-4 border-b border-gray-100 hover:bg-gray-50/80 px-4 transition-all duration-300 rounded-lg">
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#a31f34]/30 group-hover:bg-[#a31f34] transition-colors"></div>
-                    <span className="font-inter text-gray-700 md:text-base font-medium">{item.label}</span>
+                    <span className="font-inter text-gray-700 text-sm md:text-base font-medium">{item.label}</span>
                   </div>
                   <div className="flex items-baseline gap-2">
                     <span className="font-inter text-[#1a1a1a] font-bold text-xl md:text-2xl">{item.value}</span>
@@ -215,7 +215,7 @@ export default function LLBAdmissionsPage() {
               {/* Stylish Total Row - Scaled Down */}
               <div className="mt-10 p-5 sm:p-6 bg-[#f8f9fa] flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0 rounded-xl border border-gray-100 shadow-inner group overflow-hidden relative">
                 <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#a31f34]"></div>
-                <span className="font-inter text-[#1a1a1a] font-bold sm:text-lg uppercase tracking-widest relative z-10">Total Requirement</span>
+                <span className="font-inter text-[#1a1a1a] font-bold text-sm sm:text-lg uppercase tracking-widest relative z-10">Total Requirement</span>
                 <div className="flex items-baseline gap-2 relative z-10">
                   <span className="font-inter text-[#a31f34] font-extrabold text-3xl md:text-4xl">230</span>
                   <span className="font-inter text-[#a31f34]/60 font-bold text-xs uppercase tracking-widest">credits</span>

@@ -65,7 +65,7 @@ export default function WomenEmpowermentCellPage() {
           <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-lg">
             <table className="w-full text-left border-collapse min-w-[900px]">
               <thead>
-                <tr className="bg-gray-900 text-white font-inter uppercase tracking-widest">
+                <tr className="bg-gray-900 text-white font-inter uppercase tracking-widest text-sm">
                   <th className="py-6 px-6 font-semibold w-20 text-center">No.</th>
                   <th className="py-6 px-6 font-semibold">Member</th>
                   <th className="py-6 px-6 font-semibold">Designation</th>
@@ -76,7 +76,7 @@ export default function WomenEmpowermentCellPage() {
                 {committeeData.map((section, sIdx) => (
                   <React.Fragment key={sIdx}>
                     <tr className="bg-[#f9f9f9] border-y border-gray-200">
-                      <td colSpan={4} className="py-5 px-6 text-[#800000] font-bold tracking-[0.2em] text-center md:text-base uppercase bg-gray-50">
+                      <td colSpan={4} className="py-5 px-6 text-[#800000] font-bold tracking-[0.2em] text-center text-sm md:text-base uppercase bg-gray-50">
                         {section.category}
                       </td>
                     </tr>
@@ -89,11 +89,11 @@ export default function WomenEmpowermentCellPage() {
                         <td className="py-5 px-6 text-gray-600 font-medium leading-relaxed">{member.designation}</td>
                         <td className="py-5 px-6">
                           <div className="flex flex-col gap-2.5">
-                            <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors font-bold group">
+                            <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
                               <Mail size={16} className="group-hover:scale-110 transition-transform" />
                               <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
                             </a>
-                            <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors font-semibold group">
+                            <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
                               <Phone size={16} className="group-hover:scale-110 transition-transform" />
                               {member.phone}
                             </a>

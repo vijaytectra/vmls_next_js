@@ -55,7 +55,7 @@ export default function InternshipAndCareerServices() {
                 />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Mr. Siddharth Raja</h3>
-              <p className="font-inter text-[#800000] font-semibold">
+              <p className="font-inter text-[#800000] font-semibold text-sm">
                 Executive Dean,<br />
                 Career Services and Placements (Incharge)
               </p>
@@ -89,7 +89,7 @@ export default function InternshipAndCareerServices() {
                 <div className="pt-4 border-t border-gray-100 italic">
                   <p className="font-bold not-italic">Warm regards,</p>
                   <p className="font-bold not-italic">Siddharth Raja</p>
-                  <p className="opacity-80">Executive Dean, Career Services and Placements (Incharge)</p>
+                  <p className="text-sm opacity-80">Executive Dean, Career Services and Placements (Incharge)</p>
                 </div>
               </div>
             </div>

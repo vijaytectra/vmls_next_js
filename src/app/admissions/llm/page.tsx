@@ -165,7 +165,7 @@ export default function LLMAdmissionsPage() {
                 'LL.M. IN Criminal Law and Practice', 
                 'LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights'
               ].map((prog) => (
-                <div key={prog} className="px-3 py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-[10px] md:text-base text-center flex items-center justify-center h-full shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default">
+                <div key={prog} className="px-3 py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-[10px] sm:text-sm md:text-base text-center flex items-center justify-center h-full shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default">
                   {prog}
                 </div>
               ))}
@@ -227,7 +227,7 @@ export default function LLMAdmissionsPage() {
                 <h3 className="font-inter font-bold text-lg text-[#1a1a1a] mb-4 leading-snug">
                   {feature.title}
                 </h3>
-                <p className="font-inter md:text-base text-gray-700 leading-relaxed">
+                <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed">
                   {feature.content}
                 </p>
               </div>
@@ -327,7 +327,7 @@ export default function LLMAdmissionsPage() {
                   <h2 className="font-playfair text-2xl md:text-3xl text-[#1a1a1a] mb-4 font-bold border-l-4 border-[#a31f34] pl-6">
                     {spec.title}
                   </h2>
-                  <p className="font-inter text-gray-700 leading-relaxed md:text-base pl-10">
+                  <p className="font-inter text-gray-700 leading-relaxed text-sm md:text-base pl-10">
                     {spec.intro}
                   </p>
                 </div>
@@ -338,17 +338,17 @@ export default function LLMAdmissionsPage() {
                     { label: "SEMESTER 2", courses: spec.sem2 }
                   ].map((sem, semIdx) => (
                     <div key={semIdx}>
-                      <h3 className="font-inter font-bold md:text-base text-gray-900 mb-4 px-4 uppercase tracking-wider">{sem.label}</h3>
+                      <h3 className="font-inter font-bold text-sm md:text-base text-gray-900 mb-4 px-4 uppercase tracking-wider">{sem.label}</h3>
                       <div className="overflow-x-auto">
                         <table className="w-full text-left border-collapse bg-[#fcf5e5]">
                           <thead>
-                            <tr className="text-[#1a365d] md:text-base font-bold">
+                            <tr className="text-[#1a365d] text-sm md:text-base font-bold">
                               <th className="px-6 py-4 w-[50%]">Course Title</th>
                               <th className="px-6 py-4 w-[35%]">Nature of the Course</th>
                               <th className="px-6 py-4 w-[15%] text-right">Credits</th>
                             </tr>
                           </thead>
-                          <tbody className="text-gray-700 md:text-base">
+                          <tbody className="text-gray-700 text-sm md:text-base">
                             {sem.courses.map((course, cIdx) => (
                               <tr key={cIdx} className="border-t border-[#e8dfc9]">
                                 <td className="px-6 py-3 font-medium">{course.n}</td>
@@ -418,7 +418,7 @@ export default function LLMAdmissionsPage() {
                 <h3 className="font-inter font-bold text-lg text-[#1a1a1a] mb-4 leading-snug">
                   {feature.title}
                 </h3>
-                <p className="font-inter md:text-base text-gray-700 leading-relaxed">
+                <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed">
                   {feature.content}
                 </p>
               </div>
@@ -453,7 +453,7 @@ export default function LLMAdmissionsPage() {
           </p>
           <Link 
             href="https://admissions.vmls.edu.in/" 
-            className="inline-block px-8 py-3.5 bg-black text-white font-inter font-bold rounded-lg hover:bg-gray-900 transition-all duration-300 shadow-xl hover:-translate-y-1 md:text-base"
+            className="inline-block px-8 py-3.5 bg-black text-white font-inter font-bold rounded-lg hover:bg-gray-900 transition-all duration-300 shadow-xl hover:-translate-y-1 text-sm md:text-base"
           >
             Apply Now
           </Link>
@@ -501,12 +501,12 @@ export default function LLMAdmissionsPage() {
                   className="w-full flex items-center justify-between p-5 md:p-6 text-left"
                 >
                   <div className="flex gap-4 items-start">
-                    <span className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-bold  transition-all duration-300 ${
+                    <span className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm transition-all duration-300 ${
                       openFaq === idx ? 'bg-[#fbb03b] text-white shadow-md shadow-orange-200' : 'bg-gray-50 text-gray-400 group-hover:bg-gray-100'
                     }`}>
                       {idx + 1}
                     </span>
-                    <span className={`font-inter font-bold  md:text-base pr-4 transition-colors duration-300 ${
+                    <span className={`font-inter font-bold text-sm md:text-base pr-4 transition-colors duration-300 ${
                       openFaq === idx ? 'text-[#a16207]' : 'text-gray-800'
                     }`}>
                       {item.q}
@@ -525,7 +525,7 @@ export default function LLMAdmissionsPage() {
                 >
                   <div className="px-5 md:px-6 pb-6 ml-12">
                     <div className="h-px w-full bg-gradient-to-r from-[#fbb03b]/30 to-transparent mb-4"></div>
-                    <p className="font-inter text-gray-600 text-xs leading-relaxed">
+                    <p className="font-inter text-gray-600 text-xs md:text-sm leading-relaxed">
                       {item.a || "Answer details coming soon..."}
                     </p>
                   </div>

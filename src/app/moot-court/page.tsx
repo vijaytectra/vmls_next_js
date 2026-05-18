@@ -63,7 +63,7 @@ export default function MootCourtPage() {
                 />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Professional Advocacy</h3>
-              <p className="font-inter text-[#5d4037] font-semibold uppercase tracking-wider">
+              <p className="font-inter text-[#5d4037] font-semibold text-sm uppercase tracking-wider">
                 Simulating the Scales of Justice
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function MootCourtPage() {
                   <div className="w-16 h-16 rounded-full bg-[#efebe9] flex items-center justify-center text-2xl">⚖️</div>
                   <div>
                     <p className="font-playfair font-bold text-gray-900 text-xl">Legal Skills Development</p>
-                    <p className="text-gray-500 font-medium italic">Empowering future advocates of justice.</p>
+                    <p className="text-sm text-gray-500 font-medium italic">Empowering future advocates of justice.</p>
                   </div>
                 </div>
               </div>

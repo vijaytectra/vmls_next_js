@@ -44,7 +44,7 @@ export default function MentoringCommittee() {
 
               <div className="mt-12">
                 <Link href="/mentoring-committee">
-                  <button className="px-10 py-4 bg-[#800000] text-white font-inter font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-xl hover:-translate-y-1">
+                  <button className="px-10 py-4 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-xl hover:-translate-y-1">
                     Know More Details
                   </button>
                 </Link>

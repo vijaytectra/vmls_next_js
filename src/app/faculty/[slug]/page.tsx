@@ -617,7 +617,7 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
 
           {/* Right Side: Content */}
           <div className="lg:w-[65%] order-2 flex flex-col justify-center">
-            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] font-bold mb-4">Faculty Member</h3>
+            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Faculty Member</h3>
             <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
               {faculty.name}
             </h1>
