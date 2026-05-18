@@ -433,7 +433,7 @@ export default function BlogsPage() {
             <div className="flex-1 h-px bg-gray-200" />
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 mb-12">
             {wpLoading
               ? Array.from({ length: 8 }).map((_, i) => (
                   <div key={i} className="flex flex-col bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 animate-pulse">
@@ -514,7 +514,7 @@ export default function BlogsPage() {
 
 
           {/* Existing static blogs */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8">
             {blogPosts.map((post, index) => (
               <Link
                 key={index}
