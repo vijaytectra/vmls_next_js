@@ -66,7 +66,7 @@ export default function FloatingActions() {
 
       {/* Right Side Sticky Buttons */}
       <div 
-        className="fixed right-0 top-1/2 z-[2000] flex flex-col gap-0.5"
+        className="fixed right-0 top-1/2 z-[2000] flex flex-col gap-4"
         style={{ transform: 'translate3d(0, -50%, 0)' }}
       >
         <Link
