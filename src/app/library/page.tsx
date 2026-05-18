@@ -109,8 +109,8 @@ export default function LibraryPage() {
                   </Link>
 
                   <div className="space-y-1">
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-4 flex items-center gap-2">
-                      <span className="w-6 h-[1px] bg-gray-200"></span> E-Databases
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-4 flex items-center gap-2">
+                      <span className="w-6 h-[1px] bg-black"></span> E-Databases
                     </h4>
                     <div className="grid grid-cols-2 gap-2">
                       {['SCC Online', 'Hein Online', 'Manupatra', 'LexisNexis', 'Scopus', 'Web of Science', 'JSTOR', 'DELNET', 'Scival', 'E-Books'].map((db) => (
