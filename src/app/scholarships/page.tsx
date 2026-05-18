@@ -97,13 +97,13 @@ export default function ScholarshipsPage() {
             <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
               At Vinayaka Mission's Law School (VMLS), we believe that every talented student deserves access to world-class legal education. Our comprehensive scholarship program is designed to recognize academic excellence, support diversity, and provide a safety net for those in need.
             </p>
-            <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed font-medium text-[#a31f34]">
+            <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
               Over 140 scholarships are awarded annually through the VLAT performance and merit screening process.
             </p>
           </div>
-          <div className="lg:w-1/2 flex flex-col sm:flex-row gap-6 h-[300px] md:h-[380px] w-full mt-8 lg:mt-0">
+          <div className="lg:w-1/2 flex flex-col sm:flex-row gap-6 h-auto sm:h-[300px] md:h-[380px] w-full mt-8 lg:mt-0">
             {/* Left Image (Infographic) */}
-            <div className="relative flex-1 flex items-center justify-center">
+            <div className="relative w-full h-[220px] sm:h-full flex-1 flex items-center justify-center">
               <div className="relative w-full h-full">
                 <Image
                   src="/images/schlorship/01.webp"
@@ -115,7 +115,7 @@ export default function ScholarshipsPage() {
             </div>
             
             {/* Right Image (Photo) */}
-            <div className="relative flex-1 rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-500">
+            <div className="relative w-full h-[260px] sm:h-full flex-1 rounded-2xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-500">
               <Image
                 src="/images/schlorship/02.webp"
                 alt="Academic Excellence"
