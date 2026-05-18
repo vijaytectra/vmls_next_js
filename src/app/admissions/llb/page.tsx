@@ -142,37 +142,37 @@ export default function LLBAdmissionsPage() {
             <div className="lg:w-[50%] grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Card 1: Red */}
               <div className="bg-[#a31f34] p-8 flex flex-col items-center justify-center text-center text-white space-y-4 border border-[#801829] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <span className="text-5xl font-inter font-extrabold tracking-tight">12</span>
+                <span className="text-4xl font-inter font-extrabold tracking-tight">12</span>
                 <p className="font-inter text-sm font-medium leading-snug opacity-90">Undergraduate Courses from Respective Bachelor's Stream</p>
               </div>
 
               {/* Card 2: Gray */}
               <div className="bg-[#f8f9fa] p-8 flex flex-col items-center justify-center text-center text-gray-800 space-y-4 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <span className="text-5xl font-inter font-extrabold tracking-tight">24</span>
+                <span className="text-4xl font-inter font-extrabold tracking-tight">24</span>
                 <p className="font-inter text-sm font-medium leading-snug opacity-90">Law Core and Compulsory Courses</p>
               </div>
 
               {/* Card 3: Blue */}
               <div className="bg-[#007ba8] p-8 flex flex-col items-center justify-center text-center text-white space-y-4 border border-[#005a7d] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <span className="text-5xl font-inter font-extrabold tracking-tight">05</span>
+                <span className="text-4xl font-inter font-extrabold tracking-tight">05</span>
                 <p className="font-inter text-sm font-medium leading-snug opacity-90">Clinical Courses</p>
               </div>
 
               {/* Card 4: Blue */}
               <div className="bg-[#007ba8] p-8 flex flex-col items-center justify-center text-center text-white space-y-4 border border-[#005a7d] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <span className="text-5xl font-inter font-extrabold tracking-tight">10</span>
+                <span className="text-4xl font-inter font-extrabold tracking-tight">10</span>
                 <p className="font-inter text-sm font-medium leading-snug opacity-90">Electives (including 8 honors papers)</p>
               </div>
 
               {/* Card 5: Gray */}
               <div className="bg-[#f8f9fa] p-8 flex flex-col items-center justify-center text-center text-gray-800 space-y-4 border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <span className="text-5xl font-inter font-extrabold tracking-tight">02</span>
+                <span className="text-4xl font-inter font-extrabold tracking-tight">02</span>
                 <p className="font-inter text-sm font-medium leading-snug opacity-90">English Language Courses</p>
               </div>
 
               {/* Card 6: Red */}
               <div className="bg-[#a31f34] p-8 flex flex-col items-center justify-center text-center text-white space-y-4 border border-[#801829] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <span className="text-5xl font-inter font-extrabold tracking-tight text-center leading-none">100%</span>
+                <span className="text-4xl font-inter font-extrabold tracking-tight text-center leading-none">100%</span>
                 <p className="font-inter text-sm font-medium leading-snug opacity-90">Mandatory Internships and Professional Skill Labs</p>
               </div>
             </div>
