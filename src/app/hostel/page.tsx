@@ -22,7 +22,7 @@ export default function HostelPage() {
         {/* Hero Section - Career Services Style */}
         <section className="relative w-full bg-white border-b border-gray-100">
           <div className="flex flex-col lg:flex-row min-h-[450px]">
-            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#2e7d32] text-white">
+            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <div className="mb-4">
                 <span className="inline-block w-12 h-[1px] bg-[#fbb03b] align-middle"></span>
                 <span className="font-inter text-[#fbb03b] text-xs font-bold uppercase tracking-[0.4em] mx-4">Living at VMLS</span>
@@ -63,14 +63,14 @@ export default function HostelPage() {
                 />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Student Well-being</h3>
-              <p className="font-inter text-[#2e7d32] font-semibold text-sm uppercase tracking-wider">
+              <p className="font-inter text-[#800000] font-semibold text-sm uppercase tracking-wider">
                 Comfort and Security First
               </p>
             </div>
 
             {/* Narrative Text Side */}
             <div className="w-full md:w-2/3">
-              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#2e7d32] mb-6 leading-tight">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-6 leading-tight">
                 Your Home Away from Home
               </h2>
               
@@ -84,15 +84,15 @@ export default function HostelPage() {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
-                  <div className="bg-[#f1f8e9] p-6 rounded-2xl border border-[#c8e6c9]">
-                    <h4 className="font-playfair font-bold text-[#1b5e20] text-xl mb-3">Boys Hostels</h4>
+                  <div className="bg-[#fff5f5] p-6 rounded-2xl border border-[#fee2e2]">
+                    <h4 className="font-playfair font-bold text-[#800000] text-xl mb-3">Boys Hostels</h4>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li>• <strong>Sir C. V. Raman Hostel:</strong> 700 capacity</li>
                       <li>• <strong>Ramanujan Hostel:</strong> 500 capacity</li>
                     </ul>
                   </div>
-                  <div className="bg-[#f1f8e9] p-6 rounded-2xl border border-[#c8e6c9]">
-                    <h4 className="font-playfair font-bold text-[#1b5e20] text-xl mb-3">Girls Hostel</h4>
+                  <div className="bg-[#fff5f5] p-6 rounded-2xl border border-[#fee2e2]">
+                    <h4 className="font-playfair font-bold text-[#800000] text-xl mb-3">Girls Hostel</h4>
                     <ul className="space-y-2 text-sm text-gray-700">
                       <li>• <strong>Kalpana Chawla Hostel:</strong> 450 capacity</li>
                     </ul>
@@ -104,7 +104,7 @@ export default function HostelPage() {
                 </p>
 
                 <div className="pt-8 border-t border-gray-100 flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-full bg-[#f1f8e9] flex items-center justify-center text-2xl">🏠</div>
+                  <div className="w-16 h-16 rounded-full bg-[#fff5f5] flex items-center justify-center text-2xl">🏠</div>
                   <div>
                     <p className="font-playfair font-bold text-gray-900 text-xl">Residential Excellence</p>
                     <p className="text-sm text-gray-500 font-medium italic">Fostering a vibrant community for growth.</p>
@@ -119,7 +119,7 @@ export default function HostelPage() {
         <section className="py-20 px-[5%] bg-gray-50 border-t border-gray-100">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-[#2e7d32] mb-4">
+              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-[#800000] mb-4">
                 Exclusive Amenities
               </h2>
               <div className="w-20 h-1 bg-[#fbb03b] mx-auto"></div>
@@ -155,7 +155,7 @@ export default function HostelPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                   <div className="p-10 flex flex-col flex-grow">
-                    <h3 className="font-playfair text-2xl font-bold text-[#2e7d32] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
+                    <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
                     <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
@@ -173,8 +173,8 @@ export default function HostelPage() {
                 "High-speed Wi-Fi", "Laundry Services", "Gymnasium", "Health Care",
                 "Food Court", "ATM Facility", "24/7 CCTV", "Visitor's Room"
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-100 group hover:border-[#2e7d32] transition-colors">
-                  <div className="w-2 h-2 rounded-full bg-[#2e7d32]"></div>
+                <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-100 group hover:border-[#800000] transition-colors">
+                  <div className="w-2 h-2 rounded-full bg-[#800000]"></div>
                   <span className="font-inter text-gray-700 text-sm font-medium">{item}</span>
                 </div>
               ))}

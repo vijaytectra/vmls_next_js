@@ -22,7 +22,7 @@ export default function MootCourtPage() {
         {/* Hero Section - Career Services Style */}
         <section className="relative w-full bg-white border-b border-gray-100">
           <div className="flex flex-col lg:flex-row min-h-[450px]">
-            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#5d4037] text-white">
+            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <div className="mb-4">
                 <span className="inline-block w-12 h-[1px] bg-[#fbb03b] align-middle"></span>
                 <span className="font-inter text-[#fbb03b] text-xs font-bold uppercase tracking-[0.4em] mx-4">Legal Excellence</span>
@@ -63,14 +63,14 @@ export default function MootCourtPage() {
                 />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Professional Advocacy</h3>
-              <p className="font-inter text-[#5d4037] font-semibold text-sm uppercase tracking-wider">
+              <p className="font-inter text-[#800000] font-semibold text-sm uppercase tracking-wider">
                 Simulating the Scales of Justice
               </p>
             </div>
 
             {/* Narrative Text Side */}
             <div className="w-full md:w-2/3">
-              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#5d4037] mb-6 leading-tight">
+              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-6 leading-tight">
                 Bridging Theory and Practical Jurisprudence
               </h2>
               
@@ -103,7 +103,7 @@ export default function MootCourtPage() {
         <section className="py-20 px-[5%] bg-gray-50 border-t border-gray-100">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-[#5d4037] mb-4">
+              <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl font-bold text-[#800000] mb-4">
                 Core Advancements
               </h2>
               <div className="w-20 h-1 bg-[#fbb03b] mx-auto"></div>
@@ -139,7 +139,7 @@ export default function MootCourtPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
                   <div className="p-10 flex flex-col flex-grow">
-                    <h3 className="font-playfair text-2xl font-bold text-[#5d4037] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
+                    <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
                     <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
