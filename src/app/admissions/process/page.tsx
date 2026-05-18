@@ -289,15 +289,15 @@ export default function AdmissionProcessPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-yellow-200">
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-[#a31f34] rounded-full"></span>
-                <p className="font-inter text-sm text-black"><span className="font-bold text-[#1a1a1a]">Duration:</span> 60 minutes.</p>
+                <p className="font-inter text-black"><span className="font-bold text-[#1a1a1a]">Duration:</span> 60 minutes.</p>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-[#a31f34] rounded-full"></span>
-                <p className="font-inter text-sm text-black"><span className="font-bold text-[#1a1a1a]">Mode:</span> Online AI Proctored.</p>
+                <p className="font-inter text-black"><span className="font-bold text-[#1a1a1a]">Mode:</span> Online AI Proctored.</p>
               </div>
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-[#a31f34] rounded-full"></span>
-                <p className="font-inter text-sm text-black"><span className="font-bold text-[#1a1a1a]">Bilingual:</span> English & Tamil.</p>
+                <p className="font-inter text-black"><span className="font-bold text-[#1a1a1a]">Bilingual:</span> English & Tamil.</p>
               </div>
             </div>
           </div>
