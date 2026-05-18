@@ -206,7 +206,7 @@ export default function LLBAdmissionsPage() {
                     <span className="font-inter text-gray-700 text-sm md:text-base font-medium">{item.label}</span>
                   </div>
                   <div className="flex items-baseline gap-2">
-                    <span className="font-playfair text-[#1a1a1a] font-bold text-xl md:text-2xl">{item.value}</span>
+                    <span className="font-inter text-[#1a1a1a] font-bold text-xl md:text-2xl">{item.value}</span>
                     <span className="font-inter text-gray-400 text-[10px] uppercase font-bold tracking-widest">credits</span>
                   </div>
                 </div>
@@ -217,7 +217,7 @@ export default function LLBAdmissionsPage() {
                 <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#a31f34]"></div>
                 <span className="font-inter text-[#1a1a1a] font-bold text-lg uppercase tracking-widest relative z-10">Total Requirement</span>
                 <div className="flex items-baseline gap-2 relative z-10">
-                  <span className="font-playfair text-[#a31f34] font-black text-3xl md:text-4xl">230</span>
+                  <span className="font-inter text-[#a31f34] font-extrabold text-3xl md:text-4xl">230</span>
                   <span className="font-inter text-[#a31f34]/60 font-bold text-xs uppercase tracking-widest">credits</span>
                 </div>
               </div>
