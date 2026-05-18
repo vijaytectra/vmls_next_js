@@ -210,7 +210,7 @@ export default function LibraryPage() {
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-xs font-bold uppercase tracking-widest text-[#a31f34] mb-3">Working Days (Monday - Friday)</h4>
-                      <div className="grid grid-cols-2 gap-4 text-[15px]">
+                      <div className="grid grid-cols-2 gap-4 text-[13px]">
                         <div className="bg-gray-50 p-3 rounded">
                           <p className="text-gray-500 text-[10px] uppercase font-bold mb-1">Library</p>
                           <p className="text-gray-900 font-bold">8:30 AM - 7:00 PM</p>
