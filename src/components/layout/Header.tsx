@@ -206,20 +206,53 @@ export default function Header() {
               </div>
               <div className="flex gap-4 pt-2">
                 {[
-                  { name: "FB", href: "https://www.facebook.com/vinayakamissionslawschool/" },
-                  { name: "IG", href: "https://www.instagram.com/vinayakamissionslawschool/" },
-                  { name: "TW", href: "https://x.com/Vmlschennai" },
-                  { name: "LI", href: "https://www.linkedin.com/company/vinayakamissionslawschool/" },
-                  { name: "YT", href: "https://www.youtube.com/@VinayakaMissionsLawSchoolVMLS" }
+                  { 
+                    name: "Facebook", 
+                    href: "https://www.facebook.com/vinayakamissionslawschool/",
+                    icon: <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  },
+                  { 
+                    name: "Instagram", 
+                    href: "https://www.instagram.com/vinayakamissionslawschool/",
+                    icon: <g><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></g>
+                  },
+                  { 
+                    name: "Twitter", 
+                    href: "https://x.com/Vmlschennai",
+                    icon: <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.487h2.039L6.486 3.24H4.298L17.61 20.64z" />
+                  },
+                  { 
+                    name: "LinkedIn", 
+                    href: "https://www.linkedin.com/company/vinayakamissionslawschool/",
+                    icon: <g><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></g>
+                  },
+                  { 
+                    name: "YouTube", 
+                    href: "https://www.youtube.com/@VinayakaMissionsLawSchoolVMLS",
+                    icon: <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  }
                 ].map((social) => (
                   <Link
                     key={social.name}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[11px] font-bold text-gray-500 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34] transition-all cursor-pointer"
+                    className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34] transition-all duration-300 cursor-pointer"
+                    aria-label={social.name}
                   >
-                    {social.name}
+                    <svg 
+                      width="18" 
+                      height="18" 
+                      viewBox="0 0 24 24" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                      className={social.name === "YouTube" || social.name === "Facebook" || social.name === "Twitter" ? "fill-current stroke-0" : ""}
+                    >
+                      {social.icon}
+                    </svg>
                   </Link>
                 ))}
               </div>
