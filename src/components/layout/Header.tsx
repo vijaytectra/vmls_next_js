@@ -60,6 +60,7 @@ const menuItems = [
   { name: "Library", href: "/library" },
   { name: "Student Affairs", href: "/student-affairs" },
   { name: "Blogs", href: "/blogs" },
+  { name: "Contact Us", href: "/contact-us" },
 ];
 
 export default function Header() {
