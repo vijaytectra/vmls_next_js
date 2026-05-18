@@ -261,7 +261,7 @@ export default function LLBAdmissionsPage() {
                 <div className="absolute left-0 top-0 bottom-0 w-0 group-hover:w-[6px] bg-[#a31f34] transition-all duration-300"></div>
                 
                 <div className="pl-2 group-hover:pl-4 transition-all duration-300">
-                  <span className="font-inter text-gray-800 text-sm md:text-base font-semibold leading-relaxed group-hover:text-[#a31f34] transition-colors">
+                  <span className="font-inter text-gray-800 text-[15px] md:text-base font-semibold leading-relaxed group-hover:text-[#a31f34] transition-colors">
                     {course}
                   </span>
                 </div>
