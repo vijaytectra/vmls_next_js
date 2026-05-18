@@ -9,7 +9,7 @@ export default function HeroVideo() {
         muted
         playsInline
         preload="none"
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        className="absolute top-0 left-0 w-full sm:h-[82vh] md:h-[100vh] h-[85vh] object-cover -z-10"
       >
         <source src="/video/vmls-hero-video.mp4" type="video/mp4" />
       </video>
@@ -18,8 +18,8 @@ export default function HeroVideo() {
       <div className="absolute top-0 left-0 w-full h-full bg-black/25 z-0"></div>
 
       {/* Main Content (Top/Center) */}
-      <div className="relative z-10 px-[5%] pb-4 md:pb-[10px] text-shadow-lg">
-        <h1 className="text-[clamp(1.5rem,6vw,3.8rem)] font-normal mb-2 md:mb-[15px] leading-tight font-playfair">
+      <div className="relative max-w-76 sm:max-w-none mx-auto sm:mx-0 text-center sm:text-left z-10 px-[5%] pb-4 md:pb-[10px] text-shadow-lg">
+        <h1 className="text-[clamp(1.5rem,6vw,3.8rem)] font-normal mb-2 md:mb-[15px] leading-tight font-playfair text-center sm:text-left">
           Vinayaka Mission's Law School
         </h1>
         <p className="text-[clamp(0.75rem,1.8vw,1.2rem)] mb-2 md:mb-[15px] font-medium font-inter tracking-wide opacity-90">
@@ -32,7 +32,7 @@ export default function HeroVideo() {
 
       {/* Mentorship Content (Overlaid on Bottom of Video) */}
       <div className="relative z-10 w-full bg-gradient-to-t from-black/95 via-black/70 to-transparent px-[5%] pt-2 md:pt-4 pb-4 md:pb-8">
-        <hr className="border-t border-white/40 w-full mb-3 md:mb-6" />
+        {/* <hr className="border-t border-white/40 w-full mb-3 md:mb-6" /> */}
 
         <div className="flex flex-col lg:flex-row justify-between items-center gap-3 lg:gap-10">
           

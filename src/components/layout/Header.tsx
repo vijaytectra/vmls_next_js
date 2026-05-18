@@ -73,32 +73,30 @@ export default function Header() {
   return (
     <>
       <header className="w-full bg-white sticky top-0 z-[1000] shadow-[0_2px_20px_-5px_rgba(0,0,0,0.1)] transition-all duration-300 px-0 md:px-0 md:pr-[5%] md:pl-0">
-        <div className="w-full flex justify-between items-center h-16 md:h-20">
+        <div className="w-full flex justify-between items-center h-[4.25rem] md:h-[5.75rem]">
           {/* Left Side: VMRF Logo & Accreditation */}
-          <div className="flex items-center pl-2 md:pl-20">
-            <Link href="/">
+          <div className="flex items-center shrink-0 pl-2 md:pl-12 lg:pl-16">
+            <Link href="/" className="block">
               <Image
                 src="/images/headerleft.webp"
                 alt="Vinayaka Mission's Research Foundation"
-                height={180}
-                width={350}
-                className="h-15 md:h-[75px] w-auto max-w-[220px] md:max-w-none object-contain"
-                style={{ width: 'auto', height: 'auto' }}
+                height={200}
+                width={420}
+                className="h-[2.25rem] sm:h-[3.75rem] md:h-[3.5rem] lg:h-[3.5rem] w-auto max-w-[min(72vw,320px)] sm:max-w-[380px] md:max-w-[440px] lg:max-w-[480px] object-contain object-left"
                 priority
               />
             </Link>
           </div>
 
-          {/* Right Side: VMLS Logo and Refined Menu Button */}
-          <div className="flex items-center gap-1 md:gap-4 pr-0 md:pr-0">
-            <div className="flex-shrink-0 border-r border-gray-100 pr-1 md:pr-4">
+          {/* Right Side: VMLS Logo (smaller) + Menu */}
+          <div className="flex items-center gap-1 md:gap-3 pr-0 shrink-0">
+            <div className="flex-shrink-0 border-r border-gray-100 pr-1.5 md:pr-3">
               <Image
                 src="/images/headerright.webp"
                 alt="VMLS Vinayaka Mission's Law School"
-                height={85}
-                width={190}
-                className="h-8 md:h-[51px] w-auto max-w-[100px] md:max-w-none object-contain"
-                style={{ width: 'auto', height: 'auto' }}
+                height={70}
+                width={150}
+                className="h-7 sm:h-8 md:h-9 lg:h-11 w-auto max-w-[78px] sm:max-w-[85px] md:max-w-[100px] lg:max-w-[120px] object-contain"
                 priority
               />
             </div>
