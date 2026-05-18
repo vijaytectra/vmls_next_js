@@ -73,7 +73,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="w-full bg-white sticky top-0 z-[1000] shadow-[0_2px_20px_-5px_rgba(0,0,0,0.1)] border-t-[5px] border-[#a31f34] transition-all duration-300 px-0 md:px-0 md:pr-[5%] md:pl-0">
+      <header className="w-full bg-white sticky top-0 z-[1000] shadow-[0_2px_20px_-5px_rgba(0,0,0,0.1)] transition-all duration-300 px-0 md:px-0 md:pr-[5%] md:pl-0">
         <div className="w-full flex justify-between items-center h-16 md:h-20">
           {/* Left Side: VMRF Logo & Accreditation */}
           <div className="flex items-center pl-2 md:pl-20">
