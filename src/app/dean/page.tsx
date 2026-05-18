@@ -36,7 +36,7 @@ export default function DeanPage() {
 
           {/* Right Side: Dean Content */}
           <div className="lg:w-[65%] order-2 flex flex-col justify-center">
-            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Leadership</h3>
+            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] font-bold mb-4">Leadership</h3>
             <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
               Mr. Siddharth Raja
             </h1>

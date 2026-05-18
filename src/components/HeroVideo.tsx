@@ -60,7 +60,7 @@ export default function HeroVideo() {
 
           {/* Mentorship Text - Row 2 on Mobile / Center on Desktop */}
           <div className="flex-1 text-center order-2 px-4">
-            <p className="text-[9px] md:text-sm lg:text-[15px] leading-relaxed m-0 font-normal max-w-[850px] mx-auto opacity-90">
+            <p className="text-[9px] lg:text-[15px] leading-relaxed m-0 font-normal max-w-[850px] mx-auto opacity-90">
               Vinayaka Mission's Law School (VMLS) is being mentored by O.P. Jindal Global University 
               (an Institution of Eminence) and Jindal Global Law School under an institutional mentorship agreement.
             </p>

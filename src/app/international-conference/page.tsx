@@ -177,7 +177,7 @@ export default function InternationalConferencePage() {
                 Sub Themes
               </h2>
               <div className="w-16 h-1 bg-[#fbb03b] mx-auto mb-4"></div>
-              <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed max-w-5xl mx-auto text-justify">
+              <p className="font-inter md:text-base text-gray-700 leading-relaxed max-w-5xl mx-auto text-justify">
                 We welcome abstracts and full length quality research papers on the broad theme of Rivers. The below mentioned are few sub themes which may be considered. Please note that this is not an exhaustive list of topics. You are welcome to submit abstracts on any topic of your interest as long as it falls within an area of concern on River.
               </p>
             </div>
@@ -186,23 +186,23 @@ export default function InternationalConferencePage() {
             <div className="space-y-1">
               {/* Row 1 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
-                <div className="bg-[#800000] text-white p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm">
+                <div className="bg-[#800000] text-white p-3 flex items-center justify-center text-center font-semibold min-h-[60px]">
                   Historical Narratives and River Security
                 </div>
-                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm">
+                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px]">
                   Transboundary River Governance
                 </div>
-                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm">
+                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px]">
                   International Law and Emerging Challenges
                 </div>
-                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm">
+                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px]">
                   Climate Resilience and River Resource Management
                 </div>
               </div>
 
               {/* Highlighted Detail Bar */}
               <div className="bg-[#800000] text-white p-4">
-                <ul className="list-disc pl-8 space-y-1 font-inter text-sm md:text-base">
+                <ul className="list-disc pl-8 space-y-1 font-inter md:text-base">
                   <li>Case studies of historical river management practices.</li>
                   <li>Implications of past practices for contemporary river governance.</li>
                 </ul>
@@ -224,7 +224,7 @@ export default function InternationalConferencePage() {
                   "Water Privatization and Public Rights",
                   "Implementing International Water Law at the Local Level"
                 ].map((theme, index) => (
-                  <div key={index} className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm hover:bg-gray-400 transition-colors cursor-default">
+                  <div key={index} className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px] hover:bg-gray-400 transition-colors cursor-default">
                     {theme}
                   </div>
                 ))}
@@ -323,7 +323,7 @@ export default function InternationalConferencePage() {
                   <a 
                     href="/images/conf/Peer Review Process for Conference Proceedings.docx" 
                     download 
-                    className="whitespace-nowrap px-8 py-3 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-lg"
+                    className="whitespace-nowrap px-8 py-3 bg-[#800000] text-white font-inter font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-lg"
                   >
                     Know More
                   </a>
@@ -338,7 +338,7 @@ export default function InternationalConferencePage() {
                   <a 
                     href="/images/conf/Publication Ethics.docx" 
                     download 
-                    className="whitespace-nowrap px-8 py-3 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-lg"
+                    className="whitespace-nowrap px-8 py-3 bg-[#800000] text-white font-inter font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-lg"
                   >
                     Know More
                   </a>
@@ -405,7 +405,7 @@ export default function InternationalConferencePage() {
                 <h2 className="font-playfair text-xl md:text-2xl font-bold text-[#800000] mb-4">
                   Registration Fees
                 </h2>
-                <div className="space-y-3 font-inter text-sm md:text-base">
+                <div className="space-y-3 font-inter md:text-base">
                   <div className="flex justify-between items-center pb-2 border-b border-gray-50">
                     <span className="text-gray-700 font-medium">International Participants</span>
                     <span className="font-bold text-[#800000] text-lg">$100</span>
@@ -418,7 +418,7 @@ export default function InternationalConferencePage() {
                     <span className="text-gray-700 font-medium">Students (UG/PG)</span>
                     <span className="font-bold text-[#800000] text-lg">₹1000/-</span>
                   </div>
-                  <p className="text-sm text-gray-500 italic pt-4">
+                  <p className="text-gray-500 italic pt-4">
                     * Co-authors need to register separately. Registration payment details to be shared upon selection of abstracts.
                   </p>
                 </div>

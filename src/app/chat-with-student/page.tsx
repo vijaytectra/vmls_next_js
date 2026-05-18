@@ -11,7 +11,7 @@ export default function ChatWithStudentPage() {
     <main className="bg-white">
       {/* Breadcrumb */}
       <nav className="px-[5%] py-4 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium font-inter">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium font-inter">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">
             Home
           </Link>

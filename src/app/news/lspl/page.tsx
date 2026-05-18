@@ -6,7 +6,7 @@ export default function LSPLPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <Link href="/student-affairs" className="text-gray-500 hover:text-[#a31f34] transition-colors">Student Affairs</Link>
@@ -97,7 +97,7 @@ export default function LSPLPage() {
                     href: "/blogs/bringing-indian-contracts-ii-to-life-clinical-legal-education-vmls"
                   }
                 ].map((news, index) => (
-                  <Link key={index} href={news.href} className="block p-5 bg-gray-50/50 hover:bg-white border-b border-gray-100 text-sm font-inter text-gray-800 hover:text-[#a31f34] transition-all last:border-b-0 leading-relaxed">
+                  <Link key={index} href={news.href} className="block p-5 bg-gray-50/50 hover:bg-white border-b border-gray-100 font-inter text-gray-800 hover:text-[#a31f34] transition-all last:border-b-0 leading-relaxed">
                     {news.title}
                   </Link>
                 ))}

@@ -72,7 +72,7 @@ export default function TeamSection() {
 
               {/* Details */}
               <div className="px-3 pb-5 md:px-5 md:pb-8 text-center flex flex-col items-center flex-1">
-                <h3 className="font-playfair text-sm md:text-xl font-bold text-[#1a1a1a] mb-1 md:mb-2 leading-tight min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center">
+                <h3 className="font-playfair md:text-xl font-bold text-[#1a1a1a] mb-1 md:mb-2 leading-tight min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center">
                   {member.name}
                 </h3>
                 <p className="font-inter text-[10px] md:text-xs font-bold text-[#a31f34] uppercase tracking-wider mb-2 leading-snug min-h-[2rem] md:min-h-[2.5rem] flex items-center justify-center">

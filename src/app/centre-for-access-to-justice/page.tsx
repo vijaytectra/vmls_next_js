@@ -11,7 +11,7 @@ export default function CentreForAccessToJusticePage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-gray-500">Centres of Excellence</span>
@@ -210,7 +210,7 @@ export default function CentreForAccessToJusticePage() {
                 <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm text-center group hover:bg-[#800000] transition-all duration-500">
                   <div className="text-4xl mb-4 group-hover:scale-125 transition-transform duration-500 inline-block">{area.icon}</div>
                   <h4 className="font-playfair text-xl font-bold mb-2 group-hover:text-white transition-colors">{area.title}</h4>
-                  <p className="font-inter text-sm text-gray-500 group-hover:text-white/80 transition-colors">{area.sub}</p>
+                  <p className="font-inter text-gray-500 group-hover:text-white/80 transition-colors">{area.sub}</p>
                 </div>
               ))}
             </div>
@@ -234,13 +234,13 @@ export default function CentreForAccessToJusticePage() {
                 ].map((item, i) => (
                   <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                     <h4 className="font-inter font-bold text-[#800000] mb-2">{item.title}</h4>
-                    <p className="font-inter text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+                    <p className="font-inter text-gray-600 leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
               </div>
               <div className="mt-8 p-8 bg-[#800000] rounded-2xl text-white">
                 <h4 className="font-playfair text-xl font-bold mb-4">Partnerships</h4>
-                <p className="font-inter opacity-90 leading-relaxed text-sm">
+                <p className="font-inter opacity-90 leading-relaxed">
                   CAJ collaborates with legal services authorities, district administration, accredited NGOs, and academic centers to co-host outreach camps, referral networks, and data-driven policy initiatives.
                 </p>
               </div>
@@ -258,7 +258,7 @@ export default function CentreForAccessToJusticePage() {
                   <div key={i} className="relative pl-6 border-l-2 border-[#800000]/20">
                     <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 bg-[#800000] rounded-full"></div>
                     <h5 className="font-inter font-bold text-gray-900 mb-1">{impact.label}</h5>
-                    <p className="font-inter text-sm text-gray-500">{impact.val}</p>
+                    <p className="font-inter text-gray-500">{impact.val}</p>
                   </div>
                 ))}
               </div>
@@ -289,17 +289,17 @@ export default function CentreForAccessToJusticePage() {
                   <div>
                     <h4 className="font-inter font-bold text-[#800000] mb-2 uppercase text-xs tracking-widest">Director</h4>
                     <p className="font-inter text-gray-900 font-bold">Dr. Fowmina</p>
-                    <p className="font-inter text-sm text-gray-600">Centre for Access to Justice, VMLS</p>
+                    <p className="font-inter text-gray-600">Centre for Access to Justice, VMLS</p>
                     <a href="mailto:fowmina@vmls.edu.in" className="inline-block mt-4 text-[#800000] font-medium hover:underline">fowmina@vmls.edu.in</a>
                   </div>
                   <div className="space-y-6">
                     <div>
                       <h4 className="font-inter font-bold text-[#800000] mb-2 uppercase text-xs tracking-widest">Office Hours</h4>
-                      <p className="font-inter text-gray-700 text-sm">Mon-Fri, 10 AM-4 PM</p>
+                      <p className="font-inter text-gray-700">Mon-Fri, 10 AM-4 PM</p>
                     </div>
                     <div>
                       <h4 className="font-inter font-bold text-[#800000] mb-2 uppercase text-xs tracking-widest">Campus Help Desk</h4>
-                      <p className="font-inter text-gray-700 text-sm">Legal aid clinic, VMCC Campus</p>
+                      <p className="font-inter text-gray-700">Legal aid clinic, VMCC Campus</p>
                     </div>
                   </div>
                 </div>

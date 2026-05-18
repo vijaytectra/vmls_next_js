@@ -63,7 +63,7 @@ export default function HostelPage() {
                 />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Student Well-being</h3>
-              <p className="font-inter text-[#2e7d32] font-semibold text-sm uppercase tracking-wider">
+              <p className="font-inter text-[#2e7d32] font-semibold uppercase tracking-wider">
                 Comfort and Security First
               </p>
             </div>
@@ -86,14 +86,14 @@ export default function HostelPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
                   <div className="bg-[#f1f8e9] p-6 rounded-2xl border border-[#c8e6c9]">
                     <h4 className="font-playfair font-bold text-[#1b5e20] text-xl mb-3">Boys Hostels</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
+                    <ul className="space-y-2 text-gray-700">
                       <li>• <strong>Sir C. V. Raman Hostel:</strong> 700 capacity</li>
                       <li>• <strong>Ramanujan Hostel:</strong> 500 capacity</li>
                     </ul>
                   </div>
                   <div className="bg-[#f1f8e9] p-6 rounded-2xl border border-[#c8e6c9]">
                     <h4 className="font-playfair font-bold text-[#1b5e20] text-xl mb-3">Girls Hostel</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
+                    <ul className="space-y-2 text-gray-700">
                       <li>• <strong>Kalpana Chawla Hostel:</strong> 450 capacity</li>
                     </ul>
                   </div>
@@ -107,7 +107,7 @@ export default function HostelPage() {
                   <div className="w-16 h-16 rounded-full bg-[#f1f8e9] flex items-center justify-center text-2xl">🏠</div>
                   <div>
                     <p className="font-playfair font-bold text-gray-900 text-xl">Residential Excellence</p>
-                    <p className="text-sm text-gray-500 font-medium italic">Fostering a vibrant community for growth.</p>
+                    <p className="text-gray-500 font-medium italic">Fostering a vibrant community for growth.</p>
                   </div>
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function HostelPage() {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-100 group hover:border-[#2e7d32] transition-colors">
                   <div className="w-2 h-2 rounded-full bg-[#2e7d32]"></div>
-                  <span className="font-inter text-gray-700 text-sm font-medium">{item}</span>
+                  <span className="font-inter text-gray-700 font-medium">{item}</span>
                 </div>
               ))}
             </div>

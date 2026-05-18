@@ -27,7 +27,7 @@ export default function FacultyAchievementsPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-gray-500">Faculty</span>
@@ -82,7 +82,7 @@ export default function FacultyAchievementsPage() {
                     </div>
                     <div>
                       <h4 className="font-playfair text-xl text-[#1a1a1a] mb-2 font-bold">{highlight.area}</h4>
-                      <p className="font-inter text-gray-600 leading-relaxed text-sm md:text-base">
+                      <p className="font-inter text-gray-600 leading-relaxed md:text-base">
                         {highlight.impact}
                       </p>
                     </div>
@@ -101,7 +101,7 @@ export default function FacultyAchievementsPage() {
               />
               <div className="absolute inset-0 bg-[#a31f34]/10 mix-blend-multiply"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-                <p className="text-white font-inter italic text-sm md:text-base">
+                <p className="text-white font-inter italic md:text-base">
                   "Research is the backbone of legal education. It allows us to not just teach the law, but to understand its evolution and influence."
                 </p>
               </div>

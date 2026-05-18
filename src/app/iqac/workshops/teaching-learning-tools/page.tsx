@@ -22,7 +22,7 @@ export default function TeachingLearningToolsPage() {
             className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors group"
           >
             <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
-            <span className="font-medium tracking-wider uppercase text-sm">Back to Workshops</span>
+            <span className="font-medium tracking-wider uppercase">Back to Workshops</span>
           </Link>
           <h1 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
             Teaching and Learning Tools
@@ -89,7 +89,7 @@ export default function TeachingLearningToolsPage() {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               The AI Frontier in Education
             </h2>
-            <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Optimizing Pedagogical Tools</p>
+            <p className="text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Optimizing Pedagogical Tools</p>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
               <p>
                 The session focused on the integration of Artificial Intelligence in educational practices, exploring how AI tools can optimize teaching methodologies and improve the overall learning experience. 

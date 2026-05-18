@@ -22,11 +22,11 @@ export default function IntraTrialMootCourtPage() {
           <div className="flex flex-wrap items-center gap-6 text-white/80 py-4 border-y border-white/10">
             <div className="flex items-center gap-2">
               <BookOpen className="w-5 h-5 text-[#fbb03b]" />
-              <span className="text-sm font-medium uppercase tracking-widest">Trial Advocacy & Legal Argumentation</span>
+              <span className="font-medium uppercase tracking-widest">Trial Advocacy & Legal Argumentation</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#fbb03b]" />
-              <span className="text-sm font-medium uppercase tracking-widest">June 03, 2024</span>
+              <span className="font-medium uppercase tracking-widest">June 03, 2024</span>
             </div>
           </div>
         </div>
@@ -56,15 +56,15 @@ export default function IntraTrialMootCourtPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
                 <div className="bg-gray-50 p-6 rounded-2xl text-center border border-gray-100">
                   <div className="text-[#a31f34] font-bold text-4xl mb-2">19</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-widest font-bold">Participating Teams</div>
+                  <div className="text-gray-500 uppercase tracking-widest font-bold">Participating Teams</div>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-2xl text-center border border-gray-100">
                   <div className="text-[#a31f34] font-bold text-4xl mb-2">12</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-widest font-bold">Advocate Judges</div>
+                  <div className="text-gray-500 uppercase tracking-widest font-bold">Advocate Judges</div>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-2xl text-center border border-gray-100">
                   <div className="text-[#a31f34] font-bold text-4xl mb-2">3</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-widest font-bold">Finalists Benches</div>
+                  <div className="text-gray-500 uppercase tracking-widest font-bold">Finalists Benches</div>
                 </div>
               </div>
 
@@ -128,7 +128,7 @@ export default function IntraTrialMootCourtPage() {
                         />
                       </div>
                       <div className="flex flex-col justify-center">
-                        <h4 className="text-sm font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
+                        <h4 className="font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors leading-snug mb-1">
                           {news.title}
                         </h4>
                         <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold flex items-center gap-1">

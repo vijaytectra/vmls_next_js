@@ -69,7 +69,7 @@ export default function PDPPage() {
                 { label: "Venue", value: "VMLS Campus" }
               ].map((item, i) => (
                 <div key={i} className="bg-gray-50 p-4 rounded-xl border-l-4 border-[#fbb03b]">
-                  <div className="text-sm text-gray-500 font-bold uppercase tracking-wider">{item.label}</div>
+                  <div className="text-gray-500 font-bold uppercase tracking-wider">{item.label}</div>
                   <div className="text-lg font-bold text-[#800000]">{item.value}</div>
                 </div>
               ))}
@@ -95,7 +95,7 @@ export default function PDPPage() {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Craft of Pedagogy
             </h2>
-            <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Dr. Tanushree Sharma</p>
+            <p className="text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Dr. Tanushree Sharma</p>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
               <p>
                 During the session on the Craft of Pedagogy led by Prof. Dr. Tanushree Sharma, participants delved deeper into innovative teaching techniques. The concept of flipped classrooms, for instance, was explored in detail, highlighting how it empowers students to take ownership of their learning by engaging with course materials before class.
@@ -128,7 +128,7 @@ export default function PDPPage() {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               The Art of Writing
             </h2>
-            <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Deepika Jain</p>
+            <p className="text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Deepika Jain</p>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
               <p>
                 Prof. Deepika Jain&apos;s session on The Art of Writing offered participants a holistic approach to academic writing. Beyond discussing the mechanics of thesis formulation and the critical evaluation of existing academic discourse, the session underscored the importance of maintaining a consistent writing practice throughout the year.
@@ -160,7 +160,7 @@ export default function PDPPage() {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               The Ethics of Teaching
             </h2>
-            <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Dr. Mousumi Mukherjee</p>
+            <p className="text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Dr. Mousumi Mukherjee</p>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
               <p>
                 The session on The Ethics of Teaching, led by Prof. Dr. Mousumi Mukherjee, delved into the emotional dimension of teaching. Prof. Mukherjee stressed that effective teaching goes beyond the dissemination of knowledge; it requires building an emotional connection with students.
@@ -192,7 +192,7 @@ export default function PDPPage() {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Publishing in High-Impact Journals
             </h2>
-            <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Arjya Majumdar</p>
+            <p className="text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Arjya Majumdar</p>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
               <p>
                 In the session on Publishing in High-Impact Journals, Prof. Arjya Majumdar went beyond the basics of selecting journals based on citation scores. Participants gained a deeper understanding of the publication process, from crafting compelling abstracts and selecting appropriate journals to managing the flow of their research papers effectively.
@@ -223,7 +223,7 @@ export default function PDPPage() {
           <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
             Team-Building Session
           </h2>
-          <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-6">Led by Prof. Tanushree Sharma</p>
+          <p className="text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-6">Led by Prof. Tanushree Sharma</p>
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed font-inter">
             <p>
               The Team-Building Session, led by Prof. Tanushree Sharma, provided participants with a practical experience of team dynamics and cooperation. Activities such as Charades (Dumb Charades) and verbal football not only promoted teamwork but also demonstrated how such engaging exercises can be utilized in a classroom setting to enhance collaboration among students.

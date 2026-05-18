@@ -106,7 +106,7 @@ export default function Header() {
 
             <button
               onClick={() => setIsMenuOpen(true)}
-              className="group relative flex items-center gap-2 md:gap-3 bg-[#a31f34] text-white px-3 md:px-6 py-2 md:py-3 rounded-full font-inter font-bold text-[10px] md:text-sm uppercase tracking-[0.15em] transition-all duration-500 hover:bg-[#801829] hover:shadow-[0_15px_30px_rgba(163,31,52,0.3)] hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)] active:scale-95 border border-[#fbb03b]/20 mr-2 md:mr-6"
+              className="group relative flex items-center gap-2 md:gap-3 bg-[#a31f34] text-white px-3 md:px-6 py-2 md:py-3 rounded-full font-inter font-bold text-[10px] uppercase tracking-[0.15em] transition-all duration-500 hover:bg-[#801829] hover:shadow-[0_15px_30px_rgba(163,31,52,0.3)] hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)] active:scale-95 border border-[#fbb03b]/20 mr-2 md:mr-6"
             >
               <div className="flex flex-col gap-1 md:gap-1.5 w-5 md:w-6 h-3 md:h-4 justify-center items-center">
                 <span className="block h-0.5 w-full bg-white rounded-full group-hover:bg-[#fbb03b] transition-all duration-300"></span>
@@ -201,8 +201,8 @@ export default function Header() {
             <div className="space-y-4">
               <div className="space-y-1">
                 <p className="text-[#a31f34] font-bold text-xs tracking-widest uppercase">Contact Us</p>
-                <p className="text-gray-700 font-medium text-sm">+91 73582 01234</p>
-                <p className="text-gray-600 text-sm">admissions@vmls.edu.in</p>
+                <p className="text-gray-700 font-medium">+91 73582 01234</p>
+                <p className="text-gray-600">admissions@vmls.edu.in</p>
               </div>
               <div className="flex gap-4 pt-2">
                 {[

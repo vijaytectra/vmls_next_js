@@ -63,7 +63,7 @@ export default function InfrastructurePage() {
                 />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Architectural Vision</h3>
-              <p className="font-inter text-[#800000] font-semibold text-sm">
+              <p className="font-inter text-[#800000] font-semibold">
                 Designed for Focus and Interactive Learning
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function InfrastructurePage() {
                   <div className="w-16 h-16 rounded-full bg-[#fdf2f2] flex items-center justify-center text-2xl">🎓</div>
                   <div>
                     <p className="font-playfair font-bold text-gray-900 text-xl">VMLS Infrastructure Commitment</p>
-                    <p className="text-sm text-gray-500 font-medium italic">Empowering the next generation of legal minds.</p>
+                    <p className="text-gray-500 font-medium italic">Empowering the next generation of legal minds.</p>
                   </div>
                 </div>
               </div>

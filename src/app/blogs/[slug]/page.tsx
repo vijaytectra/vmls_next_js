@@ -1461,7 +1461,7 @@ const blogData = {
 
         <div className="mt-12 pt-8 border-t border-gray-100">
           <h4 className="font-bold text-lg mb-4">Bibliography</h4>
-          <ol className="list-decimal pl-6 space-y-2 text-sm text-gray-600">
+          <ol className="list-decimal pl-6 space-y-2 text-gray-600">
             <li>Bar Council of India, Rules on Legal Education (2008), r 9.</li>
             <li>N.R. Madhava Menon, &apos;Clinical Legal Education: Concept and Concerns&apos; (2005) 46(1) JILI 108.</li>
             <li>Amita Dhanda and Aparna Chandra, &apos;Integrating Clinical Education in Legal Pedagogy in India&apos; (2013) 6 NUJS L Rev 51.</li>
@@ -1500,19 +1500,19 @@ const blogData = {
         <div className="space-y-6 mb-8">
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">1. Poor Infrastructure and Support</h4>
-            <p className="text-sm">Many law colleges set up legal aid clinics just to meet formal requirements. These clinics often don&apos;t have full-time staff, dedicated faculty, or even a separate space. Without proper infrastructure, they end up doing very little.</p>
+            <p className="">Many law colleges set up legal aid clinics just to meet formal requirements. These clinics often don&apos;t have full-time staff, dedicated faculty, or even a separate space. Without proper infrastructure, they end up doing very little.</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">2. Untrained Faculty</h4>
-            <p className="text-sm">Most law teachers in India come from academic backgrounds and aren&apos;t trained in clinical methods like supervision, live case handling, or reflective learning. Without trained mentors, students don&apos;t get the support they need in real-world settings.</p>
+            <p className="">Most law teachers in India come from academic backgrounds and aren&apos;t trained in clinical methods like supervision, live case handling, or reflective learning. Without trained mentors, students don&apos;t get the support they need in real-world settings.</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">3. Rigid Curriculum</h4>
-            <p className="text-sm">CLE needs time, flexibility, and space to work. But most law schools follow a packed, exam-focused syllabus. There&apos;s hardly room for long-term projects or fieldwork. Plus, traditional exams aren&apos;t ideal for evaluating practical skills like advocacy or counseling.</p>
+            <p className="">CLE needs time, flexibility, and space to work. But most law schools follow a packed, exam-focused syllabus. There&apos;s hardly room for long-term projects or fieldwork. Plus, traditional exams aren&apos;t ideal for evaluating practical skills like advocacy or counseling.</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">4. Low Student Interest</h4>
-            <p className="text-sm">Unfortunately, many students see CLE as unimportant. Since it doesn&apos;t usually carry credits or lead to corporate jobs, students don&apos;t take it seriously. The focus on high-paying law firm placements overshadows the social value of public interest law.</p>
+            <p className="">Unfortunately, many students see CLE as unimportant. Since it doesn&apos;t usually carry credits or lead to corporate jobs, students don&apos;t take it seriously. The focus on high-paying law firm placements overshadows the social value of public interest law.</p>
           </div>
         </div>
 
@@ -2130,7 +2130,7 @@ const blogData = {
         </p>
 
         <h3 className="text-2xl font-playfair font-bold text-[#1a1a1a] mb-4">Admission Process</h3>
-        <div className="bg-[#fcfbf9] p-8 rounded-2xl border border-gray-100 mb-8 text-sm">
+        <div className="bg-[#fcfbf9] p-8 rounded-2xl border border-gray-100 mb-8">
           <ol className="space-y-4 list-decimal pl-6">
             <li>Register yourself for VLAT, and verify the email address.</li>
             <li>Fill in the online application form.</li>
@@ -2148,19 +2148,19 @@ const blogData = {
         <div className="space-y-6 mb-8">
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">LLM in Corporate and Financial Laws</h4>
-            <p className="text-sm">Enables you to tackle the challenges of today&apos;s business world. You get to explore comparative corporate governance, policy, and finance, and delve into global issues in corporate law and regulatory frameworks.</p>
+            <p className="">Enables you to tackle the challenges of today&apos;s business world. You get to explore comparative corporate governance, policy, and finance, and delve into global issues in corporate law and regulatory frameworks.</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">LLM in Commercial Dispute Resolution</h4>
-            <p className="text-sm">Enables students to develop expertise in resolving complex commercial conflicts. The curriculum is designed to refine your litigation and arbitration skills.</p>
+            <p className="">Enables students to develop expertise in resolving complex commercial conflicts. The curriculum is designed to refine your litigation and arbitration skills.</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">LLM in Criminal Law and Practice</h4>
-            <p className="text-sm">Equips you with practical skills and theoretical depth essential for criminal justice reform, policy advocacy, and impactful litigation.</p>
+            <p className="">Equips you with practical skills and theoretical depth essential for criminal justice reform, policy advocacy, and impactful litigation.</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">LLM In AI, Emerging Tech and IPR</h4>
-            <p className="text-sm">Helps you step into the future of legal innovation, navigating complex legal landscapes shaped by rapid digital transformation.</p>
+            <p className="">Helps you step into the future of legal innovation, navigating complex legal landscapes shaped by rapid digital transformation.</p>
           </div>
         </div>
 
@@ -2202,7 +2202,7 @@ const blogData = {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h4 className="font-bold text-[#a31f34] mb-3">Undergraduate (UG)</h4>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2">
                 <li><strong>Questions:</strong> 40 MCQs</li>
                 <li><strong>Duration:</strong> 60 Minutes</li>
                 <li><strong>Sections:</strong> English Comprehension & Logical Reasoning</li>
@@ -2210,7 +2210,7 @@ const blogData = {
             </div>
             <div>
               <h4 className="font-bold text-[#a31f34] mb-3">Postgraduate (PG)</h4>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2">
                 <li><strong>Questions:</strong> 80 MCQs</li>
                 <li><strong>Duration:</strong> 120 Minutes</li>
                 <li><strong>Sections:</strong> Core Legal Subjects</li>
@@ -2261,15 +2261,15 @@ const blogData = {
         <div className="space-y-6 mb-8">
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">BA LLB (Hons)</h4>
-            <p className="text-sm">Ideal for students who want to build careers as lawyers, legal advisors, or litigation professionals. It combines humanities subjects like political science and sociology with core legal subjects.</p>
+            <p className="">Ideal for students who want to build careers as lawyers, legal advisors, or litigation professionals. It combines humanities subjects like political science and sociology with core legal subjects.</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">BBA LLB (Hons)</h4>
-            <p className="text-sm">Blends business administration with legal education. Students develop essential skills like leadership and negotiation, preparing them for corporate law careers.</p>
+            <p className="">Blends business administration with legal education. Students develop essential skills like leadership and negotiation, preparing them for corporate law careers.</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-3">B.Com LLB (Hons)</h4>
-            <p className="text-sm">Focuses on commerce and legal education. It is an excellent choice for students aiming for roles in banking, finance, or taxation advisory.</p>
+            <p className="">Focuses on commerce and legal education. It is an excellent choice for students aiming for roles in banking, finance, or taxation advisory.</p>
           </div>
         </div>
 
@@ -2319,7 +2319,7 @@ const blogData = {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           <div className="bg-[#fcfbf9] p-4 rounded-lg border border-gray-100">
             <h4 className="font-bold text-[#a31f34] mb-2">Foundation</h4>
-            <ul className="text-sm space-y-1">
+            <ul className="space-y-1">
               <li>Political Science</li>
               <li>Legal History</li>
               <li>Sociology</li>
@@ -2327,7 +2327,7 @@ const blogData = {
           </div>
           <div className="bg-[#fcfbf9] p-4 rounded-lg border border-gray-100">
             <h4 className="font-bold text-[#a31f34] mb-2">Core Law</h4>
-            <ul className="text-sm space-y-1">
+            <ul className="space-y-1">
               <li>Family Law</li>
               <li>Corporate Law</li>
               <li>Criminal Law</li>
@@ -2400,11 +2400,11 @@ const blogData = {
           <ul className="space-y-4">
             <li className="flex gap-4">
               <div className="w-1.5 h-1.5 rounded-full bg-[#a31f34] mt-2 flex-shrink-0"></div>
-              <p className="text-sm"><strong>Undergraduate:</strong> 10+2 with minimum 45% (40% for SC/ST). No upper age limit.</p>
+              <p className=""><strong>Undergraduate:</strong> 10+2 with minimum 45% (40% for SC/ST). No upper age limit.</p>
             </li>
             <li className="flex gap-4">
               <div className="w-1.5 h-1.5 rounded-full bg-[#a31f34] mt-2 flex-shrink-0"></div>
-              <p className="text-sm"><strong>Postgraduate:</strong> LLB degree with minimum 50% (45% for SC/ST). No upper age limit.</p>
+              <p className=""><strong>Postgraduate:</strong> LLB degree with minimum 50% (45% for SC/ST). No upper age limit.</p>
             </li>
           </ul>
         </div>
@@ -2451,11 +2451,11 @@ const blogData = {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-2">3-Year LLB</h4>
-            <p className="text-sm text-gray-600">The traditional route for students who have already completed a bachelor&apos;s degree in any discipline.</p>
+            <p className="text-gray-600">The traditional route for students who have already completed a bachelor&apos;s degree in any discipline.</p>
           </div>
           <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
             <h4 className="font-bold text-[#a31f34] mb-2">5-Year Integrated</h4>
-            <p className="text-sm text-gray-600">Combines a bachelor&apos;s degree (BA, BBA, B.Com) with LLB, ideal for students joining directly after Class 12.</p>
+            <p className="text-gray-600">Combines a bachelor&apos;s degree (BA, BBA, B.Com) with LLB, ideal for students joining directly after Class 12.</p>
           </div>
         </div>
 
@@ -2495,19 +2495,19 @@ const blogData = {
         <div className="space-y-6 mb-8">
           <div>
             <h4 className="font-bold text-[#a31f34]">1. Corporate Lawyer</h4>
-            <p className="text-sm text-gray-600">Ensuring organizations comply with legal requirements and managing mergers, acquisitions, and intellectual property.</p>
+            <p className="text-gray-600">Ensuring organizations comply with legal requirements and managing mergers, acquisitions, and intellectual property.</p>
           </div>
           <div>
             <h4 className="font-bold text-[#a31f34]">2. Judicial Officer</h4>
-            <p className="text-sm text-gray-600">Presiding over court cases as a Judge or Magistrate after clearing judicial services examinations.</p>
+            <p className="text-gray-600">Presiding over court cases as a Judge or Magistrate after clearing judicial services examinations.</p>
           </div>
           <div>
             <h4 className="font-bold text-[#a31f34]">3. Legal Advisor</h4>
-            <p className="text-sm text-gray-600">Providing specialized legal counsel to individuals and companies on disputes and documentation.</p>
+            <p className="text-gray-600">Providing specialized legal counsel to individuals and companies on disputes and documentation.</p>
           </div>
           <div>
             <h4 className="font-bold text-[#a31f34]">4. Legal Journalist</h4>
-            <p className="text-sm text-gray-600">Reporting on landmark judgments and legislative changes for media houses and news portals.</p>
+            <p className="text-gray-600">Reporting on landmark judgments and legislative changes for media houses and news portals.</p>
           </div>
         </div>
 
@@ -2546,19 +2546,19 @@ const blogData = {
           <div className="space-y-6">
             <div>
               <h4 className="font-bold text-[#a31f34]">Constitutional Law</h4>
-              <p className="text-sm">The study of the principles that run the nation, including fundamental rights and government procedures.</p>
+              <p className="">The study of the principles that run the nation, including fundamental rights and government procedures.</p>
             </div>
             <div>
               <h4 className="font-bold text-[#a31f34]">Criminal Law</h4>
-              <p className="text-sm">Focuses on offences, trial processes, and the penal system aimed at maintaining social order.</p>
+              <p className="">Focuses on offences, trial processes, and the penal system aimed at maintaining social order.</p>
             </div>
             <div>
               <h4 className="font-bold text-[#a31f34]">Civil Law</h4>
-              <p className="text-sm">Covers non-criminal matters like property disputes, contracts, and family law.</p>
+              <p className="">Covers non-criminal matters like property disputes, contracts, and family law.</p>
             </div>
             <div>
               <h4 className="font-bold text-[#a31f34]">Corporate Law</h4>
-              <p className="text-sm">Deals with the governance of companies, mergers, and financial regulations.</p>
+              <p className="">Deals with the governance of companies, mergers, and financial regulations.</p>
             </div>
           </div>
         </div>
@@ -2655,11 +2655,11 @@ export default function BlogPost() {
           <div className="flex flex-wrap items-center gap-6 text-white/80 py-4 border-y border-white/10">
             <div className="flex items-center gap-2">
               <User className="w-5 h-5 text-[#fbb03b]" />
-              <span className="text-sm font-medium">By {post.author || "VMLS Editorial"}</span>
+              <span className="font-medium">By {post.author || "VMLS Editorial"}</span>
             </div>
             <div className="flex items-center gap-2">
               <Calendar className="w-5 h-5 text-[#fbb03b]" />
-              <span className="text-sm font-medium">{post.date}</span>
+              <span className="font-medium">{post.date}</span>
             </div>
           </div>
         </div>
@@ -2679,11 +2679,11 @@ export default function BlogPost() {
               <div className="flex flex-wrap items-center gap-6 text-gray-500 border-y border-gray-100 py-4">
                 <div className="flex items-center gap-2">
                   <User className="w-5 h-5 text-[#a31f34]" />
-                  <span className="text-sm font-medium">By {post.author || "VMLS Editorial"}</span>
+                  <span className="font-medium">By {post.author || "VMLS Editorial"}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-[#a31f34]" />
-                  <span className="text-sm font-medium">{post.date}</span>
+                  <span className="font-medium">{post.date}</span>
                 </div>
                 <div className="flex items-center gap-4 ml-auto">
                   <Share2 className="w-5 h-5 text-gray-400 cursor-pointer hover:text-[#a31f34] transition-colors" />
@@ -2754,7 +2754,7 @@ export default function BlogPost() {
                       </div>
                     </div>
                     {article.excerpt && (
-                      <p className="text-sm text-gray-600 line-clamp-2 font-inter leading-relaxed">
+                      <p className="text-gray-600 line-clamp-2 font-inter leading-relaxed">
                         {article.excerpt}
                       </p>
                     )}

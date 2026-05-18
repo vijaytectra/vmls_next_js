@@ -53,7 +53,7 @@ export default function MentoringKeyMembers() {
                 <h3 className="font-inter font-bold text-lg md:text-xl text-[#1a1a1a]">
                   {member.name}
                 </h3>
-                <p className="font-inter text-gray-600 text-sm md:text-base leading-snug">
+                <p className="font-inter text-gray-600 md:text-base leading-snug">
                   {member.designation}
                 </p>
               </div>

@@ -9,7 +9,7 @@ export default function ContactUsPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-[#a31f34] font-semibold">Contact Us</span>
@@ -136,7 +136,7 @@ export default function ContactUsPage() {
               <Link 
                 href={mapUrl}
                 target="_blank"
-                className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-gray-100 flex items-center gap-2 text-sm font-bold text-[#a31f34] hover:bg-white transition-all transform hover:scale-105 active:scale-95 z-10"
+                className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-gray-100 flex items-center gap-2 font-bold text-[#a31f34] hover:bg-white transition-all transform hover:scale-105 active:scale-95 z-10"
               >
                 Open in Maps
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

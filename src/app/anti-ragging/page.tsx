@@ -6,7 +6,7 @@ export default function AntiRaggingPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <Link href="/student-affairs" className="text-gray-500 hover:text-[#a31f34] transition-colors">Student Affairs</Link>
@@ -96,11 +96,11 @@ export default function AntiRaggingPage() {
                   <td colSpan={5} className="p-3 text-center border-b border-gray-700">Coordinator</td>
                 </tr>
                 <tr className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                  <td className="p-4 text-sm font-medium text-gray-500 border-r border-gray-100">1</td>
-                  <td className="p-4 text-sm font-bold text-gray-900 border-r border-gray-100">Prof. Winfred Chelliah</td>
-                  <td className="p-4 text-sm text-gray-600 border-r border-gray-100">Professor</td>
-                  <td className="p-4 text-sm text-[#a31f34] font-medium border-r border-gray-100">winfredchelliah@vmls.edu.in</td>
-                  <td className="p-4 text-sm font-mono text-gray-900">9940152160</td>
+                  <td className="p-4 font-medium text-gray-500 border-r border-gray-100">1</td>
+                  <td className="p-4 font-bold text-gray-900 border-r border-gray-100">Prof. Winfred Chelliah</td>
+                  <td className="p-4 text-gray-600 border-r border-gray-100">Professor</td>
+                  <td className="p-4 text-[#a31f34] font-medium border-r border-gray-100">winfredchelliah@vmls.edu.in</td>
+                  <td className="p-4 font-mono text-gray-900">9940152160</td>
                 </tr>
 
                 {/* Members */}
@@ -114,11 +114,11 @@ export default function AntiRaggingPage() {
                   { id: 5, name: "Dr. Krishna Kishore", role: "Assistant Professor", mail: "krishnakishore@vmls.edu.in", phone: "8099346959" }
                 ].map((member) => (
                   <tr key={member.id} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
-                    <td className="p-4 text-sm font-medium text-gray-500 border-r border-gray-100">{member.id}</td>
-                    <td className="p-4 text-sm font-bold text-gray-900 border-r border-gray-100">{member.name}</td>
-                    <td className="p-4 text-sm text-gray-600 border-r border-gray-100">{member.role}</td>
-                    <td className="p-4 text-sm text-[#a31f34] font-medium border-r border-gray-100">{member.mail}</td>
-                    <td className="p-4 text-sm font-mono text-gray-900">{member.phone}</td>
+                    <td className="p-4 font-medium text-gray-500 border-r border-gray-100">{member.id}</td>
+                    <td className="p-4 font-bold text-gray-900 border-r border-gray-100">{member.name}</td>
+                    <td className="p-4 text-gray-600 border-r border-gray-100">{member.role}</td>
+                    <td className="p-4 text-[#a31f34] font-medium border-r border-gray-100">{member.mail}</td>
+                    <td className="p-4 font-mono text-gray-900">{member.phone}</td>
                   </tr>
                 ))}
               </tbody>

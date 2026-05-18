@@ -176,14 +176,14 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-4 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 text-center">
-          <div className="flex flex-col md:flex-row items-center gap-x-8 gap-y-2 md:gap-y-4 text-[10px] md:text-sm font-medium uppercase tracking-widest text-[#666]">
+          <div className="flex flex-col md:flex-row items-center gap-x-8 gap-y-2 md:gap-y-4 text-[10px] font-medium uppercase tracking-widest text-[#666]">
             <Link href="/iqac" className="hover:text-[#a31f34] transition-colors">IQAC</Link>
             <span className="text-gray-300 hidden md:block">|</span>
             <Link href="/privacy-policy" className="hover:text-[#a31f34] transition-colors">Privacy Policy</Link>
             <span className="text-gray-300 hidden md:block">|</span>
             <Link href="/terms-conditions" className="hover:text-[#a31f34] transition-colors">Terms and Conditions</Link>
           </div>
-          <p className="text-[10px] md:text-sm font-medium text-gray-400 tracking-widest">
+          <p className="text-[10px] font-medium text-gray-400 tracking-widest">
             COPYRIGHT © 2026 VMLS
           </p>
         </div>

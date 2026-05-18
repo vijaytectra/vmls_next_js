@@ -67,7 +67,7 @@ export default function NewsEventsSection() {
               </div>
               
               <div className="space-y-6">
-                <p className="font-inter text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em]">
+                <p className="font-inter text-[#a31f34] font-bold uppercase tracking-[0.2em]">
                   March 20, 2026
                 </p>
                 <h3 className="font-playfair text-3xl md:text-5xl text-gray-900 leading-[1.1] mb-6">
@@ -83,7 +83,7 @@ export default function NewsEventsSection() {
                     href="/images/newsletter/Newsletter-feb-march-2026.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
+                    className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
                   >
                     View English Newsletter
                   </a>
@@ -91,7 +91,7 @@ export default function NewsEventsSection() {
                     href="/images/newsletter/NewsLetterNovemberToDecember-2025 (Tamil).pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
+                    className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
                   >
                     View Tamil Newsletter
                   </a>
@@ -114,7 +114,7 @@ export default function NewsEventsSection() {
                   />
                 </div>
                 <div className="md:w-[60%] space-y-4">
-                  <p className="font-inter text-sm text-[#a31f34] font-bold uppercase tracking-wider">
+                  <p className="font-inter text-[#a31f34] font-bold uppercase tracking-wider">
                     {event.date}
                   </p>
                   <h4 className="font-playfair text-2xl md:text-3xl text-gray-900 leading-tight group-hover:text-[#a31f34] transition-colors">

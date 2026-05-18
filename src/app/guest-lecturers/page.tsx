@@ -6,7 +6,7 @@ export default function GuestLecturersPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-gray-500">Faculty</span>
@@ -45,7 +45,7 @@ export default function GuestLecturersPage() {
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-center items-center gap-4 mb-6 md:mb-8">
             <div className="w-12 h-[1px] bg-gray-300"></div>
-            <span className="font-inter text-xs md:text-sm tracking-[0.3em] uppercase text-[#a31f34] font-bold">Status Update</span>
+            <span className="font-inter text-xs tracking-[0.3em] uppercase text-[#a31f34] font-bold">Status Update</span>
             <div className="w-12 h-[1px] bg-gray-300"></div>
           </div>
           <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a] mb-6 leading-tight">Coming Soon</h2>

@@ -6,7 +6,7 @@ export default function CampusLifePage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-[#a31f34] font-semibold">Campus Life</span>
@@ -84,7 +84,7 @@ export default function CampusLifePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <h3 className="font-playfair text-2xl md:text-3xl text-white mb-3">Vibrant Atrium</h3>
-                <p className="text-white/70 text-sm mb-4 max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
+                <p className="text-white/70 mb-4 max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
                   A central hub for interaction and collaborative learning.
                 </p>
                 <div className="flex items-center gap-3 text-white font-inter text-[10px] font-bold uppercase tracking-widest">
@@ -105,7 +105,7 @@ export default function CampusLifePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <h3 className="font-playfair text-2xl md:text-3xl text-white mb-3">Academic Block</h3>
-                <p className="text-white/70 text-sm mb-4 max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
+                <p className="text-white/70 mb-4 max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
                   Modern architecture meeting functional academic needs.
                 </p>
                 <div className="flex items-center gap-3 text-white font-inter text-[10px] font-bold uppercase tracking-widest">

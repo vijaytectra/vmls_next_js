@@ -92,7 +92,7 @@ export default function AdmissionProcessPage() {
               
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Eligibility:</h3>
-                <ul className="space-y-3 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-3 font-inter text-gray-700 list-disc pl-5">
                   <li>A pass in 10+2/Intermediate or equivalent examination. (Candidates appearing for April-May 2025 Examinations can also apply.)</li>
                   <li>Not less than 45% marks for General Category, 42% for OBC and 40% for SC/ST.</li>
                 </ul>
@@ -100,7 +100,7 @@ export default function AdmissionProcessPage() {
 
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Admission Criteria:</h3>
-                <ul className="space-y-2 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-2 font-inter text-gray-700 list-disc pl-5">
                   <li>VLAT 5 Score*</li>
                   <li>10+2 (or equivalent) marks</li>
                 </ul>
@@ -109,7 +109,7 @@ export default function AdmissionProcessPage() {
               <div className="mt-auto pt-4">
                 <Link 
                   href="https://admissions.vmls.edu.in/" 
-                  className="inline-block px-8 py-3 border-2 border-[#a31f34] text-[#a31f34] font-inter font-bold text-sm uppercase tracking-wider hover:bg-[#a31f34] hover:text-white transition-all text-center"
+                  className="inline-block px-8 py-3 border-2 border-[#a31f34] text-[#a31f34] font-inter font-bold uppercase tracking-wider hover:bg-[#a31f34] hover:text-white transition-all text-center"
                 >
                   Apply Now
                 </Link>
@@ -124,7 +124,7 @@ export default function AdmissionProcessPage() {
               
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Eligibility:</h3>
-                <ul className="space-y-3 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-3 font-inter text-gray-700 list-disc pl-5">
                   <li>Bachelor's degree in any stream from a University or an equivalent Institution recognized as deemed to be University or from a foreign University declared as equivalent to an Indian degree by a competent authority (Candidates who expect to graduate in June 2025 may also apply).</li>
                   <li>Not less than 45% marks for General Category, 42% for OBC and 40% for SC/ST.</li>
                 </ul>
@@ -132,7 +132,7 @@ export default function AdmissionProcessPage() {
 
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Admission Criteria:</h3>
-                <ul className="space-y-2 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-2 font-inter text-gray-700 list-disc pl-5">
                   <li>VLAT 3 Score*</li>
                   <li>Bachelor's Degree marks.</li>
                 </ul>
@@ -141,7 +141,7 @@ export default function AdmissionProcessPage() {
               <div className="mt-auto pt-4">
                 <Link 
                   href="https://admissions.vmls.edu.in/" 
-                  className="inline-block px-8 py-3 border-2 border-[#a31f34] text-[#a31f34] font-inter font-bold text-sm uppercase tracking-wider hover:bg-[#a31f34] hover:text-white transition-all text-center"
+                  className="inline-block px-8 py-3 border-2 border-[#a31f34] text-[#a31f34] font-inter font-bold uppercase tracking-wider hover:bg-[#a31f34] hover:text-white transition-all text-center"
                 >
                   Apply Now
                 </Link>
@@ -156,14 +156,14 @@ export default function AdmissionProcessPage() {
               
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Eligibility:</h3>
-                <ul className="space-y-3 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-3 font-inter text-gray-700 list-disc pl-5">
                   <li>Bachelor's degree in Law (LL.B.) from a University or an equivalent Institution recognized as deemed to be University or from a foreign University declared as equivalent to an Indian degree by a competent authority.</li>
                 </ul>
               </div>
 
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Admission Criteria:</h3>
-                <ul className="space-y-2 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-2 font-inter text-gray-700 list-disc pl-5">
                   <li>VLAT Score</li>
                   <li>Interview round after VLAT</li>
                 </ul>
@@ -172,7 +172,7 @@ export default function AdmissionProcessPage() {
               <div className="mt-auto pt-4">
                 <Link 
                   href="https://admissions.vmls.edu.in/" 
-                  className="inline-block px-8 py-3 border-2 border-[#a31f34] text-[#a31f34] font-inter font-bold text-sm uppercase tracking-wider hover:bg-[#a31f34] hover:text-white transition-all text-center"
+                  className="inline-block px-8 py-3 border-2 border-[#a31f34] text-[#a31f34] font-inter font-bold uppercase tracking-wider hover:bg-[#a31f34] hover:text-white transition-all text-center"
                 >
                   Apply Now
                 </Link>
@@ -242,7 +242,7 @@ export default function AdmissionProcessPage() {
                 <div key={index} className={`relative flex flex-col md:flex-row items-start md:items-center ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
                   
                   {/* Step Number Bubble */}
-                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 bg-white border-2 border-gray-100 rounded-full z-20 flex items-center justify-center font-playfair font-bold text-sm text-[#a31f34] shadow-sm">
+                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 bg-white border-2 border-gray-100 rounded-full z-20 flex items-center justify-center font-playfair font-bold text-[#a31f34] shadow-sm">
                     {index + 1}
                   </div>
 
@@ -250,7 +250,7 @@ export default function AdmissionProcessPage() {
                   <div className={`w-[calc(100%-2.5rem)] md:w-[38%] ml-10 md:ml-0 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     <div className="bg-white/95 backdrop-blur-sm p-4 md:p-5 shadow-sm hover:shadow-xl transition-all duration-500 rounded-xl border-l-4 group hover:-translate-y-1 relative z-10" style={{ borderLeftColor: step.color }}>
                       <span className="font-inter text-[9px] uppercase tracking-widest text-gray-400 mb-1 block font-bold">Step {index + 1}</span>
-                      <h3 className="font-playfair text-sm md:text-base text-[#1a1a1a] font-bold leading-tight group-hover:text-[#a31f34] transition-colors">
+                      <h3 className="font-playfair md:text-base text-[#1a1a1a] font-bold leading-tight group-hover:text-[#a31f34] transition-colors">
                         {step.title}
                       </h3>
                     </div>
@@ -271,17 +271,17 @@ export default function AdmissionProcessPage() {
             <h2 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mb-6 border-b border-yellow-200 pb-4">
               VLAT- (Vinayaka Mission's Law Admissions Test)
             </h2>
-            <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed mb-8">
+            <p className="font-inter md:text-base text-gray-700 leading-relaxed mb-8">
               Vinayaka Mission's Law Admissions Test is an entrance test specifically designed to understand the Reading and Comprehension Skills, Reasoning and Critical Thinking Ability of the students that are essential to pursue Legal Education.
             </p>
 
             <h3 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mb-4">
               VLAT Format
             </h3>
-            <p className="font-inter text-sm text-gray-700 mb-4">
+            <p className="font-inter text-gray-700 mb-4">
               The question paper will consist of two different sections each containing objective multiple choice questions (MCQs).
             </p>
-            <ol className="list-decimal pl-5 space-y-2 font-inter text-sm text-gray-700 mb-8">
+            <ol className="list-decimal pl-5 space-y-2 font-inter text-gray-700 mb-8">
               <li>Logical Reasoning</li>
               <li>English Comprehension</li>
             </ol>
@@ -307,10 +307,10 @@ export default function AdmissionProcessPage() {
       <section className="px-[5%] pt-2 pb-6 bg-white">
         <div className="max-w-4xl mx-auto text-center py-12 bg-[#f8f9fa] border border-gray-100 rounded-3xl shadow-sm">
           <h2 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mb-4">Need Help with Admissions?</h2>
-          <p className="font-inter text-sm text-gray-600 mb-8 max-w-xl mx-auto">Our admissions team is here to guide you through every step of the process. Reach out to us for any clarifications.</p>
+          <p className="font-inter text-gray-600 mb-8 max-w-xl mx-auto">Our admissions team is here to guide you through every step of the process. Reach out to us for any clarifications.</p>
           <div className="flex flex-wrap justify-center gap-4">
-             <Link href="/contact-us" className="px-6 py-2.5 bg-[#a31f34] text-white font-inter font-bold rounded-lg hover:bg-[#801829] transition-all text-sm">Contact Us</Link>
-             <Link href="https://admissions.vmls.edu.in/" className="px-6 py-2.5 border-2 border-[#a31f34] text-[#a31f34] font-inter font-bold rounded-lg hover:bg-[#a31f34] hover:text-white transition-all text-sm">Apply Now</Link>
+             <Link href="/contact-us" className="px-6 py-2.5 bg-[#a31f34] text-white font-inter font-bold rounded-lg hover:bg-[#801829] transition-all">Contact Us</Link>
+             <Link href="https://admissions.vmls.edu.in/" className="px-6 py-2.5 border-2 border-[#a31f34] text-[#a31f34] font-inter font-bold rounded-lg hover:bg-[#a31f34] hover:text-white transition-all">Apply Now</Link>
           </div>
         </div>
       </section>

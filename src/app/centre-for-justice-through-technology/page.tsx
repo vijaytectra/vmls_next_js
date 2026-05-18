@@ -12,7 +12,7 @@ export default function CentreForJusticeThroughTechnologyPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-gray-500">Centres of Excellence</span>
@@ -166,7 +166,7 @@ export default function CentreForJusticeThroughTechnologyPage() {
               </div>
               <div className="flex items-center gap-2 text-gray-900 mb-3 font-semibold">
                 <Calendar size={20} strokeWidth={2.2} className="text-[#a31f34]" />
-                <span className="text-sm tracking-wide">January 15, 2025</span>
+                <span className="tracking-wide">January 15, 2025</span>
               </div>
               <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 leading-snug group-hover:text-[#a31f34] transition-colors">
                 AI & Justice Systems Summit 2025
@@ -186,7 +186,7 @@ export default function CentreForJusticeThroughTechnologyPage() {
               </div>
               <div className="flex items-center gap-2 text-gray-900 mb-3 font-semibold">
                 <Calendar size={20} strokeWidth={2.2} className="text-[#a31f34]" />
-                <span className="text-sm tracking-wide">November 22, 2024</span>
+                <span className="tracking-wide">November 22, 2024</span>
               </div>
               <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 leading-snug group-hover:text-[#a31f34] transition-colors">
                 National Workshop on E-Filing & Digital Judiciary
@@ -206,7 +206,7 @@ export default function CentreForJusticeThroughTechnologyPage() {
               </div>
               <div className="flex items-center gap-2 text-gray-900 mb-3 font-semibold">
                 <Calendar size={20} strokeWidth={2.2} className="text-[#a31f34]" />
-                <span className="text-sm tracking-wide">September 10, 2024</span>
+                <span className="tracking-wide">September 10, 2024</span>
               </div>
               <h3 className="font-playfair text-xl md:text-2xl font-bold text-gray-900 leading-snug group-hover:text-[#a31f34] transition-colors">
                 Legal Technology Innovation & Case Analysis

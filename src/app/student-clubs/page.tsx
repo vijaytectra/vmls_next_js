@@ -17,7 +17,7 @@ export default function StudentClubsPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <Link href="/student-affairs" className="text-gray-500 hover:text-[#a31f34] transition-colors">Student Affairs</Link>
@@ -68,7 +68,7 @@ export default function StudentClubsPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
                 <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-3 group-hover:text-[#a31f34] transition-colors">{club.name}</h3>
-                <p className="font-inter text-sm text-gray-600 leading-relaxed text-justify mb-4">
+                <p className="font-inter text-gray-600 leading-relaxed text-justify mb-4">
                   {club.desc}
                 </p>
               </div>

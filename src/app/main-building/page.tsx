@@ -63,7 +63,7 @@ export default function MainBuildingPage() {
                 />
               </div>
               <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Modern Philosophy</h3>
-              <p className="font-inter text-[#1a8a00] font-semibold text-sm">
+              <p className="font-inter text-[#1a8a00] font-semibold">
                 Clarity, Order, and Institutional Vision
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function MainBuildingPage() {
                   <div className="w-16 h-16 rounded-full bg-[#f0fdf4] flex items-center justify-center text-2xl">🏛️</div>
                   <div>
                     <p className="font-playfair font-bold text-gray-900 text-xl">VMLS Academic Block</p>
-                    <p className="text-sm text-gray-500 font-medium italic">Building the foundations of legal excellence.</p>
+                    <p className="text-gray-500 font-medium italic">Building the foundations of legal excellence.</p>
                   </div>
                 </div>
               </div>

@@ -154,7 +154,7 @@ export default function ScholarshipsPage() {
                   {cat.title}
                 </h3>
                 
-                <p className="font-inter text-gray-600 leading-relaxed text-xs md:text-sm mt-auto">
+                <p className="font-inter text-gray-600 leading-relaxed text-xs mt-auto">
                   {cat.description}
                 </p>
               </div>

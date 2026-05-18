@@ -6,7 +6,7 @@ export default function StudentAffairsPage() {
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
+        <div className="max-w-7xl mx-auto flex items-center gap-3 md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-[#a31f34] font-semibold">Student Affairs</span>
@@ -48,7 +48,7 @@ export default function StudentAffairsPage() {
           <h2 className="font-playfair text-2xl md:text-4xl text-gray-900 leading-tight mb-8">
             "Law school is more than just books and briefs—it's about <span className="text-[#a31f34] italic font-bold text-3xl md:text-5xl block mt-2">building the future together."</span>
           </h2>
-          <p className="font-inter text-gray-600 leading-relaxed max-w-4xl mx-auto text-sm md:text-base text-justify">
+          <p className="font-inter text-gray-600 leading-relaxed max-w-4xl mx-auto md:text-base text-justify">
             The Office of Student Affairs (OSA) at VMLS is dedicated to fostering a vibrant, inclusive, and enriching environment for our students. Beyond academic excellence, OSA offers opportunities for personal and professional growth through a wide range of extracurricular activities, clubs, and events. We aim to cultivate well-rounded individuals, empowering students to explore their passions, collaborate with peers, and develop leadership skills. By organizing events that encourage networking, learning, and collaboration, OSA helps students navigate the challenges of law school while making lasting memories. Our mission is to support, guide, and enhance every student's holistic journey.
           </p>
         </div>
@@ -71,7 +71,7 @@ export default function StudentAffairsPage() {
               <span className="text-[#a31f34] font-bold text-[10px] uppercase tracking-widest">Resource Hub</span>
             </div>
             <h3 className="font-playfair text-3xl font-bold text-gray-900">Your Go-To Resource</h3>
-            <p className="font-inter text-gray-600 leading-relaxed text-sm md:text-base text-justify">
+            <p className="font-inter text-gray-600 leading-relaxed md:text-base text-justify">
               The Student Affairs Office is your go-to resource for guidance, support, and opportunities throughout your time at VMLS. Whether you need help adjusting to campus life, seeking personal or academic counseling, or looking to get involved in student activities, our doors are always open. We coordinate a variety of student clubs and events that cater to diverse interests, helping you build leadership skills, pursue your passions, and form lasting friendships.
             </p>
           </div>
@@ -101,11 +101,11 @@ export default function StudentAffairsPage() {
                   <p className="text-[#fbb03b] font-bold text-xs uppercase tracking-widest mb-6">Associate Dean - Student Affairs</p>
                   
                   <div className="space-y-3 w-full">
-                    <div className="flex items-center gap-3 text-sm text-white/80 hover:text-white transition-colors justify-center lg:justify-start">
+                    <div className="flex items-center gap-3 text-white/80 hover:text-white transition-colors justify-center lg:justify-start">
                       <svg className="w-4 h-4 text-[#fbb03b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                       studentaffairs@vmls.edu.in
                     </div>
-                    <div className="flex items-center gap-3 text-sm text-white/80 hover:text-white transition-colors justify-center lg:justify-start">
+                    <div className="flex items-center gap-3 text-white/80 hover:text-white transition-colors justify-center lg:justify-start">
                       <svg className="w-4 h-4 text-[#fbb03b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                       +91 7358201234
                     </div>
@@ -119,7 +119,7 @@ export default function StudentAffairsPage() {
                   <p className="font-inter text-base md:text-lg text-white/90 leading-relaxed italic">
                     "Dr. Shenbagavalli, Associate Dean of Student Affairs, VMLS works passionately to ensure every student feels at home at VMLS, balancing academic growth with personal well-being and extracurricular engagement."
                   </p>
-                  <p className="font-inter text-sm md:text-base text-white/70 leading-relaxed">
+                  <p className="font-inter md:text-base text-white/70 leading-relaxed">
                     With over 26 years of rich academic and professional experience, she brings a wealth of knowledge to support student development, fostering an environment where every individual is empowered to thrive both academically and socially.
                   </p>
                   <div className="pt-4 flex gap-4">
@@ -254,7 +254,7 @@ export default function StudentAffairsPage() {
                 <div className="absolute bottom-0 left-0 p-8 md:p-12 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <span className="inline-block px-3 py-1 bg-[#a31f34] text-[10px] font-bold uppercase tracking-widest mb-4">Featured</span>
                   <h3 className="font-playfair text-2xl md:text-4xl font-bold mb-2">Aarambh - The Freshers' Fiesta</h3>
-                  <p className="text-sm text-white/70 font-inter">Welcoming the new batch with infinite vibes and unforgettable experiences. Click to view highlights →</p>
+                  <p className="text-white/70 font-inter">Welcoming the new batch with infinite vibes and unforgettable experiences. Click to view highlights →</p>
                 </div>
               </div>
             </Link>
