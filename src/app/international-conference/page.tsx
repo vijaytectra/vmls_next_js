@@ -127,42 +127,88 @@ export default function InternationalConferencePage() {
         </section>
 
         {/* CPIL Section */}
-        <section className="pt-4 pb-2 px-[5%] bg-white">
+        <section className="pt-8 pb-8 px-[5%] bg-white">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-6">
-              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-3">
-                About Centre for the Promotion of International Law (CPIL)
+            <div className="text-center max-w-3xl mx-auto mb-10">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-8 h-[2px] bg-[#a31f34]"></div>
+                <span className="text-[#a31f34] uppercase tracking-[0.2em] text-xs font-bold">Research & Excellence</span>
+                <div className="w-8 h-[2px] bg-[#a31f34]"></div>
+              </div>
+              <h2 className="font-playfair text-3xl md:text-4xl text-gray-900 leading-tight">
+                About the Centre for the Promotion of International Law (CPIL)
               </h2>
-              <div className="w-16 h-1 bg-[#fbb03b] mx-auto"></div>
             </div>
 
             {/* CPIL Image */}
-            <div className="relative w-full aspect-[21/9] mb-8 overflow-hidden shadow-md border border-gray-100">
+            <div className="relative w-full aspect-[16/7] md:aspect-[21/9] mb-10 overflow-hidden rounded-2xl shadow-xl border border-gray-100/70 group">
               <Image
                 src="/images/collab/cpil.webp"
                 alt="CPIL at VMLS"
                 fill
                 sizes="100vw"
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                <p className="text-white font-inter text-sm md:text-base font-semibold">Commemorating academic milestones and active research at VMLS</p>
+              </div>
             </div>
 
             {/* CPIL Content Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-              <div className="space-y-4">
-                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
-                  The Centre for the Promotion of International Law is dedicated to promoting excellence in research and teaching of International Law, a field that has gained unprecedented significance in today's world. Additionally, the Centre operates an E-Journal, which features original work focusing on contemporary issues in International Law. 
-                </p>
-                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
-                  The intersection of international law, research, and policy is a critical intersection where legal principles, academic research, and governmental or organizational decision-making come together. The study of this convergence is particularly significant in the context of global governance, diplomacy, and addressing complex transnational issues.
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {/* Card 1: Promoting Excellence */}
+              <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col space-y-4 relative overflow-hidden group">
+                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#a31f34] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-xl text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="font-inter text-lg font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors">Research & Teaching Excellence</h3>
+                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                  The Centre is dedicated to promoting excellence in research and teaching of International Law, a field that has gained unprecedented significance in today's world. Additionally, the Centre operates an E-Journal, which features original work focusing on contemporary issues in International Law.
                 </p>
               </div>
-              <div className="space-y-4">
-                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
-                  The Centre fosters academic research in international relations, law, and related fields to contribute to the development and understanding of international law. CPIL works to promote the confluence of international law, research, and policy as being essential for addressing global issues, promoting cooperation among nations, and ensuring that international agreements and legal principles are effective in practice. 
+
+              {/* Card 2: Research & Policy Confluence */}
+              <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col space-y-4 relative overflow-hidden group">
+                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#a31f34] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-xl text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                  </svg>
+                </div>
+                <h3 className="font-inter text-lg font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors">Research & Policy Confluence</h3>
+                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                  The intersection of international law, research, and policy is a critical junction where legal principles, academic research, and organizational decision-making come together. The study of this convergence is key for global governance and diplomacy.
                 </p>
-                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
-                  The research at the Centre helps to identify gaps and challenges in existing legal frameworks, assess the effectiveness of international agreements, and propose innovative solutions. The Centre's recent work delves into teaching and researching international law, human rights, environmental protection, trade, and conflict resolution, providing valuable insights and analysis.
+              </div>
+
+              {/* Card 3: Academic Contribution */}
+              <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col space-y-4 relative overflow-hidden group">
+                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#a31f34] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-xl text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                </div>
+                <h3 className="font-inter text-lg font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors">Academic & Global Impact</h3>
+                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                  The Centre fosters academic research in international relations, law, and related fields to contribute to the understanding of international law, ensuring that international agreements and legal principles are effective in practice.
+                </p>
+              </div>
+
+              {/* Card 4: Contemporary Solutions */}
+              <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col space-y-4 relative overflow-hidden group">
+                <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#a31f34] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-xl text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="font-inter text-lg font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors">Addressing Contemporary Challenges</h3>
+                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                  Our research identifies gaps in existing frameworks, assesses agreement effectiveness, and proposes innovative solutions across human rights, environmental protection, trade, and conflict resolution.
                 </p>
               </div>
             </div>
