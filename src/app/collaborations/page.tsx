@@ -239,7 +239,7 @@ export default function CollaborationsPage() {
       </section>
 
       {/* Seattle University Section */}
-      <section className="py-8 px-[5%] bg-gray-50 mb-12">
+      <section className="py-8 px-[5%] bg-gray-50">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-12">
           {/* Image */}
           <div className="lg:w-1/2 w-full">
