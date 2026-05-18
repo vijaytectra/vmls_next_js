@@ -60,12 +60,12 @@ export default function MentoringExOfficio() {
 
               <div className="mt-6 flex flex-col h-full">
                 <div className="min-h-[40px] flex flex-col justify-end gap-2">
-                  <h3 className="font-playfair font-bold text-base leading-tight text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors duration-300">
+                  <h3 className=" font-semibold text-[19px] leading-tight text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors duration-300">
                     {member.name}
                   </h3>
                   <div className="w-8 h-[2px] bg-[#a31f34]/30 group-hover:w-12 group-hover:bg-[#a31f34] transition-all duration-500"></div>
                 </div>
-                <p className="mt-4 font-inter text-gray-500 text-[13px] md:text-sm leading-relaxed tracking-tight">
+                <p className="mt-4 font-inter text-gray-500 text-[15px] leading-relaxed tracking-tight">
                   {member.designation}
                 </p>
               </div>

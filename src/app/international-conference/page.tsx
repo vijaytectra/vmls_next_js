@@ -177,7 +177,7 @@ export default function InternationalConferencePage() {
                 Sub Themes
               </h2>
               <div className="w-16 h-1 bg-[#fbb03b] mx-auto mb-4"></div>
-              <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed max-w-5xl mx-auto text-justify">
+              <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-justify">
                 We welcome abstracts and full length quality research papers on the broad theme of Rivers. The below mentioned are few sub themes which may be considered. Please note that this is not an exhaustive list of topics. You are welcome to submit abstracts on any topic of your interest as long as it falls within an area of concern on River.
               </p>
             </div>
@@ -186,16 +186,16 @@ export default function InternationalConferencePage() {
             <div className="space-y-1">
               {/* Row 1 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
-                <div className="bg-[#800000] text-white p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm">
+                <div className="bg-[#800000] text-white p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm">
                   Historical Narratives and River Security
                 </div>
-                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm">
+                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm">
                   Transboundary River Governance
                 </div>
-                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm">
+                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm">
                   International Law and Emerging Challenges
                 </div>
-                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm">
+                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm">
                   Climate Resilience and River Resource Management
                 </div>
               </div>
@@ -224,7 +224,7 @@ export default function InternationalConferencePage() {
                   "Water Privatization and Public Rights",
                   "Implementing International Water Law at the Local Level"
                 ].map((theme, index) => (
-                  <div key={index} className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-semibold min-h-[60px] text-sm hover:bg-gray-400 transition-colors cursor-default">
+                  <div key={index} className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm hover:bg-gray-400 transition-colors cursor-default">
                     {theme}
                   </div>
                 ))}

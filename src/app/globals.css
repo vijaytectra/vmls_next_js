@@ -122,3 +122,10 @@ html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Prevent ugly large spacing gaps in justified text on mobile viewports */
+@media (max-width: 767px) {
+  .text-justify {
+    text-align: left !important;
+  }
+}
