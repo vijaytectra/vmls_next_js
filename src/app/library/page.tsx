@@ -104,7 +104,7 @@ export default function LibraryPage() {
 
                 <div className="p-6">
                   <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-black text-white border border-black md:bg-gray-50 md:text-gray-800 md:border-gray-100 rounded-none mb-4 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34]">
-                    <span className="font-inter font-bold text-xs uppercase tracking-widest">Access Main Portal</span>
+                    <span className="font-inter font-bold text-[13px] md:text-sm normal-case tracking-widest">Access Main Portal</span>
                     <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </Link>
 
@@ -143,13 +143,13 @@ export default function LibraryPage() {
                       <button
                         key={item.label}
                         onClick={(e) => { e.preventDefault(); setIsTurnitinModalOpen(true); }}
-                        className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md text-left"
+                        className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md text-left"
                       >
                         {item.label}
                         <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
                       </button>
                     ) : (
-                      <Link key={item.label} href={item.href} target={item.href !== '#' ? "_blank" : undefined} rel={item.href !== '#' ? "noopener noreferrer" : undefined} className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-xs font-bold uppercase tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md">
+                      <Link key={item.label} href={item.href} target={item.href !== '#' ? "_blank" : undefined} rel={item.href !== '#' ? "noopener noreferrer" : undefined} className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md">
                         {item.label}
                         <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
                       </Link>
@@ -173,13 +173,13 @@ export default function LibraryPage() {
                   <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-[#a31f34] rounded-full"></span> Membership
                   </h3>
-                  <Link href="/library-membership" className="block w-full py-3 bg-[#800000] text-white text-center text-xs font-bold uppercase tracking-widest hover:bg-[#a31f34] transition-all">Click Here</Link>
+                  <Link href="/library-membership" className="block w-full py-3 bg-[#800000] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#a31f34] transition-all">Click Here</Link>
                 </div>
                 <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
                   <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-[#4a5568] rounded-full"></span> User Feedback
                   </h3>
-                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeX88_HF7_aLVwV0P2RhGSG8Zq7kS8MLnoCiiCxFsZTybOv6w/viewform" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-[#4a5568] text-white text-center text-xs font-bold uppercase tracking-widest hover:bg-gray-800 transition-all">User Feedback Form</Link>
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeX88_HF7_aLVwV0P2RhGSG8Zq7kS8MLnoCiiCxFsZTybOv6w/viewform" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-[#4a5568] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-gray-800 transition-all">User Feedback Form</Link>
                 </div>
               </div>
             </div>
@@ -296,7 +296,7 @@ export default function LibraryPage() {
                   </div>
                   <h3 className="font-playfair text-2xl font-bold text-gray-900">Physical Collection</h3>
                 </div>
-                <Link href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 bg-[#4a5568] text-white rounded font-bold text-[15px] uppercase tracking-wider hover:bg-gray-800 transition-colors mb-4">
+                <Link href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 bg-[#4a5568] text-white rounded font-bold text-[16px] normal-case tracking-wider hover:bg-gray-800 transition-colors mb-4">
                   Physical Collection
                 </Link>
 
@@ -334,7 +334,7 @@ export default function LibraryPage() {
                     'Remote Access', 'Inter-Library Loan', 'Book Display', 'Thematic Display',
                     'Career Corner', 'Excellence Collection', 'Textbook Procurement', 'Newspaper Service', 'Reprography Service'
                   ].map((service) => {
-                    const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-[9px] font-bold uppercase text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
+                    const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-[11px] md:text-xs font-bold normal-case text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
                     
                     if (service === 'Reference Service') {
                       return (
@@ -534,7 +534,7 @@ export default function LibraryPage() {
                 </p>
               </div>
 
-              <Link href="/library-rules" className="group/btn relative px-10 py-5 bg-white text-[#800000] font-bold text-[12px] uppercase tracking-widest overflow-hidden transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.4)] flex items-center gap-3 shrink-0">
+              <Link href="/library-rules" className="group/btn relative px-10 py-5 bg-white text-[#800000] font-bold text-[14px] normal-case tracking-widest overflow-hidden transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.4)] flex items-center gap-3 shrink-0">
                 <span className="relative z-10">View Detailed Rules</span>
                 <span className="relative z-10 text-lg group-hover/btn:translate-x-1 transition-transform">→</span>
                 <div className="absolute inset-0 bg-gray-50 scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></div>
