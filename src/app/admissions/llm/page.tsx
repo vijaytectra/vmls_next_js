@@ -461,7 +461,7 @@ export default function LLMAdmissionsPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="pt-12 sm:pt-16 md:pt-20 pb-20 relative overflow-hidden bg-gray-50/50">
+      <section className="pt-8 sm:pt-10 md:pt-12 pb-20 relative overflow-hidden bg-gray-50/50">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
