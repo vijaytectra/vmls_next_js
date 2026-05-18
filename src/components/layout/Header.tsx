@@ -80,9 +80,9 @@ export default function Header() {
               <Image
                 src="/images/headerleft.webp"
                 alt="Vinayaka Mission's Research Foundation"
-                height={100}
-                width={250}
-                className="h-8 md:h-[51px] w-auto max-w-[140px] md:max-w-none object-contain"
+                height={180}
+                width={350}
+                className="h-15 md:h-[75px] w-auto max-w-[220px] md:max-w-none object-contain"
                 style={{ width: 'auto', height: 'auto' }}
                 priority
               />
