@@ -57,13 +57,23 @@ export default function CampusLifePage() {
             {/* 1. Featured: Classroom (Large) */}
             <Link 
               href="/infrastructure" 
-              className="md:col-span-2 lg:col-span-3 lg:row-span-2 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl"
+              className="md:col-span-2 lg:col-span-3 lg:row-span-2 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[400px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 <source src="/videos/class.mp4" type="video/mp4" />
               </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+              
+              {/* Mobile View: Common Frosted Glass Card Design */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 md:hidden"></div>
+              <div className="absolute inset-0 p-6 flex flex-col justify-end md:hidden">
+                <div className="backdrop-blur-md bg-white/10 p-4 rounded-2xl border border-white/20 transform transition-transform duration-500 group-hover:-translate-y-2">
+                  <h3 className="font-playfair text-lg md:text-xl text-white font-medium">Modern Classrooms</h3>
+                </div>
+              </div>
+
+              {/* Desktop View: Original Layout */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-8 md:p-12">
                 <span className="inline-block px-4 py-1 bg-[#a31f34] text-white text-[10px] font-bold uppercase tracking-wider mb-4 rounded-full">Featured</span>
                 <h3 className="font-playfair text-3xl md:text-5xl text-white mb-6">Modern Classrooms</h3>
                 <div className="flex items-center gap-4 text-white font-inter text-xs font-bold uppercase tracking-[0.2em] group-hover:gap-6 transition-all">
@@ -76,13 +86,23 @@ export default function CampusLifePage() {
             {/* 2. Atrium (Medium) */}
             <Link 
               href="/atrium" 
-              className="md:col-span-2 lg:col-span-3 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl"
+              className="md:col-span-2 lg:col-span-3 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[350px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 <source src="/videos/atrium.mp4" type="video/mp4" />
               </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8">
+              
+              {/* Mobile View: Common Frosted Glass Card Design */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 md:hidden"></div>
+              <div className="absolute inset-0 p-6 flex flex-col justify-end md:hidden">
+                <div className="backdrop-blur-md bg-white/10 p-4 rounded-2xl border border-white/20 transform transition-transform duration-500 group-hover:-translate-y-2">
+                  <h3 className="font-playfair text-lg md:text-xl text-white font-medium">Vibrant Atrium</h3>
+                </div>
+              </div>
+
+              {/* Desktop View: Original Layout */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-8">
                 <h3 className="font-playfair text-2xl md:text-3xl text-white mb-3">Vibrant Atrium</h3>
                 <p className="text-white/70 text-sm mb-4 max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
                   A central hub for interaction and collaborative learning.
@@ -97,13 +117,23 @@ export default function CampusLifePage() {
             {/* 3. Main Building (Medium) */}
             <Link 
               href="/main-building" 
-              className="md:col-span-2 lg:col-span-3 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl"
+              className="md:col-span-2 lg:col-span-3 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[350px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 <source src="/videos/corridor.mp4" type="video/mp4" />
               </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-8">
+              
+              {/* Mobile View: Common Frosted Glass Card Design */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 md:hidden"></div>
+              <div className="absolute inset-0 p-6 flex flex-col justify-end md:hidden">
+                <div className="backdrop-blur-md bg-white/10 p-4 rounded-2xl border border-white/20 transform transition-transform duration-500 group-hover:-translate-y-2">
+                  <h3 className="font-playfair text-lg md:text-xl text-white font-medium">Academic Block</h3>
+                </div>
+              </div>
+
+              {/* Desktop View: Original Layout */}
+              <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+              <div className="hidden md:block absolute bottom-0 left-0 right-0 p-8">
                 <h3 className="font-playfair text-2xl md:text-3xl text-white mb-3">Academic Block</h3>
                 <p className="text-white/70 text-sm mb-4 max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
                   Modern architecture meeting functional academic needs.
