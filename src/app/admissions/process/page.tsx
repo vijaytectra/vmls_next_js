@@ -92,7 +92,7 @@ export default function AdmissionProcessPage() {
               
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Eligibility:</h3>
-                <ul className="space-y-3 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-3 font-inter text-gray-700 list-disc pl-5">
                   <li>A pass in 10+2/Intermediate or equivalent examination. (Candidates appearing for April-May 2025 Examinations can also apply.)</li>
                   <li>Not less than 45% marks for General Category, 42% for OBC and 40% for SC/ST.</li>
                 </ul>
@@ -100,7 +100,7 @@ export default function AdmissionProcessPage() {
 
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Admission Criteria:</h3>
-                <ul className="space-y-2 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-2 font-inter text-gray-700 list-disc pl-5">
                   <li>VLAT 5 Score*</li>
                   <li>10+2 (or equivalent) marks</li>
                 </ul>
@@ -124,7 +124,7 @@ export default function AdmissionProcessPage() {
               
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Eligibility:</h3>
-                <ul className="space-y-3 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-3 font-inter text-gray-700 list-disc pl-5">
                   <li>Bachelor's degree in any stream from a University or an equivalent Institution recognized as deemed to be University or from a foreign University declared as equivalent to an Indian degree by a competent authority (Candidates who expect to graduate in June 2025 may also apply).</li>
                   <li>Not less than 45% marks for General Category, 42% for OBC and 40% for SC/ST.</li>
                 </ul>
@@ -132,7 +132,7 @@ export default function AdmissionProcessPage() {
 
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Admission Criteria:</h3>
-                <ul className="space-y-2 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-2 font-inter text-gray-700 list-disc pl-5">
                   <li>VLAT 3 Score*</li>
                   <li>Bachelor's Degree marks.</li>
                 </ul>
@@ -156,14 +156,14 @@ export default function AdmissionProcessPage() {
               
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Eligibility:</h3>
-                <ul className="space-y-3 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-3 font-inter text-gray-700 list-disc pl-5">
                   <li>Bachelor's degree in Law (LL.B.) from a University or an equivalent Institution recognized as deemed to be University or from a foreign University declared as equivalent to an Indian degree by a competent authority.</li>
                 </ul>
               </div>
 
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Admission Criteria:</h3>
-                <ul className="space-y-2 font-inter text-sm text-gray-700 list-disc pl-5">
+                <ul className="space-y-2 font-inter text-gray-700 list-disc pl-5">
                   <li>VLAT Score</li>
                   <li>Interview round after VLAT</li>
                 </ul>
