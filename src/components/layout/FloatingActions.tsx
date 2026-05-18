@@ -1,94 +1,90 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
+const NPF_WIDGET_ID = "87feca6bc65be091ed018757c6c58029";
+
 export default function FloatingActions() {
-  const [showScroll, setShowScroll] = useState(false);
-
   useEffect(() => {
-    const handleScroll = () => {
-      setShowScroll(window.scrollY > 300);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // 1. Load NPF Widget script for Enquiry Popup after 3s delay to prioritize main content
-    const timer = setTimeout(() => {
-      const script = document.createElement("script");
-      script.src = "https://in8cdn.npfs.co/js/widget/npfwpopup.js";
-      script.async = true;
-      script.onload = () => {
-        if ((window as any).NpfWidgetsInit) {
-          new (window as any).NpfWidgetsInit({
-            widgetId: "87feca6bc65be091ed018757c6c58029",
-            baseurl: "widgets.in8.nopaperforms.com",
-            formTitle: "Enquiry Form",
-            titleColor: "#FF0033",
-            autoPopup: false,
-          });
-        }
+    const script = document.createElement("script");
+    script.src = "https://in8cdn.npfs.co/js/widget/npfwpopup.js";
+    script.async = true;
+    script.onload = () => {
+      const win = window as Window & {
+        NpfWidgetsInit?: new (config: Record<string, string>) => void;
       };
-      document.body.appendChild(script);
-      (window as any).npfScript = script;
-    }, 3000);
+      if (win.NpfWidgetsInit) {
+        new win.NpfWidgetsInit({
+          widgetId: NPF_WIDGET_ID,
+          baseurl: "widgets.in8.nopaperforms.com",
+          formTitle: "Enquiry Form",
+          titleColor: "#FF0033",
+          backgroundColor: "#ddd",
+          iframeHeight: "500px",
+          buttonbgColor: "#4c79dc",
+          buttonTextColor: "#FFF",
+        });
+      }
+    };
+    document.body.appendChild(script);
+
+    const vmlsWidgetScript = document.createElement("script");
+    vmlsWidgetScript.src =
+      "https://universitywidgets.blob.core.windows.net/widgetstore/vmls-widget.js";
+    vmlsWidgetScript.async = true;
+    document.body.appendChild(vmlsWidgetScript);
+
+    const chatbotTimer = setTimeout(() => {
+      const chatDiv = document.createElement("div");
+      chatDiv.className = "npf_chatbots";
+      chatDiv.setAttribute("data-w", "1189388fc18c4ac0952bc3816b615524");
+      chatDiv.style.display = "none";
+      document.body.appendChild(chatDiv);
+
+      const chatbotScript = document.createElement("script");
+      chatbotScript.type = "text/javascript";
+      chatbotScript.async = true;
+      chatbotScript.src =
+        "https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/5747642c1669bd257/1189388fc18c4ac0952bc3816b615524";
+      document.body.appendChild(chatbotScript);
+    }, 5000);
 
     return () => {
-      clearTimeout(timer);
-      const script = (window as any).npfScript;
-      if (script && document.body.contains(script)) document.body.removeChild(script);
-      window.removeEventListener("scroll", handleScroll);
+      if (document.body.contains(script)) document.body.removeChild(script);
+      if (document.body.contains(vmlsWidgetScript))
+        document.body.removeChild(vmlsWidgetScript);
+      clearTimeout(chatbotTimer);
     };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <>
-      {/* Left Side Sticky Button: Chat with Student */}
-      <div 
-        className="fixed left-0 top-1/2 z-[2000]"
-        style={{ transform: 'translate3d(0, -50%, 0)' }}
-      >
+      {/* Left: Chat with Student — vertical edge tab */}
+      <div className="fixed left-0 top-1/2 z-[2000] -translate-y-1/2">
         <Link
           href="/chat-with-student"
-          className="block text-[10px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-2 md:px-7 rounded-none shadow-xl hover:bg-[#a31f34] transition-all duration-300"
-          style={{
-            writingMode: 'vertical-rl',
-            textOrientation: 'mixed',
-          }}
+          className="vertical-edge-btn vertical-edge-btn--chat font-inter"
         >
           Chat with a Student
         </Link>
       </div>
 
-      {/* Right Side Sticky Buttons */}
-      <div 
-        className="fixed right-0 top-1/2 z-[2000] flex flex-col gap-4"
-        style={{ transform: 'translate3d(0, -50%, 0)' }}
-      >
+      {/* Right: Apply & Enquire — stacked vertical tabs with glow */}
+      <div className="fixed right-0 top-1/2 z-[2000] flex -translate-y-1/2 flex-col gap-1">
         <Link
           href="https://admissions.vmls.edu.in/"
           target="_blank"
-          className="block text-[10px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-2 md:px-7 rounded-none shadow-xl hover:bg-[#a31f34] transition-all duration-300"
-          style={{
-            writingMode: 'vertical-rl',
-            textOrientation: 'mixed',
-            transform: 'rotate(180deg)',
-          }}
+          rel="noopener noreferrer"
+          className="vertical-edge-btn vertical-edge-btn--apply font-inter"
         >
           Apply Now!
         </Link>
 
         <span
-          className="npfWidgetButton npfWidget-87feca6bc65be091ed018757c6c58029 block text-[10px] md:text-[12px] font-inter font-bold tracking-widest uppercase bg-[#800000] text-white py-2 md:py-3 px-2 md:px-7 rounded-none shadow-xl cursor-pointer hover:bg-[#a31f34] transition-all duration-300"
-          style={{
-            writingMode: 'vertical-rl',
-            textOrientation: 'mixed',
-            transform: 'rotate(180deg)',
-          }}
+          className={`vertical-edge-btn vertical-edge-btn--enquire npfWidgetButton npfWidget-${NPF_WIDGET_ID} font-inter`}
+          role="button"
+          tabIndex={0}
         >
           Enquire Now!
         </span>
@@ -99,24 +95,37 @@ export default function FloatingActions() {
         href="https://wa.me/917358201234"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 left-5 md:bottom-8 md:left-8 w-12 h-12 md:w-14 md:h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-2xl shadow-2xl z-[9999] hover:scale-110 active:scale-95 transition-all duration-300"
+        aria-label="Chat on WhatsApp"
+        className="fixed bottom-6 left-6 z-[2000] flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_6px_16px_rgba(0,0,0,0.3)] transition-transform duration-300 hover:scale-110"
       >
-        <svg viewBox="0 0 448 512" width="24" height="24" fill="currentColor">
-          <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.7 18.2 69.5 27.8 106.2 27.8 122.4 0 222-99.6 222-222 0-59.3-23.1-115.1-65-157.1zM223.9 445.2c-33.1 0-65.5-8.9-93.6-25.7l-6.7-4-69.6 18.3 18.7-67.9-4.4-7c-18.4-29.4-28.1-63.3-28.1-98.2 0-101.7 82.7-184.4 184.4-184.4 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 54 81.1 54 130.4 0 101.7-82.7 184.4-184.4 184.4zm101.7-138.8c-5.6-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12.1 1.4-5.6-2.8-23.6-8.7-44.9-27.7-16.6-14.8-27.8-33.1-31.1-38.6-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.6-6.5 8.4-9.8 2.8-3.3 3.7-5.6 5.6-9.3 1.9-3.7.9-6.9-.5-9.8-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.7 9.1 31.7 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        <svg className="h-9 w-9" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
         </svg>
       </a>
 
-      {/* Bottom Right: Scroll to Top */}
-      {showScroll && (
+      {/* Bottom Right: Scroll to top */}
+      <div className="fixed bottom-6 right-6 z-[2000]">
         <button
-          onClick={scrollToTop}
-          className="fixed bottom-5 right-5 md:bottom-8 md:right-8 w-11 h-11 md:w-13 md:h-13 bg-[#a31f34] text-white rounded-full flex items-center justify-center shadow-2xl z-[9999] hover:bg-[#800000] hover:-translate-y-1 active:scale-95 transition-all duration-300"
+          type="button"
+          aria-label="Scroll to top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border-none bg-[#ae0808] text-white shadow-[0_6px_16px_rgba(0,0,0,0.25)] transition-transform duration-300 hover:-translate-y-1"
         >
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="18 15 12 9 6 15"></polyline>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden
+          >
+            <polyline points="18 15 12 9 6 15" />
           </svg>
         </button>
-      )}
+      </div>
     </>
   );
 }
