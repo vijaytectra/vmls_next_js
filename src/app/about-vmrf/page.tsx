@@ -76,7 +76,7 @@ export default function AboutVMRF() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 max-w-5xl mx-auto">
             {/* Founder */}
-            <div className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full">
+            <Link href="/founder" className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full block">
               <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image 
@@ -89,13 +89,13 @@ export default function AboutVMRF() {
                 </div>
               </div>
               <div className="pt-6 text-center px-2">
-                <h3 className="font-inter font-bold text-xl text-[#1a1a1a] mb-1 leading-tight">Dr. A. Shanmugasundaram</h3>
+                <h3 className="font-inter font-bold text-xl text-[#1a1a1a] mb-1 leading-tight group-hover:text-[#a31f34] transition-colors">Dr. A. Shanmugasundaram</h3>
                 <p className="text-[#a31f34] uppercase tracking-widest text-xs font-bold">Founder</p>
               </div>
-            </div>
+            </Link>
 
             {/* Chancellor */}
-            <div className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full">
+            <Link href="/chancellor" className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full block">
               <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image 
@@ -108,10 +108,10 @@ export default function AboutVMRF() {
                 </div>
               </div>
               <div className="pt-6 text-center px-2">
-                <h3 className="font-inter font-bold text-xl text-[#1a1a1a] mb-1 leading-tight">Dr. A.S. Ganesan</h3>
+                <h3 className="font-inter font-bold text-xl text-[#1a1a1a] mb-1 leading-tight group-hover:text-[#a31f34] transition-colors">Dr. A.S. Ganesan</h3>
                 <p className="text-[#a31f34] uppercase tracking-widest text-xs font-bold">Chancellor</p>
               </div>
-            </div>
+            </Link>
 
             {/* Vice President */}
             <div className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full">
