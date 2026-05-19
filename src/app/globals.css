@@ -246,3 +246,13 @@ html {
   hyphens: auto;
   word-break: break-word;
 }
+
+/* Ensure NoPaperForms Chatbot bubble text is strictly black on mobile screens */
+@media (max-width: 768px) {
+  .indicator,
+  .indicator *,
+  #eeChatIndicator,
+  #eeChatIndicator * {
+    color: #000000 !important;
+  }
+}
