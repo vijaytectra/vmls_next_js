@@ -256,3 +256,32 @@ html {
     color: #000000 !important;
   }
 }
+
+/* Global Premium Justification for all standard content copy paragraphs across the site */
+main section p:not(.text-center):not(.text-left):not(.text-right) {
+  text-align: justify !important;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+}
+
+/* Preserving explicit layout alignments for centered/left/right containers and cards */
+.text-center > p,
+.text-center > * > p,
+.text-center > * > * > p {
+  text-align: center !important;
+}
+
+.text-left > p,
+.text-left > * > p,
+.text-left > * > * > p {
+  text-align: left !important;
+}
+
+.text-right > p,
+.text-right > * > p,
+.text-right > * > * > p {
+  text-align: right !important;
+}
