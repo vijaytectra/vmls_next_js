@@ -66,11 +66,11 @@ export default function AboutSection() {
             </div>
             
             <div className="space-y-6">
-              <p className="font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium border-l-4 border-[#a31f34] pl-6 italic text-justify">
+              <p className="font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium border-l-4 border-[#a31f34] pl-6 italic gapless-justify">
                 Vinayaka Mission's Research Foundation (VMRF) is an innovative and pioneering University that offers a multi-disciplinary learning experience.
               </p>
 
-              <p className="font-inter text-base md:text-lg text-gray-600 leading-relaxed text-justify">
+              <p className="font-inter text-base md:text-lg text-gray-600 leading-relaxed gapless-justify">
                 With the founding vision of creating the law school of the future, VMLS admitted its first cohort of students in 2021. Mentorship from India's finest law school, Jindal Global Law School, and a committed team of full-time faculty members, many of whom are trained in globally renowned institutions, have resulted in pedagogic innovations at VMLS that make it a frontrunner in equipping learners with the skills, knowledge, exposure, and specializations required for professional success in the Artificial Intelligence age.
               </p>
             </div>
