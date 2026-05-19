@@ -80,7 +80,7 @@ export default function CPILPage() {
               <div className="inline-block px-4 py-1.5 bg-[#800000]/10 rounded-none">
                 <span className="text-[#800000] font-bold text-[10px] uppercase tracking-widest">Introduction</span>
               </div>
-              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg">
+              <div className="font-inter text-gray-700 leading-relaxed gapless-justify space-y-4 text-base md:text-lg">
                 <p>
                   The Centre for the Promotion of International Law at Vinayaka Mission's Law School (VMLS) embodies a vision for the future of international law, particularly in the context of developing countries such as India. The Centre aspires to be a beacon of knowledge and collaboration, to help shape the landscape of international law and foster inclusivity and diversity.
                 </p>
@@ -135,7 +135,7 @@ export default function CPILPage() {
                 </h2>
               </div>
 
-              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
+              <div className="font-inter text-gray-700 leading-relaxed gapless-justify space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
                 <p>
                   The Centre aims to address contemporary concerns, supporting the development of international law, particularly in the context of India. We foster international collaboration by connecting experts from different corners of the globe, creating a global community that thrives on cooperation.
                 </p>

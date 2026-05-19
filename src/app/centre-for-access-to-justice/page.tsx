@@ -82,7 +82,7 @@ export default function CentreForAccessToJusticePage() {
               <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
                 Empowering Communities Through <span className="text-[#800000] italic">Legal Literacy</span>
               </h2>
-              <p className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg">
+              <p className="font-inter text-gray-700 leading-relaxed gapless-justify text-base md:text-lg">
                 The Centre for Access to Justice (CAJ) at VMLS serves as a vital link between the legal profession and the community. By combining academic rigor with practical outreach, we strive to demystify the law and make justice a reality for the marginalized.
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function CentreForAccessToJusticePage() {
                 </div>
                 <h3 className="font-playfair text-2xl font-bold text-gray-900">Our Vision</h3>
               </div>
-              <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg">
+              <p className="font-inter text-gray-700 leading-relaxed gapless-justify text-base md:text-lg">
                 To build a just society where every person irrespective of socio-economic status can understand, claim, and enforce legal rights with dignity and timely support.
               </p>
             </div>
@@ -287,7 +287,7 @@ export default function CentreForAccessToJusticePage() {
               <div className="inline-block px-4 py-1.5 bg-[#800000]/10 rounded-full">
                 <span className="text-[#800000] font-bold text-[10px] uppercase tracking-widest">Ethics and Safeguards</span>
               </div>
-              <p className="font-inter text-gray-700 text-base md:text-lg leading-relaxed italic">
+              <p className="font-inter text-gray-700 text-base md:text-lg leading-relaxed italic gapless-justify">
                 \"All services follow confidentiality norms, conflict checks, and faculty supervision; CAJ does not provide courtroom representation but facilitates appropriate referrals and lawful remedies.\"
               </p>
             </div>

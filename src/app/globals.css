@@ -225,8 +225,9 @@ html {
   }
 }
 
-/* Enforce premium, high-density justified layout for blog articles without large word gaps on mobile */
-.blog-content-container {
+/* Enforce premium, high-density justified layout for blog articles and institutional pages without large word gaps on mobile */
+.blog-content-container,
+.gapless-justify {
   text-align: justify !important;
   text-justify: inter-character;
   -webkit-hyphens: auto;
