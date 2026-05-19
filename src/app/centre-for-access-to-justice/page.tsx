@@ -213,15 +213,48 @@ export default function CentreForAccessToJusticePage() {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] text-center mb-12">Focus Areas</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { title: "Women & Child Rights", sub: "Domestic violence and maintenance", icon: "♀" },
-                { title: "Labor & Livelihood", sub: "Street vendors, social security", icon: "⚖" },
-                { title: "Citizenship & Identity", sub: "Access to ration, pensions, schemes", icon: "🆔" },
-                { title: "Digital Safety", sub: "Cybercrime reporting, privacy", icon: "🛡" }
+                {
+                  title: "Women & Child Rights",
+                  sub: "Domestic violence and maintenance",
+                  icon: (
+                    <svg className="w-10 h-10 transition-colors duration-500 text-[#800000] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 4a5 5 0 100 10 5 5 0 000-10zm0 10v6m-3-3h6" />
+                    </svg>
+                  )
+                },
+                {
+                  title: "Labor & Livelihood",
+                  sub: "Street vendors, social security",
+                  icon: (
+                    <svg className="w-10 h-10 transition-colors duration-500 text-[#800000] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 3v18M5 8.5l7-3 7 3M5 8.5L3 16h4L5 8.5zm14 0l-2 7.5h4l-2-7.5zM12 21h4m-8 0h4" />
+                    </svg>
+                  )
+                },
+                {
+                  title: "Citizenship & Identity",
+                  sub: "Access to ration, pensions, schemes",
+                  icon: (
+                    <svg className="w-10 h-10 transition-colors duration-500 text-[#800000] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M15 7a2 2 0 11-4 0 2 2 0 014 0zM12 14a4 4 0 00-4 4h8a4 4 0 00-4-4z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M5 3a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2H5z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: "Digital Safety",
+                  sub: "Cybercrime reporting, privacy",
+                  icon: (
+                    <svg className="w-10 h-10 transition-colors duration-500 text-[#800000] group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  )
+                }
               ].map((area, i) => (
                 <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm text-center group hover:bg-[#800000] transition-all duration-500">
-                  <div className="text-4xl mb-4 group-hover:scale-125 transition-transform duration-500 inline-block">{area.icon}</div>
-                  <h4 className="font-playfair text-xl font-bold mb-2 group-hover:text-white transition-colors">{area.title}</h4>
-                  <p className="font-inter text-sm text-gray-500 group-hover:text-white/80 transition-colors">{area.sub}</p>
+                  <div className="mb-4 group-hover:scale-110 transition-transform duration-500 flex justify-center">{area.icon}</div>
+                  <h4 className="font-playfair text-xl font-bold mb-2 text-black sm:text-gray-900 group-hover:text-white transition-colors">{area.title}</h4>
+                  <p className="font-inter text-sm text-black sm:text-gray-500 group-hover:text-white/80 transition-colors">{area.sub}</p>
                 </div>
               ))}
             </div>
