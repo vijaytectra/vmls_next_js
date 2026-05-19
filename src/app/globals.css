@@ -218,10 +218,16 @@ html {
   scrollbar-width: none;  /* Firefox */
 }
 
-/* Prevent ugly large spacing gaps in justified text on mobile viewports */
+/* Prevent ugly large spacing gaps in justified text on mobile viewports while keeping it beautifully aligned */
 @media (max-width: 767px) {
   .text-justify {
-    text-align: left !important;
+    text-align: justify !important;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-break: break-word;
   }
 }
 
