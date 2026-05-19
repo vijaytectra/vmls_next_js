@@ -236,3 +236,13 @@ html {
   hyphens: auto;
   word-break: break-word;
 }
+
+/* Custom premium justification for Tamil (and other Brahmic scripts) to prevent letter-spacing disintegration */
+.gapless-justify-tamil {
+  text-align: justify !important;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+}
