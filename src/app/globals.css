@@ -224,3 +224,14 @@ html {
     text-align: left !important;
   }
 }
+
+/* Enforce premium, high-density justified layout for blog articles without large word gaps on mobile */
+.blog-content-container {
+  text-align: justify !important;
+  text-justify: inter-character;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+}

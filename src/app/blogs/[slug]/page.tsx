@@ -2716,7 +2716,7 @@ export default function BlogPost() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 text-lg leading-relaxed space-y-6 text-left md:text-justify">
+            <div className="font-inter text-gray-700 text-lg leading-relaxed space-y-6 blog-content-container">
               {post.content}
             </div>
           </article>
