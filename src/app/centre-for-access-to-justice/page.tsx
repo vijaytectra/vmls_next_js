@@ -147,11 +147,11 @@ export default function CentreForAccessToJusticePage() {
       </section>
 
       {/* Core Pillars Section */}
-      <section className="py-6 md:py-8 px-[5%] bg-white relative overflow-hidden">
+      <section className="py-4 md:py-6 px-[5%] bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-4">Core Pillars</h2>
-            <div className="w-20 h-1 bg-[#800000] mx-auto"></div>
+          <div className="text-center mb-8">
+            <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3">Core Pillars</h2>
+            <div className="w-16 h-1 bg-[#800000] mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
