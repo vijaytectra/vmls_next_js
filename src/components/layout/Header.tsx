@@ -152,6 +152,7 @@ export default function Header() {
                     {item.href ? (
                       <Link
                         href={item.href}
+                        prefetch={false}
                         className="text-lg font-inter font-semibold text-gray-800 group-hover:text-[#a31f34] transition-colors w-full"
                       >
                         {item.name}
@@ -177,6 +178,7 @@ export default function Header() {
                         <Link
                           key={sIndex}
                           href={sub.href}
+                          prefetch={false}
                           onClick={(e) => {
                             if (sub.href !== "#") {
                               setIsMenuOpen(false);

@@ -69,7 +69,7 @@ export default function MaritimeLawPage() {
               <div className="inline-block px-4 py-1.5 bg-[#800000]/10 rounded-none">
                 <span className="text-[#800000] font-bold text-[10px] uppercase tracking-widest">Introduction</span>
               </div>
-              <div className="font-inter text-gray-700 leading-relaxed text-justify space-y-4 text-lg md:text-xl">
+              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg">
                 <p>
                   The world's trade heavily relies on sea routes, facilitating 90% of global commerce. Maritime Law is a specialized legal field encompassing navigation, commercial shipping, marine resource exploration, environmental regulations, and maritime security.
                 </p>
@@ -124,7 +124,7 @@ export default function MaritimeLawPage() {
                 </h2>
               </div>
 
-              <div className="font-inter text-gray-700 leading-relaxed text-justify space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
+              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
                 <p>
                   CML focuses on contemporary issues like cryptocurrency payments in shipping and automated unmanned ships. Strategically located in Chennai, a major hub hub with a rich 150-year history of admiralty practice, the Centre promotes research and policy-making.
                 </p>

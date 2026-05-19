@@ -82,7 +82,7 @@ const blogPosts = [
     slug: "lack-of-clinical-legal-education-in-india"
   },
   {
-    title: "LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights",
+    title: "LLM in Artificial Intelligence, Emerging Technologies and Intellectual Property Rights",
     date: "June 27, 2025",
     image: "/images/blogs/34.webp",
     slug: "llm-in-artificial-intelligence-emerging-technologies-and-intellectual-property-rights"
@@ -94,7 +94,7 @@ const blogPosts = [
     slug: "llm-in-criminal-law-and-practice"
   },
   {
-    title: "What is an LL.M.? Full Form, Programme, Course Duration, Admission 2025",
+    title: "What is an LLM? Full Form, Programme, Course Duration, Admission 2025",
     date: "June 26, 2025",
     image: "/images/blogs/ll.m-full-form.webp",
     slug: "what-is-llm-master-of-law-degree"
@@ -310,13 +310,13 @@ const blogPosts = [
     slug: "clat-exam-importance-eligibility-criteria-syllabus"
   },
   {
-    title: "LL.B. Degree: Your Gateway to a Legal Career",
+    title: "LLB Degree: Your Gateway to a Legal Career",
     date: "December 05, 2024",
     image: "/images/blogs/llb-degree.webp",
     slug: "llb-degree-your-gateway-to-a-legal-career"
   },
   {
-    title: "LL.B. Course: Curriculum and Opportunities",
+    title: "LLB Course: Curriculum and Opportunities",
     date: "December 01, 2024",
     image: "/images/blogs/llb.webp",
     slug: "explore-diverse-career-opportunities-in-law-in-india-roles-necessary-skills-and-top-employers"

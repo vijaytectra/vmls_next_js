@@ -69,7 +69,7 @@ export default function CentreForJusticeThroughTechnologyPage() {
               <div className="inline-block px-4 py-1.5 bg-[#800000]/10 rounded-none">
                 <span className="text-[#800000] font-bold text-[10px] uppercase tracking-widest">Introduction</span>
               </div>
-              <div className="font-inter text-gray-700 leading-relaxed text-justify space-y-4 text-lg md:text-xl">
+              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg">
                 <p>
                   The Centre for Justice Through Technology (CJTT) at Vinayaka Mission's Law School (VMLS) is a pioneering initiative dedicated to exploring and implementing technological solutions in the legal system.
                 </p>
@@ -124,7 +124,7 @@ export default function CentreForJusticeThroughTechnologyPage() {
                 </h2>
               </div>
 
-              <div className="font-inter text-gray-700 leading-relaxed text-justify space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
+              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
                 <p>
                   Our mission is to lead the way in legal tech research, providing a platform for students, researchers, and legal professionals to collaborate on projects that utilize AI, blockchain, and other emerging technologies.
                 </p>

@@ -162,7 +162,7 @@ export default function Footer() {
                   { name: "Women Empowerment Cell", href: "/women-empowerment-cell" }
                 ].map((item, i) => (
                   <li key={i}>
-                    <Link href={item.href} className="hover:text-[#a31f34] flex items-center gap-3 group">
+                    <Link href={item.href} prefetch={false} className="hover:text-[#a31f34] flex items-center gap-3 group">
                       <span className="w-1.5 h-1.5 bg-gray-300 rounded-full group-hover:bg-[#a31f34]"></span>
                       {item.name}
                     </Link>
@@ -177,11 +177,11 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-4 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 text-center">
           <div className="flex flex-col md:flex-row items-center gap-x-8 gap-y-2 md:gap-y-4 text-[10px] md:text-sm font-medium uppercase tracking-widest text-[#666]">
-            <Link href="/iqac" className="hover:text-[#a31f34] transition-colors">IQAC</Link>
+            <Link href="/iqac" prefetch={false} className="hover:text-[#a31f34] transition-colors">IQAC</Link>
             <span className="text-gray-300 hidden md:block">|</span>
-            <Link href="/privacy-policy" className="hover:text-[#a31f34] transition-colors">Privacy Policy</Link>
+            <Link href="/privacy-policy" prefetch={false} className="hover:text-[#a31f34] transition-colors">Privacy Policy</Link>
             <span className="text-gray-300 hidden md:block">|</span>
-            <Link href="/terms-conditions" className="hover:text-[#a31f34] transition-colors">Terms and Conditions</Link>
+            <Link href="/terms-conditions" prefetch={false} className="hover:text-[#a31f34] transition-colors">Terms and Conditions</Link>
           </div>
           <p className="text-[10px] md:text-sm font-medium text-gray-400 tracking-widest">
             COPYRIGHT © 2026 VMLS

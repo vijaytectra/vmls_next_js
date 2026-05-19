@@ -25,7 +25,7 @@ export default function CPILPage() {
       <section className="relative w-full bg-white border-b border-gray-100 overflow-hidden">
         <div className="flex flex-col lg:flex-row min-h-[350px]">
           <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white relative z-10">
-            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Centre for the Promotion <br /><span className="text-[#fbb03b]">of International Law</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
@@ -69,7 +69,7 @@ export default function CPILPage() {
               <div className="inline-block px-4 py-1.5 bg-[#800000]/10 rounded-none">
                 <span className="text-[#800000] font-bold text-[10px] uppercase tracking-widest">Introduction</span>
               </div>
-              <div className="font-inter text-gray-700 leading-relaxed text-justify space-y-4 text-lg md:text-xl">
+              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg">
                 <p>
                   The Centre for the Promotion of International Law at Vinayaka Mission's Law School (VMLS) embodies a vision for the future of international law, particularly in the context of developing countries such as India. The Centre aspires to be a beacon of knowledge and collaboration, to help shape the landscape of international law and foster inclusivity and diversity.
                 </p>
@@ -124,7 +124,7 @@ export default function CPILPage() {
                 </h2>
               </div>
 
-              <div className="font-inter text-gray-700 leading-relaxed text-justify space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
+              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
                 <p>
                   The Centre aims to address contemporary concerns, supporting the development of international law, particularly in the context of India. We foster international collaboration by connecting experts from different corners of the globe, creating a global community that thrives on cooperation.
                 </p>

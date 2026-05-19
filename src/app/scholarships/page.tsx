@@ -66,6 +66,7 @@ export default function ScholarshipsPage() {
             src="/images/scholorship-bg.webp"
             alt="Scholarships at VMLS"
             fill
+            sizes="100vw"
             className="object-cover object-center brightness-125"
             priority
           />
@@ -109,6 +110,7 @@ export default function ScholarshipsPage() {
                   src="/images/schlorship/01.webp"
                   alt="140 Scholarships Infographic"
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-contain"
                 />
               </div>
@@ -120,6 +122,7 @@ export default function ScholarshipsPage() {
                 src="/images/schlorship/02.webp"
                 alt="Academic Excellence"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>

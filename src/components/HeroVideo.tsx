@@ -3,15 +3,28 @@ import Image from "next/image";
 export default function HeroVideo() {
   return (
     <section className="relative w-full h-[85vh] min-h-[600px] md:h-[85vh] overflow-hidden flex flex-col justify-end text-white font-sans">
+      {/* Desktop Background Video */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        preload="none"
-        className="absolute top-0 left-0 w-full sm:h-[82vh] md:h-[100vh] h-[85vh] object-cover -z-10"
+        preload="auto"
+        className="hidden md:block absolute top-0 left-0 w-full md:h-[100vh] object-cover -z-10"
       >
         <source src="/video/vmls-hero-video.mp4" type="video/mp4" />
+      </video>
+
+      {/* Mobile Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="block md:hidden absolute top-0 left-0 w-full sm:h-[82vh] h-[85vh] object-cover -z-10"
+      >
+        <source src="/video/vmls-hero-video-mobile.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay for better text readability */}
@@ -55,6 +68,7 @@ export default function HeroVideo() {
               height={130} 
               className="w-[50px] object-contain lg:hidden ml-8"
               style={{ width: 'auto', height: 'auto' }}
+              priority
             />
           </div>
 
@@ -75,6 +89,7 @@ export default function HeroVideo() {
               height={130} 
               className="hidden lg:block w-[130px] object-contain"
               style={{ width: 'auto', height: 'auto' }}
+              priority
             />
             
             <div className="hidden lg:block h-16 w-[2px] bg-white/30 mx-4"></div>
@@ -86,6 +101,7 @@ export default function HeroVideo() {
               height={110} 
               className="w-[180px] md:w-[350px] object-contain"
               style={{ width: 'auto', height: 'auto' }}
+              priority
             />
           </div>
         </div>

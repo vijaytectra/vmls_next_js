@@ -142,9 +142,11 @@ html {
   animation: vertical-btn-shimmer 2.8s ease-in-out infinite;
 }
 
-.vertical-edge-btn:hover {
-  transform: rotate(180deg) translateX(-3px);
-  filter: brightness(1.08);
+@media (hover: hover) {
+  .vertical-edge-btn:hover {
+    transform: rotate(180deg) translateX(-3px);
+    filter: brightness(1.08);
+  }
 }
 
 .vertical-edge-btn--apply {
@@ -173,8 +175,10 @@ html {
   animation-direction: reverse;
 }
 
-.vertical-edge-btn--chat:hover {
-  transform: translateX(3px);
+@media (hover: hover) {
+  .vertical-edge-btn--chat:hover {
+    transform: translateX(3px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

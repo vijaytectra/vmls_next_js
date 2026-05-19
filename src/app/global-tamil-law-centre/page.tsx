@@ -66,10 +66,7 @@ export default function GlobalTamilLawCentrePage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-2">
-              <div className="inline-block px-4 py-1.5 bg-[#800000]/10 rounded-none">
-                <span className="text-[#800000] font-bold text-[10px] uppercase tracking-widest">Introduction</span>
-              </div>
-              <div className="font-inter text-gray-700 leading-relaxed text-justify space-y-4 text-lg md:text-xl">
+              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg">
                 <p>
                   விநாயக மிஷன்ஸ் சட்டக்கல்லூரியில் (VMLS) உலகளாவிய தமிழ் சட்ட மையம் நிறுவப்படுவது ஒரு முன்னோடித் திட்டமாகும். 'தமிழ்' என்ற சொல் பெரும்பாலும் தென்னிந்திய மாநிலமான தமிழ்நாடு மற்றும் இலங்கையின் வடக்கு மற்றும் கிழக்குப் பகுதிகளில் பெரும்பான்மையாக வசிக்கும் தமிழ் மொழியில் தொடர்பு கொள்ளும் நபர்களைக் குறிக்கிறது.
                 </p>
@@ -117,14 +114,13 @@ export default function GlobalTamilLawCentrePage() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-[1px] bg-[#a31f34]"></div>
-                  <span className="text-[#a31f34] text-[10px] font-bold uppercase tracking-[0.3em]">Our Mission</span>
                 </div>
                 <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                  Vision & <span className="text-[#a31f34] italic">Impact</span>
+                  எதிர்கால <span className="text-[#a31f34] italic">நோக்கம்</span>
                 </h2>
               </div>
 
-              <div className="font-inter text-gray-700 leading-relaxed text-justify space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
+              <div className="font-inter text-gray-700 leading-relaxed text-left space-y-4 text-base md:text-lg border-l-2 border-[#a31f34]/10 pl-6">
                 <p>
                   உலகளாவிய தமிழ் சட்ட மையம் (GTLC) என்பது தமிழ் சமூகம் எதிர்கொள்ளும் சட்ட சிக்கல்கள் மற்றும் கவலைகளை நிவர்த்தி செய்வதில் குறிப்பாக கவனம் செலுத்தும் ஒரு சட்ட நிறுவனம் ஆகும். மேற்கூறிய மையம், கிராமப்புறங்களிலிருந்து வருபவர்களுக்கு சிறப்பு கவனம் செலுத்தி, மாணவர்களுக்கு பல நன்மைகளை வழங்குகிறது. கூடுதலாக, இது இருமொழிக் கல்வியைச் செயல்படுத்துவதற்கும், பிராந்திய, தேசிய மற்றும் உலகளாவிய மட்டங்களில் சட்டப்பூர்வ நிலப்பரப்பில் குறிப்பிடத்தக்கப் பங்களிப்பைச் செய்வதற்கும் முயற்சிக்கிறது.
                 </p>
