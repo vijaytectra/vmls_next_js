@@ -61,7 +61,7 @@ export default function FloatingActions() {
   return (
     <>
       {/* Left: Chat with Student — vertical edge tab */}
-      <div className="fixed left-0 top-[45%] translate-y-0 md:top-1/2 z-[2000] md:-translate-y-1/2">
+      <div className="fixed left-0 top-[280px] md:top-1/2 z-[2000] md:-translate-y-1/2">
         <Link
           href="/chat-with-student"
           className="vertical-edge-btn vertical-edge-btn--chat font-inter"
@@ -71,7 +71,7 @@ export default function FloatingActions() {
       </div>
 
       {/* Right: Apply & Enquire — stacked vertical tabs with glow */}
-      <div className="fixed right-0 top-[45%] translate-y-0 md:top-1/2 z-[2000] flex md:-translate-y-1/2 flex-col gap-1">
+      <div className="fixed right-0 top-[280px] md:top-1/2 z-[2000] flex md:-translate-y-1/2 flex-col gap-1">
         <Link
           href="https://admissions.vmls.edu.in/"
           target="_blank"
