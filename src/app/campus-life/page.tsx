@@ -39,13 +39,13 @@ export default function CampusLifePage() {
       </section>
 
       {/* Our Infrastructure Section - Premium Bento Box Design */}
-      <section className="pt-10 md:pt-16 pb-10 md:pb-16 px-[5%] bg-[#fcfcfc]">
+      <section className="pt-4 md:pt-6 pb-4 md:pb-6 px-[5%] bg-[#fcfcfc]">
         <div className="max-w-[1500px] mx-auto">
-          <div className="text-center mb-16 md:mb-24">
-            <h2 className="font-playfair text-4xl md:text-6xl text-[#1a1a1a] mb-6">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="font-playfair text-4xl md:text-6xl text-[#1a1a1a] mb-4">
               World-Class <span className="italic text-[#a31f34]">Infrastructure</span>
             </h2>
-            <div className="w-24 h-1 bg-[#a31f34] mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-[#a31f34] mx-auto mb-4"></div>
             <p className="font-inter text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
               Experience an environment designed for excellence, featuring state-of-the-art facilities that inspire innovation and academic growth.
             </p>
