@@ -53,16 +53,16 @@ export default function CampusLifePage() {
 
           {/* Bento Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 h-auto lg:h-[900px]">
-            
+
             {/* 1. Featured: Classroom (Large) */}
-            <Link 
-              href="/infrastructure" 
+            <Link
+              href="/infrastructure"
               className="md:col-span-2 lg:col-span-3 lg:row-span-2 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[400px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 <source src="/videos/class.mp4" type="video/mp4" />
               </video>
-              
+
               {/* Mobile View: Common Frosted Glass Card Design */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 md:hidden"></div>
               <div className="absolute inset-0 p-6 flex flex-col justify-end md:hidden">
@@ -84,14 +84,14 @@ export default function CampusLifePage() {
             </Link>
 
             {/* 2. Atrium (Medium) */}
-            <Link 
-              href="/atrium" 
+            <Link
+              href="/atrium"
               className="md:col-span-2 lg:col-span-3 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[350px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 <source src="/videos/atrium.mp4" type="video/mp4" />
               </video>
-              
+
               {/* Mobile View: Common Frosted Glass Card Design */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 md:hidden"></div>
               <div className="absolute inset-0 p-6 flex flex-col justify-end md:hidden">
@@ -115,14 +115,14 @@ export default function CampusLifePage() {
             </Link>
 
             {/* 3. Main Building (Medium) */}
-            <Link 
-              href="/main-building" 
+            <Link
+              href="/main-building"
               className="md:col-span-2 lg:col-span-3 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[350px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 <source src="/videos/corridor.mp4" type="video/mp4" />
               </video>
-              
+
               {/* Mobile View: Common Frosted Glass Card Design */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 md:hidden"></div>
               <div className="absolute inset-0 p-6 flex flex-col justify-end md:hidden">
@@ -153,9 +153,9 @@ export default function CampusLifePage() {
                 { title: "Seminar Hall", video: "/videos/seminar1.mp4", href: "/seminar-hall" },
                 { title: "Hostel Facility", video: "/videos/hostel.mp4", href: "/hostel" }
               ].map((item, idx) => (
-                <Link 
+                <Link
                   key={idx}
-                  href={item.href} 
+                  href={item.href}
                   className="group relative h-[300px] overflow-hidden rounded-3xl shadow-md hover:shadow-xl transition-all duration-500"
                 >
                   <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
