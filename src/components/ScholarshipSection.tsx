@@ -32,7 +32,7 @@ export default function ScholarshipSection() {
           <div>
             <Link 
               href="/scholarships" 
-              className="inline-block px-8 py-3 bg-[#8b0000] text-white font-inter text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:bg-[#a31f34] hover:scale-105"
+              className="inline-block px-10 py-4 bg-[#8b0000] text-white font-inter text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:bg-[#a31f34] hover:scale-105"
             >
               View Scholarship Portal
             </Link>

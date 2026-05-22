@@ -73,19 +73,7 @@ export default function AboutVMLS() {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="bg-white px-[5%] pt-6 md:pt-8 pb-12 md:pb-24">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="flex flex-col items-center mb-12">
-            <h2 className="font-playfair text-4xl md:text-5xl text-[#1a1a1a] mb-4">Our Vision</h2>
-            <div className="w-20 h-1 bg-[#a31f34]"></div>
-          </div>
-          
-          <p className="font-inter text-2xl md:text-3xl text-gray-800 leading-relaxed font-light italic">
-            "To be a global leader in legal education, fostering a community of learners who are intellectually rigorous, socially responsible, and prepared to shape the future of justice."
-          </p>
-        </div>
-      </section>
+
     </main>
   );
 }
