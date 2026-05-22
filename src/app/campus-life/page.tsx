@@ -39,7 +39,7 @@ export default function CampusLifePage() {
       </section>
 
       {/* Our Infrastructure Section - Premium Bento Box Design */}
-      <section className="py-20 md:py-32 px-[5%] bg-[#fcfcfc]">
+      <section className="pt-10 md:pt-16 pb-10 md:pb-16 px-[5%] bg-[#fcfcfc]">
         <div className="max-w-[1500px] mx-auto">
           <div className="text-center mb-16 md:mb-24">
             <h2 className="font-playfair text-4xl md:text-6xl text-[#1a1a1a] mb-6">
