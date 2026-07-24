@@ -2,10 +2,15 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NPF_WIDGET_ID = "87feca6bc65be091ed018757c6c58029";
+const LLM_ADMISSIONS_URL = "https://vmls.edu.in/llm/";
 
 export default function FloatingActions() {
+  const pathname = usePathname();
+  const isBlogPage = pathname === "/blogs" || pathname?.startsWith("/blogs/");
+
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://in8cdn.npfs.co/js/widget/npfwpopup.js";
@@ -70,8 +75,20 @@ export default function FloatingActions() {
         </Link>
       </div>
 
-      {/* Right: Apply & Enquire — stacked vertical tabs with glow */}
+      {/* Right: Admissions / Apply / Enquire — stacked vertical tabs */}
       <div className="fixed right-0 top-[280px] md:top-1/2 z-[2000] flex md:-translate-y-1/2 flex-col gap-1">
+        {isBlogPage && (
+          <Link
+            href={LLM_ADMISSIONS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LL.M Application Form 2025"
+            className="vertical-edge-btn vertical-edge-btn--admissions font-inter"
+          >
+            Admissions Open
+          </Link>
+        )}
+
         <Link
           href="https://admissions.vmls.edu.in/"
           target="_blank"

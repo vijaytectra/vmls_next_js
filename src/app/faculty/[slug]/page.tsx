@@ -17,7 +17,7 @@ const facultyData: FacultyData[] = [
     name: "Ms. Chesha P. Chellappan",
     role: "Assistant Dean - Ranking and Accreditation, Chief Superintendent - Exam Cell.",
     qualifications: "LL. M IPR & Public Law, Kerala University",
-    image: "/images/faculty/02.webp",
+    image: "/images/faculty/live/DSC00387_8.webp",
     slug: "chesha-p-chellappan",
     email: "chesha@vmls.edu.in",
     bio: [
@@ -32,7 +32,7 @@ const facultyData: FacultyData[] = [
     name: "Mr. Edhaya Chandran",
     role: "Assistant Dean - Outreach & Communications",
     qualifications: "M.A. Political Science (Political Science)",
-    image: "/images/faculty/09.webp",
+    image: "/images/faculty/live/DSC00440_2.webp",
     slug: "edhaya-chandran",
     email: "edhayachandran@vmls.edu.in",
     bio: [
@@ -43,7 +43,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Gnana Sanga Mithra. S",
     role: "Associate Dean - Research (Interdisciplinary)",
     qualifications: "M.A - Loyola College, Ph.D - VIT, Chennai",
-    image: "/images/faculty/05.webp",
+    image: "/images/faculty/live/DSC00631_32.webp",
     slug: "gnana-sanga-mithra",
     email: "sangamithra@vmls.edu.in",
     bio: [
@@ -56,7 +56,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Krishna Kishore Padala",
     role: "Head - Exam Cell, VMLS, Co-ordinator - Legal Aid Clinic, VMLS.",
     qualifications: "LL.M & Ph.D (Labour, Capital and Industrial Laws) - Andhra University",
-    image: "/images/faculty/03.webp",
+    image: "/images/faculty/live/DSC00395_30.webp",
     slug: "krishna-kishore-padala",
     email: "krishnakishore@vmls.edu.in",
     bio: [
@@ -68,7 +68,7 @@ const facultyData: FacultyData[] = [
     name: "Ms. Sinjini Sen",
     role: "Assistant Professor",
     qualifications: "LL.M (Intellectual property rights and Business law) National Law Institute University, Bhopal.",
-    image: "/images/faculty/12.webp",
+    image: "/images/faculty/live/DSC00473_3.webp",
     slug: "sinjini-sen",
     email: "sinjinisen@vmls.edu.in",
     bio: [
@@ -80,7 +80,7 @@ const facultyData: FacultyData[] = [
     name: "Ms. Nabeela Siddiqui",
     role: "Assistant Professor",
     qualifications: "M.L. / LL.M (Constitutional Law and Public Order), University of Madras",
-    image: "/images/faculty/14.webp",
+    image: "/images/faculty/live/DSC00449_4.webp",
     slug: "nabeela-siddiqui",
     email: "nabeela@vmls.edu.in",
     bio: [
@@ -93,7 +93,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Shenbagavalli",
     role: "Associate Dean, Student Affairs",
     qualifications: "MBM - Alagappa University / Ph.D - SRM University Chennai",
-    image: "/images/faculty/38.jpeg",
+    image: "/images/faculty/live/DSC00401_27.webp",
     slug: "shenbagavalli",
     email: "shenbagavalli@vmls.edu.in",
     bio: [
@@ -107,7 +107,7 @@ const facultyData: FacultyData[] = [
     name: "Winfred Chelliah",
     role: "Associate Dean- Campus Affairs",
     qualifications: "M.A. English Literature | Expert in ELT & Communication Former Professor, Madras Christian College (29 years) Academic Leader & Student Mentor International Exposure – Studied in Germany",
-    image: "/images/faculty/39.webp",
+    image: "/images/faculty/live/DSC00413_13.webp",
     slug: "winfred-chelliah",
     email: "winfredchelliah@vmls.edu.in",
     bio: [
@@ -117,25 +117,26 @@ const facultyData: FacultyData[] = [
     ]
   },
   {
-    name: "Najeed Naved Siddiqui",
+    name: "Dr. Najeed Naved Siddiqui",
     role: "Assistant Professor",
-    qualifications: "LLM (Constitutional Law) - National Law University Odisha",
-    image: "/images/faculty/40.webp",
+    qualifications: "Ph.D - CHRIST (Deemed to be University), Bengaluru.",
+    image: "/images/faculty/live/najeed.webp",
     slug: "najeed-naved-siddiqui",
     email: "najeedsiddiqui@vmls.edu.in",
     bio: [
-      "Najeed Naved Siddiqui is a proficient academic and legal researcher working and scouting the crucial aspects of Constitutional Law and Food Security in the Indian scenario. Najeed has a keen interest in academic affairs and before joining VMLS he worked closely in exam coordination at his previous institution.",
-      "He holds a Master of Laws degree from National Law University, Odisha, with a specialization in Constitutional Law. He has worked closely and addressed crucial issues concerning gender equality and the legislation pertaining to the transgender community of India. During his master's, he worked alongside the Labor and ESI Department, Government of Odisha and NLUO for the social mapping of migrant workers in Odisha.",
-      "He has a Bachelor of Laws (B.A.LL.B Hons) from Aligarh Muslim University, Aligarh, and is an advocate enrolled in the Bar Council of Delhi, Delhi. In addition to his academic pursuits, he has collaborated with the People's Union for Civil Liberties on matters concerning women and child rights. Furthermore, he is a member representative for the International Society for Therapeutic Jurisprudence (India Chapter) and a member of GNHRE (The Global Network of Human Rights and the Environment).",
-      "He has been awarded the ‘Best Paper’ award by the National Institute of Disaster Management (NIDM), Ministry of Home Affairs, Government of India for his paper ‘Implications of Climate Change on Food Security in India: Challenges and Opportunities’.",
-      "His professional interests include Comparative Constitutional Law, Gender Justice, Law & Religion, and Jurisprudence. He possesses a strong inclination towards research and has authored and presented numerous papers at both international and national forums. Lastly, he shares a deep and ever-growing love for both football and philosophical thought."
+      "Dr. Najeed Naved Siddiqui is an academic, legal researcher, and advocate whose scholarship focuses on Constitutional Law, Food Security, Human Rights, and the intersection of law, governance, and public policy. His research adopts both doctrinal and empirical approaches, with particular emphasis on constitutionalism, socio-economic rights, and the evolving relationship between law, technology, and democratic governance.",
+      "He holds a Ph.D. in Law from CHRIST (Deemed to be University), Bengaluru, where his doctoral research examined food security and constitutional governance in India through an empirical and rights-based framework. He earned his LL.M. in Constitutional and Administrative Law from National Law University Odisha and his B.A. LL.B. (Hons.) from Aligarh Muslim University. He is enrolled as an Advocate with the Bar Council of Delhi.",
+      "During his postgraduate studies, Dr. Siddiqui collaborated with the Labour & ESI Department, Government of Odisha, and National Law University Odisha on the social mapping of migrant workers in the state. His research has also addressed issues of gender justice, constitutional protections for transgender persons, and socio-economic rights. He has further worked with the People's Union for Civil Liberties on matters relating to women and child rights.",
+      "He serves as a Member Representative of the International Society for Therapeutic Jurisprudence and is a member of the Global Network for Human Rights and the Environment.",
+      "Dr. Siddiqui is the recipient of the Best Paper Award conferred by the National Institute of Disaster Management, Ministry of Home Affairs, Government of India, for his paper titled 'Implications of Climate Change on Food Security in India: Challenges and Opportunities.' He has authored and presented several research papers at national and international conferences and continues to contribute to emerging debates in constitutional law and public policy.",
+      "His teaching and research interests include Comparative Constitutional Law, Constitutional Theory, Human Rights, Food Security Law, Law and Technology, Gender Justice, Law and Religion, Jurisprudence, and Public Policy. Outside academia, he enjoys football, philosophy, and interdisciplinary scholarship that bridges law with the social sciences.",
     ]
   },
   {
     name: "Sowmiya Narayan Rajagopalan",
     role: "Assistant Dean PG Academics",
     qualifications: "LLM(Corporate Law) National Law University Jodhpur, MSc Law and Finance (Trinity College Dublin)",
-    image: "/images/faculty/41.webp",
+    image: "/images/faculty/live/DSC00475_18.webp",
     slug: "sowmiya-narayan-rajagopalan",
     email: "sowmiyanarayan@vmls.edu.in",
     bio: [
@@ -149,7 +150,7 @@ const facultyData: FacultyData[] = [
     name: "Ashwani Kumar Singh",
     role: "Assistant Professor",
     qualifications: "LLM Public Law, University College London (UCL)",
-    image: "/images/faculty/42.webp",
+    image: "/images/faculty/live/DSC00695_24.webp",
     slug: "ashwani-kumar-singh",
     email: "ashwanikumarsingh@vmls.edu.in",
     bio: [
@@ -163,7 +164,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Abhinaya Ramesh",
     role: "Assistant Professor (Senior Grade)",
     qualifications: "Ph.D - SASTRA Deemed to be University, LL.M IPR (Christ Deemed to be University, Bangalore)",
-    image: "/images/faculty/43.webp",
+    image: "/images/faculty/live/DSC00754.webp",
     slug: "abhinaya-ramesh",
     email: "abhinayaramesh@vmls.edu.in",
     bio: [
@@ -178,7 +179,7 @@ const facultyData: FacultyData[] = [
     name: "Srinivas Raman",
     role: "Assistant Dean Academic Affairs UG",
     qualifications: "LL.M (European Master in Law and Economics)- Universität Hamburg and LUMSA, Rome",
-    image: "/images/faculty/44.webp",
+    image: "/images/faculty/live/DSC00804_017.webp",
     slug: "srinivas-raman",
     email: "srinivasraman@vmls.edu.in",
     bio: [
@@ -205,7 +206,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Fowmina",
     role: "Associate Dean (Inclusive Initiatives) Director, Centre for Access to Justice.",
     qualifications: "LLM - University of East London Uk, PhD - Vit Chennai",
-    image: "/images/faculty/19.webp",
+    image: "/images/faculty/live/19.webp",
     slug: "fowmina",
     email: "fowmina@vmls.edu.in",
     bio: [
@@ -219,7 +220,7 @@ const facultyData: FacultyData[] = [
     name: "Shubham Shukla",
     role: "Assistant Dean PG Academics",
     qualifications: "LL.M. (Corporate and Commercial Laws) Maharashtra National Law University, Mumbai",
-    image: "/images/faculty/46.webp",
+    image: "/images/faculty/live/DSC00665_20.webp",
     slug: "shubham-shukla",
     email: "shubhamshukla@vmls.edu.in",
     bio: [
@@ -232,7 +233,7 @@ const facultyData: FacultyData[] = [
     name: "Mike Ruban",
     role: "Assistant Dean Academic Affairs UGs",
     qualifications: "LLM International Law & Organisations (School of Excellence in Law, The Tamil Nadu Dr Ambedkar Law University)",
-    image: "/images/faculty/47.webp",
+    image: "/images/faculty/live/mike.webp",
     slug: "mike-ruban",
     email: "mikeruban@vmls.edu.in",
     bio: [
@@ -259,7 +260,7 @@ const facultyData: FacultyData[] = [
     name: "Narayanan Chandrasekar",
     role: "Assistant Dean - Placement Training",
     qualifications: "LL.M ITL Jindal Global University",
-    image: "/images/faculty/49.webp",
+    image: "/images/faculty/live/DSC00539_22.webp",
     slug: "narayanan-chandrasekar",
     email: "narayananchandrasekar@vmls.edu.in",
     bio: [
@@ -270,7 +271,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Alisha Verma",
     role: "Associate Professor",
     qualifications: "Ph.D. from Amity University, Rajasthan",
-    image: "/images/faculty/alisha.jpeg",
+    image: "/images/faculty/live/DSC00647_35.webp",
     slug: "alisha-verma",
     email: "alishaverma@vmls.edu.in",
     bio: [
@@ -285,7 +286,7 @@ const facultyData: FacultyData[] = [
     name: "Hartej Singh",
     role: "Assistant Professor",
     qualifications: "LLM(Corporate Law) National Law University, Jodhpur",
-    image: "/images/faculty/hartej.webp",
+    image: "/images/faculty/live/hartej.webp",
     slug: "hartej-singh",
     email: "hartejsinghkochher@vmls.edu.in",
     bio: [
@@ -300,7 +301,7 @@ const facultyData: FacultyData[] = [
     name: "Abhinandita Biswas",
     role: "Assistant Professor",
     qualifications: "LLM (International Trade & Investment Law), O.P. Jindal Global University.",
-    image: "/images/faculty/Abhinandita.webp",
+    image: "/images/faculty/live/DSC00504_11.webp",
     slug: "abhinandita-biswas",
     email: "abhinanditabiswas@vmls.edu.in",
     bio: [
@@ -314,7 +315,7 @@ const facultyData: FacultyData[] = [
     name: "Kamala Priyadarshini",
     role: "Assistant Professor",
     qualifications: "L.L.M., Air and Space laws, McGill University Canada, LLM Corporate and financial law and policy, Jindal global law school, O.P. Jindal University",
-    image: "/images/faculty/kamala.webp",
+    image: "/images/faculty/live/DSC00524_7.webp",
     slug: "kamala-priyadarshini",
     email: "kamalapriyadarshini@vmls.edu.in",
     bio: [
@@ -326,7 +327,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Gaurav Shukla",
     role: "Associate Dean - Research (Law)",
     qualifications: "Ph.D. in Juridical Science (International Taxation) from Chanakya National Law University in Patna, India.",
-    image: "/images/faculty/gaurav.webp",
+    image: "/images/faculty/live/DSC00618_33.webp",
     slug: "gaurav-shukla",
     email: "gauravshukla@vmls.edu.in",
     bio: [
@@ -340,7 +341,7 @@ const facultyData: FacultyData[] = [
     name: "Aarthy Jonathan Kennedy",
     role: "Assistant Dean - Partnerships & Student Engagement",
     qualifications: "LL.M in Constitutional Law & Human Rights from School of Excellence",
-    image: "/images/faculty/aarthy.webp",
+    image: "/images/faculty/live/DSC00643_12.webp",
     slug: "aarthy-jonathan-kennedy",
     bio: [
       "Ms. Aarthy completed her Bachelor's degree in Law under a Central Government Merit Scholarship from The Tamil Nadu Dr. Ambedkar Law University, School of Excellence in Law, and went on to pursue her Master's in Constitutional Law & Human Rights. She has also obtained an M.Sc. in Psychology from TNOU. In addition to her academic accomplishments, she co-founded Head to Heart (mental health services) and is currently pursuing her Ph.D."
@@ -350,7 +351,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Muthuvelu",
     role: "Professor & Director of Global Tamil Law Center",
     qualifications: "Ph.D. in Legal Tamil - University of Madras",
-    image: "/images/faculty/muthuvel.webp",
+    image: "/images/faculty/live/muthuvel.webp",
     slug: "muthuvelu",
     bio: [
       "Dr. Muthuvelu holds a doctorate in Legal Tamil and has over 23 years of teaching experience in Government Colleges and 5 years as Legal Translation officer. He was the first scholar to earn a doctorate from the University of Madras on the topic of \"Legal Tamil.\" He has also served in the Tamil Nadu Government Secretariat and as a member of the State Legal Official Language Commission.",
@@ -361,7 +362,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Arun D Raj",
     role: "Associate Professor",
     qualifications: "Ph.D - University of Kerala, (LL.M) in Taxation Laws from Calicut",
-    image: "/images/faculty/arun.webp",
+    image: "/images/faculty/live/DSC00566_34.webp",
     slug: "arun-d-raj",
     bio: [
       "Dr. Arun D Raj is an accomplished academician with over 13 years of industry and teaching experience. Apart from being specialized in Taxation Laws, Constitution, Environmental Law and International Investment Law, his expertise in the field of Institutional Ranking & Accreditations like BCI, NAAC, NIRF, QS, etc. has made him a prominent figure in an advisory capacity for numerous institutions. He is also part of Doctoral Committees of several prominent research institutions.",
@@ -374,7 +375,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Sachinkumar P.P.",
     role: "Assistant Professor",
     qualifications: "Ph.D. - IIT Kharagpur, LL.M. in Commercial and Environmental Law",
-    image: "/images/faculty/sachin.jpeg",
+    image: "/images/faculty/live/DSC00537_28.webp",
     slug: "sachinkumar-p-p",
     email: "sachinkumar@vmls.edu.in",
     bio: [
@@ -386,7 +387,7 @@ const facultyData: FacultyData[] = [
     name: "Avni Singh Solanki",
     role: "Assistant Professor",
     qualifications: "LL.M. in Business Law from ILS Law College, Pune.",
-    image: "/images/faculty/avni.jpeg",
+    image: "/images/faculty/live/DSC00674_9.webp",
     slug: "avni-singh-solanki",
     email: "avnisingh@vmls.edu.in",
     bio: [
@@ -398,7 +399,7 @@ const facultyData: FacultyData[] = [
     name: "Kush Tanvani",
     role: "Assistant Professor",
     qualifications: "LL.M in Human Rights Law from the University of Nottingham",
-    image: "/images/faculty/Kush Tanvani.webp",
+    image: "/images/faculty/live/DSC00570_23.webp",
     slug: "kush-tanvani",
     email: "kushtanvani@vmls.edu.in",
     bio: [
@@ -412,7 +413,7 @@ const facultyData: FacultyData[] = [
     name: "Akshara Nair",
     role: "Assistant Professor",
     qualifications: "LL.M in International Law and Development from VIT School of Law, Chennai.",
-    image: "/images/faculty/Akshara Nair.jpeg",
+    image: "/images/faculty/live/DSC00586_10.webp",
     slug: "akshara-nair",
     email: "akshara@vmls.edu.in",
     bio: [
@@ -425,7 +426,7 @@ const facultyData: FacultyData[] = [
     name: "Stalin Harikaran N",
     role: "Assistant Professor",
     qualifications: "LL.M in Maritime Law from Tamil Nadu Dr. Ambedkar Law University.",
-    image: "/images/faculty/Stalin Harikaran N.jpeg",
+    image: "/images/faculty/live/DSC00584_16.webp",
     slug: "stalin-harikaran-n",
     email: "stalin@vmls.edu.in",
     bio: [
@@ -439,7 +440,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Jacob Joseph",
     role: "Professor of Law",
     qualifications: "Ph.D. in Environmental Law from School of Legal Studies, Cochin University of Science and Technology, Kochi",
-    image: "/images/faculty/Dr. Jacob Joseph_Photo.jpeg",
+    image: "/images/faculty/live/DSC00677_31.webp",
     slug: "jacob-joseph",
     email: "jacobjoseph@vmls.edu.in",
     bio: [
@@ -452,7 +453,7 @@ const facultyData: FacultyData[] = [
     name: "Abraham.S",
     role: "Assistant Professor",
     qualifications: "LL.M, School of excellence in law, Tamil Nadu Dr. Ambedkar Law University",
-    image: "/images/faculty/Abraham.jpeg",
+    image: "/images/faculty/live/DSC00704_25.webp",
     slug: "abraham-s",
     email: "abraham@vmls.edu.in",
     bio: [
@@ -465,7 +466,7 @@ const facultyData: FacultyData[] = [
     name: "Dr Shabin O S",
     role: "Assistant Professor (Criminology)",
     qualifications: "PhD from University of Madras",
-    image: "/images/faculty/Dr_Shabin.jpeg",
+    image: "/images/faculty/live/DSC00550_36.webp",
     slug: "shabin-o-s",
     email: "shabin@vmls.edu.in",
     bio: [
@@ -477,7 +478,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Yazhini A",
     role: "Assistant Professor",
     qualifications: "Ph.D. in Agricultural Economics from Tamil Nadu Agricultural University",
-    image: "/images/faculty/Dr. Yazhini A.jpeg",
+    image: "/images/faculty/live/DSC00688_26.webp",
     slug: "yazhini-a",
     email: "yazhini@vmls.edu.in",
     bio: [
@@ -491,7 +492,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Anuttama Ghose",
     role: "Associate Professor",
     qualifications: "Ph.D. from School of Law & Justice, Adamas University, Kolkata",
-    image: "/images/faculty/Anuttama.jpeg",
+    image: "/images/faculty/live/Anuttama.jpeg",
     slug: "anuttama-ghose",
     email: "anuttama@vmls.edu.in",
     bio: [
@@ -503,7 +504,7 @@ const facultyData: FacultyData[] = [
     name: "S. M. Aamir Ali",
     role: "Assistant Professor (Senior Grade)",
     qualifications: "LL.M. in Human Rights Law from the National Law School of India University (NLSIU), Bengaluru",
-    image: "/images/faculty/Aamir.jpeg",
+    image: "/images/faculty/live/DSC00612_21.webp",
     slug: "aamir-ali",
     email: "smaamir@vmls.edu.in",
     bio: [
@@ -595,108 +596,99 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
       </nav>
       <hr className="border-gray-100" />
 
-      {/* Hero Section - Matching Dean Page Style */}
-      <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-[#f8f9fa] overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-
-          {/* Left Side: Photo */}
-          <div className="lg:w-[35%] w-full order-1 flex justify-center items-center mb-8 lg:mb-0">
-            <div className="relative w-[65%] max-w-[240px] md:w-full md:max-w-[340px] aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
-              <div className="relative w-full h-full overflow-hidden">
-                <Image
-                  src={faculty.image}
-                  alt={faculty.name}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
-                  className="object-cover object-top transition-transform duration-700 hover:scale-105"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side: Content */}
-          <div className="lg:w-[65%] order-2 flex flex-col justify-center">
-            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Faculty Member</h3>
-            <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
-              {faculty.name}
-            </h1>
-
-            <div className="space-y-6">
-              <div className="space-y-1">
-                <h4 className="font-inter text-xl md:text-2xl font-bold tracking-tight text-gray-800">
-                  {faculty.role}
-                </h4>
-                {faculty.qualifications && (
-                  <p className="font-inter text-lg text-[#a31f34] font-medium italic">
-                    {faculty.qualifications}
-                  </p>
-                )}
-              </div>
-
-              {faculty.email && (
-                <div className="flex items-center gap-3 text-gray-600 hover:text-[#a31f34] transition-colors">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <a href={`mailto:${faculty.email}`} className="font-inter font-medium">{faculty.email}</a>
-                </div>
-              )}
-
-              {/* Highlighted Intro Paragraph (First paragraph of bio) */}
-              <div className="relative mt-8">
-                <div className="absolute left-0 top-0 bottom-0 w-[4px] md:w-[6px] bg-[#a31f34]"></div>
-                <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic text-justify">
-                  {faculty.bio[0]}
-                </p>
-              </div>
-            </div>
-          </div>
+      {/* Profile + bio with architectural line sketch (matches live faculty pages) */}
+      <div className="relative overflow-hidden">
+        <div className="pointer-events-none absolute bottom-0 left-0 w-full max-w-2xl md:max-w-3xl lg:max-w-4xl h-[45%] md:h-[55%] opacity-40 hidden lg:block z-0">
+          <Image
+            src="/images/vmrf/bg-chancellor.png"
+            alt=""
+            fill
+            sizes="(max-width: 1024px) 90vw, 60vw"
+            className="object-contain object-left-bottom"
+          />
         </div>
-      </section>
 
-      {/* Remaining Bio Section - Professional & Structured */}
-      {faculty.bio.length > 1 && (
-        <section className="bg-white px-[5%] pt-8 pb-16 md:pt-10 md:pb-24 relative overflow-hidden">
-          {/* Subtle Background Watermark */}
-          <div className="absolute top-20 right-[5%] w-[300px] opacity-[0.03] pointer-events-none select-none">
-            <Image 
-              src="/images/vmls/vmls-arch.png" 
-              alt="" 
-              width={400} 
-              height={400}
-              className="grayscale"
-            />
-          </div>
+        {/* Hero Section - Matching Dean Page Style */}
+        <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] relative z-10">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-          <div className="max-w-5xl mx-auto relative z-10">
-            <div className="flex items-center gap-4 mb-10">
-              <div className="w-12 h-[2px] bg-[#a31f34]"></div>
-              <h2 className="font-playfair text-3xl md:text-4xl text-[#1a1a1a] font-bold tracking-tight">
-                Academic Biography
-              </h2>
+            {/* Left Side: Photo */}
+            <div className="lg:w-[35%] w-full order-1 flex justify-center items-center mb-8 lg:mb-0">
+              <div className="relative w-[65%] max-w-[240px] md:w-full md:max-w-[340px] aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
+                <div className="relative w-full h-full overflow-hidden">
+                  <Image
+                    src={faculty.image}
+                    alt={faculty.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                    className="object-cover object-top transition-transform duration-700 hover:scale-105"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
-            
-            <div className="space-y-8 font-inter text-lg text-gray-700 leading-relaxed text-justify">
-              {faculty.bio.slice(1).map((para, i) => (
-                <p key={i} className="transition-all duration-300 hover:text-gray-900">
-                  {para}
-                </p>
-              ))}
+
+            {/* Right Side: Content */}
+            <div className="lg:w-[65%] order-2 flex flex-col justify-center">
+              <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Faculty Member</h3>
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
+                {faculty.name}
+              </h1>
+
+              <div className="space-y-6">
+                <div className="space-y-1">
+                  <h4 className="font-inter text-xl md:text-2xl font-bold tracking-tight text-gray-800">
+                    {faculty.role}
+                  </h4>
+                  {faculty.qualifications && (
+                    <p className="font-inter text-lg text-[#a31f34] font-medium italic">
+                      {faculty.qualifications}
+                    </p>
+                  )}
+                </div>
+
+                {faculty.email && (
+                  <div className="flex items-center gap-3 text-gray-600 hover:text-[#a31f34] transition-colors">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <a href={`mailto:${faculty.email}`} className="font-inter font-medium">{faculty.email}</a>
+                  </div>
+                )}
+
+                {/* Highlighted Intro Paragraph (First paragraph of bio) */}
+                <div className="relative mt-8">
+                  <div className="absolute left-0 top-0 bottom-0 w-[4px] md:w-[6px] bg-[#a31f34]"></div>
+                  <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic text-justify">
+                    {faculty.bio[0]}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
-      )}
 
-      {/* Decorative Architecture Element at Bottom Left */}
-      <div className="fixed bottom-0 left-0 w-[300px] opacity-[0.05] pointer-events-none select-none z-0">
-        <Image
-          src="/images/vmls/vmls-arch.png" // Assuming this is the building sketch at the bottom
-          alt=""
-          width={400}
-          height={400}
-          className="grayscale"
-        />
+        {/* Remaining Bio Section */}
+        {faculty.bio.length > 1 && (
+          <section className="px-[5%] pt-8 pb-16 md:pt-10 md:pb-24 relative z-10">
+            <div className="max-w-5xl mx-auto">
+              <div className="flex items-center gap-4 mb-10">
+                <div className="w-12 h-[2px] bg-[#a31f34]"></div>
+                <h2 className="font-playfair text-3xl md:text-4xl text-[#1a1a1a] font-bold tracking-tight">
+                  Academic Biography
+                </h2>
+              </div>
+              
+              <div className="space-y-8 font-inter text-lg text-gray-700 leading-relaxed text-justify">
+                {faculty.bio.slice(1).map((para, i) => (
+                  <p key={i} className="transition-all duration-300 hover:text-gray-900">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );
