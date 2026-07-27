@@ -11,17 +11,14 @@ export default function ScholarshipsPage() {
     {
       title: "Merit-Based Scholarship",
       description: "Awarded to students who achieve high marks in the VLAT entrance exam, recognizing academic prowess.",
-      icon: "🏆"
     },
     {
       title: "Anuradha Shero Scholarship for Female Students",
       description: "Awarded to female students who excel in the VLAT entrance exam, thereby promoting legal education among female students.",
-      icon: "⚖️"
     },
     {
       title: "Need-Based Scholarship",
       description: "Awarded to students who demonstrate financial need, thereby ensuring equal opportunity for all to pursue legal studies.",
-      icon: "🤝"
     }
   ];
 
@@ -130,38 +127,48 @@ export default function ScholarshipsPage() {
         </div>
       </section>
 
-      {/* Categories Grid */}
-      <section className="pt-8 pb-16 px-[5%] bg-white">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="text-center mb-10">
-            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-4">
-              Scholarship Categories
-            </h2>
-            <div className="w-20 h-1 bg-[#fbb03b] mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {scholarshipCategories.map((cat, idx) => (
-              <div 
-                key={idx} 
-                className="bg-white border border-gray-100 rounded-3xl p-6 md:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] hover:-translate-y-2 transition-all duration-300 relative overflow-hidden group flex flex-col h-full"
-              >
-                {/* Accent Line on Hover */}
-                <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#a31f34] to-[#fbb03b] transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
-                
-                <div className="w-12 h-12 rounded-xl bg-gray-50 flex items-center justify-center text-xl mb-4 group-hover:bg-orange-50 group-hover:scale-110 transition-all duration-300">
-                  {cat.icon}
+      {/* Scholarship programs + Testimonials video */}
+      <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
+          {/* Left: Scholarship programs */}
+          <div className="lg:w-[48%] w-full min-w-0">
+            <div className="relative">
+              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]" />
+              <div className="pl-6 md:pl-10">
+                <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
+                  Scholarship programs
+                </h2>
+
+                <div className="space-y-8">
+                  {scholarshipCategories.map((cat) => (
+                    <div key={cat.title}>
+                      <h3 className="font-playfair font-bold text-lg md:text-xl text-[#a31f34] mb-2 leading-snug">
+                        {cat.title}:
+                      </h3>
+                      <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed hyphens-none [hyphens:none]">
+                        {cat.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-                
-                <h3 className="font-playfair font-bold text-lg md:text-xl lg:text-2xl text-[#1a1a1a] mb-2 leading-tight">
-                  {cat.title}
-                </h3>
-                
-                <p className="font-inter text-gray-600 leading-relaxed text-xs md:text-sm mt-auto">
-                  {cat.description}
-                </p>
               </div>
-            ))}
+            </div>
+          </div>
+
+          {/* Right: Scholarship Testimonials video */}
+          <div className="lg:w-[52%] w-full shrink-0">
+            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden bg-black">
+              <iframe
+                src="https://www.youtube.com/embed/LJAGaNiZ59U"
+                title="Scholarship Testimonials"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            </div>
+            <h3 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mt-4 text-center lg:text-left">
+              Scholarship Testimonials
+            </h3>
           </div>
         </div>
       </section>

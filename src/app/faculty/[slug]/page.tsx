@@ -519,22 +519,22 @@ const facultyData: FacultyData[] = [
   {
     name: "Ms. Merlin Stephen",
     role: "Deputy Director of Admission",
-    image: "/images/faculty/21.webp",
+    image: "/images/faculty/live/DSC00390_5.webp",
     slug: "merlin-stephen",
     bio: [
       "Merlin Stephen currently holds the designation of Deputy Director of Admissions at Vinayaka Mission's Law School, playing a key role in streamlining the student onboarding process. Ably supported by a dedicated team of passionate colleagues, she is responsible for advocating the vision, values, and culture of Vinayaka Mission's Law School while guiding the admissions process for undergraduate and postgraduate law programs.",
-      "Previously, she served as Officer-in-Charge at the Dean's Office, where she was overseeing the comprehensive administrative functions of the department. Her role encompasses introducing the institution to prospective students and stakeholders, providing insights into eligibility criteria, scholarship opportunities, academic environment, faculty credentials, assessment methods, and the promising career prospects in law.",
+      "Previously, she served as Officer-in-Charge at the Dean’s Office, where she was overseeing the comprehensive administrative functions of the department. Her role encompasses introducing the institution to prospective students and stakeholders, providing insights into eligibility criteria, scholarship opportunities, academic environment, faculty credentials, assessment methods, and the promising career prospects in law.",
       "With a distinguished career spanning over 30 years, she has gained extensive administrative expertise in leading international schools and colleges. She holds an M.Com. degree and has further refined her skills with a Postgraduate Diploma in Business Management from Stansfield School of Business, Singapore.",
-      "Merlin's professional journey includes significant contributions to several founding institutions, highlighting her pivotal role in establishing and nurturing educational initiatives. Her vast experience and strong administrative acumen make her an invaluable asset to Vinayaka Mission's Law School, where she efficiently manages the diverse responsibilities of her role."
+      "Merlin’s professional journey includes significant contributions to several founding institutions, highlighting her pivotal role in establishing and nurturing educational initiatives. Her vast experience and strong administrative acumen make her an invaluable asset to Vinayaka Mission's Law School, where she efficiently manages the diverse responsibilities of her role."
     ]
   },
   {
     name: "Mr. Victor",
     role: "Director- Administration",
-    image: "/images/faculty/victor.jpeg",
+    image: "/images/faculty/live/DSC00648_14.webp",
     slug: "victor",
     bio: [
-      "A seasoned administrative professional with over 30 years of diverse experience in managing institutional operations, human resources, infrastructure, and compliance functions across academic and corporate environments. Currently serving as Director of Administration at Vinayaka Mission's Law School (VMLS), to oversee end-to-end administrative functions to ensure operational excellence, regulatory compliance, and strategic growth.",
+      "A seasoned administrative professional with over 30 years of diverse experience in managing institutional operations, human resources, infrastructure, and compliance functions across academic and corporate environments. Currently serving as Director of Administration at Vinayaka Mission’s Law School (VMLS), to oversee end-to-end administrative functions to ensure operational excellence, regulatory compliance, and strategic growth.",
       "Mr. K. Victor expertise lies in building systems, streamlining administrative processes, optimizing resource utilization, and leading multidisciplinary teams with a focus on transparency and accountability. He brings proven capabilities in policy implementation, infrastructure development, campus security, budgeting, asset management, and stakeholder coordination. Recognized for transforming administrative frameworks and implementing institutional best practices, Mr. Victor has previously played key roles in institutions like IIBAT, MatrixView, St. Joseph's International Residential School, Zantel (East Africa) where he led initiatives that improved institutional efficiency and governance."
     ]
   },
@@ -550,7 +550,7 @@ const facultyData: FacultyData[] = [
   {
     name: "Luke Jackson",
     role: "HR Manager",
-    image: "/images/faculty/luke.webp",
+    image: "/images/faculty/live/luke-live.webp",
     slug: "luke-jackson",
     bio: [
       "Luke Jackson serves as the HR Manager at VMLS, bringing over 12 years of rich experience in human resources. His career spans notable roles in both the corporate and education sectors. Luke's professional journey includes significant tenures at The World Bank and Ernst & Young (EY), where he honed his HR expertise. Additionally, he contributed to the academic field through his previous role at IIT Madras.",
@@ -561,7 +561,7 @@ const facultyData: FacultyData[] = [
   {
     name: "Ms. R. Sneha",
     role: "Senior Assistant Librarian",
-    image: "/images/faculty/R. Sneha.jpeg",
+    image: "/images/faculty/live/r-sneha-live.jpeg",
     slug: "r-sneha",
     email: "sneha@vmls.edu.in",
     bio: [

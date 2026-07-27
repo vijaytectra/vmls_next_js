@@ -34,7 +34,7 @@ export default function ContactUsPage() {
             Get In Touch
           </span>
           <h1 className="font-playfair text-4xl md:text-6xl font-bold text-white mb-6">
-            Contact <span className="italic text-[#fbb03b]">Us</span>
+            Contact <span className="text-[#fbb03b]">Us</span>
           </h1>
           <p className="font-inter text-gray-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
             Have questions about admissions, programs, or campus life? We're here to help you navigate your journey at VMLS.

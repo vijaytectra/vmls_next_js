@@ -56,7 +56,7 @@ export default function CampusLifePage() {
 
             {/* 1. Featured: Classroom (Large) */}
             <Link
-              href="/infrastructure"
+              href="/classroom"
               className="md:col-span-2 lg:col-span-3 lg:row-span-2 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[400px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
@@ -146,12 +146,13 @@ export default function CampusLifePage() {
             </Link>
 
             {/* Bottom Row - Standard Cards */}
-            <div className="md:col-span-4 lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="md:col-span-4 lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {[
-                { title: "Digital Library", video: "/videos/library.mp4", href: "/library" },
+                { title: "Library", video: "/videos/library.mp4", href: "/library" },
                 { title: "Moot Court", video: "/videos/moot-court.mp4", href: "/moot-court" },
-                { title: "Seminar Hall", video: "/videos/seminar1.mp4", href: "/seminar-hall" },
-                { title: "Hostel Facility", video: "/videos/hostel.mp4", href: "/hostel" }
+                { title: "Seminar Halls", video: "/videos/seminar1.mp4", href: "/seminar-hall" },
+                { title: "Food Court", video: "/videos/food.mp4", href: "/food-court" },
+                { title: "Hostel", video: "/videos/hostel.mp4", href: "/hostel" }
               ].map((item, idx) => (
                 <Link
                   key={idx}

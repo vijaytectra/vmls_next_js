@@ -33,6 +33,8 @@ export default function AntiRaggingSquadPage() {
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
+          <Link href="/student-affairs" className="text-gray-500 hover:text-[#a31f34] transition-colors">Student Affairs</Link>
+          <span className="text-gray-300 font-light">/</span>
           <span className="text-[#a31f34] font-semibold">Anti Ragging Squad</span>
         </div>
       </nav>

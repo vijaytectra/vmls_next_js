@@ -38,6 +38,10 @@ body {
   animation-play-state: paused;
 }
 
+.animate-marquee-continuous {
+  animation: marquee 40s linear infinite;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -330,10 +334,15 @@ html {
 }
 
 .blog-article-content .blog-html thead th,
-.blog-article-content .blog-html tr:first-child th {
-  background: #fcfbf9;
+.blog-article-content .blog-html tr:first-child th,
+.blog-article-content .blog-html tr:first-child td {
+  background: #eef5fb;
   font-weight: 700;
   color: #1a1a1a;
+}
+
+.blog-article-content .blog-html tr:last-child td {
+  font-weight: 700;
 }
 
 .blog-article-content .blog-html .blog-cta-link,
@@ -535,21 +544,22 @@ main section p:not(.text-center):not(.text-left):not(.text-right) {
   text-wrap: pretty;
 }
 
-/* Preserving explicit layout alignments for centered/left/right containers and cards */
-.text-center > p,
-.text-center > * > p,
-.text-center > * > * > p {
+/* Preserving explicit layout alignments for centered/left/right containers and cards.
+   Must beat `main section p` justify (!important) at any nesting depth — narrow cards
+   otherwise get huge word gaps from inter-word justification. */
+p.text-center,
+.text-center p {
   text-align: center !important;
 }
 
-.text-left > p,
-.text-left > * > p,
-.text-left > * > * > p {
+p.text-left,
+.text-left p {
   text-align: left !important;
+  text-justify: auto;
+  word-spacing: normal;
 }
 
-.text-right > p,
-.text-right > * > p,
-.text-right > * > * > p {
+p.text-right,
+.text-right p {
   text-align: right !important;
 }

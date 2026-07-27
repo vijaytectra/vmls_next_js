@@ -30,7 +30,7 @@ const menuItems = [
   { name: "Scholarships", href: "/scholarships" },
 
   { name: "Collaborations", href: "/collaborations" },
-  { name: "International conference", href: "/international-conference" },
+  { name: "International conference", href: "/international-conference-on-rivers" },
   { name: "Internship and Career Services", href: "/internship-and-career-services" },
   {
     name: "Academics",

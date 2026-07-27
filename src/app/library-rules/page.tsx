@@ -103,7 +103,7 @@ export default function LibraryRulesPage() {
               </tbody>
             </table>
           </div>
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
             {[
               { k: 'TN', v: 'Total check-outs' },
               { k: 'D', v: 'Duration (days)' },
@@ -111,7 +111,7 @@ export default function LibraryRulesPage() {
               { k: 'RD', v: 'Renewal duration' },
               { k: 'H', v: 'No. of holds' }
             ].map(key => (
-              <div key={key.k} className="p-3 bg-gray-50 border border-gray-100">
+              <div key={key.k} className="p-3 bg-gray-50 border border-gray-100 w-full">
                 <span className="block font-bold text-[#a31f34] text-xs">{key.k}</span>
                 <span className="text-[10px] text-gray-500 uppercase font-medium">{key.v}</span>
               </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SubThemesSection from "@/components/SubThemesSection";
 
 export const metadata = {
   title: "International Conference | Vinayaka Mission's Law School",
@@ -20,28 +21,28 @@ export default function InternationalConferencePage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="relative px-[5%] py-12 md:py-20 overflow-hidden">
+        <section className="relative px-[5%] py-16 md:py-24 lg:py-28 overflow-hidden min-h-[280px] md:min-h-[360px] flex items-end">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/collab/img5.webp"
-              alt="International Conference at VMLS"
+              src="/images/conf/pg-head.webp"
+              alt="International Conference on Rivers"
               fill
               sizes="100vw"
               className="object-cover object-center"
               priority
             />
-            <div className="absolute inset-0 bg-black/60"></div>
+            <div className="absolute inset-0 bg-black/50"></div>
           </div>
 
-          <div className="max-w-7xl mx-auto relative z-10 text-white drop-shadow-lg">
+          <div className="max-w-7xl mx-auto relative z-10 w-full text-white drop-shadow-lg">
             <div className="relative">
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#fbb03b]"></div>
               <div className="pl-6 md:pl-10">
-                <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl mb-6 leading-tight font-bold">
-                  International Conference
+                <h1 className="font-playfair text-2xl md:text-4xl lg:text-5xl mb-3 leading-tight font-bold">
+                  18th to 19th October 2024 Call for Papers
                 </h1>
-                <p className="font-inter text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium">
-                  Fostering global dialogues and academic exchange in the field of law.
+                <p className="font-playfair text-lg md:text-2xl lg:text-3xl text-white/95 leading-snug font-medium">
+                  International Conference on Rivers
                 </p>
               </div>
             </div>
@@ -216,68 +217,7 @@ export default function InternationalConferencePage() {
         </section>
 
         {/* Sub Themes Section */}
-        <section className="pt-4 pb-4 px-[5%] bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-6">
-              <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-3">
-                Sub Themes
-              </h2>
-              <div className="w-16 h-1 bg-[#fbb03b] mx-auto mb-4"></div>
-              <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
-                We welcome abstracts and full length quality research papers on the broad theme of Rivers. The below mentioned are few sub themes which may be considered. Please note that this is not an exhaustive list of topics. You are welcome to submit abstracts on any topic of your interest as long as it falls within an area of concern on River.
-              </p>
-            </div>
-
-            {/* Themes Grid */}
-            <div className="space-y-1">
-              {/* Row 1 */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
-                <div className="bg-[#800000] text-white p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm">
-                  Historical Narratives and River Security
-                </div>
-                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm">
-                  Transboundary River Governance
-                </div>
-                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm">
-                  International Law and Emerging Challenges
-                </div>
-                <div className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm">
-                  Climate Resilience and River Resource Management
-                </div>
-              </div>
-
-              {/* Highlighted Detail Bar */}
-              <div className="bg-[#800000] text-white p-4">
-                <ul className="list-disc pl-8 space-y-1 font-inter text-sm md:text-base">
-                  <li>Case studies of historical river management practices.</li>
-                  <li>Implications of past practices for contemporary river governance.</li>
-                </ul>
-              </div>
-
-              {/* Remaining Rows */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
-                {[
-                  "Cross-border River Conflicts and Cooperation",
-                  "River Diplomacy",
-                  "Aligning River Policies with SDGs",
-                  "Legal Frameworks for Indigenous Rights",
-                  "Gender and River Governance",
-                  "Community Participation in River Policy",
-                  "Human Rights and Access to Clean Water",
-                  "Environmental Justice in River Basin",
-                  "Legal Responses to Pollution and Industrial Use of Rivers",
-                  "Cultural Heritage and River Law",
-                  "Water Privatization and Public Rights",
-                  "Implementing International Water Law at the Local Level"
-                ].map((theme, index) => (
-                  <div key={index} className="bg-gray-300 text-[#1a1a1a] p-3 flex items-center justify-center text-center font-inter min-h-[60px] text-sm hover:bg-gray-400 transition-colors cursor-default">
-                    {theme}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <SubThemesSection />
 
         {/* Submission Guidelines Section */}
         <section className="pt-2 pb-3 md:pt-4 md:pb-4 px-[5%] bg-[#fafafa]">

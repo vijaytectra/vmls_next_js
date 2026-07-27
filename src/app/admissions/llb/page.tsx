@@ -218,7 +218,7 @@ export default function LLBAdmissionsPage() {
         </div>
       </section>
 
-      {/* Compulsory Pre-Law Courses Section */}
+      {/* Compulsory Non-Law Courses Section */}
       <section className="pt-6 md:pt-8 pb-12 px-[5%] bg-gradient-to-b from-[#fcf8f2] to-white relative overflow-hidden">
         {/* Decorative Background Element */}
         <div className="absolute right-[-5%] top-[10%] w-[400px] h-[400px] bg-[#a31f34] opacity-[0.02] rounded-full blur-[100px] pointer-events-none"></div>
@@ -226,7 +226,7 @@ export default function LLBAdmissionsPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-2">
-              Compulsory Pre-Law Courses
+              Compulsory Non-Law courses for Integrated Law Programme
             </h2>
             <div className="w-24 h-1 bg-[#a31f34] mx-auto"></div>
           </div>

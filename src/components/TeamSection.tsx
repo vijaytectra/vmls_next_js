@@ -6,35 +6,28 @@ const teamMembers = [
     name: "Ms. Merlin Stephen",
     role: "Deputy Director of Admission",
     qualifications: "M.Com. | PGDBM from Stansfield School of Business, Singapore",
-    image: "/images/faculty/21.webp",
+    image: "/images/faculty/live/DSC00390_5.webp",
     slug: "merlin-stephen"
   },
   {
     name: "Mr. Victor",
     role: "Director- Administration",
     qualifications: "30+ years of experience in managing institutional operations",
-    image: "/images/faculty/victor.jpeg",
+    image: "/images/faculty/live/DSC00648_14.webp",
     slug: "victor"
-  },
-  {
-    name: "Ms. Kiran Jenifer",
-    role: "Academic Affairs Executive",
-    qualifications: "M.A. in English Literature from Women's Christian College",
-    image: "/images/faculty/kiran.webp",
-    slug: "kiran-jenifer"
   },
   {
     name: "Luke Jackson",
     role: "HR Manager",
     qualifications: "B.Com from Madras Christian College | MBA from Madras University",
-    image: "/images/faculty/luke.webp",
+    image: "/images/faculty/live/luke-live.webp",
     slug: "luke-jackson"
   },
   {
     name: "Ms. R. Sneha",
     role: "Senior Assistant Librarian",
     qualifications: "UGC NET in Library and Information Science",
-    image: "/images/faculty/R. Sneha.jpeg",
+    image: "/images/faculty/live/r-sneha-live.jpeg",
     slug: "r-sneha"
   }
 ];
@@ -71,16 +64,16 @@ export default function TeamSection() {
               </div>
 
               {/* Details */}
-              <div className="px-3 pb-5 md:px-5 md:pb-8 text-center flex flex-col items-center flex-1">
-                <h3 className="font-playfair text-sm md:text-xl font-bold text-[#1a1a1a] mb-1 md:mb-2 leading-tight min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center">
+              <div className="px-3 pb-5 md:px-5 md:pb-7 text-center flex flex-col items-center flex-1">
+                <h3 className="font-playfair text-sm md:text-xl font-bold text-[#1a1a1a] mb-0 md:mb-0.5 leading-tight min-h-[2.25rem] md:min-h-[2.75rem] flex items-center justify-center text-center">
                   {member.name}
                 </h3>
-                <p className="font-inter text-[10px] md:text-xs font-bold text-[#a31f34] uppercase tracking-wider mb-2 leading-snug min-h-[2rem] md:min-h-[2.5rem] flex items-center justify-center">
+                <p className="font-inter text-[10px] md:text-xs font-bold text-[#a31f34] uppercase tracking-normal mb-0.5 leading-snug min-h-[1.5rem] md:min-h-[1.8rem] flex items-center justify-center text-center">
                   {member.role}
                 </p>
                 
                 {member.qualifications && (
-                  <p className="font-inter text-[10px] md:text-[11px] text-gray-500 leading-relaxed max-w-[95%] border-t border-gray-100 pt-2 line-clamp-2 md:line-clamp-none">
+                  <p className="font-inter text-[10px] md:text-[11px] text-gray-500 leading-snug tracking-normal max-w-[95%] border-t border-gray-100 pt-1.5 mt-0.5 text-left md:text-center !text-left md:!text-center [word-spacing:normal] [letter-spacing:normal] line-clamp-2 md:line-clamp-none">
                     {member.qualifications}
                   </p>
                 )}

@@ -12,8 +12,10 @@ export default function AtriumPage() {
       <main className="flex-grow">
         {/* Breadcrumbs */}
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
+          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium flex-wrap">
             <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
+            <span className="text-gray-300 font-light">/</span>
+            <Link href="/infrastructure" className="text-gray-500 hover:text-[#a31f34] transition-colors">Infrastructure</Link>
             <span className="text-gray-300 font-light">/</span>
             <span className="text-[#a31f34] font-semibold">Atrium</span>
           </div>
@@ -76,24 +78,8 @@ export default function AtriumPage() {
 
               <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
                 <p>
-                  The Atrium at VMLS is more than just a transitional space; it is the heartbeat of our campus life. Designed with soaring ceilings and flooded with natural light, it provides an uplifting environment that inspires both students and faculty.
+                  The atrium of VMLS fosters an atmosphere that is both inviting and conducive to academic pursuits. The high ceiling and large open space are not just aesthetically pleasing but also promote a sense of freedom and possibility, essential for creative thinking. Natural light bathes the area, creating a bright and energizing environment that enhances student efficiency. The thoughtful arrangement of tables and chairs allows for both individual study and collaborative work, ensuring that students can find a space that suits their learning style. With a wide aisle and unobstructed pathways, the atrium is highly accessible, allowing for easy movement and interaction among students, which is vital for a dynamic educational experience. Overall, the atrium&apos;s design reflects a deep understanding of the needs of students, blending form with function to create an optimal learning environment.
                 </p>
-
-                <p>
-                  This multifunctional area serves as a collaborative hub where ideas are exchanged, friendships are forged, and the academic community comes together. Whether it&apos;s for a formal event or a casual study session, the Atrium adapts to the needs of our diverse student body.
-                </p>
-
-                <p>
-                  The architectural design emphasizes openness and transparency, reflecting our institutional values of inclusivity and intellectual freedom. It stands as a testament to the fact that learning happens everywhere, not just within the four walls of a classroom.
-                </p>
-
-                <div className="pt-8 border-t border-gray-100 flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-full bg-[#f0f7ff] flex items-center justify-center text-2xl">🏛️</div>
-                  <div>
-                    <p className="font-playfair font-bold text-gray-900 text-xl">VMLS Community Hub</p>
-                    <p className="text-sm text-gray-500 font-medium italic">Fostering connections and creative dialogue.</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -113,17 +99,17 @@ export default function AtriumPage() {
               {[
                 {
                   title: "Natural Light",
-                  desc: "Expansive glass facades and skylights ensure the space is perpetually bathed in natural sunlight, enhancing well-being.",
+                  desc: "Natural light bathes the area, creating a bright and energizing environment that enhances student efficiency.",
                   image: "/images/atrium3.webp"
                 },
                 {
                   title: "Collaborative Zones",
-                  desc: "Dedicated seating arrangements and informal meeting spots designed specifically for group discussions and peer learning.",
+                  desc: "The thoughtful arrangement of tables and chairs allows for both individual study and collaborative work, ensuring that students can find a space that suits their learning style.",
                   image: "/images/atrium1.webp"
                 },
                 {
-                  title: "Event Versatility",
-                  desc: "A spacious open-plan layout capable of hosting everything from guest lectures and exhibitions to cultural festivals.",
+                  title: "Accessible Pathways",
+                  desc: "With a wide aisle and unobstructed pathways, the atrium is highly accessible, allowing for easy movement and interaction among students.",
                   image: "/images/atrium2.webp"
                 }
               ].map((feature, i) => (

@@ -12,8 +12,10 @@ export default function MootCourtPage() {
       <main className="flex-grow">
         {/* Breadcrumbs */}
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
+          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium flex-wrap">
             <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
+            <span className="text-gray-300 font-light">/</span>
+            <Link href="/infrastructure" className="text-gray-500 hover:text-[#a31f34] transition-colors">Infrastructure</Link>
             <span className="text-gray-300 font-light">/</span>
             <span className="text-[#a31f34] font-semibold">Moot Court</span>
           </div>
@@ -76,24 +78,39 @@ export default function MootCourtPage() {
               
               <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
                 <p>
-                  The VMLS Moot Court is a state-of-the-art facility designed to simulate real-world legal proceedings, providing students with a practical environment to develop their advocacy skills. Professional Setup boasts a professional moot court setup, complete with a well-organized seating arrangement that mirrors an actual courtroom, enhancing the realism of the simulation.
-                </p>
-                
-                <p>
-                  The facility serves as an educational platform where law students can practice and improve their legal argumentation, case analysis, and public speaking abilities. Equipped with modern technology to record proceedings, it allows for later review and critique, which is essential for the students&apos; learning process.
-                </p>
-                
-                <p>
-                  It also acts as a venue for hosting moot court competitions, inviting participation from various law schools, thereby fostering a competitive yet collaborative learning environment. The VMLS Moot Court is a testament to the institution&apos;s commitment to providing a comprehensive legal education that extends beyond theoretical knowledge to include essential practical experiences.
+                  The VMLS Moot Court is a state-of-the-art facility designed to simulate real-world legal proceedings, providing students with a practical environment to develop their advocacy skills. Here&apos;s a formal overview of the moot court:
                 </p>
 
-                <div className="pt-8 border-t border-gray-100 flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-full bg-[#efebe9] flex items-center justify-center text-2xl">⚖️</div>
+                <div className="space-y-5">
                   <div>
-                    <p className="font-playfair font-bold text-gray-900 text-xl">Legal Skills Development</p>
-                    <p className="text-sm text-gray-500 font-medium italic">Empowering future advocates of justice.</p>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Professional Setup</h3>
+                    <p>
+                      VMLS boasts a professional moot court setup, complete with a well-organized seating arrangement that mirrors an actual courtroom, enhancing the realism of the simulation.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Educational Tool</h3>
+                    <p>
+                      The moot court serves as an educational platform where law students can practice and improve their legal argumentation, case analysis, and public speaking abilities.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Technological Advancements</h3>
+                    <p>
+                      The facility is equipped with modern technology to record proceedings, allowing for later review and critique, which is essential for the students&apos; learning process.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Community Engagement</h3>
+                    <p>
+                      It also acts as a venue for hosting moot court competitions, inviting participation from various law schools, thereby fostering a competitive yet collaborative learning environment.
+                    </p>
                   </div>
                 </div>
+
+                <p>
+                  The VMLS Moot Court is a testament to the institution&apos;s commitment to providing a comprehensive legal education that extends beyond theoretical knowledge to include essential practical experiences.
+                </p>
               </div>
             </div>
           </div>
@@ -113,17 +130,17 @@ export default function MootCourtPage() {
               {[
                 {
                   title: "Professional Setup",
-                  desc: "A meticulously organized courtroom simulation with judge benches and counsel stations that mirror real judicial settings.",
+                  desc: "VMLS boasts a professional moot court setup, complete with a well-organized seating arrangement that mirrors an actual courtroom, enhancing the realism of the simulation.",
                   image: "/images/mcourt1.webp"
                 },
                 {
-                  title: "Technological Edge",
-                  desc: "Integrated recording and playback systems for detailed critique of oral arguments and courtroom etiquette.",
+                  title: "Technological Advancements",
+                  desc: "The facility is equipped with modern technology to record proceedings, allowing for later review and critique, which is essential for the students' learning process.",
                   image: "/images/mcourt3.webp"
                 },
                 {
-                  title: "Community Venue",
-                  desc: "A premier hub for hosting regional and national moot court competitions, fostering a vibrant legal community.",
+                  title: "Community Engagement",
+                  desc: "It also acts as a venue for hosting moot court competitions, inviting participation from various law schools, thereby fostering a competitive yet collaborative learning environment.",
                   image: "/images/mcourt2.webp"
                 }
               ].map((feature, i) => (

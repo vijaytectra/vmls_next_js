@@ -293,15 +293,15 @@ export default function FacultyGrid() {
             </div>
 
             {/* Details — flex-1 keeps every card equal height */}
-            <div className="w-full px-3 py-2 md:px-4 md:py-3 text-center flex flex-col items-center gap-0.5 flex-1">
-              <h3 className="font-playfair text-sm md:text-base font-bold text-[#1a1a1a] leading-tight text-center">
+            <div className="w-full px-3 pb-5 md:px-5 md:pb-7 text-center flex flex-col items-center flex-1">
+              <h3 className="font-playfair text-sm md:text-xl font-bold text-[#1a1a1a] mb-0 md:mb-0.5 leading-tight min-h-[2.25rem] md:min-h-[2.75rem] flex items-center justify-center text-center">
                 {member.name}
               </h3>
-              <p className="font-inter text-[10px] md:text-xs font-bold text-[#a31f34] uppercase tracking-normal leading-tight text-center">
+              <p className="font-inter text-[10px] md:text-xs font-bold text-[#a31f34] uppercase tracking-normal mb-0.5 leading-snug min-h-[1.5rem] md:min-h-[1.8rem] flex items-center justify-center text-center">
                 {member.role}
               </p>
               {member.qualifications ? (
-                <p className="font-inter text-[10px] md:text-[11px] text-gray-500 leading-tight text-center border-t border-gray-100 pt-1 mt-auto">
+                <p className="font-inter text-[10px] md:text-[11px] text-gray-500 leading-snug tracking-normal max-w-[95%] border-t border-gray-100 pt-1.5 mt-0.5 text-left md:text-center !text-left md:!text-center [word-spacing:normal] [letter-spacing:normal] line-clamp-2 md:line-clamp-none">
                   {member.qualifications}
                 </p>
               ) : (

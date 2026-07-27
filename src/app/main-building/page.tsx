@@ -12,8 +12,10 @@ export default function MainBuildingPage() {
       <main className="flex-grow">
         {/* Breadcrumbs */}
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
+          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium flex-wrap">
             <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
+            <span className="text-gray-300 font-light">/</span>
+            <Link href="/infrastructure" className="text-gray-500 hover:text-[#a31f34] transition-colors">Infrastructure</Link>
             <span className="text-gray-300 font-light">/</span>
             <span className="text-[#a31f34] font-semibold">Main Building</span>
           </div>
@@ -27,11 +29,11 @@ export default function MainBuildingPage() {
                 <span className="inline-block w-12 h-[1px] bg-[#fbb03b] align-middle"></span>
                 <span className="font-inter text-[#fbb03b] text-xs font-bold uppercase tracking-[0.4em] mx-4">Our Campus</span>
               </div>
-              <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight uppercase tracking-tight">
-                Academic <span className="text-[#fbb03b]">Block</span>
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
+                Main <span className="text-[#fbb03b]">Building</span>
               </h1>
               <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
-                A grand architectural testament to order and efficiency, where functionality meets aesthetic precision.
+                A striking example of modern architecture, where functionality meets aesthetic precision.
               </p>
             </div>
             <div className="lg:w-[55%] relative min-h-[300px]">
@@ -76,24 +78,8 @@ export default function MainBuildingPage() {
               
               <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
                 <p>
-                  The main building of VMLS stands as a striking example of modern architecture, where functionality meets aesthetic precision. The clear lines and geometric forms of the structure embody the principles of modernity and order, reflecting an ethos of clarity and efficiency.
+                  The main building of VMLS stands as a striking example of modern architecture, where functionality meets aesthetic precision. The clear lines and geometric forms of the structure embody the principles of modernity and order, reflecting an ethos of clarity and efficiency. The brown brick facade offers a nod to traditional construction, while the white rectangular structure above the entrance signifies the school&apos;s forward-thinking vision. The white pillars at the entrance evoke a sense of grandeur, framing the gateway to knowledge. This blend of materials and design elements results in a building that is not only a place of learning but also a testament to the enduring influence of modern architectural philosophy.
                 </p>
-                
-                <p>
-                  The brown brick facade offers a nod to traditional construction, while the white rectangular structure above the entrance signifies the school&apos;s forward-thinking vision. The white pillars at the entrance evoke a sense of grandeur, framing the gateway to knowledge.
-                </p>
-                
-                <p>
-                  This blend of materials and design elements results in a building that is not only a place of learning but also a testament to the enduring influence of modern architectural philosophy, providing students with a structured yet inspiring environment.
-                </p>
-
-                <div className="pt-8 border-t border-gray-100 flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-full bg-[#f0fdf4] flex items-center justify-center text-2xl">🏛️</div>
-                  <div>
-                    <p className="font-playfair font-bold text-gray-900 text-xl">VMLS Academic Block</p>
-                    <p className="text-sm text-gray-500 font-medium italic">Building the foundations of legal excellence.</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

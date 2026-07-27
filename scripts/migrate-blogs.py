@@ -143,6 +143,31 @@ def rewrite_href(href: str) -> str:
         return "/blogs"
     if href in ("https://vmls.edu.in/", "https://vmls.edu.in", "/"):
         return "/"
+    # Site pages linked from articles with relative paths
+    page_map = {
+        "../Scholarships.html": "/scholarships",
+        "./Scholarships.html": "/scholarships",
+        "/Scholarships.html": "/scholarships",
+        "https://vmls.edu.in/Scholarships.html": "/scholarships",
+        "../llb-programme.html": "/admissions/llb",
+        "../llm-programme.html": "/admissions/llm",
+        "https://vmls.edu.in/llb-programme.html": "/admissions/llb",
+        "https://vmls.edu.in/llm-programme.html": "/admissions/llm",
+    }
+    if href in page_map:
+        return page_map[href]
+    m = re.match(r"^\.\./([A-Za-z0-9_-]+)\.html$", href)
+    if m:
+        name = m.group(1).lower()
+        if name == "scholarships":
+            return "/scholarships"
+        if name in ("llb-programme", "llb"):
+            return "/admissions/llb"
+        if name in ("llm-programme", "llm"):
+            return "/admissions/llm"
+        if name == "index":
+            return "/"
+        return f"/blogs/{m.group(1)}"
     return href
 
 
@@ -210,7 +235,23 @@ def extract_static_body(html: str, slug: str) -> tuple[str, dict]:
 def strip_chrome(html: str) -> str:
     html = re.sub(r"<script[\s\S]*?</script>", "", html, flags=re.I)
     html = re.sub(r"<style[\s\S]*?</style>", "", html, flags=re.I)
-    html = re.sub(r"<figure[\s\S]*?</figure>", "", html, flags=re.I)
+
+    # WordPress wraps tables in <figure class="wp-block-table"> — keep those tables.
+    # Only strip image/gallery figures (decorative chrome), not table figures.
+    def figure_repl(m: re.Match) -> str:
+        block = m.group(0)
+        if re.search(r"<table\b", block, re.I):
+            # Unwrap: keep inner table (+ optional figcaption as a paragraph)
+            table = re.search(r"(<table[\s\S]*?</table>)", block, re.I)
+            cap = re.search(r"<figcaption[^>]*>([\s\S]*?)</figcaption>", block, re.I)
+            out = table.group(1) if table else block
+            if cap and text_clean(cap.group(1)):
+                out += f"<p><em>{text_clean(cap.group(1))}</em></p>"
+            return out
+        return ""
+
+    html = re.sub(r"<figure\b[\s\S]*?</figure>", figure_repl, html, flags=re.I)
+
     # social share / view counters
     html = re.sub(r'<div class="social-share"[\s\S]*?</div>', "", html, flags=re.I)
     html = re.sub(r'id="blogs-inner-autor"[\s\S]*?</div>\s*</div>', "", html, flags=re.I)

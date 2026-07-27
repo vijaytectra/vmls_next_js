@@ -220,15 +220,21 @@ export default function InternshipAndCareerServices() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-8 items-center justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-5 md:gap-8 items-center justify-items-center">
               {Array.from({ length: 21 }, (_, i) => (
-                <div key={i} className="relative w-full aspect-[3/2] flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300">
+                <div
+                  key={i}
+                  className="relative w-full max-w-[160px] h-[100px] md:h-[110px] flex items-center justify-center p-2 bg-white"
+                >
                   <Image
-                    src={`/images/logo/${i + 1}.webp`}
-                    alt={`Partner Logo ${i + 1}`}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 14vw"
+                    src={`/images/career/partners/${i + 1}.png`}
+                    alt={`Internship partner ${i + 1}`}
+                    width={360}
+                    height={360}
+                    quality={100}
+                    className="w-full h-full object-contain"
+                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 22vw, 160px"
+                    unoptimized
                   />
                 </div>
               ))}

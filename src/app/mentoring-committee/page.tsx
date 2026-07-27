@@ -116,6 +116,9 @@ export default function MentoringCommitteePage() {
               ))}
             </div>
 
+            <p className="mt-10 md:mt-12 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+              These are some of the identified and agreed upon areas where the current mentorship framework comes to the aid of VMLS students in their learning and progression. We are also exploring further means and mechanisms within the extremely supportive environment offered by JGLS for VMLS&apos; growth and expansion, for the benefit of our students and faculty.
+            </p>
           </div>
         </div>
       </section>
