@@ -28,17 +28,17 @@ export default function CollaborationSection() {
       <div className="space-y-6 md:space-y-8">
         {/* Row 1: Scrolling Left */}
         <div className="relative w-full overflow-hidden">
-          <div className="animate-marquee flex items-center gap-8 sm:gap-12 md:gap-20 py-2 w-max">
+          <div className="animate-marquee flex items-center gap-3 sm:gap-8 md:gap-20 py-2 w-max">
             {marquee1.map((src, index) => (
               <div 
                 key={`r1-${index}`} 
-                className="flex-shrink-0 w-24 sm:w-32 md:w-44 h-14 sm:h-16 md:h-20 relative cursor-pointer group"
+                className="flex-shrink-0 w-[7.25rem] sm:w-32 md:w-44 h-14 sm:h-16 md:h-20 relative cursor-pointer group"
               >
                 <Image
                   src={src}
                   alt={`Partner Logo Row 1 - ${index}`}
                   fill
-                  sizes="(max-width: 768px) 96px, 176px"
+                  sizes="(max-width: 640px) 116px, (max-width: 768px) 128px, 176px"
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
@@ -51,17 +51,17 @@ export default function CollaborationSection() {
 
         {/* Row 2: Scrolling Right */}
         <div className="relative w-full overflow-hidden">
-          <div className="animate-marquee-reverse flex items-center gap-8 sm:gap-12 md:gap-20 py-2 w-max">
+          <div className="animate-marquee-reverse flex items-center gap-3 sm:gap-8 md:gap-20 py-2 w-max">
             {marquee2.map((src, index) => (
               <div 
                 key={`r2-${index}`} 
-                className="flex-shrink-0 w-24 sm:w-32 md:w-44 h-14 sm:h-16 md:h-20 relative cursor-pointer group"
+                className="flex-shrink-0 w-[7.25rem] sm:w-32 md:w-44 h-14 sm:h-16 md:h-20 relative cursor-pointer group"
               >
                 <Image
                   src={src}
                   alt={`Partner Logo Row 2 - ${index}`}
                   fill
-                  sizes="(max-width: 768px) 96px, 176px"
+                  sizes="(max-width: 640px) 116px, (max-width: 768px) 128px, 176px"
                   className="object-contain transition-transform duration-300 group-hover:scale-110"
                 />
               </div>

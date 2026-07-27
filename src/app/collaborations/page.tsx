@@ -36,7 +36,7 @@ export default function CollaborationsPage() {
               <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl mb-6 leading-tight font-bold">
                 Collaborations
               </h1>
-              <p className="font-inter text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium">
+              <p className="font-inter text-base sm:text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium text-left !text-left [word-spacing:normal] [hyphens:none] hyphens-none">
                 Fostering global and national partnerships to elevate legal education and practice.
               </p>
             </div>
@@ -51,19 +51,19 @@ export default function CollaborationsPage() {
             Institutional
           </h2>
           <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-            <div className="flex w-max animate-marquee-continuous gap-6 sm:gap-12 items-center">
+            <div className="flex w-max animate-marquee-continuous gap-3 sm:gap-8 md:gap-12 items-center">
               {[...Array(2)].map((_, copy) => (
-                <div key={copy} className="flex gap-6 sm:gap-12 items-center shrink-0">
+                <div key={copy} className="flex gap-3 sm:gap-8 md:gap-12 items-center shrink-0">
                   {Array.from({ length: 21 }, (_, i) => (
                     <div
                       key={i}
-                      className="relative w-[160px] h-[80px] md:w-[196px] md:h-[98px] shrink-0"
+                      className="relative w-[120px] h-[64px] sm:w-[140px] sm:h-[72px] md:w-[196px] md:h-[98px] shrink-0"
                     >
                       <Image
                         src={`/images/collab/logos/${i + 1}.webp`}
                         alt="Partner logo"
                         fill
-                        sizes="(max-width: 768px) 160px, 196px"
+                        sizes="(max-width: 640px) 120px, (max-width: 768px) 140px, 196px"
                         className="object-contain"
                         unoptimized
                       />

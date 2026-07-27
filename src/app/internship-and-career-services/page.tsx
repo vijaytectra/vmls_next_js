@@ -44,7 +44,7 @@ export default function InternshipAndCareerServices() {
         <section className="pt-10 pb-6 px-[5%] bg-white">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-start">
             {/* Image and Title Side */}
-            <div className="w-full md:w-1/3 flex flex-col items-center text-center">
+            <div className="w-full md:w-1/3 flex flex-col items-start text-left md:items-center md:text-center">
               <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden shadow-xl mb-6">
                 <Image
                   src="/images/career/dean_raja_01.JPEG"
@@ -54,11 +54,13 @@ export default function InternshipAndCareerServices() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Mr. Siddharth Raja</h3>
-              <p className="font-inter text-[#800000] font-semibold text-sm">
+              <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2 w-full text-left md:text-center">
+                Mr. Siddharth Raja
+              </h3>
+              <div className="font-inter text-[#800000] font-semibold text-sm w-full text-left md:text-center">
                 Executive Dean,<br />
                 Career Services and Placements (Incharge)
-              </p>
+              </div>
             </div>
 
             {/* Message Text Side */}

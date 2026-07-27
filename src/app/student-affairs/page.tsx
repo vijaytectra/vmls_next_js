@@ -49,11 +49,11 @@ export default function StudentAffairsPage() {
               <div className="w-12 h-[1px] bg-white/30" />
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/70">Campus Life</span>
             </div>
-            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Student <br /> <span className="text-[#fbb03b]">Affairs</span>
+            <h1 className="font-playfair text-[1.75rem] sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight whitespace-nowrap">
+              Student <span className="text-[#fbb03b]">Affairs</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
-              Law school is more than just books and briefs—it&apos;s about building the future together.
+            <p className="font-inter text-base sm:text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left !text-left [word-spacing:normal]">
+              Law school is more than just books and briefs - it&apos;s about building the future together.
             </p>
           </div>
           <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
@@ -74,7 +74,7 @@ export default function StudentAffairsPage() {
       <section className="py-8 md:py-12 px-[5%] bg-white text-center">
         <div className="max-w-5xl mx-auto">
           <h2 className="font-playfair text-2xl md:text-4xl text-gray-900 leading-tight mb-8">
-            Law school is more than just books and briefs—it&apos;s about{" "}
+            Law school is more than just books and briefs - it&apos;s about{" "}
             <span className="text-[#a31f34] italic font-bold text-3xl md:text-5xl block mt-2">
               building the future together.
             </span>

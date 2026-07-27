@@ -237,33 +237,39 @@ html {
   scrollbar-width: none;  /* Firefox */
 }
 
-/* Prevent ugly large spacing gaps in justified text on mobile viewports while keeping it beautifully aligned */
+/* Mobile: never stretch word spacing — justify creates rivers on narrow screens */
 @media (max-width: 767px) {
   .text-justify {
-    text-align: justify !important;
-    text-justify: inter-word;
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-    word-break: normal;
-    overflow-wrap: normal;
-    text-wrap: pretty;
+    text-align: left !important;
+    text-align-last: auto !important;
+    text-justify: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
   }
 }
 
-/* Enforce premium, high-density justified layout for blog articles and institutional pages without large word gaps on mobile */
-.blog-content-container,
-.gapless-justify {
-  text-align: justify !important;
-  text-justify: inter-word;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  word-break: normal;
-  overflow-wrap: normal;
-  text-wrap: pretty;
+/* Desktop/tablet: justified blog & institutional body copy */
+@media (min-width: 768px) {
+  .blog-content-container,
+  .gapless-justify {
+    text-align: justify !important;
+    text-align-last: left !important;
+    text-justify: auto;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-wrap: pretty;
+  }
 }
 
 /* Migrated live blog HTML — keep content fidelity, apply localhost visual language */
@@ -345,7 +351,10 @@ html {
 /* Mobile: keep wide tables readable via horizontal scroll without breaking layout */
 @media (max-width: 767px) {
   .blog-article-content .blog-html {
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    hyphens: none;
   }
 
   .blog-article-content .blog-html table {
@@ -586,36 +595,176 @@ html {
   color: #1a1a1a !important;
 }
 
-/* Global Premium Justification for all standard content copy paragraphs across the site */
-main section p:not(.text-center):not(.text-left):not(.text-right) {
-  text-align: justify !important;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  word-break: normal;
-  overflow-wrap: normal;
-  text-wrap: pretty;
+/* Global Premium Justification — desktop/tablet only (mobile uses left, no word rivers) */
+@media (min-width: 768px) {
+  main section p:not(.text-center):not(.text-left):not(.text-right),
+  main article p:not(.text-center):not(.text-left):not(.text-right) {
+    text-align: justify !important;
+    text-align-last: left !important;
+    text-justify: auto;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 6 3 3;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-wrap: pretty;
+  }
 }
 
-/* Preserving explicit layout alignments for centered/left/right containers and cards.
-   Must beat `main section p` justify (!important) at any nesting depth — narrow cards
-   otherwise get huge word gaps from inter-word justification. */
-p.text-center,
-.text-center p {
-  text-align: center !important;
-}
-
-p.text-left,
-.text-left p {
-  text-align: left !important;
-  text-justify: auto;
+/* Headings / short labels stay left unless explicitly centered */
+main section h1,
+main section h2,
+main section h3,
+main section h4,
+main section h5,
+main section h6,
+main article h1,
+main article h2,
+main article h3,
+main article h4 {
+  text-align: inherit;
+  -webkit-hyphens: manual;
+  hyphens: manual;
   word-spacing: normal;
+}
+
+/* Preserving explicit layout alignments for centered containers (nav labels, hero titles).
+   Body paragraphs inside .text-center still justify on mobile (see mobile block below). */
+main section p.text-center,
+main section .text-center > p.text-center,
+p.text-center {
+  text-align: center !important;
+  -webkit-hyphens: manual !important;
+  hyphens: manual !important;
+  word-spacing: normal !important;
+}
+
+main section .text-center > h1,
+main section .text-center > h2,
+main section .text-center > h3,
+main section .text-center > h4,
+main section .text-center h1,
+main section .text-center h2,
+main section .text-center h3,
+main section .text-center h4,
+.text-center h1,
+.text-center h2,
+.text-center h3,
+.text-center h4 {
+  text-align: center !important;
+  word-spacing: normal !important;
 }
 
 p.text-right,
 .text-right p {
   text-align: right !important;
+  word-spacing: normal !important;
+}
+
+/* Desktop: keep explicit left alignments for narrow cards where justify would look sparse */
+@media (min-width: 768px) {
+  p.text-left,
+  .text-left p {
+    text-align: left !important;
+    text-justify: auto;
+    word-spacing: normal;
+  }
+
+  main section .text-center p:not(.text-left):not(.text-right) {
+    text-align: center !important;
+    word-spacing: normal !important;
+  }
+}
+
+/*
+ * Mobile phones: no justified word rivers, no mid-word hyphenation.
+ * Whole words wrap only; spacing stays natural across the entire site.
+ */
+@media (max-width: 767px) {
+  html,
+  body {
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    word-spacing: normal !important;
+  }
+
+  p,
+  li,
+  td,
+  th,
+  .text-justify,
+  .text-justify p,
+  .blog-content-container,
+  .blog-content-container p,
+  .blog-content-container li,
+  .gapless-justify,
+  .gapless-justify p,
+  .gapless-justify-tamil,
+  .blog-article-content .blog-html,
+  .blog-article-content .blog-html p,
+  .blog-article-content .blog-html li,
+  main section p,
+  main article p,
+  main section li,
+  main article li,
+  p.text-left,
+  .text-left p,
+  .text-center > p {
+    text-align: left !important;
+    text-align-last: auto !important;
+    text-justify: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    word-wrap: normal !important;
+  }
+
+  /* Keep intentional centered UI */
+  .text-center > h1,
+  .text-center > h2,
+  .text-center > h3,
+  .text-center > h4,
+  .text-center > span,
+  h1.text-center,
+  h2.text-center,
+  h3.text-center,
+  p.text-center,
+  footer p,
+  header p {
+    text-align: center !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+  }
+
+  p.text-right,
+  .text-right p {
+    text-align: right !important;
+    word-spacing: normal !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+  }
 }
 
 /* Site-wide mobile safety: no horizontal page scroll; touch-friendly targets */
@@ -655,11 +804,5 @@ body {
   .overflow-x-auto > table td {
     padding: 0.65rem 0.75rem;
     white-space: nowrap;
-  }
-}
-
-@media (max-width: 379px) {
-  main section p:not(.text-center):not(.text-left):not(.text-right) {
-    text-align: left !important;
   }
 }
