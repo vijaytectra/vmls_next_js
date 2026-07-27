@@ -29,7 +29,7 @@ export default function InfrastructureSection() {
             <Link
               key={item.href}
               href={item.href}
-              className="group relative h-[280px] md:h-[320px] overflow-hidden bg-white shadow-[0_16px_32px_-12px_rgba(0,0,0,0.28)]"
+              className="group relative h-[240px] sm:h-[280px] md:h-[320px] overflow-hidden bg-white shadow-[0_16px_32px_-12px_rgba(0,0,0,0.28)]"
             >
               <video
                 ref={(el) => {
@@ -49,14 +49,14 @@ export default function InfrastructureSection() {
               <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors duration-500" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-              <div className="absolute inset-0 p-6 md:p-7 flex flex-col justify-end">
-                <h3 className="font-playfair text-white text-2xl md:text-3xl leading-tight mb-2">
+              <div className="absolute inset-0 p-5 sm:p-6 md:p-7 flex flex-col justify-end">
+                <h3 className="font-playfair text-white text-xl sm:text-2xl md:text-3xl leading-tight mb-2">
                   {item.title}
                 </h3>
-                <p className="font-inter text-gray-200 text-sm leading-relaxed line-clamp-3 mb-4 opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-24 transition-all duration-500 overflow-hidden">
+                <p className="font-inter text-gray-200 text-sm leading-relaxed line-clamp-3 mb-3 sm:mb-4 opacity-100 max-h-24 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:max-h-0 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-hover:max-h-24 transition-all duration-500 overflow-hidden">
                   {item.shortDescription}
                 </p>
-                <div className="flex items-center gap-3 text-white font-inter text-xs font-bold uppercase tracking-widest">
+                <div className="flex items-center gap-3 text-white font-inter text-xs font-bold uppercase tracking-widest min-h-[44px]">
                   <span>Read More</span>
                   <span className="w-8 h-[1px] bg-white transition-all group-hover:w-12" />
                 </div>

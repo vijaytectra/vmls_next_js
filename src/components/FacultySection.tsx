@@ -32,7 +32,7 @@ export default function FacultySection() {
 
               <div className="mt-12">
                 <Link href="/faculty-profiles">
-                  <button className="px-10 py-4 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-xl hover:-translate-y-1">
+                  <button className="w-full sm:w-auto min-h-[48px] px-8 sm:px-10 py-3.5 sm:py-4 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-xl hover:-translate-y-1">
                     View All Faculty
                   </button>
                 </Link>

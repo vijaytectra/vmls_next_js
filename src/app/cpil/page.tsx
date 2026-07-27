@@ -35,7 +35,7 @@ export default function CPILPage() {
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100 overflow-hidden">
         <div className="flex flex-col lg:flex-row min-h-[350px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white relative z-10">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white relative z-10">
             <h1 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Centre for the Promotion <br /><span className="text-[#fbb03b]">of International Law</span>
             </h1>

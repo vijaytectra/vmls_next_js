@@ -10,7 +10,7 @@ export default function MentoringKeyMembers() {
   return (
     <section className="pb-8 px-[5%] bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {keyMembers.map((member, index) => (
             <Link
               key={member.slug}

@@ -689,21 +689,21 @@ export default function BlogsPage() {
     <main className="min-h-screen bg-[#f5f3ef]">
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <nav className="flex items-center gap-2 text-[#fbb03b] mb-8 font-bold uppercase tracking-widest text-xs">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
               <span className="text-white/30">/</span>
               <span>Blogs</span>
             </nav>
-            <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               VMLS <span className="text-[#fbb03b]">Blogs</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
+            <p className="font-inter text-base sm:text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
               Insights, academic perspectives, and legal discourse from the Vinayaka Mission&apos;s Law School community.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/career-about-img.webp"
               alt="VMLS Blogs"

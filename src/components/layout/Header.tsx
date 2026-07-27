@@ -128,12 +128,12 @@ export default function Header() {
             </button>
           </div>
 
-          <div className="flex-1 overflow-y-auto px-8 pt-6 pb-0">
+          <div className="flex-1 overflow-y-auto overscroll-contain px-5 sm:px-8 pt-4 sm:pt-6 pb-8">
             <div className="space-y-1">
               {menuItems.map((item, index) => (
                 <div key={index} className="flex flex-col border-b border-gray-50 last:border-0">
                   <div
-                    className="group py-3.5 flex justify-between items-center hover:pl-2 transition-all duration-300 cursor-pointer"
+                    className="group py-3.5 min-h-[48px] flex justify-between items-center hover:pl-2 transition-all duration-300 cursor-pointer"
                     onClick={() => (item.hasDropdown ? toggleDropdown(item.name) : closeMenu())}
                   >
                     {item.href ? (
@@ -327,7 +327,7 @@ export default function Header() {
                 if (isMenuOpen) closeMenu();
                 else openMenu();
               }}
-              className="relative z-[3001] group flex items-center gap-2 md:gap-3 bg-[#a31f34] text-white px-3 md:px-6 py-2 md:py-3 rounded-full font-inter font-bold text-[10px] md:text-sm uppercase tracking-[0.15em] transition-all duration-500 hover:bg-[#801829] hover:shadow-[0_15px_30px_rgba(163,31,52,0.3)] hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)] active:scale-95 border border-[#fbb03b]/20 mr-2 md:mr-6"
+              className="relative z-[3001] group flex items-center justify-center gap-2 md:gap-3 bg-[#a31f34] text-white min-h-[44px] min-w-[44px] px-3.5 md:px-6 py-2.5 md:py-3 rounded-full font-inter font-bold text-[10px] md:text-sm uppercase tracking-[0.15em] transition-all duration-500 hover:bg-[#801829] hover:shadow-[0_15px_30px_rgba(163,31,52,0.3)] hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)] active:scale-95 border border-[#fbb03b]/20 mr-2 md:mr-6"
             >
               <span className="flex flex-col gap-1 md:gap-1.5 w-5 md:w-6 h-3 md:h-4 justify-center items-center pointer-events-none">
                 <span className="block h-0.5 w-full bg-white rounded-full group-hover:bg-[#fbb03b] transition-all duration-300"></span>

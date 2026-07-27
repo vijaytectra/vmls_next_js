@@ -17,8 +17,8 @@ export default function ClashesOfMasculinityPage() {
 
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Clashes of <br />
               <span className="text-[#fbb03b]">Masculinity</span>
@@ -27,7 +27,7 @@ export default function ClashesOfMasculinityPage() {
               A guest lecture exploring masculine identities across urban and rural India, delivered by Dr. Shannon Philip, University of Cambridge.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/news/masculinity/Masculinity_01.jpg"
               alt="Guest lecture on Clashes of Masculinity in Urban and Rural India"

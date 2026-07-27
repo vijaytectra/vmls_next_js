@@ -17,8 +17,8 @@ export default function LibraryMembershipPage() {
 
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-[1px] bg-white/30"></div>
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/70">Join the Library</span>
@@ -30,7 +30,7 @@ export default function LibraryMembershipPage() {
               Become a part of the VMLS Law Library community to access our extensive digital databases, physical collections, and premium research services.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/library/library5.webp"
               alt="VMLS Library Membership"

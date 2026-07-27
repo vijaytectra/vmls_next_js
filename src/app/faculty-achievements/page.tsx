@@ -38,16 +38,16 @@ export default function FacultyAchievementsPage() {
 
       {/* Hero Section - Matching Internship Style */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-nowrap">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-normal lg:whitespace-nowrap">
               Faculty <span className="text-[#fbb03b]">Achievements</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
               Celebrating the academic excellence, research impact, and professional recognitions of our distinguished faculty members who are shaping the future of legal education.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/Frame89.webp"
               alt="VMLS Faculty Achievements"
@@ -64,7 +64,7 @@ export default function FacultyAchievementsPage() {
       {/* Section: Research Impact */}
       <section className="py-20 px-[5%] bg-white relative">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-16">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
             <div className="md:w-1/2">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-[2px] bg-[#a31f34]"></div>

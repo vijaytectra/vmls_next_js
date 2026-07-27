@@ -17,7 +17,7 @@ export default function ContactUsPage() {
       </nav>
 
       {/* Hero Header with Background Image */}
-      <header className="relative py-20 md:py-32 px-[5%] overflow-hidden">
+      <header className="relative py-14 sm:py-20 md:py-32 px-[5%] overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/vmls/frame-1@3x.webp"
@@ -33,18 +33,18 @@ export default function ContactUsPage() {
           <span className="inline-block px-4 py-1.5 bg-[#fbb03b] text-black text-xs font-bold uppercase tracking-widest rounded-full mb-6">
             Get In Touch
           </span>
-          <h1 className="font-playfair text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="font-playfair text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6">
             Contact <span className="text-[#fbb03b]">Us</span>
           </h1>
-          <p className="font-inter text-gray-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+          <p className="font-inter text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
             Have questions about admissions, programs, or campus life? We're here to help you navigate your journey at VMLS.
           </p>
         </div>
       </header>
 
       {/* Main Contact Section */}
-      <section className="py-16 md:py-24 px-[5%]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+      <section className="py-12 sm:py-16 md:py-24 px-[5%]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24">
           
           {/* Left: Contact Info */}
           <div className="space-y-16">
@@ -105,7 +105,7 @@ export default function ContactUsPage() {
           {/* Right: Visuals */}
           <div className="space-y-12">
             {/* Campus Image */}
-            <div className="relative aspect-video md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group">
+            <div className="relative aspect-[4/3] sm:aspect-video md:aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group">
               <Image
                 src="/images/vmrf/vmrf-header.webp"
                 alt="VMLS Campus Building"
@@ -121,7 +121,7 @@ export default function ContactUsPage() {
             </div>
 
             {/* Map Snippet */}
-            <div className="relative aspect-[21/9] md:aspect-video rounded-3xl overflow-hidden shadow-xl border border-gray-100 group">
+            <div className="relative aspect-[16/10] sm:aspect-[21/9] md:aspect-video rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-gray-100 group">
                <iframe 
                 src={mapEmbedUrl}
                 width="100%" 

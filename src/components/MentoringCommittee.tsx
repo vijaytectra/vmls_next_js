@@ -44,7 +44,7 @@ export default function MentoringCommittee() {
 
               <div className="mt-12">
                 <Link href="/mentoring-committee">
-                  <button className="px-10 py-4 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-xl hover:-translate-y-1">
+                  <button className="w-full sm:w-auto min-h-[48px] px-8 sm:px-10 py-3.5 sm:py-4 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-xl hover:-translate-y-1">
                     Know More Details
                   </button>
                 </Link>
@@ -55,14 +55,14 @@ export default function MentoringCommittee() {
 
         {/* Right Side: Image Grid */}
         <div className="flex-1 w-full max-w-[600px]">
-          <div className="grid grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6">
             {committeeMembers.map((src, index) => (
               <div key={index} className="aspect-square relative overflow-hidden bg-white shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group">
                 <Image
                   src={src}
                   alt={`Committee Member ${index + 1}`}
                   fill
-                  sizes="(max-width: 768px) 33vw, (max-width: 1200px) 200px, 200px"
+                  sizes="(max-width: 768px) 30vw, (max-width: 1200px) 200px, 200px"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-[#a31f34] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>

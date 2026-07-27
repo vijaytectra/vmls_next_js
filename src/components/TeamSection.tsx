@@ -34,16 +34,16 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <section className="pt-0 pb-24 px-[5%] bg-gray-50/30">
+    <section className="pt-0 pb-12 sm:pb-16 md:pb-24 px-[5%] bg-gray-50/30">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center mb-12">
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-2 flex items-center gap-2">
+        <div className="flex flex-col items-center mb-8 sm:mb-12">
+          <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-2 flex items-center gap-2">
             Team<span className="text-[#800000]">@VMLS</span>
           </h2>
           <div className="w-16 h-1 bg-[#800000]"></div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-4 md:gap-8 lg:gap-10">
           {teamMembers.map((member, index) => (
             <Link 
               key={index} 

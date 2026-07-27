@@ -51,9 +51,9 @@ export default function CollaborationsPage() {
             Institutional
           </h2>
           <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-            <div className="flex w-max animate-marquee-continuous gap-12 items-center">
+            <div className="flex w-max animate-marquee-continuous gap-6 sm:gap-12 items-center">
               {[...Array(2)].map((_, copy) => (
-                <div key={copy} className="flex gap-12 items-center shrink-0">
+                <div key={copy} className="flex gap-6 sm:gap-12 items-center shrink-0">
                   {Array.from({ length: 21 }, (_, i) => (
                     <div
                       key={i}

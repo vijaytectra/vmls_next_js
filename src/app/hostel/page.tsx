@@ -23,8 +23,8 @@ export default function HostelPage() {
 
         {/* Hero Section - Career Services Style */}
         <section className="relative w-full bg-white border-b border-gray-100">
-          <div className="flex flex-col lg:flex-row min-h-[450px]">
-            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+            <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <div className="mb-4">
                 <span className="inline-block w-12 h-[1px] bg-[#fbb03b] align-middle"></span>
                 <span className="font-inter text-[#fbb03b] text-xs font-bold uppercase tracking-[0.4em] mx-4">Living at VMLS</span>
@@ -36,7 +36,7 @@ export default function HostelPage() {
                 A comfortable and secure student environment, offering a home away from home for our diverse community.
               </p>
             </div>
-            <div className="lg:w-[55%] relative min-h-[300px]">
+            <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
               <Image
                 src="/images/hostel3.webp"
                 alt="VMLS Hostel Facility"
@@ -52,7 +52,7 @@ export default function HostelPage() {
 
         {/* Vision Section - Message Style */}
         <section className="pt-16 pb-12 px-[5%] bg-white">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start">
             {/* Feature Image Side */}
             <div className="w-full md:w-1/3 flex flex-col items-center text-center">
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl mb-8 border border-gray-100">

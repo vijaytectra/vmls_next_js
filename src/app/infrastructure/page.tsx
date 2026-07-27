@@ -23,8 +23,8 @@ export default function InfrastructurePage() {
         </nav>
 
         <section className="relative w-full bg-white border-b border-gray-100">
-          <div className="flex flex-col lg:flex-row min-h-[380px] md:min-h-[450px]">
-            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+            <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <div className="mb-4">
                 <span className="inline-block w-12 h-[1px] bg-[#fbb03b] align-middle" />
                 <span className="font-inter text-[#fbb03b] text-xs font-bold uppercase tracking-[0.4em] mx-4">
@@ -38,7 +38,7 @@ export default function InfrastructurePage() {
                 Explore eight world-class facilities designed to support academic excellence, practical training, and student life at VMLS.
               </p>
             </div>
-            <div className="lg:w-[55%] relative min-h-[280px]">
+            <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[280px]">
               <Image
                 src="/images/mb1.webp"
                 alt="VMLS Campus Infrastructure"

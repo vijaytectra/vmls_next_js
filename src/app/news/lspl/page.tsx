@@ -18,7 +18,7 @@ export default function LSPLPage() {
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-[400px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#1a1a1a] text-white">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#1a1a1a] text-white">
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Law School <br /><span className="text-[#fbb03b]">Premier League</span>
             </h1>
@@ -26,7 +26,7 @@ export default function LSPLPage() {
               Season 2 Launch - The ultimate sports arena. VMLS athletes gear up for a high-octane tournament that celebrates sportsmanship, strategy, and teamwork.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/studentaff/sports.webp"
               alt="LSPL Season 2"

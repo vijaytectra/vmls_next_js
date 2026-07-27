@@ -36,8 +36,8 @@ export default function CentresOfExcellenceSection() {
               <div 
                 className={`group relative aspect-square w-full bg-white shadow-[0_15px_40px_-20px_rgba(0,0,0,0.1)] hover:shadow-[0_30px_60px_-20px_rgba(0,0,0,0.15)] transition-all duration-500 hover:-translate-y-2 flex flex-col items-center justify-center overflow-hidden ${centre.href ? 'cursor-pointer' : ''}`}
               >
-                {/* Image Container */}
-                <div className="relative w-full h-full transition-all duration-500 group-hover:scale-110 group-hover:opacity-20">
+                {/* Image Container — dimmed on touch so label stays readable */}
+                <div className="relative w-full h-full transition-all duration-500 opacity-40 [@media(hover:hover)]:opacity-100 [@media(hover:hover)]:group-hover:scale-110 [@media(hover:hover)]:group-hover:opacity-20">
                   <Image
                     src={centre.image}
                     alt={centre.name}
@@ -48,15 +48,15 @@ export default function CentresOfExcellenceSection() {
                   />
                 </div>
                 
-                {/* Centre Name Overlay - Visible on Hover */}
-                <div className="absolute inset-0 flex items-center justify-center p-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0 text-center">
-                  <p className="font-playfair text-base md:text-lg text-[#a31f34] font-bold leading-tight">
+                {/* Centre Name — always on touch; hover-reveal on pointer devices */}
+                <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6 opacity-100 translate-y-0 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:translate-y-4 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-hover:translate-y-0 transition-all duration-500 text-center">
+                  <p className="font-playfair text-sm sm:text-base md:text-lg text-[#a31f34] font-bold leading-tight">
                     {centre.name}
                   </p>
                 </div>
 
                 {/* Bottom Accent Border */}
-                <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#a31f34] transition-all duration-500 group-hover:w-full"></div>
+                <div className="absolute bottom-0 left-0 w-full h-[3px] bg-[#a31f34] [@media(hover:hover)]:w-0 [@media(hover:hover)]:group-hover:w-full transition-all duration-500"></div>
                 
                 {/* Corner Accent */}
                 <div className="absolute top-0 right-0 w-0 h-0 border-t-[30px] border-t-[#a31f34]/0 border-l-[30px] border-l-transparent transition-all duration-500 group-hover:border-t-[#a31f34]/5"></div>

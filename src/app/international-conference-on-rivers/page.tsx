@@ -21,7 +21,7 @@ export default function InternationalConferencePage() {
         </nav>
 
         {/* Hero Section */}
-        <section className="relative px-[5%] py-16 md:py-24 lg:py-28 overflow-hidden min-h-[280px] md:min-h-[360px] flex items-end">
+        <section className="relative px-[5%] py-12 sm:py-16 md:py-24 lg:py-28 overflow-hidden min-h-[220px] sm:min-h-[280px] md:min-h-[360px] flex items-end">
           <div className="absolute inset-0 z-0">
             <Image
               src="/images/conf/pg-head.webp"

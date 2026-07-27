@@ -794,16 +794,16 @@ export default function BlogPost() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="bg-[#800000] text-white py-24 px-[5%]">
+      <section className="bg-[#800000] text-white py-12 sm:py-16 md:py-24 px-[5%]">
         <div className="max-w-7xl mx-auto">
-          <nav className="flex items-center gap-2 text-[#fbb03b] mb-8 font-bold uppercase tracking-widest text-xs">
+          <nav className="flex items-center gap-2 text-[#fbb03b] mb-6 sm:mb-8 font-bold uppercase tracking-widest text-xs">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span className="text-white/30">/</span>
             <Link href="/blogs" className="hover:text-white transition-colors">Blogs</Link>
             <span className="text-white/30">/</span>
-            <span className="truncate max-w-[200px] md:max-w-none">{post.title}</span>
+            <span className="truncate max-w-[45vw] sm:max-w-[200px] md:max-w-none">{post.title}</span>
           </nav>
-          <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="font-playfair text-2xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
             {post.title}
           </h1>
           <div className="flex flex-wrap items-center gap-6 text-white/80 py-4 border-y border-white/10">
@@ -826,10 +826,10 @@ export default function BlogPost() {
 
       <section className="px-[5%] py-10 md:py-16">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16">
           
           {/* Main Content Area */}
-          <article className="flex-grow lg:max-w-[55%]">
+          <article className="flex-grow lg:max-w-[55%] min-w-0">
             <header className="mb-8 hidden">
               <h1 className="font-playfair text-3xl md:text-5xl font-bold text-[#1a1a1a] mb-6 leading-tight">
                 {post.title}
@@ -890,7 +890,7 @@ export default function BlogPost() {
                   ))}
                 </div>
                 {post.lastUpdated && (
-                  <p className="text-sm text-gray-500 font-inter whitespace-nowrap">
+                  <p className="text-sm text-gray-500 font-inter whitespace-normal sm:whitespace-nowrap">
                     Last updated on {post.lastUpdated}
                   </p>
                 )}
@@ -943,8 +943,8 @@ export default function BlogPost() {
 
           {/* Sidebar - Top Articles */}
           <aside className="lg:w-[45%]">
-            <div className="sticky top-24 bg-[#fcfbf9] rounded-2xl border border-gray-100 p-8">
-              <h2 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-8 relative inline-block">
+            <div className="sticky top-24 bg-[#fcfbf9] rounded-2xl border border-gray-100 p-5 sm:p-8">
+              <h2 className="font-playfair text-xl sm:text-2xl font-bold text-[#1a1a1a] mb-6 sm:mb-8 relative inline-block">
                 Our Top <span className="text-[#a31f34]">Articles</span>
                 <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#a31f34]"></span>
               </h2>

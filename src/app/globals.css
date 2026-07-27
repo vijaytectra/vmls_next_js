@@ -218,6 +218,15 @@ html {
   }
 }
 
+/* Compact edge tabs on phones so they don’t dominate the viewport */
+@media (max-width: 767px) {
+  .vertical-edge-btn {
+    font-size: 0.68rem;
+    padding: 0.9rem 0.45rem;
+    letter-spacing: 0.04em;
+  }
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -331,6 +340,51 @@ html {
   border: 1px solid #e5e7eb;
   padding: 0.75rem;
   vertical-align: top;
+}
+
+/* Mobile: keep wide tables readable via horizontal scroll without breaking layout */
+@media (max-width: 767px) {
+  .blog-article-content .blog-html {
+    overflow-wrap: anywhere;
+  }
+
+  .blog-article-content .blog-html table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-article-content .blog-html th,
+  .blog-article-content .blog-html td {
+    padding: 0.55rem 0.65rem;
+    white-space: nowrap;
+  }
+
+  .blog-article-content .blog-html p,
+  .blog-article-content .blog-html li {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .blog-article-content .blog-html h2 {
+    font-size: 1.35rem;
+  }
+
+  .blog-article-content .blog-html h3 {
+    font-size: 1.2rem;
+  }
+
+  .blog-article-content .blog-html button.cta,
+  .blog-article-content .blog-html a.blog-cta-link {
+    min-height: 48px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .blog-article-content .blog-html thead th,
@@ -562,4 +616,50 @@ p.text-left,
 p.text-right,
 .text-right p {
   text-align: right !important;
+}
+
+/* Site-wide mobile safety: no horizontal page scroll; touch-friendly targets */
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+}
+
+@media (max-width: 1023px) {
+  main section table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .blog-article-content .blog-html table {
+    /* blog tables use their own mobile rules */
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .overflow-x-auto > table {
+    font-size: 0.875rem;
+  }
+
+  .overflow-x-auto > table th,
+  .overflow-x-auto > table td {
+    padding: 0.65rem 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 379px) {
+  main section p:not(.text-center):not(.text-left):not(.text-right) {
+    text-align: left !important;
+  }
 }

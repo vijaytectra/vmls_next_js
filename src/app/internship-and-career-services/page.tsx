@@ -17,8 +17,8 @@ export default function InternshipAndCareerServices() {
 
         {/* Hero Section */}
         <section className="relative w-full bg-white border-b border-gray-100">
-          <div className="flex flex-col lg:flex-row min-h-[450px]">
-            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+            <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
                 Internship and <span className="text-[#fbb03b]">Career Services</span>
               </h1>
@@ -26,7 +26,7 @@ export default function InternshipAndCareerServices() {
                 Strategizing and training VMLS students for impactful internships and fulfilling career trajectories post-graduation.
               </p>
             </div>
-            <div className="lg:w-[55%] relative min-h-[300px]">
+            <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
               <Image
                 src="/images/career/hero.png"
                 alt="Career Services at VMLS"
@@ -220,7 +220,7 @@ export default function InternshipAndCareerServices() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-5 md:gap-8 items-center justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-5 md:gap-8 items-center justify-items-center">
               {Array.from({ length: 21 }, (_, i) => (
                 <div
                   key={i}

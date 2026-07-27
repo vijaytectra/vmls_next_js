@@ -44,7 +44,7 @@ export default function TeachingLearningToolsPage() {
 
       {/* Intro Section (Split Layout - Image Right) */}
       <section className="pt-20 pb-6 px-[5%] bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Faculty Development & Innovation
@@ -84,7 +84,7 @@ export default function TeachingLearningToolsPage() {
 
       {/* AI Integration Section (Split Layout - Image Left) */}
       <section className="py-8 px-[5%] bg-gray-50">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               The AI Frontier in Education

@@ -86,7 +86,7 @@ export default function ScholarshipsPage() {
 
       {/* Overview Section */}
       <section className="pt-10 pb-8 px-[5%] bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
           <div className="lg:w-1/2 space-y-6">
             <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl text-[#1a1a1a] leading-tight">
               A ₹60 Lakhs Commitment <br />to Your Future

@@ -18,7 +18,7 @@ export default function VMLSFestPage() {
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-[400px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               VMLS Fest <br /><span className="text-[#fbb03b]">2025</span>
             </h1>
@@ -26,7 +26,7 @@ export default function VMLSFestPage() {
               Two Days. Infinite Vibes. One Unforgettable Experience. The flagship cultural extravaganza of Vinayaka Mission's Law School returns with grander stages and more vibrant energy.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/studentaff/thumbnail.webp"
               alt="VMLS Fest 2025"

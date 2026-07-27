@@ -6,11 +6,11 @@ import { boardOfAdvisors } from "@/data/boardOfAdvisors";
 
 export default function BoardOfAdvisors() {
   return (
-    <section className="pt-12 md:pt-16 pb-20 md:pb-32 px-[5%] bg-white relative overflow-hidden">
+    <section className="pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-20 md:pb-32 px-[5%] bg-white relative overflow-hidden">
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gray-50/50 -skew-x-12 transform origin-top translate-x-1/2 -z-10"></div>
 
       <div className="max-w-[1400px] mx-auto relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-8 gap-y-10 sm:gap-y-16">
           {boardOfAdvisors.map((director, index) => {
             const hasProfile = director.paragraphs.length > 0;
             const card = (

@@ -55,7 +55,7 @@ export default function PDPPage() {
 
       {/* Intro Section (Split Layout) */}
       <section className="pt-20 pb-6 px-[5%] bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Resounding Success at VMLS
@@ -90,7 +90,7 @@ export default function PDPPage() {
 
       {/* Pedagogy Session (New Content) */}
       <section className="py-8 px-[5%] bg-gray-50">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Craft of Pedagogy
@@ -123,7 +123,7 @@ export default function PDPPage() {
 
       {/* Art of Writing Session (New Content) */}
       <section className="py-6 px-[5%] bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               The Art of Writing
@@ -155,7 +155,7 @@ export default function PDPPage() {
       </section>
       {/* Ethics of Teaching Session (New Content) */}
       <section className="py-8 px-[5%] bg-gray-50">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               The Ethics of Teaching
@@ -187,7 +187,7 @@ export default function PDPPage() {
       </section>
       {/* Publishing Session (New Content) */}
       <section className="py-8 px-[5%] bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Publishing in High-Impact Journals

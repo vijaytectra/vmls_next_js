@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroVideo() {
   return (
-    <section className="relative w-full h-[85vh] min-h-[600px] md:h-[85vh] overflow-hidden flex flex-col justify-end text-white font-sans">
+    <section className="relative w-full h-[min(85vh,720px)] min-h-[520px] sm:min-h-[560px] md:h-[85vh] md:min-h-[600px] overflow-hidden flex flex-col justify-end text-white font-sans">
       {/* Desktop Background Video */}
       <video
         autoPlay
@@ -22,7 +22,7 @@ export default function HeroVideo() {
         muted
         playsInline
         preload="auto"
-        className="block md:hidden absolute top-0 left-0 w-full sm:h-[82vh] h-[85vh] object-cover -z-10"
+        className="block md:hidden absolute top-0 left-0 w-full h-full object-cover -z-10"
       >
         <source src="/video/vmls-hero-video-mobile.mp4" type="video/mp4" />
       </video>
@@ -74,7 +74,7 @@ export default function HeroVideo() {
 
           {/* Mentorship Text - Row 2 on Mobile / Center on Desktop */}
           <div className="flex-1 text-center order-2 px-4">
-            <p className="text-[9px] md:text-sm lg:text-[15px] leading-relaxed m-0 font-normal max-w-[850px] mx-auto opacity-90">
+            <p className="text-[11px] sm:text-xs md:text-sm lg:text-[15px] leading-relaxed m-0 font-normal max-w-[850px] mx-auto opacity-90 px-1">
               Vinayaka Mission's Law School (VMLS) is being mentored by O.P. Jindal Global University 
               (an Institution of Eminence) and Jindal Global Law School under an institutional mentorship agreement.
             </p>

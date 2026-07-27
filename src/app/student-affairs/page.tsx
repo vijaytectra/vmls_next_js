@@ -43,8 +43,8 @@ export default function StudentAffairsPage() {
 
       {/* Hero */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-[1px] bg-white/30" />
               <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/70">Campus Life</span>
@@ -56,7 +56,7 @@ export default function StudentAffairsPage() {
               Law school is more than just books and briefs—it&apos;s about building the future together.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/studentaff/live/header.webp"
               alt="Student Affairs at VMLS"
@@ -181,7 +181,7 @@ export default function StudentAffairsPage() {
           {/* Clubs */}
           <Link
             href="/student-clubs"
-            className="bg-[#800000] p-4 xl:p-5 text-white flex flex-col justify-between min-h-[380px] xl:min-h-[420px] group relative overflow-hidden text-left"
+            className="bg-[#800000] p-5 sm:p-4 xl:p-5 text-white flex flex-col justify-between min-h-0 sm:min-h-[340px] lg:min-h-[380px] xl:min-h-[420px] group relative overflow-hidden text-left"
           >
             <div className="text-left">
               <h3 className="font-playfair text-lg xl:text-xl font-bold mb-4 pb-2 border-b border-white/20 text-left">Clubs at VMLS</h3>

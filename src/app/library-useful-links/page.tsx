@@ -46,7 +46,7 @@ export default function LibraryUsefulLinksPage() {
 
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-[320px]">
-          <div className="lg:w-full p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="lg:w-full p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <div className="max-w-4xl">
               <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
                 Useful <span className="text-[#fbb03b]">Links</span>
