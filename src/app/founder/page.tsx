@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 
 export default function FounderPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
+        <div className="flex items-center gap-3 text-base md:text-lg font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-[#a31f34] font-semibold">Founder</span>
@@ -15,18 +16,20 @@ export default function FounderPage() {
       <hr className="border-gray-100" />
 
       {/* Hero Section */}
-      <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-[#f8f9fa] overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-white overflow-hidden relative">
+        <ArchitecturalSketch />
+
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-10 relative z-10">
           
           {/* Left Side: Founder Image */}
-          <div className="lg:w-[40%] w-full order-1 flex justify-center items-center">
-            <div className="relative w-full max-w-[420px] aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
+          <div className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] order-1 shrink-0">
+            <div className="relative w-full aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
               <div className="relative w-full h-full overflow-hidden">
                 <Image 
                   src="/images/vmrf/Frame-53135.webp" 
                   alt="Dr. A. Shanmugasundaram" 
                   fill
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  sizes="280px"
                   className="object-cover transition-transform duration-700 hover:scale-105 contrast-[1.05] brightness-[1.02]"
                   priority
                 />
@@ -35,7 +38,7 @@ export default function FounderPage() {
           </div>
 
           {/* Right Side: Founder Content */}
-          <div className="lg:w-[60%] order-2 flex flex-col justify-center">
+          <div className="flex-1 order-2 flex flex-col justify-center min-w-0">
             <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Our Visionary Founder</h3>
             <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-8 leading-tight lg:whitespace-nowrap">
               Dr. A. Shanmugasundaram
@@ -68,8 +71,7 @@ export default function FounderPage() {
 
       {/* Founder's Message Section */}
       <section className="bg-white px-[5%] py-12 md:py-16 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-        <div className="max-w-4xl mx-auto">
-          <div className="relative bg-white p-6 md:p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden group transition-all duration-500 hover:shadow-[0_60px_120px_-20px_rgba(0,0,0,0.16)] hover:-translate-y-1">
+        <div className="relative bg-white p-6 md:p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden group transition-all duration-500 hover:shadow-[0_60px_120px_-20px_rgba(0,0,0,0.16)] hover:-translate-y-1">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-[#a31f34] opacity-[0.03] rounded-full -translate-x-12 -translate-y-12 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-[0.05]"></div>
             <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#a31f34] opacity-[0.02] rounded-full transition-transform duration-700 group-hover:scale-110 group-hover:opacity-[0.04]"></div>
@@ -95,7 +97,6 @@ export default function FounderPage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
 

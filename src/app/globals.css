@@ -229,11 +229,13 @@ html {
   .text-justify {
     text-align: justify !important;
     text-justify: inter-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    word-break: break-word;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+    text-wrap: pretty;
   }
 }
 
@@ -241,12 +243,14 @@ html {
 .blog-content-container,
 .gapless-justify {
   text-align: justify !important;
-  text-justify: inter-character;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  word-break: break-word;
+  text-justify: inter-word;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: pretty;
 }
 
 /* Migrated live blog HTML — keep content fidelity, apply localhost visual language */
@@ -500,11 +504,13 @@ html {
 /* Custom premium justification for Tamil (and other Brahmic scripts) to prevent letter-spacing disintegration */
 .gapless-justify-tamil {
   text-align: justify !important;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  word-break: break-word;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: pretty;
 }
 
 /* NoPaperForms Niaa chatbot greeting bubble — force readable dark text */
@@ -520,11 +526,13 @@ html {
 /* Global Premium Justification for all standard content copy paragraphs across the site */
 main section p:not(.text-center):not(.text-left):not(.text-right) {
   text-align: justify !important;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  word-break: break-word;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: pretty;
 }
 
 /* Preserving explicit layout alignments for centered/left/right containers and cards */

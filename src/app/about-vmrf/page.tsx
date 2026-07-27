@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 
 export default function AboutVMRF() {
   return (
@@ -42,16 +43,7 @@ export default function AboutVMRF() {
 
       {/* Content Section — image left, text right */}
       <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
-        {/* Architectural line-art sketch at bottom */}
-        <div className="pointer-events-none absolute bottom-0 left-0 w-full max-w-2xl md:max-w-3xl lg:max-w-4xl h-[45%] md:h-[55%] opacity-40">
-          <Image
-            src="/images/vmrf/bg-chancellor.png"
-            alt=""
-            fill
-            sizes="(max-width: 1024px) 90vw, 60vw"
-            className="object-contain object-left-bottom"
-          />
-        </div>
+        <ArchitecturalSketch />
 
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14 relative z-10">
           {/* Left: Campus Image */}

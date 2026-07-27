@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 
 export default function LLMAdmissionsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -90,46 +91,40 @@ export default function LLMAdmissionsPage() {
         </div>
       </section>
 
-      {/* LL.M. Program Detail Section */}
-      <section className="pt-8 md:pt-10 pb-4 px-[5%] bg-[#f8f9fa] overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      {/* LL.M. Program — About-style: image left, content right, sketch below */}
+      <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
+        <ArchitecturalSketch />
 
-          {/* Left Side: Framed Image */}
-          <div className="lg:w-[45%] w-full flex justify-center items-center">
-            <div className="relative w-full aspect-[16/10] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
-              <div className="relative w-full h-full overflow-hidden">
-                <Image
-                  src="/images/llm/1.webp"
-                  alt="LL.M. Program Discussion"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14 relative z-10">
+          {/* Left: Image */}
+          <div className="lg:w-[38%] w-full shrink-0">
+            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden">
+              <Image
+                src="/images/llm/llm1.webp"
+                alt="LL.M. classroom at VMLS"
+                fill
+                sizes="(max-width: 1024px) 100vw, 38vw"
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
 
-          {/* Right Side: Content */}
-          <div className="lg:w-[55%] flex flex-col justify-center">
-            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
-              LL.M. Program
-            </h2>
-
-            <div className="space-y-8">
-              {/* Highlighted Intro Paragraph with Red Accent Bar */}
-              <div className="relative">
-                <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
-                <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
+          {/* Right: Content */}
+          <div className="lg:w-[62%] min-w-0">
+            <div className="relative">
+              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]" />
+              <div className="pl-6 md:pl-10 space-y-6 text-justify hyphens-none [hyphens:none] [-webkit-hyphens:none]">
+                <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
+                  LL.M. Program
+                </h2>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   Our LL.M. program is a transformative journey that merges rigorous academic theory with real-world practice, positioning you as a future leader in law. In every element of the LL.M. curriculum, we emphasize industry exposure and innovative teaching.
                 </p>
-              </div>
-
-              {/* Standard Paragraphs */}
-              <div className="space-y-6">
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   Through collaborative group projects and immersive capstone experiences, LL.M. students engage with complex legal and corporate scenarios. Interactive sessions and lively discussions with industry experts are part and parcel of the LL.M. experience.
                 </p>
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   Utilizing case studies, visual learning methods, and analytical exercises focused on landmark corporate shifts, our LL.M. program fosters mastery of high-level legal and financial concepts.
                 </p>
               </div>

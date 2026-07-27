@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 
 export default function LLBAdmissionsPage() {
   return (
@@ -13,18 +14,16 @@ export default function LLBAdmissionsPage() {
         </div>
       </nav>
 
-      {/* Hero / Header Section - Increased Size */}
+      {/* Hero / Header Section — same size as LL.M. admissions */}
       <section className="relative px-[5%] pt-16 md:pt-28 pb-12 md:pb-20 overflow-hidden bg-white">
-        {/* Background Image with Black Overlay for Premium Contrast */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/llb/3.webp"
+            src="/images/llb/llb-header.webp"
             alt="LL.B. Admissions Background"
             fill
             className="object-cover object-center opacity-100 contrast-[1.05] brightness-90"
             priority
           />
-          {/* Black Gradient Overlay */}
           <div className="absolute inset-0 bg-black/60 md:bg-gradient-to-r md:from-black/80 md:via-black/40 md:to-transparent"></div>
         </div>
 
@@ -36,59 +35,52 @@ export default function LLBAdmissionsPage() {
                 LL.B. Admissions
               </h1>
               <p className="font-inter text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium">
-                Start your journey into the legal profession with our comprehensive LL.B. programmes designed for future-ready legal experts.
+                Undergraduate programmes: Build a foundation that will support your aspirations.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* LL.B. Program Detail Section */}
-      <section className="pt-6 md:pt-8 pb-4 md:pb-6 px-[5%] bg-[#f8f9fa] overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      {/* LL.B. Program — About-style: image left, content right, sketch below */}
+      <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
+        <ArchitecturalSketch />
 
-          {/* Left Side: Framed Image */}
-          <div className="lg:w-[45%] w-full flex justify-center items-center">
-            <div className="relative w-full aspect-[16/10] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
-              <div className="relative w-full h-full overflow-hidden">
-                <Image
-                  src="/images/llb/1.webp"
-                  alt="LL.B. Program Classroom"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14 relative z-10">
+          {/* Left: Image */}
+          <div className="lg:w-[38%] w-full shrink-0">
+            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden">
+              <Image
+                src="/images/llb/1.webp"
+                alt="LL.B. Program Classroom"
+                fill
+                sizes="(max-width: 1024px) 100vw, 38vw"
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
 
-          {/* Right Side: Content */}
-          <div className="lg:w-[55%] flex flex-col justify-center">
-            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
-              LL.B. Program
-            </h2>
-
-            <div className="space-y-8">
-              {/* Highlighted Intro Paragraph */}
-              <div className="relative">
-                <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
-                <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
+          {/* Right: Content */}
+          <div className="lg:w-[62%] min-w-0">
+            <div className="relative">
+              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]" />
+              <div className="pl-6 md:pl-10 space-y-6 text-justify hyphens-none [hyphens:none] [-webkit-hyphens:none]">
+                <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
+                  LL.B. Program
+                </h2>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   The Law Programme is designed with the overarching objective of cultivating competent legal professionals equipped to navigate the diverse facets of the legal profession and associated career pathways. Upon successful completion, our graduates will possess a comprehensive skill set encompassing effective verbal and written communication, critical thinking, analytical prowess, logical reasoning, and adept problem-solving abilities.
                 </p>
-              </div>
-
-              {/* Standard Paragraphs */}
-              <div className="space-y-6">
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   They will have acquired a robust foundation across all studied courses, demonstrating proficiency in conducting high-quality legal research and the preparation, examination, evaluation, and execution of legal documents. Furthermore, graduates will exhibit a profound understanding of contemporary social issues, engaging with them in a creative and solution-oriented manner.
                 </p>
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   This holistic approach extends to instilling a sense of social responsibility, encouraging active participation in civic duties, and fostering a commitment to ongoing self-reflection and lifelong learning.
                 </p>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
