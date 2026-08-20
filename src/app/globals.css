@@ -595,6 +595,13 @@ html {
   color: #1a1a1a !important;
 }
 
+/* Keep footer legal links above page content (not under edge tabs) */
+footer {
+  position: relative;
+  z-index: 10;
+  padding-bottom: max(2rem, env(safe-area-inset-bottom));
+}
+
 /* Global Premium Justification — desktop/tablet only (mobile uses left, no word rivers) */
 @media (min-width: 768px) {
   main section p:not(.text-center):not(.text-left):not(.text-right),

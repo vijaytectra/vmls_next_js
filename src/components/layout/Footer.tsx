@@ -173,10 +173,10 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-4 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-6 text-center">
+        {/* Bottom Bar — left padding clears WhatsApp + Student Ambassador chips */}
+        <div className="pt-4 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-6 text-center pl-16 sm:pl-20 md:pl-72 lg:pl-80">
           <div className="flex flex-row flex-wrap items-center justify-center gap-x-3 sm:gap-x-5 md:gap-x-8 gap-y-2 text-[10px] md:text-sm font-medium uppercase tracking-widest text-[#666]">
-            <Link href="/iqac" prefetch={false} className="hover:text-[#a31f34] transition-colors">IQAC</Link>
+            <Link href="/iqac" prefetch={false} className="hover:text-[#a31f34] transition-colors relative z-[1]">IQAC</Link>
             <span className="text-gray-300" aria-hidden>|</span>
             <Link href="/privacy-policy" prefetch={false} className="hover:text-[#a31f34] transition-colors">Privacy Policy</Link>
             <span className="text-gray-300" aria-hidden>|</span>

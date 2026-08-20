@@ -40,6 +40,25 @@ export default function FloatingActions() {
     vmlsWidgetScript.async = true;
     document.body.appendChild(vmlsWidgetScript);
 
+    // Student Ambassador chip uses inline fixed positioning over footer links —
+    // lift it above the legal row once it mounts.
+    const liftAmbassador = () => {
+      const nodes = document.body.querySelectorAll<HTMLElement>("div");
+      nodes.forEach((el) => {
+        const text = el.textContent || "";
+        if (!text.includes("Chat with a Student Ambassador")) return;
+        const style = window.getComputedStyle(el);
+        if (style.position !== "fixed") return;
+        el.style.setProperty("bottom", "5.5rem", "important");
+        el.style.setProperty("left", "5.5rem", "important");
+      });
+    };
+    const ambassadorObserver = new MutationObserver(liftAmbassador);
+    ambassadorObserver.observe(document.body, { childList: true, subtree: true });
+    const ambassadorTimers = [500, 1500, 3000, 6000].map((ms) =>
+      window.setTimeout(liftAmbassador, ms)
+    );
+
     const chatbotTimer = setTimeout(() => {
       const chatDiv = document.createElement("div");
       chatDiv.className = "npf_chatbots";
@@ -60,6 +79,8 @@ export default function FloatingActions() {
       if (document.body.contains(vmlsWidgetScript))
         document.body.removeChild(vmlsWidgetScript);
       clearTimeout(chatbotTimer);
+      ambassadorObserver.disconnect();
+      ambassadorTimers.forEach((id) => window.clearTimeout(id));
     };
   }, []);
 
@@ -107,7 +128,7 @@ export default function FloatingActions() {
         </span>
       </div>
 
-      {/* Bottom Left: WhatsApp — clear safe area / home indicator */}
+      {/* Bottom Left: WhatsApp — sits under ambassador chip, clear of footer links */}
       <a
         href="https://wa.me/917358201234"
         target="_blank"
