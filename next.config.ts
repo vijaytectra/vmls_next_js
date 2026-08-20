@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
   },
   allowedDevOrigins: ["127.0.0.1", "localhost"],
   images: {
+    // Vercel hobby/free image optimization returns 402
+    // (OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED). Serve public/
+    // assets directly so images work in production.
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
