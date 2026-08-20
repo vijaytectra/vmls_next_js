@@ -190,19 +190,6 @@ const facultyData: FacultyData[] = [
     ]
   },
   {
-    name: "Dr. S. Suganya",
-    role: "Associate Professor",
-    qualifications: "PhD in Law (IPR) from VIT School of Law, Chennai",
-    image: "/images/faculty/45.jpeg",
-    slug: "s-suganya",
-    email: "suganya@vmls.edu.in",
-    bio: [
-      "Dr. S. Suganya is an accomplished Associate Professor specializing in Intellectual Property Rights (IPR) law, with a strong focus on the intersection of AI, technology, and legal frameworks. She previously served as an Assistant Professor at Symbiosis Law School, Hyderabad, while her academic journey features a PhD in Law (IPR) from VIT School of Law, Chennai, with a thesis titled \"Anthropocentricity of Copyright Law and Artificial Intelligence: A Legal Study,\" alongside an ML in Intellectual Property Law, BL, and a BA in Sociology (university rank holder) from The Tamil Nadu Dr. Ambedkar Law University and Bharathiyar University.",
-      "Her professional experience spans academia at Crescent School of Law, VIT School of Law, and Bharath Institute of Law, plus industry as a Senior Legal Associate and legal consultant at Enoah i Solution Private Limited handling civil litigation, bankruptcy, and insurance, complemented by contributions to BCI approvals, curriculum design, and NAAC processes.",
-      "She has published Scopus-indexed publications. Admitted to the Bar Council of Tamil Nadu, she has presented papers in international conferences and enhanced her expertise through faculty development programs and certificate courses."
-    ]
-  },
-  {
     name: "Dr. Fowmina",
     role: "Associate Dean (Inclusive Initiatives) Director, Centre for Access to Justice.",
     qualifications: "LLM - University of East London Uk, PhD - Vit Chennai",
@@ -243,20 +230,6 @@ const facultyData: FacultyData[] = [
     ]
   },
   {
-    name: "Tathagat Sharma",
-    role: "Assistant Dean PG Academics",
-    qualifications: "Erasmus Mundus Scholar (EMLE), LL.B. (NLU Assam), LL.M. (South Asian University), Advocate (Supreme Court of India), and expert in Constitutional & International Law.",
-    image: "/images/faculty/48.webp",
-    slug: "tathagat-sharma",
-    email: "tathagatsharma@vmls.edu.in",
-    bio: [
-      "Tathagat Sharma is an Erasmus Mundus Scholar who pursued his European Master in Law and Economics (EMLE) at his allocations at Erasmus University Rotterdam (the Netherlands), University of Hamburg (Germany), and Università di Roma LUMSA (Italy). Prior to his masters he was a practicing Advocate practising primarily at the Hon'ble Supreme Court of India.",
-      "Tathagat graduated with an undergraduate degree in law from the National Law University and Judicial Academy Assam; and holds a Masters in Law from the South Asian University. He was engaged as a Chamber Junior with the Ld. Additional Solicitor General of India Mr Vikramjit Banerjee (Sr. Adv.), and was appointed as a Counsel for the Central Government before the Supreme Court by the Hon'ble President of India in 2022.",
-      "He was also awarded the Youth Internet Governance Forum India Fellowship 2022, and is a Digital Defender Fellow 2022-2023 with Software Freedom Law Centre India. In his pastime, he enjoys writing on issues concerning Constitutional and International Law, and the Intersection of Law, Economics and Technology. He enjoys everything pop culture, including games, movies, series, and books. In his pastime, you may find him engaging in a trivia quiz, or roaming the streets of Rome, Paris or Istanbul in Assassin's Creed.",
-      "He can be reached out at tathagatsharma@vmls.edu.in or tathagat@emle.eu"
-    ]
-  },
-  {
     name: "Narayanan Chandrasekar",
     role: "Assistant Dean - Placement Training",
     qualifications: "LL.M ITL Jindal Global University",
@@ -283,18 +256,18 @@ const facultyData: FacultyData[] = [
     ]
   },
   {
-    name: "Hartej Singh",
+    name: "Dr. Hartej Singh Kochher",
     role: "Assistant Professor",
     qualifications: "LLM(Corporate Law) National Law University, Jodhpur",
     image: "/images/faculty/live/hartej.webp",
     slug: "hartej-singh",
     email: "hartejsinghkochher@vmls.edu.in",
     bio: [
-      "Hartej Singh is an Assistant Professor of Law at Vinayaka Mission's Law School (VMLS) with five years of experience, specializing in competition law, corporate governance, mergers and acquisitions, and public policy, with a strong focus on bigness and market concentration. His ongoing Ph.D. research critically analyzes the adequacy of India's competition law regime in curbing monopoly power and concentrated market structures.",
-      "Hartej holds an LL.M. in Corporate Laws from National Law University, Jodhpur, and a B.A. LL.B. (Hons.) from the University School of Law and Legal Studies (USLLS), GGSIP University, New Delhi.",
+      "Dr. Hartej Singh Kochher is an Assistant Professor of Law at Vinayaka Mission's Law School (VMLS) with five years of experience, specializing in competition law, corporate governance, mergers and acquisitions, and public policy, with a strong focus on bigness and market concentration. His ongoing Ph.D. research critically analyzes the adequacy of India's competition law regime in curbing monopoly power and concentrated market structures.",
+      "Dr. Kochher holds an LL.M. in Corporate Laws from National Law University, Jodhpur, and a B.A. LL.B. (Hons.) from the University School of Law and Legal Studies (USLLS), GGSIP University, New Delhi.",
       "He has contributed to numerous scholarly publications and regularly engages in academic conferences, presenting papers and leading discussions on corporate and competition law.",
-      "In addition to his academic career, Hartej secured an All India Rank of 7 in the Judge Advocate General (JAG) selection for the Indian Army.",
-      "Outside of academia, Hartej enjoys reading, listening to podcasts, exploring diverse cuisines, and is an avid chai enthusiast."
+      "In addition to his academic career, Dr. Kochher secured an All India Rank of 7 in the Judge Advocate General (JAG) selection for the Indian Army.",
+      "Outside of academia, Dr. Kochher enjoys reading, listening to podcasts, exploring diverse cuisines, and is an avid chai enthusiast."
     ]
   },
   {
@@ -536,15 +509,6 @@ const facultyData: FacultyData[] = [
     bio: [
       "A seasoned administrative professional with over 30 years of diverse experience in managing institutional operations, human resources, infrastructure, and compliance functions across academic and corporate environments. Currently serving as Director of Administration at Vinayaka Mission’s Law School (VMLS), to oversee end-to-end administrative functions to ensure operational excellence, regulatory compliance, and strategic growth.",
       "Mr. K. Victor expertise lies in building systems, streamlining administrative processes, optimizing resource utilization, and leading multidisciplinary teams with a focus on transparency and accountability. He brings proven capabilities in policy implementation, infrastructure development, campus security, budgeting, asset management, and stakeholder coordination. Recognized for transforming administrative frameworks and implementing institutional best practices, Mr. Victor has previously played key roles in institutions like IIBAT, MatrixView, St. Joseph's International Residential School, Zantel (East Africa) where he led initiatives that improved institutional efficiency and governance."
-    ]
-  },
-  {
-    name: "Ms. Kiran Jenifer",
-    role: "Academic Affairs Executive",
-    image: "/images/faculty/kiran.webp",
-    slug: "kiran-jenifer",
-    bio: [
-      "Ms. Kiran Jenifer. She has a strong academic foundation in English Literature and Home Science. She holds a Bachelor's degree from Women's Christian College and Master's degree in English Literature. Her professional experience includes serving as a Junior Executive at Straive (under Springer Publishers). In addition, she has contributed as a Content Writer Intern for Gururo and InAmingos Foundation, preparing academic lecture materials, blogs, and articles on women's empowerment. Actively involved in academic and extracurricular activities, she has presented papers at national and international conferences on topics ranging from eco-criticism and science fiction to gender and social transformation, with one paper published in the CTTE College journal. Ms. Kiran Jenifer combines strong communication, leadership, and teamwork skills with a commitment to fostering impactful learning experiences."
     ]
   },
   {

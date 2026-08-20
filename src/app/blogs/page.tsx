@@ -5,6 +5,24 @@ import Link from "next/link";
 
 const blogPosts = [
   {
+    title: "AIBE Guide: Eligibility, Pattern & Prep After Your LLB",
+    date: "August 17, 2026",
+    image: "/images/blogs/aibe-all-india-bar-exam-guide__aibe-guide-eligibility-pattern-prep.png",
+    slug: "aibe-all-india-bar-exam-guide",
+  },
+  {
+    title: "What Does BCI Approval Mean for a Law College?",
+    date: "August 17, 2026",
+    image: "/images/blogs/what-does-bci-approval-mean-law-college__bci-approval-law-college.png",
+    slug: "what-does-bci-approval-mean-law-college",
+  },
+  {
+    title: "CLAT 2027: Exam Dates, Eligibility, Syllabus & Admission Pathways to Top Law Colleges in India",
+    date: "August 14, 2026",
+    image: "/images/blogs/clat-2027-exam-dates-eligibility-syllabus-and-admission__clat-2027.png",
+    slug: "clat-2027-exam-dates-eligibility-syllabus-and-admission",
+  },
+  {
     title: "Scholarships for Law Students in India: Merit, Need-Based & Women-Focused Aid Explained",
     date: "July 25, 2026",
     image: "/images/blogs/scholarships-for-law-students-in-india__scholarships-for-law-students-in-india-explained.png",

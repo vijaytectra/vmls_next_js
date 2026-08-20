@@ -559,39 +559,6 @@ export const mentoringMembers: MentoringMember[] = [
       },
     ],
   },
-  {
-    slug: 'dr-padmanabha-ramanunjam',
-    name: 'Dr. Padmanabha Ramanunjam',
-    role: 'Ex-Officio Member',
-    designation: 'Dean of Academic Governance, JGU and Professor of Law, JGLS',
-    image: '/images/m2.webp',
-    blocks: [
-      {
-        type: 'paragraph',
-        segments: [
-          { text: 'Professor Ramanujam was awarded the Distinguished Asia Link Fellowship, sponsored by the European Union at Hamburg University Institute of Law and Economics, Germany and the National Law School of India University, Bangalore. He holds a Master of Laws (LL.M.) degree in Intellectual Property Rights from the University of East Anglia, UK, with a distinction. At the University of East Anglia, he was awarded the prestigious University of East Anglia International Scholarship, Norwich Law School Scholarship and was also adjudged the University of East Anglia & Best International Applicant Award. He also holds a Master of Business Laws degree from the National Law School of India University, Bangalore and Bachelor of Law degree (B.A.L., LL.B.) from University Law College, Bangalore University.', bold: false },
-        ],
-      },
-      {
-        type: 'paragraph',
-        segments: [
-          { text: 'He served as Dean, IFIM Law School. He also contributed as a Chief Knowledge Officer at QS IGauge wherein he was responsible for the design and development of 17 subject indicators to rate Universities and Colleges in India. As a Consulting Advisor working for LSAC (Law School Admissions Council), USA, Professor Ramanujam was responsible for spearheading outreach and marketing efforts, which led to record registration for LSAT India exam takers (8300 plus) leading to 20.5% YoY growth. He was instrumental in collaborating with 250 plus coaching institutes, 300+ schools and 600+ principals across India. He personally addressed more than 15000 students across India. He was responsible for organizing Discover Law Campaign, participated by 25 International Universities and 20+ Indian Universities, which was attended by 1500 plus students. He was also instrumental in organizing Law and Technology Symposium, attended by International Lawyers, Senior Advocates and Top Law Firm Partners in India.', bold: false },
-        ],
-      },
-      {
-        type: 'paragraph',
-        segments: [
-          { text: 'Professor Ramanujam started his academic stint as a founding faculty member at O. P. Jindal Global University where he served as Associate Professor and Associate Dean (Admissions and Outreach), Director – Admissions and Outreach and Joint Registrar- Institution Building. He was responsible for carving out the governance structure and regulatory framework for establishing O.P. Jindal Global University and saw through it for a period of 8 years.', bold: false },
-        ],
-      },
-      {
-        type: 'paragraph',
-        segments: [
-          { text: 'Professor Ramanuajm specializes in law and economics, intellectual property law, competition law, economic analysis of tort law, and economic analysis of contract law. He was among the scholars invited by the President of India to write a book on the Governance of Higher Education Institutions during President Pranab Mukherjee’s term. The research culminated into a book published by LexisNexis titled as “The President of India and the Governance of Higher Education Institutions”.', bold: false },
-        ],
-      },
-    ],
-  },
 ];
 
 export function getMentoringMemberBySlug(slug: string) {

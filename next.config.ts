@@ -31,6 +31,41 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/blogs/aibe-all-india-bar-exam-guide.html",
+        destination: "/blogs/aibe-all-india-bar-exam-guide",
+        permanent: true,
+      },
+      {
+        source: "/blogs/what-does-bci-approval-mean-law-college.html",
+        destination: "/blogs/what-does-bci-approval-mean-law-college",
+        permanent: true,
+      },
+      {
+        source: "/blogs/clat-2027-exam-dates-eligibility-syllabus-and-admission.html",
+        destination: "/blogs/clat-2027-exam-dates-eligibility-syllabus-and-admission",
+        permanent: true,
+      },
+      {
+        source: "/mentoring-committee/dr-padmanabha-ramanunjam",
+        destination: "/mentoring-committee",
+        permanent: true,
+      },
+      {
+        source: "/faculty/s-suganya",
+        destination: "/faculty-profiles",
+        permanent: true,
+      },
+      {
+        source: "/faculty/tathagat-sharma",
+        destination: "/faculty-profiles",
+        permanent: true,
+      },
+      {
+        source: "/faculty/kiran-jenifer",
+        destination: "/faculty-profiles",
+        permanent: true,
+      },
+      {
         source: "/blogs/full-time-phd-in-law-and-interdisciplinary-studies.html",
         destination: "/blogs/full-time-phd-in-law-and-interdisciplinary-studies",
         permanent: true,

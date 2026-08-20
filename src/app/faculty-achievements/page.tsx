@@ -49,11 +49,11 @@ export default function FacultyAchievementsPage() {
           </div>
           <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
-              src="/images/Frame89.webp"
+              src="/images/faculty/live/DSC00716_19.webp"
               alt="VMLS Faculty Achievements"
               fill
               priority
-              className="object-cover"
+              className="object-cover object-[center_20%]"
               sizes="(max-width: 1024px) 100vw, 55vw"
             />
             <div className="absolute inset-0 bg-black/10"></div>
@@ -93,10 +93,10 @@ export default function FacultyAchievementsPage() {
 
             <div className="md:w-1/2 relative h-[400px] w-full bg-gray-100 overflow-hidden group">
               <Image
-                src="/images/home-faculty.webp"
+                src="/images/faculty/live/DSC00648_14.webp"
                 alt="Research in Action"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-[#a31f34]/10 mix-blend-multiply"></div>
