@@ -29,7 +29,7 @@ export default function AISeminarPage() {
           </div>
           <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
-              src="/images/AI/National Seminar on AI_01_webp.webp"
+              src="/images/AI/national-seminar-on-ai-01.webp"
               alt="National Seminar on AI, Law & Regulation"
               fill
               priority
@@ -129,7 +129,7 @@ export default function AISeminarPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
               <div className="relative aspect-video shadow-md overflow-hidden group rounded-lg">
                 <Image
-                  src="/images/AI/National Seminar on AI_02.jpeg"
+                  src="/images/AI/national-seminar-on-ai-02.jpeg"
                   alt="Seminar Highlights"
                   fill
                   sizes="(max-width: 768px) 100vw, 35vw"
@@ -138,7 +138,7 @@ export default function AISeminarPage() {
               </div>
               <div className="relative aspect-video shadow-md overflow-hidden group rounded-lg">
                 <Image
-                  src="/images/AI/National Seminar on AI_03.jpeg"
+                  src="/images/AI/national-seminar-on-ai-03.jpeg"
                   alt="Expert Panel Discussion"
                   fill
                   sizes="(max-width: 768px) 100vw, 35vw"
@@ -147,7 +147,7 @@ export default function AISeminarPage() {
               </div>
               <div className="md:col-span-2 relative aspect-[21/9] shadow-md overflow-hidden group rounded-lg">
                 <Image
-                  src="/images/AI/National Seminar on AI_04.jpeg"
+                  src="/images/AI/national-seminar-on-ai-04.jpeg"
                   alt="Participants and Dignitaries"
                   fill
                   sizes="(max-width: 768px) 100vw, 70vw"

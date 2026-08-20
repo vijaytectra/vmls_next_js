@@ -7,7 +7,7 @@ const events = [
     title: "National Seminar on AI, Law & Regulation",
     description:
       "Vinayaka Mission's Law School (VMLS), in collaboration with JGLS, JGU and the Cyril Shroff Centre for AI, Law and Regulation, hosted a National Seminar on AI, Law & Regulation in Chennai.",
-    image: "/images/AI/National Seminar on AI_01_webp.webp",
+    image: "/images/AI/national-seminar-on-ai-01.webp",
     linkText: "Read Event Report",
     link: "/news/national-seminar-on-ai",
   },
@@ -45,7 +45,7 @@ export default function NewsEventsSection() {
             <div className="relative group">
               <div className="relative w-full mb-8 md:mb-10">
                 <Image
-                  src="/images/newsletter/vmls_april_may.png"
+                  src="/images/newsletter/vmls-april-may-cover.jpg"
                   alt="VMLS Newsletter Issue 11 April to May 2026 Cover"
                   width={1409}
                   height={1117}
@@ -69,7 +69,7 @@ export default function NewsEventsSection() {
                 </p>
                 <div className="flex flex-wrap gap-4 pt-8">
                   <a 
-                    href="/images/newsletter/Newsletter_April_to_May_2026 (E).pdf" 
+                    href="/images/newsletter/newsletter-april-to-may-2026-en.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
@@ -77,7 +77,7 @@ export default function NewsEventsSection() {
                     View English Newsletter
                   </a>
                   <a 
-                    href="/images/newsletter/Newsletter_April_to_May_2026 (T).pdf" 
+                    href="/images/newsletter/newsletter-april-to-may-2026-ta.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"

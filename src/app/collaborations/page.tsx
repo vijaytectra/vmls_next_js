@@ -202,7 +202,7 @@ export default function CollaborationsPage() {
             </div>
             <div className="relative aspect-[16/10] w-full overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
               <Image
-                src="/images/collab/MoU RWU Law INNER.JPG"
+                src="/images/collab/mou-rwu-law-inner.jpg"
                 alt="RWU Law Collaboration Signing Event"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -223,7 +223,7 @@ export default function CollaborationsPage() {
           <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-10">
             <div className="relative w-full lg:w-[42%] shrink-0 aspect-[16/10] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)]">
               <Image
-                src="/images/collab/MoU with San Dieago 2.jpg"
+                src="/images/collab/mou-san-diego-2.jpg"
                 alt="University of San Diego Collaboration"
                 fill
                 sizes="(max-width: 1024px) 100vw, 42vw"

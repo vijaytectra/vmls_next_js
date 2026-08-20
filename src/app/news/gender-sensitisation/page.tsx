@@ -26,7 +26,7 @@ export default function GenderSensitisationPage() {
           </div>
           <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
-              src="/images/news/Gender Equality_02.webp"
+              src="/images/news/gender-equality-02.webp"
               alt="Guest Lecture on Gender Sensitisation"
               fill
               priority
@@ -70,7 +70,7 @@ export default function GenderSensitisationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               <div className="relative aspect-video shadow-md overflow-hidden group rounded-xl">
                 <Image
-                  src="/images/news/Gender Equality_01.webp"
+                  src="/images/news/gender-equality-01.webp"
                   alt="Guest speaker Ms. Subha Nivedha presenting"
                   fill
                   sizes="(max-width: 768px) 100vw, 35vw"

@@ -79,7 +79,7 @@ export default function WomenAndAIPage() {
               {/* Featured: Certificate spans full width on md+ */}
               <div className="md:col-span-2 relative aspect-[16/10] md:aspect-[21/9] shadow-lg rounded-xl overflow-hidden group border border-gray-100">
                 <Image
-                  src="/images/studentaff/Women and AI_01.webp"
+                  src="/images/studentaff/women-and-ai-01.webp"
                   alt="Certificate of Appreciation"
                   fill
                   className="object-contain bg-gray-50 group-hover:scale-[1.02] transition-transform duration-700"
@@ -93,7 +93,7 @@ export default function WomenAndAIPage() {
               {/* Ceremony Photos side-by-side */}
               <div className="relative aspect-video shadow-md rounded-xl overflow-hidden group">
                 <Image
-                  src="/images/studentaff/Women and AI_02.webp"
+                  src="/images/studentaff/women-and-ai-02.webp"
                   alt="Award Ceremony"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -102,7 +102,7 @@ export default function WomenAndAIPage() {
               </div>
               <div className="relative aspect-video shadow-md rounded-xl overflow-hidden group">
                 <Image
-                  src="/images/studentaff/Women and AI_03.webp"
+                  src="/images/studentaff/women-and-ai-03.webp"
                   alt="Best Presenter Award"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"

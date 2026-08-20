@@ -70,7 +70,7 @@ export default function EthicsLitigationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
               <div className="relative aspect-[3/4] shadow-md overflow-hidden group rounded-lg">
                 <Image
-                  src="/images/news/Guest Lecture on Ethics, Values and Litigation – Lessons for Budding Lawyers1_01.webp"
+                  src="/images/news/ethics-values-litigation-01.webp"
                   alt="Adv. Shabnam Banu speaking"
                   fill
                   sizes="(max-width: 768px) 100vw, 35vw"
@@ -80,7 +80,7 @@ export default function EthicsLitigationPage() {
               <div className="flex flex-col gap-6">
                 <div className="relative flex-1 min-h-[200px] shadow-md overflow-hidden group rounded-lg">
                   <Image
-                    src="/images/news/Guest Lecture on Ethics, Values and Litigation_02.webp"
+                    src="/images/news/ethics-values-litigation-02.webp"
                     alt="Token of appreciation"
                     fill
                     sizes="(max-width: 768px) 100vw, 35vw"
