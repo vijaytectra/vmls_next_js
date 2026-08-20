@@ -13,6 +13,8 @@ const nextConfig: NextConfig = {
     // (OPTIMIZED_IMAGE_REQUEST_PAYMENT_REQUIRED). Serve public/
     // assets directly so images work in production.
     unoptimized: true,
+    loader: "custom",
+    loaderFile: "./src/lib/imageLoader.ts",
     remotePatterns: [
       {
         protocol: "https",
