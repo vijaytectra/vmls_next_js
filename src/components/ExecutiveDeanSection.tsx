@@ -21,21 +21,22 @@ export default function ExecutiveDeanSection() {
         {/* Right: text column + qualifications centered to full content height */}
         <div className="flex-1 min-w-0 flex flex-col xl:flex-row xl:items-center gap-4 md:gap-5 text-white relative py-1">
           <div className="flex-1 min-w-0 space-y-3 md:space-y-3.5">
-            <header className="text-left">
-              <h2 className="font-playfair text-lg md:text-xl lg:text-2xl mb-1.5 leading-tight">
+            {/* Title block centered at all breakpoints; body stays left-aligned */}
+            <header className="text-center mx-auto">
+              <h2 className="font-playfair text-base sm:text-lg md:text-xl lg:text-2xl mb-2 leading-tight whitespace-nowrap text-center">
                 From the Executive Dean&apos;s Desk
               </h2>
-              <div className="space-y-0.5">
-                <h3 className="font-inter text-base md:text-lg font-bold tracking-tight">
+              <div className="space-y-1">
+                <h3 className="font-inter text-base md:text-lg font-bold tracking-tight text-center">
                   Mr. Siddharth Raja
                 </h3>
-                <p className="font-inter text-sm italic text-gray-200">
+                <p className="font-inter text-sm italic text-gray-200 !text-center">
                   Executive Dean
                 </p>
               </div>
             </header>
 
-            <div className="font-inter text-sm md:text-[15px] leading-relaxed text-gray-100 space-y-2.5 text-justify">
+            <div className="font-inter text-sm md:text-[15px] leading-relaxed text-gray-100 space-y-2.5 text-left">
               <p>
                 A professional law degree has become increasingly appealing to students since India&apos;s liberalization in the early 90s,
                 driven by the opening of domestic markets, the rise in global trade, and the complexities of the new economic order.

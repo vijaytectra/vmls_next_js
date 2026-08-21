@@ -74,7 +74,7 @@ export default function StudentClubsPage() {
               Clubs at Vinayaka Mission&apos;s Law School{" "}
               <span className="text-[#fbb03b]">(VMLS)</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
               Student life at VMLS is vibrant, diverse, and engaging — shaped largely by the active participation of students in various clubs.
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function StudentClubsPage() {
 
       <section className="py-10 md:py-14 px-[5%] bg-white">
         <div className="max-w-4xl mx-auto mb-12">
-          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify">
+          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left">
             These clubs serve as dynamic platforms for co-curricular and extra-curricular development, promoting teamwork, leadership, creativity, and advocacy. With seven student convenors leading the way, the clubs are student-driven and faculty-supported, ensuring a balanced environment of guidance and autonomy. Whether you&apos;re inclined towards performing arts, intellectual debates, film appreciation, or legal simulation, there&apos;s something for everyone at VMLS.
           </p>
         </div>
@@ -112,7 +112,7 @@ export default function StudentClubsPage() {
                 />
               </div>
               <h2 className="font-playfair text-2xl font-bold text-[#800000] mb-3">{club.name}</h2>
-              <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed text-justify">{club.desc}</p>
+              <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed text-left">{club.desc}</p>
             </article>
           ))}
         </div>

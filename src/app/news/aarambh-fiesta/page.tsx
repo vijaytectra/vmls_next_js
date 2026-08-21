@@ -102,7 +102,7 @@ export default function AarambhFiestaPage() {
             <h2 className="font-playfair text-3xl md:text-4xl text-gray-900 mb-8 font-bold leading-tight">
               Aarambh – The Freshers&apos; Fiesta
             </h2>
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg mb-12">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg mb-12">
               <p>
                 Aarambh at VMLS was a vibrant celebration dedicated to welcoming the newest members of our law school family. More than just an icebreaker, it became a stage for freshers to compete, explore, and showcase their talents and creativity. From soulful singing to energetic dance-offs and fun games, the event was filled with excitement, laughter, and unforgettable moments. Aarambh wasn&apos;t just a beginning — it was a blast of color, rhythm, and campus camaraderie that set the tone for the journey ahead.
               </p>

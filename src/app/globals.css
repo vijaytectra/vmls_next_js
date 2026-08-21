@@ -252,20 +252,20 @@ html {
   }
 }
 
-/* Desktop/tablet: justified blog & institutional body copy */
+/* Opt-in body copy — keep natural spacing (no justify rivers) */
 @media (min-width: 768px) {
   .blog-content-container,
-  .gapless-justify {
-    text-align: justify !important;
-    text-align-last: left !important;
+  .gapless-justify,
+  .text-justify {
+    text-align: left !important;
+    text-align-last: auto !important;
     text-justify: auto;
     word-spacing: normal !important;
     letter-spacing: normal !important;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
     overflow-wrap: break-word;
     word-break: normal;
     text-wrap: pretty;
@@ -573,9 +573,9 @@ html {
   margin-bottom: 0.35rem;
 }
 
-/* Custom premium justification for Tamil (and other Brahmic scripts) to prevent letter-spacing disintegration */
+/* Keep natural word spacing for Tamil (and other Brahmic scripts) */
 .gapless-justify-tamil {
-  text-align: justify !important;
+  text-align: left !important;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
@@ -583,6 +583,8 @@ html {
   word-break: normal;
   overflow-wrap: normal;
   text-wrap: pretty;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
 }
 
 /* NoPaperForms Niaa chatbot greeting bubble — force readable dark text */
@@ -602,24 +604,86 @@ footer {
   padding-bottom: max(2rem, env(safe-area-inset-bottom));
 }
 
-/* Global Premium Justification — desktop/tablet only (mobile uses left, no word rivers) */
+/* Body copy: left-aligned for consistent word spacing (no justify rivers). */
 @media (min-width: 768px) {
-  main section p:not(.text-center):not(.text-left):not(.text-right),
-  main article p:not(.text-center):not(.text-left):not(.text-right) {
-    text-align: justify !important;
-    text-align-last: left !important;
+  main section p:not(.text-center):not(.text-left):not(.text-right):not(.text-justify):not(.gapless-justify):not(.person-card-role):not(.person-card-name),
+  main article p:not(.text-center):not(.text-left):not(.text-right):not(.text-justify):not(.gapless-justify):not(.person-card-role):not(.person-card-name) {
+    text-align: left !important;
+    text-align-last: auto !important;
     text-justify: auto;
     word-spacing: normal !important;
     letter-spacing: normal !important;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
     overflow-wrap: break-word;
     word-break: normal;
     text-wrap: pretty;
   }
+}
+
+/* Person profile cards — name + role start on the same baseline across a row */
+.person-card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-top: 1.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.person-card-name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.75rem;
+  margin: 0 0 0.25rem;
+  text-align: center !important;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+  line-height: 1.25;
+}
+
+.person-card-role {
+  display: block;
+  width: 100%;
+  min-height: 1.25rem;
+  margin: 0 auto;
+  text-align: center !important;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+  line-height: 1.35;
+}
+
+main section p.person-card-role,
+main article p.person-card-role,
+.person-card-details > .person-card-role {
+  text-align: center !important;
+  text-align-last: center !important;
+}
+
+.person-card-details--start {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.person-card-details--start .person-card-name,
+.person-card-details--start .person-card-role,
+main section .person-card-details--start p.person-card-role,
+main article .person-card-details--start p.person-card-role,
+main section .person-card-details--start .person-card-name,
+main article .person-card-details--start .person-card-name {
+  display: block;
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left !important;
+  text-align-last: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 /* Headings / short labels stay left unless explicitly centered */
@@ -725,13 +789,13 @@ p.text-right,
   .blog-article-content .blog-html,
   .blog-article-content .blog-html p,
   .blog-article-content .blog-html li,
-  main section p,
-  main article p,
+  main section p:not(.person-card-role):not(.person-card-name):not(.text-center):not(.hero-tagline),
+  main article p:not(.person-card-role):not(.person-card-name):not(.text-center):not(.hero-tagline),
   main section li,
   main article li,
   p.text-left,
   .text-left p,
-  .text-center > p {
+  .text-center > p:not(.person-card-role):not(.person-card-name):not(.text-center):not(.hero-tagline) {
     text-align: left !important;
     text-align-last: auto !important;
     text-justify: auto !important;
@@ -756,6 +820,10 @@ p.text-right,
   h2.text-center,
   h3.text-center,
   p.text-center,
+  p.hero-tagline,
+  .hero-tagline,
+  .person-card-details:not(.person-card-details--start) > .person-card-role,
+  .person-card-details:not(.person-card-details--start) > .person-card-name,
   footer p,
   header p {
     text-align: center !important;
@@ -763,6 +831,13 @@ p.text-right,
     letter-spacing: normal !important;
     -webkit-hyphens: none !important;
     hyphens: none !important;
+  }
+
+  .person-card-details--start .person-card-role,
+  .person-card-details--start .person-card-name,
+  main section .person-card-details--start p.person-card-role {
+    text-align: left !important;
+    text-align-last: left !important;
   }
 
   p.text-right,
@@ -774,10 +849,16 @@ p.text-right,
   }
 }
 
-/* Site-wide mobile safety: no horizontal page scroll; touch-friendly targets */
-html {
-  overflow-x: clip;
+/* Hero tagline — equal side space; do not left-align on desktop */
+.hero-tagline {
+  text-align: center !important;
+  text-align-last: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: inline-block;
+  max-width: 100%;
 }
+
 
 body {
   overflow-x: clip;
@@ -812,4 +893,25 @@ body {
     padding: 0.65rem 0.75rem;
     white-space: nowrap;
   }
+}
+
+/* Student Ambassador widget polish */
+.vmls-ambassador-card {
+  overflow: hidden;
+}
+
+.vmls-ambassador-card > div[style*="position: absolute"],
+.vmls-ambassador-card > div[style*="position:absolute"] {
+  pointer-events: auto;
+}
+
+.vmls-ambassador-pill {
+  width: fit-content !important;
+}
+
+.vmls-ambassador-pill button {
+  white-space: pre-line !important;
+  width: max-content !important;
+  max-width: none !important;
+  text-align: left !important;
 }

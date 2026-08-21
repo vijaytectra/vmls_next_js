@@ -30,10 +30,10 @@ export default function AboutVMLS() {
         <div className="absolute inset-0 flex items-end px-[5%] pb-10 md:pb-14">
           <div className="max-w-7xl mx-auto w-full">
             <div className="max-w-xl text-white">
-              <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
+              <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-left">
                 About VMLS
               </h1>
-              <p className="font-inter text-base md:text-lg leading-relaxed text-white/95">
+              <p className="font-inter text-base md:text-lg leading-relaxed text-white/95 text-left [word-spacing:normal]">
                 Vinayaka Mission&apos;s Law School (VMLS) has been established by
                 Vinayaka Missions Research Foundation – Deemed to be University
                 (VMRF-DU) to impart legal education and legal skills relevant to
@@ -66,7 +66,7 @@ export default function AboutVMLS() {
           <div className="lg:w-[62%] flex flex-col justify-center">
             <div className="relative">
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]" />
-              <div className="pl-6 md:pl-10 space-y-6 text-justify hyphens-none [hyphens:none] [-webkit-hyphens:none]">
+              <div className="pl-6 md:pl-10 space-y-6 text-left hyphens-none [hyphens:none] [-webkit-hyphens:none]">
                 <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   With the founding vision of creating the law school of the future,
                   VMLS admitted its first cohort of students in 2021. Mentorship from

@@ -23,7 +23,7 @@ export default function AISeminarPage() {
               AI, Law & <br />
               <span className="text-[#fbb03b]">Regulation</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
               National Seminar on Shaping the Future of Education, Profession &amp; Justice. A collaborative initiative by VMLS and the Cyril Shroff Centre for AI, Law and Regulation.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function AISeminarPage() {
               National Seminar on &quot;AI, Law &amp; Regulation: Shaping the Future of Education, Profession &amp; Justice&quot;
             </h2>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg space-y-8 mb-12">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg space-y-8 mb-12">
               <p>
                 Vinayaka Mission&apos;s Law School (VMLS), a constituent of Vinayaka Mission&apos;s Research Foundation (VMRF-DU), successfully organised the National Seminar on &quot;AI, Law &amp; Regulation: Shaping the Future of Education, Profession &amp; Justice&quot; on April 2, 2026, in Chennai. The seminar was conducted in collaboration with Jindal Global Law School (JGLS), O.P. Jindal Global University (JGU), and the Cyril Shroff Centre for AI, Law and Regulation, with HCLTech Career Shaper(TM) as the Upskilling Partner.
               </p>

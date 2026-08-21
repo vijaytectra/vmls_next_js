@@ -228,7 +228,7 @@ export default function LibraryRulesPage() {
                   <div className="h-[1px] w-8 bg-gray-100 mb-4 group-hover:w-12 group-hover:bg-[#a31f34] transition-all duration-500"></div>
 
                   {section.text && (
-                    <p className="font-inter text-[13px] text-gray-600 leading-relaxed text-justify mb-2">
+                    <p className="font-inter text-[13px] text-gray-600 leading-relaxed text-left mb-2">
                       {section.text}
                     </p>
                   )}

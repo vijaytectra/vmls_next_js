@@ -78,7 +78,7 @@ export default function ClassroomPage() {
                 Designed for Focused Study
               </h2>
 
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
                   The classrooms of VMLS are a testament to modern educational advancements, blending technology with design to create an environment ripe for learning. At the heart of this space is the smart TV, a focal point for digital presentations and interactive learning sessions. The rooms are also wifi-enabled, ensuring that students and educators remain connected to the vast resources of the internet. Architecturally, the room&apos;s spacious layout, coupled with strategic lighting and acoustics, minimizes distractions and promotes an atmosphere of focused study. The thoughtful integration of these elements underscores VMLS&apos;s commitment to providing a learning space that is not only functional but also conducive to the educational journey of its students.
                 </p>
@@ -131,7 +131,7 @@ export default function ClassroomPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">{feature.desc}</p>
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">{feature.desc}</p>
                   </div>
                 </div>
               ))}

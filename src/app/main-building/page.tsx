@@ -76,7 +76,7 @@ export default function MainBuildingPage() {
                 A Testament to Modern Architectural Ethos
               </h2>
               
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
                   The main building of VMLS stands as a striking example of modern architecture, where functionality meets aesthetic precision. The clear lines and geometric forms of the structure embody the principles of modernity and order, reflecting an ethos of clarity and efficiency. The brown brick facade offers a nod to traditional construction, while the white rectangular structure above the entrance signifies the school&apos;s forward-thinking vision. The white pillars at the entrance evoke a sense of grandeur, framing the gateway to knowledge. This blend of materials and design elements results in a building that is not only a place of learning but also a testament to the enduring influence of modern architectural philosophy.
                 </p>
@@ -128,7 +128,7 @@ export default function MainBuildingPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {highlight.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">
                       {highlight.desc}
                     </p>
                   </div>

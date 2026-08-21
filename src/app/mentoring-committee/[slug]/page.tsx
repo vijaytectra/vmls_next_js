@@ -122,7 +122,7 @@ export default async function MentoringMemberProfilePage({ params }: PageProps) 
                 if (isEducationList && block.items.length > 1) {
                   return (
                     <div key={`edu-list-${index}`}>
-                      <ul className="list-disc list-outside pl-6 md:pl-8 space-y-3 text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+                      <ul className="list-disc list-outside pl-6 md:pl-8 space-y-3 text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
                         <li className="leading-relaxed">
                           <RichText segments={block.items[0]} />
                         </li>
@@ -130,7 +130,7 @@ export default async function MentoringMemberProfilePage({ params }: PageProps) 
 
                       <div className="clear-both" />
 
-                      <ul className="list-disc list-outside pl-6 md:pl-8 space-y-3 mt-3 text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+                      <ul className="list-disc list-outside pl-6 md:pl-8 space-y-3 mt-3 text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
                         {block.items.slice(1).map((item, itemIndex) => (
                           <li key={`li-rest-${index}-${itemIndex}`} className="leading-relaxed">
                             <RichText segments={item} />
@@ -144,7 +144,7 @@ export default async function MentoringMemberProfilePage({ params }: PageProps) 
                 return (
                   <ul
                     key={`l-${index}`}
-                    className="list-disc pl-6 md:pl-8 space-y-3 text-justify hyphens-none [hyphens:none] [text-wrap:pretty]"
+                    className="list-disc pl-6 md:pl-8 space-y-3 text-left hyphens-none [hyphens:none] [text-wrap:pretty]"
                   >
                     {block.items.map((item, itemIndex) => (
                       <li key={`li-${index}-${itemIndex}`}>
@@ -158,7 +158,7 @@ export default async function MentoringMemberProfilePage({ params }: PageProps) 
               return (
                 <p
                   key={`p-${index}`}
-                  className="text-justify hyphens-none [hyphens:none] [text-wrap:pretty]"
+                  className="text-left hyphens-none [hyphens:none] [text-wrap:pretty]"
                 >
                   <RichText segments={block.segments} />
                 </p>

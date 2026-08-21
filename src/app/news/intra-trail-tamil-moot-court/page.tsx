@@ -48,7 +48,7 @@ export default function IntraTrialMootCourtPage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 The Intra Trail Tamil Moot Court at Vinayaka Mission&apos;s Law School serves as a vital platform for budding legal professionals to hone their skills. With <strong>19 teams participating</strong>, the competition demonstrated high standards in legal argumentation and trial advocacy among our students.
               </p>

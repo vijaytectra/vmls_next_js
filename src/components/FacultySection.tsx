@@ -18,12 +18,12 @@ export default function FacultySection() {
               </h2>
               
               <div className="space-y-6">
-                <p className="font-inter text-lg text-gray-700 leading-relaxed text-justify">
+                <p className="font-inter text-lg text-gray-700 leading-relaxed text-left">
                   At VMLS, our faculty is the embodiment of a global perspective, combining global insights 
                   with local relevance to foster an educational environment of unparalleled quality. Our educators are 
                   not just teachers; they are world citizens with diverse experiences from across the globe. 
                 </p>
-                <p className="font-inter text-lg text-gray-700 leading-relaxed text-justify">
+                <p className="font-inter text-lg text-gray-700 leading-relaxed text-left">
                   They bring this wealth of knowledge to the heart of Tamil Nadu, offering world-class education and opening doors 
                   of opportunity for the underprivileged. This unique blend of international expertise and local 
                   understanding ensures that our students are equipped to excel both in India and on the global stage.

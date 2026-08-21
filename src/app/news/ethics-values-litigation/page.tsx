@@ -20,7 +20,7 @@ export default function EthicsLitigationPage() {
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Ethics, Values <br /><span className="text-[#fbb03b]">& Litigation</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
               Lessons for Budding Lawyers. A comprehensive session on the foundational principles, professional responsibility, and integrity in the legal profession.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function EthicsLitigationPage() {
               Guest Lecture on "Ethics, Values and Litigation – Lessons for Budding Lawyers"
             </h2>
             
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg space-y-8 mb-12">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg space-y-8 mb-12">
               <p>
                 The guest lecture on <strong>"Ethics, Values and Litigation – Lessons for Budding Lawyers"</strong> was conducted at Vinayaka Mission's Law School (VMLS) on <strong>29th April 2026</strong>. The session aimed to bridge the gap between theoretical legal education and the practical ethical challenges faced in the courtroom.
               </p>

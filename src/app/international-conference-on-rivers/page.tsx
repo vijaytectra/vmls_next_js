@@ -50,19 +50,19 @@ export default function InternationalConferencePage() {
         </section>
 
         {/* Aims and Scope Section */}
-        <section className="pt-8 pb-2 px-[5%] bg-white border-b border-gray-50">
+        <section className="pt-8 pb-8 md:pb-10 px-[5%] bg-white border-b border-gray-50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4">
               Aims and scope of the International Conference
             </h2>
-            <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
+            <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-left">
               Rivers are lifelines of ecosystems, economies, and cultures across the globe. Their management and governance are influenced by a complex interplay of political, social, economic, and legal factors. This international conference aims to foster interdisciplinary dialogue and collaboration on the issues surrounding rivers, focusing on the socio-legal aspects that are crucial for their sustainable use and management. By bringing together scholars, experts, practitioners, and indigenous voices, we seek to explore the multifaceted dimensions of river governance from local to global scales.
             </p>
           </div>
         </section>
 
         {/* About VMLS Section */}
-        <section className="pt-4 pb-2 px-[5%] bg-[#f8f9fa] overflow-hidden">
+        <section className="pt-10 md:pt-14 pb-8 md:pb-10 px-[5%] bg-[#f8f9fa] overflow-hidden">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
             {/* Left Side: Circular Image */}
             <div className="flex-1 w-full flex justify-center lg:justify-start">
@@ -89,10 +89,10 @@ export default function InternationalConferencePage() {
                   </h2>
                   
                   <div className="space-y-4">
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
+                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-left">
                       Vinayaka Mission's Law School (VMLS) has been established by VMRF-DU to impart legal education and skills relevant to the evolving needs of the local, national and global community. VMLS intends to achieve this vision through its highly qualified and experienced faculty, and with mentorship from Jindal Global Law School and O.P. Jindal Global University. 
                     </p>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
+                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-left">
                       Our faculty aims to create a progressive learning environment where they teach law courses prescribed by the Bar Council of India, as well as Elective Courses to address legal issues of a dynamic society and an ever-changing world.
                     </p>
                   </div>
@@ -166,7 +166,7 @@ export default function InternationalConferencePage() {
                   </svg>
                 </div>
                 <h3 className="font-inter text-lg font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors">Research & Teaching Excellence</h3>
-                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-left">
                   The Centre is dedicated to promoting excellence in research and teaching of International Law, a field that has gained unprecedented significance in today's world. Additionally, the Centre operates an E-Journal, which features original work focusing on contemporary issues in International Law.
                 </p>
               </div>
@@ -180,7 +180,7 @@ export default function InternationalConferencePage() {
                   </svg>
                 </div>
                 <h3 className="font-inter text-lg font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors">Research & Policy Confluence</h3>
-                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-left">
                   The intersection of international law, research, and policy is a critical junction where legal principles, academic research, and organizational decision-making come together. The study of this convergence is key for global governance and diplomacy.
                 </p>
               </div>
@@ -194,7 +194,7 @@ export default function InternationalConferencePage() {
                   </svg>
                 </div>
                 <h3 className="font-inter text-lg font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors">Academic & Global Impact</h3>
-                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-left">
                   The Centre fosters academic research in international relations, law, and related fields to contribute to the understanding of international law, ensuring that international agreements and legal principles are effective in practice.
                 </p>
               </div>
@@ -208,7 +208,7 @@ export default function InternationalConferencePage() {
                   </svg>
                 </div>
                 <h3 className="font-inter text-lg font-bold text-gray-900 group-hover:text-[#a31f34] transition-colors">Addressing Contemporary Challenges</h3>
-                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-justify">
+                <p className="font-inter text-gray-600 text-sm sm:text-base leading-relaxed text-left sm:text-left">
                   Our research identifies gaps in existing frameworks, assesses agreement effectiveness, and proposes innovative solutions across human rights, environmental protection, trade, and conflict resolution.
                 </p>
               </div>
@@ -259,7 +259,7 @@ export default function InternationalConferencePage() {
                     <div key={idx} className="bg-white p-5 md:p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
                       <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#a31f34] opacity-70 group-hover:opacity-100 transition-opacity"></div>
                       <h3 className="font-inter font-bold text-[#1a1a1a] text-base mb-1.5">{item.title}</h3>
-                      <p className="font-inter text-gray-600 md:text-base leading-relaxed text-left sm:text-justify">{item.text}</p>
+                      <p className="font-inter text-gray-600 md:text-base leading-relaxed text-left sm:text-left">{item.text}</p>
                     </div>
                   ))}
                 </div>
@@ -285,7 +285,7 @@ export default function InternationalConferencePage() {
                 <div className="bg-white p-5 sm:p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col space-y-4">
                   <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-lg text-[#a31f34] font-bold text-xl font-inter">01</div>
                   <h3 className="font-inter text-base md:text-lg font-bold text-gray-900">Typography & Formatting</h3>
-                  <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-justify">
+                  <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-left">
                     The main text of the full paper should be written in <span className="font-semibold text-gray-900">Times New Roman font size 12</span>, with 1.5 line spacing. Footnotes must be in Times New Roman font size 10, with a line spacing of 1.0.
                   </p>
                 </div>
@@ -294,7 +294,7 @@ export default function InternationalConferencePage() {
                 <div className="bg-white p-5 sm:p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col space-y-4">
                   <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-lg text-[#a31f34] font-bold text-xl font-inter">02</div>
                   <h3 className="font-inter text-base md:text-lg font-bold text-gray-900">Word Limit & Originality</h3>
-                  <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-justify">
+                  <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-left">
                     The word limit for the full papers should remain between <span className="font-semibold text-gray-900">5000-6000 words</span>, including footnotes (excluding abstract and bibliography). Research should be an original work of the author and must not have been submitted elsewhere.
                   </p>
                 </div>
@@ -303,7 +303,7 @@ export default function InternationalConferencePage() {
                 <div className="bg-white p-5 sm:p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col space-y-4">
                   <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-lg text-[#a31f34] font-bold text-xl font-inter">03</div>
                   <h3 className="font-inter text-base md:text-lg font-bold text-gray-900">Plagiarism & Citations</h3>
-                  <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-justify">
+                  <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-left">
                     All authors shall give an undertaking that the plagiarism of the paper is below the permissible limit of <span className="font-semibold text-gray-900">15%</span>. Authors should strictly follow the <span className="font-semibold text-gray-900">APA Style</span> mode of citation throughout the paper.
                   </p>
                 </div>
@@ -313,7 +313,7 @@ export default function InternationalConferencePage() {
                   <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-lg text-[#a31f34] font-bold text-xl font-inter flex-shrink-0">04</div>
                   <div className="space-y-3 flex-grow">
                     <h3 className="font-inter text-base md:text-lg font-bold text-gray-900">Headings & Styling Structure</h3>
-                    <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-justify">
+                    <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-left">
                       All headings should be numbered. The <span className="font-semibold text-gray-900">first-level heading</span> (main heading) should be in all-caps, bold, and centre-aligned. The <span className="font-semibold text-gray-900">second-level heading</span> should be in title case, bold, and left-aligned. The <span className="font-semibold text-gray-900">third-level heading</span> should be in title case and left-aligned.
                     </p>
                   </div>

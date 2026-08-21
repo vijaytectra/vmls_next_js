@@ -48,7 +48,7 @@ export default function AIForJusticePage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 The Centre for Justice through Technology (CJT) at VMLS, in collaboration with Setu.Law, successfully conducted an interactive workshop titled <strong>&quot;Crafting Impact through AI at the Grassroots Level: Legal, Tech, and Policy.&quot;</strong> Ms. Avanti Durani Mittal, CEO of Setu Law provided valuable insights to the VMLS students on how artificial intelligence can be leveraged to address legal and policy challenges faced by underprivileged communities.
               </p>

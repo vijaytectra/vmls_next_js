@@ -26,7 +26,7 @@ const menuItems = [
       { name: "Admission Process", href: "/admissions/process" },
     ]
   },
-  { name: "VLAT Exam", href: "https://vmls.edu.in/vlat/" },
+  { name: "VLAT Exam", href: "https://vmls.edu.in/vlat/", external: true },
   { name: "Scholarships", href: "/scholarships" },
 
   { name: "Collaborations", href: "/collaborations" },
@@ -137,13 +137,26 @@ export default function Header() {
                     onClick={() => (item.hasDropdown ? toggleDropdown(item.name) : closeMenu())}
                   >
                     {item.href ? (
-                      <Link
-                        href={item.href}
-                        prefetch={false}
-                        className="text-lg font-inter font-semibold text-gray-800 group-hover:text-[#a31f34] transition-colors w-full"
-                      >
-                        {item.name}
-                      </Link>
+                      item.external ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={closeMenu}
+                          className="text-lg font-inter font-semibold text-gray-800 group-hover:text-[#a31f34] transition-colors w-full"
+                        >
+                          {item.name}
+                        </a>
+                      ) : (
+                        <Link
+                          href={item.href}
+                          prefetch={false}
+                          onClick={closeMenu}
+                          className="text-lg font-inter font-semibold text-gray-800 group-hover:text-[#a31f34] transition-colors w-full"
+                        >
+                          {item.name}
+                        </Link>
+                      )
                     ) : (
                       <span className="text-lg font-inter font-semibold text-gray-800 group-hover:text-[#a31f34] transition-colors">
                         {item.name}

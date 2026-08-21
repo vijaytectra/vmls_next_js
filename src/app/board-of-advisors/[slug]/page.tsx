@@ -80,7 +80,7 @@ export default async function AdvisorProfilePage({ params }: PageProps) {
             />
           </div>
 
-          <div className="space-y-5 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+          <div className="space-y-5 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
             {advisor.paragraphs.map((paragraph) => (
               <p key={paragraph.slice(0, 48)}>{paragraph}</p>
             ))}

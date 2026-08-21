@@ -1,29 +1,21 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono, Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
-import FloatingActions from "@/components/layout/FloatingActions";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import SiteChrome from "@/components/layout/SiteChrome";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
+  preload: true,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+  preload: true,
 });
 
 export const viewport: Viewport = {
@@ -51,24 +43,24 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${inter.variable} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
-        <Header />
-        <div className="animate-page-fade">
-          {children}
-        </div>
-        <Footer />
-            <FloatingActions />   
-        <Script id="npf-config" strategy="afterInteractive">
+        <SiteChrome>{children}</SiteChrome>
+        <Script id="npf-embed-config" strategy="lazyOnload">
           {`
-            var npf_d='https://admissions.vmls.edu.in';
-            var npf_c='87feca6bc65be091ed018757c6c58029';
-            var s=document.createElement("script");
-            s.type="text/javascript";
-            s.async=true;
-            s.src="https://widgets.nopaperforms.com/em-widget.js";
-            document.head.appendChild(s);
+            var npf_d = "https://admissions.vmls.edu.in";
+            var npf_c = "5747";
+            var npf_m = "1";
+            (function () {
+              if (document.querySelector('script[src="https://widgets.in8.nopaperforms.com/emwgts.js"]')) return;
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              s.defer = true;
+              s.src = "https://widgets.in8.nopaperforms.com/emwgts.js";
+              document.body.appendChild(s);
+            })();
           `}
         </Script>
       </body>

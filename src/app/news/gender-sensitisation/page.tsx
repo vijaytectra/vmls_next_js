@@ -20,7 +20,7 @@ export default function GenderSensitisationPage() {
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Gender <br /><span className="text-[#fbb03b]">Sensitisation</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
               And Gender Equality in Lawyering. A guest lecture exploring the role of legal professionals in promoting gender justice and addressing systemic inequalities.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function GenderSensitisationPage() {
               Guest Lecture on "Gender Sensitisation and Gender Equality in Lawyering"
             </h2>
             
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg space-y-8 mb-12">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg space-y-8 mb-12">
               <p>
                 The guest lecture on <strong>"Gender Sensitisation and Gender Equality in Lawyering"</strong> was conducted at Vinayaka Mission's Law School (VMLS) on <strong>28th April 2026</strong> as part of the initiative of the Gender Championship Club. The session addressed critical issues surrounding gender parity within the legal system.
               </p>

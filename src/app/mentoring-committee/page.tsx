@@ -54,7 +54,7 @@ export default function MentoringCommitteePage() {
               <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-6 leading-tight">
                 A Unique Mentorship Framework
               </h2>
-              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl mb-10 text-justify">
+              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl mb-10 text-left">
                 Vinayaka Mission's Law School is unique not only in its vision – excellence through inclusivity, and a steadfast emphasis on digital futures and climate transitions – but also its governance model. We are the first Indian legal education institution to be formally mentored by another private law school, arguably India's finest at that – the Jindal Global Law School, and Jindal Global University, an institution of eminence. The active Mentoring Committee created under this one-of-its-kind mentorship agreement consists of eminent senior lawyers and distinguished academics, who steer VMLS towards its goals and vision.
               </p>
             </div>
@@ -116,7 +116,7 @@ export default function MentoringCommitteePage() {
               ))}
             </div>
 
-            <p className="mt-10 md:mt-12 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+            <p className="mt-10 md:mt-12 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
               These are some of the identified and agreed upon areas where the current mentorship framework comes to the aid of VMLS students in their learning and progression. We are also exploring further means and mechanisms within the extremely supportive environment offered by JGLS for VMLS&apos; growth and expansion, for the benefit of our students and faculty.
             </p>
           </div>

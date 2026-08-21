@@ -49,7 +49,7 @@ export default function TeachingLearningToolsPage() {
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Faculty Development & Innovation
             </h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-left font-inter">
               <p>
                 Vinayaka Mission Law School (VMLS) organized a high-impact workshop on &quot;Teaching and Learning Tools&quot; as part of its ongoing efforts to enhance faculty development and innovation in education. 
               </p>
@@ -90,7 +90,7 @@ export default function TeachingLearningToolsPage() {
               The AI Frontier in Education
             </h2>
             <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Optimizing Pedagogical Tools</p>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-left font-inter">
               <p>
                 The session focused on the integration of Artificial Intelligence in educational practices, exploring how AI tools can optimize teaching methodologies and improve the overall learning experience. 
               </p>

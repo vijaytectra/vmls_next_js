@@ -62,7 +62,7 @@ export default function NewsEventsSection() {
                 <h3 className="font-playfair text-3xl md:text-5xl text-gray-900 leading-[1.1] mb-6">
                   VMLS Newsletter: April to May 2026
                 </h3>
-                <p className="font-inter text-lg text-gray-700 leading-relaxed max-w-2xl text-justify">
+                <p className="font-inter text-lg text-gray-700 leading-relaxed max-w-2xl text-left">
                   Fundamentum is the official monthly newsletter of Vinayaka Mission&apos;s Law School, 
                   capturing the vibrant academic and cultural life on campus. It highlights expert 
                   lectures, student initiatives, legal innovations, and institutional milestones.

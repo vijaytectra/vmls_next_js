@@ -78,7 +78,7 @@ export default function FoodCourtPage() {
                 A Formal Overview
               </h2>
 
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
                   The VMLS food courts are designed to cater to the diverse culinary preferences and economic backgrounds of the student body. Here&apos;s a formal overview:
                 </p>
@@ -156,7 +156,7 @@ export default function FoodCourtPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">{feature.desc}</p>
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">{feature.desc}</p>
                   </div>
                 </div>
               ))}

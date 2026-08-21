@@ -69,7 +69,7 @@ export default function InternshipAndCareerServices() {
                 Message from the Desk of Executive Dean, Office of Career Services and Placements
               </h2>
               
-              <div className="space-y-1 font-inter text-gray-700 leading-relaxed text-justify">
+              <div className="space-y-1 font-inter text-gray-700 leading-relaxed text-left">
                 <p className="font-bold text-gray-900 text-base md:text-lg mb-2">Welcome to the Office of Career Services and Placements!</p>
                 
                 <p>
@@ -115,7 +115,7 @@ export default function InternshipAndCareerServices() {
                   {/* Vertical Accent Line */}
                   <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#a31f34]"></div>
                   
-                  <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-justify">
+                  <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-left">
                     <p>
                       The Office of Career Services and Placements is committed to empowering students and alumni as they navigate their career paths. We understand that the transition from education to the workforce can be both exciting and daunting. We are here to provide comprehensive support that equips you with the skills, knowledge, and confidence needed to succeed in today’s competitive job market.
                     </p>
@@ -200,7 +200,7 @@ export default function InternshipAndCareerServices() {
                     <h3 className="font-playfair text-xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-base leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-base leading-relaxed text-left">
                       {service.desc}
                     </p>
                   </div>

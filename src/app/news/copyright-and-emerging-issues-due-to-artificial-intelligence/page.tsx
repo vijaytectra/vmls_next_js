@@ -23,7 +23,7 @@ export default function CopyrightAILecturePage() {
               Copyright <br />
               <span className="text-[#fbb03b]">&amp; AI</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
               Emerging Issues due to Artificial Intelligence. A guest lecture on copyright law, AI-generated works, and practical IP agreements.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function CopyrightAILecturePage() {
               Guest lecture on &quot;Copyright and Emerging Issues due to Artificial Intelligence&quot;
             </h2>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg space-y-8 mb-12">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg space-y-8 mb-12">
               <p>
                 VMLS successfully organized a guest lecture on &quot;Copyright and Emerging Issues due to Artificial Intelligence,&quot; delivered by Mr. Avinesh, Founder of Satvik Law, a boutique firm specializing in Intellectual Property. The session witnessed active participation from over 80 second-year LL.B. students.
               </p>

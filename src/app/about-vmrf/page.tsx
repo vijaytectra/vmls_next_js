@@ -30,10 +30,10 @@ export default function AboutVMRF() {
         <div className="absolute inset-0 flex items-end px-[5%] pb-10 md:pb-14">
           <div className="max-w-7xl mx-auto w-full">
             <div className="max-w-xl text-white">
-              <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
+              <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight text-left">
                 About VMRF
               </h1>
-              <p className="font-inter text-base md:text-lg leading-relaxed text-white/95">
+              <p className="font-inter text-base md:text-lg leading-relaxed text-white/95 text-left [word-spacing:normal]">
                 Vinayaka Mission&apos;s Research Foundation (VMRF) is an innovative and pioneering University that offers a multi-disciplinary learning experience.
               </p>
             </div>
@@ -64,7 +64,7 @@ export default function AboutVMRF() {
           <div className="lg:w-[62%] flex flex-col justify-center">
             <div className="relative">
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]" />
-              <div className="pl-6 md:pl-10 space-y-6 text-justify">
+              <div className="pl-6 md:pl-10 space-y-6 text-left">
                 <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   In 1981, Thirumuruga Kirupananda Variyar Thavathiru Sundara Swamigal Medical Educational and Charitable Trust was established, followed by Vinayaka Mission&apos;s College of Pharmacy in 1982. In 2001, the trust became Vinayaka Mission&apos;s Research Foundation (VMRF), the 48th University in India, after being recognized for its excellence and academic standards. The University&apos;s primary objective is to offer high-quality education to students from all walks of life. As one of the largest universities in India, VMRF offers a wide range of academic disciplines, with a comprehensive range of faculties that covers almost the entire gamut of academic disciplines, including medicine, paramedicine, engineering and technology, management, arts and sciences, law, among others.
                 </p>
@@ -104,11 +104,11 @@ export default function AboutVMRF() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="pt-6 text-center px-2">
-                <h3 className="font-inter font-bold text-xl text-[#1a1a1a] mb-1 leading-tight group-hover:text-[#a31f34] transition-colors">
+              <div className="person-card-details">
+                <h3 className="person-card-name font-inter font-bold text-xl text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
                   Dr. A. Shanmugasundaram
                 </h3>
-                <p className="text-[#a31f34] uppercase tracking-widest text-xs font-bold">
+                <p className="person-card-role font-inter text-[12px] md:text-[13px] font-semibold text-[#a31f34] leading-snug normal-case !tracking-normal mt-0.5">
                   Founder
                 </p>
               </div>
@@ -127,11 +127,11 @@ export default function AboutVMRF() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="pt-6 text-center px-2">
-                <h3 className="font-inter font-bold text-xl text-[#1a1a1a] mb-1 leading-tight group-hover:text-[#a31f34] transition-colors">
+              <div className="person-card-details">
+                <h3 className="person-card-name font-inter font-bold text-xl text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
                   Dr. A.S. Ganesan
                 </h3>
-                <p className="text-[#a31f34] uppercase tracking-widest text-xs font-bold">
+                <p className="person-card-role font-inter text-[12px] md:text-[13px] font-semibold text-[#a31f34] leading-snug normal-case !tracking-normal mt-0.5">
                   Chancellor
                 </p>
               </div>
@@ -147,11 +147,11 @@ export default function AboutVMRF() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div className="pt-6 text-center px-2">
-                <h3 className="font-inter font-bold text-xl text-[#1a1a1a] mb-1 leading-tight">
+              <div className="person-card-details">
+                <h3 className="person-card-name font-inter font-bold text-xl text-[#1a1a1a]">
                   Dr. Anuradha Ganesan
                 </h3>
-                <p className="text-[#a31f34] uppercase tracking-widest text-xs font-bold">
+                <p className="person-card-role font-inter text-[12px] md:text-[13px] font-semibold text-[#a31f34] leading-snug normal-case !tracking-normal mt-0.5">
                   Vice President
                 </p>
               </div>
