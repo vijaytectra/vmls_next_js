@@ -1,8 +1,6 @@
-"use client";
-
 import Image from "next/image";
-
 import Link from "next/link";
+import { noOrphanText } from "@/lib/noOrphanText";
 
 interface FacultyMember {
   name: string;
@@ -113,7 +111,7 @@ const facultyData: FacultyMember[] = [
   {
     name: "Dr. Fowmina",
     role: "Associate Dean (Inclusive Initiatives), Director, Centre for Access to Justice.",
-    qualifications: "LLM - University of East London Uk, PhD - Vit Chennai",
+    qualifications: "LLM - University of East London Uk,\nPhD - Vit Chennai",
     image: "/images/faculty/live/19.webp",
     href: "/faculty/fowmina",
   },
@@ -286,23 +284,24 @@ export default function FacultyGrid() {
                   src={member.image}
                   alt={member.name}
                   fill
+                  priority={index < 4}
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </div>
             </div>
 
-            {/* Details — flex-1 keeps every card equal height */}
-            <div className="w-full px-3 pb-5 md:px-5 md:pb-7 text-center flex flex-col items-center flex-1">
-              <h3 className="font-playfair text-sm md:text-xl font-bold text-[#1a1a1a] mb-0 md:mb-0.5 leading-tight min-h-[2.25rem] md:min-h-[2.75rem] flex items-center justify-center text-center">
+            {/* Details — equal baseline for name/role across cards */}
+            <div className="person-card-details flex-1 pb-5 md:pb-7 px-3 md:px-5">
+              <h3 className="person-card-name font-playfair text-sm md:text-xl font-bold text-[#1a1a1a] text-center">
                 {member.name}
               </h3>
-              <p className="font-inter text-[10px] md:text-xs font-bold text-[#a31f34] uppercase tracking-normal mb-0.5 leading-snug min-h-[1.5rem] md:min-h-[1.8rem] flex items-center justify-center text-center">
-                {member.role}
+              <p className="person-card-role text-center font-inter text-[11px] md:text-[13px] font-semibold text-[#a31f34] leading-snug normal-case !tracking-normal mt-0.5 px-0.5 text-pretty">
+                {noOrphanText(member.role)}
               </p>
               {member.qualifications ? (
-                <p className="font-inter text-[10px] md:text-[11px] text-gray-500 leading-snug tracking-normal max-w-[95%] border-t border-gray-100 pt-1.5 mt-0.5 text-left md:text-center !text-left md:!text-center [word-spacing:normal] [letter-spacing:normal] line-clamp-2 md:line-clamp-none">
-                  {member.qualifications}
+                <p className="font-inter text-[10px] md:text-[11px] text-gray-500 leading-snug tracking-normal max-w-[95%] border-t border-gray-100 pt-1.5 mt-1.5 text-center whitespace-pre-line text-pretty [word-spacing:normal] [letter-spacing:normal] line-clamp-2 md:line-clamp-none">
+                  {noOrphanText(member.qualifications)}
                 </p>
               ) : (
                 <div className="mt-auto" aria-hidden />

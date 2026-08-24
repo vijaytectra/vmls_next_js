@@ -76,7 +76,7 @@ export default function HostelPage() {
                 Your Home Away from Home
               </h2>
               
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
                   We provide a comfortable and secure student environment. Our hostel offers various room categories to suit your preferences, including triple, and four-sharing room occupancy. You can choose between rooms with attached baths for added privacy or rooms with common bath facilities. Our commitment to your well-being extends beyond accommodation. The campus has high-speed Wi-Fi, student Safety is our top priority, with 24x7 security personnel and surveillance systems in place. We also have an in-house doctor on call to address any health concerns promptly. To satisfy your culinary needs, a food court is conveniently located within the campus. Additionally, an on-site ATM is available for your banking convenience.
                 </p>
@@ -149,7 +149,7 @@ export default function HostelPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">
                       {feature.desc}
                     </p>
                   </div>

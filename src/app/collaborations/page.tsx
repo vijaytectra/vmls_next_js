@@ -104,7 +104,7 @@ export default function CollaborationsPage() {
             </div>
           </div>
 
-          <p className="font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium text-justify">
+          <p className="font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium text-left">
             VMLS is being mentored by O.P. Jindal Global University (an Institution of Eminence) and Jindal Global Law School under an institutional mentorship agreement.
           </p>
         </div>
@@ -116,14 +116,14 @@ export default function CollaborationsPage() {
           <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-center text-[#800000] mb-4">
             A Unique Mentorship Framework
           </h2>
-          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg mb-10 text-justify">
+          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg mb-10 text-left">
             Vinayaka Mission's Law School is unique not only in its vision – excellence through inclusivity, and a steadfast emphasis on digital futures and climate transitions – but also its governance model. We are the first Indian legal education institution to be formally mentored by another private law school, arguably India's finest at that – the Jindal Global Law School, and Jindal Global University, an institution of eminence. The active Mentoring Committee created under this one-of-its-kind mentorship agreement consists of eminent senior lawyers and distinguished academics, who steer VMLS towards its goals and vision.
           </p>
 
           <h3 className="font-playfair text-lg md:text-xl lg:text-2xl font-bold text-[#1a1a1a] mb-2">
             Salient Features of the Mentorship Framework
           </h3>
-          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg mb-6 text-justify">
+          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg mb-6 text-left">
             In addition to designing policies and best practices for VMLS that govern key areas like teaching and learning, research, and institutional activities and development, the JGU & JGLS Mentorship also focuses on delivering direct student outcomes for learner advancement. Some of these initiatives, which form a part of the Mentorship Framework, are enumerated below:
           </p>
 
@@ -136,7 +136,7 @@ export default function CollaborationsPage() {
             <li>Potential learning opportunities for VMLS students at select foreign universities that JGLS has formal MoUs with, subject to applicable terms and conditions.</li>
           </ul>
 
-          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify">
+          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left">
             These are some of the identified and agreed upon areas where the current mentorship framework comes to the aid of VMLS students in their learning and progression. We are also exploring further means and mechanisms within the extremely supportive environment offered by JGLS for VMLS' growth and expansion, for the benefit of our students and faculty.
           </p>
         </div>
@@ -157,10 +157,10 @@ export default function CollaborationsPage() {
           <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4 leading-tight text-balance">
             Sri Ragini Dharmasthaapanam
           </h2>
-          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
             Vinayaka Mission&apos;s Law School proudly reports the successful signing of a Memorandum of Understanding (MoU) with Sri Ragini Dharmasthaapanam and the Centre for Access to Justice on 25th February 2026 at Chennai. This strategic collaboration reinforces a shared commitment to promoting legal literacy, constitutional awareness, and meaningful access to justice.
           </p>
-          <p className="mt-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+          <p className="mt-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
             The MoU envisions joint legal aid and community outreach programmes, internship and clinical legal education opportunities, and initiatives supporting vulnerable communities. It also encourages collaborative research, publications, and policy advocacy to further constitutional values and social justice.
           </p>
           <div className="clear-both" />
@@ -182,10 +182,10 @@ export default function CollaborationsPage() {
           <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] mb-4 leading-tight text-balance">
             VMLS Signs International MoU with Roger Williams University School of Law (RWU Law)
           </h2>
-          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+          <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
             Vinayaka Mission&apos;s Law School (VMLS) is pleased to announce the signing of an International Memorandum of Understanding (MoU) with Roger Williams University School of Law (RWU Law), marking a significant milestone in its pursuit of global academic collaboration.
           </p>
-          <p className="mt-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+          <p className="mt-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
             The MoU seeks to foster meaningful engagement between the two institutions by promoting international exposure, academic collaboration, and cross-cultural learning opportunities for students and faculty. Through this partnership, both institutions aim to facilitate joint academic initiatives, knowledge exchange, and collaborative programmes that enhance legal education and research.
           </p>
           <div className="clear-both" />
@@ -211,7 +211,7 @@ export default function CollaborationsPage() {
             </div>
           </div>
 
-          <p className="mt-6 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+          <p className="mt-6 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
             This collaboration is expected to open avenues for faculty interactions, student exchanges, and shared academic activities, thereby enriching the overall learning experience. It also reflects VMLS&apos;s commitment to integrating global perspectives into its academic framework.
           </p>
         </div>
@@ -234,16 +234,16 @@ export default function CollaborationsPage() {
               <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] leading-tight text-balance">
                 VMLS Signs International MoU with University of San Diego to Foster Global Legal Education
               </h2>
-              <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+              <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
                 Vinayaka Mission&apos;s Law School (VMLS) marked a significant milestone in its journey towards global academic engagement with the signing of an International Memorandum of Understanding (MoU) with the University of San Diego, School of Law on 20 January 2026.
               </p>
-              <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+              <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
                 This strategic collaboration aims to establish a robust platform for academic cooperation, international exposure, and cross-cultural learning. The MoU is designed to benefit students and faculty members of both institutions through opportunities such as academic collaboration, knowledge exchange, joint initiatives, and global learning experiences, thereby strengthening VMLS&apos;s international academic footprint.
               </p>
             </div>
           </div>
 
-          <div className="mt-6 space-y-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+          <div className="mt-6 space-y-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
             <p>
               VMLS extends its sincere gratitude to Dean Robert A. Schapiro, University of San Diego School of Law, for his leadership and support in fostering this collaboration. VMLS also acknowledges the valuable contributions of Mr. Aman Singh and Mr. Hasil Gora from GradRight Inc., whose efforts were instrumental in successfully finalising the MoU. The institution expresses its appreciation to all other stakeholders who played a key role in bringing this partnership to fruition.
             </p>
@@ -274,13 +274,13 @@ export default function CollaborationsPage() {
               <h2 className="font-playfair text-xl md:text-2xl lg:text-3xl font-bold text-[#800000] leading-tight text-balance">
                 Seattle University in Washington, U.S.
               </h2>
-              <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+              <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
                 On December 7, 2022, Vinayaka Mission&apos;s Research Foundation, deemed to be University and Seattle University in Washington, U.S., signed a Memorandum of Understanding (MOU) with the aim of promoting cultural, educational, and scientific collaborations between the two institutions. The MOU includes provisions for joint research activities, publications, and library exchanges, as well as programs for study or service. It also allows for the exchange of faculty members and students for study, teaching, and research, and invites scholars to participate in conferences, lectures, and seminars.
               </p>
             </div>
           </div>
 
-          <div className="mt-6 space-y-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty]">
+          <div className="mt-6 space-y-4 font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty]">
             <p>
               The MOU was signed by Professor Eduardo Peñalver, President of Seattle University, and Dr. P.K. Sudhir, Vice-Chancellor of Vinayaka Mission&apos;s Research Foundation, in the presence of Dr. A.S. Ganesan, Chancellor, Dr. Anuradha Ganesan, Director, Mr. Suresh Samuel, Member, Board of Management, and Dr. J. Sabarinathan, Director of Academics. Other participants in the event included Prof. Dr. Raj Kumar, Founding Vice-Chancellor of O.P. Jindal Global University (OPJGU), and Dr. A. Francis Julian, Chairperson of the Strategic Advisory Committee of Vinayaka Mission&apos;s Law School (VMLS).
             </p>

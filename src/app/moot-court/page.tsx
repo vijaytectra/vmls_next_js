@@ -76,7 +76,7 @@ export default function MootCourtPage() {
                 Bridging Theory and Practical Jurisprudence
               </h2>
               
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
                   The VMLS Moot Court is a state-of-the-art facility designed to simulate real-world legal proceedings, providing students with a practical environment to develop their advocacy skills. Here&apos;s a formal overview of the moot court:
                 </p>
@@ -159,7 +159,7 @@ export default function MootCourtPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">
                       {feature.desc}
                     </p>
                   </div>

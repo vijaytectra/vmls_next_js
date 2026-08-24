@@ -56,10 +56,10 @@ export default function IQACPage() {
                 Introduction to IQAC
                 <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-[#fbb03b]"></div>
               </h2>
-              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl text-justify mb-8">
+              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl text-left mb-8">
                 The IQAC of Vinayaka Mission&apos;s Law School (VMLS) is a dedicated body established to ensure continuous quality enhancement and to sustain academic and administrative performance across the institution.
               </p>
-              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl text-justify">
+              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl text-left">
                 The cell adheres to the guidelines provided by the National Assessment and Accreditation Council (NAAC), aiming to promote a culture of quality through a structured approach.
               </p>
             </div>

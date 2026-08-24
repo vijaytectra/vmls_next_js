@@ -70,11 +70,11 @@ export default function FacultyAchievementsPage() {
                 <div className="w-12 h-[2px] bg-[#a31f34]"></div>
                 <h2 className="font-playfair text-3xl md:text-4xl text-[#1a1a1a] font-bold">Research Impact</h2>
               </div>
-              <p className="font-inter text-lg text-gray-600 leading-relaxed mb-10 text-justify">
+              <p className="font-inter text-lg text-gray-600 leading-relaxed mb-10 text-left">
                 Beyond the classroom, our faculty members are active contributors to legal scholarship and policy development at national and international levels.
               </p>
 
-              <div className="space-y-8 font-inter text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
+              <div className="space-y-8 font-inter text-lg text-gray-700 leading-relaxed text-left sm:text-left">
                 {researchHighlights.map((highlight, index) => (
                   <div key={index} className="flex flex-col sm:flex-row gap-6 items-start">
                     <div className="bg-gray-50 p-4 rounded-lg shadow-inner shrink-0">

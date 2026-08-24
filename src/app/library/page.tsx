@@ -104,7 +104,7 @@ export default function LibraryPage() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
-                  <p className="font-inter text-[13px] md:text-sm text-gray-700 leading-relaxed text-justify mb-4">
+                  <p className="font-inter text-[13px] md:text-sm text-gray-700 leading-relaxed text-left mb-4">
                     Through the Digital Library platform, users can access various electronic resources (e-resources) both within the campus and remotely. When accessing from outside the campus, all VMLS users must sign in to the Digital Library platform to avail remote access to the subscribed e-resources.
                   </p>
 
@@ -211,7 +211,7 @@ export default function LibraryPage() {
               <div className="bg-white p-8 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.15)] relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#a31f34]/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-[#a31f34]/10 transition-colors duration-500"></div>
                 <h2 className="font-playfair text-3xl text-[#a31f34] font-bold mb-4">Welcome to VMLS Library</h2>
-                <div className="font-inter text-[15px] text-gray-700 leading-relaxed space-y-4 text-justify">
+                <div className="font-inter text-[15px] text-gray-700 leading-relaxed space-y-4 text-left">
                   <p>
                     The VMLS Law Library stands as a vital academic hub, supporting the teaching, learning, and research needs of students, faculty, and legal scholars. As a well-resourced and modern facility, the library offers an extensive collection of legal texts, journals, case reports, e-resources, and databases, catering to diverse areas of law.
                   </p>
@@ -323,7 +323,7 @@ export default function LibraryPage() {
                   Physical Collection (OPAC)
                 </Link>
 
-                <p className="font-inter text-[13px] text-gray-600 leading-relaxed text-justify mb-5">
+                <p className="font-inter text-[13px] text-gray-600 leading-relaxed text-left mb-5">
                   OPAC (Online Public Access Catalogue) is used to search and find the availability and status of physical books in the library. Through this platform, users can easily locate books available in the library collection. After signing in to the OPAC system, users can view the number of books issued to their account, check due dates, access their circulation history, renew borrowed books, and submit purchase suggestions for new titles.
                 </p>
 
@@ -616,7 +616,7 @@ export default function LibraryPage() {
             </button>
             <div className="p-8 max-h-[90vh] overflow-y-auto">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Turnitin</h2>
-              <p className="text-gray-600 font-inter text-[15px] leading-relaxed text-justify">
+              <p className="text-gray-600 font-inter text-[15px] leading-relaxed text-left">
                 Our institution provides access to Turnitin, a plagiarism detection tool, to help faculties evaluate student submissions and ensure academic integrity. This tool checks for originality and provides feedback to students on proper citation and referencing.
               </p>
             </div>

@@ -134,7 +134,7 @@ export default function SubThemesSection() {
             Sub Themes
           </h2>
           <div className="w-16 h-1 bg-[#fbb03b] mx-auto mb-4"></div>
-          <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
+          <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed text-left sm:text-left">
             We welcome abstracts and full length quality research papers on the broad theme of Rivers. The below mentioned are few sub themes which may be considered. Please note that this is not an exhaustive list of topics. You are welcome to submit abstracts on any topic of your interest as long as it falls within an area of concern on River.
           </p>
         </div>

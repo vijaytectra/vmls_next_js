@@ -623,7 +623,7 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
                 {/* Highlighted Intro Paragraph (First paragraph of bio) */}
                 <div className="relative mt-8">
                   <div className="absolute left-0 top-0 bottom-0 w-[4px] md:w-[6px] bg-[#a31f34]"></div>
-                  <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic text-justify">
+                  <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic text-left">
                     {faculty.bio[0]}
                   </p>
                 </div>
@@ -643,7 +643,7 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
                 </h2>
               </div>
               
-              <div className="space-y-8 font-inter text-lg text-gray-700 leading-relaxed text-justify">
+              <div className="space-y-8 font-inter text-lg text-gray-700 leading-relaxed text-left">
                 {faculty.bio.slice(1).map((para, i) => (
                   <p key={i} className="transition-all duration-300 hover:text-gray-900">
                     {para}

@@ -22,7 +22,7 @@ export default function AntiRaggingPage() {
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Anti-Ragging <br /><span className="text-[#800000]">Cell</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
               Vinayaka Mission's Law School maintains a zero-tolerance policy towards ragging. Our dedicated cell ensures a safe, respectful, and inclusive environment for every student.
             </p>
           </div>
@@ -44,7 +44,7 @@ export default function AntiRaggingPage() {
       <section className="pt-12 pb-6 md:pt-16 md:pb-8 px-[5%] bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-playfair text-3xl md:text-4xl text-gray-900 mb-6 font-bold border-l-4 border-[#fbb03b] pl-6 text-center lg:text-left">Zero Tolerance Policy</h2>
-          <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg">
+          <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg">
             <p>
               In accordance with the regulations of the University Grants Commission (UGC) and the Bar Council of India (BCI), VMLS has established a robust Anti-Ragging Cell. Ragging in any form is strictly prohibited within the campus, hostels, and any other student gathering points.
             </p>

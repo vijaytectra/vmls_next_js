@@ -65,7 +65,7 @@ export default function LLBAdmissionsPage() {
           <div className="lg:w-[62%] min-w-0">
             <div className="relative">
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]" />
-              <div className="pl-6 md:pl-10 space-y-6 text-justify hyphens-none [hyphens:none] [-webkit-hyphens:none]">
+              <div className="pl-6 md:pl-10 space-y-6 text-left hyphens-none [hyphens:none] [-webkit-hyphens:none]">
                 <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
                   LL.B. Program
                 </h2>

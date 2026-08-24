@@ -76,7 +76,7 @@ export default function SeminarHallPage() {
                 A Premier Venue for Learning and Collaboration
               </h2>
               
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
                   The VMLS Seminar Hall is a modern facility designed to host a variety of academic and professional events.
                 </p>
@@ -159,7 +159,7 @@ export default function SeminarHallPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">
                       {feature.desc}
                     </p>
                   </div>

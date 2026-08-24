@@ -48,7 +48,7 @@ export default function WhyInternationalLawMattersPage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 On 6th March 2025, the <strong>Centre for the Promotion of International Law</strong> successfully hosted the inaugural session of the &apos;Why International Law Matters, Especially Today&apos; series. The event aimed to initiate meaningful discussions on pressing global issues through conversations with distinguished experts in the field of international law.
               </p>

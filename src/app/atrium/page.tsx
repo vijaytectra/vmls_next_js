@@ -76,7 +76,7 @@ export default function AtriumPage() {
                 The Heart of Campus Interaction
               </h2>
 
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
                   The atrium of VMLS fosters an atmosphere that is both inviting and conducive to academic pursuits. The high ceiling and large open space are not just aesthetically pleasing but also promote a sense of freedom and possibility, essential for creative thinking. Natural light bathes the area, creating a bright and energizing environment that enhances student efficiency. The thoughtful arrangement of tables and chairs allows for both individual study and collaborative work, ensuring that students can find a space that suits their learning style. With a wide aisle and unobstructed pathways, the atrium is highly accessible, allowing for easy movement and interaction among students, which is vital for a dynamic educational experience. Overall, the atrium&apos;s design reflects a deep understanding of the needs of students, blending form with function to create an optimal learning environment.
                 </p>
@@ -128,7 +128,7 @@ export default function AtriumPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">
                       {feature.desc}
                     </p>
                   </div>

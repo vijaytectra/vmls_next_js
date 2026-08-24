@@ -86,7 +86,7 @@ export default function InfrastructurePage() {
                   </div>
 
                   <div className="p-6 md:p-8">
-                    <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-justify hyphens-none [hyphens:none] [text-wrap:pretty] mb-6">
+                    <p className="font-inter text-gray-700 leading-relaxed text-base md:text-lg text-left hyphens-none [hyphens:none] [text-wrap:pretty] mb-6">
                       {item.shortDescription}
                     </p>
                     <Link

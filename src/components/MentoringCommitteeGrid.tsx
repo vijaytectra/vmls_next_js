@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { noOrphanText } from "@/lib/noOrphanText";
 
 interface Member {
   name: string;
@@ -79,15 +80,15 @@ export default function MentoringCommitteeGrid() {
                 </div>
               </div>
 
-              <div className="mt-2 flex flex-col h-full">
-                <div className="min-h-[40px] md:min-h-[50px] flex flex-col justify-end gap-2">
-                  <h3 className="font-playfair font-bold text-lg md:text-xl lg:text-[22px] tracking-tight text-[#1a1a1a] leading-tight group-hover:text-[#a31f34] transition-colors duration-300">
+              <div className="person-card-details person-card-details--start !pt-2 !px-0">
+                <div className="w-full min-h-[2.75rem] flex flex-col justify-start gap-2">
+                  <h3 className="person-card-name !justify-start !text-left !min-h-0 font-playfair font-bold text-lg md:text-xl lg:text-[22px] tracking-tight text-[#1a1a1a] leading-tight group-hover:text-[#a31f34] transition-colors duration-300">
                     {member.name}
                   </h3>
                   <div className="w-8 h-[2px] bg-[#a31f34]/30 group-hover:w-16 group-hover:bg-[#a31f34] transition-all duration-500"></div>
                 </div>
-                <p className="mt-4 font-inter text-gray-500 text-[15px] leading-relaxed tracking-tight">
-                  {member.designation}
+                <p className="person-card-role !min-h-0 !tracking-normal mt-3 font-inter text-gray-500 text-[15px] leading-relaxed normal-case font-normal text-pretty">
+                  {noOrphanText(member.designation)}
                 </p>
               </div>
             </div>

@@ -23,7 +23,7 @@ export default function ClashesOfMasculinityPage() {
               Clashes of <br />
               <span className="text-[#fbb03b]">Masculinity</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
               A guest lecture exploring masculine identities across urban and rural India, delivered by Dr. Shannon Philip, University of Cambridge.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function ClashesOfMasculinityPage() {
               Guest lecture &quot;Clashes of Masculinity in Urban and Rural India&quot;
             </h2>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg space-y-8 mb-12">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg space-y-8 mb-12">
               <p>
                 Vinayaka Mission&apos;s Law School (VMLS) organized a guest lecture &quot;Clashes of Masculinity in Urban and Rural India&quot; on <strong>17th April</strong> at the Moot Court. The session was delivered by Dr. Shannon Philip, Assistant Professor of Sociology at the University of Cambridge, and attended by students of the 5-Year Integrated Programme.
               </p>
