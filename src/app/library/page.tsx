@@ -45,6 +45,35 @@ export default function LibraryPage() {
   const nextImg = () => setCurrentImg((prev) => (prev + 1) % galleryImages.length);
   const prevImg = () => setCurrentImg((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
 
+  const isAnyModalOpen =
+    isTurnitinModalOpen ||
+    isDigitalAccessModalOpen ||
+    isDiscussionRoomsModalOpen ||
+    isReferenceModalOpen ||
+    isOpacModalOpen ||
+    isCourseGuideModalOpen ||
+    isNewArrivalsModalOpen ||
+    isRemoteAccessModalOpen ||
+    isILLModalOpen ||
+    isBookDisplayModalOpen ||
+    isThematicDisplayModalOpen ||
+    isCareerCornerModalOpen ||
+    isExcellenceCollectionModalOpen ||
+    isTextbookProcurementModalOpen ||
+    isNewspaperServiceModalOpen ||
+    isReprographyServiceModalOpen;
+
+  useEffect(() => {
+    if (isAnyModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isAnyModalOpen]);
+
   return (
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
@@ -198,8 +227,8 @@ export default function LibraryPage() {
               <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
                 <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">Facilities</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  <button onClick={() => setIsDigitalAccessModalOpen(true)} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
-                  <button onClick={() => setIsDiscussionRoomsModalOpen(true)} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
+                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
+                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
                 </div>
               </div>
               </div>
@@ -367,7 +396,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsReferenceModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsReferenceModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -378,7 +407,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsOpacModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsOpacModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -389,7 +418,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsCourseGuideModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsCourseGuideModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -400,7 +429,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsNewArrivalsModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsNewArrivalsModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -411,7 +440,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsRemoteAccessModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsRemoteAccessModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -422,7 +451,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsILLModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsILLModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -433,7 +462,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsBookDisplayModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsBookDisplayModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -444,7 +473,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsThematicDisplayModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsThematicDisplayModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -455,7 +484,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsCareerCornerModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsCareerCornerModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -466,7 +495,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsExcellenceCollectionModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsExcellenceCollectionModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -477,7 +506,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsTextbookProcurementModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsTextbookProcurementModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -488,7 +517,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsNewspaperServiceModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsNewspaperServiceModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -499,7 +528,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsReprographyServiceModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsReprographyServiceModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -606,8 +635,8 @@ export default function LibraryPage() {
 
       {/* Turnitin Modal */}
       {isTurnitinModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsTurnitinModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsTurnitinModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -626,8 +655,8 @@ export default function LibraryPage() {
 
       {/* Digital Access Modal */}
       {isDigitalAccessModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsDigitalAccessModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsDigitalAccessModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -663,8 +692,8 @@ export default function LibraryPage() {
 
       {/* Discussion Rooms Modal */}
       {isDiscussionRoomsModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsDiscussionRoomsModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsDiscussionRoomsModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -705,8 +734,8 @@ export default function LibraryPage() {
 
       {/* Reference Service Modal */}
       {isReferenceModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsReferenceModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsReferenceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -750,8 +779,8 @@ export default function LibraryPage() {
 
       {/* OPAC Modal */}
       {isOpacModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsOpacModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsOpacModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -795,8 +824,8 @@ export default function LibraryPage() {
 
       {/* Course Guide Modal */}
       {isCourseGuideModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsCourseGuideModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsCourseGuideModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -835,8 +864,8 @@ export default function LibraryPage() {
 
       {/* New Arrivals Modal */}
       {isNewArrivalsModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsNewArrivalsModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsNewArrivalsModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -872,8 +901,8 @@ export default function LibraryPage() {
 
       {/* Remote Access Modal */}
       {isRemoteAccessModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsRemoteAccessModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsRemoteAccessModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -908,8 +937,8 @@ export default function LibraryPage() {
 
       {/* ILL Modal */}
       {isILLModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsILLModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsILLModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -945,8 +974,8 @@ export default function LibraryPage() {
 
       {/* Book Display Modal */}
       {isBookDisplayModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsBookDisplayModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsBookDisplayModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -982,8 +1011,8 @@ export default function LibraryPage() {
 
       {/* Thematic Display Modal */}
       {isThematicDisplayModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsThematicDisplayModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsThematicDisplayModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1021,8 +1050,8 @@ export default function LibraryPage() {
 
       {/* Career Corner Modal */}
       {isCareerCornerModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsCareerCornerModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsCareerCornerModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1064,8 +1093,8 @@ export default function LibraryPage() {
 
       {/* Excellence Collection Modal */}
       {isExcellenceCollectionModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsExcellenceCollectionModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsExcellenceCollectionModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1102,8 +1131,8 @@ export default function LibraryPage() {
 
       {/* Textbook Procurement Modal */}
       {isTextbookProcurementModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsTextbookProcurementModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsTextbookProcurementModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1139,8 +1168,8 @@ export default function LibraryPage() {
 
       {/* Newspaper Service Modal */}
       {isNewspaperServiceModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsNewspaperServiceModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsNewspaperServiceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1182,8 +1211,8 @@ export default function LibraryPage() {
 
       {/* Reprography Service Modal */}
       {isReprographyServiceModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsReprographyServiceModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsReprographyServiceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
