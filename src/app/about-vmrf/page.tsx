@@ -51,10 +51,10 @@ export default function AboutVMRF() {
       <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
         <ArchitecturalSketch />
 
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14 relative z-10">
-          {/* Left: Campus Image (Fixed in place) */}
-          <div className="lg:w-[38%] w-full shrink-0 lg:sticky lg:top-28">
-            <div className="relative w-full aspect-[4/5] max-h-[500px] shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-14 relative z-10">
+          {/* Left: Campus Image */}
+          <div className="lg:w-[38%] w-full shrink-0">
+            <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[480px] shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
               <Image
                 src="/images/vmrf/about-vmrf.webp"
                 alt="VMRF campus building"
@@ -67,13 +67,13 @@ export default function AboutVMRF() {
           </div>
 
           {/* Right: Content */}
-          <div className="lg:w-[62%] flex flex-col justify-center">
+          <div className="lg:w-[62%] flex flex-col justify-center w-full">
             <div className="relative">
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34] rounded-full" />
               <div className="pl-6 md:pl-10 text-left">
                 {isExpanded ? (
                   /* Expanded state: Scrollable text box next to fixed left image */
-                  <div className="max-h-[500px] overflow-y-auto custom-text-scrollbar pr-4 space-y-6">
+                  <div className="max-h-[480px] overflow-y-auto custom-text-scrollbar pr-4 space-y-6">
                     <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                       In 1981, Thirumuruga Kirupananda Variyar Thavathiru Sundara Swamigal Medical Educational and Charitable Trust was established, followed by Vinayaka Mission&apos;s College of Pharmacy in 1982. In 2001, the trust became Vinayaka Mission&apos;s Research Foundation (VMRF), the 48th University in India, after being recognized for its excellence and academic standards. The University&apos;s primary objective is to offer high-quality education to students from all walks of life. As one of the largest universities in India, VMRF offers a wide range of academic disciplines, with a comprehensive range of faculties that covers almost the entire gamut of academic disciplines, including medicine, paramedicine, engineering and technology, management, arts and sciences, law, among others.
                     </p>
@@ -95,7 +95,7 @@ export default function AboutVMRF() {
                     </div>
                   </div>
                 ) : (
-                  /* Collapsed state: Text aligned to the horizontal bottom line of the left image with red Read More link */
+                  /* Collapsed state: Text aligned to horizontal bottom line of left image with red Read More link */
                   <div className="space-y-6">
                     <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                       In 1981, Thirumuruga Kirupananda Variyar Thavathiru Sundara Swamigal Medical Educational and Charitable Trust was established, followed by Vinayaka Mission&apos;s College of Pharmacy in 1982. In 2001, the trust became Vinayaka Mission&apos;s Research Foundation (VMRF), the 48th University in India, after being recognized for its excellence and academic standards. The University&apos;s primary objective is to offer high-quality education to students from all walks of life. As one of the largest universities in India, VMRF offers a wide range of academic disciplines, with a comprehensive range of faculties that covers almost the entire gamut of academic disciplines, including medicine, paramedicine, engineering and technology, management, arts and sciences, law, among others.
@@ -134,7 +134,7 @@ export default function AboutVMRF() {
               href="/founder"
               className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full block"
             >
-              <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300 overflow-hidden rounded-xl">
                 <Image
                   src="/images/vmrf/Frame-53135.webp"
                   alt="Dr. A. Shanmugasundaram"
@@ -155,9 +155,9 @@ export default function AboutVMRF() {
               href="/chancellor"
               className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full block"
             >
-              <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300 overflow-hidden rounded-xl">
                 <Image
-                  src="/images/vmrf/Frame-53134.webp"
+                  src="/images/vmrf/Frame-53136.webp"
                   alt="Dato' Seri. Dr. A. S. Ganesan"
                   fill
                   sizes="280px"
@@ -173,9 +173,9 @@ export default function AboutVMRF() {
             </Link>
 
             <div className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full block">
-              <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300 overflow-hidden rounded-xl">
                 <Image
-                  src="/images/vmrf/Frame-53133.webp"
+                  src="/images/vmrf/image-100.webp"
                   alt="Dr. Annapoorani Ganesan"
                   fill
                   sizes="280px"
