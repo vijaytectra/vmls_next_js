@@ -48,6 +48,11 @@ const clubs = [
     img: "/images/studentaff/social.webp",
     desc: "The Social Media Club at VMLS is the creative force behind the school’s digital presence. Students capture campus life, create engaging content, and connect the VMLS community online—gaining hands-on experience in storytelling, branding, and digital media.",
   },
+  {
+    name: "Blood Donor Club",
+    img: "/images/studentaff/blood-donor.webp",
+    desc: "The Blood Donor Club at VMLS encourages the spirit of giving back to society. The club organizes regular blood donation camps and raises awareness about the importance of blood donation, saving lives and fostering a strong sense of community service.",
+  },
 ];
 
 export default function StudentClubsPage() {
