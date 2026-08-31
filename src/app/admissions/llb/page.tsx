@@ -1,14 +1,8 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, ChevronUp } from "lucide-react";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 
 export default function LLBAdmissionsPage() {
-  const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <main className="min-h-screen bg-white">
       {/* Breadcrumb */}
@@ -55,7 +49,7 @@ export default function LLBAdmissionsPage() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-14 relative z-10">
           {/* Left: Image */}
           <div className="lg:w-[38%] w-full shrink-0">
-            <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[480px] shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
+            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
               <Image
                 src="/images/llb/1.webp"
                 alt="LL.B. Program Classroom"
@@ -68,56 +62,22 @@ export default function LLBAdmissionsPage() {
           </div>
 
           {/* Right: Content */}
-          <div className="lg:w-[62%] flex flex-col justify-center w-full">
+          <div className="lg:w-[62%] min-w-0">
             <div className="relative">
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34] rounded-full" />
-              <div className="pl-6 md:pl-10 text-left">
-                {isExpanded ? (
-                  <div className="max-h-[480px] overflow-y-auto custom-text-scrollbar pr-4 space-y-6">
-                    <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
-                      LL.B. Program
-                    </h2>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      The Law Programme is designed with the overarching objective of cultivating competent legal professionals equipped to navigate the diverse facets of the legal profession and associated career pathways. Upon successful completion, our graduates will possess a comprehensive skill set encompassing effective verbal and written communication, critical thinking, analytical prowess, logical reasoning, and adept problem-solving abilities.
-                    </p>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      They will have acquired a robust foundation across all studied courses, demonstrating proficiency in conducting high-quality legal research and the preparation, examination, evaluation, and execution of legal documents. Furthermore, graduates will exhibit a profound understanding of contemporary social issues, engaging with them in a creative and solution-oriented manner.
-                    </p>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      This holistic approach extends to instilling a sense of social responsibility, encouraging active participation in civic duties, and fostering a commitment to ongoing self-reflection and lifelong learning.
-                    </p>
-                    <div className="pt-2 pb-2">
-                      <button
-                        type="button"
-                        onClick={() => setIsExpanded(false)}
-                        className="text-[#a31f34] font-inter font-bold text-base hover:underline hover:text-[#800000] transition-colors inline-flex items-center gap-1.5 cursor-pointer"
-                      >
-                        <span>Read Less</span>
-                        <ChevronUp className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="space-y-6">
-                    <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
-                      LL.B. Program
-                    </h2>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      The Law Programme is designed with the overarching objective of cultivating competent legal professionals equipped to navigate the diverse facets of the legal profession and associated career pathways. Upon successful completion, our graduates will possess a comprehensive skill set encompassing effective verbal and written communication, critical thinking, analytical prowess, logical reasoning, and adept problem-solving abilities.
-                    </p>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      They will have acquired a robust foundation across all studied courses, demonstrating proficiency in conducting high-quality legal research and the preparation, examination, evaluation, and execution of legal documents...{" "}
-                      <button
-                        type="button"
-                        onClick={() => setIsExpanded(true)}
-                        className="text-[#a31f34] font-inter font-bold text-base md:text-lg hover:underline hover:text-[#800000] transition-colors inline-flex items-center gap-1 cursor-pointer ml-1"
-                      >
-                        <span>Read More</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                    </p>
-                  </div>
-                )}
+              <div className="pl-6 md:pl-10 space-y-6 text-left">
+                <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
+                  LL.B. Program
+                </h2>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
+                  The Law Programme is designed with the overarching objective of cultivating competent legal professionals equipped to navigate the diverse facets of the legal profession and associated career pathways. Upon successful completion, our graduates will possess a comprehensive skill set encompassing effective verbal and written communication, critical thinking, analytical prowess, logical reasoning, and adept problem-solving abilities.
+                </p>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
+                  They will have acquired a robust foundation across all studied courses, demonstrating proficiency in conducting high-quality legal research and the preparation, examination, evaluation, and execution of legal documents. Furthermore, graduates will exhibit a profound understanding of contemporary social issues, engaging with them in a creative and solution-oriented manner.
+                </p>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
+                  This holistic approach extends to instilling a sense of social responsibility, encouraging active participation in civic duties, and fostering a commitment to ongoing self-reflection and lifelong learning.
+                </p>
               </div>
             </div>
           </div>

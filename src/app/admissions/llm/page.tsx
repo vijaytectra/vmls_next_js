@@ -100,7 +100,7 @@ export default function LLMAdmissionsPage() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-14 relative z-10">
           {/* Left: Image */}
           <div className="lg:w-[38%] w-full shrink-0">
-            <div className="relative w-full h-[320px] sm:h-[400px] lg:h-[480px] shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
+            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
               <Image
                 src="/images/llm/llm1.webp"
                 alt="LL.M. classroom at VMLS"
@@ -113,56 +113,22 @@ export default function LLMAdmissionsPage() {
           </div>
 
           {/* Right: Content */}
-          <div className="lg:w-[62%] flex flex-col justify-center w-full">
+          <div className="lg:w-[62%] min-w-0">
             <div className="relative">
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34] rounded-full" />
-              <div className="pl-6 md:pl-10 text-left">
-                {isExpanded ? (
-                  <div className="max-h-[480px] overflow-y-auto custom-text-scrollbar pr-4 space-y-6">
-                    <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
-                      LL.M. Program
-                    </h2>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      Our LL.M. program is a transformative journey that merges rigorous academic theory with real-world practice, positioning you as a future leader in law. In every element of the LL.M. curriculum, we emphasize industry exposure and innovative teaching.
-                    </p>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      Through collaborative group projects and immersive capstone experiences, LL.M. students engage with complex legal and corporate scenarios. Interactive sessions and lively discussions with industry experts are part and parcel of the LL.M. experience.
-                    </p>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      Utilizing case studies, visual learning methods, and analytical exercises focused on landmark corporate shifts, our LL.M. program fosters mastery of high-level legal and financial concepts.
-                    </p>
-                    <div className="pt-2 pb-2">
-                      <button
-                        type="button"
-                        onClick={() => setIsExpanded(false)}
-                        className="text-[#a31f34] font-inter font-bold text-base hover:underline hover:text-[#800000] transition-colors inline-flex items-center gap-1.5 cursor-pointer"
-                      >
-                        <span>Read Less</span>
-                        <ChevronUp className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="space-y-6">
-                    <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
-                      LL.M. Program
-                    </h2>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      Our LL.M. program is a transformative journey that merges rigorous academic theory with real-world practice, positioning you as a future leader in law. In every element of the LL.M. curriculum, we emphasize industry exposure and innovative teaching.
-                    </p>
-                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                      Through collaborative group projects and immersive capstone experiences, LL.M. students engage with complex legal and corporate scenarios...{" "}
-                      <button
-                        type="button"
-                        onClick={() => setIsExpanded(true)}
-                        className="text-[#a31f34] font-inter font-bold text-base md:text-lg hover:underline hover:text-[#800000] transition-colors inline-flex items-center gap-1 cursor-pointer ml-1"
-                      >
-                        <span>Read More</span>
-                        <ChevronDown className="w-4 h-4" />
-                      </button>
-                    </p>
-                  </div>
-                )}
+              <div className="pl-6 md:pl-10 space-y-6 text-left">
+                <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
+                  LL.M. Program
+                </h2>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
+                  Our LL.M. program is a transformative journey that merges rigorous academic theory with real-world practice, positioning you as a future leader in law. In every element of the LL.M. curriculum, we emphasize industry exposure and innovative teaching.
+                </p>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
+                  Through collaborative group projects and immersive capstone experiences, LL.M. students engage with complex legal and corporate scenarios. Interactive sessions and lively discussions with industry experts are part and parcel of the LL.M. experience.
+                </p>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
+                  Utilizing case studies, visual learning methods, and analytical exercises focused on landmark corporate shifts, our LL.M. program fosters mastery of high-level legal and financial concepts.
+                </p>
               </div>
             </div>
           </div>
