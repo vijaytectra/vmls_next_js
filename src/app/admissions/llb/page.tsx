@@ -9,6 +9,18 @@ import { CheckCircle2, ArrowRight, BookOpen, GraduationCap, Award, Briefcase, Fi
 export default function LLBAdmissionsPage() {
   const [activeTab, setActiveTab] = useState("LL.B. (Hons.)");
 
+  const handleTabClick = (prog: string) => {
+    setActiveTab(prog);
+    if (prog === "LL.B. (Hons.)") {
+      setTimeout(() => {
+        const element = document.getElementById("programme-content");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 50);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-white">
       {/* Breadcrumb */}
@@ -120,7 +132,7 @@ export default function LLBAdmissionsPage() {
                 <button
                   key={prog}
                   type="button"
-                  onClick={() => setActiveTab(prog)}
+                  onClick={() => handleTabClick(prog)}
                   className={`px-4 py-3.5 md:px-8 md:py-4 font-inter font-bold text-xs sm:text-sm md:text-base text-center transition-all duration-300 cursor-pointer ${
                     activeTab === prog
                       ? "bg-[#a31f34] text-white shadow-[0_10px_30px_-5px_rgba(163,31,52,0.5)] scale-105"
@@ -134,7 +146,7 @@ export default function LLBAdmissionsPage() {
           </div>
 
           {/* Main Grid: Image + Stats */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch mb-12">
             {/* Left Side: Image with Frame */}
             <div className="lg:w-[50%] flex justify-center items-center">
               <div className="relative w-full aspect-[4/3] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
@@ -189,6 +201,225 @@ export default function LLBAdmissionsPage() {
               </div>
             </div>
           </div>
+
+          {/* DETAILED 3-YEAR LL.B. (HONS.) GUIDE CONTENT SECTION (Immediately Below Buttons/Stats) */}
+          {activeTab === "LL.B. (Hons.)" && (
+            <div id="programme-content" className="pt-4 space-y-12 transition-all duration-500">
+              
+              {/* Section Header Banner */}
+              <div className="bg-[#800000] text-white p-8 md:p-12 rounded-2xl relative overflow-hidden shadow-xl">
+                <div className="relative z-10">
+                  <div className="inline-flex items-center gap-2 bg-[#fbb03b] text-gray-900 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
+                    <Sparkles size={14} />
+                    <span>3-Year LL.B. (Hons.) Programme Guide</span>
+                  </div>
+                  <h3 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
+                    Three-Year LL.B. (Hons.) at VMLS
+                  </h3>
+                  <p className="font-inter text-lg md:text-xl text-gray-200 max-w-3xl leading-relaxed">
+                    Programme Overview, Eligibility, Admission Process (VLAT), Pre-Law Courses, and Career Scope.
+                  </p>
+                </div>
+                <div className="absolute right-[-10%] bottom-[-20%] w-[350px] h-[350px] bg-[#fbb03b]/10 rounded-full blur-3xl pointer-events-none"></div>
+              </div>
+
+              {/* Grid 1: Overview & Why Pursue */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Card 1: Programme Overview */}
+                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-red-50 text-[#a31f34] rounded-xl flex items-center justify-center font-bold">
+                    <BookOpen size={24} />
+                  </div>
+                  <h4 className="font-playfair text-2xl font-bold text-[#1a1a1a]">
+                    LL.B. (Hons.) Program Overview
+                  </h4>
+                  <p className="font-inter text-gray-700 leading-relaxed text-base">
+                    VMLS’s 3-Year LL.B (Hons) is an undergraduate professional degree (230 credits total), fully compliant with Bar Council of India (BCI) standards and NEP 2020 guidelines. Mentored by O.P. Jindal Global University (Institution of Eminence), the programme delivers rigorous legal training integrated with hands-on clinical courses and real-world litigation experience.
+                  </p>
+                </div>
+
+                {/* Card 2: Why Pursue LL.B (Hons) Today? */}
+                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-amber-50 text-[#fbb03b] rounded-xl flex items-center justify-center font-bold">
+                    <Award size={24} />
+                  </div>
+                  <h4 className="font-playfair text-2xl font-bold text-[#1a1a1a]">
+                    Why Pursue LL.B. (Hons) Today?
+                  </h4>
+                  <p className="font-inter text-gray-700 leading-relaxed text-base">
+                    In India’s evolving legal landscape, marked by digital laws, climate justice, and corporate growth, a 3-year LL.B (Hons) bridges undergraduate knowledge with specialized legal skills. Law is surging as a powerhouse field in India, driven by economic liberalization and global trade complexities.
+                  </p>
+                </div>
+              </div>
+
+              {/* Eligibility & Required Documents */}
+              <div className="bg-gray-50 p-8 md:p-10 rounded-2xl border border-gray-200 shadow-sm space-y-6">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-red-50 text-[#a31f34] rounded-lg flex items-center justify-center font-bold">
+                    <GraduationCap size={20} />
+                  </div>
+                  <h4 className="font-playfair text-2xl md:text-3xl font-bold text-[#1a1a1a]">
+                    Eligibility Criteria & Documentation
+                  </h4>
+                </div>
+                <p className="font-inter text-gray-700 leading-relaxed text-base">
+                  Entry to VMLS’s flagship 3-year LL.B (Hons) is open to bachelor’s degree holders in any discipline from a recognized university.
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
+                  {[
+                    "Bachelor's Degree Marksheets & Certificate",
+                    "10+2 / Higher Secondary Certificate",
+                    "Category Proof (if applicable)",
+                    "Valid Photo ID (Aadhaar / PAN)",
+                    "Passport Size Photographs",
+                    "VLAT / Entrance Scorecard"
+                  ].map((doc, idx) => (
+                    <div key={idx} className="flex items-center gap-3 p-3.5 bg-white rounded-xl border border-gray-200 text-sm font-semibold text-gray-800">
+                      <CheckCircle2 size={18} className="text-[#a31f34] shrink-0" />
+                      <span>{doc}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Admission Process via VLAT 2026 */}
+              <div className="bg-gray-50 p-8 md:p-10 rounded-2xl border border-gray-200 shadow-sm space-y-8">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-200 pb-6">
+                  <div>
+                    <h4 className="font-playfair text-2xl md:text-3xl font-bold text-[#1a1a1a]">
+                      Admission Process (VLAT 2026)
+                    </h4>
+                    <p className="font-inter text-gray-600 text-sm mt-1">
+                      Merit-cum-entrance based admission via Vinayaka Mission&apos;s Law Admission Test (VLAT), CUET-PG, CLAT, or LSAT.
+                    </p>
+                  </div>
+                  <Link
+                    href="https://admissions.vmls.edu.in/"
+                    target="_blank"
+                    className="inline-flex items-center gap-2 bg-[#a31f34] text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-[#800000] transition-colors shrink-0 shadow-md"
+                  >
+                    <span>Apply Online</span>
+                    <ArrowRight size={16} />
+                  </Link>
+                </div>
+
+                {/* 5 Step Admission Flow */}
+                <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+                  {[
+                    { step: "01", title: "Register Online", desc: "Create an account at vmls.edu.in/vlat/ & verify email." },
+                    { step: "02", title: "Fill Application", desc: "Enter academic details & upload docs (₹1000 fee)." },
+                    { step: "03", title: "Appear for VLAT", desc: "60-min test (Legal Aptitude, Reasoning, GK, English)." },
+                    { step: "04", title: "Results & Merit", desc: "Declared in 7 days based on entrance score + graduation marks." },
+                    { step: "05", title: "Counselling", desc: "Receive offer letter & confirm seat with fee deposit." }
+                  ].map((item, idx) => (
+                    <div key={idx} className="bg-white p-5 rounded-xl border border-gray-200 space-y-2 relative">
+                      <span className="font-inter font-extrabold text-2xl text-[#a31f34]">{item.step}</span>
+                      <h5 className="font-inter font-bold text-gray-900 text-sm">{item.title}</h5>
+                      <p className="font-inter text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Scholarship Highlight Banner */}
+                <div className="bg-amber-100/60 border border-amber-300 p-6 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                  <div className="space-y-1 text-center sm:text-left">
+                    <h5 className="font-inter font-bold text-amber-950 text-base">Over 140 Scholarships Worth ₹60+ Lakhs</h5>
+                    <p className="font-inter text-xs text-amber-900">Merit-based, need-based, and women-focused financial aid options available for 2026 intakes.</p>
+                  </div>
+                  <Link href="/scholarships" className="text-[#a31f34] font-bold text-sm hover:underline shrink-0">
+                    Explore Scholarships →
+                  </Link>
+                </div>
+              </div>
+
+              {/* Career Scope & Skills Gained */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* Career Scope */}
+                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-red-50 text-[#a31f34] rounded-lg flex items-center justify-center font-bold">
+                      <Briefcase size={20} />
+                    </div>
+                    <h4 className="font-playfair text-2xl font-bold text-[#1a1a1a]">
+                      Career Scope & Placement
+                    </h4>
+                  </div>
+                  <p className="font-inter text-gray-700 text-base leading-relaxed">
+                    After clearing the All India Bar Exam (AIBE), graduates can practice in courts. Diverse pathways exist across government and private sectors:
+                  </p>
+                  <ul className="space-y-2.5">
+                    {[
+                      "Advocate / Trial Practitioner at High Courts & Supreme Court",
+                      "Corporate Legal Consultant & In-House Counsel",
+                      "Judicial Officer & Civil Judge",
+                      "Public Prosecutor & Legal Advisor",
+                      "Compliance Officer & Regulatory Specialist",
+                      "Human Rights Lawyer & NGO Legal Lead",
+                      "Legal Researcher & Law Professor"
+                    ].map((career, cIdx) => (
+                      <li key={cIdx} className="flex items-center gap-2.5 font-inter text-sm font-semibold text-gray-800">
+                        <div className="w-1.5 h-1.5 bg-[#a31f34] rounded-full shrink-0"></div>
+                        <span>{career}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Skills Gained */}
+                <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm space-y-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-amber-50 text-[#fbb03b] rounded-lg flex items-center justify-center font-bold">
+                      <FileText size={20} />
+                    </div>
+                    <h4 className="font-playfair text-2xl font-bold text-[#1a1a1a]">
+                      Core Skills Gained
+                    </h4>
+                  </div>
+                  <p className="font-inter text-gray-700 text-base leading-relaxed">
+                    Graduates from VMLS emerge with high-calibre practical skills engineered for the modern legal profession:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {[
+                      "Written & Verbal Advocacy",
+                      "High-Calibre Legal Research",
+                      "Instrument Drafting & Scrutiny",
+                      "Logical Reasoning & Analytics",
+                      "Client Counselling & Negotiation",
+                      "Social Accountability & Ethics"
+                    ].map((skill, sIdx) => (
+                      <div key={sIdx} className="p-3 bg-white rounded-lg border border-gray-200 font-inter text-xs font-bold text-gray-800 flex items-center gap-2">
+                        <CheckCircle2 size={16} className="text-[#a31f34] shrink-0" />
+                        <span>{skill}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Why Choose VMLS Highlights */}
+              <div className="bg-[#800000] text-white p-8 md:p-10 rounded-2xl space-y-6 shadow-lg">
+                <h4 className="font-playfair text-2xl md:text-3xl font-bold">
+                  Why Choose VMLS for 3-Year LL.B. (Hons)?
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 space-y-2">
+                    <h5 className="font-inter font-bold text-lg text-[#fbb03b]">OPJGU Mentorship</h5>
+                    <p className="font-inter text-xs text-gray-200 leading-relaxed">Exclusive curriculum design and faculty guidance from O.P. Jindal Global University (Institution of Eminence).</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 space-y-2">
+                    <h5 className="font-inter font-bold text-lg text-[#fbb03b]">100% Internship Guarantee</h5>
+                    <p className="font-inter text-xs text-gray-200 leading-relaxed">Assured internship placements in law firms, High Court chambers, corporate legal cells, and NGOs from Day 1.</p>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 space-y-2">
+                    <h5 className="font-inter font-bold text-lg text-[#fbb03b]">Bilingual Pedagogy</h5>
+                    <p className="font-inter text-xs text-gray-200 leading-relaxed">English & regional language support ensuring no learner is left behind, paired with smart digital classrooms.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          )}
         </div>
       </section>
 
@@ -238,227 +469,6 @@ export default function LLBAdmissionsPage() {
           </div>
         </div>
       </section>
-
-      {/* DETAILED 3-YEAR LL.B. (HONS.) GUIDE CONTENT SECTION (From vmls.edu.in/blog/three-year-llb-hons/) */}
-      {activeTab === "LL.B. (Hons.)" && (
-        <section className="py-12 md:py-16 px-[5%] bg-gray-50 border-t border-gray-100">
-          <div className="max-w-7xl mx-auto space-y-12">
-            
-            {/* Section Header Banner */}
-            <div className="bg-[#800000] text-white p-8 md:p-12 rounded-2xl relative overflow-hidden shadow-xl">
-              <div className="relative z-10">
-                <div className="inline-flex items-center gap-2 bg-[#fbb03b] text-gray-900 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4">
-                  <Sparkles size={14} />
-                  <span>3-Year LL.B. (Hons.) Programme Guide</span>
-                </div>
-                <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-                  Three-Year LL.B. (Hons.) at VMLS
-                </h2>
-                <p className="font-inter text-lg md:text-xl text-gray-200 max-w-3xl leading-relaxed">
-                  Programme Overview, Eligibility, Admission Process (VLAT), Pre-Law Courses, and Career Scope.
-                </p>
-              </div>
-              <div className="absolute right-[-10%] bottom-[-20%] w-[350px] h-[350px] bg-[#fbb03b]/10 rounded-full blur-3xl pointer-events-none"></div>
-            </div>
-
-            {/* Grid 1: Overview & Why Pursue */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Card 1: Programme Overview */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-red-50 text-[#a31f34] rounded-xl flex items-center justify-center font-bold">
-                  <BookOpen size={24} />
-                </div>
-                <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a]">
-                  LL.B. (Hons.) Program Overview
-                </h3>
-                <p className="font-inter text-gray-700 leading-relaxed text-base">
-                  VMLS’s 3-Year LL.B (Hons) is an undergraduate professional degree (230 credits total), fully compliant with Bar Council of India (BCI) standards and NEP 2020 guidelines. Mentored by O.P. Jindal Global University (Institution of Eminence), the programme delivers rigorous legal training integrated with hands-on clinical courses and real-world litigation experience.
-                </p>
-              </div>
-
-              {/* Card 2: Why Pursue LL.B (Hons) Today? */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 bg-amber-50 text-[#fbb03b] rounded-xl flex items-center justify-center font-bold">
-                  <Award size={24} />
-                </div>
-                <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a]">
-                  Why Pursue LL.B. (Hons) Today?
-                </h3>
-                <p className="font-inter text-gray-700 leading-relaxed text-base">
-                  In India’s evolving legal landscape, marked by digital laws, climate justice, and corporate growth, a 3-year LL.B (Hons) bridges undergraduate knowledge with specialized legal skills. Law is surging as a powerhouse field in India, driven by economic liberalization and global trade complexities.
-                </p>
-              </div>
-            </div>
-
-            {/* Eligibility & Required Documents */}
-            <div className="bg-white p-8 md:p-10 rounded-2xl border border-gray-200 shadow-sm space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-red-50 text-[#a31f34] rounded-lg flex items-center justify-center font-bold">
-                  <GraduationCap size={20} />
-                </div>
-                <h3 className="font-playfair text-2xl md:text-3xl font-bold text-[#1a1a1a]">
-                  Eligibility Criteria & Documentation
-                </h3>
-              </div>
-              <p className="font-inter text-gray-700 leading-relaxed text-base">
-                Entry to VMLS’s flagship 3-year LL.B (Hons) is open to bachelor’s degree holders in any discipline from a recognized university.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
-                {[
-                  "Bachelor's Degree Marksheets & Certificate",
-                  "10+2 / Higher Secondary Certificate",
-                  "Category Proof (if applicable)",
-                  "Valid Photo ID (Aadhaar / PAN)",
-                  "Passport Size Photographs",
-                  "VLAT / Entrance Scorecard"
-                ].map((doc, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-3.5 bg-gray-50 rounded-xl border border-gray-100 text-sm font-semibold text-gray-800">
-                    <CheckCircle2 size={18} className="text-[#a31f34] shrink-0" />
-                    <span>{doc}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Admission Process via VLAT 2026 */}
-            <div className="bg-white p-8 md:p-10 rounded-2xl border border-gray-200 shadow-sm space-y-8">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-100 pb-6">
-                <div>
-                  <h3 className="font-playfair text-2xl md:text-3xl font-bold text-[#1a1a1a]">
-                    Admission Process (VLAT 2026)
-                  </h3>
-                  <p className="font-inter text-gray-600 text-sm mt-1">
-                    Merit-cum-entrance based admission via Vinayaka Mission&apos;s Law Admission Test (VLAT), CUET-PG, CLAT, or LSAT.
-                  </p>
-                </div>
-                <Link
-                  href="https://admissions.vmls.edu.in/"
-                  target="_blank"
-                  className="inline-flex items-center gap-2 bg-[#a31f34] text-white px-6 py-3 rounded-xl font-bold text-sm hover:bg-[#800000] transition-colors shrink-0 shadow-md"
-                >
-                  <span>Apply Online</span>
-                  <ArrowRight size={16} />
-                </Link>
-              </div>
-
-              {/* 5 Step Admission Flow */}
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-                {[
-                  { step: "01", title: "Register Online", desc: "Create an account at vmls.edu.in/vlat/ & verify email." },
-                  { step: "02", title: "Fill Application", desc: "Enter academic details & upload docs (₹1000 fee)." },
-                  { step: "03", title: "Appear for VLAT", desc: "60-min test (Legal Aptitude, Reasoning, GK, English)." },
-                  { step: "04", title: "Results & Merit", desc: "Declared in 7 days based on entrance score + graduation marks." },
-                  { step: "05", title: "Counselling", desc: "Receive offer letter & confirm seat with fee deposit." }
-                ].map((item, idx) => (
-                  <div key={idx} className="bg-gray-50 p-5 rounded-xl border border-gray-100 space-y-2 relative">
-                    <span className="font-inter font-extrabold text-2xl text-[#a31f34]">{item.step}</span>
-                    <h4 className="font-inter font-bold text-gray-900 text-sm">{item.title}</h4>
-                    <p className="font-inter text-xs text-gray-600 leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Scholarship Highlight Banner */}
-              <div className="bg-amber-50/80 border border-amber-200 p-6 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="space-y-1 text-center sm:text-left">
-                  <h4 className="font-inter font-bold text-amber-950 text-base">Over 140 Scholarships Worth ₹60+ Lakhs</h4>
-                  <p className="font-inter text-xs text-amber-900">Merit-based, need-based, and women-focused financial aid options available for 2026 intakes.</p>
-                </div>
-                <Link href="/scholarships" className="text-[#a31f34] font-bold text-sm hover:underline shrink-0">
-                  Explore Scholarships →
-                </Link>
-              </div>
-            </div>
-
-            {/* Career Scope & Skills Gained */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Career Scope */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-red-50 text-[#a31f34] rounded-lg flex items-center justify-center font-bold">
-                    <Briefcase size={20} />
-                  </div>
-                  <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a]">
-                    Career Scope & Placement
-                  </h3>
-                </div>
-                <p className="font-inter text-gray-700 text-base leading-relaxed">
-                  After clearing the All India Bar Exam (AIBE), graduates can practice in courts. Diverse pathways exist across government and private sectors:
-                </p>
-                <ul className="space-y-2.5">
-                  {[
-                    "Advocate / Trial Practitioner at High Courts & Supreme Court",
-                    "Corporate Legal Consultant & In-House Counsel",
-                    "Judicial Officer & Civil Judge",
-                    "Public Prosecutor & Legal Advisor",
-                    "Compliance Officer & Regulatory Specialist",
-                    "Human Rights Lawyer & NGO Legal Lead",
-                    "Legal Researcher & Law Professor"
-                  ].map((career, cIdx) => (
-                    <li key={cIdx} className="flex items-center gap-2.5 font-inter text-sm font-semibold text-gray-800">
-                      <div className="w-1.5 h-1.5 bg-[#a31f34] rounded-full shrink-0"></div>
-                      <span>{career}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Skills Gained */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-amber-50 text-[#fbb03b] rounded-lg flex items-center justify-center font-bold">
-                    <FileText size={20} />
-                  </div>
-                  <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a]">
-                    Core Skills Gained
-                  </h3>
-                </div>
-                <p className="font-inter text-gray-700 text-base leading-relaxed">
-                  Graduates from VMLS emerge with high-calibre practical skills engineered for the modern legal profession:
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {[
-                    "Written & Verbal Advocacy",
-                    "High-Calibre Legal Research",
-                    "Instrument Drafting & Scrutiny",
-                    "Logical Reasoning & Analytics",
-                    "Client Counselling & Negotiation",
-                    "Social Accountability & Ethics"
-                  ].map((skill, sIdx) => (
-                    <div key={sIdx} className="p-3 bg-gray-50 rounded-lg border border-gray-100 font-inter text-xs font-bold text-gray-800 flex items-center gap-2">
-                      <CheckCircle2 size={16} className="text-[#a31f34] shrink-0" />
-                      <span>{skill}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Why Choose VMLS Highlights */}
-            <div className="bg-[#800000] text-white p-8 md:p-10 rounded-2xl space-y-6 shadow-lg">
-              <h3 className="font-playfair text-2xl md:text-3xl font-bold">
-                Why Choose VMLS for 3-Year LL.B. (Hons)?
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 space-y-2">
-                  <h4 className="font-inter font-bold text-lg text-[#fbb03b]">OPJGU Mentorship</h4>
-                  <p className="font-inter text-xs text-gray-200 leading-relaxed">Exclusive curriculum design and faculty guidance from O.P. Jindal Global University (Institution of Eminence).</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 space-y-2">
-                  <h4 className="font-inter font-bold text-lg text-[#fbb03b]">100% Internship Guarantee</h4>
-                  <p className="font-inter text-xs text-gray-200 leading-relaxed">Assured internship placements in law firms, High Court chambers, corporate legal cells, and NGOs from Day 1.</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10 space-y-2">
-                  <h4 className="font-inter font-bold text-lg text-[#fbb03b]">Bilingual Pedagogy</h4>
-                  <p className="font-inter text-xs text-gray-200 leading-relaxed">English & regional language support ensuring no learner is left behind, paired with smart digital classrooms.</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-      )}
 
       {/* Compulsory Non-Law Courses Section */}
       <section className="pt-6 md:pt-8 pb-12 px-[5%] bg-gradient-to-b from-[#fcf8f2] to-white relative overflow-hidden">
