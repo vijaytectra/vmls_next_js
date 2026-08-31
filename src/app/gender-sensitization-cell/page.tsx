@@ -1,6 +1,6 @@
+import React from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
-import React from 'react';
 
 export const metadata = {
   title: "Gender Sensitization Cell | VMLS",
@@ -9,24 +9,53 @@ export const metadata = {
 
 const committeeData = [
   {
-    category: "CORDINATOR",
+    category: "COORDINATOR",
     members: [
-      { no: 1, name: "Prof. Gaurav Shukla", designation: "Associate Dean Research", email: "gauravshukla@vmls.edu.in", phone: "8962431808" }
+      {
+        no: 1,
+        name: "Dr. Anuttama Ghose",
+        designation: "Associate Professor",
+        email: "anuttama@vmls.edu.in",
+        phone: "7894270847"
+      }
     ]
   },
   {
     category: "CO-COORDINATOR",
     members: [
-      { no: 2, name: "Dr. R. Shenbagavalli", designation: "Associate Dean Student Affairs", email: "shenbagavalli@vmls.edu.in", phone: "9551567599" }
+      {
+        no: 2,
+        name: "Dr. C. Fowmina",
+        designation: "Associate Professor",
+        email: "studentaffairs@vmls.edu.in",
+        phone: "8925934394"
+      }
     ]
   },
   {
     category: "MEMBERS",
     members: [
-      { no: 3, name: "Prof. Sangamitra", designation: "Associate Dean Research", email: "sangamithra@vmls.edu.in", phone: "9791655326" },
-      { no: 4, name: "Prof. Edhaya Chandran", designation: "Assistant Dean Media & outreach", email: "edhayachandran@vmls.edu.in", phone: "8531903207" },
-      { no: 5, name: "Prof. Mike Ruban", designation: "Assistant Dean UG Academics", email: "mikeruban@vmls.edu.in", phone: "8870493346" },
-      { no: 6, name: "Prof. Kamala Priyadarshini", designation: "Assistant Professor", email: "kamalapriyadarshini@vmls.edu.in", phone: "7904771075" }
+      {
+        no: 3,
+        name: "Dr. Sangamitra",
+        designation: "Associate Professor",
+        email: "sangamithra@vmls.edu.in",
+        phone: "9791655326"
+      },
+      {
+        no: 4,
+        name: "Dr. Sachin",
+        designation: "Assistant Professor",
+        email: "sachinkumar@vmls.edu.in",
+        phone: "9446059690"
+      },
+      {
+        no: 5,
+        name: "Dr. Amir",
+        designation: "Associate Professor",
+        email: "krishnakishore@vmls.edu.in",
+        phone: "8099346959"
+      }
     ]
   }
 ];
@@ -90,14 +119,18 @@ export default function GenderSensitizationCellPage() {
                         <td className="py-5 px-6 text-gray-600 font-medium leading-relaxed">{member.designation}</td>
                         <td className="py-5 px-6">
                           <div className="flex flex-col gap-2.5">
-                            <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
-                              <Mail size={16} className="group-hover:scale-110 transition-transform" />
-                              <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
-                            </a>
-                            <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
-                              <Phone size={16} className="group-hover:scale-110 transition-transform" />
-                              {member.phone}
-                            </a>
+                            {member.email ? (
+                              <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
+                                <Mail size={16} className="group-hover:scale-110 transition-transform" />
+                                <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
+                              </a>
+                            ) : null}
+                            {member.phone ? (
+                              <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
+                                <Phone size={16} className="group-hover:scale-110 transition-transform" />
+                                {member.phone}
+                              </a>
+                            ) : null}
                           </div>
                         </td>
                       </tr>

@@ -1,6 +1,6 @@
+import React from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
-import React from 'react';
 
 export const metadata = {
   title: "Women Empowerment Cell | VMLS",
@@ -9,27 +9,60 @@ export const metadata = {
 
 const committeeData = [
   {
-    category: "CORDINATOR",
+    category: "COORDINATOR",
     members: [
-      { no: 1, name: "Dr. Fowmina", designation: "Associate Dean Inclusivity", email: "fowmina@vmls.edu.in", phone: "9884015285" }
+      {
+        no: 1,
+        name: "Dr. Alisha Verma",
+        designation: "Associate Professor",
+        email: "alishaverma@vmls.edu.in",
+        phone: "9414787209"
+      }
     ]
   },
   {
     category: "CO-COORDINATOR",
     members: [
-      { no: 2, name: "Dr. R. Shenbagavalli", designation: "Associate Dean Student Affairs", email: "shenbagavalli@vmls.edu.in", phone: "9551567599" }
+      {
+        no: 2,
+        name: "Prof. Chesha Chellapan",
+        designation: "Assistant Professor",
+        email: "chesha@vmls.edu.in",
+        phone: "9645264718"
+      }
     ]
   },
   {
     category: "MEMBERS",
     members: [
-      { no: 3, name: "Prof. Chesha P Chellappan", designation: "Assistant Dean Ranking & Accreditation", email: "chesha@vmls.edu.in", phone: "9645264718" },
-      { no: 4, name: "Dr. Gnana Sangamithra", designation: "Associate Dean Research", email: "sangamithra@vmls.edu.in", phone: "9791655326" },
-      { no: 5, name: "Dr. Abhinaya Ramesh", designation: "Assistant Professor", email: "abhinayaramesh@vmls.edu.in", phone: "8072279884" },
-      { no: 6, name: "Prof. Sinjini Sen", designation: "Assistant Professor", email: "sinjinisen@vmls.edu.in", phone: "7887877527" },
-      { no: 7, name: "Prof. Nabeela Siddique", designation: "Assistant Professor", email: "nabeela@vmls.edu.in", phone: "9952995628" },
-      { no: 8, name: "Prof. Kamala Priyadarshini", designation: "Assistant Professor", email: "kamalapriyadarshini@vmls.edu.in", phone: "7904771075" },
-      { no: 9, name: "Prof. Abhinandita Biswas", designation: "Assistant Professor", email: "abhinanditabiswas@vmls.edu.in", phone: "7044776351" }
+      {
+        no: 3,
+        name: "Prof. Avni",
+        designation: "Assistant Professor",
+        email: "avnisingh@vmls.edu.in",
+        phone: "7400331944"
+      },
+      {
+        no: 4,
+        name: "Ms. Sneha",
+        designation: "Librarian",
+        email: "librarian@vmls.edu.in",
+        phone: ""
+      },
+      {
+        no: 5,
+        name: "Dr. Yazhini",
+        designation: "Assistant Professor",
+        email: "yazhini@vmls.edu.in",
+        phone: "9344277060"
+      },
+      {
+        no: 6,
+        name: "Prof. Akshara",
+        designation: "Assistant Professor",
+        email: "akshara@vmls.edu.in",
+        phone: "8838744552"
+      }
     ]
   }
 ];
@@ -93,14 +126,18 @@ export default function WomenEmpowermentCellPage() {
                         <td className="py-5 px-6 text-gray-600 font-medium leading-relaxed">{member.designation}</td>
                         <td className="py-5 px-6">
                           <div className="flex flex-col gap-2.5">
-                            <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
-                              <Mail size={16} className="group-hover:scale-110 transition-transform" />
-                              <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
-                            </a>
-                            <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
-                              <Phone size={16} className="group-hover:scale-110 transition-transform" />
-                              {member.phone}
-                            </a>
+                            {member.email ? (
+                              <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
+                                <Mail size={16} className="group-hover:scale-110 transition-transform" />
+                                <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
+                              </a>
+                            ) : null}
+                            {member.phone ? (
+                              <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
+                                <Phone size={16} className="group-hover:scale-110 transition-transform" />
+                                {member.phone}
+                              </a>
+                            ) : null}
                           </div>
                         </td>
                       </tr>
