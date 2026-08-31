@@ -142,12 +142,12 @@ export default function FloatingActions() {
           image.style.setProperty("display", "block", "important");
           image.style.setProperty("background", "#0b2a36", "important");
           if (!isExpanded) {
-            image.style.setProperty("width", "36px", "important");
-            image.style.setProperty("height", "36px", "important");
-            image.style.setProperty("border", "1.5px solid rgba(255,255,255,0.92)", "important");
+            image.style.setProperty("width", "42px", "important");
+            image.style.setProperty("height", "42px", "important");
+            image.style.setProperty("border", "2px solid rgba(255,255,255,0.92)", "important");
           } else {
-            image.style.setProperty("width", "48px", "important");
-            image.style.setProperty("height", "48px", "important");
+            image.style.setProperty("width", "52px", "important");
+            image.style.setProperty("height", "52px", "important");
           }
         });
 
@@ -160,7 +160,7 @@ export default function FloatingActions() {
           el.style.setProperty("min-width", "0", "important");
           el.style.setProperty("min-height", "0", "important");
           el.style.setProperty("height", "auto", "important");
-          el.style.setProperty("padding", "4px 10px 4px 4px", "important");
+          el.style.setProperty("padding", "5px 14px 5px 5px", "important");
           el.style.setProperty("gap", "0", "important");
           el.style.setProperty("display", "inline-flex", "important");
           el.style.setProperty("align-items", "center", "important");
@@ -187,9 +187,9 @@ export default function FloatingActions() {
             b.style.setProperty("background", "transparent", "important");
             b.style.setProperty("background-color", "transparent", "important");
             b.style.setProperty("color", "#ffffff", "important");
-            b.style.setProperty("font-size", "12.5px", "important");
+            b.style.setProperty("font-size", "13.5px", "important");
             b.style.setProperty("font-weight", "600", "important");
-            b.style.setProperty("line-height", "1.2", "important");
+            b.style.setProperty("line-height", "1.22", "important");
             b.style.setProperty("letter-spacing", "0.01em", "important");
             b.style.setProperty("padding", "0", "important");
             b.style.setProperty("margin", "0", "important");
@@ -211,7 +211,7 @@ export default function FloatingActions() {
             if (cs.display === "flex" || child.querySelector("img")) {
               child.style.setProperty("display", "inline-flex", "important");
               child.style.setProperty("align-items", "center", "important");
-              child.style.setProperty("gap", "8px", "important");
+              child.style.setProperty("gap", "10px", "important");
               child.style.setProperty("padding", "0", "important");
               child.style.setProperty("margin", "0", "important");
               child.style.setProperty("width", "fit-content", "important");
