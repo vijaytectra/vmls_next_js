@@ -580,7 +580,7 @@ export default function InternationalConferencePage() {
                     {member.badge}
                   </span>
                   <h4 className="font-inter font-bold text-gray-900 text-base md:text-lg leading-snug">{member.name}</h4>
-                  <p className="font-inter text-xs md:text-sm text-gray-600 leading-normal max-w-xs">{member.role}</p>
+                  <p className="font-inter text-xs sm:text-sm text-gray-600 leading-normal whitespace-nowrap">{member.role}</p>
                 </div>
               ))}
             </div>
