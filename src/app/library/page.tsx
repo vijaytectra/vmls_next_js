@@ -635,15 +635,15 @@ export default function LibraryPage() {
 
       {/* Turnitin Modal */}
       {isTurnitinModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsTurnitinModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsTurnitinModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsTurnitinModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Turnitin</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed text-left">
                 Our institution provides access to Turnitin, a plagiarism detection tool, to help faculties evaluate student submissions and ensure academic integrity. This tool checks for originality and provides feedback to students on proper citation and referencing.
@@ -655,15 +655,15 @@ export default function LibraryPage() {
 
       {/* Digital Access Modal */}
       {isDigitalAccessModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsDigitalAccessModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsDigitalAccessModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsDigitalAccessModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Digital Access Facility</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Our library is equipped with multiple computers and Wi-Fi connectivity that students can utilize for accessing the digital library, working on assignments, research, and other academic needs.
@@ -692,15 +692,15 @@ export default function LibraryPage() {
 
       {/* Discussion Rooms Modal */}
       {isDiscussionRoomsModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsDiscussionRoomsModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsDiscussionRoomsModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsDiscussionRoomsModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Discussion Rooms</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Our library offers discussion rooms that provide a collaborative and quiet space for users to engage in group discussions, brainstorming sessions, and project work. These rooms are equipped with necessary facilities to support team-based learning and academic activities.
@@ -734,15 +734,15 @@ export default function LibraryPage() {
 
       {/* Reference Service Modal */}
       {isReferenceModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsReferenceModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsReferenceModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsReferenceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Reference Service</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Our Reference Service is designed to support students, faculty, and other users with their queries. Email your questions related to case law, journal articles, reports, or specific topics in law to <a href="mailto:referencelibrary@vmls.edu.in" className="font-bold text-gray-900 hover:text-[#a31f34] transition-colors">referencelibrary@vmls.edu.in</a>.
@@ -779,15 +779,15 @@ export default function LibraryPage() {
 
       {/* OPAC Modal */}
       {isOpacModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsOpacModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsOpacModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsOpacModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">OPAC (Online Public Access Catalog)</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Access our comprehensive online catalog to search, browse, and manage your library resources efficiently.
@@ -824,15 +824,15 @@ export default function LibraryPage() {
 
       {/* Course Guide Modal */}
       {isCourseGuideModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsCourseGuideModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsCourseGuideModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsCourseGuideModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Course Guide</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 The Course Guide is a comprehensive academic resource prepared for each semester, providing students with access to all essential and supplementary reading materials related to a specific subject.
@@ -864,15 +864,15 @@ export default function LibraryPage() {
 
       {/* New Arrivals Modal */}
       {isNewArrivalsModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsNewArrivalsModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsNewArrivalsModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsNewArrivalsModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">New Arrivals</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 The Vinayaka Mission's Law Library every Month announces the new arrival of books and print periodicals.
@@ -901,15 +901,15 @@ export default function LibraryPage() {
 
       {/* Remote Access Modal */}
       {isRemoteAccessModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsRemoteAccessModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsRemoteAccessModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsRemoteAccessModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Remote Access</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 VMLS community can access the digital library resources remotely using the provided link.
@@ -937,15 +937,15 @@ export default function LibraryPage() {
 
       {/* ILL Modal */}
       {isILLModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsILLModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsILLModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsILLModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Inter-Library Loan (ILL)</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Books not available in the VMLS library but available in other constituent libraries under VMRF can be availed through Interlibrary Loan (ILL).
@@ -974,15 +974,15 @@ export default function LibraryPage() {
 
       {/* Book Display Modal */}
       {isBookDisplayModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsBookDisplayModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsBookDisplayModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsBookDisplayModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Book Display</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 The VMLS Library organizes book displays on important legal and socially significant days throughout the year to raise awareness and promote reading on themes related to justice, rights, and governance.
@@ -1011,15 +1011,15 @@ export default function LibraryPage() {
 
       {/* Thematic Display Modal */}
       {isThematicDisplayModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsThematicDisplayModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsThematicDisplayModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsThematicDisplayModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Thematic Book Display</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 VMLS Library regularly organizes thematic book displays on special subjects of academic and professional relevance. These curated displays aim to enhance subject-specific awareness and support focused research among students and faculty.
@@ -1050,15 +1050,15 @@ export default function LibraryPage() {
 
       {/* Career Corner Modal */}
       {isCareerCornerModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsCareerCornerModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsCareerCornerModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsCareerCornerModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Career Catalyst Corner</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Career Catalyst Corner is a dedicated space in the VMLS Library that features a curated collection of law career-related books, competitive exam guides, internship and placement resources, and professional development materials.
@@ -1093,15 +1093,15 @@ export default function LibraryPage() {
 
       {/* Excellence Collection Modal */}
       {isExcellenceCollectionModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsExcellenceCollectionModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsExcellenceCollectionModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsExcellenceCollectionModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Centre of Excellence Collection</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Currently, the library holds a growing collection of books under the 5 Centres of Excellence.
@@ -1131,15 +1131,15 @@ export default function LibraryPage() {
 
       {/* Textbook Procurement Modal */}
       {isTextbookProcurementModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsTextbookProcurementModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsTextbookProcurementModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsTextbookProcurementModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Textbook Procurement for Students</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 At the start of each semester, we will assist students in purchasing required textbooks and bare acts at discounted prices.
@@ -1168,15 +1168,15 @@ export default function LibraryPage() {
 
       {/* Newspaper Service Modal */}
       {isNewspaperServiceModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsNewspaperServiceModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsNewspaperServiceModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsNewspaperServiceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Newspaper Service</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Our library offers a selection of daily newspapers for students to stay updated on current events and trends.
@@ -1211,15 +1211,15 @@ export default function LibraryPage() {
 
       {/* Reprography Service Modal */}
       {isReprographyServiceModalOpen && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex min-h-full items-center justify-center p-4 sm:p-6 text-left" onClick={() => setIsReprographyServiceModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200 my-auto" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsReprographyServiceModalOpen(false)}>
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsReprographyServiceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Reprography Service</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed">
                 Reprography services are available solely for documents and cases downloaded from databases within the VMRF Digital Library and minimum pages of physical books(10%).
