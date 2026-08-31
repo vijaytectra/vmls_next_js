@@ -3,8 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 export default function LibraryPage() {
+  const [mounted, setMounted] = useState(false);
   const [currentImg, setCurrentImg] = useState(0);
   const [isTurnitinModalOpen, setIsTurnitinModalOpen] = useState(false);
   const [isDigitalAccessModalOpen, setIsDigitalAccessModalOpen] = useState(false);
@@ -34,6 +36,10 @@ export default function LibraryPage() {
     '/images/library/library9.webp',
     '/images/library/library10.webp',
   ];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -634,9 +640,9 @@ export default function LibraryPage() {
       </section>
 
       {/* Turnitin Modal */}
-      {isTurnitinModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsTurnitinModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isTurnitinModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsTurnitinModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsTurnitinModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -650,13 +656,14 @@ export default function LibraryPage() {
               </p>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Digital Access Modal */}
-      {isDigitalAccessModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsDigitalAccessModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isDigitalAccessModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsDigitalAccessModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsDigitalAccessModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -687,13 +694,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Discussion Rooms Modal */}
-      {isDiscussionRoomsModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsDiscussionRoomsModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isDiscussionRoomsModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsDiscussionRoomsModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsDiscussionRoomsModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -729,13 +737,14 @@ export default function LibraryPage() {
               </Link>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Reference Service Modal */}
-      {isReferenceModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsReferenceModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isReferenceModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsReferenceModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsReferenceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -774,13 +783,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* OPAC Modal */}
-      {isOpacModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsOpacModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isOpacModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsOpacModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsOpacModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -819,13 +829,14 @@ export default function LibraryPage() {
               </Link>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Course Guide Modal */}
-      {isCourseGuideModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsCourseGuideModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isCourseGuideModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsCourseGuideModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsCourseGuideModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -859,13 +870,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* New Arrivals Modal */}
-      {isNewArrivalsModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsNewArrivalsModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isNewArrivalsModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsNewArrivalsModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsNewArrivalsModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -896,13 +908,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Remote Access Modal */}
-      {isRemoteAccessModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsRemoteAccessModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isRemoteAccessModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsRemoteAccessModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsRemoteAccessModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -932,13 +945,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* ILL Modal */}
-      {isILLModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsILLModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isILLModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsILLModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsILLModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -969,13 +983,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Book Display Modal */}
-      {isBookDisplayModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsBookDisplayModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isBookDisplayModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsBookDisplayModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsBookDisplayModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1006,13 +1021,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Thematic Display Modal */}
-      {isThematicDisplayModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsThematicDisplayModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isThematicDisplayModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsThematicDisplayModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsThematicDisplayModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1045,13 +1061,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Career Corner Modal */}
-      {isCareerCornerModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsCareerCornerModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isCareerCornerModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsCareerCornerModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsCareerCornerModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1088,13 +1105,14 @@ export default function LibraryPage() {
               </p>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Excellence Collection Modal */}
-      {isExcellenceCollectionModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsExcellenceCollectionModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isExcellenceCollectionModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsExcellenceCollectionModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsExcellenceCollectionModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1126,13 +1144,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Textbook Procurement Modal */}
-      {isTextbookProcurementModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsTextbookProcurementModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isTextbookProcurementModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsTextbookProcurementModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsTextbookProcurementModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1163,13 +1182,14 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Newspaper Service Modal */}
-      {isNewspaperServiceModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsNewspaperServiceModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isNewspaperServiceModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsNewspaperServiceModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsNewspaperServiceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1206,13 +1226,14 @@ export default function LibraryPage() {
               </p>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Reprography Service Modal */}
-      {isReprographyServiceModalOpen && (
-        <div className="fixed inset-0 z-[9999] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsReprographyServiceModalOpen(false)}>
-          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative animate-in fade-in zoom-in duration-200" onClick={(e) => e.stopPropagation()}>
+      {mounted && isReprographyServiceModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsReprographyServiceModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsReprographyServiceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
@@ -1226,8 +1247,9 @@ export default function LibraryPage() {
               </p>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
     </main>
   );
