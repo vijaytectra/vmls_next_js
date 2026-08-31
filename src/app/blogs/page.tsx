@@ -50,13 +50,13 @@ export default function BlogsPage() {
                 href={`/blogs/${post.slug}`}
                 className="group flex flex-col h-full bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100"
               >
-                <div className="relative aspect-[16/9] overflow-hidden bg-gray-100 shrink-0">
+                <div className="relative aspect-[1.91/1] overflow-hidden bg-gray-100 shrink-0">
                   <Image
                     src={post.image}
                     alt={post.title}
                     fill
                     className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     priority={index < 8}
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>

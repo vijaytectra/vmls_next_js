@@ -185,7 +185,7 @@ export default function BlogPost() {
               </div>
             </header>
 
-            <div className="relative aspect-[16/9] mb-10 rounded-2xl rounded-tr-none overflow-hidden shadow-lg group">
+            <div className="relative aspect-[1.91/1] mb-10 rounded-2xl rounded-tr-none overflow-hidden shadow-lg group">
               <Image
                 src={post.image}
                 alt={post.title}
