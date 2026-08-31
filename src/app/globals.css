@@ -934,3 +934,19 @@ body {
   max-width: none !important;
   text-align: left !important;
 }
+
+/* Sleek custom text scrollbar for About section */
+.custom-text-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-text-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 999px;
+}
+.custom-text-scrollbar::-webkit-scrollbar-thumb {
+  background: #a31f34;
+  border-radius: 999px;
+}
+.custom-text-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #800000;
+}

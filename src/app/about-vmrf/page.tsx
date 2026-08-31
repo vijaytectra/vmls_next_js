@@ -47,14 +47,14 @@ export default function AboutVMRF() {
         </div>
       </section>
 
-      {/* Content Section — sticky image left, expandable text right */}
+      {/* Content Section — fixed left image, right side scrollable text */}
       <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
         <ArchitecturalSketch />
 
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14 relative z-10">
-          {/* Left: Campus Image (Sticky on desktop so it stays fixed as text scrolls) */}
+          {/* Left: Campus Image (Fixed in place) */}
           <div className="lg:w-[38%] w-full shrink-0 lg:sticky lg:top-28">
-            <div className="relative w-full aspect-[4/5] shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
+            <div className="relative w-full aspect-[4/5] max-h-[500px] shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
               <Image
                 src="/images/vmrf/about-vmrf.webp"
                 alt="VMRF campus building"
@@ -69,39 +69,51 @@ export default function AboutVMRF() {
           {/* Right: Content */}
           <div className="lg:w-[62%] flex flex-col justify-center">
             <div className="relative">
-              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]" />
-              <div className="pl-6 md:pl-10 space-y-6 text-left">
-                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
-                  In 1981, Thirumuruga Kirupananda Variyar Thavathiru Sundara Swamigal Medical Educational and Charitable Trust was established, followed by Vinayaka Mission&apos;s College of Pharmacy in 1982. In 2001, the trust became Vinayaka Mission&apos;s Research Foundation (VMRF), the 48th University in India, after being recognized for its excellence and academic standards. The University&apos;s primary objective is to offer high-quality education to students from all walks of life. As one of the largest universities in India, VMRF offers a wide range of academic disciplines, with a comprehensive range of faculties that covers almost the entire gamut of academic disciplines, including medicine, paramedicine, engineering and technology, management, arts and sciences, law, among others.
-                </p>
-
-                {isExpanded && (
-                  <div className="space-y-6 transition-all duration-500 ease-in-out">
+              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34] rounded-full" />
+              <div className="pl-6 md:pl-10 text-left">
+                {isExpanded ? (
+                  /* Expanded state: Scrollable text box next to fixed left image */
+                  <div className="max-h-[500px] overflow-y-auto custom-text-scrollbar pr-4 space-y-6">
+                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
+                      In 1981, Thirumuruga Kirupananda Variyar Thavathiru Sundara Swamigal Medical Educational and Charitable Trust was established, followed by Vinayaka Mission&apos;s College of Pharmacy in 1982. In 2001, the trust became Vinayaka Mission&apos;s Research Foundation (VMRF), the 48th University in India, after being recognized for its excellence and academic standards. The University&apos;s primary objective is to offer high-quality education to students from all walks of life. As one of the largest universities in India, VMRF offers a wide range of academic disciplines, with a comprehensive range of faculties that covers almost the entire gamut of academic disciplines, including medicine, paramedicine, engineering and technology, management, arts and sciences, law, among others.
+                    </p>
                     <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                       The University&apos;s multi-disciplinary approach to education offers students an opportunity to explore different fields, gain a diverse range of skills, and achieve academic excellence. The University also provides various opportunities for students to engage in research, community service, and internships, among other activities, to enhance their learning experience. With campuses at Chennai, Salem, and Pondicherry, VMRF&apos;s scenic campuses are known for their state-of-the-art facilities, including modern classrooms, advanced laboratories, well-stocked libraries, and sports complexes.
                     </p>
                     <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                       VMRF has nearly 15,000 students across its various colleges, and over 2,000 professionals graduate from its campuses annually. With over 5,000 staff members, VMRF is known for its highly qualified and experienced faculty and for establishing multiple medical, dental, engineering, paramedical, and homoeopathy colleges. The University&apos;s commitment to providing quality education has resulted in producing highly successful graduates who have excelled in their respective fields. With a focus on academic excellence, professional development, and research, VMRF continues to be a leading institution in India and a preferred choice for students seeking a well-rounded education.
                     </p>
+                    <div className="pt-2 pb-2">
+                      <button
+                        type="button"
+                        onClick={() => setIsExpanded(false)}
+                        className="text-[#a31f34] font-inter font-bold text-base hover:underline hover:text-[#800000] transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+                      >
+                        <span>Read Less</span>
+                        <ChevronUp className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  /* Collapsed state: Text aligned to the horizontal bottom line of the left image with red Read More link */
+                  <div className="space-y-6">
+                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
+                      In 1981, Thirumuruga Kirupananda Variyar Thavathiru Sundara Swamigal Medical Educational and Charitable Trust was established, followed by Vinayaka Mission&apos;s College of Pharmacy in 1982. In 2001, the trust became Vinayaka Mission&apos;s Research Foundation (VMRF), the 48th University in India, after being recognized for its excellence and academic standards. The University&apos;s primary objective is to offer high-quality education to students from all walks of life. As one of the largest universities in India, VMRF offers a wide range of academic disciplines, with a comprehensive range of faculties that covers almost the entire gamut of academic disciplines, including medicine, paramedicine, engineering and technology, management, arts and sciences, law, among others.
+                    </p>
+                    <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
+                      The University&apos;s multi-disciplinary approach to education offers students an opportunity to explore different fields, gain a diverse range of skills, and achieve academic excellence. The University also provides various opportunities for students to engage in research, community service, and internships...{" "}
+                      <button
+                        type="button"
+                        onClick={() => setIsExpanded(true)}
+                        className="text-[#a31f34] font-inter font-bold text-base md:text-lg hover:underline hover:text-[#800000] transition-colors inline-flex items-center gap-1 cursor-pointer ml-1"
+                      >
+                        <span>Read More</span>
+                        <ChevronDown className="w-4 h-4" />
+                      </button>
+                    </p>
                   </div>
                 )}
               </div>
-            </div>
-
-            {/* Read More / Read Less Toggle Button */}
-            <div className="pl-6 md:pl-10 mt-8">
-              <button
-                type="button"
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="inline-flex items-center gap-2.5 px-6 py-3 bg-[#a31f34] text-white font-inter font-bold text-xs md:text-sm uppercase tracking-wider rounded-lg shadow-md hover:bg-[#800000] hover:shadow-lg transition-all duration-300 active:scale-95 cursor-pointer"
-              >
-                <span>{isExpanded ? "Read Less" : "Read More"}</span>
-                {isExpanded ? (
-                  <ChevronUp className="w-4 h-4" />
-                ) : (
-                  <ChevronDown className="w-4 h-4" />
-                )}
-              </button>
             </div>
           </div>
         </div>
