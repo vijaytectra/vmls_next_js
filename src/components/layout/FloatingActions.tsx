@@ -108,10 +108,26 @@ export default function FloatingActions() {
 
         const isExpanded = text.includes("Want to know more about campus life");
 
-        const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-        // Desktop: lift clear of homepage About images; mobile keeps compact stack above WhatsApp
-        el.style.setProperty("bottom", isDesktop ? "9.5rem" : "5.75rem", "important");
-        el.style.setProperty("left", "max(1rem, env(safe-area-inset-left))", "important");
+        const isSm = window.matchMedia("(min-width: 640px)").matches;
+        // Position Ambassador chip right next to WhatsApp button at the bottom
+        el.style.setProperty(
+          "bottom",
+          isExpanded
+            ? "max(1.25rem, env(safe-area-inset-bottom))"
+            : isSm
+            ? "calc(max(1.25rem, env(safe-area-inset-bottom)) + 6px)"
+            : "calc(max(1.25rem, env(safe-area-inset-bottom)) + 2px)",
+          "important"
+        );
+        el.style.setProperty(
+          "left",
+          isExpanded
+            ? "max(1rem, env(safe-area-inset-left))"
+            : isSm
+            ? "calc(max(1rem, env(safe-area-inset-left)) + 4.125rem)"
+            : "calc(max(1rem, env(safe-area-inset-left)) + 3.625rem)",
+          "important"
+        );
         el.style.setProperty("right", "auto", "important");
         el.style.setProperty("z-index", "1900", "important");
         el.style.setProperty("box-sizing", "border-box", "important");
