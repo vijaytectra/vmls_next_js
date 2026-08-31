@@ -396,16 +396,23 @@ html {
   }
 }
 
+.blog-article-content .blog-html th,
 .blog-article-content .blog-html thead th,
-.blog-article-content .blog-html tr:first-child th,
-.blog-article-content .blog-html tr:first-child td {
-  background: #eef5fb;
-  font-weight: 700;
-  color: #1a1a1a;
+.blog-article-content .blog-html thead td,
+.blog-article-content .blog-html table > tbody > tr:first-child > th {
+  background: #eef5fb !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
 }
 
+.blog-article-content .blog-html td,
+.blog-article-content .blog-html tbody tr,
+.blog-article-content .blog-html tbody td,
+.blog-article-content .blog-html tr td,
+.blog-article-content .blog-html tr:first-child td,
 .blog-article-content .blog-html tr:last-child td {
-  font-weight: 700;
+  background: transparent !important;
+  font-weight: 400 !important;
 }
 
 .blog-article-content .blog-html .blog-cta-link,
