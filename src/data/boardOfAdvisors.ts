@@ -12,7 +12,7 @@ export const boardOfAdvisors: Advisor[] = [
     name: "Justice BS Chauhan",
     designation:
       "Former Judge Supreme Court of India; Former Chairman, Law Commission of India.",
-    image: "/images/bod/advisor1.webp",
+    image: "/images/bod/advisor2.webp",
     paragraphs: [],
   },
   {
@@ -20,7 +20,7 @@ export const boardOfAdvisors: Advisor[] = [
     name: "Justice P. Kalaiyarasan",
     designation:
       "Former Judge, Madras High Court, Chairman, Tamil Nadu State Official Language Commission.",
-    image: "/images/bod/advisor2.webp",
+    image: "/images/bod/advisor1.webp",
     paragraphs: [
       "Mr. Justice P. Kalaiyarasan is an legal expert, lawyer, former judge of the Madras High Court and Chairman of the Tamil Nadu State Official Language Commission. He completed his Bachelor of Science degree at Loyola College in Chennai, followed by a Bachelor of Law degree from the Madras Law College. He then went on to earn a Master of Law degree from the University of Madras.",
       "Justice Kalaiyarasan started his legal career in 1983 and began practicing law at the Madras High Court. After years of practice, he was appointed as a Judge of the Madras High Court in 2008. During his tenure as a judge, he presided over numerous high-profile cases and earned a reputation for his integrity and impartiality.",
