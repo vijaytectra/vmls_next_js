@@ -1,6 +1,6 @@
+import React from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
-import React from 'react';
 
 export const metadata = {
   title: "Anti Ragging Squad | VMLS",
@@ -9,18 +9,48 @@ export const metadata = {
 
 const committeeData = [
   {
-    category: "CORDINATOR",
+    category: "COORDINATOR",
     members: [
-      { no: 1, name: "Prof. Winfred Chelliah", designation: "Professor", email: "winfredchelliah@vmls.edu.in", phone: "9940152160" }
+      {
+        no: 1,
+        name: "Prof. Winfred",
+        designation: "Professor",
+        email: "winfredchelliah@vmls.edu.in",
+        phone: "9840152160"
+      }
     ]
   },
   {
-    category: "MEMBERS",
+    category: "CO- COORDINATOR",
     members: [
-      { no: 2, name: "Prof. Mike Ruban", designation: "Associate Dean UG Academics", email: "mikeruban@vmls.edu.in", phone: "8870493346" },
-      { no: 3, name: "Prof. Sowmiya Narayanan", designation: "Assistant Dean PG Academics", email: "sowmiyanarayan@vmls.edu.in", phone: "9884503578" },
-      { no: 4, name: "Dr. Fowmina", designation: "Associate Dean Inclusivity", email: "fowmina@vmls.edu.in", phone: "9884015285" },
-      { no: 5, name: "Dr. Krishna Kishore", designation: "Assistant Professor", email: "krishnakishore@vmls.edu.in", phone: "8099346959" }
+      {
+        no: 2,
+        name: "Dr. Gaurav Shukla",
+        designation: "Professor",
+        email: "gauravshukla@vmls.edu.in",
+        phone: "8962431808"
+      },
+      {
+        no: 3,
+        name: "Prof. Mike",
+        designation: "Assistant Professor",
+        email: "mikeruban@vmls.edu.in",
+        phone: "8870493346"
+      },
+      {
+        no: 4,
+        name: "Dr. Hartej",
+        designation: "Assistant Professor",
+        email: "hartejsinghkochher@vmls.edu.in",
+        phone: "9650068877"
+      },
+      {
+        no: 5,
+        name: "Mr. Sri Ram Nadesh",
+        designation: "Librarian",
+        email: "librarian@vmls.edu.in",
+        phone: "6380408934"
+      }
     ]
   }
 ];
@@ -86,14 +116,18 @@ export default function AntiRaggingSquadPage() {
                         <td className="py-5 px-6 text-gray-600 font-medium leading-relaxed">{member.designation}</td>
                         <td className="py-5 px-6">
                           <div className="flex flex-col gap-2.5">
-                            <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
-                              <Mail size={16} className="group-hover:scale-110 transition-transform" />
-                              <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
-                            </a>
-                            <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
-                              <Phone size={16} className="group-hover:scale-110 transition-transform" />
-                              {member.phone}
-                            </a>
+                            {member.email ? (
+                              <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
+                                <Mail size={16} className="group-hover:scale-110 transition-transform" />
+                                <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
+                              </a>
+                            ) : null}
+                            {member.phone ? (
+                              <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
+                                <Phone size={16} className="group-hover:scale-110 transition-transform" />
+                                {member.phone}
+                              </a>
+                            ) : null}
                           </div>
                         </td>
                       </tr>
