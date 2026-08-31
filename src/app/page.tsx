@@ -21,9 +21,6 @@ const NewsEventsSection = dynamic(() => import("@/components/NewsEventsSection")
 const ScholarshipSection = dynamic(() => import("@/components/ScholarshipSection"), {
   loading: () => <div className="w-full min-h-[300px]" />
 });
-const AdmissionsCtaSection = dynamic(() => import("@/components/AdmissionsCtaSection"), {
-  loading: () => <div className="w-full min-h-[380px]" />
-});
 const CentresOfExcellenceSection = dynamic(() => import("@/components/CentresOfExcellenceSection"), {
   loading: () => <div className="w-full min-h-[400px]" />
 });
@@ -48,7 +45,6 @@ export default function Home() {
       <CollaborationSection />
       <NewsEventsSection />
       <ScholarshipSection />
-      <AdmissionsCtaSection />
       <CentresOfExcellenceSection />
       <InfrastructureSection />
       <VideoGallerySection />
