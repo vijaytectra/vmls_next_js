@@ -567,13 +567,13 @@ export default function InternationalConferencePage() {
                 }
               ].map((member, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center space-y-3">
-                  <div className="relative w-44 sm:w-48 aspect-square rounded-lg overflow-hidden shadow-md">
+                  <div className="relative w-40 sm:w-44 aspect-square">
                     <Image
                       src={member.img}
                       alt={member.name}
                       fill
-                      sizes="(max-width: 768px) 176px, 192px"
-                      className="object-cover object-top"
+                      sizes="(max-width: 768px) 160px, 176px"
+                      className="object-contain"
                     />
                   </div>
                   <span className="bg-[#fae6bd] text-[#8b1615] px-3.5 py-1 rounded-full font-inter font-bold text-xs uppercase tracking-wider inline-block">
