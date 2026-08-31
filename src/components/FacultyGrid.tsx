@@ -74,13 +74,6 @@ const facultyData: FacultyMember[] = [
     href: "/faculty/winfred-chelliah",
   },
   {
-    name: "Dr. Najeed Naved Siddiqui",
-    role: "Assistant Professor",
-    qualifications: "Ph.D - CHRIST (Deemed to be University), Bengaluru.",
-    image: "/images/faculty/live/najeed.webp",
-    href: "/faculty/najeed-naved-siddiqui",
-  },
-  {
     name: "Sowmiya Narayan Rajagopalan",
     role: "Assistant Dean PG Academics",
     qualifications: "MSc Law and Finance (Trinity College Dublin)",
