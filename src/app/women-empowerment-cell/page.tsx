@@ -48,14 +48,18 @@ export default function WomenEmpowermentCellPage() {
 
       {/* Header Section */}
       <section className="bg-[#800000] text-white py-16 px-[5%]">
-        <div className="max-w-7xl mx-auto text-center lg:text-left">
-          <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Women <span className="text-[#fbb03b]">Empowerment Cell</span>
-          </h1>
-          <div className="w-24 h-1.5 bg-[#fbb03b] mb-8 mx-auto lg:ml-0"></div>
-          <p className="font-inter text-xl opacity-90 max-w-3xl leading-relaxed mx-auto lg:ml-0">
-            Dedicated to empowering women students and staff through awareness, support, and professional development opportunities at VMLS.
-          </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="relative">
+            <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#fbb03b] rounded-full" />
+            <div className="pl-6 md:pl-8 text-left">
+              <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                Women <span className="text-[#fbb03b]">Empowerment Cell</span>
+              </h1>
+              <p className="font-inter text-lg md:text-xl opacity-90 max-w-3xl leading-relaxed">
+                Dedicated to empowering women students and staff through awareness, support, and professional development opportunities at VMLS.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
