@@ -1,10 +1,10 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 
 export default function LLMAdmissionsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -54,6 +54,38 @@ export default function LLMAdmissionsPage() {
   ];
   return (
     <main className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "https://vmls.edu.in/" },
+          { name: "Admissions", item: "https://vmls.edu.in/admissions/process" },
+          { name: "LL.M. Admissions", item: "https://vmls.edu.in/admissions/llm" },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            name: "LL.M. (Master of Laws)",
+            description:
+              "One-year LL.M. programme at Vinayaka Mission's Law School, Chennai.",
+            provider: {
+              "@type": "CollegeOrUniversity",
+              name: "Vinayaka Mission's Law School",
+              sameAs: "https://vmls.edu.in/",
+            },
+            hasCourseInstance: {
+              "@type": "CourseInstance",
+              courseMode: "Onsite",
+              location: {
+                "@type": "Place",
+                name: "VMLS Campus, Chennai",
+              },
+            },
+          }),
+        }}
+      />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
