@@ -49,8 +49,8 @@ export default function AboutVMLS() {
         <ArchitecturalSketch />
 
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14 relative z-10">
-          {/* Left: video only */}
-          <div className="lg:w-[38%] w-full shrink-0">
+          {/* Left: video only (Sticky on desktop) */}
+          <div className="lg:w-[38%] w-full shrink-0 lg:sticky lg:top-28">
             <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden bg-black">
               <iframe
                 src="https://www.youtube.com/embed/ay5f0qEL-d8"

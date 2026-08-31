@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 
 export default function LLMAdmissionsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const faqData = [
     {
@@ -95,10 +97,10 @@ export default function LLMAdmissionsPage() {
       <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
         <ArchitecturalSketch />
 
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14 relative z-10">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-14 relative z-10">
           {/* Left: Image */}
           <div className="lg:w-[38%] w-full shrink-0">
-            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden">
+            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
               <Image
                 src="/images/llm/llm1.webp"
                 alt="LL.M. classroom at VMLS"
@@ -113,8 +115,8 @@ export default function LLMAdmissionsPage() {
           {/* Right: Content */}
           <div className="lg:w-[62%] min-w-0">
             <div className="relative">
-              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]" />
-              <div className="pl-6 md:pl-10 space-y-6 text-left hyphens-none [hyphens:none] [-webkit-hyphens:none]">
+              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34] rounded-full" />
+              <div className="pl-6 md:pl-10 space-y-6 text-left">
                 <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
                   LL.M. Program
                 </h2>
@@ -155,14 +157,18 @@ export default function LLMAdmissionsPage() {
             {/* Polished Flat Programme Buttons */}
             <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:justify-center md:gap-6">
               {[
-                'LL.M. in Corporate and Financial Laws', 
-                'LL.M. in Commercial Dispute Resolution', 
-                'LL.M. IN Criminal Law and Practice', 
-                'LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights'
+                { name: 'LL.M. in Corporate and Financial Laws', href: '/blogs/llm-in-corporate-financial-laws' },
+                { name: 'LL.M. in Commercial Dispute Resolution', href: '/blogs/llm-in-commercial-dispute-resolution' },
+                { name: 'LL.M. IN Criminal Law and Practice', href: '/blogs/llm-in-criminal-law-and-practice' },
+                { name: 'LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights', href: '/blogs/llm-in-artificial-intelligence-emerging-technologies-and-intellectual-property-rights' }
               ].map((prog) => (
-                <div key={prog} className="px-3 py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-[10px] sm:text-sm md:text-base text-center flex items-center justify-center h-full shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default">
-                  {prog}
-                </div>
+                <Link
+                  key={prog.name}
+                  href={prog.href}
+                  className="px-4 py-3.5 md:px-8 md:py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-xs sm:text-sm md:text-base text-center flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:bg-[#a31f34] hover:text-white hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                >
+                  {prog.name}
+                </Link>
               ))}
             </div>
           </div>

@@ -68,23 +68,29 @@ export default function FloatingActions() {
     };
 
     const initChatbot = () => {
-      if (document.querySelector(".npf_chatbots")) return;
-      const chatDiv = document.createElement("div");
-      chatDiv.className = "npf_chatbots";
-      chatDiv.setAttribute("data-w", "1189388fc18c4ac0952bc3816b615524");
-      chatDiv.style.display = "none";
-      document.body.appendChild(chatDiv);
-      appended.push(chatDiv);
+      let chatDiv = document.querySelector<HTMLElement>(".npf_chatbots");
+      if (!chatDiv) {
+        chatDiv = document.createElement("div");
+        chatDiv.className = "npf_chatbots";
+        chatDiv.setAttribute("data-w", "1189388fc18c4ac0952bc3816b615524");
+        chatDiv.style.display = "none";
+        document.body.appendChild(chatDiv);
+      }
 
-      loadScript(
-        "https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/5747642c1669bd257/1189388fc18c4ac0952bc3816b615524"
-      );
+      const scriptSrc =
+        "https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/5747642c1669bd257/1189388fc18c4ac0952bc3816b615524";
+      if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
+        const s = document.createElement("script");
+        s.src = scriptSrc;
+        s.async = true;
+        document.body.appendChild(s);
+      }
     };
 
-    // Defer heavy third-party widgets so first paint stays fast
-    whenIdle(initAmbassador, 2200);
-    whenIdle(initNpfPopup, 4000);
-    whenIdle(initChatbot, 9000);
+    // Load widgets efficiently so Niaa Chatbot is present promptly on every page
+    whenIdle(initChatbot, 500);
+    whenIdle(initAmbassador, 1200);
+    whenIdle(initNpfPopup, 3000);
 
     // If user hits Enquire early, load NPF immediately
     const enquireSelector = `.npfWidget-${NPF_WIDGET_ID}`;
@@ -108,10 +114,26 @@ export default function FloatingActions() {
 
         const isExpanded = text.includes("Want to know more about campus life");
 
-        const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-        // Desktop: lift clear of homepage About images; mobile keeps compact stack above WhatsApp
-        el.style.setProperty("bottom", isDesktop ? "9.5rem" : "5.75rem", "important");
-        el.style.setProperty("left", "max(1rem, env(safe-area-inset-left))", "important");
+        const isSm = window.matchMedia("(min-width: 640px)").matches;
+        // Position Ambassador chip right next to WhatsApp button at the bottom
+        el.style.setProperty(
+          "bottom",
+          isExpanded
+            ? "max(1.25rem, env(safe-area-inset-bottom))"
+            : isSm
+            ? "calc(max(1.25rem, env(safe-area-inset-bottom)) + 6px)"
+            : "calc(max(1.25rem, env(safe-area-inset-bottom)) + 2px)",
+          "important"
+        );
+        el.style.setProperty(
+          "left",
+          isExpanded
+            ? "max(1rem, env(safe-area-inset-left))"
+            : isSm
+            ? "calc(max(1rem, env(safe-area-inset-left)) + 4.125rem)"
+            : "calc(max(1rem, env(safe-area-inset-left)) + 3.625rem)",
+          "important"
+        );
         el.style.setProperty("right", "auto", "important");
         el.style.setProperty("z-index", "1900", "important");
         el.style.setProperty("box-sizing", "border-box", "important");
@@ -126,12 +148,12 @@ export default function FloatingActions() {
           image.style.setProperty("display", "block", "important");
           image.style.setProperty("background", "#0b2a36", "important");
           if (!isExpanded) {
-            image.style.setProperty("width", "36px", "important");
-            image.style.setProperty("height", "36px", "important");
-            image.style.setProperty("border", "1.5px solid rgba(255,255,255,0.92)", "important");
+            image.style.setProperty("width", "42px", "important");
+            image.style.setProperty("height", "42px", "important");
+            image.style.setProperty("border", "2px solid rgba(255,255,255,0.92)", "important");
           } else {
-            image.style.setProperty("width", "48px", "important");
-            image.style.setProperty("height", "48px", "important");
+            image.style.setProperty("width", "52px", "important");
+            image.style.setProperty("height", "52px", "important");
           }
         });
 
@@ -144,7 +166,7 @@ export default function FloatingActions() {
           el.style.setProperty("min-width", "0", "important");
           el.style.setProperty("min-height", "0", "important");
           el.style.setProperty("height", "auto", "important");
-          el.style.setProperty("padding", "4px 10px 4px 4px", "important");
+          el.style.setProperty("padding", "5px 14px 5px 5px", "important");
           el.style.setProperty("gap", "0", "important");
           el.style.setProperty("display", "inline-flex", "important");
           el.style.setProperty("align-items", "center", "important");
@@ -171,9 +193,9 @@ export default function FloatingActions() {
             b.style.setProperty("background", "transparent", "important");
             b.style.setProperty("background-color", "transparent", "important");
             b.style.setProperty("color", "#ffffff", "important");
-            b.style.setProperty("font-size", "12.5px", "important");
+            b.style.setProperty("font-size", "13.5px", "important");
             b.style.setProperty("font-weight", "600", "important");
-            b.style.setProperty("line-height", "1.2", "important");
+            b.style.setProperty("line-height", "1.22", "important");
             b.style.setProperty("letter-spacing", "0.01em", "important");
             b.style.setProperty("padding", "0", "important");
             b.style.setProperty("margin", "0", "important");
@@ -195,7 +217,7 @@ export default function FloatingActions() {
             if (cs.display === "flex" || child.querySelector("img")) {
               child.style.setProperty("display", "inline-flex", "important");
               child.style.setProperty("align-items", "center", "important");
-              child.style.setProperty("gap", "8px", "important");
+              child.style.setProperty("gap", "10px", "important");
               child.style.setProperty("padding", "0", "important");
               child.style.setProperty("margin", "0", "important");
               child.style.setProperty("width", "fit-content", "important");

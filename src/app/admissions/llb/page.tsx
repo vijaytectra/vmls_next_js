@@ -3,6 +3,13 @@ import Link from "next/link";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 
 export default function LLBAdmissionsPage() {
+  const programmes = [
+    { name: "LL.B. (Hons.)", href: "/blogs/three-year-llb-hons" },
+    { name: "B.A. LL.B. (Hons.)", href: "/blogs/5-year-ba-llb-hons" },
+    { name: "B.B.A. LL.B. (Hons.)", href: "/blogs/5-year-bba-llb-hons" },
+    { name: "B.Com. LL.B. (Hons.)", href: "/blogs/5-year-bcom-llb-hons" },
+  ];
+
   return (
     <main className="min-h-screen bg-white">
       {/* Breadcrumb */}
@@ -14,7 +21,7 @@ export default function LLBAdmissionsPage() {
         </div>
       </nav>
 
-      {/* Hero / Header Section — same size as LL.M. admissions */}
+      {/* Hero / Header Section */}
       <section className="relative px-[5%] pt-16 md:pt-28 pb-12 md:pb-20 overflow-hidden bg-white">
         <div className="absolute inset-0 z-0">
           <Image
@@ -42,14 +49,14 @@ export default function LLBAdmissionsPage() {
         </div>
       </section>
 
-      {/* LL.B. Program — About-style: image left, content right, sketch below */}
+      {/* LL.B. Program — About-style section */}
       <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
         <ArchitecturalSketch />
 
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-14 relative z-10">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-14 relative z-10">
           {/* Left: Image */}
           <div className="lg:w-[38%] w-full shrink-0">
-            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden">
+            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
               <Image
                 src="/images/llb/1.webp"
                 alt="LL.B. Program Classroom"
@@ -64,8 +71,8 @@ export default function LLBAdmissionsPage() {
           {/* Right: Content */}
           <div className="lg:w-[62%] min-w-0">
             <div className="relative">
-              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]" />
-              <div className="pl-6 md:pl-10 space-y-6 text-left hyphens-none [hyphens:none] [-webkit-hyphens:none]">
+              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34] rounded-full" />
+              <div className="pl-6 md:pl-10 space-y-6 text-left">
                 <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
                   LL.B. Program
                 </h2>
@@ -103,12 +110,16 @@ export default function LLBAdmissionsPage() {
               Undergraduate Law Programmes
             </h2>
 
-            {/* Polished Flat Programme Buttons */}
+            {/* Links to separate dedicated programme pages */}
             <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:justify-center md:gap-6">
-              {['LL.B. (Hons.)', 'B.A. LL.B. (Hons.)', 'B.B.A. LL.B. (Hons.)', 'B.Com. LL.B. (Hons.)'].map((prog) => (
-                <div key={prog} className="px-2 py-3.5 md:px-8 md:py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-[11px] sm:text-sm md:text-base text-center flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default">
-                  {prog}
-                </div>
+              {programmes.map((prog) => (
+                <Link
+                  key={prog.name}
+                  href={prog.href}
+                  className="px-4 py-3.5 md:px-8 md:py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-xs sm:text-sm md:text-base text-center flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:bg-[#a31f34] hover:text-white hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                >
+                  {prog.name}
+                </Link>
               ))}
             </div>
           </div>
@@ -171,10 +182,11 @@ export default function LLBAdmissionsPage() {
           </div>
         </div>
       </section>
+
       {/* Credit Structure and Minimum Requirements Section */}
       <section className="pb-6 md:pb-8 px-[5%] bg-white">
         <div className="max-w-3xl mx-auto">
-          {/* Main Container with Stylish Border - Scaled Down */}
+          {/* Main Container with Stylish Border */}
           <div className="bg-white border-t-8 border-[#a31f34] shadow-[0_30px_70px_-20px_rgba(0,0,0,0.1)] p-6 md:p-10 relative z-20">
             <div className="text-center mb-10">
               <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-3 font-bold">
@@ -204,7 +216,7 @@ export default function LLBAdmissionsPage() {
                 </div>
               ))}
 
-              {/* Stylish Total Row - Scaled Down */}
+              {/* Stylish Total Row */}
               <div className="mt-10 p-5 sm:p-6 bg-[#f8f9fa] flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0 rounded-xl border border-gray-100 shadow-inner group overflow-hidden relative">
                 <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#a31f34]"></div>
                 <span className="font-inter text-[#1a1a1a] font-bold text-sm sm:text-lg uppercase tracking-widest relative z-10">Total Requirement</span>

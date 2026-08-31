@@ -594,6 +594,18 @@ html {
   letter-spacing: normal !important;
 }
 
+/* NoPaperForms Niaa chatbot widget positioning — Bottom Right on every page */
+#eeChatWidgetContainer,
+#eeChatIndicator,
+.default-chatbot-indicator {
+  position: fixed !important;
+  right: max(1rem, env(safe-area-inset-right)) !important;
+  bottom: max(1.25rem, env(safe-area-inset-bottom)) !important;
+  left: auto !important;
+  top: auto !important;
+  z-index: 9990 !important;
+}
+
 /* NoPaperForms Niaa chatbot greeting bubble — force readable dark text */
 .default-chatbot-indicator,
 .default-chatbot-indicator *,
@@ -921,4 +933,20 @@ body {
   width: max-content !important;
   max-width: none !important;
   text-align: left !important;
+}
+
+/* Sleek custom text scrollbar for About section */
+.custom-text-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-text-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 999px;
+}
+.custom-text-scrollbar::-webkit-scrollbar-thumb {
+  background: #a31f34;
+  border-radius: 999px;
+}
+.custom-text-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #800000;
 }

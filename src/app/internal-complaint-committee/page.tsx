@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 
@@ -10,32 +11,96 @@ const committeeData = [
   {
     category: "PRESIDING OFFICER",
     members: [
-      { no: 1, name: "Dr. R. Shenbagavalli", designation: "Associate Dean Student Affairs", email: "shenbagavalli@vmls.edu.in", phone: "9551567599" }
+      {
+        no: 1,
+        name: "Dr. C. Fowmina",
+        designation: "Associate Professor",
+        email: "icc@vmls.edu.in",
+        phone: "8925934394"
+      }
     ]
   },
   {
-    category: "MEMBER (TEACHING STAFF)",
+    category: "MEMBERS (TEACHING)",
     members: [
-      { no: 2, name: "Dr. Abhinaya Ramesh", designation: "Assistant Professor", email: "abhinayaramesh@vmls.edu.in", phone: "8072279884" },
-      { no: 3, name: "Prof. Sowmiya Narayanan", designation: "Assistant Dean PG Academics", email: "sowmiyanarayan@vmls.edu.in", phone: "9884503578" },
-      { no: 4, name: "Prof. Sinjini Sen", designation: "Assistant Professor", email: "sinjinisen@vmls.edu.in", phone: "7887877527" },
-      { no: 5, name: "Prof. Abhinandita Biswas", designation: "Assistant Professor", email: "abhinanditabiswas@vmls.edu.in", phone: "7044776351" },
-      { no: 6, name: "Mrs. Merlin Stephen", designation: "Dy. Director Admissions", email: "merlinstephen@vmls.edu.in", phone: "8825818596" }
+      {
+        no: 2,
+        name: "Prof. Abinandita",
+        designation: "Assistant Professor",
+        email: "abinanditabiswas@vmls.edu.in",
+        phone: "7044776351"
+      },
+      {
+        no: 3,
+        name: "Prof. Sowmiya",
+        designation: "Assistant Professor",
+        email: "sowmiyanarayan@vmls.edu.in",
+        phone: "9884503578"
+      },
+      {
+        no: 4,
+        name: "Prof. Sinjini",
+        designation: "Assistant Professor",
+        email: "sinjinisen@vmls.edu.in",
+        phone: "7687877527"
+      }
     ]
   },
   {
-    category: "MEMBER (STUDENT)",
+    category: "MEMBERS (NON-TEACHING)",
     members: [
-      { no: 7, name: "ShakthiPriya", designation: "Student (LLB)", email: "sakthipriya_llb23@vmls.edu.in", phone: "9585177480" },
-      { no: 8, name: "R Sharvin", designation: "Student (B.Com LLB)", email: "sharvin.r_bcomllb22@vmls.edu.in", phone: "8754043865" },
-      { no: 9, name: "T. Rindya Subalakshmi", designation: "Student (BA LLB)", email: "rindhyasubalakshmi.t_ballb23@vmis.edu.in", phone: "9361892592" }
+      {
+        no: 5,
+        name: "Mr. Victor",
+        designation: "Director Administration",
+        email: "director.admin@vmls.edu.in",
+        phone: "9500390546"
+      },
+      {
+        no: 6,
+        name: "Ms. Ansala",
+        designation: "Asst. Manager Student Section",
+        email: "studsec@vmls.edu.in",
+        phone: "84289388883"
+      }
     ]
   },
   {
-    category: "MEMBER (Government and NON GOVT ORGANIZATION)",
+    category: "MEMBERS (STUDENTS)",
     members: [
-      { no: 10, name: "Dr. Gomathi Senthilkumar", designation: "Advocate, High Court Chennai", email: "gomathi.adv2013@gmail.com", phone: "8825794129" },
-      { no: 11, name: "Ms. Sandhiyan Thilagavathy", designation: "NGO, Aware India Trust", email: "mail@aware.org.in", phone: "8122241688" }
+      {
+        no: 7,
+        name: "Atchaya Arasi A M",
+        designation: "LLB – 3rd Yr.",
+        email: "atchaya.arasi_llb24@vmls.edu.in",
+        phone: "7397016191"
+      },
+      {
+        no: 8,
+        name: "Samson Albert",
+        designation: "B.A.LLB – 5th Yr.",
+        email: "samsonalbert.s_ballb22@vmls.edu.in",
+        phone: "8056355806"
+      }
+    ]
+  },
+  {
+    category: "MEMBERS (GOVT & NON-GOVERNMENT)",
+    members: [
+      {
+        no: 9,
+        name: "Dr. Gomathi Senthilkumar",
+        designation: "Advocate – Government",
+        email: "gomathi.adv2013@gmail.com",
+        phone: "8825794129"
+      },
+      {
+        no: 10,
+        name: "Mrs. Julie",
+        designation: "NGO Representative (Former District Judge, Member - Juvenile Board - Chengalpattu)",
+        email: "",
+        phone: "9840048076"
+      }
     ]
   }
 ];
@@ -54,14 +119,18 @@ export default function InternalComplaintCommitteePage() {
 
       {/* Header Section */}
       <section className="bg-[#800000] text-white py-16 px-[5%]">
-        <div className="max-w-7xl mx-auto text-center lg:text-left">
-          <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Internal Complaint <span className="text-[#fbb03b]">Committee</span>
-          </h1>
-          <div className="w-24 h-1.5 bg-[#fbb03b] mb-8 mx-auto lg:ml-0"></div>
-          <p className="font-inter text-xl opacity-90 max-w-3xl leading-relaxed mx-auto lg:ml-0">
-            The Internal Complaint Committee at VMLS is dedicated to ensuring a safe, respectful, and inclusive environment for all students, faculty, and staff.
-          </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="relative">
+            <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#fbb03b] rounded-full" />
+            <div className="pl-6 md:pl-8 text-left">
+              <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                Internal Complaint <span className="text-[#fbb03b]">Committee</span>
+              </h1>
+              <p className="font-inter text-lg md:text-xl opacity-90 max-w-3xl leading-relaxed">
+                The Internal Complaint Committee at VMLS is dedicated to ensuring a safe, respectful, and inclusive environment for all students, faculty, and staff.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -73,7 +142,7 @@ export default function InternalComplaintCommitteePage() {
               <thead>
                 <tr className="bg-gray-900 text-white font-inter uppercase tracking-widest text-sm">
                   <th className="py-6 px-6 font-semibold w-20 text-center">No.</th>
-                  <th className="py-6 px-6 font-semibold">Member</th>
+                  <th className="py-6 px-6 font-semibold whitespace-nowrap min-w-[220px]">Member</th>
                   <th className="py-6 px-6 font-semibold">Designation</th>
                   <th className="py-6 px-6 font-semibold">Contact Details</th>
                 </tr>
@@ -89,20 +158,24 @@ export default function InternalComplaintCommitteePage() {
                     {section.members.map((member, mIdx) => (
                       <tr key={mIdx} className="border-b border-gray-100 hover:bg-red-50/30 transition-all duration-300">
                         <td className="py-5 px-6 text-gray-400 text-center font-bold">{member.no}</td>
-                        <td className="py-5 px-6">
-                          <div className="font-bold text-[#1a1a1a] text-lg">{member.name}</div>
+                        <td className="py-5 px-6 whitespace-nowrap min-w-[220px]">
+                          <div className="font-bold text-[#1a1a1a] text-lg whitespace-nowrap">{member.name}</div>
                         </td>
                         <td className="py-5 px-6 text-gray-600 font-medium leading-relaxed">{member.designation}</td>
                         <td className="py-5 px-6">
                           <div className="flex flex-col gap-2.5">
-                            <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
-                              <Mail size={16} className="group-hover:scale-110 transition-transform" />
-                              <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
-                            </a>
-                            <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
-                              <Phone size={16} className="group-hover:scale-110 transition-transform" />
-                              {member.phone}
-                            </a>
+                            {member.email ? (
+                              <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
+                                <Mail size={16} className="group-hover:scale-110 transition-transform" />
+                                <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
+                              </a>
+                            ) : null}
+                            {member.phone ? (
+                              <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
+                                <Phone size={16} className="group-hover:scale-110 transition-transform" />
+                                {member.phone}
+                              </a>
+                            ) : null}
                           </div>
                         </td>
                       </tr>
@@ -112,12 +185,8 @@ export default function InternalComplaintCommitteePage() {
               </tbody>
             </table>
           </div>
-
         </div>
       </section>
     </main>
   );
 }
-
-// Added this to handle React.Fragment since I'm not importing React explicitly (Next.js handles it, but Fragment needs to be defined if used as <React.Fragment>)
-import React from 'react';
