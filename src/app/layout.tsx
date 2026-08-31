@@ -1,30 +1,22 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono, Playfair_Display, Inter } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
-import FloatingActions from "@/components/layout/FloatingActions";
-import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
+import SiteChrome from "@/components/layout/SiteChrome";
 import { GOOGLE_SITE_VERIFICATION, GTM_ID, SITE_URL } from "@/lib/seo";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+  display: "swap",
+  preload: true,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+  preload: true,
 });
 
 export const viewport: Viewport = {
@@ -35,8 +27,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  // Site-wide fallback only. Every route sets its own title and description
-  // via pageMetadata(); a page showing this string is a page that was missed.
+  // Site-wide fallback only. Every route sets its own title, description,
+  // canonical and Open Graph set via pageMetadata(); a page showing this
+  // string is a page that was missed.
+  //
+  // Deliberately no `alternates.canonical` here: canonical is inherited by
+  // every child route, so a value on the root layout would point all of them
+  // at one URL. The homepage's own canonical comes from pageMetadata("/").
   title: "Vinayaka Mission's Law School (VMLS)",
   description:
     "Vinayaka Mission's Law School (VMLS), Chennai - law programmes, centres of excellence, faculty and admissions.",
@@ -46,7 +43,7 @@ export const metadata: Metadata = {
     icon: "/images/favicon.ico",
     shortcut: "/images/favicon.ico",
     apple: "/images/favicon.ico",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -58,33 +55,31 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${inter.variable} h-full antialiased`}
+      className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
         {/*
           Google Tag Manager - deferred loader. dataLayer is created
           immediately so anything on the page can push to it; the gtm.js
-          fetch itself is delayed by 1500ms to protect LCP. One container
-          ID for the whole site - see GTM_ID in src/lib/seo.ts.
+          fetch is delayed by 1500ms to protect LCP. One container ID for
+          the whole site - see GTM_ID in src/lib/seo.ts.
         */}
-        <script
-          id="gtm-deferred"
-          dangerouslySetInnerHTML={{
-            __html: `
-window.dataLayer = window.dataLayer || [];
-setTimeout(function () {
-  (function (w, d, s, l, i) {
-    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-    var f = d.getElementsByTagName(s)[0],
-      j = d.createElement(s),
-      dl = l != "dataLayer" ? "&l=" + l : "";
-    j.async = true;
-    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-    f.parentNode.insertBefore(j, f);
-  })(window, document, "script", "dataLayer", "${GTM_ID}");
-}, 1500);`,
-          }}
-        />
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            setTimeout(function() {
+              (function (w, d, s, l, i) {
+                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+                var f = d.getElementsByTagName(s)[0],
+                  j = d.createElement(s),
+                  dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+              })(window, document, "script", "dataLayer", "${GTM_ID}");
+            }, 1500);
+          `}
+        </Script>
       </head>
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         {/* Google Tag Manager (noscript) - must stay immediately after <body>. */}
@@ -96,21 +91,21 @@ setTimeout(function () {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-        <Header />
-        <div className="animate-page-fade">
-          {children}
-        </div>
-        <Footer />
-            <FloatingActions />   
-        <Script id="npf-config" strategy="afterInteractive">
+        <SiteChrome>{children}</SiteChrome>
+        <Script id="npf-embed-config" strategy="lazyOnload">
           {`
-            var npf_d='https://admissions.vmls.edu.in';
-            var npf_c='87feca6bc65be091ed018757c6c58029';
-            var s=document.createElement("script");
-            s.type="text/javascript";
-            s.async=true;
-            s.src="https://widgets.nopaperforms.com/em-widget.js";
-            document.head.appendChild(s);
+            var npf_d = "https://admissions.vmls.edu.in";
+            var npf_c = "5747";
+            var npf_m = "1";
+            (function () {
+              if (document.querySelector('script[src="https://widgets.in8.nopaperforms.com/emwgts.js"]')) return;
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              s.defer = true;
+              s.src = "https://widgets.in8.nopaperforms.com/emwgts.js";
+              document.body.appendChild(s);
+            })();
           `}
         </Script>
       </body>

@@ -53,7 +53,7 @@ export default function InternationalConferenceOnRiversPage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 The <strong>International Conference on Rivers</strong>, hosted by Vinayaka Mission&apos;s Law School (VMLS) under the aegis of Vinayaka Mission&apos;s Research Foundation (Deemed-to-be-University), concluded successfully on October 19, 2024, after two days of insightful discussions on river governance and environmental sustainability. The event drew international experts, legal scholars, and policymakers to address the socio-legal challenges surrounding rivers.
               </p>

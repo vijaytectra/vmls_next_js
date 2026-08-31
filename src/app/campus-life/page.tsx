@@ -18,16 +18,16 @@ export default function CampusLifePage() {
 
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-nowrap">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-normal lg:whitespace-nowrap">
               Campus <span className="text-[#fbb03b]">Life</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
               Experience a vibrant and holistic life at VMLS. Beyond the classrooms, our campus is a hub of cultural events, sports, student clubs, and extracurricular activities that foster personal growth and community bonding.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/il1.webp"
               alt="Campus Life at VMLS"
@@ -42,13 +42,13 @@ export default function CampusLifePage() {
       </section>
 
       {/* Our Infrastructure Section - Premium Bento Box Design */}
-      <section className="py-20 md:py-32 px-[5%] bg-[#fcfcfc]">
+      <section className="pt-4 md:pt-6 pb-4 md:pb-6 px-[5%] bg-[#fcfcfc]">
         <div className="max-w-[1500px] mx-auto">
-          <div className="text-center mb-16 md:mb-24">
-            <h2 className="font-playfair text-4xl md:text-6xl text-[#1a1a1a] mb-6">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="font-playfair text-4xl md:text-6xl text-[#1a1a1a] mb-4">
               World-Class <span className="italic text-[#a31f34]">Infrastructure</span>
             </h2>
-            <div className="w-24 h-1 bg-[#a31f34] mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-[#a31f34] mx-auto mb-4"></div>
             <p className="font-inter text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
               Experience an environment designed for excellence, featuring state-of-the-art facilities that inspire innovation and academic growth.
             </p>
@@ -56,16 +56,16 @@ export default function CampusLifePage() {
 
           {/* Bento Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-6 h-auto lg:h-[900px]">
-            
+
             {/* 1. Featured: Classroom (Large) */}
-            <Link 
-              href="/infrastructure" 
+            <Link
+              href="/classroom"
               className="md:col-span-2 lg:col-span-3 lg:row-span-2 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[400px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 <source src="/videos/class.mp4" type="video/mp4" />
               </video>
-              
+
               {/* Mobile View: Common Frosted Glass Card Design */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 md:hidden"></div>
               <div className="absolute inset-0 p-6 flex flex-col justify-end md:hidden">
@@ -87,14 +87,14 @@ export default function CampusLifePage() {
             </Link>
 
             {/* 2. Atrium (Medium) */}
-            <Link 
-              href="/atrium" 
+            <Link
+              href="/atrium"
               className="md:col-span-2 lg:col-span-3 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[350px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 <source src="/videos/atrium.mp4" type="video/mp4" />
               </video>
-              
+
               {/* Mobile View: Common Frosted Glass Card Design */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 md:hidden"></div>
               <div className="absolute inset-0 p-6 flex flex-col justify-end md:hidden">
@@ -118,14 +118,14 @@ export default function CampusLifePage() {
             </Link>
 
             {/* 3. Main Building (Medium) */}
-            <Link 
-              href="/main-building" 
+            <Link
+              href="/main-building"
               className="md:col-span-2 lg:col-span-3 group relative overflow-hidden rounded-3xl shadow-lg transition-all duration-700 hover:shadow-2xl h-[300px] md:h-[350px] lg:h-auto"
             >
               <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
                 <source src="/videos/corridor.mp4" type="video/mp4" />
               </video>
-              
+
               {/* Mobile View: Common Frosted Glass Card Design */}
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 md:hidden"></div>
               <div className="absolute inset-0 p-6 flex flex-col justify-end md:hidden">
@@ -149,16 +149,17 @@ export default function CampusLifePage() {
             </Link>
 
             {/* Bottom Row - Standard Cards */}
-            <div className="md:col-span-4 lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="md:col-span-4 lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {[
-                { title: "Digital Library", video: "/videos/library.mp4", href: "/library" },
+                { title: "Library", video: "/videos/library.mp4", href: "/library" },
                 { title: "Moot Court", video: "/videos/moot-court.mp4", href: "/moot-court" },
-                { title: "Seminar Hall", video: "/videos/seminar1.mp4", href: "/seminar-hall" },
-                { title: "Hostel Facility", video: "/videos/hostel.mp4", href: "/hostel" }
+                { title: "Seminar Halls", video: "/videos/seminar1.mp4", href: "/seminar-hall" },
+                { title: "Food Court", video: "/videos/food.mp4", href: "/food-court" },
+                { title: "Hostel", video: "/videos/hostel.mp4", href: "/hostel" }
               ].map((item, idx) => (
-                <Link 
+                <Link
                   key={idx}
-                  href={item.href} 
+                  href={item.href}
                   className="group relative h-[300px] overflow-hidden rounded-3xl shadow-md hover:shadow-xl transition-all duration-500"
                 >
                   <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">

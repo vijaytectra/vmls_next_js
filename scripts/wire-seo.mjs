@@ -47,12 +47,22 @@ const fileFor = (route) =>
 
 const isClient = (src) => /^\s*["']use client["']/.test(src);
 
-/** Strip an existing `export const metadata = { ... };` block. */
+/**
+ * Strip an existing `export const metadata = { ... };` object literal.
+ *
+ * Only an object literal: a file already wired to `pageMetadata("/x")` has no
+ * braces of its own, and walking forward to the next `{` would swallow the
+ * component that follows it.
+ */
 function stripMetadata(src) {
   const at = src.indexOf("export const metadata");
   if (at === -1) return src;
   const open = src.indexOf("{", at);
   if (open === -1) return src;
+  // Everything between the declaration and that brace must be type
+  // annotation and assignment - otherwise the brace belongs to something else.
+  if (!/^export const metadata(\s*:\s*Metadata)?\s*=\s*$/.test(src.slice(at, open)))
+    return src;
   let depth = 0;
   let i = open;
   for (; i < src.length; i++) {

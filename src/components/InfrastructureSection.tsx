@@ -1,104 +1,68 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import Link from 'next/link';
 
-const infraItems = [
-  {
-    title: "Classroom",
-    description: "The classrooms of VMLS are a testament to modern academic excellence, blending technology with design to create an ideal space for learning.",
-    video: "/videos/class.mp4",
-    href: "/infrastructure"
-  },
-  {
-    title: "Atrium",
-    description: "The atrium of VMLS fosters an atmosphere that is both inviting and conducive to academic pursuits.",
-    video: "/videos/atrium.mp4",
-    href: "/atrium"
-  },
-  {
-    title: "Main Building",
-    description: "The main building of VMLS stands as a striking example of modern architecture, where functionality meets aesthetic precision.",
-    video: "/videos/corridor.mp4",
-    href: "/main-building"
-  }
-];
+import { useEffect, useRef } from "react";
+import Link from "next/link";
+import { infrastructureItems } from "@/data/infrastructure";
 
 export default function InfrastructureSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
-    videoRefs.current.forEach(video => {
+    videoRefs.current.forEach((video) => {
       if (video) {
-        video.play().catch(error => {
-          console.log("Autoplay prevented:", error);
+        video.play().catch(() => {
+          /* autoplay may be blocked */
         });
       }
     });
   }, []);
 
   return (
-    <section className="pt-2 pb-4 md:pt-4 md:pb-4 bg-white overflow-hidden text-black">
+    <section className="pt-2 pb-8 md:pt-4 md:pb-12 bg-white overflow-hidden text-black">
       <div className="max-w-[1600px] mx-auto px-[5%]">
-        <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a] mb-2 md:mb-16 text-center">
+        <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a] mb-6 md:mb-12 text-center">
           Our Infrastructure
         </h2>
 
-        <div className="flex flex-col lg:flex-row h-[900px] lg:h-[550px] gap-4">
-          {infraItems.map((item, index) => {
-            const isHovered = hoveredIndex === index;
-            const isAnyHovered = hoveredIndex !== null;
-
-            return (
-              <div
-                key={index}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                className={`relative transition-all duration-700 ease-in-out cursor-pointer overflow-hidden bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]
-                  ${isHovered ? "flex-[2.5]" : isAnyHovered ? "flex-[0.5]" : "flex-1"}
-                `}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
+          {infrastructureItems.map((item, index) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group relative h-[240px] sm:h-[280px] md:h-[320px] overflow-hidden bg-white shadow-[0_16px_32px_-12px_rgba(0,0,0,0.28)]"
+            >
+              <video
+                ref={(el) => {
+                  videoRefs.current[index] = el;
+                }}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                poster={item.image}
+                className="absolute inset-0 w-full h-full object-cover scale-[1.01] transition-transform duration-700 group-hover:scale-105"
               >
-                <div className="relative w-full h-full overflow-hidden">
-                  {/* Background Video */}
-                  <video
-                    ref={el => { videoRefs.current[index] = el; }}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="none"
-                    className="absolute inset-0 w-full h-full object-cover scale-[1.01]"
-                  >
-                    <source src={item.video} type="video/mp4" />
-                  </video>
+                <source src={item.video} type="video/mp4" />
+              </video>
 
-                  {/* Overlay */}
-                  <div className={`absolute inset-0 transition-opacity duration-500 ${isHovered ? "bg-black/0" : "bg-black/20"}`}></div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-                  {/* Content Overlay */}
-                  <div className="absolute inset-0 p-8 lg:p-12 flex flex-col justify-end">
-                    <div className={`transition-all duration-500 transform ${isHovered ? "translate-y-0" : "translate-y-4"}`}>
-                      <h3 className={`font-playfair text-white leading-tight mb-4 transition-all duration-500 ${isHovered ? "text-4xl lg:text-5xl" : "text-2xl lg:text-3xl"}`}>
-                        {item.title}
-                      </h3>
-
-                      <div className={`overflow-hidden transition-all duration-500 ${isHovered ? "max-h-[300px] opacity-100 mb-6" : "max-h-0 opacity-0"}`}>
-                        <p className="font-inter text-gray-200 text-base md:text-lg leading-relaxed max-w-2xl text-justify">
-                          {item.description}
-                        </p>
-                      </div>
-
-                      <Link href={item.href} className="flex items-center gap-3 text-white font-inter text-xs font-bold uppercase tracking-widest group/btn">
-                        <span>Read More</span>
-                        <span className="w-8 h-[1px] bg-white transition-all group-hover/btn:w-12"></span>
-                      </Link>
-                    </div>
-                  </div>
+              <div className="absolute inset-0 p-5 sm:p-6 md:p-7 flex flex-col justify-end">
+                <h3 className="font-playfair text-white text-xl sm:text-2xl md:text-3xl leading-tight mb-2">
+                  {item.title}
+                </h3>
+                <p className="font-inter text-gray-200 text-sm leading-relaxed line-clamp-3 mb-3 sm:mb-4 opacity-100 max-h-24 [@media(hover:hover)]:opacity-0 [@media(hover:hover)]:max-h-0 [@media(hover:hover)]:group-hover:opacity-100 [@media(hover:hover)]:group-hover:max-h-24 transition-all duration-500 overflow-hidden">
+                  {item.shortDescription}
+                </p>
+                <div className="flex items-center gap-3 text-white font-inter text-xs font-bold uppercase tracking-widest min-h-[44px]">
+                  <span>Read More</span>
+                  <span className="w-8 h-[1px] bg-white transition-all group-hover:w-12" />
                 </div>
               </div>
-            );
-          })}
+            </Link>
+          ))}
         </div>
       </div>
     </section>

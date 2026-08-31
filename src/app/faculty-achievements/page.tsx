@@ -41,22 +41,22 @@ export default function FacultyAchievementsPage() {
 
       {/* Hero Section - Matching Internship Style */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-nowrap">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-normal lg:whitespace-nowrap">
               Faculty <span className="text-[#fbb03b]">Achievements</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
               Celebrating the academic excellence, research impact, and professional recognitions of our distinguished faculty members who are shaping the future of legal education.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
-              src="/images/Frame89.webp"
+              src="/images/faculty/live/DSC00716_19.webp"
               alt="VMLS Faculty Achievements"
               fill
               priority
-              className="object-cover"
+              className="object-cover object-[center_20%]"
               sizes="(max-width: 1024px) 100vw, 55vw"
             />
             <div className="absolute inset-0 bg-black/10"></div>
@@ -67,17 +67,17 @@ export default function FacultyAchievementsPage() {
       {/* Section: Research Impact */}
       <section className="py-20 px-[5%] bg-white relative">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-16">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
             <div className="md:w-1/2">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-[2px] bg-[#a31f34]"></div>
                 <h2 className="font-playfair text-3xl md:text-4xl text-[#1a1a1a] font-bold">Research Impact</h2>
               </div>
-              <p className="font-inter text-lg text-gray-600 leading-relaxed mb-10 text-justify">
+              <p className="font-inter text-lg text-gray-600 leading-relaxed mb-10 text-left">
                 Beyond the classroom, our faculty members are active contributors to legal scholarship and policy development at national and international levels.
               </p>
 
-              <div className="space-y-8 font-inter text-lg text-gray-700 leading-relaxed text-left sm:text-justify">
+              <div className="space-y-8 font-inter text-lg text-gray-700 leading-relaxed text-left sm:text-left">
                 {researchHighlights.map((highlight, index) => (
                   <div key={index} className="flex flex-col sm:flex-row gap-6 items-start">
                     <div className="bg-gray-50 p-4 rounded-lg shadow-inner shrink-0">
@@ -96,10 +96,10 @@ export default function FacultyAchievementsPage() {
 
             <div className="md:w-1/2 relative h-[400px] w-full bg-gray-100 overflow-hidden group">
               <Image
-                src="/images/home-faculty.webp"
+                src="/images/faculty/live/DSC00648_14.webp"
                 alt="Research in Action"
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-[#a31f34]/10 mix-blend-multiply"></div>

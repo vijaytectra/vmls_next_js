@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { noOrphanText } from "@/lib/noOrphanText";
 
 interface Member {
   name: string;
@@ -58,13 +59,13 @@ const members: Member[] = [
 
 export default function MentoringCommitteeGrid() {
   return (
-    <section className="pt-12 md:pt-16 pb-20 md:pb-32 px-[5%] bg-white relative overflow-hidden">
+    <section className="pt-8 sm:pt-12 md:pt-16 pb-12 sm:pb-20 md:pb-32 px-[5%] bg-white relative overflow-hidden">
       {/* Background Accent */}
       <div className="absolute right-0 top-0 w-1/3 h-full bg-gray-50/50 -skew-x-12 transform origin-top translate-x-1/2 -z-10"></div>
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Members Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 sm:gap-x-8 gap-y-10 sm:gap-y-16">
           {members.map((member, index) => (
             <div key={index} className="flex flex-col group animate-fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
               <div className="relative aspect-square w-full shadow-[0_15px_40px_rgba(0,0,0,0.08)] transition-transform duration-500 group-hover:-translate-y-2">
@@ -79,15 +80,15 @@ export default function MentoringCommitteeGrid() {
                 </div>
               </div>
 
-              <div className="mt-2 flex flex-col h-full">
-                <div className="min-h-[40px] md:min-h-[50px] flex flex-col justify-end gap-2">
-                  <h3 className="font-playfair font-bold text-lg md:text-xl lg:text-[22px] tracking-tight text-[#1a1a1a] leading-tight group-hover:text-[#a31f34] transition-colors duration-300">
+              <div className="person-card-details person-card-details--start !pt-2 !px-0">
+                <div className="w-full min-h-[2.75rem] flex flex-col justify-start gap-2">
+                  <h3 className="person-card-name !justify-start !text-left !min-h-0 font-playfair font-bold text-lg md:text-xl lg:text-[22px] tracking-tight text-[#1a1a1a] leading-tight group-hover:text-[#a31f34] transition-colors duration-300">
                     {member.name}
                   </h3>
                   <div className="w-8 h-[2px] bg-[#a31f34]/30 group-hover:w-16 group-hover:bg-[#a31f34] transition-all duration-500"></div>
                 </div>
-                <p className="mt-4 font-inter text-gray-500 text-[15px] leading-relaxed tracking-tight">
-                  {member.designation}
+                <p className="person-card-role !min-h-0 !tracking-normal mt-3 font-inter text-gray-500 text-[15px] leading-relaxed normal-case font-normal text-pretty">
+                  {noOrphanText(member.designation)}
                 </p>
               </div>
             </div>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ScholarshipSection() {
   return (
-    <section className="relative min-h-[300px] md:min-h-[400px] overflow-hidden bg-black">
+    <section className="relative min-h-[280px] sm:min-h-[320px] md:min-h-[400px] overflow-hidden bg-black">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -18,7 +18,7 @@ export default function ScholarshipSection() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-[5%] py-12 md:py-20 flex items-center min-h-[300px] md:min-h-[400px]">
+      <div className="relative z-10 max-w-7xl mx-auto px-[5%] py-10 sm:py-12 md:py-20 flex items-center min-h-[280px] sm:min-h-[320px] md:min-h-[400px]">
         <div className="max-w-2xl">
           <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-white mb-4 md:mb-6 leading-tight tracking-tight">
             Scholarships at VMLS
@@ -32,7 +32,7 @@ export default function ScholarshipSection() {
           <div>
             <Link 
               href="/scholarships" 
-              className="inline-block px-8 py-3 bg-[#8b0000] text-white font-inter text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:bg-[#a31f34] hover:scale-105"
+              className="inline-flex items-center justify-center min-h-[48px] px-8 sm:px-10 py-3.5 sm:py-4 bg-[#8b0000] text-white font-inter text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:bg-[#a31f34] hover:scale-105"
             >
               View Scholarship Portal
             </Link>

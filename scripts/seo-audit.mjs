@@ -26,18 +26,34 @@ const blogSlugs = [...blogSeo.matchAll(/^    "slug": "([^"]+)",$/gm)].map(
   (m) => m[1]
 );
 
-// Slugs the blog index links to, so orphan links can be reported.
-const blogIndexSrc = fs.readFileSync("src/app/blogs/[slug]/page.tsx", "utf8");
+// Slugs the blog listing knows about, so links with no article body show up.
+const blogPostsSrc = fs.readFileSync("src/data/blogs/posts.ts", "utf8");
 const listedSlugs = [
-  ...blogIndexSrc
-    .slice(0, blogIndexSrc.indexOf("const blogData = {"))
-    .matchAll(/slug: "([^"]+)"/g),
+  ...blogPostsSrc
+    .slice(blogPostsSrc.indexOf("ALL_BLOG_SLUGS"))
+    .matchAll(/"([a-z0-9-]+)"/g),
 ].map((m) => m[1]);
+
+// Profile routes added by the origin/main merge. Only advisors and members
+// with a written profile render a page; the rest are noindex placeholders.
+const advisorSrc = fs.readFileSync("src/data/boardOfAdvisors.ts", "utf8");
+const advisorSlugs = [...advisorSrc.matchAll(/slug: "([^"]+)",\n\s+name:/g)]
+  .map((m) => m[1])
+  .filter((slug) => {
+    const block = advisorSrc.slice(advisorSrc.indexOf(`slug: "${slug}"`));
+    const paragraphs = block.match(/paragraphs: \[([\s\S]*?)\n {2}\]/);
+    return paragraphs ? paragraphs[1].trim().length > 0 : false;
+  });
+
+const mentorSrc = fs.readFileSync("src/data/mentoringCommittee.ts", "utf8");
+const mentorSlugs = [...mentorSrc.matchAll(/slug: '([^']+)',/g)].map((m) => m[1]);
 
 const urls = [
   ...staticRoutes,
   ...facultySlugs.map((s) => `/faculty/${s}`),
   ...blogSlugs.map((s) => `/blogs/${s}`),
+  ...advisorSlugs.map((s) => `/board-of-advisors/${s}`),
+  ...mentorSlugs.map((s) => `/mentoring-committee/${s}`),
 ];
 
 /* ---------------------------------------------------------------- parsing */
@@ -107,6 +123,8 @@ const pageTypes = {};
 
 function pageTypeOf(route) {
   if (route.startsWith("/faculty/")) return "faculty-profile";
+  if (route.startsWith("/board-of-advisors/")) return "person-profile";
+  if (route.startsWith("/mentoring-committee/")) return "person-profile";
   if (route.startsWith("/blogs/")) return "blog-post";
   return pageTypes[route] ?? "unknown";
 }
@@ -114,7 +132,7 @@ function pageTypeOf(route) {
 /** The schema types a page of this kind must carry, per the mapping table. */
 function expectedTypes(route) {
   const type = pageTypeOf(route);
-  if (type === "faculty-profile") return ["Person"];
+  if (type === "faculty-profile" || type === "person-profile") return ["Person"];
   if (type === "blog-post") return ["BlogPosting"];
   const base = type.replace("+article", "");
   const extra = type.endsWith("+article")
@@ -161,7 +179,7 @@ for (const route of urls) {
     ogUrl: prop(html, "og:url")[0],
     ogTitle: decodeEntities(prop(html, "og:title")[0] ?? ""),
     ogDescription: decodeEntities(prop(html, "og:description")[0] ?? ""),
-    ogImage: prop(html, "og:image")[0],
+    ogImage: decodeEntities(prop(html, "og:image")[0] ?? ""),
     dcIdentifier: meta(html, "DC.identifier")[0],
     keywords: meta(html, "keywords"),
     verification: meta(html, "google-site-verification"),

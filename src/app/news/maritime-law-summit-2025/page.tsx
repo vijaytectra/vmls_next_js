@@ -53,7 +53,7 @@ export default function MaritimeLawSummitPage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 Vinayaka Mission&apos;s Law School (VMLS), a constituent college of Vinayaka Mission&apos;s Research Foundation (Deemed to be University), successfully hosted the <strong>Maritime Law Summit 2025</strong> on 6th September 2025 at its Paiyanoor campus, Chennai. 
               </p>

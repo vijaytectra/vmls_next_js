@@ -55,6 +55,10 @@ const PEOPLE: Partial<Record<PagePath, Parameters<typeof personSchema>[0]>> = {
     jobTitle: "Executive Dean",
     path: "/dean",
     image: "/images/mentor.webp",
+    alumniOf: [
+      "University of Warwick School of Law",
+      "National Law School of India University",
+    ],
   },
   "/chancellor": {
     name: "Dr. A. S. Ganesan",

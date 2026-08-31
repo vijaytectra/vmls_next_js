@@ -53,7 +53,7 @@ export default function EFilingPage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 The event titled <strong>&quot;Introduction to E-Filing for Young Lawyers&quot;</strong> was successfully held on April 30, 2024, at Vinayaka Mission&apos;s Law School, Paiyanoor, Chennai. Organized by the Centre for Justice Through Technology (CJT) at Vinayaka Mission&apos;s Law School, this event aimed at equipping young lawyers with the essential skills to navigate the e-filing process efficiently.
               </p>

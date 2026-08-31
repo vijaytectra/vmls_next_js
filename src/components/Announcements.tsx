@@ -24,7 +24,7 @@ export default function Announcements() {
     <section className="bg-[#a31f34] text-white py-4 md:py-3 px-[5%] flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-10 overflow-hidden shadow-lg min-h-[80px] md:min-h-[60px]">
       {/* Top Row on Mobile: Title and Arrows */}
       <div className="w-full md:w-auto flex justify-between items-center md:gap-10">
-        <h2 className="font-playfair text-xl md:text-2xl font-normal whitespace-nowrap">
+        <h2 className="font-playfair text-xl md:text-2xl font-normal whitespace-normal lg:whitespace-nowrap">
           Announcements
         </h2>
 

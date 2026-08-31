@@ -28,7 +28,7 @@ export default function WomenAndAIPage() {
               <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 Women & <br /><span className="text-[#800000]">AI Conference</span>
               </h1>
-              <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+              <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
                 Students secure prestigious awards for research excellence. Exploring the intersection of gender equity and emerging technologies at the International Conference on Women & AI.
               </p>
             </div>
@@ -61,10 +61,10 @@ export default function WomenAndAIPage() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12">
           {/* Main Article Section */}
           <div className="lg:w-[70%]">
-            <h2 className="font-playfair text-3xl md:text-4xl text-gray-900 mb-8 font-bold leading-tight text-justify">
+            <h2 className="font-playfair text-3xl md:text-4xl text-gray-900 mb-8 font-bold leading-tight text-left">
               Students Secures Award at the International Conference on Women and AI
             </h2>
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg space-y-6 mb-12">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg space-y-6 mb-12">
               <p>
                 Students of VMLS achieved notable recognition at the International Conference on "Women and AI" held on 25 April 2026 at Saveetha School of Law. Ms. M. Hemalatha, II Year B.A. LL.B. (Hons.), was awarded the <strong>Best Paper Award</strong> for her research titled "From Watchtowers to Algorithms: A Comparative Study of the Gendered and Racial Dimensions of AI Surveillance in India and the United States."
               </p>
@@ -84,7 +84,7 @@ export default function WomenAndAIPage() {
               {/* Featured: Certificate spans full width on md+ */}
               <div className="md:col-span-2 relative aspect-[16/10] md:aspect-[21/9] shadow-lg rounded-xl overflow-hidden group border border-gray-100">
                 <Image
-                  src="/images/studentaff/Women and AI_01.webp"
+                  src="/images/studentaff/women-and-ai-01.webp"
                   alt="Certificate of Appreciation"
                   fill
                   className="object-contain bg-gray-50 group-hover:scale-[1.02] transition-transform duration-700"
@@ -98,7 +98,7 @@ export default function WomenAndAIPage() {
               {/* Ceremony Photos side-by-side */}
               <div className="relative aspect-video shadow-md rounded-xl overflow-hidden group">
                 <Image
-                  src="/images/studentaff/Women and AI_02.webp"
+                  src="/images/studentaff/women-and-ai-02.webp"
                   alt="Award Ceremony"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -107,7 +107,7 @@ export default function WomenAndAIPage() {
               </div>
               <div className="relative aspect-video shadow-md rounded-xl overflow-hidden group">
                 <Image
-                  src="/images/studentaff/Women and AI_03.webp"
+                  src="/images/studentaff/women-and-ai-03.webp"
                   alt="Best Presenter Award"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"

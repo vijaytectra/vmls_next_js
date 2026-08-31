@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import JsonLd from "@/components/seo/JsonLd";
 import { BLOG_SEO } from "@/data/blog-seo";
-import { articleSchema, breadcrumbSchema } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
 
 // src/app/blogs/[slug]/page.tsx is a client component and cannot export
@@ -86,6 +86,9 @@ export default async function BlogPostLayout({
             author: post.author,
             type: "BlogPosting",
           }),
+          // Only the posts whose article body renders an FAQ accordion carry
+          // FAQPage - the questions come from the same data the page shows.
+          ...(post.faqs?.length ? [faqPageSchema(post.faqs)] : []),
           breadcrumbSchema([...BLOG_TRAIL, { name: post.title }]),
         ]}
       />

@@ -1,11 +1,22 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 import { pageMetadata } from "@/lib/seo-pages";
 import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/admissions/llb");
 
+
+
 export default function LLBAdmissionsPage() {
+  const programmes = [
+    { name: "LL.B. (Hons.)", href: "/blogs/three-year-llb-hons" },
+    { name: "B.A. LL.B. (Hons.)", href: "/blogs/5-year-ba-llb-hons" },
+    { name: "B.B.A. LL.B. (Hons.)", href: "/blogs/5-year-bba-llb-hons" },
+    { name: "B.Com. LL.B. (Hons.)", href: "/blogs/5-year-bcom-llb-hons" },
+  ];
+
   return (
     <main className="min-h-screen bg-white">
       <PageSchema path="/admissions/llb" />
@@ -18,18 +29,16 @@ export default function LLBAdmissionsPage() {
         </div>
       </nav>
 
-      {/* Hero / Header Section - Increased Size */}
+      {/* Hero / Header Section */}
       <section className="relative px-[5%] pt-16 md:pt-28 pb-12 md:pb-20 overflow-hidden bg-white">
-        {/* Background Image with Black Overlay for Premium Contrast */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/llb/3.webp"
+            src="/images/llb/llb-header.webp"
             alt="LL.B. Admissions Background"
             fill
             className="object-cover object-center opacity-100 contrast-[1.05] brightness-90"
             priority
           />
-          {/* Black Gradient Overlay */}
           <div className="absolute inset-0 bg-black/60 md:bg-gradient-to-r md:from-black/80 md:via-black/40 md:to-transparent"></div>
         </div>
 
@@ -41,59 +50,52 @@ export default function LLBAdmissionsPage() {
                 LL.B. Admissions
               </h1>
               <p className="font-inter text-lg md:text-xl text-gray-100 max-w-2xl leading-relaxed font-medium">
-                Start your journey into the legal profession with our comprehensive LL.B. programmes designed for future-ready legal experts.
+                Undergraduate programmes: Build a foundation that will support your aspirations.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* LL.B. Program Detail Section */}
-      <section className="pt-6 md:pt-8 pb-4 md:pb-6 px-[5%] bg-[#f8f9fa] overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      {/* LL.B. Program — About-style section */}
+      <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
+        <ArchitecturalSketch />
 
-          {/* Left Side: Framed Image */}
-          <div className="lg:w-[45%] w-full flex justify-center items-center">
-            <div className="relative w-full aspect-[16/10] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
-              <div className="relative w-full h-full overflow-hidden">
-                <Image
-                  src="/images/llb/1.webp"
-                  alt="LL.B. Program Classroom"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-14 relative z-10">
+          {/* Left: Image */}
+          <div className="lg:w-[38%] w-full shrink-0">
+            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
+              <Image
+                src="/images/llb/1.webp"
+                alt="LL.B. Program Classroom"
+                fill
+                sizes="(max-width: 1024px) 100vw, 38vw"
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
 
-          {/* Right Side: Content */}
-          <div className="lg:w-[55%] flex flex-col justify-center">
-            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
-              LL.B. Program
-            </h2>
-
-            <div className="space-y-8">
-              {/* Highlighted Intro Paragraph */}
-              <div className="relative">
-                <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
-                <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
+          {/* Right: Content */}
+          <div className="lg:w-[62%] min-w-0">
+            <div className="relative">
+              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34] rounded-full" />
+              <div className="pl-6 md:pl-10 space-y-6 text-left">
+                <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
+                  LL.B. Program
+                </h2>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   The Law Programme is designed with the overarching objective of cultivating competent legal professionals equipped to navigate the diverse facets of the legal profession and associated career pathways. Upon successful completion, our graduates will possess a comprehensive skill set encompassing effective verbal and written communication, critical thinking, analytical prowess, logical reasoning, and adept problem-solving abilities.
                 </p>
-              </div>
-
-              {/* Standard Paragraphs */}
-              <div className="space-y-6">
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   They will have acquired a robust foundation across all studied courses, demonstrating proficiency in conducting high-quality legal research and the preparation, examination, evaluation, and execution of legal documents. Furthermore, graduates will exhibit a profound understanding of contemporary social issues, engaging with them in a creative and solution-oriented manner.
                 </p>
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   This holistic approach extends to instilling a sense of social responsibility, encouraging active participation in civic duties, and fostering a commitment to ongoing self-reflection and lifelong learning.
                 </p>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -116,12 +118,16 @@ export default function LLBAdmissionsPage() {
               Undergraduate Law Programmes
             </h2>
 
-            {/* Polished Flat Programme Buttons */}
+            {/* Links to separate dedicated programme pages */}
             <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:justify-center md:gap-6">
-              {['LL.B. (Hons.)', 'B.A. LL.B. (Hons.)', 'B.B.A. LL.B. (Hons.)', 'B.Com. LL.B. (Hons.)'].map((prog) => (
-                <div key={prog} className="px-2 py-3.5 md:px-8 md:py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-[11px] sm:text-sm md:text-base text-center flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default">
-                  {prog}
-                </div>
+              {programmes.map((prog) => (
+                <Link
+                  key={prog.name}
+                  href={prog.href}
+                  className="px-4 py-3.5 md:px-8 md:py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-xs sm:text-sm md:text-base text-center flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:bg-[#a31f34] hover:text-white hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                >
+                  {prog.name}
+                </Link>
               ))}
             </div>
           </div>
@@ -184,10 +190,11 @@ export default function LLBAdmissionsPage() {
           </div>
         </div>
       </section>
+
       {/* Credit Structure and Minimum Requirements Section */}
       <section className="pb-6 md:pb-8 px-[5%] bg-white">
         <div className="max-w-3xl mx-auto">
-          {/* Main Container with Stylish Border - Scaled Down */}
+          {/* Main Container with Stylish Border */}
           <div className="bg-white border-t-8 border-[#a31f34] shadow-[0_30px_70px_-20px_rgba(0,0,0,0.1)] p-6 md:p-10 relative z-20">
             <div className="text-center mb-10">
               <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-3 font-bold">
@@ -217,7 +224,7 @@ export default function LLBAdmissionsPage() {
                 </div>
               ))}
 
-              {/* Stylish Total Row - Scaled Down */}
+              {/* Stylish Total Row */}
               <div className="mt-10 p-5 sm:p-6 bg-[#f8f9fa] flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 sm:gap-0 rounded-xl border border-gray-100 shadow-inner group overflow-hidden relative">
                 <div className="absolute left-0 top-0 bottom-0 w-[5px] bg-[#a31f34]"></div>
                 <span className="font-inter text-[#1a1a1a] font-bold text-sm sm:text-lg uppercase tracking-widest relative z-10">Total Requirement</span>
@@ -231,7 +238,7 @@ export default function LLBAdmissionsPage() {
         </div>
       </section>
 
-      {/* Compulsory Pre-Law Courses Section */}
+      {/* Compulsory Non-Law Courses Section */}
       <section className="pt-6 md:pt-8 pb-12 px-[5%] bg-gradient-to-b from-[#fcf8f2] to-white relative overflow-hidden">
         {/* Decorative Background Element */}
         <div className="absolute right-[-5%] top-[10%] w-[400px] h-[400px] bg-[#a31f34] opacity-[0.02] rounded-full blur-[100px] pointer-events-none"></div>
@@ -239,7 +246,7 @@ export default function LLBAdmissionsPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-2">
-              Compulsory Pre-Law Courses
+              Compulsory Non-Law courses for Integrated Law Programme
             </h2>
             <div className="w-24 h-1 bg-[#a31f34] mx-auto"></div>
           </div>

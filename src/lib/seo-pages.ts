@@ -431,6 +431,40 @@ export const PAGES = {
   /* ------------------------------------------------------------------ */
   /* Library                                                             */
   /* ------------------------------------------------------------------ */
+  "/classroom": {
+    pageType: "campus",
+    title: "Smart Classrooms – VMLS Chennai Law School",
+    description:
+      "VMLS classrooms pair smart TVs, projection and tiered seating with acoustic design, built for case discussion and interactive teaching on the Chennai campus.",
+    ogTitle: "Smart Classrooms at VMLS",
+    ogDescription:
+      "Technology and design built around case discussion, not rows of desks.",
+    image: "/images/class1.webp",
+    imageAlt: "Smart classroom at VMLS Chennai",
+    geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Infrastructure", path: "/infrastructure" },
+      { name: "Classrooms" },
+    ],
+  },
+  "/food-court": {
+    pageType: "campus",
+    title: "Food Court – VMLS Chennai Campus Dining",
+    description:
+      "The VMLS food courts serve a range of cuisines and price points for students on the Chennai campus, with the hygiene and seating standards set out here.",
+    ogTitle: "Dining at VMLS",
+    ogDescription:
+      "Food courts built for the range of tastes and budgets across the student body.",
+    image: "/images/foodc1.webp",
+    imageAlt: "Food court at the VMLS Chennai campus",
+    geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Infrastructure", path: "/infrastructure" },
+      { name: "Food Court" },
+    ],
+  },
   "/library": {
     pageType: "library",
     title: "Law Library – VMLS Chennai Legal Research",
@@ -479,6 +513,22 @@ export const PAGES = {
   /* ------------------------------------------------------------------ */
   /* Student life & support                                              */
   /* ------------------------------------------------------------------ */
+  "/library-useful-links": {
+    pageType: "library",
+    title: "Legal Research Links – VMLS Law Library",
+    description:
+      "Curated legal research links for VMLS students: Supreme Court judgments, India Code, statutory databases and reference resources, each opening in a new tab.",
+    ogTitle: "Legal Research Links",
+    ogDescription:
+      "Supreme Court judgments, India Code and the statutory databases VMLS students use most.",
+    imageAlt: "VMLS law library research resources",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Library", path: "/library" },
+      { name: "Useful Links" },
+    ],
+    note: "No page-specific imagery exists; falls back to the campus image.",
+  },
   "/student-affairs": {
     pageType: "student-life",
     title: "Office of Student Affairs – VMLS Chennai",
@@ -619,16 +669,18 @@ export const PAGES = {
   /* ------------------------------------------------------------------ */
   /* Events                                                              */
   /* ------------------------------------------------------------------ */
-  "/international-conference": {
+  "/international-conference-on-rivers": {
     pageType: "event",
-    title: "International Conference – VMLS Chennai Law School",
+    // The /news/ page reports the concluded conference; this one is the
+    // standing call for papers, so the two must not share a title.
+    title: "Conference on Rivers – Call for Papers | VMLS",
     description:
-      "Call for papers, aims and scope, submission guidelines and abstract requirements for the international law conference hosted by VMLS in Chennai, India.",
-    ogTitle: "International Conference at VMLS",
+      "Call for papers, aims and scope, and abstract requirements for the VMLS International Conference on Rivers, on the law and governance of river systems.",
+    ogTitle: "International Conference on Rivers",
     ogDescription:
-      "Aims, scope and submission guidelines for the VMLS international law conference.",
-    image: "/images/collab/img5.webp",
-    imageAlt: "International conference at VMLS Chennai",
+      "How law, politics and economics shape the governance of rivers - the VMLS conference call for papers.",
+    image: "/images/conf/pg-head.webp",
+    imageAlt: "International Conference on Rivers at VMLS Chennai",
   },
   "/iqac/workshops": {
     pageType: "event",
@@ -828,7 +880,7 @@ export const PAGES = {
     ogTitle: "Gender Equality in Lawyering at VMLS",
     ogDescription:
       "How lawyers can advance gender justice and address systemic inequality in legal practice.",
-    image: "/images/news/Gender Equality_02.webp",
+    image: "/images/news/gender-equality-02.webp",
     imageAlt: "Gender sensitisation lecture at VMLS Chennai",
     ogType: "article",
     dcType: "Text.Article",
@@ -836,7 +888,7 @@ export const PAGES = {
   },
   "/news/international-conference-on-rivers": {
     pageType: "news",
-    title: "International Conference on Rivers – VMLS Chennai",
+    title: "Rivers Conference Report – VMLS Chennai",
     description:
       "VMLS hosted the International Conference on Rivers, with speakers from the University of Helsinki and Bharathidasan University on sustainable river governance.",
     ogTitle: "International Conference on Rivers",
@@ -934,7 +986,7 @@ export const PAGES = {
     ogTitle: "National Seminar on AI, Law and Regulation",
     ogDescription:
       "Shaping the future of education, profession and justice in the age of AI.",
-    image: "/images/AI/National Seminar on AI_01_webp.webp",
+    image: "/images/AI/national-seminar-on-ai-01.webp",
     imageAlt: "National Seminar on AI, Law and Regulation at VMLS",
     ogType: "article",
     dcType: "Text.Article",
@@ -1036,6 +1088,34 @@ export const PAGES = {
   /* ------------------------------------------------------------------ */
   /* Legal                                                               */
   /* ------------------------------------------------------------------ */
+  "/news/clashes-of-masculinity-urban-rural-india": {
+    pageType: "news",
+    title: "Clashes of Masculinity in Urban & Rural India – VMLS",
+    description:
+      "Dr. Shannon Philip of the University of Cambridge gave a VMLS guest lecture on masculinity across urban and rural India and what it means for law and gender.",
+    ogTitle: "Clashes of Masculinity in Urban and Rural India",
+    ogDescription:
+      "Dr. Shannon Philip, University of Cambridge, on masculinity, gender and law in India.",
+    image: "/images/news/masculinity/Masculinity_01.jpg",
+    imageAlt: "Guest lecture on masculinity in urban and rural India at VMLS",
+    ogType: "article",
+    dcType: "Text.Article",
+    note: "Linked directly from the homepage news section, so no BreadcrumbList.",
+  },
+  "/news/copyright-and-emerging-issues-due-to-artificial-intelligence": {
+    pageType: "news",
+    title: "Copyright & AI – Guest Lecture at VMLS Chennai",
+    description:
+      "A VMLS guest lecture on copyright law and artificial intelligence: ownership of AI-generated works, infringement risk and drafting practical IP agreements.",
+    ogTitle: "Copyright and Emerging Issues due to AI",
+    ogDescription:
+      "Who owns an AI-generated work, and how to draft IP agreements that survive it.",
+    image: "/images/news/copyright-ai/Avinesh_01.jpeg",
+    imageAlt: "Guest lecture on copyright and artificial intelligence at VMLS",
+    ogType: "article",
+    dcType: "Text.Article",
+    note: "Linked directly from the homepage news section, so no BreadcrumbList.",
+  },
   "/privacy-policy": {
     pageType: "legal",
     title: "Privacy Policy – VMLS Chennai",

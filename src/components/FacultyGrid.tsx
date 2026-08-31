@@ -1,8 +1,6 @@
-"use client";
-
 import Image from "next/image";
-
 import Link from "next/link";
+import { noOrphanText } from "@/lib/noOrphanText";
 
 interface FacultyMember {
   name: string;
@@ -16,319 +14,310 @@ const facultyData: FacultyMember[] = [
   {
     name: "Mr. Siddharth Raja",
     role: "Executive Dean",
-    image: "/images/mentor.webp",
-    href: "/dean"
+    image: "/images/faculty/live/DSC00716_19.webp",
+    href: "/dean",
   },
   {
     name: "Chesha P. Chellappan",
     role: "Assistant Dean - Ranking and Accreditation, Chief Superintendent - Exam Cell.",
     qualifications: "LL. M IPR & Public Law, Kerala University",
-    image: "/images/faculty/02.webp",
-    href: "/faculty/chesha-p-chellappan"
+    image: "/images/faculty/live/DSC00387_8.webp",
+    href: "/faculty/chesha-p-chellappan",
   },
   {
     name: "Edhaya Chandran",
     role: "Assistant Dean - Outreach & Communications",
     qualifications: "M.A. Political Science (Political Science)",
-    image: "/images/faculty/09.webp",
-    href: "/faculty/edhaya-chandran"
+    image: "/images/faculty/live/DSC00440_2.webp",
+    href: "/faculty/edhaya-chandran",
   },
   {
     name: "Dr. Gnana Sanga Mithra. S",
     role: "Associate Dean - Research (Interdisciplinary)",
     qualifications: "M.A - Loyola College, Ph.D - VIT, Chennai",
-    image: "/images/faculty/05.webp",
-    href: "/faculty/gnana-sanga-mithra"
+    image: "/images/faculty/live/DSC00631_32.webp",
+    href: "/faculty/gnana-sanga-mithra",
   },
   {
     name: "Dr. Krishna Kishore Padala",
     role: "Head - Exam Cell, VMLS, Co-ordinator - Legal Aid Clinic, VMLS.",
     qualifications: "LL.M & Ph.D (Labour, Capital and Industrial Laws) - Andhra University",
-    image: "/images/faculty/03.webp",
-    href: "/faculty/krishna-kishore-padala"
+    image: "/images/faculty/live/DSC00395_30.webp",
+    href: "/faculty/krishna-kishore-padala",
   },
   {
     name: "Sinjini Sen",
     role: "Assistant Professor",
     qualifications: "LL.M (Intellectual property rights and Business law) National Law Institute University, Bhopal.",
-    image: "/images/faculty/12.webp",
-    href: "/faculty/sinjini-sen"
+    image: "/images/faculty/live/DSC00473_3.webp",
+    href: "/faculty/sinjini-sen",
   },
   {
     name: "Nabeela Siddiqui",
     role: "Assistant Professor",
     qualifications: "M.L. / LL.M (Constitutional Law and Public Order), University of Madras",
-    image: "/images/faculty/14.webp",
-    href: "/faculty/nabeela-siddiqui"
+    image: "/images/faculty/live/DSC00449_4.webp",
+    href: "/faculty/nabeela-siddiqui",
   },
   {
     name: "Dr. Shenbagavalli",
     role: "Associate Dean, Student Affairs",
     qualifications: "MBM - Alagappa University / Ph.D - SRM University Chennai",
-    image: "/images/faculty/38.jpeg",
-    href: "/faculty/shenbagavalli"
+    image: "/images/faculty/live/DSC00401_27.webp",
+    href: "/faculty/shenbagavalli",
   },
   {
     name: "Winfred Chelliah",
     role: "Associate Dean- Campus Affairs",
     qualifications: "M.A. English Literature",
-    image: "/images/faculty/39.webp",
-    href: "/faculty/winfred-chelliah"
+    image: "/images/faculty/live/DSC00413_13.webp",
+    href: "/faculty/winfred-chelliah",
   },
   {
-    name: "Najeed Naved Siddiqui",
+    name: "Dr. Najeed Naved Siddiqui",
     role: "Assistant Professor",
-    qualifications: "LLM (Constitutional Law) - National Law University Odisha",
-    image: "/images/faculty/40.webp",
-    href: "/faculty/najeed-naved-siddiqui"
+    qualifications: "Ph.D - CHRIST (Deemed to be University), Bengaluru.",
+    image: "/images/faculty/live/najeed.webp",
+    href: "/faculty/najeed-naved-siddiqui",
   },
   {
     name: "Sowmiya Narayan Rajagopalan",
     role: "Assistant Dean PG Academics",
     qualifications: "MSc Law and Finance (Trinity College Dublin)",
-    image: "/images/faculty/41.webp",
-    href: "/faculty/sowmiya-narayan-rajagopalan"
+    image: "/images/faculty/live/DSC00475_18.webp",
+    href: "/faculty/sowmiya-narayan-rajagopalan",
   },
   {
     name: "Ashwani Kumar Singh",
     role: "Assistant Professor",
     qualifications: "LLM Public Law, University College London (UCL)",
-    image: "/images/faculty/42.webp",
-    href: "/faculty/ashwani-kumar-singh"
+    image: "/images/faculty/live/DSC00695_24.webp",
+    href: "/faculty/ashwani-kumar-singh",
   },
   {
     name: "Dr. Abhinaya Ramesh",
     role: "Assistant Professor (Senior Grade)",
     qualifications: "Ph.D - SASTRA Deemed to be University",
-    image: "/images/faculty/43.webp",
-    href: "/faculty/abhinaya-ramesh"
+    image: "/images/faculty/live/DSC00754.webp",
+    href: "/faculty/abhinaya-ramesh",
   },
   {
     name: "Srinivas Raman",
-    role: "Assistant Dean Academic Affairs UG",
+    role: "Assistant Professor",
     qualifications: "LL.M (European Master in Law and Economics)- Universität Hamburg and LUMSA, Rome",
-    image: "/images/faculty/44.webp",
-    href: "/faculty/srinivas-raman"
-  },
-  {
-    name: "Dr. S. Suganya",
-    role: "Associate Professor",
-    qualifications: "PhD in Law (IPR) from VIT School of Law, Chennai",
-    image: "/images/faculty/45.jpeg",
-    href: "/faculty/s-suganya"
+    image: "/images/faculty/live/DSC00804_017.webp",
+    href: "/faculty/srinivas-raman",
   },
   {
     name: "Dr. Fowmina",
     role: "Associate Dean (Inclusive Initiatives), Director, Centre for Access to Justice.",
-    qualifications: "LLM - University of East London Uk, PhD - Vit Chennai",
-    image: "/images/faculty/19.webp",
-    href: "/faculty/fowmina"
+    qualifications: "LLM - University of East London Uk,\nPhD - Vit Chennai",
+    image: "/images/faculty/live/19.webp",
+    href: "/faculty/fowmina",
   },
   {
     name: "Shubham Shukla",
     role: "Assistant Dean PG Academics",
     qualifications: "LL.M. (Corporate and Commercial Laws) Maharashtra National Law University, Mumbai",
-    image: "/images/faculty/46.webp",
-    href: "/faculty/shubham-shukla"
+    image: "/images/faculty/live/DSC00665_20.webp",
+    href: "/faculty/shubham-shukla",
   },
   {
     name: "Mike Ruban",
-    role: "Assistant Dean Academic Affairs UG",
+    role: "Assistant Professor",
     qualifications: "LLM ILO in The Tamil Nadu Dr Ambedkar Law University",
-    image: "/images/faculty/47.webp",
-    href: "/faculty/mike-ruban"
-  },
-  {
-    name: "Tathagat Sharma",
-    role: "Assistant Dean PG Academics",
-    qualifications: "LL.M. (South Asian University)",
-    image: "/images/faculty/48.webp",
-    href: "/faculty/tathagat-sharma"
+    image: "/images/faculty/live/mike.webp",
+    href: "/faculty/mike-ruban",
   },
   {
     name: "Narayanan Chandrasekar",
-    role: "Assistant Dean - Placement Training",
+    role: "Assistant Dean – Placement Training",
     qualifications: "LL.M ITL Jindal Global University",
-    image: "/images/faculty/49.webp",
-    href: "/faculty/narayanan-chandrasekar"
+    image: "/images/faculty/live/DSC00539_22.webp",
+    href: "/faculty/narayanan-chandrasekar",
   },
   {
     name: "Dr. Alisha Verma",
     role: "Associate Professor",
     qualifications: "Ph.D. from Amity University, Rajasthan",
-    image: "/images/faculty/alisha.jpeg",
-    href: "/faculty/alisha-verma"
+    image: "/images/faculty/live/DSC00647_35.webp",
+    href: "/faculty/alisha-verma",
   },
   {
-    name: "Hartej Singh",
+    name: "Dr. Hartej Singh Kochher",
     role: "Assistant Professor",
-    qualifications: "LLM(Corporate Law) National Law University, Jodhpur",
-    image: "/images/faculty/hartej.webp",
-    href: "/faculty/hartej-singh"
+    qualifications: "Ph.D- GD Goenka University.",
+    image: "/images/faculty/live/hartej.webp",
+    href: "/faculty/hartej-singh",
   },
   {
     name: "Abhinandita Biswas",
     role: "Assistant Professor",
     qualifications: "LLM (International Trade & Investment Law), O.P. Jindal Global University.",
-    image: "/images/faculty/Abhinandita.webp",
-    href: "/faculty/abhinandita-biswas"
+    image: "/images/faculty/live/DSC00504_11.webp",
+    href: "/faculty/abhinandita-biswas",
   },
   {
     name: "Kamala Priyadarshini",
     role: "Assistant Professor",
     qualifications: "L.L.M., Air and Space laws, McGill University Canada",
-    image: "/images/faculty/kamala.webp",
-    href: "/faculty/kamala-priyadarshini"
+    image: "/images/faculty/live/DSC00524_7.webp",
+    href: "/faculty/kamala-priyadarshini",
   },
   {
     name: "Dr. Gaurav Shukla",
     role: "Associate Dean - Research (Law)",
     qualifications: "PhD in Juridical Science (International Taxation) from Chanakya National Law University, Patna.",
-    image: "/images/faculty/gaurav.webp",
-    href: "/faculty/gaurav-shukla"
-  },
-  {
-    name: "Stalin Harikaran N",
-    role: "Assistant Professor",
-    qualifications: "LL.M in Maritime Law from Tamil Nadu Dr. Ambedkar Law University",
-    image: "/images/faculty/Stalin Harikaran N.jpeg",
-    href: "/faculty/stalin-harikaran-n"
-  },
-  {
-    name: "Dr. Jacob Joseph",
-    role: "Professor of Law",
-    qualifications: "Ph.D. in Environmental Law from School of Legal Studies, Cochin University of Science and Technology, Kochi",
-    image: "/images/faculty/Dr. Jacob Joseph_Photo.jpeg",
-    href: "/faculty/jacob-joseph"
-  },
-  {
-    name: "Abraham.S",
-    role: "Assistant Professor",
-    qualifications: "LL.M, School of Excellence in Law, Tamil Nadu Dr. Ambedkar Law University",
-    image: "/images/faculty/Abraham.jpeg",
-    href: "/faculty/abraham-s"
-  },
-  {
-    name: "Dr Shabin O S",
-    role: "Assistant Professor (Criminology)",
-    qualifications: "PhD from University of Madras",
-    image: "/images/faculty/Dr_Shabin.jpeg",
-    href: "/faculty/shabin-o-s"
-  },
-  {
-    name: "Dr. Yazhini A",
-    role: "Assistant Professor",
-    qualifications: "Ph.D. in Agricultural Economics from Tamil Nadu Agricultural University",
-    image: "/images/faculty/Dr. Yazhini A.jpeg",
-    href: "/faculty/yazhini-a"
+    image: "/images/faculty/live/DSC00618_33.webp",
+    href: "/faculty/gaurav-shukla",
   },
   {
     name: "Aarthy Jonathan Kennedy",
     role: "Assistant Dean - Partnerships & Student Engagement",
     qualifications: "LL.M in Constitutional Law & Human Rights from School of Excellence",
-    image: "/images/faculty/aarthy.webp",
-    href: "/faculty/aarthy-jonathan-kennedy"
+    image: "/images/faculty/live/DSC00643_12.webp",
+    href: "/faculty/aarthy-jonathan-kennedy",
   },
   {
     name: "Dr. Muthuvelu",
     role: "Professor & Director of Global Tamil Law Center",
     qualifications: "Ph.D. in Legal Tamil - University of Madras",
-    image: "/images/faculty/muthuvel.webp",
-    href: "/faculty/muthuvelu"
+    image: "/images/faculty/live/muthuvel.webp",
+    href: "/faculty/muthuvelu",
   },
   {
     name: "Dr. Arun D Raj",
     role: "Associate Professor",
     qualifications: "Ph.D - University of Kerala - LL.M in Taxation Laws from Calicut",
-    image: "/images/faculty/arun.webp",
-    href: "/faculty/arun-d-raj"
+    image: "/images/faculty/live/DSC00566_34.webp",
+    href: "/faculty/arun-d-raj",
   },
   {
     name: "Dr. Sachinkumar P.P.",
     role: "Assistant Professor",
     qualifications: "Ph.D. - IIT Kharagpur - LL.M. in Commercial and Environmental Law",
-    image: "/images/faculty/sachin.jpeg",
-    href: "/faculty/sachinkumar-p-p"
+    image: "/images/faculty/live/DSC00537_28.webp",
+    href: "/faculty/sachinkumar-p-p",
   },
   {
     name: "Avni Singh Solanki",
     role: "Assistant Professor",
     qualifications: "LL.M. in Business Law from ILS Law College, Pune",
-    image: "/images/faculty/avni.jpeg",
-    href: "/faculty/avni-singh-solanki"
+    image: "/images/faculty/live/DSC00674_9.webp",
+    href: "/faculty/avni-singh-solanki",
   },
   {
     name: "Kush Tanvani",
     role: "Assistant Professor",
     qualifications: "LL.M in Human Rights Law from the University of Nottingham",
-    image: "/images/faculty/Kush Tanvani.webp",
-    href: "/faculty/kush-tanvani"
+    image: "/images/faculty/live/DSC00570_23.webp",
+    href: "/faculty/kush-tanvani",
   },
   {
     name: "Akshara Nair",
     role: "Assistant Professor",
     qualifications: "LL.M in International Law and Development from VIT School of Law, Chennai.",
-    image: "/images/faculty/Akshara Nair.jpeg",
-    href: "/faculty/akshara-nair"
+    image: "/images/faculty/live/DSC00586_10.webp",
+    href: "/faculty/akshara-nair",
+  },
+  {
+    name: "Stalin Harikaran N",
+    role: "Assistant Professor",
+    qualifications: "LL.M in Maritime Law from Tamil Nadu Dr. Ambedkar Law University",
+    image: "/images/faculty/live/DSC00584_16.webp",
+    href: "/faculty/stalin-harikaran-n",
   },
   {
     name: "Dr. Anuttama Ghose",
     role: "Associate Professor",
     qualifications: "Ph.D. from School of Law & Justice, Adamas University, Kolkata",
-    image: "/images/faculty/Anuttama.jpeg",
-    href: "/faculty/anuttama-ghose"
+    image: "/images/faculty/live/Anuttama.jpeg",
+    href: "/faculty/anuttama-ghose",
   },
   {
     name: "S. M. Aamir Ali",
     role: "Assistant Professor (Senior Grade)",
     qualifications: "LL.M. in Human Rights Law from the National Law School of India University (NLSIU), Bengaluru",
-    image: "/images/faculty/Aamir.jpeg",
-    href: "/faculty/aamir-ali"
-  }
+    image: "/images/faculty/live/DSC00612_21.webp",
+    href: "/faculty/aamir-ali",
+  },
+  {
+    name: "Dr. Jacob Joseph",
+    role: "Professor of Law",
+    qualifications: "Ph.D. in Environmental Law from School of Legal Studies, Cochin University of Science and Technology, Kochi",
+    image: "/images/faculty/live/DSC00677_31.webp",
+    href: "/faculty/jacob-joseph",
+  },
+  {
+    name: "Abraham.S",
+    role: "Assistant Professor",
+    qualifications: "LL.M, School of Excellence in Law, Tamil Nadu Dr. Ambedkar Law University",
+    image: "/images/faculty/live/DSC00704_25.webp",
+    href: "/faculty/abraham-s",
+  },
+  {
+    name: "Dr Shabin O S",
+    role: "Assistant Professor (Criminology)",
+    qualifications: "PhD from University of Madras",
+    image: "/images/faculty/live/DSC00550_36.webp",
+    href: "/faculty/shabin-o-s",
+  },
+  {
+    name: "Dr. Yazhini A",
+    role: "Assistant Professor",
+    qualifications: "Ph.D. in Agricultural Economics from Tamil Nadu Agricultural University",
+    image: "/images/faculty/live/DSC00688_26.webp",
+    href: "/faculty/yazhini-a",
+  },
 ];
 
 export default function FacultyGrid() {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-10">
+    <div className="grid grid-cols-1 min-[420px]:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-4 md:gap-8 lg:gap-10">
       {facultyData.map((member, index) => {
         const CardContent = (
           <div className="flex flex-col items-center bg-white rounded-xl md:rounded-2xl border border-gray-100 shadow-md md:shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group h-full">
             {/* Photo Container */}
-            <div className="w-full aspect-[4/5] relative p-2 md:p-4">
+            <div className="w-full aspect-[4/5] relative p-2 md:p-4 shrink-0">
               <div className="relative w-full h-full overflow-hidden rounded-lg md:rounded-xl">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  priority={index < 4}
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </div>
             </div>
 
-            {/* Details */}
-            <div className="px-3 pb-5 md:px-5 md:pb-8 text-center flex flex-col items-center flex-1">
-              <h3 className="font-playfair text-sm md:text-lg font-bold text-[#1a1a1a] mb-1 md:mb-2 leading-tight min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center">
+            {/* Details — equal baseline for name/role across cards */}
+            <div className="person-card-details flex-1 pb-5 md:pb-7 px-3 md:px-5">
+              <h3 className="person-card-name font-playfair text-sm md:text-xl font-bold text-[#1a1a1a] text-center">
                 {member.name}
               </h3>
-              <p className="font-inter text-[10px] md:text-xs font-bold text-[#a31f34] uppercase tracking-wider mb-2 leading-snug min-h-[2rem] md:min-h-[2.5rem] flex items-center justify-center">
-                {member.role}
+              <p className="person-card-role text-center font-inter text-[11px] md:text-[13px] font-semibold text-[#a31f34] leading-snug normal-case !tracking-normal mt-0.5 px-0.5 text-pretty">
+                {noOrphanText(member.role)}
               </p>
-              {member.qualifications && (
-                <p className="font-inter text-[10px] md:text-[11px] text-gray-500 leading-relaxed max-w-[95%] border-t border-gray-100 pt-2 line-clamp-2 md:line-clamp-none">
-                  {member.qualifications}
+              {member.qualifications ? (
+                <p className="font-inter text-[10px] md:text-[11px] text-gray-500 leading-snug tracking-normal max-w-[95%] border-t border-gray-100 pt-1.5 mt-1.5 text-center whitespace-pre-line text-pretty [word-spacing:normal] [letter-spacing:normal] line-clamp-2 md:line-clamp-none">
+                  {noOrphanText(member.qualifications)}
                 </p>
+              ) : (
+                <div className="mt-auto" aria-hidden />
               )}
             </div>
           </div>
         );
 
         return member.href ? (
-          <Link key={index} href={member.href} className="block cursor-pointer">
+          <Link key={index} href={member.href} className="block cursor-pointer h-full">
             {CardContent}
           </Link>
         ) : (
-          <div key={index}>{CardContent}</div>
+          <div key={index} className="h-full">
+            {CardContent}
+          </div>
         );
       })}
     </div>

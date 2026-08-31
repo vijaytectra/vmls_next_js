@@ -1,37 +1,53 @@
 import Image from "next/image";
 import Link from "next/link";
+import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 import { pageMetadata } from "@/lib/seo-pages";
 import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/chancellor");
 
+const introParagraph =
+  "Dr. A.S. Ganesan is the Chancellor of Vinayaka Mission's Research Foundation (Deemed to be University) and is instrumental in the growth of the institution from its humble beginning since 1981 to VMRF-DU with over 15,000 students and more than 5000 employees today.";
+
+const aboutParagraphs = [
+  "Dr. A.S. Ganesan completed his Medical Degree in 1992 from Madras Medical College and continued his higher education in medical and management at MMC, Chennai and Heidelberg University, Germany.",
+  "Since 1995, Dr. A.S. Ganesan has associated himself with the Founder Chairman Dr. A. Shanmugasundaram in establishing and developing medical colleges in Pondichery & Karaikal and an Engineering College in Chennai. He took up end-to-end responsibility of establishing and governing the institutions to offer multiple UG & PG programs.",
+  "Dr. A.S. Ganesan was instrumental in developing the campuses into Deemed to be University in 2001 through his administrative ability and vision to inspire the youth.",
+  "In 2013, Dr. A.S. Ganesan was appointed as the Chancellor by the Board of Trustees headed by the Founder Chancellor. He provides strategic guidance and leadership to the Vinayaka Mission's Research Foundation (Deemed to be University) offering undergraduate and post graduate programmes in Medicine, Dentistry, Homeopathy, Pharmacy, Nursing, Paramedical, Engineering, Law, Management and other disciplines.",
+  "Under his leadership, VMRF-DU contributes to the medical and healthcare needs of society through its institutions and network of hospitals. VMRF-DU medical institutions are referral centers for neighboring hospitals and serve to alleviate health care problems of rural communities.",
+  "His vision and continuous focus is to uplift economically weaker sections of society living in rural areas through education, employment, health facilities, social and community development. He is a leader par excellence in higher education, well known for his commitment and advocacy for accessible high quality graduate and post graduate education for rural youth.",
+  "Dr. A.S. Ganesan is keen in promoting innovation, multi-disciplinary research, introducing socially relevant programs, skill development, industry affiliations and international collaborations. He received \"Edupreneurs Award for Education Excellence\" by Times of India in 2012 and 2014.",
+  "He is also the benefactor of innumerable health care programs, educational scholarships, youth welfare, women empowerment, green initiatives and community transformation across the globe.",
+  "Dr. A.S. Ganesan continues the philanthropic activities started by the Founder Chairman Dr. A. Shanmugasundaram including management of the magnificent \"1008 Shivalaya Temples\" in Salem which is also a part of Incredible India promoted by the Ministry of Tourism, Government of India and a landmark in the state of Tamil Nadu. Apart from this, several temples, community halls, buildings and lands have been donated for several charitable activities in Tamil Nadu and Puducherry.",
+];
+
 export default function ChancellorPage() {
   return (
     <main className="min-h-screen bg-white">
       <PageSchema path="/chancellor" />
-      {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
-          <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
+        <div className="flex items-center gap-3 text-base md:text-lg font-medium">
+          <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">
+            Home
+          </Link>
           <span className="text-gray-300 font-light">/</span>
           <span className="text-[#a31f34] font-semibold">Chancellor</span>
         </div>
       </nav>
       <hr className="border-gray-100" />
 
-      {/* Hero Section */}
-      <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-[#f8f9fa] overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          
-          {/* Left Side: Chancellor Image */}
-          <div className="lg:w-[40%] w-full order-1 flex justify-center items-center">
-            <div className="relative w-full max-w-[420px] aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
+      <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-white overflow-hidden relative">
+        <ArchitecturalSketch />
+
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-10 relative z-10">
+          <div className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] order-1 shrink-0">
+            <div className="relative w-full aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
               <div className="relative w-full h-full overflow-hidden">
-                <Image 
-                  src="/images/vmrf/Frame-53136.webp" 
-                  alt="Dr. A. S. Ganesan" 
+                <Image
+                  src="/images/vmrf/Frame-53136.webp"
+                  alt="Dr. A.S. Ganesan"
                   fill
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  sizes="280px"
                   className="object-cover transition-transform duration-700 hover:scale-105 contrast-[1.05] brightness-[1.02]"
                   priority
                 />
@@ -39,65 +55,50 @@ export default function ChancellorPage() {
             </div>
           </div>
 
-          {/* Right Side: Chancellor Content */}
-          <div className="lg:w-[60%] order-2 flex flex-col justify-center">
-            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Leadership</h3>
-            <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-8 leading-tight">
-              Dr. A. S. Ganesan
+          <div className="flex-1 order-2 flex flex-col justify-center min-w-0">
+            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">
+              Leadership
+            </h3>
+            <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-4 leading-tight">
+              Dr. A.S. Ganesan
             </h1>
-            
+
             <div className="space-y-8">
-              {/* Highlighted Intro Quote */}
+              <h4 className="font-inter text-xl md:text-2xl font-bold tracking-tight text-[#a31f34]">
+                Chancellor, Vinayaka Mission&apos;s Research Foundation (Deemed to be University)
+              </h4>
+
               <div className="relative">
                 <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
-                <p className="pl-6 md:pl-8 font-inter text-xl text-gray-800 leading-relaxed font-medium italic">
-                  "Our mission is to create a nurturing environment where innovation and excellence are at the forefront of every educational journey."
-                </p>
-              </div>
-
-              {/* Standard Paragraphs */}
-              <div className="space-y-6">
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
-                  Dr. A. S. Ganesan, the esteemed Chancellor of Vinayaka Mission's Research Foundation (VMRF-DU), is a visionary leader committed to transforming the landscape of higher education in India. Under his guidance, the university has achieved significant milestones in research, academic rigor, and global collaborations.
-                </p>
-                
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
-                  His approach emphasizes holistic development, ensuring that students not only excel in their chosen fields but also develop the ethical framework and social responsibility needed to lead in the 21st century. His support for VMLS has been instrumental in positioning the law school as a premier destination for legal studies.
+                <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
+                  {introParagraph}
                 </p>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
-      {/* Chancellor's Message Section */}
-      <section className="bg-white px-[5%] py-12 md:py-16 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-        <div className="max-w-4xl mx-auto">
-          <div className="relative bg-white p-6 md:p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden group transition-all duration-500 hover:shadow-[0_60px_120px_-20px_rgba(0,0,0,0.16)] hover:-translate-y-1">
-            {/* Decorative Background Elements */}
-            <div className="absolute top-0 right-0 w-48 h-48 bg-[#a31f34] opacity-[0.03] rounded-full -translate-x-12 -translate-y-12 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-[0.05]"></div>
-            <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#a31f34] opacity-[0.02] rounded-full transition-transform duration-700 group-hover:scale-110 group-hover:opacity-[0.04]"></div>
-            
-            {/* Large Quote Mark */}
-            <div className="absolute top-8 right-12 text-9xl font-serif text-[#a31f34] opacity-[0.07] select-none transition-all duration-700 group-hover:-translate-y-2 group-hover:opacity-[0.12]">"</div>
-            
-            <div className="relative z-10">
-              <div className="flex items-center gap-4 mb-10 transition-transform duration-500 group-hover:translate-x-2">
-                <div className="w-16 h-[2px] bg-[#a31f34]"></div>
-                <h4 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] italic">
-                  Chancellor's Message
-                </h4>
-              </div>
-              
-              <div className="space-y-8 font-inter text-lg md:text-xl text-gray-700 leading-relaxed italic">
-                <p>
-                  "At VMRF, we believe that education is a lifelong journey of discovery. We are dedicated to providing our students with the resources, mentorship, and opportunities they need to reach their full potential."
-                </p>
-                <p>
-                  "As we continue to grow and evolve, our commitment to quality, inclusivity, and innovation remains unshakable. I invite you to join us in our mission to shape the future of education and society."
-                </p>
-              </div>
+      <section
+        className="bg-white px-[5%] py-12 md:py-16 animate-fade-in-up"
+        style={{ animationDelay: "0.1s" }}
+      >
+        <div className="relative bg-white p-6 md:p-10 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden group transition-all duration-500 hover:shadow-[0_60px_120px_-20px_rgba(0,0,0,0.16)] hover:-translate-y-1">
+          <div className="absolute top-0 right-0 w-48 h-48 bg-[#a31f34] opacity-[0.03] rounded-full -translate-x-12 -translate-y-12 transition-transform duration-700 group-hover:scale-110 group-hover:opacity-[0.05]"></div>
+          <div className="absolute -bottom-16 -left-16 w-64 h-64 bg-[#a31f34] opacity-[0.02] rounded-full transition-transform duration-700 group-hover:scale-110 group-hover:opacity-[0.04]"></div>
+
+          <div className="relative z-10">
+            <div className="flex items-center gap-4 mb-10 transition-transform duration-500 group-hover:translate-x-2">
+              <div className="w-16 h-[2px] bg-[#a31f34]"></div>
+              <h4 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] italic">
+                About the Chancellor
+              </h4>
+            </div>
+
+            <div className="space-y-8 font-inter text-lg md:text-xl text-gray-700 leading-relaxed">
+              {aboutParagraphs.map((paragraph) => (
+                <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+              ))}
             </div>
           </div>
         </div>

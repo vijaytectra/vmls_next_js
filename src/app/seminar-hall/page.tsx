@@ -12,17 +12,19 @@ export default function SeminarHallPage() {
       <main className="flex-grow">
         {/* Breadcrumbs */}
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
+          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium flex-wrap">
             <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
             <span className="text-gray-300 font-light">/</span>
-            <span className="text-[#a31f34] font-semibold">Seminar Hall</span>
+            <Link href="/infrastructure" className="text-gray-500 hover:text-[#a31f34] transition-colors">Infrastructure</Link>
+            <span className="text-gray-300 font-light">/</span>
+            <span className="text-[#a31f34] font-semibold">Seminar Halls</span>
           </div>
         </nav>
 
         {/* Hero Section - Career Services Style */}
         <section className="relative w-full bg-white border-b border-gray-100">
-          <div className="flex flex-col lg:flex-row min-h-[450px]">
-            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+            <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <div className="mb-4">
                 <span className="inline-block w-12 h-[1px] bg-[#fbb03b] align-middle"></span>
                 <span className="font-inter text-[#fbb03b] text-xs font-bold uppercase tracking-[0.4em] mx-4">Knowledge Exchange</span>
@@ -34,7 +36,7 @@ export default function SeminarHallPage() {
                 A modern facility designed to host a variety of academic and professional events in a sophisticated environment.
               </p>
             </div>
-            <div className="lg:w-[55%] relative min-h-[300px]">
+            <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
               <Image
                 src="/images/shall1.webp"
                 alt="VMLS Seminar Hall"
@@ -50,7 +52,7 @@ export default function SeminarHallPage() {
 
         {/* Vision Section - Message Style */}
         <section className="pt-16 pb-12 px-[5%] bg-white">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start">
             {/* Feature Image Side */}
             <div className="w-full md:w-1/3 flex flex-col items-center text-center">
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl mb-8 border border-gray-100">
@@ -74,26 +76,41 @@ export default function SeminarHallPage() {
                 A Premier Venue for Learning and Collaboration
               </h2>
               
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
-                  The VMLS Seminar Hall is a modern facility designed to host a variety of academic and professional events. Equipped with state-of-the-art audio-visual equipment, it ensures high-quality presentations and interactive sessions that are essential for contemporary legal education.
-                </p>
-                
-                <p>
-                  With ample seating and a well-lit environment, the seminar hall provides a comfortable setting for attendees to engage in learning and discussion. It serves as a versatile venue for seminars, lectures, conferences, and workshops, supporting the institution&apos;s commitment to continuous learning and knowledge sharing.
-                </p>
-                
-                <p>
-                  The seminar hall is also a space for collaboration, where students, faculty, and industry professionals can come together to exchange ideas and insights. It is a testament to the institution&apos;s dedication to providing top-tier educational facilities that enhance the learning experience for all.
+                  The VMLS Seminar Hall is a modern facility designed to host a variety of academic and professional events.
                 </p>
 
-                <div className="pt-8 border-t border-gray-100 flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-full bg-[#e8eaf6] flex items-center justify-center text-2xl">📢</div>
+                <div className="space-y-5">
                   <div>
-                    <p className="font-playfair font-bold text-gray-900 text-xl">VMLS Academic Excellence</p>
-                    <p className="text-sm text-gray-500 font-medium italic">Empowering minds through global perspectives.</p>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Modern Amenities</h3>
+                    <p>
+                      The hall is equipped with state-of-the-art audio-visual equipment, ensuring high-quality presentations and interactive sessions.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Spacious Design</h3>
+                    <p>
+                      With ample seating and a well-lit environment, the seminar hall provides a comfortable setting for attendees to engage in learning and discussion.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Versatile Use</h3>
+                    <p>
+                      It serves as a venue for seminars, lectures, conferences, and workshops, supporting the institution&apos;s commitment to continuous learning and knowledge sharing.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Collaborative Space</h3>
+                    <p>
+                      The seminar hall is also a space for collaboration, where students, faculty, and industry professionals can come together to exchange ideas and insights.
+                    </p>
                   </div>
                 </div>
+
+                <p>
+                  The VMLS Seminar Hall is a testament to the institution&apos;s dedication to providing top-tier educational facilities that enhance the learning experience.
+                </p>
               </div>
             </div>
           </div>
@@ -113,17 +130,17 @@ export default function SeminarHallPage() {
               {[
                 {
                   title: "Modern Amenities",
-                  desc: "State-of-the-art audio-visual systems ensuring every presentation is delivered with crystal-clear precision.",
+                  desc: "The hall is equipped with state-of-the-art audio-visual equipment, ensuring high-quality presentations and interactive sessions.",
                   image: "/images/shall1.webp"
                 },
                 {
                   title: "Versatile Use",
-                  desc: "Perfectly suited for a wide range of activities from guest lectures to international legal conferences.",
+                  desc: "It serves as a venue for seminars, lectures, conferences, and workshops, supporting the institution's commitment to continuous learning and knowledge sharing.",
                   image: "/images/shall3.webp"
                 },
                 {
                   title: "Spacious Design",
-                  desc: "Ergonomic seating and an open-plan layout that comfortably accommodates large academic gatherings.",
+                  desc: "With ample seating and a well-lit environment, the seminar hall provides a comfortable setting for attendees to engage in learning and discussion.",
                   image: "/images/shall2.webp"
                 }
               ].map((feature, i) => (
@@ -142,7 +159,7 @@ export default function SeminarHallPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">
                       {feature.desc}
                     </p>
                   </div>

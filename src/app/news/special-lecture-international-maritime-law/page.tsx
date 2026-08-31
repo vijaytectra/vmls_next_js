@@ -53,7 +53,7 @@ export default function SpecialLectureMaritimeLawPage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 On February 24th, 2024, the Centre for Maritime Law at Vinayaka Mission&apos;s Law School (VMLS) hosted a highly successful <strong>Special Lecture on International Maritime Law</strong>. The event featured distinguished speakers, Prof. Mayank Suri, Assistant Professor at Jindal Global Law School (JGLS), and Mr. Suriya N Sundararajan, WMU-GOI Project and Research Support Fellow, who delivered insightful presentations that captivated the audience.
               </p>

@@ -12,17 +12,19 @@ export default function HostelPage() {
       <main className="flex-grow">
         {/* Breadcrumbs */}
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
+          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium flex-wrap">
             <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
             <span className="text-gray-300 font-light">/</span>
-            <span className="text-[#a31f34] font-semibold">Hostel Facility</span>
+            <Link href="/infrastructure" className="text-gray-500 hover:text-[#a31f34] transition-colors">Infrastructure</Link>
+            <span className="text-gray-300 font-light">/</span>
+            <span className="text-[#a31f34] font-semibold">Hostel</span>
           </div>
         </nav>
 
         {/* Hero Section - Career Services Style */}
         <section className="relative w-full bg-white border-b border-gray-100">
-          <div className="flex flex-col lg:flex-row min-h-[450px]">
-            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+            <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <div className="mb-4">
                 <span className="inline-block w-12 h-[1px] bg-[#fbb03b] align-middle"></span>
                 <span className="font-inter text-[#fbb03b] text-xs font-bold uppercase tracking-[0.4em] mx-4">Living at VMLS</span>
@@ -34,7 +36,7 @@ export default function HostelPage() {
                 A comfortable and secure student environment, offering a home away from home for our diverse community.
               </p>
             </div>
-            <div className="lg:w-[55%] relative min-h-[300px]">
+            <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
               <Image
                 src="/images/hostel3.webp"
                 alt="VMLS Hostel Facility"
@@ -50,7 +52,7 @@ export default function HostelPage() {
 
         {/* Vision Section - Message Style */}
         <section className="pt-16 pb-12 px-[5%] bg-white">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start">
             {/* Feature Image Side */}
             <div className="w-full md:w-1/3 flex flex-col items-center text-center">
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl mb-8 border border-gray-100">
@@ -74,40 +76,29 @@ export default function HostelPage() {
                 Your Home Away from Home
               </h2>
               
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
-                  We provide a comfortable and secure student environment. Our hostel offers various room categories to suit your preferences, including triple and four-sharing room occupancy. You can choose between rooms with attached baths for added privacy or rooms with common bath facilities.
-                </p>
-                
-                <p>
-                  Our commitment to your well-being extends beyond accommodation. The campus has high-speed Wi-Fi, and student safety is our top priority, with 24x7 security personnel and surveillance systems in place. We also have an in-house doctor on call to address any health concerns promptly.
+                  We provide a comfortable and secure student environment. Our hostel offers various room categories to suit your preferences, including triple, and four-sharing room occupancy. You can choose between rooms with attached baths for added privacy or rooms with common bath facilities. Our commitment to your well-being extends beyond accommodation. The campus has high-speed Wi-Fi, student Safety is our top priority, with 24x7 security personnel and surveillance systems in place. We also have an in-house doctor on call to address any health concerns promptly. To satisfy your culinary needs, a food court is conveniently located within the campus. Additionally, an on-site ATM is available for your banking convenience.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
-                  <div className="bg-[#fff5f5] p-6 rounded-2xl border border-[#fee2e2]">
-                    <h4 className="font-playfair font-bold text-[#800000] text-xl mb-3">Boys Hostels</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• <strong>Sir C. V. Raman Hostel:</strong> 700 capacity</li>
-                      <li>• <strong>Ramanujan Hostel:</strong> 500 capacity</li>
-                    </ul>
-                  </div>
-                  <div className="bg-[#fff5f5] p-6 rounded-2xl border border-[#fee2e2]">
-                    <h4 className="font-playfair font-bold text-[#800000] text-xl mb-3">Girls Hostel</h4>
-                    <ul className="space-y-2 text-sm text-gray-700">
-                      <li>• <strong>Kalpana Chawla Hostel:</strong> 450 capacity</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <p>
-                  To satisfy your culinary needs, a food court is conveniently located within the campus. Additionally, an on-site ATM is available for your banking convenience. The VMLS Hostel Facility is a testament to the institution&apos;s dedication to providing top-tier residential services.
-                </p>
-
-                <div className="pt-8 border-t border-gray-100 flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-full bg-[#fff5f5] flex items-center justify-center text-2xl">🏠</div>
+                <div className="space-y-5">
                   <div>
-                    <p className="font-playfair font-bold text-gray-900 text-xl">Residential Excellence</p>
-                    <p className="text-sm text-gray-500 font-medium italic">Fostering a vibrant community for growth.</p>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Sir. C. V. Raman Boys Hostel</h3>
+                    <p>
+                      With a capacity of 700, this hostel provides a secure and comfortable home away from home for our male students.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Ramanujan Boys Hostel</h3>
+                    <p>
+                      Accommodating up to 500 residents, this hostel offers a cozy atmosphere for students to thrive.
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-playfair text-xl font-bold text-[#800000] mb-2">Kalpana Chawla Girls Hostel</h3>
+                    <p>
+                      Our girls&apos; hostel, with a capacity of 450, is designed with attached bathrooms for added convenience and privacy.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -158,7 +149,7 @@ export default function HostelPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">
                       {feature.desc}
                     </p>
                   </div>

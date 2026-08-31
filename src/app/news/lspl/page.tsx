@@ -23,15 +23,15 @@ export default function LSPLPage() {
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-[400px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#1a1a1a] text-white">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#1a1a1a] text-white">
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Law School <br /><span className="text-[#fbb03b]">Premier League</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
               Season 2 Launch - The ultimate sports arena. VMLS athletes gear up for a high-octane tournament that celebrates sportsmanship, strategy, and teamwork.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/studentaff/sports.webp"
               alt="LSPL Season 2"
@@ -53,7 +53,7 @@ export default function LSPLPage() {
             <h2 className="font-playfair text-3xl md:text-4xl text-gray-900 mb-8 font-bold leading-tight">
               Law School Premier League (LSPL) – Season 2 Launch
             </h2>
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg space-y-6 mb-12">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg space-y-6 mb-12">
               <p>
                 Vinayaka Mission's Law School (VMLS) launched the Law School Premier League (LSPL) – Season 2, marking a major milestone in its student-led initiatives. Expanding from a football tournament to a multi-sport league, LSPL now features Football, Cricket, and Kabaddi, with participation from over 130 students and faculty members.
               </p>

@@ -16,16 +16,10 @@ export default function AboutSection() {
       <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-red-50 rounded-full blur-3xl opacity-50 z-0"></div>
       
       {/* Subtle University Watermark */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.02] pointer-events-none z-0">
-        <Image 
-          src="/images/headerright.webp" 
-          alt="Watermark" 
-          width={1000} 
-          height={1000} 
-          sizes="100vw"
-          className="w-full h-full object-contain grayscale opacity-[0.02]"
-        />
-      </div>
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,720px)] h-[min(100%,720px)] opacity-[0.02] pointer-events-none z-0 bg-[url('/images/headerright.webp')] bg-contain bg-center bg-no-repeat grayscale"
+        aria-hidden
+      />
 
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16 relative z-10">
         
@@ -35,16 +29,17 @@ export default function AboutSection() {
             {/* Background Decorative Accent */}
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-[#a31f34] opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity duration-700"></div>
             
-            {/* The Main Image Container */}
-            <div className="relative z-10 overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] transition-transform duration-500 hover:-translate-y-2">
+            {/* Staggered campus + Lady Justice composite */}
+            <div className="relative z-10 overflow-hidden transition-transform duration-500 hover:-translate-y-2">
               <Image 
-                src="/images/career-about-img.webp" 
-                alt="About VMLS" 
+                src="/images/home-about.webp" 
+                alt="Vinayaka Mission's Law School campus and Lady Justice statue" 
                 width={800} 
-                height={600} 
+                height={649} 
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full h-auto object-contain"
                 style={{ width: '100%', height: 'auto' }}
+                priority
               />
             </div>
           </div>

@@ -22,16 +22,16 @@ export default function FacultyProfilesPage() {
 
       {/* Hero Section - Split Style matching Board of Advisors */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
           <div className="lg:w-[45%] p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-nowrap">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-normal lg:whitespace-nowrap">
               Faculty <span className="text-[#fbb03b]">Profiles</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
               Learn from a distinguished community of legal scholars, seasoned practitioners, and academic innovators dedicated to shaping the future of law.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/vmls/frame-1@3x.webp"
               alt="Faculty at VMLS"

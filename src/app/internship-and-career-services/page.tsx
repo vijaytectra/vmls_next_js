@@ -17,8 +17,8 @@ export default function InternshipAndCareerServices() {
 
         {/* Hero Section */}
         <section className="relative w-full bg-white border-b border-gray-100">
-          <div className="flex flex-col lg:flex-row min-h-[450px]">
-            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+            <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
                 Internship and <span className="text-[#fbb03b]">Career Services</span>
               </h1>
@@ -26,7 +26,7 @@ export default function InternshipAndCareerServices() {
                 Strategizing and training VMLS students for impactful internships and fulfilling career trajectories post-graduation.
               </p>
             </div>
-            <div className="lg:w-[55%] relative min-h-[300px]">
+            <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
               <Image
                 src="/images/career/hero.png"
                 alt="Career Services at VMLS"
@@ -44,7 +44,7 @@ export default function InternshipAndCareerServices() {
         <section className="pt-10 pb-6 px-[5%] bg-white">
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-start">
             {/* Image and Title Side */}
-            <div className="w-full md:w-1/3 flex flex-col items-center text-center">
+            <div className="w-full md:w-1/3 flex flex-col items-start text-left md:items-center md:text-center">
               <div className="relative w-full aspect-[4/5] rounded-lg overflow-hidden shadow-xl mb-6">
                 <Image
                   src="/images/career/dean_raja_01.JPEG"
@@ -54,11 +54,13 @@ export default function InternshipAndCareerServices() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2">Mr. Siddharth Raja</h3>
-              <p className="font-inter text-[#800000] font-semibold text-sm">
+              <h3 className="font-playfair text-2xl font-bold text-[#1a1a1a] mb-2 w-full text-left md:text-center">
+                Mr. Siddharth Raja
+              </h3>
+              <div className="font-inter text-[#800000] font-semibold text-sm w-full text-left md:text-center">
                 Executive Dean,<br />
                 Career Services and Placements (Incharge)
-              </p>
+              </div>
             </div>
 
             {/* Message Text Side */}
@@ -67,7 +69,7 @@ export default function InternshipAndCareerServices() {
                 Message from the Desk of Executive Dean, Office of Career Services and Placements
               </h2>
               
-              <div className="space-y-1 font-inter text-gray-700 leading-relaxed text-justify">
+              <div className="space-y-1 font-inter text-gray-700 leading-relaxed text-left">
                 <p className="font-bold text-gray-900 text-base md:text-lg mb-2">Welcome to the Office of Career Services and Placements!</p>
                 
                 <p>
@@ -113,7 +115,7 @@ export default function InternshipAndCareerServices() {
                   {/* Vertical Accent Line */}
                   <div className="absolute left-0 top-0 bottom-0 w-[4px] bg-[#a31f34]"></div>
                   
-                  <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-justify">
+                  <div className="space-y-4 font-inter text-gray-700 leading-relaxed text-left">
                     <p>
                       The Office of Career Services and Placements is committed to empowering students and alumni as they navigate their career paths. We understand that the transition from education to the workforce can be both exciting and daunting. We are here to provide comprehensive support that equips you with the skills, knowledge, and confidence needed to succeed in today’s competitive job market.
                     </p>
@@ -198,7 +200,7 @@ export default function InternshipAndCareerServices() {
                     <h3 className="font-playfair text-xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-base leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-base leading-relaxed text-left">
                       {service.desc}
                     </p>
                   </div>
@@ -220,15 +222,21 @@ export default function InternshipAndCareerServices() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-8 items-center justify-items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-5 md:gap-8 items-center justify-items-center">
               {Array.from({ length: 21 }, (_, i) => (
-                <div key={i} className="relative w-full aspect-[3/2] flex items-center justify-center p-2 hover:scale-105 transition-transform duration-300">
+                <div
+                  key={i}
+                  className="relative w-full max-w-[160px] h-[100px] md:h-[110px] flex items-center justify-center p-2 bg-white"
+                >
                   <Image
-                    src={`/images/logo/${i + 1}.webp`}
-                    alt={`Partner Logo ${i + 1}`}
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 14vw"
+                    src={`/images/career/partners/${i + 1}.png`}
+                    alt={`Internship partner ${i + 1}`}
+                    width={360}
+                    height={360}
+                    quality={100}
+                    className="w-full h-full object-contain"
+                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 22vw, 160px"
+                    unoptimized
                   />
                 </div>
               ))}

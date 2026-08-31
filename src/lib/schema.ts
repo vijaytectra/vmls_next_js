@@ -5,6 +5,7 @@ import {
   ORG_ID,
   SITE_URL,
   absoluteUrl,
+  absoluteAssetUrl,
 } from "@/lib/seo";
 
 /**
@@ -124,7 +125,7 @@ export function personSchema(input: {
     ...(input.jobTitle ? { jobTitle: input.jobTitle } : {}),
     worksFor: { "@id": ORG_ID },
     url: absoluteUrl(input.path),
-    ...(input.image ? { image: absoluteUrl(input.image) } : {}),
+    ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     ...(input.email ? { email: input.email } : {}),
     ...(input.description ? { description: input.description } : {}),
     ...(input.alumniOf
@@ -152,7 +153,7 @@ export function centreSchema(input: {
     name: input.name,
     description: input.description,
     url: absoluteUrl(input.path),
-    ...(input.image ? { image: absoluteUrl(input.image) } : {}),
+    ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     parentOrganization: { "@id": ORG_ID },
     address: postalAddress(),
   };
@@ -234,7 +235,7 @@ export function articleSchema(input: {
     headline: input.headline,
     description: input.description,
     mainEntityOfPage: { "@type": "WebPage", "@id": absoluteUrl(input.path) },
-    ...(input.image ? { image: absoluteUrl(input.image) } : {}),
+    ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     ...(input.datePublished ? { datePublished: input.datePublished } : {}),
     author: input.author
       ? { "@type": "Person", name: input.author }

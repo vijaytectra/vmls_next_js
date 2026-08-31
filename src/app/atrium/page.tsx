@@ -12,8 +12,10 @@ export default function AtriumPage() {
       <main className="flex-grow">
         {/* Breadcrumbs */}
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
+          <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium flex-wrap">
             <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
+            <span className="text-gray-300 font-light">/</span>
+            <Link href="/infrastructure" className="text-gray-500 hover:text-[#a31f34] transition-colors">Infrastructure</Link>
             <span className="text-gray-300 font-light">/</span>
             <span className="text-[#a31f34] font-semibold">Atrium</span>
           </div>
@@ -21,8 +23,8 @@ export default function AtriumPage() {
 
         {/* Hero Section - Career Services Style */}
         <section className="relative w-full bg-white border-b border-gray-100">
-          <div className="flex flex-col lg:flex-row min-h-[450px]">
-            <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+            <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <div className="mb-4">
                 <span className="inline-block w-12 h-[1px] bg-[#fbb03b] align-middle"></span>
                 <span className="font-inter text-[#fbb03b] text-xs font-bold uppercase tracking-[0.4em] mx-4">Our Campus</span>
@@ -34,7 +36,7 @@ export default function AtriumPage() {
                 A vibrant hub designed for interaction, collaborative learning, and academic excellence.
               </p>
             </div>
-            <div className="lg:w-[55%] relative min-h-[300px]">
+            <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
               <Image
                 src="/images/atrium1.webp"
                 alt="VMLS Atrium"
@@ -50,7 +52,7 @@ export default function AtriumPage() {
 
         {/* Vision Section - Message Style */}
         <section className="pt-16 pb-12 px-[5%] bg-white">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-16 items-start">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-start">
             {/* Feature Image Side */}
             <div className="w-full md:w-1/3 flex flex-col items-center text-center">
               <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl mb-8">
@@ -74,26 +76,10 @@ export default function AtriumPage() {
                 The Heart of Campus Interaction
               </h2>
 
-              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-justify text-lg">
+              <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
-                  The Atrium at VMLS is more than just a transitional space; it is the heartbeat of our campus life. Designed with soaring ceilings and flooded with natural light, it provides an uplifting environment that inspires both students and faculty.
+                  The atrium of VMLS fosters an atmosphere that is both inviting and conducive to academic pursuits. The high ceiling and large open space are not just aesthetically pleasing but also promote a sense of freedom and possibility, essential for creative thinking. Natural light bathes the area, creating a bright and energizing environment that enhances student efficiency. The thoughtful arrangement of tables and chairs allows for both individual study and collaborative work, ensuring that students can find a space that suits their learning style. With a wide aisle and unobstructed pathways, the atrium is highly accessible, allowing for easy movement and interaction among students, which is vital for a dynamic educational experience. Overall, the atrium&apos;s design reflects a deep understanding of the needs of students, blending form with function to create an optimal learning environment.
                 </p>
-
-                <p>
-                  This multifunctional area serves as a collaborative hub where ideas are exchanged, friendships are forged, and the academic community comes together. Whether it&apos;s for a formal event or a casual study session, the Atrium adapts to the needs of our diverse student body.
-                </p>
-
-                <p>
-                  The architectural design emphasizes openness and transparency, reflecting our institutional values of inclusivity and intellectual freedom. It stands as a testament to the fact that learning happens everywhere, not just within the four walls of a classroom.
-                </p>
-
-                <div className="pt-8 border-t border-gray-100 flex items-center gap-6">
-                  <div className="w-16 h-16 rounded-full bg-[#f0f7ff] flex items-center justify-center text-2xl">🏛️</div>
-                  <div>
-                    <p className="font-playfair font-bold text-gray-900 text-xl">VMLS Community Hub</p>
-                    <p className="text-sm text-gray-500 font-medium italic">Fostering connections and creative dialogue.</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
@@ -113,17 +99,17 @@ export default function AtriumPage() {
               {[
                 {
                   title: "Natural Light",
-                  desc: "Expansive glass facades and skylights ensure the space is perpetually bathed in natural sunlight, enhancing well-being.",
+                  desc: "Natural light bathes the area, creating a bright and energizing environment that enhances student efficiency.",
                   image: "/images/atrium3.webp"
                 },
                 {
                   title: "Collaborative Zones",
-                  desc: "Dedicated seating arrangements and informal meeting spots designed specifically for group discussions and peer learning.",
+                  desc: "The thoughtful arrangement of tables and chairs allows for both individual study and collaborative work, ensuring that students can find a space that suits their learning style.",
                   image: "/images/atrium1.webp"
                 },
                 {
-                  title: "Event Versatility",
-                  desc: "A spacious open-plan layout capable of hosting everything from guest lectures and exhibitions to cultural festivals.",
+                  title: "Accessible Pathways",
+                  desc: "With a wide aisle and unobstructed pathways, the atrium is highly accessible, allowing for easy movement and interaction among students.",
                   image: "/images/atrium2.webp"
                 }
               ].map((feature, i) => (
@@ -142,7 +128,7 @@ export default function AtriumPage() {
                     <h3 className="font-playfair text-2xl font-bold text-[#800000] mb-4 group-hover:text-[#a31f34] transition-colors duration-300">
                       {feature.title}
                     </h3>
-                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-justify">
+                    <p className="font-inter text-gray-600 text-lg leading-relaxed text-left">
                       {feature.desc}
                     </p>
                   </div>

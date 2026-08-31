@@ -22,16 +22,16 @@ export default function LibraryRulesPage() {
 
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight whitespace-nowrap">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight whitespace-normal lg:whitespace-nowrap">
               Library <span className="text-[#fbb03b]">Rules</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
               To ensure a productive and respectful environment for all, the VMLS Law Library maintains specific guidelines regarding access, borrowing, and conduct within the facility.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/library-rules-header.png"
               alt="VMLS Library Policy"
@@ -108,7 +108,7 @@ export default function LibraryRulesPage() {
               </tbody>
             </table>
           </div>
-          <div className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
             {[
               { k: 'TN', v: 'Total check-outs' },
               { k: 'D', v: 'Duration (days)' },
@@ -116,7 +116,7 @@ export default function LibraryRulesPage() {
               { k: 'RD', v: 'Renewal duration' },
               { k: 'H', v: 'No. of holds' }
             ].map(key => (
-              <div key={key.k} className="p-3 bg-gray-50 border border-gray-100">
+              <div key={key.k} className="p-3 bg-gray-50 border border-gray-100 w-full">
                 <span className="block font-bold text-[#a31f34] text-xs">{key.k}</span>
                 <span className="text-[10px] text-gray-500 uppercase font-medium">{key.v}</span>
               </div>
@@ -233,7 +233,7 @@ export default function LibraryRulesPage() {
                   <div className="h-[1px] w-8 bg-gray-100 mb-4 group-hover:w-12 group-hover:bg-[#a31f34] transition-all duration-500"></div>
 
                   {section.text && (
-                    <p className="font-inter text-[13px] text-gray-600 leading-relaxed text-justify mb-2">
+                    <p className="font-inter text-[13px] text-gray-600 leading-relaxed text-left mb-2">
                       {section.text}
                     </p>
                   )}

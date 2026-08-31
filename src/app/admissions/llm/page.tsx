@@ -1,13 +1,15 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { LLM_FAQ } from "@/data/llm-faq";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import ArchitecturalSketch from "@/components/ArchitecturalSketch";
 import PageSchema from "@/components/seo/PageSchema";
+import { LLM_FAQ } from "@/data/llm-faq";
 
 export default function LLMAdmissionsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const faqData = LLM_FAQ;
   return (
@@ -52,46 +54,40 @@ export default function LLMAdmissionsPage() {
         </div>
       </section>
 
-      {/* LL.M. Program Detail Section */}
-      <section className="pt-8 md:pt-10 pb-4 px-[5%] bg-[#f8f9fa] overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      {/* LL.M. Program — About-style: image left, content right, sketch below */}
+      <section className="py-10 md:py-14 px-[5%] bg-white overflow-hidden relative">
+        <ArchitecturalSketch />
 
-          {/* Left Side: Framed Image */}
-          <div className="lg:w-[45%] w-full flex justify-center items-center">
-            <div className="relative w-full aspect-[16/10] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.2)] transition-transform duration-500 hover:-translate-y-2">
-              <div className="relative w-full h-full overflow-hidden">
-                <Image
-                  src="/images/llm/1.webp"
-                  alt="LL.M. Program Discussion"
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                />
-              </div>
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-14 relative z-10">
+          {/* Left: Image */}
+          <div className="lg:w-[38%] w-full shrink-0">
+            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden rounded-xl">
+              <Image
+                src="/images/llm/llm1.webp"
+                alt="LL.M. classroom at VMLS"
+                fill
+                sizes="(max-width: 1024px) 100vw, 38vw"
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
 
-          {/* Right Side: Content */}
-          <div className="lg:w-[55%] flex flex-col justify-center">
-            <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-8 leading-tight">
-              LL.M. Program
-            </h2>
-
-            <div className="space-y-8">
-              {/* Highlighted Intro Paragraph with Red Accent Bar */}
-              <div className="relative">
-                <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
-                <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
+          {/* Right: Content */}
+          <div className="lg:w-[62%] min-w-0">
+            <div className="relative">
+              <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34] rounded-full" />
+              <div className="pl-6 md:pl-10 space-y-6 text-left">
+                <h2 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] leading-tight text-left">
+                  LL.M. Program
+                </h2>
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   Our LL.M. program is a transformative journey that merges rigorous academic theory with real-world practice, positioning you as a future leader in law. In every element of the LL.M. curriculum, we emphasize industry exposure and innovative teaching.
                 </p>
-              </div>
-
-              {/* Standard Paragraphs */}
-              <div className="space-y-6">
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   Through collaborative group projects and immersive capstone experiences, LL.M. students engage with complex legal and corporate scenarios. Interactive sessions and lively discussions with industry experts are part and parcel of the LL.M. experience.
                 </p>
-                <p className="font-inter text-lg text-gray-700 leading-relaxed">
+                <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed">
                   Utilizing case studies, visual learning methods, and analytical exercises focused on landmark corporate shifts, our LL.M. program fosters mastery of high-level legal and financial concepts.
                 </p>
               </div>
@@ -122,14 +118,18 @@ export default function LLMAdmissionsPage() {
             {/* Polished Flat Programme Buttons */}
             <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:justify-center md:gap-6">
               {[
-                'LL.M. in Corporate and Financial Laws', 
-                'LL.M. in Commercial Dispute Resolution', 
-                'LL.M. IN Criminal Law and Practice', 
-                'LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights'
+                { name: 'LL.M. in Corporate and Financial Laws', href: '/blogs/llm-in-corporate-financial-laws' },
+                { name: 'LL.M. in Commercial Dispute Resolution', href: '/blogs/llm-in-commercial-dispute-resolution' },
+                { name: 'LL.M. IN Criminal Law and Practice', href: '/blogs/llm-in-criminal-law-and-practice' },
+                { name: 'LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights', href: '/blogs/llm-in-artificial-intelligence-emerging-technologies-and-intellectual-property-rights' }
               ].map((prog) => (
-                <div key={prog} className="px-3 py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-[10px] sm:text-sm md:text-base text-center flex items-center justify-center h-full shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:-translate-y-1 transition-all duration-300 cursor-default">
-                  {prog}
-                </div>
+                <Link
+                  key={prog.name}
+                  href={prog.href}
+                  className="px-4 py-3.5 md:px-8 md:py-4 bg-[#fbb03b] text-gray-900 font-inter font-bold text-xs sm:text-sm md:text-base text-center flex items-center justify-center shadow-[0_10px_30px_-10px_rgba(251,176,59,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(251,176,59,0.6)] hover:bg-[#a31f34] hover:text-white hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                >
+                  {prog.name}
+                </Link>
               ))}
             </div>
           </div>

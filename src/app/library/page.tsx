@@ -10,6 +10,7 @@ export default function LibraryPage() {
   const [isDigitalAccessModalOpen, setIsDigitalAccessModalOpen] = useState(false);
   const [isDiscussionRoomsModalOpen, setIsDiscussionRoomsModalOpen] = useState(false);
   const [isReferenceModalOpen, setIsReferenceModalOpen] = useState(false);
+  const [isOpacModalOpen, setIsOpacModalOpen] = useState(false);
   const [isCourseGuideModalOpen, setIsCourseGuideModalOpen] = useState(false);
   const [isNewArrivalsModalOpen, setIsNewArrivalsModalOpen] = useState(false);
   const [isRemoteAccessModalOpen, setIsRemoteAccessModalOpen] = useState(false);
@@ -57,16 +58,16 @@ export default function LibraryPage() {
 
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-              VMLS <span className="text-[#fbb03b]">Library</span>
+              <span className="text-[#fbb03b]">Library</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
-              A world-class resource for legal research and learning. Our library houses an extensive collection of law reports, journals, textbooks, and electronic databases, providing students and faculty with the tools they need for academic excellence.
+              Vinayaka Mission&apos;s Law School
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/library-header-img.webp"
               alt="VMLS Library"
@@ -83,13 +84,13 @@ export default function LibraryPage() {
       {/* Main Content: Library Resources Grid */}
       <section className="py-12 md:py-20 px-[5%] bg-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
+          <div className="space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {/* Column 1: Digital & Assistance */}
-            <div className="space-y-8">
+            <div className="flex flex-col gap-8 h-full">
               {/* Digital Library Section Redesign */}
-              <div className="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-100 group">
-                <div className="bg-[#800000] p-6 text-white relative">
+              <div className="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-100 group flex flex-col flex-1 min-h-0">
+                <div className="bg-[#800000] p-6 text-white relative shrink-0">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                   <div className="flex items-center gap-3 relative z-10">
                     <div className="p-2.5 bg-white/10 rounded-full">
@@ -102,28 +103,63 @@ export default function LibraryPage() {
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-black text-white border border-black md:bg-gray-50 md:text-gray-800 md:border-gray-100 rounded-none mb-4 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34]">
-                    <span className="font-inter font-bold text-[13px] md:text-sm normal-case tracking-widest">Access Main Portal</span>
+                <div className="p-6 flex flex-col flex-1">
+                  <p className="font-inter text-[13px] md:text-sm text-gray-700 leading-relaxed text-left mb-4">
+                    Through the Digital Library platform, users can access various electronic resources (e-resources) both within the campus and remotely. When accessing from outside the campus, all VMLS users must sign in to the Digital Library platform to avail remote access to the subscribed e-resources.
+                  </p>
+
+                  <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-black text-white border border-black md:bg-gray-50 md:text-gray-800 md:border-gray-100 rounded-none mb-5 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34]">
+                    <span className="font-inter font-bold text-[13px] md:text-sm normal-case tracking-widest">Digital Library</span>
                     <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </Link>
 
-                  <div className="space-y-1">
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-4 flex items-center gap-2">
-                      <span className="w-6 h-[1px] bg-black"></span> E-Databases
-                    </h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      {['SCC Online', 'Hein Online', 'Manupatra', 'LexisNexis', 'Scopus', 'Web of Science', 'JSTOR', 'DELNET', 'Scival', 'E-Books'].map((db) => (
-                        <Link key={db} href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
-                          <span className="relative z-10">{db}</span>
-                          <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
-                        </Link>
-                      ))}
+                  <div className="space-y-5 flex-1 flex flex-col">
+                    <div>
+                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                        <span className="w-6 h-[1px] bg-black"></span> Law Databases (In-Campus Access)
+                      </h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {[
+                          { name: 'SCC Online', url: 'https://www.scconline.com/' },
+                          { name: 'HeinOnline', url: 'https://home.heinonline.org/content/' },
+                          { name: 'Manupatra', url: 'https://www.manupatrafast.com/Home.aspx' },
+                          { name: 'LexisNexis', url: 'https://advance.lexis.com/in?identityprofileid=GFH88P68016' },
+                        ].map((db) => (
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                            <span className="relative z-10">{db.name}</span>
+                            <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
+
+                    <div>
+                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                        <span className="w-6 h-[1px] bg-black"></span> Other Databases
+                      </h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {[
+                          { name: 'Scopus', url: 'https://www.scopus.com/' },
+                          { name: 'Web of Science', url: 'https://www.webofscience.com/' },
+                          { name: 'JSTOR', url: 'https://www.jstor.org/' },
+                        ].map((db) => (
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                            <span className="relative z-10">{db.name}</span>
+                            <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    <p className="mt-auto text-[12px] md:text-[13px] leading-relaxed text-gray-700 bg-[#fef2f2] border-l-4 border-[#800000] px-3 py-2.5">
+                      <strong className="text-[#800000]">Note:</strong> To access the databases from outside the campus, users must log in through the Digital Library website and access the databases via remote access.
+                    </p>
                   </div>
                 </div>
               </div>
 
+              {/* Research Assistance + Facilities */}
+              <div className="flex flex-col gap-8 shrink-0">
               {/* Research Assistance */}
               <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#1a1a1a]">
                 <div className="flex items-center gap-3 mb-4">
@@ -166,31 +202,16 @@ export default function LibraryPage() {
                   <button onClick={() => setIsDiscussionRoomsModalOpen(true)} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
                 </div>
               </div>
-
-              {/* Membership & Feedback */}
-              <div className="space-y-4">
-                <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
-                  <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-[#a31f34] rounded-full"></span> Membership
-                  </h3>
-                  <Link href="/library-membership" className="block w-full py-3 bg-[#800000] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#a31f34] transition-all">Click Here</Link>
-                </div>
-                <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
-                  <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-[#4a5568] rounded-full"></span> User Feedback
-                  </h3>
-                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeX88_HF7_aLVwV0P2RhGSG8Zq7kS8MLnoCiiCxFsZTybOv6w/viewform" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-[#4a5568] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-gray-800 transition-all">User Feedback Form</Link>
-                </div>
               </div>
             </div>
 
             {/* Column 2: Welcome & Hours */}
-            <div className="space-y-8">
+            <div className="flex flex-col gap-8 h-full">
               {/* Welcome Section */}
               <div className="bg-white p-8 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.15)] relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#a31f34]/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-[#a31f34]/10 transition-colors duration-500"></div>
                 <h2 className="font-playfair text-3xl text-[#a31f34] font-bold mb-4">Welcome to VMLS Library</h2>
-                <div className="font-inter text-[15px] text-gray-700 leading-relaxed space-y-4 text-justify">
+                <div className="font-inter text-[15px] text-gray-700 leading-relaxed space-y-4 text-left">
                   <p>
                     The VMLS Law Library stands as a vital academic hub, supporting the teaching, learning, and research needs of students, faculty, and legal scholars. As a well-resourced and modern facility, the library offers an extensive collection of legal texts, journals, case reports, e-resources, and databases, catering to diverse areas of law.
                   </p>
@@ -229,8 +250,10 @@ export default function LibraryPage() {
                           <p className="text-gray-500 text-[10px] uppercase font-bold mb-1">Saturday & Holidays</p>
                           <p className="text-gray-900 font-bold">10:00 AM - 5:00 PM</p>
                         </div>
-                        <p className="text-[10px] text-red-500 font-bold italic px-2 py-1 bg-red-50 rounded">Closed on Sundays</p>
                       </div>
+                      <p className="text-[12px] text-red-600 font-medium mt-3">
+                        Closed on Government holidays &amp; Sundays
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -238,7 +261,7 @@ export default function LibraryPage() {
 
               {/* Library Gallery */}
               <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
-                <h3 className="font-playfair text-2xl font-bold text-center text-[#a31f34] mb-4">Library Gallery</h3>
+                <h3 className="font-playfair text-2xl font-bold text-center text-[#a31f34] mb-4">Library Photos</h3>
                 <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden rounded group/gallery">
                   {galleryImages.map((src, idx) => (
                     <div
@@ -287,7 +310,7 @@ export default function LibraryPage() {
             </div>
 
             {/* Column 3: Physical & Services */}
-            <div className="space-y-8">
+            <div className="flex flex-col gap-8 h-full">
               {/* Physical Collection */}
               <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
                 <div className="flex items-center gap-3 mb-4">
@@ -297,8 +320,12 @@ export default function LibraryPage() {
                   <h3 className="font-playfair text-2xl font-bold text-gray-900">Physical Collection</h3>
                 </div>
                 <Link href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 bg-[#4a5568] text-white rounded font-bold text-[16px] normal-case tracking-wider hover:bg-gray-800 transition-colors mb-4">
-                  Physical Collection
+                  Physical Collection (OPAC)
                 </Link>
+
+                <p className="font-inter text-[13px] text-gray-600 leading-relaxed text-left mb-5">
+                  OPAC (Online Public Access Catalogue) is used to search and find the availability and status of physical books in the library. Through this platform, users can easily locate books available in the library collection. After signing in to the OPAC system, users can view the number of books issued to their account, check due dates, access their circulation history, renew borrowed books, and submit purchase suggestions for new titles.
+                </p>
 
                 <h4 className="text-xs font-bold uppercase tracking-widest text-[#a31f34] mb-4 flex items-center gap-2">
                   <span className="w-4 h-[1px] bg-[#a31f34]"></span> My Print Collections (Koha)
@@ -306,7 +333,7 @@ export default function LibraryPage() {
                 <div className="grid grid-cols-2 gap-3">
                   {[
                     'Account Login',
-                    'Purchase Suggestion',
+                    'Purchase Suggestions',
                     'Renew Books',
                     'Most Circulated',
                     'Book Hold',
@@ -341,6 +368,17 @@ export default function LibraryPage() {
                         <button
                           key={service}
                           onClick={() => setIsReferenceModalOpen(true)}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'OPAC') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={() => setIsOpacModalOpen(true)}
                           className={buttonStyles}
                         >
                           {service}
@@ -469,9 +507,13 @@ export default function LibraryPage() {
                       );
                     }
                     return (
-                      <Link key={service} href={service === 'OPAC' ? "https://opac.vmls.edu.in/" : "#"} target={service === 'OPAC' ? "_blank" : undefined} rel={service === 'OPAC' ? "noopener noreferrer" : undefined} className={buttonStyles}>
+                      <button
+                        key={service}
+                        type="button"
+                        className={buttonStyles}
+                      >
                         {service}
-                      </Link>
+                      </button>
                     );
                   })}
                 </div>
@@ -485,60 +527,78 @@ export default function LibraryPage() {
                   </div>
                   <h3 className="font-playfair text-2xl font-bold text-gray-900">Useful Links</h3>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    { name: 'India Code', url: 'https://www.indiacode.nic.in/' },
-                    { name: 'Indian Kanoon', url: 'https://indiankanoon.org/' },
-                    { name: 'Law Commission', url: 'https://lawcommissionofindia.nic.in/' },
-                    { name: 'SEBI Acts', url: 'https://lawcommissionofindia.nic.in/' },
-                    { name: 'Swayam Central', url: 'https://swayam.gov.in/' },
-                    { name: 'NDLI', url: 'https://ndl.iitkgp.ac.in/' },
-                    { name: 'NJDG', url: 'https://njdg.ecourts.gov.in/njdg_v3/' },
-                    { name: 'UN Treaties', url: 'https://treaties.un.org/' },
-                    { name: 'DOAJ', url: 'https://doaj.org/' },
-                    { name: 'DOAB', url: 'https://www.doabooks.org/' },
-                    { name: 'Tamil Rare Books', url: 'https://tamildigitallibrary.in/' }
-                  ].map((link) => (
-                    <Link
-                      key={link.name}
-                      href={link.url}
-                      target={link.url !== '#' ? "_blank" : undefined}
-                      rel={link.url !== '#' ? "noopener noreferrer" : undefined}
-                      className="p-2.5 bg-[#4a5568] text-white text-[11px] md:text-[9px] font-bold text-center rounded shadow-sm hover:bg-[#1a1a1a] hover:-translate-y-0.5 hover:shadow-md transition-all duration-300 flex items-center justify-center min-h-[45px]"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </div>
+                <p className="font-inter text-[13px] text-gray-600 leading-relaxed mb-4">
+                  Opens a dedicated page with legal research and reference resources, including Supreme Court Judgements.
+                </p>
+                <Link
+                  href="/library-useful-links"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-[#4a5568] text-white rounded font-bold text-[14px] normal-case tracking-wider hover:bg-gray-800 transition-colors"
+                >
+                  View Useful Links
+                </Link>
               </div>
             </div>
           </div>
+
+          {/* Bottom aligned action cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+              <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-[#a31f34] rounded-full"></span> Membership
+              </h3>
+              <Link href="/library-membership" className="block w-full py-3 bg-[#800000] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#a31f34] transition-all">Click Here</Link>
+            </div>
+
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+              <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-[#4a5568] rounded-full"></span> User Feedback
+              </h3>
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeX88_HF7_aLVwV0P2RhGSG8Zq7kS8MLnoCiiCxFsZTybOv6w/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-[#4a5568] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-gray-800 transition-all">User Feedback Form</Link>
+            </div>
+
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+              <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 bg-[#800000] rounded-full"></span> Rules &amp; Regulations
+              </h3>
+              <Link
+                href="/library-rules"
+                className="block w-full py-3 bg-[#800000] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#a31f34] transition-all"
+              >
+                View Rules
+              </Link>
+            </div>
+          </div>
+          </div>
         </div>  
       </section>
+
+      {/* About Us */}
       <section className="pb-12 md:pb-20 px-[5%] bg-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-[#800000] p-8 md:p-12 shadow-[0_30px_60px_-15px_rgba(128,0,0,0.3)] text-white relative overflow-hidden group">
-            {/* Background Decorative Element */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-white/10 transition-all duration-700"></div>
-
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
-                  <div className="p-3 bg-white/10 rounded-full">
-                    <svg className="md:w-8 md:h-8 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                  </div>
-                  <h2 className="font-playfair text-xl md:text-4xl font-bold">Rules & Regulations</h2>
-                </div>
-                <p className="font-inter text-white/80 max-w-xl text-lg">
-                  Ensure a productive and respectful research environment by following our established library guidelines and borrowing policies.
+          <div className="bg-white p-8 md:p-12 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.12)] border border-gray-100">
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">About Us</h2>
+            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-10">
+              <div className="md:max-w-xl">
+                <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-3">Library Committee</h3>
+                <p className="font-inter text-gray-700 leading-relaxed mb-3">
+                  Our dedicated team of professionals ensures smooth operations and quality service delivery.
+                </p>
+                <p className="font-inter text-gray-600 leading-relaxed text-sm">
+                  Members details and photos available upon request at the circulation desk.
                 </p>
               </div>
-
-              <Link href="/library-rules" className="group/btn relative px-10 py-5 bg-white text-[#800000] font-bold text-[14px] normal-case tracking-widest overflow-hidden transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(255,255,255,0.4)] flex items-center gap-3 shrink-0">
-                <span className="relative z-10">View Detailed Rules</span>
-                <span className="relative z-10 text-lg group-hover/btn:translate-x-1 transition-transform">→</span>
-                <div className="absolute inset-0 bg-gray-50 scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></div>
-              </Link>
+              <div className="md:max-w-sm md:ml-auto md:text-left">
+                <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-3">Contact Information</h3>
+                <p className="font-inter text-gray-700 leading-relaxed mb-2">
+                  Vinayaka Mission&apos;s Law School Campus
+                </p>
+                <a
+                  href="mailto:librarian@vmls.edu.in"
+                  className="font-inter font-semibold text-[#800000] hover:text-[#a31f34] transition-colors"
+                >
+                  librarian@vmls.edu.in
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -556,7 +616,7 @@ export default function LibraryPage() {
             </button>
             <div className="p-8 max-h-[90vh] overflow-y-auto">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Turnitin</h2>
-              <p className="text-gray-600 font-inter text-[15px] leading-relaxed text-justify">
+              <p className="text-gray-600 font-inter text-[15px] leading-relaxed text-left">
                 Our institution provides access to Turnitin, a plagiarism detection tool, to help faculties evaluate student submissions and ensure academic integrity. This tool checks for originality and provides feedback to students on proper citation and referencing.
               </p>
             </div>
@@ -683,6 +743,51 @@ export default function LibraryPage() {
                   Our library team will respond within 25 hours.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* OPAC Modal */}
+      {isOpacModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+            <button
+              onClick={() => setIsOpacModalOpen(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <div className="p-8 max-h-[90vh] overflow-y-auto">
+              <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">OPAC (Online Public Access Catalog)</h2>
+              <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
+                Access our comprehensive online catalog to search, browse, and manage your library resources efficiently.
+              </p>
+              <div className="bg-[#f8f9fa] p-6 rounded-xl border border-gray-100 mb-6">
+                <h3 className="font-bold text-gray-900 mb-4">Features:</h3>
+                <ul className="space-y-3">
+                  {[
+                    "Search the entire library collection",
+                    "Check availability of books and resources",
+                    "Renew borrowed items online",
+                    "Place holds on items",
+                    "View your borrowing history",
+                  ].map((feature, i) => (
+                    <li key={i} className="flex items-center gap-3 text-[15px] text-gray-700">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link
+                href="https://opac.vmls.edu.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#800000] text-white text-[15px] font-bold rounded hover:bg-[#a31f34] transition-colors shadow-sm hover:shadow-md"
+              >
+                Access OPAC
+              </Link>
             </div>
           </div>
         </div>

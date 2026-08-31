@@ -85,9 +85,21 @@ export function absoluteUrl(path: string): string {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 }
 
+/**
+ * Absolute URL for an asset whose filename may contain spaces or `&` - both
+ * appear in the blog image set, and either one served unencoded is a 404.
+ * Encodes per path segment, so the slashes survive.
+ */
+export function absoluteAssetUrl(path: string): string {
+  return absoluteUrl(path.split("/").map(encodeURIComponent).join("/"));
+}
+
 export function buildMetadata(page: PageSeo): Metadata {
   const url = absoluteUrl(page.path);
   const image = page.image ?? DEFAULT_OG_IMAGE;
+  // Some content images carry spaces or "&" in their filenames; the URL has
+  // to be percent-encoded or the scraper gets a 404.
+  const imageUrl = absoluteAssetUrl(image);
 
   const other: Record<string, string> = {
     "DC.title": page.title,
@@ -128,8 +140,8 @@ export function buildMetadata(page: PageSeo): Metadata {
       locale: "en_IN",
       images: [
         {
-          url: absoluteUrl(image),
-          secureUrl: absoluteUrl(image),
+          url: imageUrl,
+          secureUrl: imageUrl,
           // Real file dimensions, not an assumed 1200x630 - see
           // scripts/generate-og-image-sizes.mjs. Omitted when unknown so a
           // scraper measures the file itself rather than trusting a wrong size.

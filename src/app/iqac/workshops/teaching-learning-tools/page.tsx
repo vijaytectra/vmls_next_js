@@ -49,12 +49,12 @@ export default function TeachingLearningToolsPage() {
 
       {/* Intro Section (Split Layout - Image Right) */}
       <section className="pt-20 pb-6 px-[5%] bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Faculty Development & Innovation
             </h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-left font-inter">
               <p>
                 Vinayaka Mission Law School (VMLS) organized a high-impact workshop on &quot;Teaching and Learning Tools&quot; as part of its ongoing efforts to enhance faculty development and innovation in education. 
               </p>
@@ -89,13 +89,13 @@ export default function TeachingLearningToolsPage() {
 
       {/* AI Integration Section (Split Layout - Image Left) */}
       <section className="py-8 px-[5%] bg-gray-50">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               The AI Frontier in Education
             </h2>
             <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Optimizing Pedagogical Tools</p>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-left font-inter">
               <p>
                 The session focused on the integration of Artificial Intelligence in educational practices, exploring how AI tools can optimize teaching methodologies and improve the overall learning experience. 
               </p>

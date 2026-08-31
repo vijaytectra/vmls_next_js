@@ -57,12 +57,12 @@ export default function PDPPage() {
 
       {/* Intro Section (Split Layout) */}
       <section className="pt-20 pb-6 px-[5%] bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Resounding Success at VMLS
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-inter text-justify mb-8">
+            <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-inter text-left mb-8">
               We&apos;re thrilled to share the resounding success of our recent Professional Development Programme conducted at the Vinayaka Mission&apos;s Law School. This initiative brought together distinguished legal minds and educators to explore the future of legal pedagogy.
             </p>
             <div className="grid grid-cols-2 gap-4">
@@ -92,13 +92,13 @@ export default function PDPPage() {
 
       {/* Pedagogy Session (New Content) */}
       <section className="py-8 px-[5%] bg-gray-50">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Craft of Pedagogy
             </h2>
             <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Dr. Tanushree Sharma</p>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-left font-inter">
               <p>
                 During the session on the Craft of Pedagogy led by Prof. Dr. Tanushree Sharma, participants delved deeper into innovative teaching techniques. The concept of flipped classrooms, for instance, was explored in detail, highlighting how it empowers students to take ownership of their learning by engaging with course materials before class.
               </p>
@@ -125,13 +125,13 @@ export default function PDPPage() {
 
       {/* Art of Writing Session (New Content) */}
       <section className="py-6 px-[5%] bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               The Art of Writing
             </h2>
             <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Deepika Jain</p>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-left font-inter">
               <p>
                 Prof. Deepika Jain&apos;s session on The Art of Writing offered participants a holistic approach to academic writing. Beyond discussing the mechanics of thesis formulation and the critical evaluation of existing academic discourse, the session underscored the importance of maintaining a consistent writing practice throughout the year.
               </p>
@@ -157,13 +157,13 @@ export default function PDPPage() {
       </section>
       {/* Ethics of Teaching Session (New Content) */}
       <section className="py-8 px-[5%] bg-gray-50">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               The Ethics of Teaching
             </h2>
             <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Dr. Mousumi Mukherjee</p>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-left font-inter">
               <p>
                 The session on The Ethics of Teaching, led by Prof. Dr. Mousumi Mukherjee, delved into the emotional dimension of teaching. Prof. Mukherjee stressed that effective teaching goes beyond the dissemination of knowledge; it requires building an emotional connection with students.
               </p>
@@ -189,13 +189,13 @@ export default function PDPPage() {
       </section>
       {/* Publishing Session (New Content) */}
       <section className="py-8 px-[5%] bg-white">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           <div className="lg:w-1/2">
             <h2 className="font-playfair text-3xl md:text-4xl font-bold text-[#800000] mb-8">
               Publishing in High-Impact Journals
             </h2>
             <p className="text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em] mb-4">Led by Prof. Arjya Majumdar</p>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify font-inter">
+            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-left font-inter">
               <p>
                 In the session on Publishing in High-Impact Journals, Prof. Arjya Majumdar went beyond the basics of selecting journals based on citation scores. Participants gained a deeper understanding of the publication process, from crafting compelling abstracts and selecting appropriate journals to managing the flow of their research papers effectively.
               </p>

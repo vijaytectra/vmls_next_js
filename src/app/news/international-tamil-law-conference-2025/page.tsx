@@ -53,7 +53,7 @@ export default function InternationalTamilLawConferencePage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 Vinayaka Mission&apos;s Law School&apos;s Global Tamil Law Centre (GTLC) successfully hosted the International Tamil Law Conference 2025 on 7th–8th March 2025 at its Chennai campus, themed <strong>&quot;Intersecting Worlds: Tamil Language, Culture, and Legal Frameworks in a Globalized Era.&quot;</strong> The event brought together legal scholars, policymakers, and academicians to discuss Tamil legal traditions and their relevance in modern jurisprudence.
               </p>

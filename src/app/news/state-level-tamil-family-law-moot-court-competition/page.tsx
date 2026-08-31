@@ -53,7 +53,7 @@ export default function StateLevelMootCourtPage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 Vinayaka Mission&apos;s Law School&apos;s Global Tamil Law Centre (GTLC), in collaboration with <strong>Surana & Surana International Attorneys</strong>, organized a prestigious State-Level Tamil Family Law Moot Court Competition from 26th to 28th September 2024. The event attracted <strong>40 Teams</strong> from law colleges across Tamil Nadu, showcasing the growing interest in Tamil legal advocacy.
               </p>

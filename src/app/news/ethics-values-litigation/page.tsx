@@ -20,16 +20,16 @@ export default function EthicsLitigationPage() {
 
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
-        <div className="flex flex-col lg:flex-row min-h-[450px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+        <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Ethics, Values <br /><span className="text-[#fbb03b]">& Litigation</span>
             </h1>
-            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-justify">
+            <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl text-left">
               Lessons for Budding Lawyers. A comprehensive session on the foundational principles, professional responsibility, and integrity in the legal profession.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[300px]">
+          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/news/Lecture-ethics.webp"
               alt="Guest Lecture on Ethics, Values and Litigation"
@@ -53,7 +53,7 @@ export default function EthicsLitigationPage() {
               Guest Lecture on "Ethics, Values and Litigation – Lessons for Budding Lawyers"
             </h2>
             
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-base md:text-lg space-y-8 mb-12">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-base md:text-lg space-y-8 mb-12">
               <p>
                 The guest lecture on <strong>"Ethics, Values and Litigation – Lessons for Budding Lawyers"</strong> was conducted at Vinayaka Mission's Law School (VMLS) on <strong>29th April 2026</strong>. The session aimed to bridge the gap between theoretical legal education and the practical ethical challenges faced in the courtroom.
               </p>
@@ -75,7 +75,7 @@ export default function EthicsLitigationPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
               <div className="relative aspect-[3/4] shadow-md overflow-hidden group rounded-lg">
                 <Image
-                  src="/images/news/Guest Lecture on Ethics, Values and Litigation – Lessons for Budding Lawyers1_01.webp"
+                  src="/images/news/ethics-values-litigation-01.webp"
                   alt="Adv. Shabnam Banu speaking"
                   fill
                   sizes="(max-width: 768px) 100vw, 35vw"
@@ -85,7 +85,7 @@ export default function EthicsLitigationPage() {
               <div className="flex flex-col gap-6">
                 <div className="relative flex-1 min-h-[200px] shadow-md overflow-hidden group rounded-lg">
                   <Image
-                    src="/images/news/Guest Lecture on Ethics, Values and Litigation_02.webp"
+                    src="/images/news/ethics-values-litigation-02.webp"
                     alt="Token of appreciation"
                     fill
                     sizes="(max-width: 768px) 100vw, 35vw"

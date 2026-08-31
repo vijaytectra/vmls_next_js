@@ -19,10 +19,9 @@ export default function Footer() {
                 alt="VMLS Logo" 
                 width={220} 
                 height={80} 
-                className="object-contain"
-                style={{ width: 'auto', height: 'auto' }}
+                className="object-contain w-[160px] sm:w-[200px] md:w-[220px] h-auto max-w-full"
               />
-              <p className="font-playfair text-[#a31f34] text-2xl lg:text-3xl italic">
+              <p className="font-playfair text-[#a31f34] text-xl sm:text-2xl lg:text-3xl italic">
                 Law School of the Future
               </p>
             </div>
@@ -141,11 +140,11 @@ export default function Footer() {
                   </div>
                   <span className="font-semibold tracking-wide">+91 73582 01234</span>
                 </Link>
-                <Link href="mailto:admissions@vmls.edu.in" className="flex items-center gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group">
-                  <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
+                <Link href="mailto:admissions@vmls.edu.in" className="flex items-center gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group min-w-0">
+                  <div className="w-10 h-10 shrink-0 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
                     <Mail size={18} />
                   </div>
-                  <span className="font-semibold tracking-wide">admissions@vmls.edu.in</span>
+                  <span className="font-semibold tracking-wide break-all sm:break-normal">admissions@vmls.edu.in</span>
                 </Link>
               </div>
             </div>
@@ -174,13 +173,13 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-4 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4 md:gap-6 text-center">
-          <div className="flex flex-col md:flex-row items-center gap-x-8 gap-y-2 md:gap-y-4 text-[10px] md:text-sm font-medium uppercase tracking-widest text-[#666]">
-            <Link href="/iqac" prefetch={false} className="hover:text-[#a31f34] transition-colors">IQAC</Link>
-            <span className="text-gray-300 hidden md:block">|</span>
+        {/* Bottom Bar — left padding clears WhatsApp + Student Ambassador chips */}
+        <div className="pt-4 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-6 text-center pl-16 sm:pl-20 md:pl-72 lg:pl-80">
+          <div className="flex flex-row flex-wrap items-center justify-center gap-x-3 sm:gap-x-5 md:gap-x-8 gap-y-2 text-[10px] md:text-sm font-medium uppercase tracking-widest text-[#666]">
+            <Link href="/iqac" prefetch={false} className="hover:text-[#a31f34] transition-colors relative z-[1]">IQAC</Link>
+            <span className="text-gray-300" aria-hidden>|</span>
             <Link href="/privacy-policy" prefetch={false} className="hover:text-[#a31f34] transition-colors">Privacy Policy</Link>
-            <span className="text-gray-300 hidden md:block">|</span>
+            <span className="text-gray-300" aria-hidden>|</span>
             <Link href="/terms-conditions" prefetch={false} className="hover:text-[#a31f34] transition-colors">Terms and Conditions</Link>
           </div>
           <p className="text-[10px] md:text-sm font-medium text-gray-400 tracking-widest">

@@ -53,7 +53,7 @@ export default function DistinguishedGuestLectureLawOfTheSeaPage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 The VMLS Centre for Maritime Law successfully hosted a distinguished <strong>Guest Lecture Series on the Law of the Sea</strong> across three insightful sessions held on March 23rd, March 26th, and April 3rd, 2024. The series, designed to deepen students&apos; understanding of pivotal maritime law concepts, was a significant educational initiative for the institution.
               </p>

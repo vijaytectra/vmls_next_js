@@ -32,7 +32,7 @@ export default function IQACPage() {
               Ensuring continuous quality enhancement and sustaining academic and administrative excellence across the institution.
             </p>
           </div>
-          <div className="lg:w-1/2 relative min-h-[300px]">
+          <div className="lg:w-1/2 relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/vmls/vmls-arch.png"
               alt="VMLS Campus"
@@ -50,16 +50,16 @@ export default function IQACPage() {
       {/* About Section */}
       <section className="py-12 px-[5%] bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7">
               <h2 className="font-playfair text-3xl md:text-4xl text-[#800000] mb-8 font-bold relative inline-block">
                 Introduction to IQAC
                 <div className="absolute -bottom-2 left-0 w-1/2 h-1 bg-[#fbb03b]"></div>
               </h2>
-              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl text-justify mb-8">
+              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl text-left mb-8">
                 The IQAC of Vinayaka Mission&apos;s Law School (VMLS) is a dedicated body established to ensure continuous quality enhancement and to sustain academic and administrative performance across the institution.
               </p>
-              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl text-justify">
+              <p className="font-inter text-gray-700 leading-relaxed text-lg md:text-xl text-left">
                 The cell adheres to the guidelines provided by the National Assessment and Accreditation Council (NAAC), aiming to promote a culture of quality through a structured approach.
               </p>
             </div>

@@ -67,6 +67,13 @@ const facultySrc = fs.readFileSync("src/app/faculty/[slug]/page.tsx", "utf8");
 const facultyCount = [...facultySrc.matchAll(/^    slug: "([^"]+)",$/gm)].length;
 const blogSeoSrc = fs.readFileSync("src/data/blog-seo.ts", "utf8");
 const blogCount = [...blogSeoSrc.matchAll(/^    "slug": "([^"]+)",$/gm)].length;
+const blogFaqCount = [...blogSeoSrc.matchAll(/"faqs":/g)].length;
+const mentorSrc = fs.readFileSync("src/data/mentoringCommittee.ts", "utf8");
+const mentorCount = [...mentorSrc.matchAll(/^    slug: '/gm)].length;
+const advisorSrc = fs.readFileSync("src/data/boardOfAdvisors.ts", "utf8");
+const advisorCount = [...advisorSrc.matchAll(/paragraphs: \[\n/g)].length;
+const profileCount = mentorCount + advisorCount;
+const generatedCount = facultyCount + blogCount + profileCount;
 
 const TYPE_LABELS = {
   homepage: "Homepage",
@@ -309,18 +316,19 @@ const html = `<title>VMLS Metadata Audit</title>
     <h1>vmls.edu.in head &amp; JSON&#8209;LD rollout</h1>
     <p class="standfirst">Every route on the Next.js app now carries its own title, description, canonical, Open Graph set and Dublin Core block, with JSON&#8209;LD assigned by page type. Verified against the rendered HTML of a production build, not the source.</p>
     <div class="stats">
-      <div class="stat"><b>${rows.length + facultyCount + blogCount}</b><span>URLs audited</span></div>
+      <div class="stat"><b>${rows.length + generatedCount}</b><span>URLs audited</span></div>
       <div class="stat"><b>${rows.length}</b><span>static routes</span></div>
-      <div class="stat"><b>${facultyCount + blogCount}</b><span>generated routes</span></div>
-      <div class="stat pass"><b>0</b><span>errors at verify</span></div>
-      <div class="stat warn"><b>9</b><span>accepted warnings</span></div>
+      <div class="stat"><b>${generatedCount}</b><span>generated routes</span></div>
+      <div class="stat pass"><b>0</b><span>template errors</span></div>
+      <div class="stat warn"><b>5</b><span>content duplicates open</span></div>
+      <div class="stat warn"><b>58</b><span>title-length warnings</span></div>
     </div>
   </header>
 
   <section id="findings">
     <div class="sec-head"><span class="step">01</span><h2>What the audit found</h2></div>
     <div class="col">
-      <p><strong>${inheritedCount} of ${rows.length} static routes, and all ${facultyCount + blogCount} generated pages, shared one identical title and description</strong> &mdash; the root layout fallback. That is ${inheritedCount + facultyCount + blogCount} URLs competing with each other and with the homepage for the same phrase:</p>
+      <p><strong>${inheritedCount} of ${rows.length} static routes, and all ${generatedCount} generated pages, shared one identical title and description</strong> &mdash; the root layout fallback. That is ${inheritedCount + facultyCount + blogCount} URLs competing with each other and with the homepage for the same phrase:</p>
       <pre>${esc(INHERITED_TITLE)}</pre>
       <p>Beyond that, the reference head in <code>vmls-seo-schema.html</code> had never been deployed. Before this pass the site had:</p>
       <ul>
@@ -383,7 +391,7 @@ alternates: { canonical: url },
 openGraph:  { url, ... },
 other:      { "DC.identifier": url, ... }</pre>
     <div class="col">
-      <p>There is no per-page string to get wrong. The verification tag and GTM container are declared once in the root layout and inherited by all ${rows.length + facultyCount + blogCount} URLs, so they cannot drift either. <code>geo.*</code> is opt-in per page and set on the ${rows.filter((r) => r.geo).length} routes tied to the physical campus &mdash; homepage, contact, about, admissions, and the campus facility pages &mdash; not on programme sub-pages.</p>
+      <p>There is no per-page string to get wrong. The verification tag and GTM container are declared once in the root layout and inherited by all ${rows.length + generatedCount} URLs, so they cannot drift either. <code>geo.*</code> is opt-in per page and set on the ${rows.filter((r) => r.geo).length} routes tied to the physical campus &mdash; homepage, contact, about, admissions, and the campus facility pages &mdash; not on programme sub-pages.</p>
     </div>
   </section>
 
@@ -412,25 +420,36 @@ other:      { "DC.identifier": url, ... }</pre>
   <section id="validation">
     <div class="sec-head"><span class="step">05</span><h2>Validation pass</h2></div>
     <div class="col">
-      <p><code>npm run seo:audit</code> builds the site, fetches all ${rows.length + facultyCount + blogCount} URLs from the running server and parses the delivered HTML. It exits non-zero on any error, so it can gate a deploy.</p>
+      <p><code>npm run seo:audit</code> builds the site, fetches all ${rows.length + generatedCount} URLs from the running server and parses the delivered HTML. It exits non-zero on any error, so it can gate a deploy.</p>
     </div>
     <div class="verdict">
-      <div class="check pass"><div class="k">Duplicate titles</div><div class="v"><b>0</b><span>across ${rows.length + facultyCount + blogCount} indexable URLs</span></div></div>
-      <div class="check pass"><div class="k">Duplicate descriptions</div><div class="v"><b>0</b><span>every page unique</span></div></div>
+      <div class="check warn"><div class="k">Duplicate titles</div><div class="v"><b>4</b><span>pairs, all in blog content</span></div></div>
+      <div class="check warn"><div class="k">Duplicate descriptions</div><div class="v"><b>1</b><span>pair, both VLAT guides</span></div></div>
       <div class="check pass"><div class="k">canonical / og:url / DC.identifier</div><div class="v"><b>0</b><span>mismatches with the page&rsquo;s own URL</span></div></div>
       <div class="check pass"><div class="k">meta keywords</div><div class="v"><b>0</b><span>occurrences site-wide</span></div></div>
       <div class="check pass"><div class="k">Verification tag</div><div class="v"><b>1&times;</b><span>per page, identical value</span></div></div>
       <div class="check pass"><div class="k">GTM container</div><div class="v"><b>1&times;</b><span>${esc("GTM-TDRKCK4P")}, plus noscript</span></div></div>
-      <div class="check pass"><div class="k">FAQ schema vs visible text</div><div class="v"><b>10/10</b><span>questions found in rendered HTML</span></div></div>
+      <div class="check pass"><div class="k">FAQ schema vs visible text</div><div class="v"><b>32/32</b><span>pages: every Q&amp;A found in the HTML</span></div></div>
       <div class="check pass"><div class="k">Schema type per page type</div><div class="v"><b>0</b><span>missing or stray blocks</span></div></div>
-      <div class="check pass"><div class="k">og:image files</div><div class="v"><b>151</b><span>all resolve; real dimensions emitted</span></div></div>
-      <div class="check warn"><div class="k">Titles over 60 chars</div><div class="v"><b>9</b><span>all blog headlines &mdash; see below</span></div></div>
+      <div class="check pass"><div class="k">og:image files</div><div class="v"><b>232</b><span>all resolve; real dimensions emitted</span></div></div>
+      <div class="check warn"><div class="k">Titles over 60 chars</div><div class="v"><b>58</b><span>all blog headlines &mdash; see below</span></div></div>
     </div>
 
     <h3>What the pass flagged, unfixed</h3>
     <div class="callout">
-      <h4>Nine blog titles run 61&ndash;89 characters</h4>
-      <p>These are the authors&rsquo; own headlines, e.g. <span class="mono">&ldquo;3-Year LLB Programme at VMLS: Eligibility, Admission Criteria, Subjects, and Career Scope&rdquo;</span>. The rule said &ldquo;&le;60 where possible&rdquo;; truncating editorial headlines would misrepresent the articles, so they stand as an editorial call rather than a silent trim.</p>
+      <h4>Five blog posts collide on title or description &mdash; the audit still fails on these</h4>
+      <p>All five came in with the merged content set and need an editor, not a template change. Two posts sharing a title compete with each other in search; the fix is a retitle, a merge, or a canonical from one to the other.</p>
+      <p class="mono" style="margin-top:10px">
+        law-courses-after-graduation-2026 &harr; law-courses-after-graduation-build-your-legal-career<br>
+        what-is-llb-degree &harr; 3-year-llb-programme-india-2026 &mdash; different articles, one title<br>
+        vmls-open-day-2026 &mdash; carries the title of the LL.M. eligibility post; looks like a copy-paste slip<br>
+        clinical-legal-education-in-india &harr; why-clinical-legal-education-in-india-is-struggling<br>
+        vinayaka-missions-law-admission-test-VLAT &harr; vmrf-law-admission-test-vlat &mdash; two VLAT guides, same opening
+      </p>
+    </div>
+    <div class="callout">
+      <h4>58 blog titles run 61&ndash;94 characters</h4>
+      <p>These are the authors&rsquo; own headlines, e.g. <span class="mono">&ldquo;CLAT 2027: Exam Dates, Eligibility, Syllabus &amp; Admission Pathways to Top Law Colleges in India&rdquo;</span>. The rule said &ldquo;&le;60 where possible&rdquo;; truncating editorial headlines would misrepresent the articles, so they stand as an editorial call rather than a silent trim.</p>
     </div>
     <div class="callout">
       <h4>Unknown faculty and blog slugs render a page instead of a 404</h4>
@@ -462,8 +481,34 @@ other:      { "DC.identifier": url, ... }</pre>
     </div>
   </section>
 
+  <section id="merge">
+    <div class="sec-head"><span class="step">06</span><h2>Merging origin/main</h2></div>
+    <div class="col">
+      <p>A branch 48 commits ahead landed a large content and design refactor plus a second, partial SEO effort. Twenty-three files conflicted. The resolution kept their page content everywhere and re-applied the registry wiring on top.</p>
+      <p>Their root layout carried <code>alternates: { canonical: "/" }</code>, and only that one file in <code>src/app</code> set <code>alternates</code> at all. Canonical is inherited by every child route, so that value would have pointed the whole site at the homepage &mdash; the exact failure this system exists to prevent. It is removed; the homepage&rsquo;s own canonical comes from <code>pageMetadata("/")</code> like every other route.</p>
+      <h3>What was merged in, not discarded</h3>
+      <ul>
+        <li><strong>Their page content and design</strong> on all 23 conflicted files.</li>
+        <li><strong>Their <code>alumniOf</code> data</strong> for the Executive Dean, lifted into the Person builder.</li>
+        <li><strong>Their <code>HowTo</code> schema</strong> on the admission process page, which duplicates nothing.</li>
+        <li><strong>Six new routes</strong> registered with their own copy: classrooms, food court, library links, the rivers conference, and two guest-lecture reports.</li>
+        <li><strong>Two new profile route families</strong> &mdash; advisors and mentoring committee &mdash; upgraded from bare title/description to full head plus Person and BreadcrumbList.</li>
+      </ul>
+      <h3>What was removed as duplicate</h3>
+      <ul>
+        <li><strong>Inline <code>CollegeOrUniversity</code> and <code>Person</code> blocks</strong> on the homepage and dean page. Both were already emitted from the registry, and both pointed images at <code>/assets/&hellip;</code>, a directory that does not exist in <code>public/</code>.</li>
+        <li><strong>Hand-written <code>BreadcrumbList</code> and <code>Course</code> blocks</strong> on the two admissions pages, for the same reason.</li>
+      </ul>
+      <h3>Two things the merge broke that needed fixing</h3>
+      <ul>
+        <li>The blog moved to <code>src/data/blogs/content.json</code>, 126 posts. Per-post metadata is regenerated from there, and <strong>31 posts turn out to render a visible FAQ accordion</strong> &mdash; those now carry FAQPage, verified question by question against the rendered HTML.</li>
+        <li>Three blog images have spaces and <code>&amp;</code> in their filenames. Unencoded, those og:image URLs 404 for every scraper. URLs are now percent-encoded per path segment.</li>
+      </ul>
+    </div>
+  </section>
+
   <section id="files">
-    <div class="sec-head"><span class="step">06</span><h2>Where it lives</h2></div>
+    <div class="sec-head"><span class="step">07</span><h2>Where it lives</h2></div>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Path</th><th>Role</th></tr></thead>

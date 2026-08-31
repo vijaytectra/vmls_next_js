@@ -37,7 +37,7 @@ export default function GlobalTamilLawCentrePage() {
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100 overflow-hidden">
         <div className="flex flex-col lg:flex-row min-h-[350px]">
-          <div className="lg:w-[45%] p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white relative z-10">
+          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white relative z-10">
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Global Tamil <br /><span className="text-[#fbb03b]">Law Centre</span>
             </h1>

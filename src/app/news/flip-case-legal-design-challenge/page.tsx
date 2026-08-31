@@ -53,7 +53,7 @@ export default function FlipCasePage() {
               />
             </div>
 
-            <div className="font-inter text-gray-700 leading-relaxed text-justify text-lg md:text-xl space-y-8">
+            <div className="font-inter text-gray-700 leading-relaxed text-left text-lg md:text-xl space-y-8">
               <p>
                 The Centre for Justice Through Technology (CJT) at Vinayaka Mission&apos;s Law School successfully hosted the <strong>Flip Case: A Legal Design Challenge</strong> on October 19, 2024. This innovative event combined law and design thinking, challenging participants to rethink and reimagine legal cases from a creative, problem-solving perspective.
               </p>

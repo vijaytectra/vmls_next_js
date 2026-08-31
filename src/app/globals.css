@@ -12,17 +12,13 @@
   --font-inter: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Keep light theme even when OS prefers dark — dark foreground
+   inherits into third-party widgets (e.g. Niaa chatbot bubble). */
 body {
   background: var(--background);
   color: var(--foreground);
   margin: 0;
+  color-scheme: light;
 }
 
 @keyframes marquee {
@@ -40,6 +36,10 @@ body {
 
 .animate-marquee:hover, .animate-marquee-reverse:hover {
   animation-play-state: paused;
+}
+
+.animate-marquee-continuous {
+  animation: marquee 40s linear infinite;
 }
 
 @keyframes fadeIn {
@@ -153,6 +153,16 @@ html {
   background: linear-gradient(180deg, #c40f0f 0%, #ae0808 50%, #8b0000 100%);
 }
 
+.vertical-edge-btn--admissions {
+  background: linear-gradient(180deg, #d4a017 0%, #c08a00 45%, #a16207 100%);
+  animation-delay: 0.3s;
+  box-shadow: -4px 0 18px rgba(192, 138, 0, 0.35);
+}
+
+.vertical-edge-btn--admissions::after {
+  animation-delay: 0.45s;
+}
+
 .vertical-edge-btn--enquire {
   background: linear-gradient(180deg, #9b0000 0%, #8b0000 50%, #6d0000 100%);
   animation-delay: 0.6s;
@@ -208,6 +218,15 @@ html {
   }
 }
 
+/* Compact edge tabs on phones so they don’t dominate the viewport */
+@media (max-width: 767px) {
+  .vertical-edge-btn {
+    font-size: 0.68rem;
+    padding: 0.9rem 0.45rem;
+    letter-spacing: 0.04em;
+  }
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -218,76 +237,716 @@ html {
   scrollbar-width: none;  /* Firefox */
 }
 
-/* Prevent ugly large spacing gaps in justified text on mobile viewports while keeping it beautifully aligned */
+/* Mobile: never stretch word spacing — justify creates rivers on narrow screens */
 @media (max-width: 767px) {
   .text-justify {
-    text-align: justify !important;
-    text-justify: inter-word;
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    word-break: break-word;
+    text-align: left !important;
+    text-align-last: auto !important;
+    text-justify: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
   }
 }
 
-/* Enforce premium, high-density justified layout for blog articles and institutional pages without large word gaps on mobile */
-.blog-content-container,
-.gapless-justify {
-  text-align: justify !important;
-  text-justify: inter-character;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  word-break: break-word;
-}
-
-/* Custom premium justification for Tamil (and other Brahmic scripts) to prevent letter-spacing disintegration */
-.gapless-justify-tamil {
-  text-align: justify !important;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  word-break: break-word;
-}
-
-/* Ensure NoPaperForms Chatbot bubble text is strictly black on mobile screens */
-@media (max-width: 768px) {
-  .indicator,
-  .indicator *,
-  #eeChatIndicator,
-  #eeChatIndicator * {
-    color: #000000 !important;
+/* Opt-in body copy — keep natural spacing (no justify rivers) */
+@media (min-width: 768px) {
+  .blog-content-container,
+  .gapless-justify,
+  .text-justify {
+    text-align: left !important;
+    text-align-last: auto !important;
+    text-justify: auto;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-wrap: pretty;
   }
 }
 
-/* Global Premium Justification for all standard content copy paragraphs across the site */
-main section p:not(.text-center):not(.text-left):not(.text-right) {
-  text-align: justify !important;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-  word-break: break-word;
-}
-
-/* Preserving explicit layout alignments for centered/left/right containers and cards */
-.text-center > p,
-.text-center > * > p,
-.text-center > * > * > p {
-  text-align: center !important;
-}
-
-.text-left > p,
-.text-left > * > p,
-.text-left > * > * > p {
+/* Migrated live blog HTML — keep content fidelity, apply localhost visual language */
+.blog-article-content .blog-html h2,
+.blog-article-content .blog-html h3,
+.blog-article-content .blog-html h4 {
+  font-family: var(--font-playfair, "Playfair Display", Georgia, serif);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 1.75rem 0 0.85rem;
+  line-height: 1.3;
   text-align: left !important;
 }
 
-.text-right > p,
-.text-right > * > p,
-.text-right > * > * > p {
+.blog-article-content .blog-html h2 {
+  font-size: 1.5rem;
+}
+
+.blog-article-content .blog-html h3 {
+  font-size: 1.35rem;
+}
+
+.blog-article-content .blog-html h4 {
+  font-size: 1.2rem;
+}
+
+.blog-article-content .blog-html p {
+  margin: 0 0 1.25rem;
+  line-height: 1.8;
+  color: #374151;
+  font-size: 1.125rem;
+}
+
+.blog-article-content .blog-html ul,
+.blog-article-content .blog-html ol {
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+  color: #374151;
+}
+
+.blog-article-content .blog-html ul {
+  list-style: disc;
+}
+
+.blog-article-content .blog-html ol {
+  list-style: decimal;
+}
+
+.blog-article-content .blog-html li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+.blog-article-content .blog-html a {
+  color: #a31f34;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-article-content .blog-html a:hover {
+  color: #7f1828;
+}
+
+.blog-article-content .blog-html table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 2rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.blog-article-content .blog-html th,
+.blog-article-content .blog-html td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+/* Mobile: keep wide tables readable via horizontal scroll without breaking layout */
+@media (max-width: 767px) {
+  .blog-article-content .blog-html {
+    overflow-wrap: normal;
+    word-break: normal;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+
+  .blog-article-content .blog-html table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-article-content .blog-html th,
+  .blog-article-content .blog-html td {
+    padding: 0.55rem 0.65rem;
+    white-space: nowrap;
+  }
+
+  .blog-article-content .blog-html p,
+  .blog-article-content .blog-html li {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .blog-article-content .blog-html h2 {
+    font-size: 1.35rem;
+  }
+
+  .blog-article-content .blog-html h3 {
+    font-size: 1.2rem;
+  }
+
+  .blog-article-content .blog-html button.cta,
+  .blog-article-content .blog-html a.blog-cta-link {
+    min-height: 48px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.blog-article-content .blog-html th,
+.blog-article-content .blog-html thead th,
+.blog-article-content .blog-html thead td,
+.blog-article-content .blog-html table > tbody > tr:first-child > th {
+  background: #eef5fb !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+}
+
+.blog-article-content .blog-html td,
+.blog-article-content .blog-html tbody tr,
+.blog-article-content .blog-html tbody td,
+.blog-article-content .blog-html tr td,
+.blog-article-content .blog-html tr:first-child td,
+.blog-article-content .blog-html tr:last-child td {
+  background: transparent !important;
+  font-weight: 400 !important;
+}
+
+.blog-article-content .blog-html .blog-cta-link,
+.blog-article-content .blog-html a.blog-cta-link {
+  display: inline-flex;
+  align-items: center;
+  margin: 0.25rem 0 1.25rem;
+  padding: 0.75rem 1.25rem;
+  background: #a31f34;
+  color: #fff !important;
+  text-decoration: none !important;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.blog-article-content .blog-html a.blog-cta-link:hover {
+  background: #7f1828;
+  color: #fff !important;
+}
+
+.blog-article-content .blog-html p.blog-cta-link {
+  background: transparent;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.blog-article-content .blog-html .cta-note {
+  margin: 1rem 0 1.25rem;
+  padding: 1rem 1.25rem;
+  background: #fcfbf9;
+  border-left: 4px solid #fbb03b;
+  border-radius: 0.5rem;
+  color: #374151;
+}
+
+.blog-article-content .blog-html img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+}
+
+.blog-article-content .blog-faq-answer a {
+  color: #a31f34;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blog-article-content .blog-faq-answer p {
+  margin: 0;
+  text-align: left !important;
+}
+
+/* Inline Admissions Open / LL.M application CTA inside article body */
+.blog-article-content .blog-html button.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0.25rem 0 0.5rem;
+  padding: 0.85rem 1.35rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #c40f0f 0%, #8b0000 100%);
+  color: #fff !important;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(139, 0, 0, 0.25);
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-article-content .blog-html button.cta span {
+  color: #fff !important;
+}
+
+.blog-article-content .blog-html button.cta svg {
+  width: 15px;
+  height: 10px;
+  overflow: visible;
+}
+
+.blog-article-content .blog-html button.cta svg path,
+.blog-article-content .blog-html button.cta svg polyline {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.blog-article-content .blog-html a:has(button.cta):hover button.cta,
+.blog-article-content .blog-html button.cta:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(139, 0, 0, 0.32);
+}
+
+/* Body copy stays dark; only hyperlinks use brand red */
+.blog-article-content .blog-html p,
+.blog-article-content .blog-html li,
+.blog-article-content .blog-html td,
+.blog-article-content .blog-html strong,
+.blog-article-content .blog-html b {
+  color: #374151;
+}
+
+.blog-article-content .blog-html h2,
+.blog-article-content .blog-html h3,
+.blog-article-content .blog-html h4 {
+  color: #1a1a1a;
+}
+
+.blog-article-content .blog-html h2 strong,
+.blog-article-content .blog-html h3 strong,
+.blog-article-content .blog-html h4 strong,
+.blog-article-content .blog-html h2 b,
+.blog-article-content .blog-html h3 b,
+.blog-article-content .blog-html h4 b {
+  color: inherit;
+}
+
+.blog-article-content .blog-html a {
+  color: #a31f34;
+}
+
+.blog-article-content .blog-html a:hover {
+  color: #7f1828;
+}
+
+.blog-article-content .blog-html strong a,
+.blog-article-content .blog-html b a,
+.blog-article-content .blog-html a strong,
+.blog-article-content .blog-html a b {
+  color: inherit;
+}
+
+.blog-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem;
+  background: #f3f4f6;
+  color: #4b5563;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.blog-tag-pill:hover {
+  background: #a31f34;
+  color: #fff;
+}
+
+.blog-post-nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.35rem;
+}
+
+/* Keep natural word spacing for Tamil (and other Brahmic scripts) */
+.gapless-justify-tamil {
+  text-align: left !important;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+}
+
+/* NoPaperForms Niaa chatbot widget positioning — Bottom Right on every page */
+#eeChatWidgetContainer,
+#eeChatIndicator,
+.default-chatbot-indicator {
+  position: fixed !important;
+  right: max(1rem, env(safe-area-inset-right)) !important;
+  bottom: max(1.25rem, env(safe-area-inset-bottom)) !important;
+  left: auto !important;
+  top: auto !important;
+  z-index: 9990 !important;
+}
+
+/* NoPaperForms Niaa chatbot greeting bubble — force readable dark text */
+.default-chatbot-indicator,
+.default-chatbot-indicator *,
+.indicator,
+.indicator *,
+#eeChatIndicator,
+#eeChatIndicator * {
+  color: #1a1a1a !important;
+}
+
+/* Keep footer legal links above page content (not under edge tabs) */
+footer {
+  position: relative;
+  z-index: 10;
+  padding-bottom: max(2rem, env(safe-area-inset-bottom));
+}
+
+/* Body copy: left-aligned for consistent word spacing (no justify rivers). */
+@media (min-width: 768px) {
+  main section p:not(.text-center):not(.text-left):not(.text-right):not(.text-justify):not(.gapless-justify):not(.person-card-role):not(.person-card-name),
+  main article p:not(.text-center):not(.text-left):not(.text-right):not(.text-justify):not(.gapless-justify):not(.person-card-role):not(.person-card-name) {
+    text-align: left !important;
+    text-align-last: auto !important;
+    text-justify: auto;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-wrap: pretty;
+  }
+}
+
+/* Person profile cards — name + role start on the same baseline across a row */
+.person-card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding-top: 1.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.person-card-name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.75rem;
+  margin: 0 0 0.25rem;
+  text-align: center !important;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+  line-height: 1.25;
+}
+
+.person-card-role {
+  display: block;
+  width: 100%;
+  min-height: 1.25rem;
+  margin: 0 auto;
+  text-align: center !important;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+  line-height: 1.35;
+}
+
+main section p.person-card-role,
+main article p.person-card-role,
+.person-card-details > .person-card-role {
+  text-align: center !important;
+  text-align-last: center !important;
+}
+
+.person-card-details--start {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.person-card-details--start .person-card-name,
+.person-card-details--start .person-card-role,
+main section .person-card-details--start p.person-card-role,
+main article .person-card-details--start p.person-card-role,
+main section .person-card-details--start .person-card-name,
+main article .person-card-details--start .person-card-name {
+  display: block;
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left !important;
+  text-align-last: left !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Headings / short labels stay left unless explicitly centered */
+main section h1,
+main section h2,
+main section h3,
+main section h4,
+main section h5,
+main section h6,
+main article h1,
+main article h2,
+main article h3,
+main article h4 {
+  text-align: inherit;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+  word-spacing: normal;
+}
+
+/* Preserving explicit layout alignments for centered containers (nav labels, hero titles).
+   Body paragraphs inside .text-center still justify on mobile (see mobile block below). */
+main section p.text-center,
+main section .text-center > p.text-center,
+p.text-center {
+  text-align: center !important;
+  -webkit-hyphens: manual !important;
+  hyphens: manual !important;
+  word-spacing: normal !important;
+}
+
+main section .text-center > h1,
+main section .text-center > h2,
+main section .text-center > h3,
+main section .text-center > h4,
+main section .text-center h1,
+main section .text-center h2,
+main section .text-center h3,
+main section .text-center h4,
+.text-center h1,
+.text-center h2,
+.text-center h3,
+.text-center h4 {
+  text-align: center !important;
+  word-spacing: normal !important;
+}
+
+p.text-right,
+.text-right p {
   text-align: right !important;
+  word-spacing: normal !important;
+}
+
+/* Desktop: keep explicit left alignments for narrow cards where justify would look sparse */
+@media (min-width: 768px) {
+  p.text-left,
+  .text-left p {
+    text-align: left !important;
+    text-justify: auto;
+    word-spacing: normal;
+  }
+
+  main section .text-center p:not(.text-left):not(.text-right) {
+    text-align: center !important;
+    word-spacing: normal !important;
+  }
+}
+
+/*
+ * Mobile phones: no justified word rivers, no mid-word hyphenation.
+ * Whole words wrap only; spacing stays natural across the entire site.
+ */
+@media (max-width: 767px) {
+  html,
+  body {
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    word-spacing: normal !important;
+  }
+
+  p,
+  li,
+  td,
+  th,
+  .text-justify,
+  .text-justify p,
+  .blog-content-container,
+  .blog-content-container p,
+  .blog-content-container li,
+  .gapless-justify,
+  .gapless-justify p,
+  .gapless-justify-tamil,
+  .blog-article-content .blog-html,
+  .blog-article-content .blog-html p,
+  .blog-article-content .blog-html li,
+  main section p:not(.person-card-role):not(.person-card-name):not(.text-center):not(.hero-tagline),
+  main article p:not(.person-card-role):not(.person-card-name):not(.text-center):not(.hero-tagline),
+  main section li,
+  main article li,
+  p.text-left,
+  .text-left p,
+  .text-center > p:not(.person-card-role):not(.person-card-name):not(.text-center):not(.hero-tagline) {
+    text-align: left !important;
+    text-align-last: auto !important;
+    text-justify: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    word-wrap: normal !important;
+  }
+
+  /* Keep intentional centered UI */
+  .text-center > h1,
+  .text-center > h2,
+  .text-center > h3,
+  .text-center > h4,
+  .text-center > span,
+  h1.text-center,
+  h2.text-center,
+  h3.text-center,
+  p.text-center,
+  p.hero-tagline,
+  .hero-tagline,
+  .person-card-details:not(.person-card-details--start) > .person-card-role,
+  .person-card-details:not(.person-card-details--start) > .person-card-name,
+  footer p,
+  header p {
+    text-align: center !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+  }
+
+  .person-card-details--start .person-card-role,
+  .person-card-details--start .person-card-name,
+  main section .person-card-details--start p.person-card-role {
+    text-align: left !important;
+    text-align-last: left !important;
+  }
+
+  p.text-right,
+  .text-right p {
+    text-align: right !important;
+    word-spacing: normal !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+  }
+}
+
+/* Hero tagline — equal side space; do not left-align on desktop */
+.hero-tagline {
+  text-align: center !important;
+  text-align-last: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: inline-block;
+  max-width: 100%;
+}
+
+
+body {
+  overflow-x: clip;
+}
+
+@media (max-width: 1023px) {
+  main section table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .blog-article-content .blog-html table {
+    /* blog tables use their own mobile rules */
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .overflow-x-auto > table {
+    font-size: 0.875rem;
+  }
+
+  .overflow-x-auto > table th,
+  .overflow-x-auto > table td {
+    padding: 0.65rem 0.75rem;
+    white-space: nowrap;
+  }
+}
+
+/* Student Ambassador widget polish */
+.vmls-ambassador-card {
+  overflow: hidden;
+}
+
+.vmls-ambassador-card > div[style*="position: absolute"],
+.vmls-ambassador-card > div[style*="position:absolute"] {
+  pointer-events: auto;
+}
+
+.vmls-ambassador-pill {
+  width: fit-content !important;
+}
+
+.vmls-ambassador-pill button {
+  white-space: pre-line !important;
+  width: max-content !important;
+  max-width: none !important;
+  text-align: left !important;
+}
+
+/* Sleek custom text scrollbar for About section */
+.custom-text-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-text-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 999px;
+}
+.custom-text-scrollbar::-webkit-scrollbar-thumb {
+  background: #a31f34;
+  border-radius: 999px;
+}
+.custom-text-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #800000;
 }
