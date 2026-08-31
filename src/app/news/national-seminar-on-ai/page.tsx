@@ -1,9 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
+
+export const metadata = pageMetadata("/news/national-seminar-on-ai");
 
 export default function AISeminarPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
+      <PageSchema path="/news/national-seminar-on-ai" />
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">

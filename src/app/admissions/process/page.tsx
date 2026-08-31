@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import PageSchema from "@/components/seo/PageSchema";
 
 const howToSchema = {
   "@context": "https://schema.org/",
@@ -32,6 +33,7 @@ const howToSchema = {
 export default function AdmissionProcessPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/admissions/process" />
       <Script
         id="ld-howto-admission"
         type="application/ld+json"

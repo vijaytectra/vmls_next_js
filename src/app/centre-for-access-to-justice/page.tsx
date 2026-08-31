@@ -1,14 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
-export const metadata = {
-  title: "Centre for Access to Justice | VMLS",
-  description: "Vinayaka Mission's Law School (VMLS) Centre for Access to Justice.",
-};
+export const metadata = pageMetadata("/centre-for-access-to-justice");
+
+
 
 export default function CentreForAccessToJusticePage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
+      <PageSchema path="/centre-for-access-to-justice" />
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-3.5 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-2 text-xs md:text-sm font-medium text-gray-600">

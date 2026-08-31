@@ -1,9 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
+
+export const metadata = pageMetadata("/admissions/llb");
 
 export default function LLBAdmissionsPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/admissions/llb" />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

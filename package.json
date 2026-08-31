@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seo:data": "node scripts/generate-blog-seo.mjs && node scripts/generate-og-image-sizes.mjs",
+    "seo:check": "node scripts/check-lengths.mjs && node scripts/check-og-images.mjs && node scripts/check-blog-links.mjs",
+    "seo:audit": "node scripts/seo-audit.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.14.0",

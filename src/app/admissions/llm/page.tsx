@@ -3,54 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { LLM_FAQ } from "@/data/llm-faq";
+import PageSchema from "@/components/seo/PageSchema";
 
 export default function LLMAdmissionsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const faqData = [
-    {
-      q: "What is the duration and structure of the VMLS LL.M. program?",
-      a: "The LL.M. program at VMLS is a one-year, full-time course designed to balance academic rigor with industry exposure through classroom study, research, capstone projects, and internships."
-    },
-    {
-      q: "What are the eligibility criteria for admission to the LL.M. program?",
-      a: "Applicants must hold an LL.B. or equivalent degree from a recognized university with a minimum required aggregate. Final-year students awaiting results can also apply."
-    },
-    {
-      q: "What specializations are offered in the VMLS LL.M. program?",
-      a: "VMLS offers LL.M. specializations in Corporate & Financial Laws, Commercial Dispute Resolution, Criminal Law and Practice, and Artificial Intelligence, Emerging Technologies & Intellectual Property Rights."
-    },
-    {
-      q: "What is the admission process for the LL.M. program?",
-      a: "Applicants need to complete the online application, appear for the Vinayaka Mission's Law Admission Test (VLAT), and participate in a personal interview. Selection is based on test scores, academic record, and performance in the interview."
-    },
-    {
-      q: "Are scholarships or financial aid options available?",
-      a: "Yes, VMLS provides various scholarship schemes and financial aid opportunities to meritorious and deserving students."
-    },
-    {
-      q: "What kind of practical training or internships are included in the LL.M. curriculum?",
-      a: "The LL.M. program incorporates mandatory internships with law firms, corporates, NGOs, or regulatory bodies, along with capstone projects and clinical courses for hands-on experience."
-    },
-    {
-      q: "Who are the faculty and mentors for the LL.M. course?",
-      a: "VMLS LL.M. faculty includes nationally and internationally recognized professors, experienced industry practitioners, and guest experts from top law firms and in-house legal teams."
-    },
-    {
-      q: "What career prospects are available after completing the LL.M. at VMLS?",
-      a: "Graduates pursue careers as corporate lawyers, litigators, in-house legal counsels, policy advisors, academics, and researchers, benefiting from strong placement and industry support."
-    },
-    {
-      q: "Does the LL.M. program include research and dissertation work?",
-      a: "Yes, students must undertake a dissertation project in their area of interest, with guidance by faculty mentors throughout the research and writing process."
-    },
-    {
-      q: "How can I get more information or ask further questions about the VMLS LL.M. program?",
-      a: "Prospective applicants can visit the official Vinayaka Mission's Law School website or contact the admissions team via email or phone for more personalized information."
-    }
-  ];
+  const faqData = LLM_FAQ;
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/admissions/llm" />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

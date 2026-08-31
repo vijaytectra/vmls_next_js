@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, Target, Eye, ArrowRight } from "lucide-react";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Internal Quality Assurance Cell (IQAC) | VMLS",
-  description: "Ensuring continuous quality enhancement and sustaining academic excellence at Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/iqac");
+
+
 
 export default function IQACPage() {
   return (

@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import React from 'react';
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Anti Ragging Committee | VMLS",
-  description: "Members and contact details of the Anti Ragging Committee at Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/anti-ragging-committee");
+
+
 
 const committeeData = [
   {

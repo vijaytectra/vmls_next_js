@@ -2,6 +2,10 @@ import dynamic from "next/dynamic";
 import HeroVideo from "@/components/HeroVideo";
 import Announcements from "@/components/Announcements";
 import AboutSection from "@/components/AboutSection";
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
+
+export const metadata = pageMetadata("/");
 
 const MentoringCommittee = dynamic(() => import("@/components/MentoringCommittee"), {
   loading: () => <div className="w-full min-h-[380px]" />
@@ -36,6 +40,7 @@ const QuoteSection = dynamic(() => import("@/components/QuoteSection"), {
 export default function Home() {
   return (
     <div>
+      <PageSchema path="/" />
       <HeroVideo />
       <Announcements />
       <AboutSection />

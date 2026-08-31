@@ -2,10 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, MapPin, ArrowLeft } from 'lucide-react';
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
+
+export const metadata = pageMetadata("/iqac/workshops/teaching-learning-tools");
 
 export default function TeachingLearningToolsPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/iqac/workshops/teaching-learning-tools" />
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image

@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildMetadata } from "@/lib/seo";
+import { breadcrumbSchema, personSchema } from "@/lib/schema";
 
 interface FacultyData {
   name: string;
@@ -572,6 +576,64 @@ const facultyData: FacultyData[] = [
   }
 ];
 
+const FACULTY_TRAIL = [
+  { name: "Home", path: "/" },
+  { name: "Faculty Profiles", path: "/faculty-profiles" },
+];
+
+/** Squeeze a profile title into the 60-character budget. */
+function facultyTitle(faculty: FacultyData): string {
+  const full = `${faculty.name} – ${faculty.role.replace(/\.$/, "")} | VMLS`;
+  if (full.length <= 60) return full;
+  const short = `${faculty.name} – VMLS Law Faculty`;
+  return short.length <= 60 ? short : faculty.name;
+}
+
+/** 150-160 character summary built from the profile's own content. */
+function facultyDescription(faculty: FacultyData): string {
+  let text = `${faculty.name}, ${faculty.role.replace(/\.$/, "")} at Vinayaka Mission's Law School, Chennai.`;
+  // Pull whole sentences off the bio until the 150-character floor is met.
+  for (const sentence of (faculty.bio[0] ?? "").split(/(?<=\.)\s+/)) {
+    if (text.length >= 150) break;
+    text = `${text} ${sentence}`.trim();
+  }
+  if (text.length <= 160) return text;
+  const at = text.slice(0, 158).lastIndexOf(" ");
+  const onWord = at > 0 ? text.slice(0, at).replace(/[,;:.\s]+$/, "") : "";
+  return `${onWord.length >= 149 ? onWord : text.slice(0, 157).trimEnd()}…`;
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const faculty = facultyData.find((f) => f.slug === slug);
+  const path = `/faculty/${slug}`;
+
+  // Unknown slugs render a "Profile Under Construction" placeholder rather
+  // than a 404, so keep those out of the index instead of publishing a
+  // thin page under a real canonical.
+  if (!faculty) {
+    return buildMetadata({
+      path,
+      title: "Faculty Profile – VMLS Chennai",
+      description:
+        "This VMLS faculty profile is being prepared. Browse the full list of law faculty at Vinayaka Mission's Law School, Chennai, in the meantime.",
+      noindex: true,
+    });
+  }
+
+  return buildMetadata({
+    path,
+    title: facultyTitle(faculty),
+    description: facultyDescription(faculty),
+    ogTitle: `${faculty.name} – ${faculty.role.replace(/\.$/, "")}`,
+    ogDescription: `${faculty.name} teaches at Vinayaka Mission's Law School, Chennai. ${faculty.qualifications ?? ""}`.trim(),
+    image: faculty.image,
+    imageAlt: `${faculty.name}, ${faculty.role.replace(/\.$/, "")} at VMLS`,
+    ogType: "profile",
+    dcType: "Text.Biography",
+  });
+}
+
 export default async function FacultyProfilePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const faculty = facultyData.find((f) => f.slug === slug);
@@ -583,6 +645,19 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
 
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd
+        schema={[
+          personSchema({
+            name: faculty.name,
+            jobTitle: faculty.role.replace(/\.$/, ""),
+            path: `/faculty/${slug}`,
+            image: faculty.image,
+            email: faculty.email,
+            description: facultyDescription(faculty),
+          }),
+          breadcrumbSchema([...FACULTY_TRAIL, { name: faculty.name }]),
+        ]}
+      />
       {/* Breadcrumb - Matching Dean Page Style */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

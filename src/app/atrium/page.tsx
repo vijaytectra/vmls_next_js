@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Atrium | VMLS",
-  description: "Experience the vibrant and inviting atrium at Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/atrium");
+
+
 
 export default function AtriumPage() {
   return (

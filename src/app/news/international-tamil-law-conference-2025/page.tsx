@@ -1,10 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, User, Share2 } from 'lucide-react';
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
+
+export const metadata = pageMetadata("/news/international-tamil-law-conference-2025");
 
 export default function InternationalTamilLawConferencePage() {
   return (
     <main className="min-h-screen bg-[#f5f3ef] overflow-hidden">
+      <PageSchema path="/news/international-tamil-law-conference-2025" />
       {/* Hero Section */}
       <section className="bg-[#800000] text-white pt-16 pb-12 px-[5%]">
         <div className="max-w-7xl mx-auto">

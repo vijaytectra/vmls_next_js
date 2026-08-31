@@ -1,15 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar } from 'lucide-react';
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
-export const metadata = {
-  title: "Maritime Law | VMLS",
-  description: "Vinayaka Mission's Law School (VMLS) Maritime Law centre.",
-};
+export const metadata = pageMetadata("/maritime-law");
+
+
 
 export default function MaritimeLawPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
+      <PageSchema path="/maritime-law" />
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-3.5 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-2 text-xs md:text-sm font-medium text-gray-600">

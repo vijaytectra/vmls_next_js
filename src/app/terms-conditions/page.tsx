@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { ShieldAlert, Scale, Globe, BookOpen, Copyright, Settings, Gavel, Mail } from 'lucide-react';
+import { pageMetadata } from "@/lib/seo-pages";
+
+export const metadata = pageMetadata("/terms-conditions");
 
 export default function TermsConditionsPage() {
   return (

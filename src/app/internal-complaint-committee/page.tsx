@@ -1,10 +1,7 @@
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 
-export const metadata = {
-  title: "Internal Complaint Committee | VMLS",
-  description: "Members and contact details of the Internal Complaint Committee at Vinayaka Mission's Law School.",
-};
+
 
 const committeeData = [
   {
@@ -121,3 +118,6 @@ export default function InternalComplaintCommitteePage() {
 
 // Added this to handle React.Fragment since I'm not importing React explicitly (Next.js handles it, but Fragment needs to be defined if used as <React.Fragment>)
 import React from 'react';
+import { pageMetadata } from "@/lib/seo-pages";
+
+export const metadata = pageMetadata("/internal-complaint-committee");

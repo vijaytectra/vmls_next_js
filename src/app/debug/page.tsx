@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import fs from 'fs';
 import path from 'path';
+import { pageMetadata } from "@/lib/seo-pages";
+
+export const metadata = pageMetadata("/debug");
 
 export default function DebugImagesPage() {
   const images = [
