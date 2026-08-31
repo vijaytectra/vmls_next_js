@@ -1,6 +1,6 @@
+import React from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
-import React from 'react';
 
 export const metadata = {
   title: "Student Grievance Redressal Committee | VMLS",
@@ -9,24 +9,60 @@ export const metadata = {
 
 const committeeData = [
   {
-    category: "CHAIRPERSON",
+    category: "CHAIRMAN",
     members: [
-      { no: 1, name: "Mr. Siddharth Raja", designation: "Executive Dean, VMLS", email: "exe.dean@vmls.edu.in", phone: "9845371357" }
+      {
+        no: 1,
+        name: "Mr. Siddharth Raja",
+        designation: "Executive Dean",
+        email: "Exec.dean@vmls.edu.in",
+        phone: "9845371357"
+      }
     ]
   },
   {
     category: "MEMBERS",
     members: [
-      { no: 2, name: "Dr. R. Shenbagavalli", designation: "Associate Dean Student Affairs", email: "shenbagavalli@vmls.edu.in", phone: "9551567599" },
-      { no: 3, name: "Dr. Gnana Sangamithra", designation: "Associate Dean Research", email: "sangamithra@vmls.edu.in", phone: "9791655326" },
-      { no: 4, name: "Prof. Sowmiya Narayanan", designation: "Assistant Dean PG Academics", email: "sowmiyanarayan@vmls.edu.in", phone: "9884503578" },
-      { no: 5, name: "Mr. Victor. K", designation: "Director Administration", email: "director.admin@vmls.edu.in", phone: "9500390546" }
+      {
+        no: 2,
+        name: "Dr. C. Fowmina",
+        designation: "Associate Professor",
+        email: "studentaffairs@vmls.edu.in",
+        phone: "8925934394"
+      },
+      {
+        no: 3,
+        name: "Prof. Stalin",
+        designation: "Assistant Professor",
+        email: "stalin@vmls.edu.in",
+        phone: "9903230454"
+      },
+      {
+        no: 4,
+        name: "Mr. Victor",
+        designation: "Director Administration",
+        email: "director.admin@vmls.edu.in",
+        phone: "9500390546"
+      },
+      {
+        no: 5,
+        name: "Ms. Ansala",
+        designation: "Asst.Manager Student Section",
+        email: "studsec@vmls.edu.in",
+        phone: "84289388883"
+      }
     ]
   },
   {
-    category: "SPECIAL INVITEE – STUDENT",
+    category: "SPECIAL INVITEE (STUDENT)",
     members: [
-      { no: 6, name: "Arunkumar G", designation: "III YEAR LLB", email: "arunkumar.g_llb23@vmls.edu.in", phone: "9655120505" }
+      {
+        no: 1,
+        name: "Prakash",
+        designation: "III Year LLB",
+        email: "Prakash_llb24@vmls.edu.in",
+        phone: "9841070791"
+      }
     ]
   }
 ];
@@ -90,14 +126,18 @@ export default function StudentGrievanceRedressalCommitteePage() {
                         <td className="py-5 px-6 text-gray-600 font-medium leading-relaxed">{member.designation}</td>
                         <td className="py-5 px-6">
                           <div className="flex flex-col gap-2.5">
-                            <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
-                              <Mail size={16} className="group-hover:scale-110 transition-transform" />
-                              <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
-                            </a>
-                            <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
-                              <Phone size={16} className="group-hover:scale-110 transition-transform" />
-                              {member.phone}
-                            </a>
+                            {member.email ? (
+                              <a href={`mailto:${member.email}`} className="flex items-center gap-2.5 text-[#a31f34] hover:text-[#800000] transition-colors text-sm font-bold group">
+                                <Mail size={16} className="group-hover:scale-110 transition-transform" />
+                                <span className="truncate max-w-[200px] lg:max-w-none">{member.email}</span>
+                              </a>
+                            ) : null}
+                            {member.phone ? (
+                              <a href={`tel:${member.phone}`} className="flex items-center gap-2.5 text-gray-500 hover:text-gray-900 transition-colors text-sm font-semibold group">
+                                <Phone size={16} className="group-hover:scale-110 transition-transform" />
+                                {member.phone}
+                              </a>
+                            ) : null}
                           </div>
                         </td>
                       </tr>
