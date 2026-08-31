@@ -71,7 +71,7 @@ export default function WomenEmpowermentCellPage() {
               <thead>
                 <tr className="bg-gray-900 text-white font-inter uppercase tracking-widest text-sm">
                   <th className="py-6 px-6 font-semibold w-20 text-center">No.</th>
-                  <th className="py-6 px-6 font-semibold">Member</th>
+                  <th className="py-6 px-6 font-semibold whitespace-nowrap min-w-[220px]">Member</th>
                   <th className="py-6 px-6 font-semibold">Designation</th>
                   <th className="py-6 px-6 font-semibold">Contact Details</th>
                 </tr>
@@ -87,8 +87,8 @@ export default function WomenEmpowermentCellPage() {
                     {section.members.map((member, mIdx) => (
                       <tr key={mIdx} className="border-b border-gray-100 hover:bg-red-50/30 transition-all duration-300">
                         <td className="py-5 px-6 text-gray-400 text-center font-bold">{member.no}</td>
-                        <td className="py-5 px-6">
-                          <div className="font-bold text-[#1a1a1a] text-lg">{member.name}</div>
+                        <td className="py-5 px-6 whitespace-nowrap min-w-[220px]">
+                          <div className="font-bold text-[#1a1a1a] text-lg whitespace-nowrap">{member.name}</div>
                         </td>
                         <td className="py-5 px-6 text-gray-600 font-medium leading-relaxed">{member.designation}</td>
                         <td className="py-5 px-6">
