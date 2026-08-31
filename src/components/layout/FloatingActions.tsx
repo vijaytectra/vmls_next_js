@@ -68,23 +68,29 @@ export default function FloatingActions() {
     };
 
     const initChatbot = () => {
-      if (document.querySelector(".npf_chatbots")) return;
-      const chatDiv = document.createElement("div");
-      chatDiv.className = "npf_chatbots";
-      chatDiv.setAttribute("data-w", "1189388fc18c4ac0952bc3816b615524");
-      chatDiv.style.display = "none";
-      document.body.appendChild(chatDiv);
-      appended.push(chatDiv);
+      let chatDiv = document.querySelector<HTMLElement>(".npf_chatbots");
+      if (!chatDiv) {
+        chatDiv = document.createElement("div");
+        chatDiv.className = "npf_chatbots";
+        chatDiv.setAttribute("data-w", "1189388fc18c4ac0952bc3816b615524");
+        chatDiv.style.display = "none";
+        document.body.appendChild(chatDiv);
+      }
 
-      loadScript(
-        "https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/5747642c1669bd257/1189388fc18c4ac0952bc3816b615524"
-      );
+      const scriptSrc =
+        "https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/5747642c1669bd257/1189388fc18c4ac0952bc3816b615524";
+      if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
+        const s = document.createElement("script");
+        s.src = scriptSrc;
+        s.async = true;
+        document.body.appendChild(s);
+      }
     };
 
-    // Defer heavy third-party widgets so first paint stays fast
-    whenIdle(initAmbassador, 2200);
-    whenIdle(initNpfPopup, 4000);
-    whenIdle(initChatbot, 9000);
+    // Load widgets efficiently so Niaa Chatbot is present promptly on every page
+    whenIdle(initChatbot, 500);
+    whenIdle(initAmbassador, 1200);
+    whenIdle(initNpfPopup, 3000);
 
     // If user hits Enquire early, load NPF immediately
     const enquireSelector = `.npfWidget-${NPF_WIDGET_ID}`;
