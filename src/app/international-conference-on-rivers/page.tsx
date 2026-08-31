@@ -466,6 +466,131 @@ export default function InternationalConferencePage() {
             </div>
           </div>
         </section>
+
+        {/* Committees Section */}
+        <section className="py-12 sm:py-16 md:py-20 px-[5%] bg-white border-t border-gray-100">
+          <div className="max-w-7xl mx-auto">
+            {/* Section Header */}
+            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="w-8 h-[2px] bg-[#a31f34]"></div>
+                <span className="text-[#a31f34] uppercase tracking-[0.2em] text-xs font-bold">Conference Leadership</span>
+                <div className="w-8 h-[2px] bg-[#a31f34]"></div>
+              </div>
+              <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                Committees & Advisory Board
+              </h2>
+              <p className="font-inter text-gray-600 text-base md:text-lg mt-3">
+                Distinguished academic leaders, legal experts, and conference organizers
+              </p>
+            </div>
+
+            {/* Committees Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+              {/* Card 1: Advisory Committee */}
+              <div className="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-2 bg-[#800000]"></div>
+                <div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-xl bg-[#800000]/10 flex items-center justify-center text-[#800000]">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m3 0h1m-1-4h.01M9 16h.01M9 12h.01M9 8h.01M15 16h.01M15 12h.01M15 8h.01" />
+                      </svg>
+                    </div>
+                    <h3 className="font-playfair text-xl sm:text-2xl font-bold text-gray-900">
+                      Advisory Committee
+                    </h3>
+                  </div>
+
+                  <div className="space-y-4">
+                    {[
+                      { name: "Dr. Tiina Paloniitty", role: "Professor", inst: "University of Helsinki" },
+                      { name: "Amit Ranjan", role: "Research Fellow", inst: "NUS Singapore" },
+                      { name: "Dr. Masrur Salekin", role: "Judge", inst: "Bangladesh" },
+                      { name: "Dr. Zlato Hadzidedic", role: "Director", inst: "Center for Nationalism Studies, Bosnia and Herzegovina" },
+                      { name: "Robert Walton", role: "Associate Lecturer", inst: "The Open University, UK" },
+                      { name: "Shawahiq Siddiqui", role: "Advocate", inst: "IELO" }
+                    ].map((member, idx) => (
+                      <div key={idx} className="p-3.5 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-[#800000]/30 transition-colors">
+                        <h4 className="font-inter font-bold text-gray-900 text-base">{member.name}</h4>
+                        <p className="font-inter text-xs sm:text-sm text-[#800000] font-semibold">{member.role}</p>
+                        <p className="font-inter text-xs text-gray-500">{member.inst}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: Scientific Committee */}
+              <div className="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-2 bg-[#fbb03b]"></div>
+                <div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-xl bg-[#fbb03b]/20 flex items-center justify-center text-amber-800">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                    <h3 className="font-playfair text-xl sm:text-2xl font-bold text-gray-900">
+                      Scientific Committee
+                    </h3>
+                  </div>
+
+                  <div className="space-y-4">
+                    {[
+                      { name: "Navidreza Ahadi", inst: "Srinakharinwirot University - SWU, Thailand" },
+                      { name: "Aurangzaib Alizai", inst: "University of Balochistan, Pakistan" },
+                      { name: "Dr. Sanga Mithra", inst: "Vinayaka Mission's Law School, Chennai" },
+                      { name: "Ms. Nabeela Siddiqui", inst: "Vinayaka Mission's Law School, Chennai" },
+                      { name: "Ms. Shambhavi Thakur", inst: "Vinayaka Mission's Law School, Chennai" }
+                    ].map((member, idx) => (
+                      <div key={idx} className="p-3.5 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-[#fbb03b]/60 transition-colors">
+                        <h4 className="font-inter font-bold text-gray-900 text-base">{member.name}</h4>
+                        <p className="font-inter text-xs text-gray-600 mt-0.5">{member.inst}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3: Conference Organising Committee */}
+              <div className="bg-gradient-to-b from-gray-50 to-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+                <div className="absolute top-0 left-0 right-0 h-2 bg-[#a31f34]"></div>
+                <div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-xl bg-[#a31f34]/10 flex items-center justify-center text-[#a31f34]">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    </div>
+                    <h3 className="font-playfair text-xl sm:text-2xl font-bold text-gray-900">
+                      Organising Committee
+                    </h3>
+                  </div>
+
+                  <div className="space-y-4">
+                    {[
+                      { badge: "PATRON", name: "Dr. Ananth Padmanabhan", desig: "Dean, Vinayaka Mission's Law School" },
+                      { badge: "CONFERENCE CHAIR", name: "Ms. Nabeela Siddiqui", desig: "Assistant Professor, Vinayaka Mission's Law School" },
+                      { badge: "CONFERENCE CHAIR", name: "Dr. Gnana Sanga Mithra S", desig: "Associate Professor, Vinayaka Mission's Law School" },
+                      { badge: "CO-CHAIR", name: "Mr. Sowmiya Narayan Rajagopalan", desig: "Assistant Professor, Vinayaka Mission's Law School" },
+                      { badge: "CO-CHAIR", name: "Ms. Shambhavi Thakur", desig: "Assistant Professor, Vinayaka Mission's Law School" },
+                      { badge: "CO-CHAIR", name: "Ms. Abhinanditha", desig: "Assistant Professor, Vinayaka Mission's Law School" }
+                    ].map((member, idx) => (
+                      <div key={idx} className="p-3.5 bg-white rounded-xl border border-gray-100 shadow-sm hover:border-[#a31f34]/30 transition-colors">
+                        <span className="inline-block px-2.5 py-0.5 mb-1 bg-[#800000]/10 text-[#800000] font-inter font-bold text-[10px] uppercase tracking-wider rounded-full">
+                          {member.badge}
+                        </span>
+                        <h4 className="font-inter font-bold text-gray-900 text-base">{member.name}</h4>
+                        <p className="font-inter text-xs text-gray-600">{member.desig}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
