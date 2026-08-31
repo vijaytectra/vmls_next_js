@@ -1,10 +1,49 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
+import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+
+export const metadata: Metadata = {
+  title: "LL.B. Admissions | VMLS Chennai",
+  description: "Undergraduate law programmes at Vinayaka Mission's Law School, Chennai, including LL.B. (Hons.), B.A. LL.B., B.B.A. LL.B., and B.Com. LL.B.",
+};
 
 export default function LLBAdmissionsPage() {
   return (
     <main className="min-h-screen bg-white">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", item: "https://vmls.edu.in/" },
+          { name: "Admissions", item: "https://vmls.edu.in/admissions/process" },
+          { name: "LL.B. Admissions", item: "https://vmls.edu.in/admissions/llb" },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Course",
+            name: "LL.B. (Hons.)",
+            description:
+              "Three-year LL.B. (Hons.) programme at Vinayaka Mission's Law School, Chennai, mentored by O.P. Jindal Global University.",
+            provider: {
+              "@type": "CollegeOrUniversity",
+              name: "Vinayaka Mission's Law School",
+              sameAs: "https://vmls.edu.in/",
+            },
+            hasCourseInstance: {
+              "@type": "CourseInstance",
+              courseMode: "Onsite",
+              location: {
+                "@type": "Place",
+                name: "VMLS Campus, Chennai",
+              },
+            },
+          }),
+        }}
+      />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

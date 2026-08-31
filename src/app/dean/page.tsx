@@ -35,6 +35,31 @@ const academicQualifications = [
 export default function DeanPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Siddharth Raja",
+            jobTitle: "Executive Dean",
+            worksFor: { "@id": "https://vmls.edu.in/#organization" },
+            url: "https://vmls.edu.in/dean",
+            image:
+              "https://vmls.edu.in/assets/siddharth-raja-executive-dean-vmls.jpg",
+            alumniOf: [
+              {
+                "@type": "CollegeOrUniversity",
+                name: "University of Warwick School of Law",
+              },
+              {
+                "@type": "CollegeOrUniversity",
+                name: "National Law School of India University",
+              },
+            ],
+          }),
+        }}
+      />
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="flex items-center gap-3 text-base md:text-lg font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">
