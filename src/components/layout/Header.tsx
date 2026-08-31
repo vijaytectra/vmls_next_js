@@ -320,14 +320,16 @@ export default function Header() {
 
           <div className="flex items-center gap-1 md:gap-3 pr-0 shrink-0">
             <div className="flex-shrink-0 border-r border-gray-100 pr-1.5 md:pr-3">
-              <Image
-                src="/images/headerright.webp"
-                alt="VMLS Vinayaka Mission's Law School"
-                height={70}
-                width={150}
-                className="h-7 sm:h-8 md:h-9 lg:h-11 w-auto max-w-[78px] sm:max-w-[85px] md:max-w-[100px] lg:max-w-[120px] object-contain"
-                priority
-              />
+              <Link href="/" className="block cursor-pointer">
+                <Image
+                  src="/images/headerright.webp"
+                  alt="VMLS Vinayaka Mission's Law School"
+                  height={70}
+                  width={150}
+                  className="h-7 sm:h-8 md:h-9 lg:h-11 w-auto max-w-[78px] sm:max-w-[85px] md:max-w-[100px] lg:max-w-[120px] object-contain"
+                  priority
+                />
+              </Link>
             </div>
 
             <button
