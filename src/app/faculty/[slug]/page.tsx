@@ -620,9 +620,9 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
         {faculty.bio.length > 1 && (
           <section className="px-[5%] pt-8 pb-16 md:pt-10 md:pb-24 relative z-10">
             <div className="max-w-5xl mx-auto">
-              <div className="flex items-center gap-3 sm:gap-4 mb-8 md:mb-10">
-                <div className="w-8 sm:w-12 h-[2px] bg-[#a31f34] shrink-0"></div>
-                <h2 className="font-playfair text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] font-bold tracking-tight whitespace-nowrap">
+              <div className="flex items-center gap-2.5 sm:gap-4 mb-8 md:mb-10">
+                <div className="w-6 sm:w-12 h-[2px] bg-[#a31f34] shrink-0"></div>
+                <h2 className="font-playfair text-[22px] min-[380px]:text-2xl sm:text-3xl md:text-4xl text-[#1a1a1a] font-bold tracking-tight whitespace-nowrap">
                   Academic Biography
                 </h2>
               </div>
