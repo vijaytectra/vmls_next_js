@@ -48,26 +48,24 @@ export default function ContactUsPage() {
       </header>
 
       {/* Main Contact Section */}
-      <section className="py-12 sm:py-16 md:py-24 px-[5%]">
+      <section className="py-10 sm:py-16 md:py-24 px-[5%]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24">
           
           {/* Left: Contact Info */}
-          <div className="space-y-16">
+          <div className="space-y-8 sm:space-y-10 pl-7 sm:pl-0">
             {/* Campus Address 1 */}
             <div>
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-4">
-                <span className="w-12 h-[1px] bg-[#a31f34] hidden md:block"></span>
+              <h2 className="font-playfair text-[19px] min-[380px]:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 VMLS Campus Address
               </h2>
-              <div className="font-inter text-gray-600 space-y-4 text-base md:text-lg leading-relaxed">
+              <div className="font-inter text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
                 <Link 
                   href={mapUrl}
                   target="_blank"
                   className="block hover:text-[#a31f34] transition-colors group"
                 >
                   <p className="group-hover:underline decoration-[#a31f34] underline-offset-4">
-                    Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road),<br />
-                    Paiyanoor, Chennai - 603104, Tamil Nadu, India.
+                    Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road), Paiyanoor, Chennai - 603104, Tamil Nadu, India.
                   </p>
                 </Link>
               </div>
@@ -75,17 +73,16 @@ export default function ContactUsPage() {
 
             {/* Admissions */}
             <div>
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-4">
-                <span className="w-12 h-[1px] bg-[#a31f34] hidden md:block"></span>
+              <h2 className="font-playfair text-[19px] min-[380px]:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 For Admissions
               </h2>
-              <div className="font-inter text-gray-600 space-y-4 text-base md:text-lg">
-                <div className="flex flex-wrap gap-4 items-center">
+              <div className="font-inter text-gray-600 space-y-2 text-sm sm:text-base md:text-lg">
+                <div className="flex flex-col min-[380px]:flex-row min-[380px]:flex-wrap gap-1.5 min-[380px]:gap-3 sm:gap-4 items-start min-[380px]:items-center">
                   <Link href="tel:18003094350" className="text-[#a31f34] font-bold hover:underline">1800 309 4350</Link>
-                  <span className="text-gray-300">|</span>
+                  <span className="text-gray-300 hidden min-[380px]:inline">|</span>
                   <Link href="tel:7358201234" className="text-[#a31f34] font-bold hover:underline">7358 201 234</Link>
                 </div>
-                <Link href="mailto:admissions@vmls.edu.in" className="block text-gray-700 hover:text-[#a31f34] transition-colors underline underline-offset-4">
+                <Link href="mailto:admissions@vmls.edu.in" className="block text-gray-700 hover:text-[#a31f34] transition-colors underline underline-offset-4 break-all">
                   admissions@vmls.edu.in
                 </Link>
               </div>
@@ -93,15 +90,12 @@ export default function ContactUsPage() {
 
             {/* City Office / Address 2 */}
             <div>
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-4">
-                <span className="w-12 h-[1px] bg-[#a31f34] hidden md:block"></span>
+              <h2 className="font-playfair text-[19px] min-[380px]:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 City Office Address
               </h2>
-              <div className="font-inter text-gray-600 space-y-4 text-base md:text-lg leading-relaxed">
+              <div className="font-inter text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
                 <p>
-                  New No: 213, Old No: 160, Behind Doshi Tower,<br />
-                  Poonamallee High Road, Kilpauk, Chennai - 600010,<br />
-                  Tamil Nadu, India.
+                  New No: 213, Old No: 160, Behind Doshi Tower, Poonamallee High Road, Kilpauk, Chennai - 600010, Tamil Nadu, India.
                 </p>
               </div>
             </div>

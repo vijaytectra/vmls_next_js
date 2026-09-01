@@ -24,9 +24,8 @@ export default function MentoringCommitteePage() {
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
           <div className="lg:w-[45%] p-[5%] flex flex-col justify-center bg-[#800000] text-white">
-            <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-              Mentoring <br />
-              <span className="text-[#fbb03b]">Committee</span>
+            <h1 className="font-playfair text-[22px] min-[380px]:text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight whitespace-nowrap">
+              Mentoring <span className="text-[#fbb03b]">Committee</span>
             </h1>
             <p className="font-inter text-lg md:text-xl opacity-90 leading-relaxed max-w-xl">
               Fostering excellence through institutional mentorship, guided by eminent legal professionals and distinguished academics from across the globe.

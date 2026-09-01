@@ -24,7 +24,7 @@ export default function SeminarHallPage() {
         {/* Hero Section - Career Services Style */}
         <section className="relative w-full bg-white border-b border-gray-100">
           <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
-            <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+            <div className="w-full lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
               <div className="mb-4">
                 <span className="inline-block w-12 h-[1px] bg-[#fbb03b] align-middle"></span>
                 <span className="font-inter text-[#fbb03b] text-xs font-bold uppercase tracking-[0.4em] mx-4">Knowledge Exchange</span>
@@ -36,14 +36,14 @@ export default function SeminarHallPage() {
                 A modern facility designed to host a variety of academic and professional events in a sophisticated environment.
               </p>
             </div>
-            <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
+            <div className="hidden lg:block lg:w-[55%] relative min-h-[300px]">
               <Image
                 src="/images/shall1.webp"
                 alt="VMLS Seminar Hall"
                 fill
                 priority
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 55vw"
+                sizes="55vw"
               />
               <div className="absolute inset-0 bg-black/10"></div>
             </div>

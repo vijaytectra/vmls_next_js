@@ -396,6 +396,8 @@ html {
     width: 100%;
     justify-content: center;
     text-align: center;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -442,7 +444,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 0.25rem 0 0.5rem;
+  margin: 0.35rem 1rem 0.65rem 0;
   padding: 0.85rem 1.6rem;
   background: linear-gradient(135deg, #a31f34 0%, #800000 100%);
   color: #ffffff !important;
@@ -689,8 +691,8 @@ footer {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  min-height: 2.75rem;
-  margin: 0 0 0.25rem;
+  min-height: auto;
+  margin: 0 0 0.15rem;
   text-align: center !important;
   word-spacing: normal !important;
   letter-spacing: normal !important;
@@ -843,8 +845,7 @@ p.text-right,
   main section li,
   main article li,
   p.text-left,
-  .text-left p,
-  .text-center > p:not(.person-card-role):not(.person-card-name):not(.text-center):not(.hero-tagline) {
+  .text-left p {
     text-align: left !important;
     text-align-last: auto !important;
     text-justify: auto !important;
@@ -859,23 +860,30 @@ p.text-right,
     word-wrap: normal !important;
   }
 
-  /* Keep intentional centered UI */
+  /* Keep intentional centered UI — force job position / role below name to center on mobile devices */
   .text-center > h1,
   .text-center > h2,
   .text-center > h3,
   .text-center > h4,
   .text-center > span,
+  .text-center > p,
+  .text-center p,
   h1.text-center,
   h2.text-center,
   h3.text-center,
   p.text-center,
   p.hero-tagline,
   .hero-tagline,
+  .person-card-role,
+  .person-card-details .person-card-role,
+  .person-card-details--start .person-card-role,
+  main section .person-card-details--start p.person-card-role,
+  main article .person-card-details--start p.person-card-role,
   .person-card-details:not(.person-card-details--start) > .person-card-role,
   .person-card-details:not(.person-card-details--start) > .person-card-name,
-  footer p,
   header p {
     text-align: center !important;
+    text-align-last: center !important;
     word-spacing: normal !important;
     letter-spacing: normal !important;
     -webkit-hyphens: none !important;
@@ -883,10 +891,13 @@ p.text-right,
   }
 
   .person-card-details--start .person-card-role,
-  .person-card-details--start .person-card-name,
-  main section .person-card-details--start p.person-card-role {
-    text-align: left !important;
-    text-align-last: left !important;
+  main section .person-card-details--start p.person-card-role,
+  main article .person-card-details--start p.person-card-role {
+    text-align: center !important;
+    text-align-last: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
   }
 
   p.text-right,
@@ -895,6 +906,17 @@ p.text-right,
     word-spacing: normal !important;
     -webkit-hyphens: none !important;
     hyphens: none !important;
+  }
+}
+
+/* Tablet viewport (768px - 1023px): Keep person card names on a single line */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .person-card-name,
+  main section .person-card-name,
+  main article .person-card-name {
+    white-space: nowrap !important;
+    font-size: clamp(12px, 1.6vw, 16px) !important;
+    line-height: 1.3 !important;
   }
 }
 

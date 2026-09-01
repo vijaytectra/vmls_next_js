@@ -52,11 +52,11 @@ export default function DeanPage() {
       <hr className="border-gray-100" />
 
       {/* Hero: image left, intro right — full width within px-[5%] */}
-      <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-white overflow-hidden relative">
+      <section className="pb-8 md:pb-16 pt-6 md:pt-12 px-[5%] bg-white overflow-hidden relative">
         <ArchitecturalSketch />
 
-        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-10 relative z-10">
-          <div className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] order-1 shrink-0">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-5 sm:gap-6 md:gap-8 lg:gap-10 relative z-10">
+          <div className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] order-1 shrink-0 mx-auto lg:mx-0">
             <div className="relative w-full aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
               <div className="relative w-full h-full overflow-hidden">
                 <Image
@@ -71,24 +71,24 @@ export default function DeanPage() {
             </div>
           </div>
 
-          <div className="flex-1 order-2 flex flex-col justify-center min-w-0">
-            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">
+          <div className="flex-1 order-2 flex flex-col justify-center items-center text-center min-w-0 w-full">
+            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-2 md:mb-3 text-center">
               Leadership
             </h3>
-            <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-4 leading-tight">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-3 md:mb-4 leading-tight text-center">
               Mr. Siddharth Raja
             </h1>
 
-            <div className="space-y-8">
+            <div className="space-y-4 md:space-y-6 w-full flex flex-col items-center text-center">
               <div>
-                <h4 className="font-inter text-xl md:text-2xl font-bold tracking-tight text-[#a31f34] mb-3">
+                <h4 className="font-inter text-lg md:text-2xl font-bold tracking-tight text-[#a31f34] mb-2 text-center">
                   Executive Dean
                 </h4>
-                <ul className="space-y-2">
+                <ul className="space-y-2 text-center">
                   {qualifications.map((item) => (
                     <li
                       key={item}
-                      className="font-inter text-base md:text-lg text-[#a31f34] leading-relaxed"
+                      className="font-inter text-base md:text-lg text-[#a31f34] leading-relaxed text-center"
                     >
                       {item}
                     </li>

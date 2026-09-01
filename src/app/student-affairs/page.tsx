@@ -180,11 +180,11 @@ export default function StudentAffairsPage() {
           {/* Clubs */}
           <Link
             href="/student-clubs"
-            className="bg-[#800000] p-5 sm:p-4 xl:p-5 text-white flex flex-col justify-between min-h-0 sm:min-h-[340px] lg:min-h-[380px] xl:min-h-[420px] group relative overflow-hidden text-left"
+            className="bg-[#800000] p-5 xl:p-5 text-white flex flex-col justify-start lg:justify-between min-h-0 lg:min-h-[380px] xl:min-h-[420px] group relative overflow-hidden text-left"
           >
             <div className="text-left">
-              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-4 pb-2 border-b border-white/20 text-left">Clubs at VMLS</h3>
-              <ul className="space-y-3 text-[11px] xl:text-xs font-medium text-white/85 text-left">
+              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-3 xl:mb-4 pb-2 border-b border-white/20 text-left">Clubs at VMLS</h3>
+              <ul className="space-y-2.5 xl:space-y-3 text-xs xl:text-xs font-medium text-white/85 text-left">
                 <li className="flex items-start gap-2 text-left">
                   <span className="w-1.5 h-1.5 bg-[#fbb03b] rounded-full mt-1.5 shrink-0" />
                   <span className="min-w-0 flex-1 text-left">8 Vibrant Student Clubs</span>
@@ -198,20 +198,20 @@ export default function StudentAffairsPage() {
                   <span className="min-w-0 flex-1 text-left">Jointly Managed by Faculty and Students</span>
                 </li>
               </ul>
-              <p className="mt-4 font-inter text-[11px] xl:text-xs text-white/80 leading-relaxed text-left">
+              <p className="mt-3 xl:mt-4 font-inter text-xs xl:text-xs text-white/80 leading-relaxed text-left">
                 A vibrant platform to explore interests, develop skills, and lead with creativity
               </p>
             </div>
-            <span className="mt-6 inline-block self-start px-4 py-2 border border-white/30 text-white font-bold text-[9px] uppercase tracking-widest group-hover:bg-white group-hover:text-[#800000] transition-all">
+            <span className="mt-4 xl:mt-6 inline-block self-start px-4 py-2 border border-white/30 text-white font-bold text-[9px] uppercase tracking-widest group-hover:bg-white group-hover:text-[#800000] transition-all">
               Read More
             </span>
           </Link>
 
           {/* Houses */}
-          <div className="bg-[#F5F5F5] p-4 xl:p-5 text-gray-900 flex flex-col justify-between min-h-[380px] xl:min-h-[420px] border border-gray-100 text-left">
+          <div className="bg-[#F5F5F5] p-5 xl:p-5 text-gray-900 flex flex-col justify-start lg:justify-between min-h-0 lg:min-h-[380px] xl:min-h-[420px] border border-gray-100 text-left">
             <div className="text-left">
-              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-4 pb-2 border-b border-gray-200 text-left">Houses</h3>
-              <ul className="space-y-3 text-[11px] xl:text-xs font-medium text-gray-600 text-left">
+              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-3 xl:mb-4 pb-2 border-b border-gray-200 text-left">Houses</h3>
+              <ul className="space-y-2.5 xl:space-y-3 text-xs xl:text-xs font-medium text-gray-600 text-left">
                 <li className="flex items-start gap-2 text-left">
                   <span className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 shrink-0" />
                   <span className="min-w-0 flex-1 text-left">4 Distinct Houses: Red, Blue, Green, and Yellow</span>
@@ -225,30 +225,30 @@ export default function StudentAffairsPage() {
                   <span className="min-w-0 flex-1 text-left">Promotes team spirit &amp; healthy competition</span>
                 </li>
               </ul>
-              <p className="mt-4 font-inter text-[11px] xl:text-xs text-gray-600 leading-relaxed text-left">
+              <p className="mt-3 xl:mt-4 font-inter text-xs xl:text-xs text-gray-600 leading-relaxed text-left">
                 Opportunities to engage in academic, cultural, and co-curricular challenges
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-gray-200 text-left">
-              <p className="font-playfair text-sm font-bold text-gray-900 mb-2 leading-snug text-left">
+            <div className="mt-4 xl:mt-6 pt-3.5 xl:pt-4 border-t border-gray-200 text-left">
+              <p className="font-playfair text-sm font-bold text-gray-900 mb-1 xl:mb-2 leading-snug text-left">
                 Contact: Dr. Fowmina, Associate Dean – Student Affairs
               </p>
-              <a href="mailto:ad.sa@vmls.edu.in" className="block text-[11px] xl:text-xs text-[#800000] font-semibold hover:text-[#a31f34] break-all text-left">
+              <a href="mailto:ad.sa@vmls.edu.in" className="block text-xs xl:text-xs text-[#800000] font-semibold hover:text-[#a31f34] break-all text-left">
                 ad.sa@vmls.edu.in
               </a>
-              <a href="tel:+918925934394" className="block text-[11px] xl:text-xs text-gray-700 mt-1 hover:text-[#800000] text-left">
+              <a href="tel:+918925934394" className="block text-xs xl:text-xs text-gray-700 mt-1 hover:text-[#800000] text-left">
                 +91 89259 34394
               </a>
             </div>
           </div>
 
           {/* Support */}
-          <div className="bg-[#006cae] p-4 xl:p-5 text-white flex flex-col justify-between min-h-[380px] xl:min-h-[420px] text-left">
+          <div className="bg-[#006cae] p-5 xl:p-5 text-white flex flex-col justify-start lg:justify-between min-h-0 lg:min-h-[380px] xl:min-h-[420px] text-left">
             <div className="text-left">
-              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-4 pb-2 border-b border-white/20 leading-snug text-left">
+              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-3 xl:mb-4 pb-2 border-b border-white/20 leading-snug text-left">
                 Student Support &amp; Counselling
               </h3>
-              <ul className="space-y-3 text-[11px] xl:text-xs font-medium text-white/85 text-left">
+              <ul className="space-y-2.5 xl:space-y-3 text-xs xl:text-xs font-medium text-white/85 text-left">
                 <li className="flex items-start gap-2 text-left">
                   <span className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 shrink-0" />
                   <span className="min-w-0 flex-1 text-left">24/7 Access to Professional Counsellors</span>
@@ -263,9 +263,9 @@ export default function StudentAffairsPage() {
                 </li>
               </ul>
             </div>
-            <div className="mt-6 pt-4 border-t border-white/20 text-left">
-              <p className="font-playfair text-sm font-bold mb-2 leading-snug text-left">Counselling Support Contact: Dr. Saranya</p>
-              <a href="tel:+919500049969" className="text-[11px] xl:text-xs text-white/90 hover:text-white text-left">
+            <div className="mt-4 xl:mt-6 pt-3.5 xl:pt-4 border-t border-white/20 text-left">
+              <p className="font-playfair text-sm font-bold mb-1 xl:mb-2 leading-snug text-left">Counselling Support Contact: Dr. Saranya</p>
+              <a href="tel:+919500049969" className="text-xs xl:text-xs text-white/90 hover:text-white text-left">
                 +91 95000 49969
               </a>
             </div>
@@ -274,11 +274,11 @@ export default function StudentAffairsPage() {
           {/* Anti-Ragging */}
           <Link
             href="/anti-ragging-squad"
-            className="bg-[#fbb03b] p-4 xl:p-5 text-[#1a1a1a] flex flex-col justify-between min-h-[380px] xl:min-h-[420px] group text-left"
+            className="bg-[#fbb03b] p-5 xl:p-5 text-[#1a1a1a] flex flex-col justify-start lg:justify-between min-h-0 lg:min-h-[380px] xl:min-h-[420px] group text-left"
           >
             <div className="text-left">
-              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-4 pb-2 border-b border-black/10 text-left">Anti-Ragging Cell</h3>
-              <ul className="space-y-3 text-[11px] xl:text-xs font-medium text-[#1a1a1a]/75 text-left">
+              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-3 xl:mb-4 pb-2 border-b border-black/10 text-left">Anti-Ragging Cell</h3>
+              <ul className="space-y-2.5 xl:space-y-3 text-xs xl:text-xs font-medium text-[#1a1a1a]/75 text-left">
                 <li className="flex items-start gap-2 text-left">
                   <span className="w-1.5 h-1.5 bg-[#800000] rounded-full mt-1.5 shrink-0" />
                   <span className="min-w-0 flex-1 text-left">Active Anti-Ragging Cell in place for prevention and quick redressal</span>
@@ -293,16 +293,16 @@ export default function StudentAffairsPage() {
                 </li>
               </ul>
             </div>
-            <span className="mt-6 inline-block self-start px-4 py-2 border border-black/20 font-bold text-[9px] uppercase tracking-widest group-hover:bg-[#800000] group-hover:text-white transition-all">
+            <span className="mt-4 xl:mt-6 inline-block self-start px-4 py-2 border border-black/20 font-bold text-[9px] uppercase tracking-widest group-hover:bg-[#800000] group-hover:text-white transition-all">
               Read More
             </span>
           </Link>
 
           {/* Student Council */}
-          <div className="bg-[#E2C88B] p-4 xl:p-5 text-gray-900 flex flex-col justify-between min-h-[380px] xl:min-h-[420px] text-left">
+          <div className="bg-[#E2C88B] p-5 xl:p-5 text-gray-900 flex flex-col justify-start lg:justify-between min-h-0 lg:min-h-[380px] xl:min-h-[420px] text-left">
             <div className="text-left">
-              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-4 pb-2 border-b border-black/10 text-left">Student Council</h3>
-              <ul className="space-y-3 text-[11px] xl:text-xs font-medium text-black/70 text-left">
+              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-3 xl:mb-4 pb-2 border-b border-black/10 text-left">Student Council</h3>
+              <ul className="space-y-2.5 xl:space-y-3 text-xs xl:text-xs font-medium text-black/70 text-left">
                 <li className="flex items-start gap-2 text-left">
                   <span className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 shrink-0" />
                   <span className="min-w-0 flex-1 text-left">Represents the voice of the student body</span>

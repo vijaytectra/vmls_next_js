@@ -94,7 +94,7 @@ export default function LibraryPage() {
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
-          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="w-full lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
               <span className="text-[#fbb03b]">Library</span>
             </h1>
@@ -102,14 +102,14 @@ export default function LibraryPage() {
               Vinayaka Mission&apos;s Law School
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
+          <div className="hidden lg:block lg:w-[55%] relative min-h-[300px]">
             <Image
               src="/images/library-header-img.webp"
               alt="VMLS Library"
               fill
               priority
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 55vw"
+              sizes="55vw"
             />
             <div className="absolute inset-0 bg-black/10"></div>
           </div>
@@ -120,7 +120,900 @@ export default function LibraryPage() {
       <section className="py-12 md:py-20 px-[5%] bg-[#f8f9fa]">
         <div className="max-w-7xl mx-auto">
           <div className="space-y-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+          {/* Mobile Layout (< md) */}
+          <div className="flex flex-col gap-8 md:hidden">
+            {/* Welcome Section */}
+            <div className="bg-white p-8 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.15)] relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#a31f34]/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-[#a31f34]/10 transition-colors duration-500"></div>
+              <h2 className="font-playfair text-3xl text-[#a31f34] font-bold mb-4">Welcome to VMLS Library</h2>
+              <div className="font-inter text-[15px] text-gray-700 leading-relaxed space-y-4 text-left">
+                <p>
+                  The VMLS Law Library stands as a vital academic hub, supporting the teaching, learning, and research needs of students, faculty, and legal scholars. As a well-resourced and modern facility, the library offers an extensive collection of legal texts, journals, case reports, e-resources, and databases, catering to diverse areas of law.
+                </p>
+                <p>
+                  It fosters an intellectually stimulating environment that encourages critical thinking and promotes academic excellence. Through regular orientation programs, legal research support, and resource-based learning initiatives, the VMLS Law Library plays a pivotal role in shaping competent legal professionals equipped for academic and professional success.
+                </p>
+              </div>
+
+              <div className="mt-10 pt-8 border-t border-gray-100">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-[#a31f34]/10 rounded-lg text-[#a31f34]">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  </div>
+                  <h3 className="font-playfair text-2xl font-bold text-gray-900">Library Hours</h3>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-[#a31f34] mb-3">Working Days (Monday - Friday)</h4>
+                    <div className="grid grid-cols-2 gap-4 text-[13px]">
+                      <div className="bg-gray-50 p-3 rounded">
+                        <p className="text-gray-500 text-[10px] uppercase font-bold mb-1">Library</p>
+                        <p className="text-gray-900 font-bold">8:30 AM - 7:00 PM</p>
+                      </div>
+                      <div className="bg-gray-50 p-3 rounded">
+                        <p className="text-gray-500 text-[10px] uppercase font-bold mb-1">Circulation</p>
+                        <p className="text-gray-900 font-bold">9:00 AM - 7:00 PM</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-gray-600 mb-3">Weekends & Holidays</h4>
+                    <div className="bg-gray-50 p-3 rounded flex justify-between items-center text-[15px]">
+                      <div>
+                        <p className="text-gray-500 text-[10px] uppercase font-bold mb-1">Saturday & Holidays</p>
+                        <p className="text-gray-900 font-bold">10:00 AM - 5:00 PM</p>
+                      </div>
+                    </div>
+                    <p className="text-[12px] text-red-600 font-medium mt-3">
+                      Closed on Government holidays &amp; Sundays
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Digital Library Section Redesign */}
+            <div className="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-100 group flex flex-col min-h-0">
+              <div className="bg-[#800000] p-6 text-white relative shrink-0">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div className="flex items-center gap-3 relative z-10">
+                  <div className="p-2.5 bg-white/10 rounded-full">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                  </div>
+                  <div>
+                    <h3 className="font-playfair text-2xl font-bold">Digital Library</h3>
+                    <p className="text-[10px] uppercase tracking-widest opacity-70">Premium Resources</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="p-6 flex flex-col flex-1">
+                <p className="font-inter text-[13px] md:text-sm text-gray-700 leading-relaxed text-left mb-4">
+                  Through the Digital Library platform, users can access various electronic resources (e-resources) both within the campus and remotely. When accessing from outside the campus, all VMLS users must sign in to the Digital Library platform to avail remote access to the subscribed e-resources.
+                </p>
+
+                <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-black text-white border border-black md:bg-gray-50 md:text-gray-800 md:border-gray-100 rounded-none mb-5 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34]">
+                  <span className="font-inter font-bold text-[13px] md:text-sm normal-case tracking-widest">Digital Library</span>
+                  <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                </Link>
+
+                <div className="space-y-5 flex-1 flex flex-col">
+                  <div>
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                      <span className="w-6 h-[1px] bg-black"></span> Law Databases (In-Campus Access)
+                    </h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {[
+                        { name: 'SCC Online', url: 'https://www.scconline.com/' },
+                        { name: 'HeinOnline', url: 'https://home.heinonline.org/content/' },
+                        { name: 'Manupatra', url: 'https://www.manupatrafast.com/Home.aspx' },
+                        { name: 'LexisNexis', url: 'https://advance.lexis.com/in?identityprofileid=GFH88P68016' },
+                      ].map((db) => (
+                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <span className="relative z-10">{db.name}</span>
+                          <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                      <span className="w-6 h-[1px] bg-black"></span> Other Databases
+                    </h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {[
+                        { name: 'Scopus', url: 'https://www.scopus.com/' },
+                        { name: 'Web of Science', url: 'https://www.webofscience.com/' },
+                        { name: 'JSTOR', url: 'https://www.jstor.org/' },
+                      ].map((db) => (
+                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <span className="relative z-10">{db.name}</span>
+                          <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  <p className="mt-auto text-[12px] md:text-[13px] leading-relaxed text-gray-700 bg-[#fef2f2] border-l-4 border-[#800000] px-3 py-2.5">
+                    <strong className="text-[#800000]">Note:</strong> To access the databases from outside the campus, users must log in through the Digital Library website and access the databases via remote access.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Research Assistance */}
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#1a1a1a]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-gray-100 rounded-lg text-gray-900">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+                </div>
+                <h3 className="font-playfair text-2xl font-bold text-gray-900">Research Assistance</h3>
+              </div>
+              <div className="space-y-3">
+                {[
+                  { label: 'Article / Book chapter Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLScI-4vHSov1BW4yJjaq6HdgwR-d_U0loQKoYlS_HT6UhTZT6g/viewform?usp=header' },
+                  { label: 'Database Orientation Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeQYZMK-c4oJnr6mzUHsN3G8s7HMSbs1LW-lL14mqIxrXKHrw/viewform?usp=header' },
+                  { label: 'New Database or eResource Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeyXuahI6_CtIQ2bwqXzcqmdUL2qj86qiAIr37QMRFEYxDSlg/viewform?usp=header' },
+                  { label: 'Turnitin', href: '#', isModal: true }
+                ].map((item) => (
+                  item.isModal ? (
+                    <button
+                      key={item.label}
+                      onClick={(e) => { e.preventDefault(); setIsTurnitinModalOpen(true); }}
+                      className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md text-left"
+                    >
+                      {item.label}
+                      <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
+                    </button>
+                  ) : (
+                    <Link key={item.label} href={item.href} target={item.href !== '#' ? "_blank" : undefined} rel={item.href !== '#' ? "noopener noreferrer" : undefined} className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md">
+                      {item.label}
+                      <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
+                    </Link>
+                  )
+                ))}
+              </div>
+            </div>
+
+            {/* Facilities */}
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
+              <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">Facilities</h3>
+              <div className="grid grid-cols-2 gap-3">
+                <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
+                <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
+              </div>
+            </div>
+
+            {/* Physical Collection */}
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-[#a31f34]/10 rounded-lg text-[#a31f34]">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                </div>
+                <h3 className="font-playfair text-2xl font-bold text-gray-900">Physical Collection</h3>
+              </div>
+              <Link href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 bg-[#4a5568] text-white rounded font-bold text-[16px] normal-case tracking-wider hover:bg-gray-800 transition-colors mb-4">
+                Physical Collection (OPAC)
+              </Link>
+
+              <p className="font-inter text-[13px] text-gray-600 leading-relaxed text-left mb-5">
+                OPAC (Online Public Access Catalogue) is used to search and find the availability and status of physical books in the library. Through this platform, users can easily locate books available in the library collection. After signing in to the OPAC system, users can view the number of books issued to their account, check due dates, access their circulation history, renew borrowed books, and submit purchase suggestions for new titles.
+              </p>
+
+              <h4 className="text-xs font-bold uppercase tracking-widest text-[#a31f34] mb-4 flex items-center gap-2">
+                <span className="w-4 h-[1px] bg-[#a31f34]"></span> My Print Collections (Koha)
+              </h4>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  'Account Login',
+                  'Purchase Suggestions',
+                  'Renew Books',
+                  'Most Circulated',
+                  'Book Hold',
+                  'New Arrivals'
+                ].map((label) => (
+                  <Link key={label} href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-[#800000] text-white text-[11px] md:text-[10px] font-bold text-center rounded shadow-sm hover:bg-[#a31f34] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-[50px]">
+                    {label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Library Gallery */}
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+              <h3 className="font-playfair text-2xl font-bold text-center text-[#a31f34] mb-4">Library Photos</h3>
+              <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden rounded group/gallery">
+                {galleryImages.map((src, idx) => (
+                  <div
+                    key={src}
+                    className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentImg ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                  >
+                    <Image
+                      src={src}
+                      alt={`Library Facility ${idx + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="100vw"
+                    />
+                  </div>
+                ))}
+                {/* Gallery Arrows */}
+                <div className="absolute inset-y-0 left-2 flex items-center z-20 transition-opacity">
+                  <button
+                    onClick={prevImg}
+                    className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-[#a31f34] shadow-md hover:bg-[#a31f34] hover:text-white transition-all"
+                  >
+                    ←
+                  </button>
+                </div>
+                <div className="absolute inset-y-0 right-2 flex items-center z-20 transition-opacity">
+                  <button
+                    onClick={nextImg}
+                    className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-[#a31f34] shadow-md hover:bg-[#a31f34] hover:text-white transition-all"
+                  >
+                    →
+                  </button>
+                </div>
+
+                {/* Dot Indicators */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                  {galleryImages.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setCurrentImg(idx)}
+                      className={`w-1.5 h-1.5 rounded-full transition-all ${idx === currentImg ? 'bg-white w-4' : 'bg-white/40 hover:bg-white/60'}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Services Section */}
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#1a1a1a]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-gray-100 rounded-lg text-gray-900">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h3 className="font-playfair text-2xl font-bold text-gray-900">Services</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  'Reference Service', 'OPAC', 'Course Guide', 'New Arrivals',
+                  'Remote Access', 'Inter-Library Loan', 'Book Display', 'Thematic Display',
+                  'Career Corner', 'Excellence Collection', 'Textbook Procurement', 'Newspaper Service', 'Reprography Service'
+                ].map((service) => {
+                  const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-[11px] md:text-xs font-bold normal-case text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
+                  
+                  if (service === 'Reference Service') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsReferenceModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'OPAC') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsOpacModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Course Guide') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsCourseGuideModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'New Arrivals') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsNewArrivalsModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Remote Access') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsRemoteAccessModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Inter-Library Loan') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsILLModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Book Display') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsBookDisplayModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Thematic Display') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsThematicDisplayModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Career Corner') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsCareerCornerModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Excellence Collection') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsExcellenceCollectionModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Textbook Procurement') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsTextbookProcurementModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Newspaper Service') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsNewspaperServiceModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  if (service === 'Reprography Service') {
+                    return (
+                      <button
+                        key={service}
+                        onClick={(e) => { e.preventDefault(); setIsReprographyServiceModalOpen(true); }}
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  }
+                  return (
+                    <button
+                      key={service}
+                      type="button"
+                      className={buttonStyles}
+                    >
+                      {service}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Useful Links */}
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 bg-[#a31f34]/10 rounded-lg text-[#a31f34]">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+                </div>
+                <h3 className="font-playfair text-2xl font-bold text-gray-900">Useful Links</h3>
+              </div>
+              <p className="font-inter text-[13px] text-gray-600 leading-relaxed mb-4">
+                Opens a dedicated page with legal research and reference resources, including Supreme Court Judgements.
+              </p>
+              <Link
+                href="/library-useful-links"
+                className="flex items-center justify-center gap-2 w-full py-3 bg-[#4a5568] text-white rounded font-bold text-[14px] normal-case tracking-wider hover:bg-gray-800 transition-colors"
+              >
+                View Useful Links
+              </Link>
+            </div>
+          </div>
+
+          {/* Tablet Layout (md to lg: 768px - 1023px) */}
+          <div className="hidden md:flex lg:hidden flex-row gap-8 items-start">
+            {/* Column 1 (Left) */}
+            <div className="w-1/2 flex flex-col gap-8">
+              {/* Welcome Section */}
+              <div className="bg-white p-8 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.15)] relative overflow-hidden group">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#a31f34]/5 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:bg-[#a31f34]/10 transition-colors duration-500"></div>
+                <h2 className="font-playfair text-3xl text-[#a31f34] font-bold mb-4">Welcome to VMLS Library</h2>
+                <div className="font-inter text-[15px] text-gray-700 leading-relaxed space-y-4 text-left">
+                  <p>
+                    The VMLS Law Library stands as a vital academic hub, supporting the teaching, learning, and research needs of students, faculty, and legal scholars. As a well-resourced and modern facility, the library offers an extensive collection of legal texts, journals, case reports, e-resources, and databases, catering to diverse areas of law.
+                  </p>
+                  <p>
+                    It fosters an intellectually stimulating environment that encourages critical thinking and promotes academic excellence. Through regular orientation programs, legal research support, and resource-based learning initiatives, the VMLS Law Library plays a pivotal role in shaping competent legal professionals equipped for academic and professional success.
+                  </p>
+                </div>
+
+                <div className="mt-10 pt-8 border-t border-gray-100">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-[#a31f34]/10 rounded-lg text-[#a31f34]">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h3 className="font-playfair text-2xl font-bold text-gray-900">Library Hours</h3>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xs font-bold uppercase tracking-widest text-[#a31f34] mb-3">Working Days (Monday - Friday)</h4>
+                      <div className="grid grid-cols-2 gap-4 text-[13px]">
+                        <div className="bg-gray-50 p-3 rounded">
+                          <p className="text-gray-500 text-[10px] uppercase font-bold mb-1">Library</p>
+                          <p className="text-gray-900 font-bold">8:30 AM - 7:00 PM</p>
+                        </div>
+                        <div className="bg-gray-50 p-3 rounded">
+                          <p className="text-gray-500 text-[10px] uppercase font-bold mb-1">Circulation</p>
+                          <p className="text-gray-900 font-bold">9:00 AM - 7:00 PM</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-xs font-bold uppercase tracking-widest text-gray-600 mb-3">Weekends & Holidays</h4>
+                      <div className="bg-gray-50 p-3 rounded flex justify-between items-center text-[15px]">
+                        <div>
+                          <p className="text-gray-500 text-[10px] uppercase font-bold mb-1">Saturday & Holidays</p>
+                          <p className="text-gray-900 font-bold">10:00 AM - 5:00 PM</p>
+                        </div>
+                      </div>
+                      <p className="text-[12px] text-red-600 font-medium mt-3">
+                        Closed on Government holidays &amp; Sundays
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Research Assistance */}
+              <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#1a1a1a]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-gray-100 rounded-lg text-gray-900">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+                  </div>
+                  <h3 className="font-playfair text-2xl font-bold text-gray-900">Research Assistance</h3>
+                </div>
+                <div className="space-y-3">
+                  {[
+                    { label: 'Article / Book chapter Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLScI-4vHSov1BW4yJjaq6HdgwR-d_U0loQKoYlS_HT6UhTZT6g/viewform?usp=header' },
+                    { label: 'Database Orientation Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeQYZMK-c4oJnr6mzUHsN3G8s7HMSbs1LW-lL14mqIxrXKHrw/viewform?usp=header' },
+                    { label: 'New Database or eResource Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeyXuahI6_CtIQ2bwqXzcqmdUL2qj86qiAIr37QMRFEYxDSlg/viewform?usp=header' },
+                    { label: 'Turnitin', href: '#', isModal: true }
+                  ].map((item) => (
+                    item.isModal ? (
+                      <button
+                        key={item.label}
+                        onClick={(e) => { e.preventDefault(); setIsTurnitinModalOpen(true); }}
+                        className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md text-left"
+                      >
+                        {item.label}
+                        <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
+                      </button>
+                    ) : (
+                      <Link key={item.label} href={item.href} target={item.href !== '#' ? "_blank" : undefined} rel={item.href !== '#' ? "noopener noreferrer" : undefined} className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md">
+                        {item.label}
+                        <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
+                      </Link>
+                    )
+                  ))}
+                </div>
+              </div>
+
+              {/* Facilities */}
+              <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
+                <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">Facilities</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
+                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
+                </div>
+              </div>
+
+              {/* Services Section */}
+              <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#1a1a1a]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-gray-100 rounded-lg text-gray-900">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  </div>
+                  <h3 className="font-playfair text-2xl font-bold text-gray-900">Services</h3>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {[
+                    'Reference Service', 'OPAC', 'Course Guide', 'New Arrivals',
+                    'Remote Access', 'Inter-Library Loan', 'Book Display', 'Thematic Display',
+                    'Career Corner', 'Excellence Collection', 'Textbook Procurement', 'Newspaper Service', 'Reprography Service'
+                  ].map((service) => {
+                    const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-[11px] md:text-xs font-bold normal-case text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
+                    
+                    if (service === 'Reference Service') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsReferenceModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'OPAC') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsOpacModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Course Guide') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsCourseGuideModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'New Arrivals') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsNewArrivalsModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Remote Access') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsRemoteAccessModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Inter-Library Loan') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsILLModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Book Display') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsBookDisplayModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Thematic Display') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsThematicDisplayModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Career Corner') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsCareerCornerModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Excellence Collection') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsExcellenceCollectionModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Textbook Procurement') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsTextbookProcurementModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Newspaper Service') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsNewspaperServiceModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    if (service === 'Reprography Service') {
+                      return (
+                        <button
+                          key={service}
+                          onClick={(e) => { e.preventDefault(); setIsReprographyServiceModalOpen(true); }}
+                          className={buttonStyles}
+                        >
+                          {service}
+                        </button>
+                      );
+                    }
+                    return (
+                      <button
+                        key={service}
+                        type="button"
+                        className={buttonStyles}
+                      >
+                        {service}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Column 2 (Right) */}
+            <div className="w-1/2 flex flex-col gap-8">
+              {/* Digital Library Section Redesign */}
+              <div className="bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] overflow-hidden border border-gray-100 group flex flex-col min-h-0">
+                <div className="bg-[#800000] p-6 text-white relative shrink-0">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                  <div className="flex items-center gap-3 relative z-10">
+                    <div className="p-2.5 bg-white/10 rounded-full">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                    </div>
+                    <div>
+                      <h3 className="font-playfair text-2xl font-bold">Digital Library</h3>
+                      <p className="text-[10px] uppercase tracking-widest opacity-70">Premium Resources</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6 flex flex-col flex-1">
+                  <p className="font-inter text-[13px] md:text-sm text-gray-700 leading-relaxed text-left mb-4">
+                    Through the Digital Library platform, users can access various electronic resources (e-resources) both within the campus and remotely. When accessing from outside the campus, all VMLS users must sign in to the Digital Library platform to avail remote access to the subscribed e-resources.
+                  </p>
+
+                  <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-black text-white border border-black md:bg-gray-50 md:text-gray-800 md:border-gray-100 rounded-none mb-5 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34]">
+                    <span className="font-inter font-bold text-[13px] md:text-sm normal-case tracking-widest">Digital Library</span>
+                    <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+                  </Link>
+
+                  <div className="space-y-5 flex-1 flex flex-col">
+                    <div>
+                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                        <span className="w-6 h-[1px] bg-black"></span> Law Databases (In-Campus Access)
+                      </h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {[
+                          { name: 'SCC Online', url: 'https://www.scconline.com/' },
+                          { name: 'HeinOnline', url: 'https://home.heinonline.org/content/' },
+                          { name: 'Manupatra', url: 'https://www.manupatrafast.com/Home.aspx' },
+                          { name: 'LexisNexis', url: 'https://advance.lexis.com/in?identityprofileid=GFH88P68016' },
+                        ].map((db) => (
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                            <span className="relative z-10">{db.name}</span>
+                            <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                        <span className="w-6 h-[1px] bg-black"></span> Other Databases
+                      </h4>
+                      <div className="grid grid-cols-2 gap-2">
+                        {[
+                          { name: 'Scopus', url: 'https://www.scopus.com/' },
+                          { name: 'Web of Science', url: 'https://www.webofscience.com/' },
+                          { name: 'JSTOR', url: 'https://www.jstor.org/' },
+                        ].map((db) => (
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                            <span className="relative z-10">{db.name}</span>
+                            <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    <p className="mt-auto text-[12px] md:text-[13px] leading-relaxed text-gray-700 bg-[#fef2f2] border-l-4 border-[#800000] px-3 py-2.5">
+                      <strong className="text-[#800000]">Note:</strong> To access the databases from outside the campus, users must log in through the Digital Library website and access the databases via remote access.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Physical Collection */}
+              <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-[#a31f34]/10 rounded-lg text-[#a31f34]">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
+                  </div>
+                  <h3 className="font-playfair text-2xl font-bold text-gray-900">Physical Collection</h3>
+                </div>
+                <Link href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 bg-[#4a5568] text-white rounded font-bold text-[16px] normal-case tracking-wider hover:bg-gray-800 transition-colors mb-4">
+                  Physical Collection (OPAC)
+                </Link>
+
+                <p className="font-inter text-[13px] text-gray-600 leading-relaxed text-left mb-5">
+                  OPAC (Online Public Access Catalogue) is used to search and find the availability and status of physical books in the library. Through this platform, users can easily locate books available in the library collection. After signing in to the OPAC system, users can view the number of books issued to their account, check due dates, access their circulation history, renew borrowed books, and submit purchase suggestions for new titles.
+                </p>
+
+                <h4 className="text-xs font-bold uppercase tracking-widest text-[#a31f34] mb-4 flex items-center gap-2">
+                  <span className="w-4 h-[1px] bg-[#a31f34]"></span> My Print Collections (Koha)
+                </h4>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    'Account Login',
+                    'Purchase Suggestions',
+                    'Renew Books',
+                    'Most Circulated',
+                    'Book Hold',
+                    'New Arrivals'
+                  ].map((label) => (
+                    <Link key={label} href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-[#800000] text-white text-[11px] md:text-[10px] font-bold text-center rounded shadow-sm hover:bg-[#a31f34] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-[50px]">
+                      {label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Library Gallery */}
+              <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+                <h3 className="font-playfair text-2xl font-bold text-center text-[#a31f34] mb-4">Library Photos</h3>
+                <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden rounded group/gallery">
+                  {galleryImages.map((src, idx) => (
+                    <div
+                      key={src}
+                      className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentImg ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                    >
+                      <Image
+                        src={src}
+                        alt={`Library Facility ${idx + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 50vw, 400px"
+                      />
+                    </div>
+                  ))}
+                  {/* Gallery Arrows */}
+                  <div className="absolute inset-y-0 left-2 flex items-center z-20 transition-opacity">
+                    <button
+                      onClick={prevImg}
+                      className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-[#a31f34] shadow-md hover:bg-[#a31f34] hover:text-white transition-all"
+                    >
+                      ←
+                    </button>
+                  </div>
+                  <div className="absolute inset-y-0 right-2 flex items-center z-20 transition-opacity">
+                    <button
+                      onClick={nextImg}
+                      className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-[#a31f34] shadow-md hover:bg-[#a31f34] hover:text-white transition-all"
+                    >
+                      →
+                    </button>
+                  </div>
+
+                  {/* Dot Indicators */}
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-20">
+                    {galleryImages.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentImg(idx)}
+                        className={`w-1.5 h-1.5 rounded-full transition-all ${idx === currentImg ? 'bg-white w-4' : 'bg-white/40 hover:bg-white/60'}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Useful Links */}
+              <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-[#a31f34]/10 rounded-lg text-[#a31f34]">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
+                  </div>
+                  <h3 className="font-playfair text-2xl font-bold text-gray-900">Useful Links</h3>
+                </div>
+                <p className="font-inter text-[13px] text-gray-600 leading-relaxed mb-4">
+                  Opens a dedicated page with legal research and reference resources, including Supreme Court Judgements.
+                </p>
+                <Link
+                  href="/library-useful-links"
+                  className="flex items-center justify-center gap-2 w-full py-3 bg-[#4a5568] text-white rounded font-bold text-[14px] normal-case tracking-wider hover:bg-gray-800 transition-colors"
+                >
+                  View Useful Links
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop Layout (>= lg: 1024px+) */}
+          <div className="hidden lg:grid grid-cols-3 gap-8 items-start">
             {/* Column 1: Digital & Assistance */}
             <div className="flex flex-col gap-8 h-full">
               {/* Digital Library Section Redesign */}
@@ -195,48 +1088,48 @@ export default function LibraryPage() {
 
               {/* Research Assistance + Facilities */}
               <div className="flex flex-col gap-8 shrink-0">
-              {/* Research Assistance */}
-              <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#1a1a1a]">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-gray-100 rounded-lg text-gray-900">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+                {/* Research Assistance */}
+                <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#1a1a1a]">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 bg-gray-100 rounded-lg text-gray-900">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+                    </div>
+                    <h3 className="font-playfair text-2xl font-bold text-gray-900">Research Assistance</h3>
                   </div>
-                  <h3 className="font-playfair text-2xl font-bold text-gray-900">Research Assistance</h3>
+                  <div className="space-y-3">
+                    {[
+                      { label: 'Article / Book chapter Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLScI-4vHSov1BW4yJjaq6HdgwR-d_U0loQKoYlS_HT6UhTZT6g/viewform?usp=header' },
+                      { label: 'Database Orientation Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeQYZMK-c4oJnr6mzUHsN3G8s7HMSbs1LW-lL14mqIxrXKHrw/viewform?usp=header' },
+                      { label: 'New Database or eResource Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeyXuahI6_CtIQ2bwqXzcqmdUL2qj86qiAIr37QMRFEYxDSlg/viewform?usp=header' },
+                      { label: 'Turnitin', href: '#', isModal: true }
+                    ].map((item) => (
+                      item.isModal ? (
+                        <button
+                          key={item.label}
+                          onClick={(e) => { e.preventDefault(); setIsTurnitinModalOpen(true); }}
+                          className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md text-left"
+                        >
+                          {item.label}
+                          <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
+                        </button>
+                      ) : (
+                        <Link key={item.label} href={item.href} target={item.href !== '#' ? "_blank" : undefined} rel={item.href !== '#' ? "noopener noreferrer" : undefined} className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md">
+                          {item.label}
+                          <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
+                        </Link>
+                      )
+                    ))}
+                  </div>
                 </div>
-                <div className="space-y-3">
-                  {[
-                    { label: 'Article / Book chapter Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLScI-4vHSov1BW4yJjaq6HdgwR-d_U0loQKoYlS_HT6UhTZT6g/viewform?usp=header' },
-                    { label: 'Database Orientation Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeQYZMK-c4oJnr6mzUHsN3G8s7HMSbs1LW-lL14mqIxrXKHrw/viewform?usp=header' },
-                    { label: 'New Database or eResource Request', href: 'https://docs.google.com/forms/d/e/1FAIpQLSeyXuahI6_CtIQ2bwqXzcqmdUL2qj86qiAIr37QMRFEYxDSlg/viewform?usp=header' },
-                    { label: 'Turnitin', href: '#', isModal: true }
-                  ].map((item) => (
-                    item.isModal ? (
-                      <button
-                        key={item.label}
-                        onClick={(e) => { e.preventDefault(); setIsTurnitinModalOpen(true); }}
-                        className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md text-left"
-                      >
-                        {item.label}
-                        <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
-                      </button>
-                    ) : (
-                      <Link key={item.label} href={item.href} target={item.href !== '#' ? "_blank" : undefined} rel={item.href !== '#' ? "noopener noreferrer" : undefined} className="flex items-center justify-between w-full p-4 bg-[#1a1a1a] text-white text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#4a5568] hover:pl-6 transition-all duration-300 group shadow-sm hover:shadow-md">
-                        {item.label}
-                        <span className="opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">→</span>
-                      </Link>
-                    )
-                  ))}
-                </div>
-              </div>
 
-              {/* Facilities */}
-              <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
-                <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">Facilities</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
-                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
+                {/* Facilities */}
+                <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
+                  <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">Facilities</h3>
+                  <div className="grid grid-cols-2 gap-3">
+                    <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
+                    <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
+                  </div>
                 </div>
-              </div>
               </div>
             </div>
 
@@ -308,7 +1201,7 @@ export default function LibraryPage() {
                         alt={`Library Facility ${idx + 1}`}
                         fill
                         className="object-cover"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                        sizes="(max-width: 1200px) 33vw, 400px"
                       />
                     </div>
                   ))}
@@ -390,7 +1283,6 @@ export default function LibraryPage() {
                   <h3 className="font-playfair text-2xl font-bold text-gray-900">Services</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {/* Services Grid */}
                   {[
                     'Reference Service', 'OPAC', 'Course Guide', 'New Arrivals',
                     'Remote Access', 'Inter-Library Loan', 'Book Display', 'Thematic Display',
@@ -591,7 +1483,7 @@ export default function LibraryPage() {
               <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeX88_HF7_aLVwV0P2RhGSG8Zq7kS8MLnoCiiCxFsZTybOv6w/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-[#4a5568] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-gray-800 transition-all">User Feedback Form</Link>
             </div>
 
-            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] md:col-span-2 lg:col-span-1">
               <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-[#800000] rounded-full"></span> Rules &amp; Regulations
               </h3>

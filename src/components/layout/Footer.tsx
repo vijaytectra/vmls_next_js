@@ -12,8 +12,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16 mb-6 md:mb-12">
           
           {/* Brand Column */}
-          <div className="md:col-span-4 space-y-6 md:space-y-8">
-            <div className="space-y-4">
+          <div className="md:col-span-4 space-y-6 md:space-y-8 text-left flex flex-col items-start">
+            <div className="space-y-4 text-left">
               <Image 
                 src="/images/footer/vmls-footer.webp" 
                 alt="VMLS Logo" 
@@ -21,13 +21,13 @@ export default function Footer() {
                 height={80} 
                 className="object-contain w-[160px] sm:w-[200px] md:w-[220px] h-auto max-w-full"
               />
-              <p className="font-playfair text-[#a31f34] text-xl sm:text-2xl lg:text-3xl italic">
+              <p className="font-playfair text-[#a31f34] text-xl sm:text-2xl lg:text-3xl italic text-left">
                 Law School of the Future
               </p>
             </div>
             
             {/* Social Icons */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 justify-start">
               {[
                 { 
                   name: "Facebook", 
@@ -82,47 +82,47 @@ export default function Footer() {
           </div>
 
           {/* Addresses Column */}
-          <div className="md:col-span-4 space-y-6 md:space-y-10">
-            <div className="space-y-5">
+          <div className="md:col-span-4 space-y-6 md:space-y-10 text-left">
+            <div className="space-y-5 text-left">
               <Link 
                 href={campusMapUrl} 
                 target="_blank"
-                className="group block"
+                className="group block text-left"
               >
-                <h4 className="font-inter font-bold text-[#a31f34] flex items-center gap-3 uppercase tracking-wider text-base group-hover:underline">
+                <h4 className="font-inter font-bold text-[#a31f34] flex items-center justify-start gap-3 uppercase tracking-wider text-base group-hover:underline text-left">
                   <Image 
                     src="/images/footer/map.webp" 
                     alt="Map" 
                     width={20} 
                     height={20} 
-                    className="object-contain" 
+                    className="object-contain shrink-0" 
                     style={{ width: 'auto', height: 'auto' }}
                   />
                   VMLS Campus Address
                 </h4>
-                <p className="text-[#333] text-base leading-relaxed font-medium max-w-sm mt-4 hover:text-[#a31f34] transition-colors">
+                <p className="text-[#333] text-base leading-relaxed font-medium max-w-sm mt-4 hover:text-[#a31f34] transition-colors text-left">
                   Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road), Paiyanoor, Chennai - 603104, Tamil Nadu, India
                 </p>
               </Link>
             </div>
-            <div className="space-y-5">
+            <div className="space-y-5 text-left">
               <Link 
                 href={cityOfficeMapUrl} 
                 target="_blank"
-                className="group block"
+                className="group block text-left"
               >
-                <h4 className="font-inter font-bold text-[#a31f34] flex items-center gap-3 uppercase tracking-wider text-base group-hover:underline">
+                <h4 className="font-inter font-bold text-[#a31f34] flex items-center justify-start gap-3 uppercase tracking-wider text-base group-hover:underline text-left">
                   <Image 
                     src="/images/footer/map.webp" 
                     alt="Map" 
                     width={20} 
                     height={20} 
-                    className="object-contain" 
+                    className="object-contain shrink-0" 
                     style={{ width: 'auto', height: 'auto' }}
                   />
                   Corporate Office Address
                 </h4>
-                <p className="text-[#333] text-base leading-relaxed font-medium max-w-sm mt-4 hover:text-[#a31f34] transition-colors">
+                <p className="text-[#333] text-base leading-relaxed font-medium max-w-sm mt-4 hover:text-[#a31f34] transition-colors text-left">
                   No: 213, Old No: 160, Behind Doshi Tower, Poonamallee High Road, Kilpauk, Chennai - 600010, Tamil Nadu, India
                 </p>
               </Link>
@@ -130,17 +130,17 @@ export default function Footer() {
           </div>
 
           {/* Contact & Support Column */}
-          <div className="md:col-span-4 space-y-6 md:space-y-10">
-            <div className="space-y-6">
-              <h4 className="font-inter font-bold text-[#a31f34] uppercase tracking-wider text-base">Contact Us</h4>
-              <div className="space-y-6">
-                <Link href="tel:+917358201234" className="flex items-center gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group">
-                  <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
+          <div className="md:col-span-4 space-y-6 md:space-y-10 text-left">
+            <div className="space-y-6 text-left">
+              <h4 className="font-inter font-bold text-[#a31f34] uppercase tracking-wider text-base text-left">Contact Us</h4>
+              <div className="space-y-6 text-left">
+                <Link href="tel:+917358201234" className="flex items-center justify-start gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group text-left">
+                  <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300 shrink-0">
                     <Phone size={18} />
                   </div>
                   <span className="font-semibold tracking-wide">+91 73582 01234</span>
                 </Link>
-                <Link href="mailto:admissions@vmls.edu.in" className="flex items-center gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group min-w-0">
+                <Link href="mailto:admissions@vmls.edu.in" className="flex items-center justify-start gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group min-w-0 text-left">
                   <div className="w-10 h-10 shrink-0 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
                     <Mail size={18} />
                   </div>
@@ -149,9 +149,9 @@ export default function Footer() {
               </div>
             </div>
             
-            <div className="space-y-3 md:space-y-6">
-              <h4 className="font-inter font-bold text-[#a31f34] uppercase tracking-wider text-base">Help & Support</h4>
-              <ul className="grid grid-cols-1 gap-3 md:gap-4 text-base text-[#444] font-medium">
+            <div className="space-y-3 md:space-y-6 text-left">
+              <h4 className="font-inter font-bold text-[#a31f34] uppercase tracking-wider text-base text-left">Help & Support</h4>
+              <ul className="grid grid-cols-1 gap-3 md:gap-4 text-base text-[#444] font-medium text-left">
                 {[
                   { name: "Internal Complaint Committee", href: "/internal-complaint-committee" },
                   { name: "Anti Ragging Committee", href: "/anti-ragging-committee" },
@@ -160,9 +160,9 @@ export default function Footer() {
                   { name: "Gender Sensitization Cell", href: "/gender-sensitization-cell" },
                   { name: "Women Empowerment Cell", href: "/women-empowerment-cell" }
                 ].map((item, i) => (
-                  <li key={i}>
-                    <Link href={item.href} prefetch={false} className="hover:text-[#a31f34] flex items-center gap-3 group">
-                      <span className="w-1.5 h-1.5 bg-gray-300 rounded-full group-hover:bg-[#a31f34]"></span>
+                  <li key={i} className="text-left">
+                    <Link href={item.href} prefetch={false} className="hover:text-[#a31f34] flex items-center justify-start gap-3 group text-left">
+                      <span className="w-1.5 h-1.5 bg-gray-300 rounded-full group-hover:bg-[#a31f34] shrink-0"></span>
                       {item.name}
                     </Link>
                   </li>

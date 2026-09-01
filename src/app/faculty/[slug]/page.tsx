@@ -594,27 +594,14 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
 
   return (
     <main className="min-h-screen bg-white">
-      <JsonLd
-        schema={[
-          personSchema({
-            name: faculty.name,
-            jobTitle: faculty.role.replace(/\.$/, ""),
-            path: `/faculty/${slug}`,
-            image: faculty.image,
-            email: faculty.email,
-            description: facultyDescription(faculty),
-          }),
-          breadcrumbSchema([...FACULTY_TRAIL, { name: faculty.name }]),
-        ]}
-      />
-      {/* Breadcrumb - Matching Dean Page Style */}
-      <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
-          <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
-          <span className="text-gray-300 font-light">/</span>
-          <Link href="/faculty-profiles" className="text-gray-500 hover:text-[#a31f34] transition-colors">Faculty Profiles</Link>
-          <span className="text-gray-300 font-light">/</span>
-          <span className="text-[#a31f34] font-semibold">{faculty.name}</span>
+      {/* Breadcrumb */}
+      <nav className="px-[5%] py-4 sm:py-6 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
+        <div className="max-w-7xl mx-auto flex items-center gap-2 sm:gap-3 text-xs min-[380px]:text-sm sm:text-base md:text-lg font-medium whitespace-nowrap">
+          <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors shrink-0">Home</Link>
+          <span className="text-gray-300 font-light shrink-0">/</span>
+          <Link href="/faculty-profiles" className="text-gray-500 hover:text-[#a31f34] transition-colors shrink-0">Faculty Profiles</Link>
+          <span className="text-gray-300 font-light shrink-0">/</span>
+          <span className="text-[#a31f34] font-semibold shrink-0">{faculty.name}</span>
         </div>
       </nav>
       <hr className="border-gray-100" />
@@ -632,11 +619,11 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
         </div>
 
         {/* Hero Section - Matching Dean Page Style */}
-        <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] relative z-10">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <section className="pb-8 md:pb-16 pt-6 md:pt-12 px-[5%] relative z-10">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-5 sm:gap-6 md:gap-8 lg:gap-20">
 
             {/* Left Side: Photo */}
-            <div className="lg:w-[35%] w-full order-1 flex justify-center items-center mb-8 lg:mb-0">
+            <div className="lg:w-[35%] w-full order-1 flex justify-center items-center">
               <div className="relative w-[65%] max-w-[240px] md:w-full md:max-w-[340px] aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
@@ -652,30 +639,30 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
             </div>
 
             {/* Right Side: Content */}
-            <div className="lg:w-[65%] order-2 flex flex-col justify-center">
-              <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Faculty Member</h3>
-              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
+            <div className="lg:w-[65%] order-2 flex flex-col justify-center items-center text-center">
+              <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-2 md:mb-3 text-center">Faculty Member</h3>
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-3 md:mb-4 leading-tight text-center">
                 {faculty.name}
               </h1>
 
-              <div className="space-y-6">
-                <div className="space-y-1">
-                  <h4 className="font-inter text-xl md:text-2xl font-bold tracking-tight text-gray-800">
+              <div className="space-y-4 md:space-y-5 flex flex-col items-center w-full text-center">
+                <div className="space-y-1.5 text-center">
+                  <h4 className="font-inter text-lg md:text-2xl font-bold tracking-tight text-gray-800 text-center">
                     {faculty.role}
                   </h4>
                   {faculty.qualifications && (
-                    <p className="font-inter text-lg text-[#a31f34] font-medium italic">
+                    <p className="font-inter text-base md:text-lg text-[#a31f34] font-medium italic text-center">
                       {faculty.qualifications}
                     </p>
                   )}
                 </div>
 
                 {faculty.email && (
-                  <div className="flex items-center gap-3 text-gray-600 hover:text-[#a31f34] transition-colors">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center gap-2 text-gray-600 hover:text-[#a31f34] transition-colors justify-center text-center">
+                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href={`mailto:${faculty.email}`} className="font-inter font-medium">{faculty.email}</a>
+                    <a href={`mailto:${faculty.email}`} className="font-inter text-sm md:text-base font-medium">{faculty.email}</a>
                   </div>
                 )}
 
@@ -695,9 +682,9 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
         {faculty.bio.length > 1 && (
           <section className="px-[5%] pt-8 pb-16 md:pt-10 md:pb-24 relative z-10">
             <div className="max-w-5xl mx-auto">
-              <div className="flex items-center gap-4 mb-10">
-                <div className="w-12 h-[2px] bg-[#a31f34]"></div>
-                <h2 className="font-playfair text-3xl md:text-4xl text-[#1a1a1a] font-bold tracking-tight">
+              <div className="flex items-center gap-2.5 sm:gap-4 mb-8 md:mb-10">
+                <div className="w-6 sm:w-12 h-[2px] bg-[#a31f34] shrink-0"></div>
+                <h2 className="font-playfair text-[22px] min-[380px]:text-2xl sm:text-3xl md:text-4xl text-[#1a1a1a] font-bold tracking-tight whitespace-nowrap">
                   Academic Biography
                 </h2>
               </div>
