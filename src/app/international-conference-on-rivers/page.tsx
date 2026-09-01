@@ -282,7 +282,7 @@ export default function InternationalConferencePage() {
                 <p className="text-gray-500 font-inter text-sm md:text-base mt-3">Upon successful acceptance and selection of the submitted abstract</p>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
                 {/* Card 1: Formatting & Font */}
                 <div className="bg-white p-5 sm:p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col space-y-4">
                   <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-lg text-[#a31f34] font-bold text-xl font-inter">01</div>
@@ -311,14 +311,12 @@ export default function InternationalConferencePage() {
                 </div>
 
                 {/* Card 4: Headings Hierarchy */}
-                <div className="bg-white p-5 sm:p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 md:col-span-2 lg:col-span-3 flex flex-col md:flex-row gap-6 md:gap-8 items-start md:items-center">
-                  <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-lg text-[#a31f34] font-bold text-xl font-inter flex-shrink-0">04</div>
-                  <div className="space-y-3 flex-grow">
-                    <h3 className="font-inter text-base md:text-lg font-bold text-gray-900">Headings & Styling Structure</h3>
-                    <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-left">
-                      All headings should be numbered. The <span className="font-semibold text-gray-900">first-level heading</span> (main heading) should be in all-caps, bold, and centre-aligned. The <span className="font-semibold text-gray-900">second-level heading</span> should be in title case, bold, and left-aligned. The <span className="font-semibold text-gray-900">third-level heading</span> should be in title case and left-aligned.
-                    </p>
-                  </div>
+                <div className="bg-white p-5 sm:p-6 md:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col space-y-4">
+                  <div className="w-12 h-12 bg-red-50 flex items-center justify-center rounded-lg text-[#a31f34] font-bold text-xl font-inter">04</div>
+                  <h3 className="font-inter text-base md:text-lg font-bold text-gray-900">Headings & Styling Structure</h3>
+                  <p className="font-inter text-gray-600 text-sm md:text-base leading-relaxed text-left sm:text-left">
+                    All headings should be numbered. The <span className="font-semibold text-gray-900">first-level heading</span> (main heading) should be in all-caps, bold, and centre-aligned. The <span className="font-semibold text-gray-900">second-level heading</span> should be in title case, bold, and left-aligned. The <span className="font-semibold text-gray-900">third-level heading</span> should be in title case and left-aligned.
+                  </p>
                 </div>
               </div>
 
@@ -581,7 +579,7 @@ export default function InternationalConferencePage() {
                     {member.badge}
                   </span>
                   <h4 className="font-inter font-bold text-gray-900 text-base md:text-lg leading-snug">{member.name}</h4>
-                  <p className="font-inter text-xs sm:text-sm text-gray-600 leading-normal whitespace-nowrap">{member.role}</p>
+                  <p className="font-inter text-xs sm:text-sm text-gray-600 leading-snug text-center max-w-[240px] mx-auto">{member.role}</p>
                 </div>
               ))}
             </div>
