@@ -40,7 +40,8 @@ export default function InternationalConferencePage() {
               <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#fbb03b]"></div>
               <div className="pl-6 md:pl-10">
                 <h1 className="font-playfair text-2xl md:text-4xl lg:text-5xl mb-3 leading-tight font-bold">
-                  18th to 19th October 2024 Call for Papers
+                  18th to 19th October 2024 <br />
+                  Call for Papers
                 </h1>
                 <p className="font-playfair text-lg md:text-2xl lg:text-3xl text-white/95 leading-snug font-medium">
                   International Conference on Rivers
