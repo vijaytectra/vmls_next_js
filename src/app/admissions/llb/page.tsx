@@ -259,13 +259,13 @@ export default function LLBAdmissionsPage() {
             ].map((course, index) => (
               <div
                 key={index}
-                className="group relative bg-white p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-1 border border-gray-100 flex items-center min-h-[100px]"
+                className="group relative bg-white p-4 sm:p-6 md:p-8 shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-1 border border-gray-100 flex items-center min-h-[90px] md:min-h-[100px] overflow-hidden"
               >
                 {/* Side Accent Line */}
-                <div className="absolute left-0 top-0 bottom-0 w-0 group-hover:w-[6px] bg-[#a31f34] transition-all duration-300"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-0 group-hover:w-[5px] bg-[#a31f34] transition-all duration-300"></div>
 
-                <div className="pl-2 group-hover:pl-4 transition-all duration-300">
-                  <span className="font-inter text-gray-800 text-[15px] md:text-base font-semibold leading-relaxed group-hover:text-[#a31f34] transition-colors">
+                <div className="pl-2.5 group-hover:pl-3.5 transition-all duration-300 pr-1">
+                  <span className="font-inter text-gray-800 text-[13.5px] sm:text-[15px] md:text-base font-semibold leading-relaxed group-hover:text-[#a31f34] transition-colors">
                     {course}
                   </span>
                 </div>
