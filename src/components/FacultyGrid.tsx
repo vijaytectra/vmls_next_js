@@ -286,10 +286,10 @@ export default function FacultyGrid() {
 
             {/* Details — equal baseline for name/role across cards */}
             <div className="person-card-details flex-1 pb-5 md:pb-7 px-3 md:px-5">
-              <h3 className="person-card-name font-playfair text-sm md:text-xl font-bold text-[#1a1a1a] text-center">
+              <h3 className="person-card-name font-playfair text-sm md:text-xl font-bold text-[#1a1a1a] text-center !min-h-0 !mb-0.5">
                 {member.name}
               </h3>
-              <p className="person-card-role text-center font-inter text-[11px] md:text-[13px] font-semibold text-[#a31f34] leading-snug normal-case !tracking-normal mt-0.5 px-0.5 text-pretty">
+              <p className="person-card-role text-center font-inter text-[11px] md:text-[13px] font-semibold text-[#a31f34] leading-snug normal-case !tracking-normal !mt-0 px-0.5 text-pretty">
                 {noOrphanText(member.role)}
               </p>
               {member.qualifications ? (

@@ -691,8 +691,8 @@ footer {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  min-height: 2.75rem;
-  margin: 0 0 0.25rem;
+  min-height: auto;
+  margin: 0 0 0.15rem;
   text-align: center !important;
   word-spacing: normal !important;
   letter-spacing: normal !important;
