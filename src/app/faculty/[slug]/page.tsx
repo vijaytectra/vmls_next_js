@@ -619,8 +619,8 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
         </div>
 
         {/* Hero Section - Matching Dean Page Style */}
-        <section className="pb-8 md:pb-16 pt-4 md:pt-10 px-[5%] relative z-10">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-3 sm:gap-4 md:gap-6 lg:gap-20">
+        <section className="pb-8 md:pb-16 pt-6 md:pt-12 px-[5%] relative z-10">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-5 sm:gap-6 md:gap-8 lg:gap-20">
 
             {/* Left Side: Photo */}
             <div className="lg:w-[35%] w-full order-1 flex justify-center items-center">
@@ -640,13 +640,13 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
 
             {/* Right Side: Content */}
             <div className="lg:w-[65%] order-2 flex flex-col justify-center items-center text-center">
-              <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-1.5 md:mb-2 text-center">Faculty Member</h3>
-              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-2 md:mb-3 leading-tight text-center">
+              <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-2 md:mb-3 text-center">Faculty Member</h3>
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-3 md:mb-4 leading-tight text-center">
                 {faculty.name}
               </h1>
 
-              <div className="space-y-3 md:space-y-4 flex flex-col items-center w-full text-center">
-                <div className="space-y-1 text-center">
+              <div className="space-y-4 md:space-y-5 flex flex-col items-center w-full text-center">
+                <div className="space-y-1.5 text-center">
                   <h4 className="font-inter text-lg md:text-2xl font-bold tracking-tight text-gray-800 text-center">
                     {faculty.role}
                   </h4>
