@@ -117,8 +117,18 @@ const SUB_THEMES = [
   },
 ] as const;
 
+const PAIR_SIZE = 2;
+
 export default function SubThemesSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(1);
+
+  const pairs = Array.from(
+    { length: Math.ceil(SUB_THEMES.length / PAIR_SIZE) },
+    (_, pairIdx) => ({
+      pairIdx,
+      items: SUB_THEMES.slice(pairIdx * PAIR_SIZE, pairIdx * PAIR_SIZE + PAIR_SIZE),
+    })
+  );
 
   return (
     <section className="pt-4 pb-8 px-[5%] bg-gray-50">
@@ -133,29 +143,43 @@ export default function SubThemesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 items-start">
-          {SUB_THEMES.map((theme, index) => {
-            const isActive = activeIndex === index;
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
+          {pairs.map(({ pairIdx, items }) => {
+            const pairStart = pairIdx * PAIR_SIZE;
+            const activeInPair =
+              activeIndex !== null &&
+              activeIndex >= pairStart &&
+              activeIndex < pairStart + PAIR_SIZE;
 
             return (
-              <div key={theme.title} className="flex flex-col w-full">
-                <button
-                  type="button"
-                  onClick={() => setActiveIndex(isActive ? null : index)}
-                  aria-expanded={isActive}
-                  className={`p-3.5 flex items-center justify-center text-center font-inter min-h-[64px] text-sm font-semibold transition-all duration-200 cursor-pointer ${
-                    isActive
-                      ? "bg-[#800000] text-white shadow-md"
-                      : "bg-gray-200 text-[#1a1a1a] hover:bg-gray-300 hover:text-[#800000]"
-                  }`}
-                >
-                  {theme.title}
-                </button>
+              <div key={pairIdx} className="flex flex-col space-y-1 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 w-full">
+                  {items.map((theme, itemOffset) => {
+                    const index = pairStart + itemOffset;
+                    const isActive = activeIndex === index;
 
-                {isActive && (
+                    return (
+                      <button
+                        key={theme.title}
+                        type="button"
+                        onClick={() => setActiveIndex(isActive ? null : index)}
+                        aria-expanded={isActive}
+                        className={`p-3.5 flex items-center justify-center text-center font-inter min-h-[64px] text-sm font-semibold transition-all duration-200 cursor-pointer ${
+                          isActive
+                            ? "bg-[#800000] text-white shadow-md"
+                            : "bg-gray-200 text-[#1a1a1a] hover:bg-gray-300 hover:text-[#800000]"
+                        }`}
+                      >
+                        {theme.title}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {activeInPair && activeIndex !== null && (
                   <div className="bg-[#800000] text-white p-4 sm:p-5 border-t-2 border-[#fbb03b] shadow-lg animate-page-fade w-full mt-1">
                     <ul className="list-disc pl-5 space-y-2 font-inter text-xs sm:text-sm leading-relaxed">
-                      {theme.points.map((point) => (
+                      {SUB_THEMES[activeIndex].points.map((point) => (
                         <li key={point}>{point}</li>
                       ))}
                     </ul>
