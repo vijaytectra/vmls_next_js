@@ -577,26 +577,26 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
             </div>
 
             {/* Right Side: Content */}
-            <div className="lg:w-[65%] order-2 flex flex-col justify-center">
-              <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Faculty Member</h3>
-              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight">
+            <div className="lg:w-[65%] order-2 flex flex-col justify-center items-center text-center">
+              <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4 text-center">Faculty Member</h3>
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight text-center">
                 {faculty.name}
               </h1>
 
-              <div className="space-y-6">
-                <div className="space-y-1">
-                  <h4 className="font-inter text-xl md:text-2xl font-bold tracking-tight text-gray-800">
+              <div className="space-y-6 flex flex-col items-center w-full text-center">
+                <div className="space-y-1 text-center">
+                  <h4 className="font-inter text-xl md:text-2xl font-bold tracking-tight text-gray-800 text-center">
                     {faculty.role}
                   </h4>
                   {faculty.qualifications && (
-                    <p className="font-inter text-lg text-[#a31f34] font-medium italic">
+                    <p className="font-inter text-lg text-[#a31f34] font-medium italic text-center">
                       {faculty.qualifications}
                     </p>
                   )}
                 </div>
 
                 {faculty.email && (
-                  <div className="flex items-center gap-3 text-gray-600 hover:text-[#a31f34] transition-colors">
+                  <div className="flex items-center gap-3 text-gray-600 hover:text-[#a31f34] transition-colors justify-center text-center">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
