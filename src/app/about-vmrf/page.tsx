@@ -144,7 +144,7 @@ export default function AboutVMRF() {
                 <h3 className="font-playfair text-lg md:text-xl font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
                   Dr. A. Shanmugasundaram
                 </h3>
-                <p className="font-inter text-sm text-gray-500 mt-1">Founder Chancellor</p>
+                <p className="person-card-role font-inter text-sm text-gray-500 mt-1 text-center">Founder Chancellor</p>
               </div>
             </Link>
 
@@ -165,7 +165,7 @@ export default function AboutVMRF() {
                 <h3 className="font-playfair text-lg md:text-xl font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
                   Dato&apos; Seri. Dr. A. S. Ganesan
                 </h3>
-                <p className="font-inter text-sm text-gray-500 mt-1">Chancellor</p>
+                <p className="person-card-role font-inter text-sm text-gray-500 mt-1 text-center">Chancellor</p>
               </div>
             </Link>
 
@@ -183,7 +183,7 @@ export default function AboutVMRF() {
                 <h3 className="font-playfair text-lg md:text-xl font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
                   Dr. Annapoorani Ganesan
                 </h3>
-                <p className="font-inter text-sm text-gray-500 mt-1">Trustee</p>
+                <p className="person-card-role font-inter text-sm text-gray-500 mt-1 text-center">Trustee</p>
               </div>
             </div>
           </div>

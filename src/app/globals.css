@@ -845,8 +845,7 @@ p.text-right,
   main section li,
   main article li,
   p.text-left,
-  .text-left p,
-  .text-center > p:not(.person-card-role):not(.person-card-name):not(.text-center):not(.hero-tagline) {
+  .text-left p {
     text-align: left !important;
     text-align-last: auto !important;
     text-justify: auto !important;
@@ -861,23 +860,31 @@ p.text-right,
     word-wrap: normal !important;
   }
 
-  /* Keep intentional centered UI */
+  /* Keep intentional centered UI — force job position / role below name to center on mobile devices */
   .text-center > h1,
   .text-center > h2,
   .text-center > h3,
   .text-center > h4,
   .text-center > span,
+  .text-center > p,
+  .text-center p,
   h1.text-center,
   h2.text-center,
   h3.text-center,
   p.text-center,
   p.hero-tagline,
   .hero-tagline,
+  .person-card-role,
+  .person-card-details .person-card-role,
+  .person-card-details--start .person-card-role,
+  main section .person-card-details--start p.person-card-role,
+  main article .person-card-details--start p.person-card-role,
   .person-card-details:not(.person-card-details--start) > .person-card-role,
   .person-card-details:not(.person-card-details--start) > .person-card-name,
   footer p,
   header p {
     text-align: center !important;
+    text-align-last: center !important;
     word-spacing: normal !important;
     letter-spacing: normal !important;
     -webkit-hyphens: none !important;
@@ -885,10 +892,13 @@ p.text-right,
   }
 
   .person-card-details--start .person-card-role,
-  .person-card-details--start .person-card-name,
-  main section .person-card-details--start p.person-card-role {
-    text-align: left !important;
-    text-align-last: left !important;
+  main section .person-card-details--start p.person-card-role,
+  main article .person-card-details--start p.person-card-role {
+    text-align: center !important;
+    text-align-last: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
   }
 
   p.text-right,
