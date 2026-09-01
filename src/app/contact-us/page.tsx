@@ -50,8 +50,7 @@ export default function ContactUsPage() {
           <div className="space-y-8 sm:space-y-10 pl-7 sm:pl-0">
             {/* Campus Address 1 */}
             <div>
-              <h2 className="font-playfair text-[19px] min-[380px]:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 flex items-center gap-3 md:gap-4">
-                <span className="w-8 md:w-12 h-[1px] bg-[#a31f34] hidden sm:block"></span>
+              <h2 className="font-playfair text-[19px] min-[380px]:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 VMLS Campus Address
               </h2>
               <div className="font-inter text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
@@ -69,8 +68,7 @@ export default function ContactUsPage() {
 
             {/* Admissions */}
             <div>
-              <h2 className="font-playfair text-[19px] min-[380px]:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 flex items-center gap-3 md:gap-4">
-                <span className="w-8 md:w-12 h-[1px] bg-[#a31f34] hidden sm:block"></span>
+              <h2 className="font-playfair text-[19px] min-[380px]:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 For Admissions
               </h2>
               <div className="font-inter text-gray-600 space-y-2 text-sm sm:text-base md:text-lg">
@@ -87,8 +85,7 @@ export default function ContactUsPage() {
 
             {/* City Office / Address 2 */}
             <div>
-              <h2 className="font-playfair text-[19px] min-[380px]:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 flex items-center gap-3 md:gap-4">
-                <span className="w-8 md:w-12 h-[1px] bg-[#a31f34] hidden sm:block"></span>
+              <h2 className="font-playfair text-[19px] min-[380px]:text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3">
                 City Office Address
               </h2>
               <div className="font-inter text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">
