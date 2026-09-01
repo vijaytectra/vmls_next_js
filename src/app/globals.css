@@ -881,7 +881,6 @@ p.text-right,
   main article .person-card-details--start p.person-card-role,
   .person-card-details:not(.person-card-details--start) > .person-card-role,
   .person-card-details:not(.person-card-details--start) > .person-card-name,
-  footer p,
   header p {
     text-align: center !important;
     text-align-last: center !important;
