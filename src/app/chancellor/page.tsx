@@ -34,8 +34,8 @@ export default function ChancellorPage() {
       <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-white overflow-hidden relative">
         <ArchitecturalSketch />
 
-        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-10 relative z-10">
-          <div className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] order-1 shrink-0">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-10 relative z-10">
+          <div className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] order-1 shrink-0 mx-auto lg:mx-0">
             <div className="relative w-full aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
               <div className="relative w-full h-full overflow-hidden">
                 <Image
@@ -50,11 +50,11 @@ export default function ChancellorPage() {
             </div>
           </div>
 
-          <div className="flex-1 order-2 flex flex-col justify-center min-w-0">
-            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">
+          <div className="flex-1 order-2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left min-w-0 w-full">
+            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4 text-center lg:text-left">
               Leadership
             </h3>
-            <h1 className="font-playfair text-[22px] min-[380px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-4 leading-tight whitespace-nowrap">
+            <h1 className="font-playfair text-[22px] min-[380px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-4 leading-tight whitespace-nowrap text-center lg:text-left">
               Dr. A.S. Ganesan
             </h1>
 
