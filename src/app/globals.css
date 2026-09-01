@@ -396,6 +396,8 @@ html {
     width: 100%;
     justify-content: center;
     text-align: center;
+    margin-right: 0;
+    margin-bottom: 0.75rem;
   }
 }
 
@@ -442,7 +444,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin: 0.25rem 0 0.5rem;
+  margin: 0.35rem 1rem 0.65rem 0;
   padding: 0.85rem 1.6rem;
   background: linear-gradient(135deg, #a31f34 0%, #800000 100%);
   color: #ffffff !important;
