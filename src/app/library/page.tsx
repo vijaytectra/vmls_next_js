@@ -1483,7 +1483,7 @@ export default function LibraryPage() {
               <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeX88_HF7_aLVwV0P2RhGSG8Zq7kS8MLnoCiiCxFsZTybOv6w/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-[#4a5568] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-gray-800 transition-all">User Feedback Form</Link>
             </div>
 
-            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+            <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] md:col-span-2 lg:col-span-1">
               <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-[#800000] rounded-full"></span> Rules &amp; Regulations
               </h3>
