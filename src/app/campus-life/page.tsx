@@ -1,5 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { pageMetadata } from "@/lib/seo-pages";
+
+export const metadata = pageMetadata("/campus-life");
 
 export default function CampusLifePage() {
   return (

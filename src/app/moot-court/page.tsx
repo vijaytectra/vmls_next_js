@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Moot Court | VMLS",
-  description: "Experience the state-of-the-art Moot Court at Vinayaka Mission's Law School, designed for real-world legal simulation.",
-};
+export const metadata = pageMetadata("/moot-court");
+
+
 
 export default function MootCourtPage() {
   return (

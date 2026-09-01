@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
+import { pageMetadata } from "@/lib/seo-pages";
+
+export const metadata = pageMetadata("/about-vmls");
 
 export default function AboutVMLS() {
   return (

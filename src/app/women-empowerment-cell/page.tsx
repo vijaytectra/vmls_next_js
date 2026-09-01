@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Women Empowerment Cell | VMLS",
-  description: "Members and contact details of the Women Empowerment Cell at Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/women-empowerment-cell");
+
+
 
 const committeeData = [
   {

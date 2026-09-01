@@ -1,11 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Student Grievance Redressal Committee | VMLS",
-  description: "Members and contact details of the Student Grievance Redressal Committee at Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/student-grievance-redressal-committee");
+
+
 
 const committeeData = [
   {

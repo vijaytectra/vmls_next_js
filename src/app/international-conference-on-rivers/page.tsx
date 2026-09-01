@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import SubThemesSection from "@/components/SubThemesSection";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "International Conference | Vinayaka Mission's Law School",
-  description: "Join the International Conference at Vinayaka Mission's Law School (VMLS) to explore global legal perspectives.",
-};
+export const metadata = pageMetadata("/international-conference-on-rivers");
+
+
 
 export default function InternationalConferencePage() {
   return (

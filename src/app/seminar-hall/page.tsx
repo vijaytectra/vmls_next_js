@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Seminar Hall | VMLS",
-  description: "Explore the modern Seminar Hall at Vinayaka Mission's Law School, designed for academic excellence and professional events.",
-};
+export const metadata = pageMetadata("/seminar-hall");
+
+
 
 export default function SeminarHallPage() {
   return (

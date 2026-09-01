@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import FacultyGrid from "@/components/FacultyGrid";
 import TeamSection from "@/components/TeamSection";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Faculty Profiles | VMLS",
-  description: "Meet the distinguished faculty members at Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/faculty-profiles");
+
+
 
 export default function FacultyProfilesPage() {
   return (

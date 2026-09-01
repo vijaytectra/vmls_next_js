@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { infrastructureItems } from "@/data/infrastructure";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Infrastructure | Campus Facilities | VMLS",
-  description:
-    "Explore the world-class infrastructure and state-of-the-art facilities at Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/infrastructure");
+
+
 
 export default function InfrastructurePage() {
   return (

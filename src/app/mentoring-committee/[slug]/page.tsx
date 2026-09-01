@@ -2,9 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
+import type { Metadata } from "next";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildMetadata } from "@/lib/seo";
+import { breadcrumbSchema, personSchema } from "@/lib/schema";
 import {
   getMentoringMemberBySlug,
   mentoringMembers,
+  type MentoringMember,
   type TextSegment,
 } from "@/data/mentoringCommittee";
 
@@ -34,16 +39,51 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PageProps) {
+const MENTOR_TRAIL = [
+  { name: "Home", path: "/" },
+  { name: "Mentoring Committee", path: "/mentoring-committee" },
+];
+
+/** 150-160 character summary drawn from the member's own profile text. */
+function mentorDescription(member: MentoringMember): string {
+  let text = `${member.name}, ${member.role} of the VMLS Mentoring Committee. ${member.designation}`;
+  for (const block of member.blocks) {
+    if (text.length >= 150) break;
+    if (block.type !== "paragraph") continue;
+    text = `${text} ${block.segments.map((s) => s.text).join("")}`.trim();
+  }
+  if (text.length <= 160) return text;
+  const at = text.slice(0, 158).lastIndexOf(" ");
+  const onWord = at > 0 ? text.slice(0, at).replace(/[,;:.\s]+$/, "") : "";
+  return `${onWord.length >= 149 ? onWord : text.slice(0, 157).trimEnd()}…`;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const member = getMentoringMemberBySlug(slug);
+  const path = `/mentoring-committee/${slug}`;
   if (!member) {
-    return { title: "Mentoring Committee | VMLS" };
+    return buildMetadata({
+      path,
+      title: "Mentoring Committee Profile – VMLS",
+      description:
+        "This mentoring committee profile is not available. Browse the legal experts and academics who mentor Vinayaka Mission's Law School, Chennai.",
+      noindex: true,
+    });
   }
-  return {
-    title: `${member.name} | Mentoring Committee | VMLS`,
-    description: member.designation,
-  };
+  return buildMetadata({
+    path,
+    title: `${member.name} – Mentoring Committee | VMLS`.length <= 60
+      ? `${member.name} – Mentoring Committee | VMLS`
+      : `${member.name} – VMLS Mentoring Committee`,
+    description: mentorDescription(member),
+    ogTitle: `${member.name} – ${member.role}, VMLS Mentoring Committee`,
+    ogDescription: member.designation,
+    image: member.image,
+    imageAlt: `${member.name}, ${member.designation}`,
+    ogType: "profile",
+    dcType: "Text.Biography",
+  });
 }
 
 export default async function MentoringMemberProfilePage({ params }: PageProps) {

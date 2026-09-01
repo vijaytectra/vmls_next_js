@@ -1,11 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, Calendar, MapPin } from "lucide-react";
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
-export const metadata = {
-  title: "Workshops and Seminars | IQAC | VMLS",
-  description: "Recent workshops and seminars organized by the Internal Quality Assurance Cell at VMLS.",
-};
+export const metadata = pageMetadata("/iqac/workshops");
+
+
 
 const events = [
   {
@@ -29,6 +30,7 @@ const events = [
 export default function WorkshopsPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/iqac/workshops" />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

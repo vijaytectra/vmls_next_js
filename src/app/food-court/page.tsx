@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
-export const metadata = {
-  title: "Food Court | VMLS",
-  description:
-    "The VMLS food courts cater to diverse culinary preferences and economic backgrounds of the student body.",
-};
+export const metadata = pageMetadata("/food-court");
+
+
 
 export default function FoodCourtPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      <PageSchema path="/food-court" />
       <main className="flex-grow">
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
           <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium flex-wrap">

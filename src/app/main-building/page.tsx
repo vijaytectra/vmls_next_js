@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Main Building | VMLS",
-  description: "Explore the striking modern architecture of the Main Building at Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/main-building");
+
+
 
 export default function MainBuildingPage() {
   return (

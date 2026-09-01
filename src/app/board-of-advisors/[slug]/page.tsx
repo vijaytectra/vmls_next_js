@@ -2,9 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
+import type { Metadata } from "next";
+import JsonLd from "@/components/seo/JsonLd";
+import { buildMetadata } from "@/lib/seo";
+import { breadcrumbSchema, personSchema } from "@/lib/schema";
 import {
   getAdvisorBySlug,
   getAdvisorsWithProfiles,
+  type Advisor,
 } from "@/data/boardOfAdvisors";
 
 type PageProps = {
@@ -17,16 +22,53 @@ export function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: PageProps) {
+const ADVISOR_TRAIL = [
+  { name: "Home", path: "/" },
+  { name: "Board of Advisors", path: "/board-of-advisors" },
+];
+
+/** 150-160 character summary drawn from the advisor's own profile text. */
+function advisorDescription(advisor: Advisor): string {
+  let text = `${advisor.name}, ${advisor.designation.replace(/\.$/, "")}, serves on the Board of Advisors of Vinayaka Mission's Law School, Chennai.`;
+  for (const paragraph of advisor.paragraphs) {
+    if (text.length >= 150) break;
+    text = `${text} ${paragraph}`.trim();
+  }
+  if (text.length <= 160) return text;
+  const at = text.slice(0, 158).lastIndexOf(" ");
+  const onWord = at > 0 ? text.slice(0, at).replace(/[,;:.\s]+$/, "") : "";
+  return `${onWord.length >= 149 ? onWord : text.slice(0, 157).trimEnd()}…`;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const advisor = getAdvisorBySlug(slug);
+  const path = `/board-of-advisors/${slug}`;
+
+  // Advisors without a written profile render an empty shell.
   if (!advisor || advisor.paragraphs.length === 0) {
-    return { title: "Board of Advisors | VMLS" };
+    return buildMetadata({
+      path,
+      title: "Board of Advisors Profile – VMLS",
+      description:
+        "This advisor profile is not published yet. Browse the legal luminaries who guide Vinayaka Mission's Law School, Chennai, on the Board of Advisors page.",
+      noindex: true,
+    });
   }
-  return {
-    title: `${advisor.name} | Board of Advisors | VMLS`,
-    description: advisor.designation,
-  };
+
+  return buildMetadata({
+    path,
+    title: `${advisor.name} – Board of Advisors | VMLS`.length <= 60
+      ? `${advisor.name} – Board of Advisors | VMLS`
+      : `${advisor.name} – VMLS Board of Advisors`,
+    description: advisorDescription(advisor),
+    ogTitle: `${advisor.name} – VMLS Board of Advisors`,
+    ogDescription: advisor.designation,
+    image: advisor.image,
+    imageAlt: `${advisor.name}, ${advisor.designation}`,
+    ogType: "profile",
+    dcType: "Text.Biography",
+  });
 }
 
 export default async function AdvisorProfilePage({ params }: PageProps) {

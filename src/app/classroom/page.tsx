@@ -1,15 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
-export const metadata = {
-  title: "Classroom | VMLS",
-  description:
-    "The classrooms of VMLS blend technology with design to create an environment ripe for learning.",
-};
+export const metadata = pageMetadata("/classroom");
+
+
 
 export default function ClassroomPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      <PageSchema path="/classroom" />
       <main className="flex-grow">
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
           <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium flex-wrap">

@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { ShieldCheck, Mail, Phone, MapPin } from 'lucide-react';
+import { pageMetadata } from "@/lib/seo-pages";
+
+export const metadata = pageMetadata("/privacy-policy");
 
 export default function PrivacyPolicyPage() {
   return (

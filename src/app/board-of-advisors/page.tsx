@@ -1,11 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import BoardOfAdvisors from "@/components/BoardOfAdvisors";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Board of Advisors | VMLS",
-  description: "Meet the distinguished leaders steering the guidance and advisory of Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/board-of-advisors");
+
+
 
 export default function BoardOfAdvisorsPage() {
   return (

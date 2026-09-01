@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
+
+export const metadata = pageMetadata("/dean");
 
 const qualifications = [
   "LL.M., University of Warwick School of Law, United Kingdom (Chevening & J. N. Tata Scholar).",
@@ -35,6 +39,7 @@ const academicQualifications = [
 export default function DeanPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/dean" />
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="flex items-center gap-3 text-base md:text-lg font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">

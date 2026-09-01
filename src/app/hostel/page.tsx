@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Hostel Facility | VMLS",
-  description: "Explore the comfortable and secure hostel facilities at Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/hostel");
+
+
 
 export default function HostelPage() {
   return (

@@ -1,15 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar } from 'lucide-react';
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
-export const metadata = {
-  title: "Centre for the Promotion of International Law (CPIL) | VMLS",
-  description: "Vinayaka Mission's Law School (VMLS) Centre for the Promotion of International Law (CPIL).",
-};
+export const metadata = pageMetadata("/cpil");
+
+
 
 export default function CPILPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
+      <PageSchema path="/cpil" />
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-3.5 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-2 text-xs md:text-sm font-medium text-gray-600">

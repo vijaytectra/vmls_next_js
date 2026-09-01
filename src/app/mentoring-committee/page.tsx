@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import MentoringKeyMembers from "@/components/MentoringKeyMembers";
 import MentoringExOfficio from "@/components/MentoringExOfficio";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Mentoring Committee | VMLS",
-  description: "Meet the distinguished legal experts and academics providing mentorship and guidance to Vinayaka Mission's Law School.",
-};
+export const metadata = pageMetadata("/mentoring-committee");
+
+
 
 export default function MentoringCommitteePage() {
   return (

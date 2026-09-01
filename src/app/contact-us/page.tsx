@@ -1,5 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
+
+export const metadata = pageMetadata("/contact-us");
 
 export default function ContactUsPage() {
   const mapUrl = "https://www.google.com/maps/place/AARUPADAI+VEEDU+INSTITUTE+OF+TECHNOLOGY/@12.65669,80.180111,12z/data=!4m6!3m5!1s0x3a52666a3b419c71:0xbf0f1882c4b4ceb1!8m2!3d12.65669!4d80.1801109!16s%2Fg%2F1tfkzmj4?hl=en&entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D";
@@ -7,6 +11,7 @@ export default function ContactUsPage() {
 
   return (
     <main className="min-h-screen bg-white overflow-hidden">
+      <PageSchema path="/contact-us" />
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">

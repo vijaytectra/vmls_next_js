@@ -1,15 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar } from 'lucide-react';
+import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
-export const metadata = {
-  title: "Centre for Justice Through Technology | VMLS",
-  description: "Vinayaka Mission's Law School (VMLS) Centre for Justice Through Technology.",
-};
+export const metadata = pageMetadata("/centre-for-justice-through-technology");
+
+
 
 export default function CentreForJusticeThroughTechnologyPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
+      <PageSchema path="/centre-for-justice-through-technology" />
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-3.5 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-2 text-xs md:text-sm font-medium text-gray-600">

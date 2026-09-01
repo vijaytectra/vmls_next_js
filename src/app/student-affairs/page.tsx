@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { pageMetadata } from "@/lib/seo-pages";
 
-export const metadata = {
-  title: "Student Affairs | VMLS",
-  description:
-    "The Office of Student Affairs at Vinayaka Mission's Law School fosters a vibrant, inclusive campus through clubs, houses, counselling, and student support.",
-};
+export const metadata = pageMetadata("/student-affairs");
+
+
 
 const events = [
   {
