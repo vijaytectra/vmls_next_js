@@ -66,9 +66,11 @@ export default function FacultyAchievementsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
             <div className="md:w-1/2">
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-[2px] bg-[#a31f34]"></div>
-                <h2 className="font-playfair text-3xl md:text-4xl text-[#1a1a1a] font-bold">Research Impact</h2>
+              <div className="flex items-center gap-2.5 sm:gap-4 mb-6 md:mb-8">
+                <div className="w-6 sm:w-12 h-[2px] bg-[#a31f34] shrink-0"></div>
+                <h2 className="font-playfair text-[22px] min-[380px]:text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-[#1a1a1a] font-bold tracking-tight whitespace-nowrap">
+                  Research Impact
+                </h2>
               </div>
               <p className="font-inter text-lg text-gray-600 leading-relaxed mb-10 text-left">
                 Beyond the classroom, our faculty members are active contributors to legal scholarship and policy development at national and international levels.
