@@ -619,11 +619,11 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
         </div>
 
         {/* Hero Section - Matching Dean Page Style */}
-        <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] relative z-10">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <section className="pb-8 md:pb-16 pt-4 md:pt-10 px-[5%] relative z-10">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-3 sm:gap-4 md:gap-6 lg:gap-20">
 
             {/* Left Side: Photo */}
-            <div className="lg:w-[35%] w-full order-1 flex justify-center items-center mb-8 lg:mb-0">
+            <div className="lg:w-[35%] w-full order-1 flex justify-center items-center">
               <div className="relative w-[65%] max-w-[240px] md:w-full md:max-w-[340px] aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
@@ -640,29 +640,29 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
 
             {/* Right Side: Content */}
             <div className="lg:w-[65%] order-2 flex flex-col justify-center items-center text-center">
-              <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4 text-center">Faculty Member</h3>
-              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 leading-tight text-center">
+              <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-1.5 md:mb-2 text-center">Faculty Member</h3>
+              <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-2 md:mb-3 leading-tight text-center">
                 {faculty.name}
               </h1>
 
-              <div className="space-y-6 flex flex-col items-center w-full text-center">
+              <div className="space-y-3 md:space-y-4 flex flex-col items-center w-full text-center">
                 <div className="space-y-1 text-center">
-                  <h4 className="font-inter text-xl md:text-2xl font-bold tracking-tight text-gray-800 text-center">
+                  <h4 className="font-inter text-lg md:text-2xl font-bold tracking-tight text-gray-800 text-center">
                     {faculty.role}
                   </h4>
                   {faculty.qualifications && (
-                    <p className="font-inter text-lg text-[#a31f34] font-medium italic text-center">
+                    <p className="font-inter text-base md:text-lg text-[#a31f34] font-medium italic text-center">
                       {faculty.qualifications}
                     </p>
                   )}
                 </div>
 
                 {faculty.email && (
-                  <div className="flex items-center gap-3 text-gray-600 hover:text-[#a31f34] transition-colors justify-center text-center">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center gap-2 text-gray-600 hover:text-[#a31f34] transition-colors justify-center text-center">
+                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href={`mailto:${faculty.email}`} className="font-inter font-medium">{faculty.email}</a>
+                    <a href={`mailto:${faculty.email}`} className="font-inter text-sm md:text-base font-medium">{faculty.email}</a>
                   </div>
                 )}
 

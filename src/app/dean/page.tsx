@@ -52,10 +52,10 @@ export default function DeanPage() {
       <hr className="border-gray-100" />
 
       {/* Hero: image left, intro right — full width within px-[5%] */}
-      <section className="pb-12 md:pb-16 pt-8 md:pt-12 px-[5%] bg-white overflow-hidden relative">
+      <section className="pb-8 md:pb-16 pt-4 md:pt-10 px-[5%] bg-white overflow-hidden relative">
         <ArchitecturalSketch />
 
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-10 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3 sm:gap-4 md:gap-6 lg:gap-10 relative z-10">
           <div className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] order-1 shrink-0 mx-auto lg:mx-0">
             <div className="relative w-full aspect-[3/4] shadow-[0_30px_70px_rgba(0,0,0,0.12)] transition-transform duration-500 hover:-translate-y-2">
               <div className="relative w-full h-full overflow-hidden">
@@ -72,16 +72,16 @@ export default function DeanPage() {
           </div>
 
           <div className="flex-1 order-2 flex flex-col justify-center items-center text-center min-w-0 w-full">
-            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4 text-center">
+            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-1.5 md:mb-2 text-center">
               Leadership
             </h3>
-            <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-4 leading-tight text-center">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-2 md:mb-3 leading-tight text-center">
               Mr. Siddharth Raja
             </h1>
 
-            <div className="space-y-8 w-full flex flex-col items-center text-center">
+            <div className="space-y-4 md:space-y-6 w-full flex flex-col items-center text-center">
               <div>
-                <h4 className="font-inter text-xl md:text-2xl font-bold tracking-tight text-[#a31f34] mb-3 text-center">
+                <h4 className="font-inter text-lg md:text-2xl font-bold tracking-tight text-[#a31f34] mb-2 text-center">
                   Executive Dean
                 </h4>
                 <ul className="space-y-2 text-center">
