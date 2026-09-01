@@ -120,15 +120,7 @@ const SUB_THEMES = [
 const PAIR_SIZE = 2;
 
 export default function SubThemesSection() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(1);
-
-  const pairs = Array.from(
-    { length: Math.ceil(SUB_THEMES.length / PAIR_SIZE) },
-    (_, pairIdx) => ({
-      pairIdx,
-      items: SUB_THEMES.slice(pairIdx * PAIR_SIZE, pairIdx * PAIR_SIZE + PAIR_SIZE),
-    })
-  );
+  const [activeIndex, setActiveIndex] = useState<number | null>(3);
 
   return (
     <section className="pt-4 pb-8 px-[5%] bg-gray-50">
@@ -143,30 +135,28 @@ export default function SubThemesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
-          {pairs.map(({ pairIdx, items }) => {
-            const pairStart = pairIdx * PAIR_SIZE;
-            const activeInPair =
-              activeIndex !== null &&
-              activeIndex >= pairStart &&
-              activeIndex < pairStart + PAIR_SIZE;
+        {/* Desktop View: Rows of 4 (lg:flex) */}
+        <div className="hidden lg:flex flex-col gap-2">
+          {Array.from({ length: Math.ceil(SUB_THEMES.length / 4) }).map((_, rowIdx) => {
+            const startIndex = rowIdx * 4;
+            const rowItems = SUB_THEMES.slice(startIndex, startIndex + 4);
+            const activeInRow = activeIndex !== null && activeIndex >= startIndex && activeIndex < startIndex + 4;
 
             return (
-              <div key={pairIdx} className="flex flex-col space-y-1 w-full">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 w-full">
-                  {items.map((theme, itemOffset) => {
-                    const index = pairStart + itemOffset;
-                    const isActive = activeIndex === index;
-
+              <div key={rowIdx} className="flex flex-col w-full gap-2">
+                <div className="grid grid-cols-4 gap-2 w-full">
+                  {rowItems.map((theme, offset) => {
+                    const idx = startIndex + offset;
+                    const isActive = activeIndex === idx;
                     return (
                       <button
                         key={theme.title}
                         type="button"
-                        onClick={() => setActiveIndex(isActive ? null : index)}
+                        onClick={() => setActiveIndex(isActive ? null : idx)}
                         aria-expanded={isActive}
                         className={`p-3.5 flex items-center justify-center text-center font-inter min-h-[64px] text-sm font-semibold transition-all duration-200 cursor-pointer ${
                           isActive
-                            ? "bg-[#800000] text-white shadow-md"
+                            ? "bg-[#800000] text-white shadow-md font-bold"
                             : "bg-gray-200 text-[#1a1a1a] hover:bg-gray-300 hover:text-[#800000]"
                         }`}
                       >
@@ -176,10 +166,96 @@ export default function SubThemesSection() {
                   })}
                 </div>
 
-                {activeInPair && activeIndex !== null && (
-                  <div className="bg-[#800000] text-white p-4 sm:p-5 border-t-2 border-[#fbb03b] shadow-lg animate-page-fade w-full mt-1">
-                    <ul className="list-disc pl-5 space-y-2 font-inter text-xs sm:text-sm leading-relaxed">
+                {activeInRow && activeIndex !== null && (
+                  <div className="bg-[#800000] text-white p-6 border-t-4 border-[#fbb03b] shadow-xl rounded-b-md w-full animate-page-fade my-1">
+                    <h3 className="font-playfair text-lg font-bold text-[#fbb03b] mb-3 flex items-center gap-2">
+                      <span className="w-2 h-2 bg-[#fbb03b] rounded-full"></span>
+                      {SUB_THEMES[activeIndex].title}
+                    </h3>
+                    <ul className="list-disc pl-6 space-y-2 font-inter text-sm md:text-base leading-relaxed text-white/95">
                       {SUB_THEMES[activeIndex].points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Tablet View: Rows of 2 (md:flex lg:hidden) */}
+        <div className="hidden md:flex lg:hidden flex-col gap-2">
+          {Array.from({ length: Math.ceil(SUB_THEMES.length / 2) }).map((_, rowIdx) => {
+            const startIndex = rowIdx * 2;
+            const rowItems = SUB_THEMES.slice(startIndex, startIndex + 2);
+            const activeInRow = activeIndex !== null && activeIndex >= startIndex && activeIndex < startIndex + 2;
+
+            return (
+              <div key={rowIdx} className="flex flex-col w-full gap-2">
+                <div className="grid grid-cols-2 gap-2 w-full">
+                  {rowItems.map((theme, offset) => {
+                    const idx = startIndex + offset;
+                    const isActive = activeIndex === idx;
+                    return (
+                      <button
+                        key={theme.title}
+                        type="button"
+                        onClick={() => setActiveIndex(isActive ? null : idx)}
+                        aria-expanded={isActive}
+                        className={`p-3.5 flex items-center justify-center text-center font-inter min-h-[64px] text-sm font-semibold transition-all duration-200 cursor-pointer ${
+                          isActive
+                            ? "bg-[#800000] text-white shadow-md font-bold"
+                            : "bg-gray-200 text-[#1a1a1a] hover:bg-gray-300 hover:text-[#800000]"
+                        }`}
+                      >
+                        {theme.title}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {activeInRow && activeIndex !== null && (
+                  <div className="bg-[#800000] text-white p-5 border-t-4 border-[#fbb03b] shadow-xl rounded-b-md w-full animate-page-fade my-1">
+                    <h3 className="font-playfair text-base font-bold text-[#fbb03b] mb-2 flex items-center gap-2">
+                      <span className="w-2 h-2 bg-[#fbb03b] rounded-full"></span>
+                      {SUB_THEMES[activeIndex].title}
+                    </h3>
+                    <ul className="list-disc pl-5 space-y-1.5 font-inter text-sm leading-relaxed text-white/95">
+                      {SUB_THEMES[activeIndex].points.map((point) => (
+                        <li key={point}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Mobile View: 1 per row (md:hidden) */}
+        <div className="flex md:hidden flex-col gap-2">
+          {SUB_THEMES.map((theme, idx) => {
+            const isActive = activeIndex === idx;
+            return (
+              <div key={theme.title} className="flex flex-col w-full">
+                <button
+                  type="button"
+                  onClick={() => setActiveIndex(isActive ? null : idx)}
+                  aria-expanded={isActive}
+                  className={`p-3.5 flex items-center justify-center text-center font-inter min-h-[56px] text-xs font-semibold transition-all duration-200 cursor-pointer ${
+                    isActive
+                      ? "bg-[#800000] text-white shadow-md font-bold"
+                      : "bg-gray-200 text-[#1a1a1a] hover:bg-gray-300 hover:text-[#800000]"
+                  }`}
+                >
+                  {theme.title}
+                </button>
+
+                {isActive && (
+                  <div className="bg-[#800000] text-white p-4 border-t-2 border-[#fbb03b] shadow-lg animate-page-fade w-full mt-1">
+                    <ul className="list-disc pl-5 space-y-2 font-inter text-xs leading-relaxed text-white/95">
+                      {theme.points.map((point) => (
                         <li key={point}>{point}</li>
                       ))}
                     </ul>
