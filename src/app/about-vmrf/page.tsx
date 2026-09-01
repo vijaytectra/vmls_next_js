@@ -126,7 +126,7 @@ export default function AboutVMRF() {
             <div className="w-20 h-1 bg-[#a31f34]" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-16 max-w-5xl mx-auto">
             <Link
               href="/founder"
               className="group transition-all duration-300 hover:-translate-y-2 max-w-[280px] mx-auto w-full block"
@@ -141,7 +141,7 @@ export default function AboutVMRF() {
                 />
               </div>
               <div className="mt-5 text-center">
-                <h3 className="font-playfair text-lg md:text-xl font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
+                <h3 className="person-card-name font-playfair text-lg md:text-[15px] lg:text-xl md:whitespace-nowrap font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
                   Dr. A. Shanmugasundaram
                 </h3>
                 <p className="person-card-role font-inter text-sm text-gray-500 mt-1 text-center">Founder Chancellor</p>
@@ -162,7 +162,7 @@ export default function AboutVMRF() {
                 />
               </div>
               <div className="mt-5 text-center">
-                <h3 className="font-playfair text-lg md:text-xl font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
+                <h3 className="person-card-name font-playfair text-lg md:text-[15px] lg:text-xl md:whitespace-nowrap font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
                   Dato&apos; Seri. Dr. A. S. Ganesan
                 </h3>
                 <p className="person-card-role font-inter text-sm text-gray-500 mt-1 text-center">Chancellor</p>
@@ -180,7 +180,7 @@ export default function AboutVMRF() {
                 />
               </div>
               <div className="mt-5 text-center">
-                <h3 className="font-playfair text-lg md:text-xl font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
+                <h3 className="person-card-name font-playfair text-lg md:text-[15px] lg:text-xl md:whitespace-nowrap font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors">
                   Dr. Annapoorani Ganesan
                 </h3>
                 <p className="person-card-role font-inter text-sm text-gray-500 mt-1 text-center">Trustee</p>

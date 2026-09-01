@@ -908,6 +908,15 @@ p.text-right,
     -webkit-hyphens: none !important;
     hyphens: none !important;
   }
+/* Tablet viewport (768px - 1023px): Keep person card names on a single line */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .person-card-name,
+  main section .person-card-name,
+  main article .person-card-name {
+    white-space: nowrap !important;
+    font-size: clamp(12px, 1.6vw, 16px) !important;
+    line-height: 1.3 !important;
+  }
 }
 
 /* Hero tagline — equal side space; do not left-align on desktop */
