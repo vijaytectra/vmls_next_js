@@ -388,7 +388,10 @@ html {
   }
 
   .blog-article-content .blog-html button.cta,
-  .blog-article-content .blog-html a.blog-cta-link {
+  .blog-article-content .blog-html a.blog-cta-link,
+  .blog-article-content .blog-html a.vmls-apply-cta,
+  .blog-article-content .blog-html .vmls-apply-cta-wrap > a,
+  .blog-article-content .blog-html a.vlat-cta-button {
     min-height: 48px;
     width: 100%;
     justify-content: center;
@@ -415,30 +418,57 @@ html {
   font-weight: 400 !important;
 }
 
-.blog-article-content .blog-html .blog-cta-link,
-.blog-article-content .blog-html a.blog-cta-link {
+/* Transparent wrapper resets — ensure paragraph wrappers are invisible layout containers */
+.blog-article-content .blog-html p.blog-cta-link,
+.blog-article-content .blog-html p.vmls-apply-cta-wrap,
+.blog-article-content .blog-html .vmls-apply-cta-wrap {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 1rem 0 1.5rem !important;
+  display: block;
+}
+
+/* CTA Buttons — strictly target <a> and <button> elements */
+.blog-article-content .blog-html a.blog-cta-link,
+.blog-article-content .blog-html a.vmls-apply-cta,
+.blog-article-content .blog-html .vmls-apply-cta-wrap > a,
+.blog-article-content .blog-html p.blog-cta-link > a,
+.blog-article-content .blog-html a.vlat-cta-button,
+.blog-article-content .blog-html button.cta {
   display: inline-flex;
   align-items: center;
-  margin: 0.25rem 0 1.25rem;
-  padding: 0.75rem 1.25rem;
-  background: #a31f34;
-  color: #fff !important;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0.5rem;
+  padding: 0.85rem 1.6rem;
+  background: linear-gradient(135deg, #a31f34 0%, #800000 100%);
+  color: #ffffff !important;
   text-decoration: none !important;
+  border: none !important;
   border-radius: 0.5rem;
-  font-weight: 600;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 700;
   font-size: 0.95rem;
-  transition: background 0.2s ease;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 14px rgba(163, 31, 52, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
 }
 
-.blog-article-content .blog-html a.blog-cta-link:hover {
-  background: #7f1828;
-  color: #fff !important;
-}
-
-.blog-article-content .blog-html p.blog-cta-link {
-  background: transparent;
-  padding: 0;
-  margin: 0 0 1.25rem;
+.blog-article-content .blog-html a.blog-cta-link:hover,
+.blog-article-content .blog-html a.vmls-apply-cta:hover,
+.blog-article-content .blog-html .vmls-apply-cta-wrap > a:hover,
+.blog-article-content .blog-html p.blog-cta-link > a:hover,
+.blog-article-content .blog-html a.vlat-cta-button:hover,
+.blog-article-content .blog-html button.cta:hover {
+  background: linear-gradient(135deg, #8b192b 0%, #680000 100%);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(163, 31, 52, 0.35);
+  filter: brightness(1.05);
 }
 
 .blog-article-content .blog-html .cta-note {
