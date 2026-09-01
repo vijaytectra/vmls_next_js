@@ -908,6 +908,8 @@ p.text-right,
     -webkit-hyphens: none !important;
     hyphens: none !important;
   }
+}
+
 /* Tablet viewport (768px - 1023px): Keep person card names on a single line */
 @media (min-width: 768px) and (max-width: 1023px) {
   .person-card-name,
