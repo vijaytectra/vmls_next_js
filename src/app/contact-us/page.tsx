@@ -47,22 +47,21 @@ export default function ContactUsPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 lg:gap-24">
           
           {/* Left: Contact Info */}
-          <div className="space-y-16">
+          <div className="space-y-8 sm:space-y-10">
             {/* Campus Address 1 */}
             <div>
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-4">
-                <span className="w-12 h-[1px] bg-[#a31f34] hidden md:block"></span>
+              <h2 className="font-playfair text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 flex items-center gap-3 md:gap-4">
+                <span className="w-8 md:w-12 h-[1px] bg-[#a31f34] hidden sm:block"></span>
                 VMLS Campus Address
               </h2>
-              <div className="font-inter text-gray-600 space-y-4 text-base md:text-lg leading-relaxed">
+              <div className="font-inter text-gray-600 text-base md:text-lg leading-relaxed">
                 <Link 
                   href={mapUrl}
                   target="_blank"
                   className="block hover:text-[#a31f34] transition-colors group"
                 >
                   <p className="group-hover:underline decoration-[#a31f34] underline-offset-4">
-                    Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road),<br />
-                    Paiyanoor, Chennai - 603104, Tamil Nadu, India.
+                    Vinayaka Nagar, Rajiv Gandhi Salai (Old Mahabalipuram Road), Paiyanoor, Chennai - 603104, Tamil Nadu, India.
                   </p>
                 </Link>
               </div>
@@ -70,12 +69,12 @@ export default function ContactUsPage() {
 
             {/* Admissions */}
             <div>
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-4">
-                <span className="w-12 h-[1px] bg-[#a31f34] hidden md:block"></span>
+              <h2 className="font-playfair text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 flex items-center gap-3 md:gap-4">
+                <span className="w-8 md:w-12 h-[1px] bg-[#a31f34] hidden sm:block"></span>
                 For Admissions
               </h2>
-              <div className="font-inter text-gray-600 space-y-4 text-base md:text-lg">
-                <div className="flex flex-wrap gap-4 items-center">
+              <div className="font-inter text-gray-600 space-y-2 text-base md:text-lg">
+                <div className="flex flex-wrap gap-3 sm:gap-4 items-center">
                   <Link href="tel:18003094350" className="text-[#a31f34] font-bold hover:underline">1800 309 4350</Link>
                   <span className="text-gray-300">|</span>
                   <Link href="tel:7358201234" className="text-[#a31f34] font-bold hover:underline">7358 201 234</Link>
@@ -88,15 +87,13 @@ export default function ContactUsPage() {
 
             {/* City Office / Address 2 */}
             <div>
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-4">
-                <span className="w-12 h-[1px] bg-[#a31f34] hidden md:block"></span>
+              <h2 className="font-playfair text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 flex items-center gap-3 md:gap-4">
+                <span className="w-8 md:w-12 h-[1px] bg-[#a31f34] hidden sm:block"></span>
                 City Office Address
               </h2>
-              <div className="font-inter text-gray-600 space-y-4 text-base md:text-lg leading-relaxed">
+              <div className="font-inter text-gray-600 text-base md:text-lg leading-relaxed">
                 <p>
-                  New No: 213, Old No: 160, Behind Doshi Tower,<br />
-                  Poonamallee High Road, Kilpauk, Chennai - 600010,<br />
-                  Tamil Nadu, India.
+                  New No: 213, Old No: 160, Behind Doshi Tower, Poonamallee High Road, Kilpauk, Chennai - 600010, Tamil Nadu, India.
                 </p>
               </div>
             </div>
