@@ -244,12 +244,12 @@ export default function StudentAffairsPage() {
           </div>
 
           {/* Support */}
-          <div className="bg-[#006cae] p-4 xl:p-5 text-white flex flex-col justify-between min-h-[380px] xl:min-h-[420px] text-left">
+          <div className="bg-[#006cae] p-5 sm:p-6 xl:p-5 text-white flex flex-col justify-between min-h-0 md:min-h-[380px] xl:min-h-[420px] text-left">
             <div className="text-left">
-              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-4 pb-2 border-b border-white/20 leading-snug text-left">
+              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-3 sm:mb-4 pb-2 border-b border-white/20 leading-snug text-left">
                 Student Support &amp; Counselling
               </h3>
-              <ul className="space-y-3 text-[11px] xl:text-xs font-medium text-white/85 text-left">
+              <ul className="space-y-2.5 sm:space-y-3 text-xs xl:text-xs font-medium text-white/85 text-left">
                 <li className="flex items-start gap-2 text-left">
                   <span className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 shrink-0" />
                   <span className="min-w-0 flex-1 text-left">24/7 Access to Professional Counsellors</span>
@@ -264,9 +264,9 @@ export default function StudentAffairsPage() {
                 </li>
               </ul>
             </div>
-            <div className="mt-6 pt-4 border-t border-white/20 text-left">
-              <p className="font-playfair text-sm font-bold mb-2 leading-snug text-left">Counselling Support Contact: Dr. Saranya</p>
-              <a href="tel:+919500049969" className="text-[11px] xl:text-xs text-white/90 hover:text-white text-left">
+            <div className="mt-4 md:mt-6 pt-3.5 md:pt-4 border-t border-white/20 text-left">
+              <p className="font-playfair text-sm font-bold mb-1 md:mb-2 leading-snug text-left">Counselling Support Contact: Dr. Saranya</p>
+              <a href="tel:+919500049969" className="text-xs xl:text-xs text-white/90 hover:text-white text-left">
                 +91 95000 49969
               </a>
             </div>
@@ -275,11 +275,11 @@ export default function StudentAffairsPage() {
           {/* Anti-Ragging */}
           <Link
             href="/anti-ragging-squad"
-            className="bg-[#fbb03b] p-4 xl:p-5 text-[#1a1a1a] flex flex-col justify-between min-h-[380px] xl:min-h-[420px] group text-left"
+            className="bg-[#fbb03b] p-5 sm:p-6 xl:p-5 text-[#1a1a1a] flex flex-col justify-between min-h-0 md:min-h-[380px] xl:min-h-[420px] group text-left"
           >
             <div className="text-left">
-              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-4 pb-2 border-b border-black/10 text-left">Anti-Ragging Cell</h3>
-              <ul className="space-y-3 text-[11px] xl:text-xs font-medium text-[#1a1a1a]/75 text-left">
+              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-3 sm:mb-4 pb-2 border-b border-black/10 text-left">Anti-Ragging Cell</h3>
+              <ul className="space-y-2.5 sm:space-y-3 text-xs xl:text-xs font-medium text-[#1a1a1a]/75 text-left">
                 <li className="flex items-start gap-2 text-left">
                   <span className="w-1.5 h-1.5 bg-[#800000] rounded-full mt-1.5 shrink-0" />
                   <span className="min-w-0 flex-1 text-left">Active Anti-Ragging Cell in place for prevention and quick redressal</span>
@@ -294,16 +294,16 @@ export default function StudentAffairsPage() {
                 </li>
               </ul>
             </div>
-            <span className="mt-6 inline-block self-start px-4 py-2 border border-black/20 font-bold text-[9px] uppercase tracking-widest group-hover:bg-[#800000] group-hover:text-white transition-all">
+            <span className="mt-4 md:mt-6 inline-block self-start px-4 py-2 border border-black/20 font-bold text-[9px] uppercase tracking-widest group-hover:bg-[#800000] group-hover:text-white transition-all">
               Read More
             </span>
           </Link>
 
           {/* Student Council */}
-          <div className="bg-[#E2C88B] p-4 xl:p-5 text-gray-900 flex flex-col justify-between min-h-[380px] xl:min-h-[420px] text-left">
+          <div className="bg-[#E2C88B] p-5 sm:p-6 xl:p-5 text-gray-900 flex flex-col justify-between min-h-0 md:min-h-[380px] xl:min-h-[420px] text-left">
             <div className="text-left">
-              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-4 pb-2 border-b border-black/10 text-left">Student Council</h3>
-              <ul className="space-y-3 text-[11px] xl:text-xs font-medium text-black/70 text-left">
+              <h3 className="font-playfair text-lg xl:text-xl font-bold mb-3 sm:mb-4 pb-2 border-b border-black/10 text-left">Student Council</h3>
+              <ul className="space-y-2.5 sm:space-y-3 text-xs xl:text-xs font-medium text-black/70 text-left">
                 <li className="flex items-start gap-2 text-left">
                   <span className="w-1.5 h-1.5 bg-white rounded-full mt-1.5 shrink-0" />
                   <span className="min-w-0 flex-1 text-left">Represents the voice of the student body</span>
