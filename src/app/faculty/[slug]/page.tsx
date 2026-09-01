@@ -532,14 +532,14 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Breadcrumb - Matching Dean Page Style */}
-      <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">
-          <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
-          <span className="text-gray-300 font-light">/</span>
-          <Link href="/faculty-profiles" className="text-gray-500 hover:text-[#a31f34] transition-colors">Faculty Profiles</Link>
-          <span className="text-gray-300 font-light">/</span>
-          <span className="text-[#a31f34] font-semibold">{faculty.name}</span>
+      {/* Breadcrumb */}
+      <nav className="px-[5%] py-4 sm:py-6 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
+        <div className="max-w-7xl mx-auto flex items-center gap-2 sm:gap-3 text-xs min-[380px]:text-sm sm:text-base md:text-lg font-medium whitespace-nowrap">
+          <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors shrink-0">Home</Link>
+          <span className="text-gray-300 font-light shrink-0">/</span>
+          <Link href="/faculty-profiles" className="text-gray-500 hover:text-[#a31f34] transition-colors shrink-0">Faculty Profiles</Link>
+          <span className="text-gray-300 font-light shrink-0">/</span>
+          <span className="text-[#a31f34] font-semibold shrink-0">{faculty.name}</span>
         </div>
       </nav>
       <hr className="border-gray-100" />
