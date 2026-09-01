@@ -26,20 +26,20 @@ export default function FacultyAchievementsPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
       {/* Breadcrumbs */}
-      <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
-          <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">Home</Link>
-          <span className="text-gray-300 font-light">/</span>
-          <span className="text-gray-500">Faculty</span>
-          <span className="text-gray-300 font-light">/</span>
-          <span className="text-[#a31f34] font-semibold">Achievements</span>
+      <nav className="px-[5%] py-4 sm:py-6 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
+        <div className="max-w-7xl mx-auto flex items-center gap-2 sm:gap-3 text-xs min-[380px]:text-sm sm:text-base md:text-lg font-medium whitespace-nowrap">
+          <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors shrink-0">Home</Link>
+          <span className="text-gray-300 font-light shrink-0">/</span>
+          <span className="text-gray-500 shrink-0">Faculty</span>
+          <span className="text-gray-300 font-light shrink-0">/</span>
+          <span className="text-[#a31f34] font-semibold shrink-0">Achievements</span>
         </div>
       </nav>
 
       {/* Hero Section - Matching Internship Style */}
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">
-          <div className="lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
+          <div className="w-full lg:w-[45%] p-6 sm:p-8 md:p-[8%] lg:p-[5%] flex flex-col justify-center bg-[#800000] text-white">
             <h1 className="font-playfair text-2xl md:text-3xl lg:text-5xl font-bold mb-6 leading-tight whitespace-normal lg:whitespace-nowrap">
               Faculty <span className="text-[#fbb03b]">Achievements</span>
             </h1>
@@ -47,14 +47,14 @@ export default function FacultyAchievementsPage() {
               Celebrating the academic excellence, research impact, and professional recognitions of our distinguished faculty members who are shaping the future of legal education.
             </p>
           </div>
-          <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
+          <div className="hidden lg:block lg:w-[55%] relative min-h-[300px]">
             <Image
               src="/images/faculty/live/DSC00716_19.webp"
               alt="VMLS Faculty Achievements"
               fill
               priority
               className="object-cover object-[center_20%]"
-              sizes="(max-width: 1024px) 100vw, 55vw"
+              sizes="55vw"
             />
             <div className="absolute inset-0 bg-black/10"></div>
           </div>
