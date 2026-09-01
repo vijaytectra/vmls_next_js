@@ -559,6 +559,21 @@ export const mentoringMembers: MentoringMember[] = [
       },
     ],
   },
+  {
+    slug: 'dr-padmanabha-ramanujam',
+    name: 'Dr. Padmanabha Ramanunjam',
+    role: 'Ex-Officio Member',
+    designation: 'Dean of Academic Governance, JGU and Professor of Law, JGLS',
+    image: '/images/faculty/padmanabha.webp',
+    blocks: [
+      {
+        type: 'paragraph',
+        segments: [
+          { text: 'Dr. Padmanabha Ramanunjam is the Dean of Academic Governance at O.P. Jindal Global University (JGU) and Professor of Law at Jindal Global Law School (JGLS). He plays a pivotal role in shaping academic governance, quality assurance, and institutional strategy across the university.', bold: false },
+        ],
+      },
+    ],
+  },
 ];
 
 export function getMentoringMemberBySlug(slug: string) {

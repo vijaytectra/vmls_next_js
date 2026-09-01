@@ -3,8 +3,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 export default function LibraryPage() {
+  const [mounted, setMounted] = useState(false);
   const [currentImg, setCurrentImg] = useState(0);
   const [isTurnitinModalOpen, setIsTurnitinModalOpen] = useState(false);
   const [isDigitalAccessModalOpen, setIsDigitalAccessModalOpen] = useState(false);
@@ -36,6 +38,10 @@ export default function LibraryPage() {
   ];
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
     const timer = setInterval(() => {
       setCurrentImg((prev) => (prev + 1) % galleryImages.length);
     }, 4000);
@@ -44,6 +50,35 @@ export default function LibraryPage() {
 
   const nextImg = () => setCurrentImg((prev) => (prev + 1) % galleryImages.length);
   const prevImg = () => setCurrentImg((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+
+  const isAnyModalOpen =
+    isTurnitinModalOpen ||
+    isDigitalAccessModalOpen ||
+    isDiscussionRoomsModalOpen ||
+    isReferenceModalOpen ||
+    isOpacModalOpen ||
+    isCourseGuideModalOpen ||
+    isNewArrivalsModalOpen ||
+    isRemoteAccessModalOpen ||
+    isILLModalOpen ||
+    isBookDisplayModalOpen ||
+    isThematicDisplayModalOpen ||
+    isCareerCornerModalOpen ||
+    isExcellenceCollectionModalOpen ||
+    isTextbookProcurementModalOpen ||
+    isNewspaperServiceModalOpen ||
+    isReprographyServiceModalOpen;
+
+  useEffect(() => {
+    if (isAnyModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isAnyModalOpen]);
 
   return (
     <main className="min-h-screen bg-white overflow-hidden">
@@ -198,8 +233,8 @@ export default function LibraryPage() {
               <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
                 <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">Facilities</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  <button onClick={() => setIsDigitalAccessModalOpen(true)} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
-                  <button onClick={() => setIsDiscussionRoomsModalOpen(true)} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
+                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
+                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
                 </div>
               </div>
               </div>
@@ -367,7 +402,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsReferenceModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsReferenceModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -378,7 +413,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsOpacModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsOpacModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -389,7 +424,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsCourseGuideModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsCourseGuideModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -400,7 +435,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsNewArrivalsModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsNewArrivalsModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -411,7 +446,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsRemoteAccessModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsRemoteAccessModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -422,7 +457,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsILLModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsILLModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -433,7 +468,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsBookDisplayModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsBookDisplayModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -444,7 +479,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsThematicDisplayModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsThematicDisplayModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -455,7 +490,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsCareerCornerModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsCareerCornerModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -466,7 +501,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsExcellenceCollectionModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsExcellenceCollectionModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -477,7 +512,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsTextbookProcurementModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsTextbookProcurementModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -488,7 +523,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsNewspaperServiceModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsNewspaperServiceModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -499,7 +534,7 @@ export default function LibraryPage() {
                       return (
                         <button
                           key={service}
-                          onClick={() => setIsReprographyServiceModalOpen(true)}
+                          onClick={(e) => { e.preventDefault(); setIsReprographyServiceModalOpen(true); }}
                           className={buttonStyles}
                         >
                           {service}
@@ -605,36 +640,37 @@ export default function LibraryPage() {
       </section>
 
       {/* Turnitin Modal */}
-      {isTurnitinModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isTurnitinModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsTurnitinModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsTurnitinModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Turnitin</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed text-left">
                 Our institution provides access to Turnitin, a plagiarism detection tool, to help faculties evaluate student submissions and ensure academic integrity. This tool checks for originality and provides feedback to students on proper citation and referencing.
               </p>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Digital Access Modal */}
-      {isDigitalAccessModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isDigitalAccessModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsDigitalAccessModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsDigitalAccessModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Digital Access Facility</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Our library is equipped with multiple computers and Wi-Fi connectivity that students can utilize for accessing the digital library, working on assignments, research, and other academic needs.
@@ -658,20 +694,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Discussion Rooms Modal */}
-      {isDiscussionRoomsModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isDiscussionRoomsModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsDiscussionRoomsModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsDiscussionRoomsModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Discussion Rooms</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Our library offers discussion rooms that provide a collaborative and quiet space for users to engage in group discussions, brainstorming sessions, and project work. These rooms are equipped with necessary facilities to support team-based learning and academic activities.
@@ -700,20 +737,21 @@ export default function LibraryPage() {
               </Link>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Reference Service Modal */}
-      {isReferenceModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isReferenceModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsReferenceModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsReferenceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Reference Service</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Our Reference Service is designed to support students, faculty, and other users with their queries. Email your questions related to case law, journal articles, reports, or specific topics in law to <a href="mailto:referencelibrary@vmls.edu.in" className="font-bold text-gray-900 hover:text-[#a31f34] transition-colors">referencelibrary@vmls.edu.in</a>.
@@ -745,20 +783,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* OPAC Modal */}
-      {isOpacModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isOpacModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsOpacModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsOpacModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">OPAC (Online Public Access Catalog)</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Access our comprehensive online catalog to search, browse, and manage your library resources efficiently.
@@ -790,20 +829,21 @@ export default function LibraryPage() {
               </Link>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Course Guide Modal */}
-      {isCourseGuideModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isCourseGuideModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsCourseGuideModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsCourseGuideModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Course Guide</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 The Course Guide is a comprehensive academic resource prepared for each semester, providing students with access to all essential and supplementary reading materials related to a specific subject.
@@ -830,20 +870,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* New Arrivals Modal */}
-      {isNewArrivalsModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isNewArrivalsModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsNewArrivalsModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsNewArrivalsModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">New Arrivals</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 The Vinayaka Mission's Law Library every Month announces the new arrival of books and print periodicals.
@@ -867,20 +908,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Remote Access Modal */}
-      {isRemoteAccessModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isRemoteAccessModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsRemoteAccessModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsRemoteAccessModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Remote Access</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 VMLS community can access the digital library resources remotely using the provided link.
@@ -903,20 +945,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* ILL Modal */}
-      {isILLModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isILLModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsILLModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsILLModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Inter-Library Loan (ILL)</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Books not available in the VMLS library but available in other constituent libraries under VMRF can be availed through Interlibrary Loan (ILL).
@@ -940,20 +983,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Book Display Modal */}
-      {isBookDisplayModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isBookDisplayModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsBookDisplayModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsBookDisplayModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Book Display</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 The VMLS Library organizes book displays on important legal and socially significant days throughout the year to raise awareness and promote reading on themes related to justice, rights, and governance.
@@ -977,20 +1021,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Thematic Display Modal */}
-      {isThematicDisplayModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isThematicDisplayModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsThematicDisplayModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsThematicDisplayModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Thematic Book Display</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 VMLS Library regularly organizes thematic book displays on special subjects of academic and professional relevance. These curated displays aim to enhance subject-specific awareness and support focused research among students and faculty.
@@ -1016,20 +1061,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Career Corner Modal */}
-      {isCareerCornerModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isCareerCornerModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsCareerCornerModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsCareerCornerModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Career Catalyst Corner</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Career Catalyst Corner is a dedicated space in the VMLS Library that features a curated collection of law career-related books, competitive exam guides, internship and placement resources, and professional development materials.
@@ -1059,20 +1105,21 @@ export default function LibraryPage() {
               </p>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Excellence Collection Modal */}
-      {isExcellenceCollectionModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isExcellenceCollectionModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsExcellenceCollectionModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsExcellenceCollectionModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Centre of Excellence Collection</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Currently, the library holds a growing collection of books under the 5 Centres of Excellence.
@@ -1097,20 +1144,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Textbook Procurement Modal */}
-      {isTextbookProcurementModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isTextbookProcurementModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsTextbookProcurementModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsTextbookProcurementModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Textbook Procurement for Students</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 At the start of each semester, we will assist students in purchasing required textbooks and bare acts at discounted prices.
@@ -1134,20 +1182,21 @@ export default function LibraryPage() {
               </div>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Newspaper Service Modal */}
-      {isNewspaperServiceModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isNewspaperServiceModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsNewspaperServiceModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsNewspaperServiceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Newspaper Service</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed mb-6">
                 Our library offers a selection of daily newspapers for students to stay updated on current events and trends.
@@ -1177,28 +1226,30 @@ export default function LibraryPage() {
               </p>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
       {/* Reprography Service Modal */}
-      {isReprographyServiceModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-          <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl relative animate-in fade-in zoom-in duration-300">
+      {mounted && isReprographyServiceModalOpen && createPortal(
+        <div className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6" onClick={() => setIsReprographyServiceModalOpen(false)} role="dialog" aria-modal="true">
+          <div className="bg-white w-full max-w-2xl max-h-[85vh] flex flex-col rounded-2xl shadow-2xl relative text-left" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsReprographyServiceModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
-            <div className="p-8 max-h-[90vh] overflow-y-auto">
+            <div className="p-6 sm:p-8 overflow-y-auto text-left">
               <h2 className="text-[#a31f34] text-2xl font-bold font-playfair mb-4">Reprography Service</h2>
               <p className="text-gray-600 font-inter text-[15px] leading-relaxed">
                 Reprography services are available solely for documents and cases downloaded from databases within the VMRF Digital Library and minimum pages of physical books(10%).
               </p>
             </div>
           </div>
-        </div>
-      )}
+          </div>,
+          document.body
+        )}
 
     </main>
   );

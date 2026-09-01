@@ -121,22 +121,6 @@ const facultyData: FacultyData[] = [
     ]
   },
   {
-    name: "Dr. Najeed Naved Siddiqui",
-    role: "Assistant Professor",
-    qualifications: "Ph.D - CHRIST (Deemed to be University), Bengaluru.",
-    image: "/images/faculty/live/najeed.webp",
-    slug: "najeed-naved-siddiqui",
-    email: "najeedsiddiqui@vmls.edu.in",
-    bio: [
-      "Dr. Najeed Naved Siddiqui is an academic, legal researcher, and advocate whose scholarship focuses on Constitutional Law, Food Security, Human Rights, and the intersection of law, governance, and public policy. His research adopts both doctrinal and empirical approaches, with particular emphasis on constitutionalism, socio-economic rights, and the evolving relationship between law, technology, and democratic governance.",
-      "He holds a Ph.D. in Law from CHRIST (Deemed to be University), Bengaluru, where his doctoral research examined food security and constitutional governance in India through an empirical and rights-based framework. He earned his LL.M. in Constitutional and Administrative Law from National Law University Odisha and his B.A. LL.B. (Hons.) from Aligarh Muslim University. He is enrolled as an Advocate with the Bar Council of Delhi.",
-      "During his postgraduate studies, Dr. Siddiqui collaborated with the Labour & ESI Department, Government of Odisha, and National Law University Odisha on the social mapping of migrant workers in the state. His research has also addressed issues of gender justice, constitutional protections for transgender persons, and socio-economic rights. He has further worked with the People's Union for Civil Liberties on matters relating to women and child rights.",
-      "He serves as a Member Representative of the International Society for Therapeutic Jurisprudence and is a member of the Global Network for Human Rights and the Environment.",
-      "Dr. Siddiqui is the recipient of the Best Paper Award conferred by the National Institute of Disaster Management, Ministry of Home Affairs, Government of India, for his paper titled 'Implications of Climate Change on Food Security in India: Challenges and Opportunities.' He has authored and presented several research papers at national and international conferences and continues to contribute to emerging debates in constitutional law and public policy.",
-      "His teaching and research interests include Comparative Constitutional Law, Constitutional Theory, Human Rights, Food Security Law, Law and Technology, Gender Justice, Law and Religion, Jurisprudence, and Public Policy. Outside academia, he enjoys football, philosophy, and interdisciplinary scholarship that bridges law with the social sciences.",
-    ]
-  },
-  {
     name: "Sowmiya Narayan Rajagopalan",
     role: "Assistant Dean PG Academics",
     qualifications: "LLM(Corporate Law) National Law University Jodhpur, MSc Law and Finance (Trinity College Dublin)",

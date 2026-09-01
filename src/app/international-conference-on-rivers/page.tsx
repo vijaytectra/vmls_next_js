@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 import SubThemesSection from "@/components/SubThemesSection";
 import { pageMetadata } from "@/lib/seo-pages";
 
@@ -463,6 +464,125 @@ export default function InternationalConferencePage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* List of Advisory Committee Section */}
+        <section className="py-12 md:py-16 px-[5%] bg-[#e4e4e4]">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-playfair text-2xl md:text-3xl font-bold text-center text-[#800000] mb-8">
+              List of Advisory Committee
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { name: "Dr Tiina Palonitty", role: "Professor, University of Helsinki" },
+                { name: "Amit Ranjan", role: "Research Fellow, NUS Singapore" },
+                { name: "Dr Masrur Salekin", role: "Judge, Bangladesh" },
+                { name: "Dr. Zlato Hadzidedic", role: "Director, Center for Nationalism Studies, Bosnia and Herzegovina" },
+                { name: "Robert Walton", role: "Associate Lecture, The Open University, UK" },
+                { name: "Shawahiq Siddiqui", role: "ADV, IELO" }
+              ].map((member, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <ChevronRight className="w-5 h-5 text-[#8b1615] shrink-0 mt-0.5" />
+                  <div className="flex flex-col gap-1">
+                    <h4 className="font-inter font-bold text-black text-base md:text-lg leading-snug">{member.name}</h4>
+                    <p className="font-inter text-xs md:text-sm text-gray-700 leading-normal">{member.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Scientific Committee Section */}
+        <section className="py-12 md:py-16 px-[5%] bg-white border-t border-b border-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-playfair text-2xl md:text-3xl font-bold text-center text-[#800000] mb-8">
+              Scientific Committee
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { name: "Navidreza Ahadi", role: "Srinakharinwirot University - SWU Thailand" },
+                { name: "Aurangzaib Alizai", role: "University of Balochistan- Pakisthan" },
+                { name: "Dr Sanga Mithra", role: "VMLS, Chennai" },
+                { name: "Nabeela Siddiqui", role: "VMLS, Chennai" },
+                { name: "Shambhavi Thakur", role: "VMLS, Chennai" }
+              ].map((member, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <ChevronRight className="w-5 h-5 text-[#8b1615] shrink-0 mt-0.5" />
+                  <div className="flex flex-col gap-1">
+                    <h4 className="font-inter font-bold text-black text-base md:text-lg leading-snug">{member.name}</h4>
+                    <p className="font-inter text-xs md:text-sm text-gray-700 leading-normal">{member.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Conference Organising Committee Section */}
+        <section className="py-12 md:py-16 px-[5%] bg-[#e4e4e4]">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="font-playfair text-2xl md:text-3xl font-bold text-center text-[#800000] mb-10">
+              Conference Organising committee
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+              {[
+                {
+                  img: "/images/rivers/ananth.webp",
+                  badge: "PATRON",
+                  name: "Dr. Ananth Padmanabhan",
+                  role: "Dean, Vinayaka Mission's Law School"
+                },
+                {
+                  img: "/images/rivers/nabeela.webp",
+                  badge: "CONFERENCE CHAIR",
+                  name: "Ms. Nabeela Siddiqui",
+                  role: "Assistant Professor, Vinayaka Mission's Law School"
+                },
+                {
+                  img: "/images/rivers/sanga-mithra.webp",
+                  badge: "CONFERENCE CHAIR",
+                  name: "Dr. Gnana Sanga Mithra S",
+                  role: "Associate Professor, Vinayaka Mission's Law School"
+                },
+                {
+                  img: "/images/rivers/sowmiya.webp",
+                  badge: "CO-CHAIR",
+                  name: "Mr. Sowmiya Narayan Rajagopalan",
+                  role: "Assistant Professor, Vinayaka Mission's Law School"
+                },
+                {
+                  img: "/images/rivers/sambhavi.webp",
+                  badge: "CO-CHAIR",
+                  name: "Ms. Shambhavi Thakur",
+                  role: "Assistant Professor, Vinayaka Mission's Law School"
+                },
+                {
+                  img: "/images/rivers/abhinanditha.webp",
+                  badge: "CO-CHAIR",
+                  name: "Ms. Abhinanditha",
+                  role: "Assistant Professor, Vinayaka Mission's Law School"
+                }
+              ].map((member, idx) => (
+                <div key={idx} className="flex flex-col items-center text-center space-y-3">
+                  <div className="relative w-40 sm:w-44 aspect-square">
+                    <Image
+                      src={member.img}
+                      alt={member.name}
+                      fill
+                      sizes="(max-width: 768px) 160px, 176px"
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="bg-[#fae6bd] text-[#8b1615] px-3.5 py-1 rounded-full font-inter font-bold text-xs uppercase tracking-wider inline-block">
+                    {member.badge}
+                  </span>
+                  <h4 className="font-inter font-bold text-gray-900 text-base md:text-lg leading-snug">{member.name}</h4>
+                  <p className="font-inter text-xs sm:text-sm text-gray-600 leading-normal whitespace-nowrap">{member.role}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
