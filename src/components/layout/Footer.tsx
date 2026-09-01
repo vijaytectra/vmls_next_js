@@ -7,7 +7,7 @@ export default function Footer() {
   const cityOfficeMapUrl = "https://www.google.com/maps/search/Vinayaka+Missions+University+City+Office+Kilpauk/@13.0784,80.2415,17z";
 
   return (
-    <footer className="bg-[#f4f4f4] pt-12 pb-8 px-4 sm:px-6 md:px-8 lg:px-[5%] border-t border-gray-100">
+    <footer className="bg-[#f4f4f4] pt-12 pb-8 px-4 pr-12 sm:px-6 sm:pr-14 md:px-8 md:pr-14 lg:px-[5%] border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-16 mb-6 md:mb-12">
           
@@ -131,18 +131,18 @@ export default function Footer() {
           <div className="md:col-span-4 space-y-6 md:space-y-10 text-left">
             <div className="space-y-6 text-left">
               <h4 className="font-inter font-bold text-[#a31f34] uppercase tracking-wider text-base text-left">Contact Us</h4>
-              <div className="space-y-6 text-left">
-                <Link href="tel:+917358201234" className="flex items-center justify-start gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group text-left">
-                  <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300 shrink-0">
+              <div className="space-y-4 text-left">
+                <Link href="tel:+917358201234" className="flex items-center justify-start gap-3 sm:gap-4 text-[#333] text-sm sm:text-base hover:text-[#a31f34] transition-colors group text-left">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300 shrink-0">
                     <Phone size={18} />
                   </div>
                   <span className="font-semibold tracking-wide">+91 73582 01234</span>
                 </Link>
-                <Link href="mailto:admissions@vmls.edu.in" className="flex items-center justify-start gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group min-w-0 text-left">
-                  <div className="w-10 h-10 shrink-0 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
+                <Link href="mailto:admissions@vmls.edu.in" className="flex items-center justify-start gap-2.5 sm:gap-3 text-[#333] hover:text-[#a31f34] transition-colors group min-w-0 text-left">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
                     <Mail size={18} />
                   </div>
-                  <span className="font-semibold tracking-wide break-all sm:break-normal">admissions@vmls.edu.in</span>
+                  <span className="font-semibold tracking-tight text-[12px] sm:text-xs md:text-[13px] lg:text-base whitespace-nowrap">admissions@vmls.edu.in</span>
                 </Link>
               </div>
             </div>
