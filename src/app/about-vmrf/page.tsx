@@ -141,10 +141,10 @@ export default function AboutVMRF() {
                 />
               </div>
               <div className="mt-4 text-center flex flex-col items-center">
-                <p className="person-card-role font-inter text-sm text-gray-500 text-center !mb-0 !mt-0 !min-h-0">Founder Chancellor</p>
                 <h3 className="person-card-name font-playfair text-lg md:text-[15px] lg:text-xl md:whitespace-nowrap font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors !mt-0 !mb-0 !min-h-0">
                   Dr. A. Shanmugasundaram
                 </h3>
+                <p className="person-card-role font-inter text-sm text-gray-500 text-center !mb-0 !mt-0 !min-h-0">Founder Chancellor</p>
               </div>
             </Link>
 
@@ -162,10 +162,10 @@ export default function AboutVMRF() {
                 />
               </div>
               <div className="mt-4 text-center flex flex-col items-center">
-                <p className="person-card-role font-inter text-sm text-gray-500 text-center !mb-0 !mt-0 !min-h-0">Chancellor</p>
                 <h3 className="person-card-name font-playfair text-lg md:text-[15px] lg:text-xl md:whitespace-nowrap font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors !mt-0 !mb-0 !min-h-0">
                   Dato&apos; Seri. Dr. A. S. Ganesan
                 </h3>
+                <p className="person-card-role font-inter text-sm text-gray-500 text-center !mb-0 !mt-0 !min-h-0">Chancellor</p>
               </div>
             </Link>
 
@@ -180,10 +180,10 @@ export default function AboutVMRF() {
                 />
               </div>
               <div className="mt-4 text-center flex flex-col items-center">
-                <p className="person-card-role font-inter text-sm text-gray-500 text-center !mb-0 !mt-0 !min-h-0">Trustee</p>
                 <h3 className="person-card-name font-playfair text-lg md:text-[15px] lg:text-xl md:whitespace-nowrap font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors !mt-0 !mb-0 !min-h-0">
                   Dr. Annapoorani Ganesan
                 </h3>
+                <p className="person-card-role font-inter text-sm text-gray-500 text-center !mb-0 !mt-0 !min-h-0">Trustee</p>
               </div>
             </div>
           </div>
