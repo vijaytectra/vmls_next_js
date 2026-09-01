@@ -833,6 +833,14 @@ export default function LibraryPage() {
                   })}
                 </div>
               </div>
+
+              {/* Membership Card */}
+              <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
+                <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 bg-[#a31f34] rounded-full"></span> Membership
+                </h3>
+                <Link href="/library-membership" className="block w-full py-3 bg-[#800000] text-white text-center text-[13px] md:text-sm font-bold normal-case tracking-widest hover:bg-[#a31f34] transition-all">Click Here</Link>
+              </div>
             </div>
 
             {/* Column 2 (Right) */}
@@ -944,7 +952,7 @@ export default function LibraryPage() {
 
               {/* Library Gallery */}
               <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
-                <h3 className="font-playfair text-2xl font-bold text-center text-[#a31f34] mb-4">Library Photos</h3>
+                <h3 className="font-playfair text-2xl font-bold center text-[#a31f34] mb-4">Library Photos</h3>
                 <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden rounded group/gallery">
                   {galleryImages.map((src, idx) => (
                     <div
@@ -1008,6 +1016,28 @@ export default function LibraryPage() {
                 >
                   View Useful Links
                 </Link>
+              </div>
+
+              {/* User Feedback & Rules & Regulations in Right Column on Tablet */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 md:mt-4">
+                <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+                  <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-[#4a5568] rounded-full"></span> User Feedback
+                  </h3>
+                  <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeX88_HF7_aLVwV0P2RhGSG8Zq7kS8MLnoCiiCxFsZTybOv6w/viewform?usp=header" target="_blank" rel="noopener noreferrer" className="block w-full py-3 bg-[#4a5568] text-white text-center text-[12px] font-bold normal-case tracking-wider hover:bg-gray-800 transition-all">User Feedback Form</Link>
+                </div>
+
+                <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
+                  <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 bg-[#800000] rounded-full"></span> Rules &amp; Regulations
+                  </h3>
+                  <Link
+                    href="/library-rules"
+                    className="block w-full py-3 bg-[#800000] text-white text-center text-[12px] font-bold normal-case tracking-wider hover:bg-[#a31f34] transition-all"
+                  >
+                    View Rules
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

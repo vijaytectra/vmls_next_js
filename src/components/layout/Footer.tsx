@@ -7,9 +7,9 @@ export default function Footer() {
   const cityOfficeMapUrl = "https://www.google.com/maps/search/Vinayaka+Missions+University+City+Office+Kilpauk/@13.0784,80.2415,17z";
 
   return (
-    <footer className="bg-[#f4f4f4] pt-12 pb-8 px-[5%] border-t border-gray-100">
+    <footer className="bg-[#f4f4f4] pt-12 pb-8 px-4 pr-12 sm:px-6 sm:pr-14 md:px-8 md:pr-14 lg:px-[5%] border-t border-gray-100">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16 mb-6 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-16 mb-6 md:mb-12">
           
           {/* Brand Column */}
           <div className="md:col-span-4 space-y-6 md:space-y-8 text-left flex flex-col items-start">
@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
             
             {/* Social Icons */}
-            <div className="flex items-center gap-4 justify-start">
+            <div className="flex flex-nowrap items-center gap-1.5 sm:gap-2.5 lg:gap-4 justify-start whitespace-nowrap">
               {[
                 { 
                   name: "Facebook", 
@@ -60,19 +60,17 @@ export default function Footer() {
                   href={social.href} 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34] transition-all duration-300"
+                  className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34] transition-all duration-300 shrink-0"
                   aria-label={social.name}
                 >
                   <svg 
-                    width="18" 
-                    height="18" 
                     viewBox="0 0 24 24" 
                     fill="none" 
                     stroke="currentColor" 
                     strokeWidth="2" 
                     strokeLinecap="round" 
                     strokeLinejoin="round"
-                    className={social.name === "YouTube" || social.name === "Facebook" || social.name === "Twitter" ? "fill-current stroke-0" : ""}
+                    className={`w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-[18px] lg:h-[18px] ${social.name === "YouTube" || social.name === "Facebook" || social.name === "Twitter" ? "fill-current stroke-0" : ""}`}
                   >
                     {social.icon}
                   </svg>
@@ -133,18 +131,18 @@ export default function Footer() {
           <div className="md:col-span-4 space-y-6 md:space-y-10 text-left">
             <div className="space-y-6 text-left">
               <h4 className="font-inter font-bold text-[#a31f34] uppercase tracking-wider text-base text-left">Contact Us</h4>
-              <div className="space-y-6 text-left">
-                <Link href="tel:+917358201234" className="flex items-center justify-start gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group text-left">
-                  <div className="w-10 h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300 shrink-0">
+              <div className="space-y-4 text-left">
+                <Link href="tel:+917358201234" className="flex items-center justify-start gap-3 sm:gap-4 text-[#333] text-sm sm:text-base hover:text-[#a31f34] transition-colors group text-left">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300 shrink-0">
                     <Phone size={18} />
                   </div>
                   <span className="font-semibold tracking-wide">+91 73582 01234</span>
                 </Link>
-                <Link href="mailto:admissions@vmls.edu.in" className="flex items-center justify-start gap-4 text-[#333] text-base hover:text-[#a31f34] transition-colors group min-w-0 text-left">
-                  <div className="w-10 h-10 shrink-0 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
+                <Link href="mailto:admissions@vmls.edu.in" className="flex items-center justify-start gap-2.5 sm:gap-3 text-[#333] hover:text-[#a31f34] transition-colors group min-w-0 text-left">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
                     <Mail size={18} />
                   </div>
-                  <span className="font-semibold tracking-wide break-all sm:break-normal">admissions@vmls.edu.in</span>
+                  <span className="font-semibold tracking-tight text-[12px] sm:text-xs md:text-[13px] lg:text-base whitespace-nowrap">admissions@vmls.edu.in</span>
                 </Link>
               </div>
             </div>
@@ -173,8 +171,8 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar — left padding clears WhatsApp + Student Ambassador chips */}
-        <div className="pt-4 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-6 text-center pl-16 sm:pl-20 md:pl-72 lg:pl-80">
+        {/* Bottom Bar */}
+        <div className="pt-4 md:pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-6 text-center md:text-left">
           <div className="flex flex-row flex-wrap items-center justify-center gap-x-3 sm:gap-x-5 md:gap-x-8 gap-y-2 text-[10px] md:text-sm font-medium uppercase tracking-widest text-[#666]">
             <Link href="/iqac" prefetch={false} className="hover:text-[#a31f34] transition-colors relative z-[1]">IQAC</Link>
             <span className="text-gray-300" aria-hidden>|</span>
