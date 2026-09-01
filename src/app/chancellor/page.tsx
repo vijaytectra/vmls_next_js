@@ -54,7 +54,7 @@ export default function ChancellorPage() {
             <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">
               Leadership
             </h3>
-            <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-4 leading-tight">
+            <h1 className="font-playfair text-[22px] min-[380px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-4 leading-tight whitespace-nowrap">
               Dr. A.S. Ganesan
             </h1>
 

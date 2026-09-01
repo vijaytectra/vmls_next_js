@@ -40,7 +40,7 @@ export default function FounderPage() {
           {/* Right Side: Founder Content */}
           <div className="flex-1 order-2 flex flex-col justify-center min-w-0">
             <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-sm font-bold mb-4">Our Visionary Founder</h3>
-            <h1 className="font-playfair text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-8 leading-tight lg:whitespace-nowrap">
+            <h1 className="font-playfair text-[22px] min-[380px]:text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-6 md:mb-8 leading-tight whitespace-nowrap">
               Dr. A. Shanmugasundaram
             </h1>
             
