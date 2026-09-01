@@ -1498,7 +1498,7 @@ export default function LibraryPage() {
           </div>
 
           {/* Bottom aligned action cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="hidden lg:grid grid-cols-3 gap-8">
             <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)]">
               <h3 className="font-inter text-[15px] font-bold text-gray-900 mb-3 flex items-center gap-2">
                 <span className="w-1.5 h-1.5 bg-[#a31f34] rounded-full"></span> Membership
