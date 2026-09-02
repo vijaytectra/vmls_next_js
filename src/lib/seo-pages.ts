@@ -27,6 +27,7 @@ export type PageType =
   | "library"
   | "event"
   | "news"
+  | "news-index"
   | "blog-index"
   | "legal"
   | "tool"
@@ -116,6 +117,10 @@ export const PAGES = {
     image: "/images/schlorship/01.webp",
     imageAlt: "VMLS scholarship recipients, Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Scholarships" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -131,6 +136,10 @@ export const PAGES = {
       "Research, preservation and promotion of Tamil legal heritage and bilingual legal scholarship in Chennai.",
     image: "/images/global/tl1.webp",
     imageAlt: "Global Tamil Law Centre, VMLS Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Global Tamil Law Centre" },
+    ],
   },
   "/centre-for-justice-through-technology": {
     pageType: "centre",
@@ -142,6 +151,10 @@ export const PAGES = {
       "Where law meets technology at VMLS – legal tech, e-filing and AI projects that widen access to justice.",
     image: "/images/justice/Frame53138.webp",
     imageAlt: "Centre for Justice Through Technology, VMLS Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Centre for Justice Through Technology" },
+    ],
   },
   "/cpil": {
     pageType: "centre",
@@ -154,6 +167,10 @@ export const PAGES = {
     image: "/images/cpil/il0.webp",
     imageAlt: "Centre for the Promotion of International Law, VMLS Chennai",
     note: "News pages label /cpil as 'Centre for Public Interest Litigation' in their visible breadcrumb - a content conflict flagged in the audit, not resolved in markup.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "CPIL" },
+    ],
   },
   "/maritime-law": {
     pageType: "centre",
@@ -165,6 +182,10 @@ export const PAGES = {
       "Shipping, cargo, admiralty and law of the sea research, summits and policy work at VMLS Chennai.",
     image: "/images/maritime/ml0.webp",
     imageAlt: "Centre for Maritime Law, VMLS Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Maritime Law" },
+    ],
   },
   "/centre-for-access-to-justice": {
     pageType: "centre",
@@ -176,6 +197,10 @@ export const PAGES = {
       "Legal aid, community outreach and advocacy that make justice reachable for marginalised communities.",
     image: "/images/CAJ-img.webp",
     imageAlt: "Centre for Access to Justice, VMLS Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Centre for Access to Justice" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -192,6 +217,10 @@ export const PAGES = {
     image: "/images/mentor.webp",
     imageAlt: "Siddharth Raja, Executive Dean of VMLS",
     ogType: "profile",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Executive Dean" },
+    ],
   },
   "/chancellor": {
     pageType: "person",
@@ -204,6 +233,10 @@ export const PAGES = {
     image: "/images/vmrf/Frame-53136.webp",
     imageAlt: "Dr. A. S. Ganesan, Chancellor of VMRF",
     ogType: "profile",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Chancellor" },
+    ],
   },
   "/founder": {
     pageType: "person",
@@ -216,6 +249,10 @@ export const PAGES = {
     image: "/images/vmrf/Frame-53135.webp",
     imageAlt: "Dr. A. Shanmugasundaram, founder of VMRF",
     ogType: "profile",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Founder" },
+    ],
   },
   "/faculty-profiles": {
     pageType: "faculty-index",
@@ -227,6 +264,10 @@ export const PAGES = {
       "Legal scholars, seasoned practitioners and academic innovators teaching across every branch of law.",
     image: "/images/home-faculty.webp",
     imageAlt: "VMLS law faculty members, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Faculty Profiles" },
+    ],
   },
   "/faculty-achievements": {
     pageType: "faculty-index",
@@ -238,6 +279,10 @@ export const PAGES = {
       "Research impact, policy advisory roles and academic recognitions earned by our law faculty.",
     image: "/images/Frame89.webp",
     imageAlt: "VMLS faculty research and achievements",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Achievements" },
+    ],
   },
   "/guest-lecturers": {
     pageType: "faculty-index",
@@ -250,6 +295,10 @@ export const PAGES = {
     image: "/images/home-faculty.webp",
     imageAlt: "Guest lecture session at VMLS Chennai",
     note: "Thin content: the page currently states the guest lecturer list is being curated. Description is deliberately scoped to what is visible.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Guest Lecturers" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -266,6 +315,10 @@ export const PAGES = {
     image: CAMPUS,
     imageAlt: "Vinayaka Mission's Law School campus, Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "About VMLS" },
+    ],
   },
   "/about-vmrf": {
     pageType: "about",
@@ -278,6 +331,10 @@ export const PAGES = {
     image: "/images/vmrf/vmrf-header.webp",
     imageAlt: "Vinayaka Mission's Research Foundation campus",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "About VMRF" },
+    ],
   },
   "/collaborations": {
     pageType: "about",
@@ -289,6 +346,10 @@ export const PAGES = {
       "The first Indian law school formally mentored by another private law school – plus global academic partners.",
     image: "/images/collab/Frame-53245.webp",
     imageAlt: "VMLS institutional collaborations and partnerships",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Collaborations" },
+    ],
   },
   "/iqac": {
     pageType: "about",
@@ -300,6 +361,10 @@ export const PAGES = {
       "Sustaining academic and administrative excellence through continuous quality enhancement.",
     image: "/images/vmls/vmls-arch.png",
     imageAlt: "VMLS campus architecture, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "IQAC" },
+    ],
   },
   "/board-of-advisors": {
     pageType: "governance",
@@ -311,6 +376,10 @@ export const PAGES = {
       "Distinguished legal luminaries shaping the strategic direction of Vinayaka Mission's Law School.",
     image: "/images/bod/advisor-hero-bg.png",
     imageAlt: "VMLS Board of Advisors",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Board of Advisors" },
+    ],
   },
   "/mentoring-committee": {
     pageType: "governance",
@@ -322,6 +391,10 @@ export const PAGES = {
       "Eminent legal professionals and academics guiding VMLS through institutional mentorship.",
     image: "/images/bod/mentor-hero-bg.png",
     imageAlt: "VMLS Mentoring Committee members",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Mentoring Committee" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -338,6 +411,10 @@ export const PAGES = {
     image: CAMPUS,
     imageAlt: "VMLS campus entrance, Paiyanoor, Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Contact Us" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -354,6 +431,10 @@ export const PAGES = {
     image: "/images/class1.webp",
     imageAlt: "Smart classroom at VMLS Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Infrastructure" },
+    ],
   },
   "/main-building": {
     pageType: "campus",
@@ -366,6 +447,11 @@ export const PAGES = {
     image: "/images/mb1.webp",
     imageAlt: "Main building of VMLS, Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Infrastructure", path: "/infrastructure" },
+      { name: "Main Building" },
+    ],
   },
   "/moot-court": {
     pageType: "campus",
@@ -378,6 +464,11 @@ export const PAGES = {
     image: "/images/mcourt1.webp",
     imageAlt: "Moot court hall at VMLS Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Infrastructure", path: "/infrastructure" },
+      { name: "Moot Court" },
+    ],
   },
   "/seminar-hall": {
     pageType: "campus",
@@ -390,6 +481,11 @@ export const PAGES = {
     image: "/images/shall1.webp",
     imageAlt: "Seminar hall at VMLS Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Infrastructure", path: "/infrastructure" },
+      { name: "Seminar Halls" },
+    ],
   },
   "/atrium": {
     pageType: "campus",
@@ -402,6 +498,11 @@ export const PAGES = {
     image: "/images/atrium1.webp",
     imageAlt: "The atrium at VMLS Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Infrastructure", path: "/infrastructure" },
+      { name: "Atrium" },
+    ],
   },
   "/hostel": {
     pageType: "campus",
@@ -414,6 +515,11 @@ export const PAGES = {
     image: "/images/hostel3.webp",
     imageAlt: "VMLS student hostel, Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Infrastructure", path: "/infrastructure" },
+      { name: "Hostel" },
+    ],
   },
   "/campus-life": {
     pageType: "campus",
@@ -426,6 +532,10 @@ export const PAGES = {
     image: "/images/il1.webp",
     imageAlt: "Campus life at VMLS Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Campus Life" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -445,7 +555,7 @@ export const PAGES = {
     breadcrumb: [
       { name: "Home", path: "/" },
       { name: "Infrastructure", path: "/infrastructure" },
-      { name: "Classrooms" },
+      { name: "Classroom" },
     ],
   },
   "/food-court": {
@@ -476,6 +586,10 @@ export const PAGES = {
     image: "/images/library-header-img.webp",
     imageAlt: "VMLS law library, Chennai",
     geo: true,
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Library" },
+    ],
   },
   "/library-membership": {
     pageType: "library",
@@ -490,7 +604,7 @@ export const PAGES = {
     breadcrumb: [
       { name: "Home", path: "/" },
       { name: "Library", path: "/library" },
-      { name: "Library Membership" },
+      { name: "Membership" },
     ],
   },
   "/library-rules": {
@@ -506,7 +620,7 @@ export const PAGES = {
     breadcrumb: [
       { name: "Home", path: "/" },
       { name: "Library", path: "/library" },
-      { name: "Library Rules" },
+      { name: "Rules & Regulations" },
     ],
   },
 
@@ -539,6 +653,10 @@ export const PAGES = {
       "Guidance, counselling and opportunities – the office behind student life at VMLS Chennai.",
     image: "/images/studentaff/1.webp",
     imageAlt: "VMLS students on campus, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Student Affairs" },
+    ],
   },
   "/student-clubs": {
     pageType: "student-life",
@@ -553,7 +671,7 @@ export const PAGES = {
     breadcrumb: [
       { name: "Home", path: "/" },
       { name: "Student Affairs", path: "/student-affairs" },
-      { name: "Student Clubs" },
+      { name: "Clubs at VMLS" },
     ],
   },
   "/anti-ragging": {
@@ -582,6 +700,10 @@ export const PAGES = {
       "Internship placement, employer outreach and career training for VMLS law students.",
     image: "/images/career/hero.png",
     imageAlt: "VMLS career services and placements",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Internship and Career Services" },
+    ],
   },
   "/chat-with-student": {
     pageType: "tool",
@@ -594,6 +716,10 @@ export const PAGES = {
     image: CAMPUS,
     imageAlt: "VMLS students on campus, Chennai",
     note: "Page type not in the original brief: it is an embedded third-party chat portal, classified as 'tool'. Thin unique text, so the description stays short and factual.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Chat with a Student" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -609,6 +735,10 @@ export const PAGES = {
       "Who sits on the committee and how to reach them – names, roles, email and phone numbers.",
     image: CAMPUS,
     imageAlt: "VMLS campus, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Anti Ragging Committee" },
+    ],
   },
   "/anti-ragging-squad": {
     pageType: "committee",
@@ -620,6 +750,11 @@ export const PAGES = {
       "The squad that keeps constant vigil across campus and hostels – members and contact details.",
     image: CAMPUS,
     imageAlt: "VMLS campus, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Student Affairs", path: "/student-affairs" },
+      { name: "Anti Ragging Squad" },
+    ],
   },
   "/internal-complaint-committee": {
     pageType: "committee",
@@ -631,6 +766,10 @@ export const PAGES = {
       "The committee ensuring a safe and respectful campus – members, roles and contact details.",
     image: CAMPUS,
     imageAlt: "VMLS campus, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Internal Complaint Committee" },
+    ],
   },
   "/gender-sensitization-cell": {
     pageType: "committee",
@@ -642,6 +781,10 @@ export const PAGES = {
       "Promoting gender equality and a sensitised campus – members and how to reach them.",
     image: CAMPUS,
     imageAlt: "VMLS campus, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Gender Sensitization Cell" },
+    ],
   },
   "/women-empowerment-cell": {
     pageType: "committee",
@@ -653,6 +796,10 @@ export const PAGES = {
       "Awareness, support and professional development for women students and staff at VMLS.",
     image: CAMPUS,
     imageAlt: "VMLS campus, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Women Empowerment Cell" },
+    ],
   },
   "/student-grievance-redressal-committee": {
     pageType: "committee",
@@ -664,6 +811,10 @@ export const PAGES = {
       "A fair, transparent route for student concerns – committee members and contact details.",
     image: CAMPUS,
     imageAlt: "VMLS campus, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Student Grievance Redressal Committee" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -681,6 +832,10 @@ export const PAGES = {
       "How law, politics and economics shape the governance of rivers - the VMLS conference call for papers.",
     image: "/images/conf/pg-head.webp",
     imageAlt: "International Conference on Rivers at VMLS Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "International Conference" },
+    ],
   },
   "/iqac/workshops": {
     pageType: "event",
@@ -695,7 +850,7 @@ export const PAGES = {
     breadcrumb: [
       { name: "Home", path: "/" },
       { name: "IQAC", path: "/iqac" },
-      { name: "Workshops" },
+      { name: "Workshops and Seminars" },
     ],
   },
   "/iqac/workshops/pdp": {
@@ -715,7 +870,7 @@ export const PAGES = {
       { name: "Home", path: "/" },
       { name: "IQAC", path: "/iqac" },
       { name: "Workshops", path: "/iqac/workshops" },
-      { name: "Professional Development Programme" },
+      { name: "PDP Report" },
     ],
   },
   "/iqac/workshops/teaching-learning-tools": {
@@ -751,6 +906,27 @@ export const PAGES = {
       "Clinical legal education, LL.M. specialisations, competition law and legal career guidance.",
     image: "/images/blogs/cle-in-healthcare.webp",
     imageAlt: "VMLS law blog articles",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Blogs" },
+    ],
+  },
+
+  "/news": {
+    pageType: "news-index",
+    title: "VMLS News & Events – Lectures, Conferences, Campus",
+    description:
+      "Reports from VMLS Chennai: guest lectures by judges and practitioners, centre conferences, moot court competitions and the student festivals on campus.",
+    ogTitle: "News & Events at VMLS",
+    ogDescription:
+      "Conferences, guest lectures, moot courts and campus life at Vinayaka Mission's Law School.",
+    image: "/images/news/3rd.webp",
+    imageAlt: "News and events at VMLS Chennai",
+    note: "Built as the redirect target for 44 news URLs on the old site that were not carried over.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "News & Events" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -790,11 +966,8 @@ export const PAGES = {
     dcType: "Text.Article",
     breadcrumb: [
       { name: "Home", path: "/" },
-      {
-        name: "Centre for Justice Through Technology",
-        path: "/centre-for-justice-through-technology",
-      },
-      { name: "AI for Justice Workshop" },
+      { name: "Centre for Justice through Technology", path: "/centre-for-justice-through-technology" },
+      { name: "Empowering Justice with AI" },
     ],
   },
   "/news/distinguished-guest-lecture-series-law-of-the-sea": {
@@ -813,7 +986,7 @@ export const PAGES = {
     breadcrumb: [
       { name: "Home", path: "/" },
       { name: "Centre for Maritime Law", path: "/maritime-law" },
-      { name: "Law of the Sea Lecture Series" },
+      { name: "Distinguished Guest Lecture Series on the Law of the Sea" },
     ],
   },
   "/news/e-filing": {
@@ -830,11 +1003,8 @@ export const PAGES = {
     dcType: "Text.Article",
     breadcrumb: [
       { name: "Home", path: "/" },
-      {
-        name: "Centre for Justice Through Technology",
-        path: "/centre-for-justice-through-technology",
-      },
-      { name: "Introduction to E-Filing" },
+      { name: "Centre for Justice through Technology", path: "/centre-for-justice-through-technology" },
+      { name: "Introduction to E-Filing for Young Lawyers" },
     ],
   },
   "/news/ethics-values-litigation": {
@@ -850,6 +1020,10 @@ export const PAGES = {
     ogType: "article",
     dcType: "Text.Article",
     note: "Linked directly from the homepage (one click), so no BreadcrumbList. Body text states 29th April 2026 - a future date flagged for editorial review, so no publishedTime is emitted.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Ethics, Values and Litigation" },
+    ],
   },
   "/news/flip-case-legal-design-challenge": {
     pageType: "news",
@@ -865,11 +1039,8 @@ export const PAGES = {
     dcType: "Text.Article",
     breadcrumb: [
       { name: "Home", path: "/" },
-      {
-        name: "Centre for Justice Through Technology",
-        path: "/centre-for-justice-through-technology",
-      },
-      { name: "Flip Case Legal Design Challenge" },
+      { name: "Centre for Justice through Technology", path: "/centre-for-justice-through-technology" },
+      { name: "Flip Case - A Legal Design Challenge" },
     ],
   },
   "/news/gender-sensitisation": {
@@ -885,6 +1056,10 @@ export const PAGES = {
     ogType: "article",
     dcType: "Text.Article",
     note: "Linked directly from the homepage (one click), so no BreadcrumbList.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Gender Sensitisation and Equality" },
+    ],
   },
   "/news/international-conference-on-rivers": {
     pageType: "news",
@@ -900,7 +1075,7 @@ export const PAGES = {
     dcType: "Text.Article",
     breadcrumb: [
       { name: "Home", path: "/" },
-      { name: "Centre for the Promotion of International Law", path: "/cpil" },
+      { name: "Centre for Public Interest Litigation", path: "/cpil" },
       { name: "International Conference on Rivers" },
     ],
   },
@@ -956,7 +1131,7 @@ export const PAGES = {
     breadcrumb: [
       { name: "Home", path: "/" },
       { name: "Student Affairs", path: "/student-affairs" },
-      { name: "Law School Premier League" },
+      { name: "LSPL Season 2" },
     ],
   },
   "/news/maritime-law-summit-2025": {
@@ -991,6 +1166,10 @@ export const PAGES = {
     ogType: "article",
     dcType: "Text.Article",
     note: "Linked directly from the homepage (one click), so no BreadcrumbList.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "National Seminar on AI" },
+    ],
   },
   "/news/special-lecture-international-maritime-law": {
     pageType: "news",
@@ -1062,7 +1241,7 @@ export const PAGES = {
     publishedTime: "2025-03-06",
     breadcrumb: [
       { name: "Home", path: "/" },
-      { name: "Centre for the Promotion of International Law", path: "/cpil" },
+      { name: "Centre for Public Interest Litigation", path: "/cpil" },
       { name: "Why International Law Matters" },
     ],
   },
@@ -1081,7 +1260,7 @@ export const PAGES = {
     breadcrumb: [
       { name: "Home", path: "/" },
       { name: "Student Affairs", path: "/student-affairs" },
-      { name: "Women and AI Conference" },
+      { name: "Women & AI Conference" },
     ],
   },
 
@@ -1101,6 +1280,10 @@ export const PAGES = {
     ogType: "article",
     dcType: "Text.Article",
     note: "Linked directly from the homepage news section, so no BreadcrumbList.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Clashes of Masculinity" },
+    ],
   },
   "/news/copyright-and-emerging-issues-due-to-artificial-intelligence": {
     pageType: "news",
@@ -1115,6 +1298,10 @@ export const PAGES = {
     ogType: "article",
     dcType: "Text.Article",
     note: "Linked directly from the homepage news section, so no BreadcrumbList.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Copyright and Emerging Issues due to AI" },
+    ],
   },
   "/privacy-policy": {
     pageType: "legal",
@@ -1127,6 +1314,10 @@ export const PAGES = {
     image: CAMPUS,
     imageAlt: "VMLS campus, Chennai",
     note: "Audit flag: the visible body text opens with Terms & Conditions wording, not privacy wording. Content fix needed before this description is fully accurate.",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Privacy Policy" },
+    ],
   },
   "/terms-conditions": {
     pageType: "legal",
@@ -1138,6 +1329,10 @@ export const PAGES = {
       "The rules that govern your use of the VMLS website.",
     image: CAMPUS,
     imageAlt: "VMLS campus, Chennai",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Terms & Conditions" },
+    ],
   },
 
   /* ------------------------------------------------------------------ */
@@ -1174,6 +1369,25 @@ export function pageMetadata(path: PagePath): Metadata {
   // `path` comes from the registry key, so canonical / og:url / DC.identifier
   // always describe this route and nothing else.
   return buildMetadata({ ...seo, path });
+}
+
+/**
+ * Every news item, newest first. The /news index renders from this, so a news
+ * page added to the registry appears in the listing, the sitemap and the
+ * breadcrumbs without a second edit.
+ */
+export function newsEntries() {
+  return (Object.entries(PAGES) as [PagePath, PageEntry][])
+    .filter(([, entry]) => entry.pageType === "news")
+    .map(([path, entry]) => ({
+      path,
+      title: entry.ogTitle ?? entry.title,
+      description: entry.ogDescription ?? entry.description,
+      image: entry.image,
+      imageAlt: entry.imageAlt ?? entry.title,
+      publishedTime: entry.publishedTime,
+    }))
+    .sort((a, b) => (b.publishedTime ?? "").localeCompare(a.publishedTime ?? ""));
 }
 
 /** Breadcrumb trail for a registered route, if it has one. */

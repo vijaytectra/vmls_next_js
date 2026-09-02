@@ -2,12 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { ShieldAlert, Scale, Globe, BookOpen, Copyright, Settings, Gavel, Mail } from 'lucide-react';
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/terms-conditions");
 
 export default function TermsConditionsPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/terms-conditions" />
       {/* Header Section */}
       <section className="bg-[#800000] text-white py-24 px-[5%]">
         <div className="max-w-7xl mx-auto">

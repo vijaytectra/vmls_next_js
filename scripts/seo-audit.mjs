@@ -138,12 +138,37 @@ function expectedTypes(route) {
   const extra = type.endsWith("+article")
     ? [base === "news" ? "NewsArticle" : "BlogPosting"]
     : [];
+  // Page-level entities. Some types differ by route within the same page
+  // type, so those are resolved by path first.
+  const byPath = {
+    "/library": ["Library"],
+    "/library-membership": ["WebPage"],
+    "/library-rules": ["WebPage"],
+    "/library-useful-links": ["WebPage"],
+    "/infrastructure": ["CollectionPage"],
+    "/campus-life": ["WebPage"],
+    "/international-conference-on-rivers": ["Event"],
+    "/iqac/workshops": ["CollectionPage"],
+  };
+  if (byPath[route]) return [...byPath[route], ...extra];
+
   const map = {
     homepage: ["CollegeOrUniversity"],
     programme: ["Course"],
     centre: ["EducationalOrganization"],
     person: ["Person"],
     contact: ["ContactPage"],
+    about: ["AboutPage"],
+    "faculty-index": ["CollectionPage"],
+    governance: ["CollectionPage"],
+    "news-index": ["CollectionPage"],
+    "blog-index": ["Blog"],
+    committee: ["Organization"],
+    campus: ["Place"],
+    admissions: ["WebPage"],
+    "student-life": ["WebPage"],
+    legal: ["WebPage"],
+    tool: ["WebPage"],
   };
   return [...(map[base] ?? []), ...extra];
 }

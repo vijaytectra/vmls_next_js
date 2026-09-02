@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BoardOfAdvisors from "@/components/BoardOfAdvisors";
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/board-of-advisors");
 
@@ -10,6 +11,7 @@ export const metadata = pageMetadata("/board-of-advisors");
 export default function BoardOfAdvisorsPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/board-of-advisors" />
       {/* Breadcrumb - Standardized Style */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

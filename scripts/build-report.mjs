@@ -36,13 +36,40 @@ const rows = keys.map((k, i) => {
   const hadOwn = /export const metadata/.test(old);
   const pageType = (block.match(/pageType: "([^"]+)"/) || [])[1];
   const article = /ogType: "article"/.test(block);
+  // Mirrors src/lib/page-schema.ts. Routes whose type differs from their
+  // page type are resolved by path first.
+  const BY_PATH = {
+    "/library": "Library",
+    "/library-membership": "WebPage",
+    "/library-rules": "WebPage",
+    "/library-useful-links": "WebPage",
+    "/infrastructure": "CollectionPage",
+    "/campus-life": "WebPage",
+    "/international-conference-on-rivers": "Event",
+    "/iqac/workshops": "CollectionPage",
+  };
+  const BY_TYPE = {
+    homepage: "CollegeOrUniversity",
+    programme: "Course",
+    centre: "EducationalOrganization",
+    person: "Person",
+    contact: "ContactPage",
+    about: "AboutPage",
+    "faculty-index": "CollectionPage",
+    governance: "CollectionPage",
+    "news-index": "CollectionPage",
+    "blog-index": "Blog",
+    committee: "Organization",
+    campus: "Place",
+    admissions: "WebPage",
+    "student-life": "WebPage",
+    legal: "WebPage",
+    tool: "WebPage",
+  };
   const schema = [];
-  if (pageType === "homepage") schema.push("CollegeOrUniversity");
-  if (pageType === "programme") schema.push("Course");
+  const entityType = BY_PATH[route] ?? BY_TYPE[pageType];
+  if (entityType) schema.push(entityType);
   if (route === "/admissions/llm") schema.push("FAQPage");
-  if (pageType === "centre") schema.push("EducationalOrganization");
-  if (pageType === "person") schema.push("Person");
-  if (pageType === "contact") schema.push("ContactPage");
   if (article) schema.push(pageType === "news" ? "NewsArticle" : "BlogPosting");
   if (/breadcrumb: \[/.test(block)) schema.push("BreadcrumbList");
 
@@ -90,6 +117,7 @@ const TYPE_LABELS = {
   "student-life": "Student life",
   library: "Library",
   event: "Event / workshop",
+  "news-index": "News index",
   news: "News",
   "blog-index": "Blog index",
   legal: "Legal",
@@ -398,6 +426,7 @@ other:      { "DC.identifier": url, ... }</pre>
   <section id="schema">
     <div class="sec-head"><span class="step">04</span><h2>Schema placement</h2></div>
     <div class="col">
+      <p><strong>75 of 77 registered routes now carry JSON-LD</strong>; the only two without are the noindex development routes. An earlier pass left 34 pages with none at all &mdash; committees, campus facilities, listing pages and policies &mdash; because the original mapping table had no row for those types.</p>
       <p>The full <code>CollegeOrUniversity</code> block is typed out once, on the homepage. Every other page references it as <code>{"@id": "https://vmls.edu.in/#organization"}</code>, so an address or phone change is a one-file edit rather than a 167-page sweep.</p>
     </div>
     <div class="tablewrap">
@@ -411,7 +440,14 @@ other:      { "DC.identifier": url, ... }</pre>
           <tr><td>Faculty &amp; leadership</td><td class="schema">${chip("Person")}</td><td><code>worksFor</code> points at the homepage <code>@id</code>.</td></tr>
           <tr><td>Contact</td><td class="schema">${chip("ContactPage")}</td><td>Reuses the same PostalAddress constant as the homepage entity.</td></tr>
           <tr><td>News &amp; blog</td><td class="schema">${chip("NewsArticle")} ${chip("BlogPosting")}</td><td><strong>Added beyond the brief.</strong> The mapping table had no row for these page types. Say the word and it comes out.</td></tr>
-          <tr><td>Any page &gt; 1 click from home</td><td class="schema">${chip("BreadcrumbList")}</td><td>Built from each page&rsquo;s own visible trail. Tiers with no URL behind them are dropped, since Google requires <code>item</code> on every non-final entry.</td></tr>
+          <tr><td>About / institutional</td><td class="schema">${chip("AboutPage")}</td><td>The four pages that describe the school and its parent university.</td></tr>
+          <tr><td>Listing pages</td><td class="schema">${chip("CollectionPage")} ${chip("Blog")}</td><td>Faculty, advisors, mentoring committee, news and infrastructure indexes; <code>Blog</code> for /blogs.</td></tr>
+          <tr><td>Statutory committees</td><td class="schema">${chip("Organization")}</td><td>Six committees and cells, each with <code>parentOrganization</code> pointing at the school.</td></tr>
+          <tr><td>Campus facilities</td><td class="schema">${chip("Place")}</td><td>Moot court, seminar hall, atrium, hostel, classrooms, food court, main building &mdash; each <code>containedInPlace</code> the campus.</td></tr>
+          <tr><td>The library</td><td class="schema">${chip("Library")}</td><td>schema.org has an exact type; its rules and membership pages are ordinary <code>WebPage</code>s.</td></tr>
+          <tr><td>Conference with a stated date</td><td class="schema">${chip("Event")}</td><td>Only where the page states a real date. The rivers conference gives 19 October 2024; no other page qualifies.</td></tr>
+          <tr><td>Policies, service pages</td><td class="schema">${chip("WebPage")}</td><td>Legal, student-life, scholarships and the student chat page &mdash; no more specific type would be truthful.</td></tr>
+          <tr><td>Every page with a visible trail</td><td class="schema">${chip("BreadcrumbList")}</td><td><strong>74 of 77 routes.</strong> Trails are scraped from each page's rendered breadcrumb, so the markup matches the words on screen; tiers with no URL are dropped, since Google requires <code>item</code> on every non-final entry.</td></tr>
         </tbody>
       </table>
     </div>
@@ -430,7 +466,7 @@ other:      { "DC.identifier": url, ... }</pre>
       <div class="check pass"><div class="k">Verification tag</div><div class="v"><b>1&times;</b><span>per page, identical value</span></div></div>
       <div class="check pass"><div class="k">GTM container</div><div class="v"><b>1&times;</b><span>${esc("GTM-TDRKCK4P")}, plus noscript</span></div></div>
       <div class="check pass"><div class="k">FAQ schema vs visible text</div><div class="v"><b>32/32</b><span>pages: every Q&amp;A found in the HTML</span></div></div>
-      <div class="check pass"><div class="k">Schema type per page type</div><div class="v"><b>0</b><span>missing or stray blocks</span></div></div>
+      <div class="check pass"><div class="k">Schema type per page type</div><div class="v"><b>75/77</b><span>routes carry JSON-LD; 0 stray blocks</span></div></div>
       <div class="check pass"><div class="k">og:image files</div><div class="v"><b>232</b><span>all resolve; real dimensions emitted</span></div></div>
       <div class="check warn"><div class="k">Titles over 60 chars</div><div class="v"><b>58</b><span>all blog headlines &mdash; see below</span></div></div>
     </div>
@@ -507,8 +543,52 @@ other:      { "DC.identifier": url, ... }</pre>
     </div>
   </section>
 
+  <section id="launch">
+    <div class="sec-head"><span class="step">07</span><h2>Migration off the old site</h2></div>
+    <div class="col">
+      <p>vmls.edu.in still serves the previous static HTML build. Its sitemap lists <strong>301 URLs</strong>, and those are what currently rank. Cutting over without a redirect map would drop every one of them.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Rule group</th><th>Count</th><th>Where it goes</th></tr></thead>
+        <tbody>
+          <tr><td>Same slug, extension dropped</td><td class="mono">122</td><td><code>/atrium.html</code> &rarr; <code>/atrium</code></td></tr>
+          <tr><td>Hand-written, preserved</td><td class="mono">35</td><td>Rules that predate the generator, kept verbatim</td></tr>
+          <tr><td>News items not carried over</td><td class="mono">44</td><td>&rarr; <code>/news</code>, an index built for this purpose</td></tr>
+          <tr><td>Faculty profiles moved</td><td class="mono">39</td><td><code>/dr-gaurav-shukla.html</code> &rarr; <code>/faculty/gaurav-shukla</code></td></tr>
+          <tr><td>Other profiles moved</td><td class="mono">20</td><td>Dean, chancellor, founder, mentoring committee</td></tr>
+          <tr><td>Legacy WordPress blog</td><td class="mono">27</td><td>Posts 1:1 where the article exists; categories and pagination &rarr; <code>/blogs</code></td></tr>
+          <tr><td>Renamed sections</td><td class="mono">12</td><td><code>/llb-programme.html</code> &rarr; <code>/admissions/llb</code></td></tr>
+          <tr><td>Renamed assets</td><td class="mono">1 + 3</td><td>Newsletter PDFs; three go through middleware, see below</td></tr>
+          <tr><td><strong>Left alone</strong></td><td class="mono">12</td><td>The <code>/vlat/*</code> portal is a separate live application</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+      <h3>Three things the verifier caught</h3>
+      <ul>
+        <li><strong>Trailing-slash sources never fire.</strong> Next strips a trailing slash before matching redirects, so 20 legacy <code>/blog/&hellip;/</code> rules silently did nothing. Sources are now declared bare.</li>
+        <li><strong>Spaces and parentheses are pattern syntax.</strong> Three newsletter PDFs are published under names like <span class="mono">Newsletter_April_to_May_2026 (E).pdf</span>; in a redirect source those characters are read by path-to-regexp, not matched literally. They are handled in <code>src/middleware.ts</code> against the decoded pathname instead.</li>
+        <li><strong>One redirect chain.</strong> <code>/faculty.html</code> pointed at <code>/faculty</code>, which itself redirects to <code>/faculty-profiles</code>. The generator now collapses chains to their endpoint.</li>
+      </ul>
+      <p>All 300 rules were then re-checked against a running build: each returns a permanent redirect, to the declared destination, and every destination returns 200.</p>
+      <h3>Sitemap and robots</h3>
+      <ul>
+        <li><code>/sitemap.xml</code> lists <strong>252 URLs</strong> &mdash; every indexable route, generated from the same registry as the page metadata. No noindex pages, no <code>/vlat/*</code>, no dev routes.</li>
+        <li><code>/robots.txt</code> keeps the two PhD posts blocked, as on the old site, and drops six stale rules for paths that no longer exist. Both files read <code>src/lib/indexing.ts</code>, so they cannot disagree.</li>
+      </ul>
+      <h3>Internal links in older posts</h3>
+      <p>41 posts had no internal links, or only one or two. They now carry <strong>26 contextual links</strong> woven into sentences the posts already contained &mdash; pointing at admissions, programme and scholarship pages &mdash; plus a <strong>Related reading block on all 41</strong>. Relatedness is scored by IDF-weighted title overlap, shared category, then distinctive body vocabulary; three specialist pieces that match nothing are curated by hand rather than linked to something irrelevant. All 119 distinct link targets return 200.</p>
+      <h3>Open, by your call</h3>
+      <ul>
+        <li><strong>www and http both serve 200.</strong> <code>https://www.vmls.edu.in/</code> does not redirect to the non-www host, and <code>http://</code> does not redirect to HTTPS, so the site is reachable on several hostnames. Canonical tags point at one of them, which mitigates but does not fix it. Left alone as agreed.</li>
+        <li><strong>Redirects return 308, not literal 301.</strong> Google treats them identically; kept as the Next default, as agreed.</li>
+      </ul>
+    </div>
+  </section>
+
   <section id="files">
-    <div class="sec-head"><span class="step">07</span><h2>Where it lives</h2></div>
+    <div class="sec-head"><span class="step">08</span><h2>Where it lives</h2></div>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Path</th><th>Role</th></tr></thead>
@@ -521,7 +601,10 @@ other:      { "DC.identifier": url, ... }</pre>
           <tr><td class="route">src/data/llm-faq.ts</td><td>The LL.M. FAQ, rendered by the page and read by the schema. One array, so they cannot diverge.</td></tr>
           <tr><td class="route">src/data/blog-seo.ts</td><td>Generated per-post SEO fields (the article page is a client component).</td></tr>
           <tr><td class="route">src/data/og-image-sizes.ts</td><td>Generated real pixel dimensions for every og:image.</td></tr>
-          <tr><td class="route">npm run seo:audit</td><td>The validation pass above. Exits non-zero on any error.</td></tr>
+          <tr><td class="route">src/data/redirects.ts</td><td>Generated 301 map from the old site. Hand-written rules live in redirects.manual.ts.</td></tr>
+          <tr><td class="route">src/app/sitemap.ts / robots.ts</td><td>Both generated from the registry and src/lib/indexing.ts.</td></tr>
+          <tr><td class="route">src/middleware.ts</td><td>Legacy asset paths whose names break path-to-regexp.</td></tr>
+          <tr><td class="route">npm run seo:audit</td><td>Head audit + redirect verification + internal link check. Exits non-zero on any error.</td></tr>
           <tr><td class="route">npm run seo:check</td><td>Offline checks: copy budgets, og:image geometry, blog link coverage.</td></tr>
           <tr><td class="route">npm run seo:data</td><td>Regenerates the two data modules after content changes.</td></tr>
         </tbody>

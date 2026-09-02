@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import SubThemesSection from "@/components/SubThemesSection";
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/international-conference-on-rivers");
 
@@ -11,6 +12,7 @@ export const metadata = pageMetadata("/international-conference-on-rivers");
 export default function InternationalConferencePage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      <PageSchema path="/international-conference-on-rivers" />
       <main className="flex-grow">
         {/* Breadcrumb */}
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">

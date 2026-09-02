@@ -594,6 +594,19 @@ export default async function FacultyProfilePage({ params }: { params: Promise<{
 
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd
+        schema={[
+          personSchema({
+            name: faculty.name,
+            jobTitle: faculty.role.replace(/\.$/, ""),
+            path: `/faculty/${slug}`,
+            image: faculty.image,
+            email: faculty.email,
+            description: facultyDescription(faculty),
+          }),
+          breadcrumbSchema([...FACULTY_TRAIL, { name: faculty.name }]),
+        ]}
+      />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-4 sm:py-6 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
         <div className="max-w-7xl mx-auto flex items-center gap-2 sm:gap-3 text-xs min-[380px]:text-sm sm:text-base md:text-lg font-medium whitespace-nowrap">

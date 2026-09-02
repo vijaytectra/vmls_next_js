@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/main-building");
 
@@ -9,6 +10,7 @@ export const metadata = pageMetadata("/main-building");
 export default function MainBuildingPage() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      <PageSchema path="/main-building" />
       <main className="flex-grow">
         {/* Breadcrumbs */}
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">

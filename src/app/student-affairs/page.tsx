@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/student-affairs");
 
@@ -30,6 +31,7 @@ const events = [
 export default function StudentAffairsPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
+      <PageSchema path="/student-affairs" />
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors">

@@ -1,14 +1,22 @@
 import { LLM_FAQ } from "@/data/llm-faq";
 import { PAGES, type PageEntry, type PagePath } from "@/lib/seo-pages";
 import {
+  aboutPageSchema,
   articleSchema,
+  blogSchema,
   breadcrumbSchema,
   centreSchema,
+  collectionPageSchema,
+  committeeSchema,
   contactPageSchema,
   courseSchema,
+  eventSchema,
   faqPageSchema,
+  librarySchema,
   organizationSchema,
   personSchema,
+  placeSchema,
+  webPageSchema,
 } from "@/lib/schema";
 
 /**
@@ -74,11 +82,41 @@ const PEOPLE: Partial<Record<PagePath, Parameters<typeof personSchema>[0]>> = {
   },
 };
 
+/** Events whose page states a real date. Without one, Event is not honest. */
+const EVENTS: Partial<
+  Record<PagePath, { name: string; description: string; startDate: string; image?: string }>
+> = {
+  "/international-conference-on-rivers": {
+    name: "International Conference on Rivers",
+    description:
+      "A VMLS conference on the law, politics and economics of river systems, hosted at the Chennai campus.",
+    startDate: "2024-10-19",
+    image: "/images/conf/pg-head.webp",
+  },
+};
+
 export function schemasForPage(path: PagePath): Record<string, unknown>[] {
   // `satisfies` on PAGES keeps each entry's literal type, which hides the
   // optional fields; widen to the declared shape before reading them.
   const entry: PageEntry = PAGES[path];
   const schemas: Record<string, unknown>[] = [];
+
+  // Every page-level entity is built from the same registry copy, so the
+  // markup says what the page says.
+  const entity = (
+    build: (input: {
+      path: string;
+      name: string;
+      description: string;
+      image?: string;
+    }) => Record<string, unknown>
+  ) =>
+    build({
+      path,
+      name: entry.ogTitle ?? entry.title,
+      description: entry.description,
+      image: entry.image,
+    });
 
   switch (entry.pageType) {
     case "homepage":
@@ -118,6 +156,58 @@ export function schemasForPage(path: PagePath): Record<string, unknown>[] {
           description: entry.description,
         })
       );
+      break;
+
+    case "about":
+      schemas.push(entity(aboutPageSchema));
+      break;
+
+    // Pages whose job is to list other pages.
+    case "faculty-index":
+    case "governance":
+    case "news-index":
+      schemas.push(entity(collectionPageSchema));
+      break;
+
+    case "blog-index":
+      schemas.push(entity(blogSchema));
+      break;
+
+    case "committee":
+      schemas.push(entity(committeeSchema));
+      break;
+
+    case "library":
+      // The library itself is a Library; its rules and membership pages are
+      // ordinary content pages about it.
+      schemas.push(entity(path === "/library" ? librarySchema : webPageSchema));
+      break;
+
+    case "campus":
+      // A single facility is a Place; the overviews are not.
+      schemas.push(
+        entity(
+          path === "/infrastructure"
+            ? collectionPageSchema
+            : path === "/campus-life"
+              ? webPageSchema
+              : placeSchema
+        )
+      );
+      break;
+
+    case "event": {
+      const event = EVENTS[path];
+      if (event) schemas.push(eventSchema({ ...event, path }));
+      else if (!entry.ogType) schemas.push(entity(collectionPageSchema));
+      break;
+    }
+
+    case "admissions":
+    case "student-life":
+    case "legal":
+    case "tool":
+      schemas.push(entity(webPageSchema));
       break;
 
     default:

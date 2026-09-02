@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2, Target, Eye, ArrowRight } from "lucide-react";
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/iqac");
 
@@ -10,6 +11,7 @@ export const metadata = pageMetadata("/iqac");
 export default function IQACPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/iqac" />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

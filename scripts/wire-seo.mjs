@@ -20,13 +20,13 @@ function registeredPaths() {
   );
 }
 
-/** Which registered routes are entitled to JSON-LD (mirrors page-schema.ts). */
+/**
+ * Which registered routes are entitled to JSON-LD (mirrors page-schema.ts).
+ * Every page type now maps to an entity or at least a breadcrumb; only the
+ * noindex development routes are left without.
+ */
 function needsSchema(entryBlock) {
-  return (
-    /pageType: "(homepage|programme|centre|person|contact)"/.test(entryBlock) ||
-    /ogType: "article"/.test(entryBlock) ||
-    /breadcrumb: \[/.test(entryBlock)
-  );
+  return !/pageType: "dev-artifact"/.test(entryBlock);
 }
 
 function entryBlocks() {

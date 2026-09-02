@@ -3,6 +3,7 @@ import Image from "next/image";
 import FacultyGrid from "@/components/FacultyGrid";
 import TeamSection from "@/components/TeamSection";
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/faculty-profiles");
 
@@ -11,6 +12,7 @@ export const metadata = pageMetadata("/faculty-profiles");
 export default function FacultyProfilesPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/faculty-profiles" />
       {/* Breadcrumb - Standardized Style */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

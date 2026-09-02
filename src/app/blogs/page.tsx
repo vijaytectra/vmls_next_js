@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/data/blogs/posts";
+import PageSchema from "@/components/seo/PageSchema";
 
 export default function BlogsPage() {
   return (
     <main className="min-h-screen bg-[#f5f3ef]">
+      <PageSchema path="/blogs" />
       {/* Hero Section */}
       <section className="relative w-full bg-white border-b border-gray-100">
         <div className="flex flex-col lg:flex-row min-h-0 lg:min-h-[450px]">

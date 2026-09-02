@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/student-grievance-redressal-committee");
 
@@ -70,6 +71,7 @@ const committeeData = [
 export default function StudentGrievanceRedressalCommitteePage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/student-grievance-redressal-committee" />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-4 sm:py-6 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
         <div className="max-w-7xl mx-auto flex items-center gap-2 sm:gap-3 text-xs min-[380px]:text-sm sm:text-base md:text-lg font-medium whitespace-nowrap">

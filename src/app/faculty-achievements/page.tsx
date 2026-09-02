@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/faculty-achievements");
 
@@ -28,6 +29,7 @@ const researchHighlights = [
 export default function FacultyAchievementsPage() {
   return (
     <main className="min-h-screen bg-white overflow-hidden">
+      <PageSchema path="/faculty-achievements" />
       {/* Breadcrumbs */}
       <nav className="px-[5%] py-4 sm:py-6 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
         <div className="max-w-7xl mx-auto flex items-center gap-2 sm:gap-3 text-xs min-[380px]:text-sm sm:text-base md:text-lg font-medium whitespace-nowrap">

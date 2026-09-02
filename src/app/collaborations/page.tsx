@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import PageSchema from "@/components/seo/PageSchema";
 
 export default function CollaborationsPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/collaborations" />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

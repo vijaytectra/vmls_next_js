@@ -5,12 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import ArchitecturalSketch from "@/components/ArchitecturalSketch";
+import PageSchema from "@/components/seo/PageSchema";
 
 export default function AboutVMRF() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/about-vmrf" />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-base md:text-lg font-medium">

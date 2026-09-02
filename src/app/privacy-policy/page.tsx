@@ -2,12 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { ShieldCheck, Mail, Phone, MapPin } from 'lucide-react';
 import { pageMetadata } from "@/lib/seo-pages";
+import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/privacy-policy");
 
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageSchema path="/privacy-policy" />
       {/* Header Section */}
       <section className="bg-[#800000] text-white py-24 px-[5%]">
         <div className="max-w-7xl mx-auto">

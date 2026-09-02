@@ -1002,3 +1002,19 @@ body {
 .custom-text-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #800000;
 }
+
+/* "Related reading" block appended to older posts by
+   scripts/add-internal-links.mjs. Inherits the article's heading, list and
+   link styles; this only sets it apart from the body above it. */
+.blog-article-content .blog-html .blog-related {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+.blog-article-content .blog-html .blog-related h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.blog-article-content .blog-html .blog-related ul {
+  margin-bottom: 0;
+}

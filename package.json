@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "seo:data": "node scripts/generate-blog-seo.mjs && node scripts/generate-og-image-sizes.mjs",
+    "seo:data": "node scripts/generate-blog-seo.mjs && node scripts/generate-og-image-sizes.mjs && node scripts/generate-faculty-slugs.mjs",
     "seo:check": "node scripts/check-lengths.mjs && node scripts/check-og-images.mjs && node scripts/check-blog-links.mjs",
-    "seo:audit": "node scripts/seo-audit.mjs"
+    "seo:audit": "node scripts/seo-audit.mjs && node scripts/verify-redirects.mjs && node scripts/check-internal-links.mjs",
+    "seo:redirects": "node scripts/generate-redirects.mjs",
+    "seo:links": "node scripts/add-internal-links.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.14.0",

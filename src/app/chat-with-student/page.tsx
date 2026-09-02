@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import PageSchema from "@/components/seo/PageSchema";
 
 export default function ChatWithStudentPage() {
   const [mounted, setMounted] = useState(false);
@@ -9,6 +10,7 @@ export default function ChatWithStudentPage() {
 
   return (
     <main className="bg-white">
+      <PageSchema path="/chat-with-student" />
       {/* Breadcrumb */}
       <nav className="px-[5%] py-4 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center gap-3 text-sm md:text-base font-medium font-inter">

@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import PageSchema from "@/components/seo/PageSchema";
 
 export default function InternshipAndCareerServices() {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
+      <PageSchema path="/internship-and-career-services" />
       <main className="flex-grow">
         {/* Breadcrumb */}
         <nav className="px-[5%] py-6 bg-gray-50 border-b border-gray-100">

@@ -81,6 +81,18 @@ export default async function AdvisorProfilePage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd
+        schema={[
+          personSchema({
+            name: advisor.name,
+            jobTitle: advisor.designation,
+            path: `/board-of-advisors/${advisor.slug}`,
+            image: advisor.image,
+            description: advisorDescription(advisor),
+          }),
+          breadcrumbSchema([...ADVISOR_TRAIL, { name: advisor.name }]),
+        ]}
+      />
       <nav className="px-[5%] py-4 sm:py-6 bg-gray-50 border-b border-gray-100 overflow-x-auto no-scrollbar">
         <div className="max-w-7xl mx-auto flex items-center gap-2 sm:gap-3 text-xs min-[380px]:text-sm sm:text-base md:text-lg font-medium whitespace-nowrap">
           <Link href="/" className="text-gray-500 hover:text-[#a31f34] transition-colors shrink-0">

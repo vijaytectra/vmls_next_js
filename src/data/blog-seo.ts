@@ -1146,7 +1146,7 @@ export const BLOG_SEO: Record<string, BlogSeo> = {
     "author": "VMLS Editorial",
     "date": "April 17, 2026",
     "image": "/images/blogs/llm-eligibility-requirements-for-master-of-laws-admission__wp.png",
-    "description": "Are you planning to specialize in law after completing your LLB? Pursuing an LLM (Master of Laws) is one of the best ways to deepen your legal knowledge and…"
+    "description": "Are you planning to specialize in law after completing your LLB? Pursuing an LLM ( Master of Laws ) is one of the best ways to deepen your legal knowledge…"
   },
   "law-courses-after-graduation-build-your-legal-career": {
     "slug": "law-courses-after-graduation-build-your-legal-career",

@@ -219,6 +219,109 @@ export function faqPageSchema(items: { q: string; a: string }[]): Json {
   };
 }
 
+type PageEntityInput = {
+  path: string;
+  name: string;
+  description: string;
+  image?: string;
+};
+
+const pageEntity = (type: string, input: PageEntityInput): Json => ({
+  "@context": CONTEXT,
+  "@type": type,
+  name: input.name,
+  description: input.description,
+  url: absoluteUrl(input.path),
+  ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
+  publisher: { "@id": ORG_ID },
+});
+
+/** Institutional pages that describe the school itself. */
+export const aboutPageSchema = (input: PageEntityInput) =>
+  pageEntity("AboutPage", input);
+
+/** Pages that exist to list other pages: faculty, advisors, news, indexes. */
+export const collectionPageSchema = (input: PageEntityInput) =>
+  pageEntity("CollectionPage", input);
+
+/** The blog index. */
+export const blogSchema = (input: PageEntityInput) => pageEntity("Blog", input);
+
+/** Content pages with no more specific type - policies, service pages. */
+export const webPageSchema = (input: PageEntityInput) =>
+  pageEntity("WebPage", input);
+
+/** A physical facility on campus: moot court hall, hostel, atrium. */
+export function placeSchema(input: PageEntityInput): Json {
+  return {
+    "@context": CONTEXT,
+    "@type": "Place",
+    name: input.name,
+    description: input.description,
+    url: absoluteUrl(input.path),
+    ...(input.image ? { photo: absoluteAssetUrl(input.image) } : {}),
+    address: postalAddress(),
+    containedInPlace: {
+      "@type": "Place",
+      name: "Vinayaka Mission's Law School campus, Chennai",
+      address: postalAddress(),
+    },
+  };
+}
+
+/** The law library - schema.org has a type for exactly this. */
+export function librarySchema(input: PageEntityInput): Json {
+  return {
+    "@context": CONTEXT,
+    "@type": "Library",
+    name: input.name,
+    description: input.description,
+    url: absoluteUrl(input.path),
+    ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
+    parentOrganization: { "@id": ORG_ID },
+    address: postalAddress(),
+  };
+}
+
+/** Statutory committees and cells - real sub-units of the school. */
+export function committeeSchema(input: PageEntityInput): Json {
+  return {
+    "@context": CONTEXT,
+    "@type": "Organization",
+    name: input.name,
+    description: input.description,
+    url: absoluteUrl(input.path),
+    parentOrganization: { "@id": ORG_ID },
+  };
+}
+
+/** A conference or lecture with a real date on the page. */
+export function eventSchema(input: {
+  name: string;
+  description: string;
+  path: string;
+  startDate: string;
+  image?: string;
+}): Json {
+  return {
+    "@context": CONTEXT,
+    "@type": "Event",
+    name: input.name,
+    description: input.description,
+    url: absoluteUrl(input.path),
+    startDate: input.startDate,
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    eventStatus: "https://schema.org/EventScheduled",
+    ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
+    location: {
+      "@type": "Place",
+      name: "Vinayaka Mission's Law School, Chennai",
+      address: postalAddress(),
+    },
+    organizer: { "@id": ORG_ID },
+  };
+}
+
 /** News / blog article pages. */
 export function articleSchema(input: {
   headline: string;
