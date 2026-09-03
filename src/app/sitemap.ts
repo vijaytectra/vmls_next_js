@@ -7,6 +7,9 @@ import { BLOCKED_BLOG_SLUGS, isBlocked } from "@/lib/indexing";
 import { PAGES, type PageEntry, type PagePath } from "@/lib/seo-pages";
 import { absoluteUrl } from "@/lib/seo";
 
+// Emitted as a static file by `output: "export"`.
+export const dynamic = "force-static";
+
 // Served at /sitemap.xml. Everything indexable, nothing that is noindex or
 // blocked in robots.txt - the two must agree, so both read src/lib/indexing.
 //

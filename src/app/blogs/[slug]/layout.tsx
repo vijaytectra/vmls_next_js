@@ -9,6 +9,12 @@ import { buildMetadata } from "@/lib/seo";
 // metadata, so the per-post head and JSON-LD are declared here. Both read
 // BLOG_SEO, which is generated from the post data the page renders.
 
+// Prerender every post. The page itself is a client component, so this has
+// to live on the layout for the segment. Required by `output: "export"`.
+export function generateStaticParams() {
+  return Object.keys(BLOG_SEO).map((slug) => ({ slug }));
+}
+
 const BLOG_TRAIL = [
   { name: "Home", path: "/" },
   { name: "Blogs", path: "/blogs" },

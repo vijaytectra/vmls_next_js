@@ -47,7 +47,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Gnana Sanga Mithra. S",
     role: "Associate Dean - Research (Interdisciplinary)",
     qualifications: "M.A - Loyola College, Ph.D - VIT, Chennai",
-    image: "/images/faculty/live/DSC00631_32.webp",
+    image: "/images/faculty/gnana-sanga-mithra.webp",
     slug: "gnana-sanga-mithra",
     email: "sangamithra@vmls.edu.in",
     bio: [
@@ -60,7 +60,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Krishna Kishore Padala",
     role: "Head - Exam Cell, VMLS, Co-ordinator - Legal Aid Clinic, VMLS.",
     qualifications: "LL.M & Ph.D (Labour, Capital and Industrial Laws) - Andhra University",
-    image: "/images/faculty/live/DSC00395_30.webp",
+    image: "/images/faculty/krishna-kishore-padala.webp",
     slug: "krishna-kishore-padala",
     email: "krishnakishore@vmls.edu.in",
     bio: [
@@ -550,6 +550,12 @@ function facultyDescription(faculty: FacultyData): string {
   const at = text.slice(0, 158).lastIndexOf(" ");
   const onWord = at > 0 ? text.slice(0, at).replace(/[,;:.\s]+$/, "") : "";
   return `${onWord.length >= 149 ? onWord : text.slice(0, 157).trimEnd()}…`;
+}
+
+// Prerender one page per faculty member. Unknown slugs are no longer served
+// at all, which also removes the "Profile Under Construction" soft 404.
+export function generateStaticParams() {
+  return facultyData.map((faculty) => ({ slug: faculty.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

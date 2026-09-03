@@ -1,0 +1,283 @@
+[
+  {
+    "name": "homepage",
+    "route": "/",
+    "formFactor": "mobile",
+    "performance": 72,
+    "accessibility": 91,
+    "best-practices": 75,
+    "seo": 85,
+    "lcp": "7.1 s",
+    "cls": "0",
+    "tbt": "230 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 668 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 482 KiB)"
+    ],
+    "failed": [
+      "performance: First Contentful Paint",
+      "performance: Largest Contentful Paint",
+      "performance: Total Blocking Time",
+      "performance: Speed Index",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Image elements have `[alt]` attributes that are redundant text.",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links do not have descriptive text",
+      "seo: Links are not crawlable"
+    ]
+  },
+  {
+    "name": "homepage",
+    "route": "/",
+    "formFactor": "desktop",
+    "performance": 94,
+    "accessibility": 96,
+    "best-practices": 74,
+    "seo": 85,
+    "lcp": "1.5 s",
+    "cls": "0",
+    "tbt": "10 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 404 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 639 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "performance: Speed Index",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Image elements have `[alt]` attributes that are redundant text.",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links do not have descriptive text",
+      "seo: Links are not crawlable"
+    ]
+  },
+  {
+    "name": "admissions",
+    "route": "/admissions/llb",
+    "formFactor": "mobile",
+    "performance": 46,
+    "accessibility": 90,
+    "best-practices": 75,
+    "seo": 92,
+    "lcp": "13.6 s",
+    "cls": "0",
+    "tbt": "2,110 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 669 KiB)",
+      "Enable text compression (Est savings of 434 KiB)",
+      "Properly size images (Est savings of 342 KiB)"
+    ],
+    "failed": [
+      "performance: First Contentful Paint",
+      "performance: Largest Contentful Paint",
+      "performance: Total Blocking Time",
+      "performance: Speed Index",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links are not crawlable"
+    ]
+  },
+  {
+    "name": "admissions",
+    "route": "/admissions/llb",
+    "formFactor": "desktop",
+    "performance": 85,
+    "accessibility": 95,
+    "best-practices": 74,
+    "seo": 92,
+    "lcp": "2.6 s",
+    "cls": "0",
+    "tbt": "50 ms",
+    "opportunities": [
+      "Enable text compression (Est savings of 434 KiB)",
+      "Reduce unused JavaScript (Est savings of 671 KiB)",
+      "Preconnect to required origins (Est savings of 140 ms)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "performance: Speed Index",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links are not crawlable"
+    ]
+  },
+  {
+    "name": "centre",
+    "route": "/global-tamil-law-centre",
+    "formFactor": "mobile",
+    "performance": 72,
+    "accessibility": 91,
+    "best-practices": 75,
+    "seo": 92,
+    "lcp": "12.4 s",
+    "cls": "0",
+    "tbt": "180 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 670 KiB)",
+      "Enable text compression (Est savings of 434 KiB)",
+      "Properly size images (Est savings of 468 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "performance: Total Blocking Time",
+      "performance: Speed Index",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links are not crawlable"
+    ]
+  },
+  {
+    "name": "centre",
+    "route": "/global-tamil-law-centre",
+    "formFactor": "desktop",
+    "performance": 87,
+    "accessibility": 96,
+    "best-practices": 74,
+    "seo": 92,
+    "lcp": "2.4 s",
+    "cls": "0",
+    "tbt": "10 ms",
+    "opportunities": [
+      "Enable text compression (Est savings of 434 KiB)",
+      "Reduce unused JavaScript (Est savings of 376 KiB)",
+      "Preconnect to required origins (Est savings of 140 ms)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "performance: Speed Index",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links are not crawlable"
+    ]
+  },
+  {
+    "name": "faculty profile",
+    "route": "/faculty/gaurav-shukla",
+    "formFactor": "mobile",
+    "performance": 74,
+    "accessibility": 90,
+    "best-practices": 75,
+    "seo": 92,
+    "lcp": "11.5 s",
+    "cls": "0",
+    "tbt": "100 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 460 KiB)",
+      "Enable text compression (Est savings of 434 KiB)",
+      "Serve images in next-gen formats (Est savings of 49 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "performance: Total Blocking Time",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links are not crawlable"
+    ]
+  },
+  {
+    "name": "faculty profile",
+    "route": "/faculty/gaurav-shukla",
+    "formFactor": "desktop",
+    "performance": 88,
+    "accessibility": 95,
+    "best-practices": 74,
+    "seo": 92,
+    "lcp": "2.4 s",
+    "cls": "0",
+    "tbt": "0 ms",
+    "opportunities": [
+      "Enable text compression (Est savings of 434 KiB)",
+      "Reduce unused JavaScript (Est savings of 670 KiB)",
+      "Preconnect to required origins (Est savings of 130 ms)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links are not crawlable"
+    ]
+  },
+  {
+    "name": "blog post",
+    "route": "/blogs/what-is-a-moot-court",
+    "formFactor": "mobile",
+    "performance": 54,
+    "accessibility": 90,
+    "best-practices": 75,
+    "seo": 92,
+    "lcp": "12.9 s",
+    "cls": "0",
+    "tbt": "870 ms",
+    "opportunities": [
+      "Enable text compression (Est savings of 434 KiB)",
+      "Reduce unused JavaScript (Est savings of 667 KiB)",
+      "Serve images in next-gen formats (Est savings of 219 KiB)"
+    ],
+    "failed": [
+      "performance: First Contentful Paint",
+      "performance: Largest Contentful Paint",
+      "performance: Total Blocking Time",
+      "performance: Speed Index",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links are not crawlable"
+    ]
+  },
+  {
+    "name": "blog post",
+    "route": "/blogs/what-is-a-moot-court",
+    "formFactor": "desktop",
+    "performance": 86,
+    "accessibility": 95,
+    "best-practices": 74,
+    "seo": 92,
+    "lcp": "2.5 s",
+    "cls": "0",
+    "tbt": "0 ms",
+    "opportunities": [
+      "Enable text compression (Est savings of 434 KiB)",
+      "Reduce unused JavaScript (Est savings of 383 KiB)",
+      "Properly size images (Est savings of 809 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "performance: Speed Index",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Uses third-party cookies",
+      "best-practices: Browser errors were logged to the console",
+      "best-practices: Issues were logged in the `Issues` panel in Chrome Devtools",
+      "seo: Links are not crawlable"
+    ]
+  }
+]

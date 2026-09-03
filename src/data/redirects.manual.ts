@@ -5,6 +5,11 @@ import type { Redirect } from "./redirects";
 
 export const MANUAL_REDIRECTS: Redirect[] = [
   {
+    "source": "/faculty",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
     "source": "/blogs.html",
     "destination": "/blogs",
     "permanent": true

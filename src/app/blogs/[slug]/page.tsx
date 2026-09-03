@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { Calendar, User, Share2, ChevronLeft, ChevronRight } from "lucide-react";
 import BlogArticleContent from "@/components/BlogArticleContent";
 import blogContent from "@/data/blogs/content.json";
@@ -69,9 +66,12 @@ const blogData = blogContent as Record<
   }
 >;
 
-export default function BlogPost() {
-  const { slug } = useParams();
-  const slugStr = typeof slug === "string" ? slug : Array.isArray(slug) ? slug[0] : "";
+// Server component: content.json is read at build time and never reaches
+// the browser. It previously shipped as a 1.4 MB client chunk on every
+// blog page.
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const slugStr = slug;
   const listing = blogPosts.find((p) => p.slug === slugStr);
   const record = slugStr ? blogData[slugStr] : undefined;
   const post = record

@@ -35,14 +35,14 @@ const facultyData: FacultyMember[] = [
     name: "Dr. Gnana Sanga Mithra. S",
     role: "Associate Dean - Research (Interdisciplinary)",
     qualifications: "M.A - Loyola College, Ph.D - VIT, Chennai",
-    image: "/images/faculty/live/DSC00631_32.webp",
+    image: "/images/faculty/gnana-sanga-mithra.webp",
     href: "/faculty/gnana-sanga-mithra",
   },
   {
     name: "Dr. Krishna Kishore Padala",
     role: "Head - Exam Cell, VMLS, Co-ordinator - Legal Aid Clinic, VMLS.",
     qualifications: "LL.M & Ph.D (Labour, Capital and Industrial Laws) - Andhra University",
-    image: "/images/faculty/live/DSC00395_30.webp",
+    image: "/images/faculty/krishna-kishore-padala.webp",
     href: "/faculty/krishna-kishore-padala",
   },
   {

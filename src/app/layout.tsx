@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
+import DeferredThirdParty from "@/components/DeferredThirdParty";
 import { GOOGLE_SITE_VERIFICATION, GTM_ID, SITE_URL } from "@/lib/seo";
 
 const playfair = Playfair_Display({
@@ -57,30 +57,12 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      <head>
-        {/*
-          Google Tag Manager - deferred loader. dataLayer is created
-          immediately so anything on the page can push to it; the gtm.js
-          fetch is delayed by 1500ms to protect LCP. One container ID for
-          the whole site - see GTM_ID in src/lib/seo.ts.
-        */}
-        <Script id="gtm-script" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            setTimeout(function() {
-              (function (w, d, s, l, i) {
-                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-                var f = d.getElementsByTagName(s)[0],
-                  j = d.createElement(s),
-                  dl = l != "dataLayer" ? "&l=" + l : "";
-                j.async = true;
-                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-                f.parentNode.insertBefore(j, f);
-              })(window, document, "script", "dataLayer", "${GTM_ID}");
-            }, 1500);
-          `}
-        </Script>
-      </head>
+      {/*
+        Google Tag Manager and the NoPaperForms widget are no longer loaded
+        here. Both set third-party cookies and cost roughly five seconds of
+        main-thread time on a throttled phone, so <DeferredThirdParty /> at the
+        end of <body> loads them on the visitor's first interaction instead.
+      */}
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         {/* Google Tag Manager (noscript) - must stay immediately after <body>. */}
         <noscript>
@@ -92,22 +74,7 @@ export default function RootLayout({
           />
         </noscript>
         <SiteChrome>{children}</SiteChrome>
-        <Script id="npf-embed-config" strategy="lazyOnload">
-          {`
-            var npf_d = "https://admissions.vmls.edu.in";
-            var npf_c = "5747";
-            var npf_m = "1";
-            (function () {
-              if (document.querySelector('script[src="https://widgets.in8.nopaperforms.com/emwgts.js"]')) return;
-              var s = document.createElement("script");
-              s.type = "text/javascript";
-              s.async = true;
-              s.defer = true;
-              s.src = "https://widgets.in8.nopaperforms.com/emwgts.js";
-              document.body.appendChild(s);
-            })();
-          `}
-        </Script>
+        <DeferredThirdParty />
       </body>
     </html>
   );

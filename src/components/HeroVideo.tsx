@@ -37,6 +37,22 @@ export default function HeroVideo() {
       {/* Solid backdrop until the single viewport video is ready */}
       <div className="absolute inset-0 -z-10 bg-[#0c1218]" />
 
+      {/*
+        The poster is the Largest Contentful Paint element. It is a 77 KB
+        still of the video's first frame, so the hero paints immediately
+        instead of waiting on a multi-MB download; the video fades in over it
+        once decoded. `priority` because this is above the fold by definition.
+      */}
+      <Image
+        src="/videos/vmls-hero-video-poster.webp"
+        alt=""
+        aria-hidden
+        fill
+        priority
+        sizes="100vw"
+        className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover -z-10"
+      />
+
       {videoSrc && (
         <video
           key={videoSrc}
@@ -44,7 +60,8 @@ export default function HeroVideo() {
           loop
           muted
           playsInline
-          preload="metadata"
+          preload="none"
+          poster="/videos/vmls-hero-video-poster.webp"
           className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover -z-10"
         >
           <source src={videoSrc} type="video/mp4" />

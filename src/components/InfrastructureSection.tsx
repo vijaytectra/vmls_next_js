@@ -8,13 +8,31 @@ export default function InfrastructureSection() {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
-    videoRefs.current.forEach((video) => {
-      if (video) {
-        video.play().catch(() => {
-          /* autoplay may be blocked */
-        });
-      }
-    });
+    // These eight tiles used to autoplay on page load, pulling tens of
+    // megabytes before the visitor had scrolled anywhere near them. Each one
+    // now shows its poster until it actually enters the viewport, and only
+    // then is the source attached and played.
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const video = entry.target as HTMLVideoElement;
+          const source = video.querySelector("source");
+          if (source && !source.getAttribute("src")) {
+            source.setAttribute("src", source.dataset.src ?? "");
+            video.load();
+          }
+          video.play().catch(() => {
+            /* autoplay may be blocked */
+          });
+          observer.unobserve(video);
+        }
+      },
+      { rootMargin: "200px" }
+    );
+
+    videoRefs.current.forEach((video) => video && observer.observe(video));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -35,15 +53,15 @@ export default function InfrastructureSection() {
                 ref={(el) => {
                   videoRefs.current[index] = el;
                 }}
-                autoPlay
                 loop
                 muted
                 playsInline
-                preload="metadata"
+                preload="none"
                 poster={item.image}
                 className="absolute inset-0 w-full h-full object-cover scale-[1.01] transition-transform duration-700 group-hover:scale-105"
               >
-                <source src={item.video} type="video/mp4" />
+                {/* src is attached by the observer above, once in view */}
+                <source data-src={item.video} type="video/mp4" />
               </video>
 
               <div className="absolute inset-0 bg-black/25 group-hover:bg-black/15 transition-colors duration-500" />

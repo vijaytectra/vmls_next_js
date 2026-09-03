@@ -561,6 +561,14 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     1600,
     900
   ],
+  "/images/faculty/gnana-sanga-mithra.webp": [
+    1200,
+    1500
+  ],
+  "/images/faculty/krishna-kishore-padala.webp": [
+    1200,
+    1500
+  ],
   "/images/faculty/live/19.webp": [
     289,
     289
@@ -574,10 +582,6 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     787
   ],
   "/images/faculty/live/DSC00390_5.webp": [
-    1400,
-    787
-  ],
-  "/images/faculty/live/DSC00395_30.webp": [
     1400,
     787
   ],
@@ -649,10 +653,6 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     1400,
     787
   ],
-  "/images/faculty/live/DSC00631_32.webp": [
-    1400,
-    787
-  ],
   "/images/faculty/live/DSC00643_12.webp": [
     1400,
     787
@@ -710,10 +710,6 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     1024
   ],
   "/images/faculty/live/muthuvel.webp": [
-    550,
-    550
-  ],
-  "/images/faculty/live/najeed.webp": [
     550,
     550
   ],

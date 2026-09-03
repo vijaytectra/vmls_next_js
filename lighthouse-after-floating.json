@@ -1,0 +1,249 @@
+[
+  {
+    "name": "homepage",
+    "route": "/",
+    "formFactor": "mobile",
+    "performance": 73,
+    "accessibility": 91,
+    "best-practices": 96,
+    "seo": 92,
+    "lcp": "7.2 s",
+    "cls": "0",
+    "tbt": "70 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 23 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 434 KiB)"
+    ],
+    "failed": [
+      "performance: First Contentful Paint",
+      "performance: Largest Contentful Paint",
+      "performance: Total Blocking Time",
+      "performance: Speed Index",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Image elements have `[alt]` attributes that are redundant text.",
+      "best-practices: Browser errors were logged to the console",
+      "seo: Links do not have descriptive text"
+    ]
+  },
+  {
+    "name": "homepage",
+    "route": "/",
+    "formFactor": "desktop",
+    "performance": 94,
+    "accessibility": 96,
+    "best-practices": 96,
+    "seo": 92,
+    "lcp": "1.6 s",
+    "cls": "0",
+    "tbt": "20 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 22 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 586 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "performance: Speed Index",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Image elements have `[alt]` attributes that are redundant text.",
+      "best-practices: Browser errors were logged to the console",
+      "seo: Links do not have descriptive text"
+    ]
+  },
+  {
+    "name": "admissions",
+    "route": "/admissions/llb",
+    "formFactor": "mobile",
+    "performance": 86,
+    "accessibility": 89,
+    "best-practices": 96,
+    "seo": 100,
+    "lcp": "4.1 s",
+    "cls": "0",
+    "tbt": "120 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 23 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 294 KiB)"
+    ],
+    "failed": [
+      "performance: First Contentful Paint",
+      "performance: Largest Contentful Paint",
+      "performance: Total Blocking Time",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Browser errors were logged to the console"
+    ]
+  },
+  {
+    "name": "admissions",
+    "route": "/admissions/llb",
+    "formFactor": "desktop",
+    "performance": 99,
+    "accessibility": 95,
+    "best-practices": 96,
+    "seo": 100,
+    "lcp": "0.9 s",
+    "cls": "0",
+    "tbt": "0 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 23 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 312 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Browser errors were logged to the console"
+    ]
+  },
+  {
+    "name": "centre",
+    "route": "/global-tamil-law-centre",
+    "formFactor": "mobile",
+    "performance": 85,
+    "accessibility": 91,
+    "best-practices": 96,
+    "seo": 100,
+    "lcp": "4.4 s",
+    "cls": "0",
+    "tbt": "50 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 23 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 420 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "performance: Speed Index",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "best-practices: Browser errors were logged to the console"
+    ]
+  },
+  {
+    "name": "centre",
+    "route": "/global-tamil-law-centre",
+    "formFactor": "desktop",
+    "performance": 99,
+    "accessibility": 96,
+    "best-practices": 96,
+    "seo": 100,
+    "lcp": "0.9 s",
+    "cls": "0",
+    "tbt": "0 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 23 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 588 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "best-practices: Browser errors were logged to the console"
+    ]
+  },
+  {
+    "name": "faculty profile",
+    "route": "/faculty/gaurav-shukla",
+    "formFactor": "mobile",
+    "performance": 84,
+    "accessibility": 89,
+    "best-practices": 96,
+    "seo": 100,
+    "lcp": "4.3 s",
+    "cls": "0",
+    "tbt": "90 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 23 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 69 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "performance: Total Blocking Time",
+      "performance: Speed Index",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Browser errors were logged to the console"
+    ]
+  },
+  {
+    "name": "faculty profile",
+    "route": "/faculty/gaurav-shukla",
+    "formFactor": "desktop",
+    "performance": 99,
+    "accessibility": 95,
+    "best-practices": 96,
+    "seo": 100,
+    "lcp": "0.8 s",
+    "cls": "0",
+    "tbt": "0 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 23 KiB)",
+      "Serve images in next-gen formats (Est savings of 33 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Browser errors were logged to the console"
+    ]
+  },
+  {
+    "name": "blog post",
+    "route": "/blogs/what-is-a-moot-court",
+    "formFactor": "mobile",
+    "performance": 83,
+    "accessibility": 90,
+    "best-practices": 96,
+    "seo": 100,
+    "lcp": "4.4 s",
+    "cls": "0",
+    "tbt": "90 ms",
+    "opportunities": [
+      "Reduce unused JavaScript (Est savings of 23 KiB)",
+      "Avoid serving legacy JavaScript to modern browsers (Est savings of 13 KiB)",
+      "Properly size images (Est savings of 186 KiB)"
+    ],
+    "failed": [
+      "performance: First Contentful Paint",
+      "performance: Largest Contentful Paint",
+      "performance: Total Blocking Time",
+      "performance: Speed Index",
+      "accessibility: Buttons do not have an accessible name",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Browser errors were logged to the console"
+    ]
+  },
+  {
+    "name": "blog post",
+    "route": "/blogs/what-is-a-moot-court",
+    "formFactor": "desktop",
+    "performance": 99,
+    "accessibility": 95,
+    "best-practices": 96,
+    "seo": 100,
+    "lcp": "1.0 s",
+    "cls": "0",
+    "tbt": "10 ms",
+    "opportunities": [
+      "Properly size images (Est savings of 756 KiB)",
+      "Eliminate render-blocking resources (Est savings of 0 ms)",
+      "Reduce unused JavaScript (Est savings of 23 KiB)"
+    ],
+    "failed": [
+      "performance: Largest Contentful Paint",
+      "accessibility: Background and foreground colors do not have a sufficient contrast ratio.",
+      "accessibility: Heading elements are not in a sequentially-descending order",
+      "best-practices: Browser errors were logged to the console"
+    ]
+  }
+]

@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { BLOCKED_FROM_SEARCH } from "@/lib/indexing";
 import { SITE_URL } from "@/lib/seo";
 
+// Emitted as a static file by `output: "export"`.
+export const dynamic = "force-static";
+
 // Served at /robots.txt.
 //
 // The previous static site's robots.txt also disallowed /menu.html,

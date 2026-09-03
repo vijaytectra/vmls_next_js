@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import { useFirstInteraction } from "@/lib/useFirstInteraction";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,7 +12,12 @@ export default function FloatingActions() {
   const pathname = usePathname();
   const isBlogPage = pathname === "/blogs" || pathname?.startsWith("/blogs/");
 
+  // The NoPaperForms popup and chatbot set third-party cookies and pull
+  // several hundred KB, so they wait until the visitor does something.
+  const interacted = useFirstInteraction();
+
   useEffect(() => {
+    if (!interacted) return;
     const appended: HTMLElement[] = [];
     const timers: number[] = [];
     let idleIds: number[] = [];
@@ -312,7 +318,7 @@ export default function FloatingActions() {
         el.removeEventListener("focus", onEnquireIntent);
       });
     };
-  }, []);
+  }, [interacted]);
 
   return (
     <>
