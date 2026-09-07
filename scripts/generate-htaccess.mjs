@@ -125,14 +125,6 @@ const footer = `
 
 ErrorDocument 404 /404.html
 
-# The CI deploy leaves a sync-state file at the document root that lists every
-# deployed path. It is bookkeeping, not content, so it is never served.
-<FilesMatch "^\\.ftp-deploy-sync-state\\.json$">
-  <IfModule mod_authz_core.c>
-    Require all denied
-  </IfModule>
-</FilesMatch>
-
 # Fingerprinted build assets never change under the same name.
 <IfModule mod_expires.c>
   ExpiresActive On

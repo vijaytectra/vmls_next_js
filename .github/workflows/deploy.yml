@@ -1,10 +1,14 @@
-# Builds the static export and uploads it to the staging subdomain.
+# Builds the static export and rsyncs it to the staging subdomain over SSH.
 #
-# STAGING ONLY. There is deliberately no production target and no way to
-# select one: nothing here can write to the live site in public_html. The
-# cutover to production is a manual step, done only when it is asked for.
+# STAGING ONLY. The destination is a constant below, and a guard refuses to run
+# if it is ever edited to point anywhere else. Nothing here can write to the
+# live site in public_html; that cutover is manual, and only when asked for.
 #
-# Requires three repository secrets - see the "Upload to staging" step.
+# Requires these repository secrets:
+#   SSH_PRIVATE_KEY - the deploy key, unencrypted, BEGIN/END lines included
+#   SSH_HOST        - vmls.edu.in
+#   SSH_USER        - the cPanel username
+#   SSH_PORT        - optional, defaults to 22
 name: Deploy to staging
 
 on:
@@ -12,18 +16,20 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# FTP has no transaction: a cancelled run leaves the server half-updated.
-# Queue runs instead of cancelling one mid-upload.
+# rsync --delete is not atomic: a cancelled run leaves the subdomain
+# half-updated. Queue runs rather than cancelling one mid-transfer.
 concurrency:
   group: deploy-staging
   cancel-in-progress: false
 
+env:
+  # Relative to the SSH user's home directory.
+  TARGET: public_html/staging.vmls.edu.in
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    # The first run uploads ~6,200 files and is slow; later runs send only the
-    # files whose contents changed and finish in a couple of minutes.
-    timeout-minutes: 120
+    timeout-minutes: 60
 
     steps:
       - uses: actions/checkout@v4
@@ -68,25 +74,70 @@ jobs:
             echo "::error::.htaccess is missing the noindex header"; exit 1
           fi
 
-      # Secrets required (cPanel > FTP Accounts creates all three):
-      #   FTP_SERVER    - e.g. vmls.edu.in  (host only, no ftp:// and no path)
-      #   FTP_USERNAME  - the full account name, e.g. staging@vmls.edu.in
-      #   FTP_PASSWORD
+      - name: Set up SSH
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          set -e
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          # Pin the host key rather than disabling host checking outright.
+          ssh-keyscan -p "$SSH_PORT" "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          test -s ~/.ssh/known_hosts || {
+            echo "::error::no SSH host key from $SSH_HOST:$SSH_PORT - wrong port, or SSH is firewalled"; exit 1
+          }
+
+      # Fail here, with a readable message, rather than part-way through an
+      # rsync that has already started deleting files.
+      - name: Preflight the server
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          set -e
+          case "$TARGET" in
+            */staging.vmls.edu.in) ;;
+            *) echo "::error::TARGET is '$TARGET' - this workflow only deploys to the staging subdomain"; exit 1 ;;
+          esac
+          ssh -p "$SSH_PORT" -i ~/.ssh/id_ed25519 -o BatchMode=yes "$SSH_USER@$SSH_HOST" "
+            set -e
+            command -v rsync >/dev/null || { echo 'rsync is not installed on the server'; exit 1; }
+            test -d '$TARGET' || { echo 'missing directory: $TARGET'; exit 1; }
+            echo \"rsync: \$(rsync --version | head -1)\"
+            echo \"target holds \$(find '$TARGET' -type f | wc -l) files right now\"
+          "
+
+      # --delete makes the subdomain an exact mirror of out/, so a page deleted
+      # from the site actually disappears. Safe only because the destination is
+      # the staging directory, which holds nothing but this build.
       #
-      # Scope that FTP account's Directory to the staging folder itself, not
-      # to the home directory. Then the live site is out of reach of these
-      # credentials entirely, rather than merely out of reach of this file.
-      # server-dir stays "./" because the account logs in already inside it.
-      - name: Upload to staging
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          local-dir: ./out/
-          server-dir: ./
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
+      # -rltz, not -a: preserving owner and group needs root, which a cPanel
+      # account does not have. --chmod sets what Apache needs to serve files.
+      - name: Deploy to staging
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          rsync -rltz --delete --stats --human-readable \
+            --chmod=D755,F644 \
+            -e "ssh -p $SSH_PORT -i $HOME/.ssh/id_ed25519 -o BatchMode=yes" \
+            out/ "$SSH_USER@$SSH_HOST:$TARGET/"
+
+      - name: Confirm what landed
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT || '22' }}
+        run: |
+          ssh -p "$SSH_PORT" -i ~/.ssh/id_ed25519 -o BatchMode=yes "$SSH_USER@$SSH_HOST" "
+            cd '$TARGET'
+            echo \"files on server: \$(find . -type f | wc -l)\"
+            for f in index.html .htaccess robots.txt sitemap.xml 404.html; do
+              test -s \"\$f\" && echo \"  ok  \$f\" || { echo \"  MISSING \$f\"; exit 1; }
+            done
+          "
