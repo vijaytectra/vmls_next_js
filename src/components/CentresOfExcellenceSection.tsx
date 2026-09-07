@@ -40,7 +40,10 @@ export default function CentresOfExcellenceSection() {
                 <div className="relative w-full h-full transition-all duration-500 opacity-40 [@media(hover:hover)]:opacity-100 [@media(hover:hover)]:group-hover:scale-110 [@media(hover:hover)]:group-hover:opacity-20">
                   <Image
                     src={centre.image}
-                    alt={centre.name}
+                    // The centre's name is rendered as text in the same card,
+                    // so repeating it here makes a screen reader read it
+                    // twice. The logo is decorative in this context.
+                    alt=""
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                     className="object-contain"

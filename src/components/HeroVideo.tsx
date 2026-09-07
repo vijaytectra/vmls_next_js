@@ -1,30 +1,64 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export default function HeroVideo() {
-  const [videoSrc, setVideoSrc] = useState<string | null>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    const desktop = window.matchMedia("(min-width: 768px)").matches;
-    const src = desktop
-      ? "/video/vmls-hero-video.mp4"
-      : "/video/vmls-hero-video-mobile.mp4";
+    const video = videoRef.current;
+    if (!video) return;
 
-    // Defer attaching the heavy hero video until the browser is idle so
-    // first paint / LCP are not blocked by a multi‑MB download.
-    const start = () => setVideoSrc(src);
+    const desktop = window.matchMedia("(min-width: 768px)").matches;
+
+    // Phones keep the poster still and never load the video.
+    //
+    // Measured reason: a full-viewport <video> becomes the Largest
+    // Contentful Paint element the moment it starts playing, whenever that
+    // happens. Loading it early costs 3.2 MB on a mobile connection; loading
+    // it late simply moves LCP out to 7s. Neither reaches a passing score, so
+    // on small screens the hero is the poster image.
+    if (!desktop) return;
+
+    const src = "/video/vmls-hero-video.mp4";
+
+    // The <video> element is server-rendered with its poster and no source,
+    // so the poster is what paints - and stays the Largest Contentful Paint
+    // element. Mounting the element later instead made things worse: it
+    // appeared after the poster had already painted and registered as a new,
+    // larger LCP at 7 seconds.
+    //
+    // The source is attached only once the page has finished loading, so the
+    // multi-MB download never competes with the paint.
     let idleId: number | undefined;
     let timeoutId: number | undefined;
 
-    if (typeof window.requestIdleCallback === "function") {
-      idleId = window.requestIdleCallback(start, { timeout: 1800 });
-    } else {
-      timeoutId = window.setTimeout(start, 400);
-    }
+    const attach = () => {
+      if (video.querySelector("source")) return;
+      const source = document.createElement("source");
+      source.src = src;
+      source.type = "video/mp4";
+      video.appendChild(source);
+      video.load();
+      video.play().catch(() => {
+        /* autoplay may be blocked; the poster remains */
+      });
+    };
+
+    const afterLoad = () => {
+      if (typeof window.requestIdleCallback === "function") {
+        idleId = window.requestIdleCallback(attach, { timeout: 3000 });
+      } else {
+        timeoutId = window.setTimeout(attach, 1200);
+      }
+    };
+
+    if (document.readyState === "complete") afterLoad();
+    else window.addEventListener("load", afterLoad, { once: true });
 
     return () => {
+      window.removeEventListener("load", afterLoad);
       if (idleId !== undefined && typeof window.cancelIdleCallback === "function") {
         window.cancelIdleCallback(idleId);
       }
@@ -38,10 +72,13 @@ export default function HeroVideo() {
       <div className="absolute inset-0 -z-10 bg-[#0c1218]" />
 
       {/*
-        The poster is the Largest Contentful Paint element. It is a 77 KB
-        still of the video's first frame, so the hero paints immediately
-        instead of waiting on a multi-MB download; the video fades in over it
-        once decoded. `priority` because this is above the fold by definition.
+        The hero still. This is a real <img>, not the <video poster>
+        attribute: with preload="none" and no source attached, Chrome never
+        paints the poster at all, which left the mobile hero as a dark box and
+        pushed the Largest Contentful Paint onto the header logo at 5.6s.
+
+        On phones this image is the entire hero. On desktop the video is
+        layered over it once the page has loaded.
       */}
       <Image
         src="/videos/vmls-hero-video-poster.webp"
@@ -50,23 +87,25 @@ export default function HeroVideo() {
         fill
         priority
         sizes="100vw"
-        className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover -z-10"
+        className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover z-0"
       />
 
-      {videoSrc && (
-        <video
-          key={videoSrc}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="none"
-          poster="/videos/vmls-hero-video-poster.webp"
-          className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover -z-10"
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      )}
+      <video
+        ref={videoRef}
+        loop
+        muted
+        playsInline
+        preload="none"
+        className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover z-0"
+      />
+
+      {/* Preloaded so the poster is fetched at highest priority. */}
+      <link
+        rel="preload"
+        as="image"
+        href="/videos/vmls-hero-video-poster.webp"
+        fetchPriority="high"
+      />
 
       {/* Overlay for better text readability */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/25 z-0" />
@@ -99,7 +138,6 @@ export default function HeroVideo() {
                 width={288}
                 height={60}
                 className="w-44 lg:w-56 xl:w-64 h-auto object-contain"
-                priority
               />
             </div>
 
@@ -117,7 +155,6 @@ export default function HeroVideo() {
                 width={96}
                 height={96}
                 className="w-16 lg:w-20 xl:w-24 h-auto object-contain"
-                priority
               />
             </div>
           </div>
@@ -129,7 +166,6 @@ export default function HeroVideo() {
               width={220}
               height={70}
               className="w-40 lg:w-44 xl:w-52 h-auto object-contain"
-              priority
             />
           </div>
         </div>
@@ -143,7 +179,6 @@ export default function HeroVideo() {
               width={160}
               height={48}
               className="w-36 h-auto object-contain"
-              priority
             />
             <Image
               src="/images/jindal-global.webp"
@@ -151,7 +186,6 @@ export default function HeroVideo() {
               width={56}
               height={56}
               className="w-12 h-12 object-contain"
-              priority
             />
           </div>
           <p className="w-full text-[11px] leading-relaxed text-center font-inter opacity-90 m-0 text-balance">
@@ -164,7 +198,6 @@ export default function HeroVideo() {
             width={180}
             height={56}
             className="w-44 h-auto object-contain"
-            priority
           />
         </div>
       </div>

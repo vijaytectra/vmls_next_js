@@ -22,6 +22,11 @@ const PAGES = [
 ];
 
 const CATEGORIES = ["performance", "accessibility", "best-practices", "seo"];
+// Lighthouse varies by several points run to run on a busy machine, so mobile
+// - where the margin is tightest - is measured three times and reported as the
+// median. Desktop sits far enough above the bar for a single run.
+const RUNS = { mobile: Number(process.env.LH_RUNS ?? 3), desktop: 1 };
+const median = (values) => [...values].sort((a, b) => a - b)[Math.floor(values.length / 2)];
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "lh-"));
 const results = [];
 

@@ -4,10 +4,21 @@
 # Serves the Next.js static export (./out) from Apache on cPanel.
 
 Options -Indexes
-DirectoryIndex index.html
+
+# index.php is listed because this .htaccess sits at the document root and is
+# therefore inherited by the sibling apps that share public_html (/exam, /vlat).
+# Those are PHP; without index.php here their directory URLs stop resolving.
+DirectoryIndex index.html index.php
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # ---------------------------------------------------------------------
+  # Hand the sibling apps straight back to Apache before any rule below can
+  # rewrite them. Without this, the trailing-slash rule would 301 their
+  # virtual routes (/exam/results/ -> /exam/results) and break them.
+  # ---------------------------------------------------------------------
+  RewriteRule ^(exam|vlat)(/|$) - [L]
 
   # ---------------------------------------------------------------------
   # Canonical host. Left commented out deliberately: switching these on

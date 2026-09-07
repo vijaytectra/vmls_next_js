@@ -112,9 +112,17 @@ export default function NewsEventsSection() {
                   <p className="font-inter text-base text-gray-600 leading-relaxed line-clamp-3 text-left">
                     {event.description}
                   </p>
+                  {/* "Read More" on its own describes nothing. The headline is
+                      appended as screen-reader-only text rather than an
+                      aria-label, because crawlers and the Lighthouse link-text
+                      audit read the visible text, not the label. */}
                   <Link href={event.link}>
-                    <button className="mt-4 px-6 py-2.5 border-2 border-[#a31f34] text-[#a31f34] font-inter text-xs font-bold uppercase tracking-widest transition-all hover:bg-[#a31f34]/5">
+                    <button
+                      tabIndex={-1}
+                      className="mt-4 px-6 py-2.5 border-2 border-[#a31f34] text-[#a31f34] font-inter text-xs font-bold uppercase tracking-widest transition-all hover:bg-[#a31f34]/5"
+                    >
                       {event.linkText}
+                      <span className="sr-only"> about {event.title}</span>
                     </button>
                   </Link>
                 </div>

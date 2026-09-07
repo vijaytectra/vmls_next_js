@@ -44,16 +44,36 @@ export default function Home() {
       <HeroVideo />
       <Announcements />
       <AboutSection />
-      <MentoringCommittee />
-      <ExecutiveDeanSection />
-      <FacultySection />
-      <CollaborationSection />
-      <NewsEventsSection />
-      <ScholarshipSection />
-      <CentresOfExcellenceSection />
-      <InfrastructureSection />
-      <VideoGallerySection />
-      <QuoteSection />
+      <div className="below-fold">
+        <MentoringCommittee />
+      </div>
+      <div className="below-fold">
+        <ExecutiveDeanSection />
+      </div>
+      <div className="below-fold">
+        <FacultySection />
+      </div>
+      <div className="below-fold">
+        <CollaborationSection />
+      </div>
+      <div className="below-fold">
+        <NewsEventsSection />
+      </div>
+      <div className="below-fold">
+        <ScholarshipSection />
+      </div>
+      <div className="below-fold">
+        <CentresOfExcellenceSection />
+      </div>
+      <div className="below-fold">
+        <InfrastructureSection />
+      </div>
+      <div className="below-fold">
+        <VideoGallerySection />
+      </div>
+      <div className="below-fold">
+        <QuoteSection />
+      </div>
     </div>
   );
 }

@@ -180,7 +180,9 @@ export default function Footer() {
             <span className="text-gray-300" aria-hidden>|</span>
             <Link href="/terms-conditions" prefetch={false} className="hover:text-[#a31f34] transition-colors">Terms and Conditions</Link>
           </div>
-          <p className="text-[10px] md:text-sm font-medium text-gray-400 tracking-widest">
+          {/* gray-400 on this background falls below the 4.5:1 contrast
+              minimum; gray-300 clears it while staying visually muted. */}
+          <p className="text-[10px] md:text-sm font-medium text-gray-300 tracking-widest">
             COPYRIGHT © 2026 VMLS
           </p>
         </div>

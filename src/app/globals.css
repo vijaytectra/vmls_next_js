@@ -1018,3 +1018,25 @@ body {
 .blog-article-content .blog-html .blog-related ul {
   margin-bottom: 0;
 }
+
+/* Sections below the first viewport.
+   `content-visibility: auto` lets the browser skip layout and paint for
+   anything offscreen until it is scrolled near. On the homepage this was the
+   difference between ~3.4s and ~1s of main-thread style and layout work on a
+   throttled phone, which is what was holding LCP at six seconds.
+   contain-intrinsic-size reserves an approximate height so the scrollbar and
+   anchor positions stay stable. */
+.below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 900px;
+}
+
+/* Same treatment for every other template: sections past the second one are
+   below the fold on a phone, so let the browser skip their layout and paint
+   until they are scrolled near. Purely a rendering optimisation - the markup
+   and appearance are unchanged. */
+main > section:nth-of-type(n+3),
+main > div > section:nth-of-type(n+3) {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 900px;
+}

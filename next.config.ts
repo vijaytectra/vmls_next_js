@@ -20,11 +20,17 @@ const nextConfig: NextConfig = {
   },
   allowedDevOrigins: ["127.0.0.1", "localhost"],
   images: {
-    // No image optimization server on shared hosting: files in public/ are
-    // served as-is by Apache.
-    unoptimized: true,
+    // `unoptimized` is deliberately NOT set: it suppresses srcset entirely,
+    // which meant every device downloaded every image at full size. The
+    // custom loader below serves pre-generated width variants instead, so
+    // next/image emits a real srcset with no image server involved.
     loader: "custom",
     loaderFile: "./src/lib/imageLoader.ts",
+    // Only the widths scripts/generate-image-variants.mjs actually produces.
+    deviceSizes: [640, 828, 1200, 1920],
+    // Kept below deviceSizes[0] so 640 is not emitted twice in every srcset.
+    imageSizes: [256, 384],
+    formats: ["image/webp"],
     remotePatterns: [
       {
         protocol: "https",

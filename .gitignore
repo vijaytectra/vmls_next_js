@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 video-originals/
+
+# Upload archives produced by scripts/pack-deploy.mjs
+/deploy

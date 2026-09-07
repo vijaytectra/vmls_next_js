@@ -334,6 +334,10 @@ export default function Header() {
 
             <button
               type="button"
+              // The label is drawn with bars and a word that is hidden from
+              // assistive tech on small screens, so the button needs its own
+              // name for screen readers.
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={isMenuOpen}
               aria-controls="vmls-menu-drawer"
               onClick={(event) => {
