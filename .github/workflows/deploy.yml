@@ -111,13 +111,22 @@ jobs:
             */staging.vmls.edu.in) ;;
             *) echo "::error::TARGET is '$TARGET' - this workflow only deploys to the staging subdomain"; exit 1 ;;
           esac
-          ssh -p "$SSH_PORT" -i ~/.ssh/id_ed25519 -o BatchMode=yes "$SSH_USER@$SSH_HOST" "
-            set -e
-            command -v rsync >/dev/null || { echo 'rsync is not installed on the server'; exit 1; }
-            test -d '$TARGET' || { echo 'missing directory: $TARGET'; exit 1; }
-            echo \"rsync: \$(rsync --version | head -1)\"
-            echo \"target holds \$(find '$TARGET' -type f | wc -l) files right now\"
-          "
+          # An account with shell access disabled answers every command with a
+          # notice and exits 0, so the exit status proves nothing. Require a
+          # marker that only a real shell could have echoed back.
+          out=$(ssh -p "$SSH_PORT" -i ~/.ssh/id_ed25519 -o BatchMode=yes "$SSH_USER@$SSH_HOST" "
+            echo SHELL_REACHED
+            command -v rsync >/dev/null && echo HAVE_RSYNC
+            test -d '$TARGET' && echo HAVE_TARGET
+            find '$TARGET' -type f 2>/dev/null | wc -l
+          " 2>&1) || true
+          echo "$out"
+          case "$out" in
+            *SHELL_REACHED*) ;;
+            *) echo "::error::the server accepted the key but did not run the command - shell access is disabled on this cPanel account. Ask the host to enable SSH/jailed shell; rsync cannot work without it."; exit 1 ;;
+          esac
+          case "$out" in *HAVE_RSYNC*) ;; *) echo "::error::rsync is not installed on the server"; exit 1 ;; esac
+          case "$out" in *HAVE_TARGET*) ;; *) echo "::error::missing directory: $TARGET"; exit 1 ;; esac
 
       # --delete makes the subdomain an exact mirror of out/, so a page deleted
       # from the site actually disappears. Safe only because the destination is
