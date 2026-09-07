@@ -13,6 +13,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
+import { STAGING_ROBOTS, stagingHtaccess } from "./staging-overlay.mjs";
 
 const SRC = "out";
 const DEST = "deploy";
@@ -113,20 +114,10 @@ const STAGE = path.join(DEST, "staging-overlay");
 fs.rmSync(STAGE, { recursive: true, force: true });
 fs.mkdirSync(STAGE, { recursive: true });
 
-fs.writeFileSync(
-  path.join(STAGE, "robots.txt"),
-  "# Staging. Not for indexing - see deploy/MANIFEST.txt.\nUser-Agent: *\nDisallow: /\n"
-);
+fs.writeFileSync(path.join(STAGE, "robots.txt"), STAGING_ROBOTS);
 fs.writeFileSync(
   path.join(STAGE, ".htaccess"),
-  [
-    "# STAGING COPY - production uses part-99-htaccess.tar.gz instead.",
-    "<IfModule mod_headers.c>",
-    '  Header always set X-Robots-Tag "noindex, nofollow"',
-    "</IfModule>",
-    "",
-    fs.readFileSync(path.join(SRC, ".htaccess"), "utf8"),
-  ].join("\n")
+  stagingHtaccess(fs.readFileSync(path.join(SRC, ".htaccess"), "utf8"))
 );
 
 execFileSync(

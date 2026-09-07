@@ -1,0 +1,92 @@
+# Builds the static export and uploads it to the staging subdomain.
+#
+# STAGING ONLY. There is deliberately no production target and no way to
+# select one: nothing here can write to the live site in public_html. The
+# cutover to production is a manual step, done only when it is asked for.
+#
+# Requires three repository secrets - see the "Upload to staging" step.
+name: Deploy to staging
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# FTP has no transaction: a cancelled run leaves the server half-updated.
+# Queue runs instead of cancelling one mid-upload.
+concurrency:
+  group: deploy-staging
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # The first run uploads ~6,200 files and is slow; later runs send only the
+    # files whose contents changed and finish in a couple of minutes.
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # redirects.ts is the single source for the 301s, so regenerate rather
+      # than trust the committed copy to still match it.
+      - name: Generate .htaccess
+        run: node scripts/generate-htaccess.mjs
+
+      - name: Build static export
+        run: npm run build
+
+      # Staging serves the same pages as the live site, so without this it
+      # would be crawled as duplicate content against vmls.edu.in.
+      - name: Apply staging overlay
+        run: node scripts/staging-overlay.mjs out
+
+      # A build that "succeeds" but drops .htaccess would publish a site where
+      # every extensionless URL 404s. Catch that here, not on the subdomain.
+      - name: Verify the export before uploading
+        run: |
+          set -e
+          for f in out/index.html out/.htaccess out/404.html out/robots.txt out/sitemap.xml; do
+            test -s "$f" || { echo "::error::$f is missing or empty"; exit 1; }
+          done
+          count=$(find out -type f | wc -l)
+          echo "$count files to deploy"
+          test "$count" -gt 5000 || { echo "::error::only $count files - the export looks incomplete"; exit 1; }
+          # -x, because production robots.txt has "Disallow: /blogs/..." lines
+          # that a substring match would happily accept.
+          if ! grep -qx 'Disallow: /' out/robots.txt; then
+            echo "::error::robots.txt is not blocking crawlers - refusing to publish an indexable staging copy"; exit 1
+          fi
+          if ! grep -q 'X-Robots-Tag' out/.htaccess; then
+            echo "::error::.htaccess is missing the noindex header"; exit 1
+          fi
+
+      # Secrets required (cPanel > FTP Accounts creates all three):
+      #   FTP_SERVER    - e.g. vmls.edu.in  (host only, no ftp:// and no path)
+      #   FTP_USERNAME  - the full account name, e.g. staging@vmls.edu.in
+      #   FTP_PASSWORD
+      #
+      # Scope that FTP account's Directory to the staging folder itself, not
+      # to the home directory. Then the live site is out of reach of these
+      # credentials entirely, rather than merely out of reach of this file.
+      # server-dir stays "./" because the account logs in already inside it.
+      - name: Upload to staging
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./out/
+          server-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
