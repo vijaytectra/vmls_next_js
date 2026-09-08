@@ -24,7 +24,13 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  preload: true,
+  // Not preloaded. Inter is 48 KB and a preload is fetched at High priority,
+  // which put it in direct bandwidth competition with the 14 KB header logo -
+  // the measured LCP element - on a throttled phone. Playfair above stays
+  // preloaded because it draws the hero headline, which is the largest text on
+  // screen and the thing Speed Index actually watches; Inter sets the tagline
+  // and body copy, which swap in without a visible reflow of the headline.
+  preload: false,
 });
 
 export const viewport: Viewport = {
@@ -47,10 +53,18 @@ export const metadata: Metadata = {
     "Vinayaka Mission's Law School (VMLS), Chennai - law programmes, centres of excellence, faculty and admissions.",
   // Declared exactly once for the whole property. Never repeat per page.
   verification: { google: GOOGLE_SITE_VERIFICATION },
+  // The file that shipped as favicon.ico was a 211x213 PNG with the extension
+  // renamed - 28.7 KB, fetched at High priority on every cold load, for an
+  // icon drawn at 16-32px. These are real, sized icons; favicon.ico is now a
+  // 2 KB ICO wrapping the 32px PNG, kept for clients that request /favicon.ico
+  // without reading the markup.
   icons: {
-    icon: "/images/favicon.ico",
+    icon: [
+      { url: "/images/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/images/favicon.ico", sizes: "any" },
+    ],
     shortcut: "/images/favicon.ico",
-    apple: "/images/favicon.ico",
+    apple: "/images/apple-touch-icon.png",
   },
 };
 

@@ -12,8 +12,9 @@
     "seo:audit": "node scripts/seo-audit.mjs && node scripts/verify-redirects.mjs && node scripts/check-internal-links.mjs",
     "seo:redirects": "node scripts/generate-redirects.mjs",
     "seo:links": "node scripts/add-internal-links.mjs",
-    "deploy:pack": "next build && node scripts/pack-delta.mjs",
-    "deploy:done": "node scripts/pack-delta.mjs --commit"
+    "deploy:pack": "next build && node scripts/precompress.mjs && node scripts/pack-delta.mjs",
+    "deploy:done": "node scripts/pack-delta.mjs --commit",
+    "precompress": "node scripts/precompress.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.14.0",

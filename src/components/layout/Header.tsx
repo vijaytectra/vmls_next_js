@@ -310,10 +310,24 @@ export default function Header() {
               <Image
                 src="/images/headerleft.webp"
                 alt="Vinayaka Mission's Research Foundation"
-                height={200}
-                width={420}
+                // The file is 414x95. It was declared 420x200, an aspect ratio
+                // of 2.1 against the real 4.36, so before the image arrived the
+                // browser reserved a box 76px wide for something that lands at
+                // 157px and pushed the rest of the header row sideways on load.
+                height={95}
+                width={414}
                 className="h-[2.25rem] sm:h-[3.75rem] md:h-[3.5rem] lg:h-[3.5rem] w-auto max-w-[min(72vw,320px)] sm:max-w-[380px] md:max-w-[440px] lg:max-w-[480px] object-contain object-left"
                 priority
+                // This logo is the Largest Contentful Paint element on both
+                // form factors - it is the only largestContentfulPaint
+                // candidate Chrome emits for this page, at 157x36. The hero
+                // poster paints 2ms later at 1243x700 and never registers.
+                //
+                // `priority` alone only emits the preload; it does not mark it
+                // high. Every image on the page was therefore fetched at Low
+                // priority, which put 1.6-3.0s of "load delay" in front of the
+                // LCP on mobile.
+                fetchPriority="high"
               />
             </Link>
           </div>
@@ -324,8 +338,16 @@ export default function Header() {
                 <Image
                   src="/images/headerright.webp"
                   alt="VMLS Vinayaka Mission's Law School"
-                  height={70}
-                  width={150}
+                  // Same wrong-ratio problem as the logo above (the file is
+                  // 613x213, declared 150x70), but the fix is not to declare
+                  // the intrinsic size: next/image derives the srcset widths
+                  // from these numbers, and 613 would ask for the 24.7 KB
+                  // original instead of a variant. This is the largest size the
+                  // element is ever drawn at (lg:h-11, max-w-[120px]) in the
+                  // real 2.88 ratio, which selects the 256px variant - 8.7 KB,
+                  // and still 256 device px for a slot that measures 205.
+                  height={42}
+                  width={120}
                   className="h-7 sm:h-8 md:h-9 lg:h-11 w-auto max-w-[78px] sm:max-w-[85px] md:max-w-[100px] lg:max-w-[120px] object-contain"
                   priority
                 />

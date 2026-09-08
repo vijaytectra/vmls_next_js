@@ -168,10 +168,59 @@ real numbers on https://pagespeed.web.dev against the live URL.
 
 ```bash
 npm run build
-node scripts/serve-export.mjs 4300      # applies .htaccess redirects, emulates gzip
-npx lighthouse http://localhost:4300/ --preset=perf --form-factor=mobile \
+node scripts/precompress.mjs            # required: the harness serves the .br/.gz twins
+node scripts/serve-export.mjs 4300      # applies .htaccess redirects, serves twins
+npx lighthouse@13.4.1 http://localhost:4300/ --form-factor=mobile \
   --screenEmulation.mobile --only-categories=performance
 ```
+
+Pin `lighthouse@13.4.1`: that is the version PageSpeed Insights runs, and its
+scoring and its insight audits (`lcp-breakdown-insight`, `render-blocking-insight`)
+differ from the Lighthouse 12 that `npx lighthouse` resolves to by default.
+
+## Compression is shipped, not requested
+
+The server compresses `application/javascript` on the fly and hands Chrome
+**identity** for `text/html`, `text/css` and the RSC `.txt` payloads. This is
+not reproducible with curl - curl gets gzip for the same URLs - so it stayed
+invisible for a long time. It was confirmed from Chrome's own DevTools log,
+where every request carried `Accept-Encoding: gzip, deflate, br, zstd` and only
+the `.js` responses came back with a `Content-Encoding`.
+
+Measured on the homepage: 201 KB of HTML instead of 29 KB, 143 KB of CSS
+instead of 22 KB, 67 KB of RSC payload instead of 8 KB. 373 KiB of avoidable
+transfer, on a server that is still HTTP/1.1.
+
+So the build no longer asks the server to compress anything.
+`scripts/precompress.mjs` writes a `.br` and `.gz` twin beside every
+compressible file in `out/`, and the rewrite rules in `.htaccess` serve those
+bytes directly. **`next build` wipes `out/`, so precompress must run after
+every build** - `npm run deploy:pack` already chains them in the right order.
+
+Every rewrite rule requires the twin to exist on disk (`-f`), so the upload
+order does not matter and a missing or never-uploaded twin simply falls through
+to the plain file. That is also the rollback: delete the `.br`/`.gz` files, or
+remove the "Pre-compressed responses" block from `.htaccess`, and the site
+serves exactly what it served before.
+
+The twins roughly double the file count in `out/` (~1,700 extra files, ~12 MB),
+so the first delta upload after this change is much larger than usual.
+
+## Two things only the host can fix
+
+Both are worth more to the mobile score than anything left in the code.
+
+1. **HTTP/2 is not enabled.** The homepage makes ~37 requests over HTTP/1.1,
+   which limits the browser to 6 connections and serialises the load. Ask the
+   host to enable `mod_http2` (cPanel: *Apache Configuration -> Global
+   Configuration*, or via WHM/EasyApache). Verify with
+   `curl -sI --http2 https://vmls.edu.in/ | head -1`.
+2. **Time to first byte is 480-610 ms** for a static file, which lands directly
+   in front of FCP and LCP on every mobile visit.
+
+Putting Cloudflare's free tier in front of the domain would settle both at
+once - HTTP/2 and HTTP/3, edge caching that takes TTFB to tens of
+milliseconds, and Brotli - without touching the cPanel account.
 
 ## If SSH is ever enabled
 

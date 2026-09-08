@@ -43,7 +43,13 @@ export default function Home() {
       <PageSchema path="/" />
       <HeroVideo />
       <Announcements />
-      <AboutSection />
+      {/* Also below the fold on a phone: its top edge measures at y=989 in a
+          412x823 viewport, so its 40 KB illustration was competing for
+          bandwidth during the first paint and its layout was being computed
+          for content nobody had scrolled to. */}
+      <div className="below-fold">
+        <AboutSection />
+      </div>
       <div className="below-fold">
         <MentoringCommittee />
       </div>

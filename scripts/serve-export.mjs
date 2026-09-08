@@ -43,9 +43,29 @@ const TYPES = {
 const COMPRESSIBLE =
   /^(text\/|application\/(javascript|json|xml)|image\/svg)/;
 
-const send = (res, status, body, type = "text/plain", req) => {
+const send = (res, status, body, type = "text/plain", req, file) => {
   const headers = { "Content-Type": type };
   const accepts = String(req?.headers["accept-encoding"] ?? "");
+
+  // Production no longer asks the server to compress anything: the build ships
+  // .br/.gz twins and .htaccess serves them directly. Prefer them here too, so
+  // a Lighthouse run against this harness measures the same bytes cPanel will
+  // send rather than a gzip this script invented.
+  if (file) {
+    for (const [ext, encoding, accepted] of [
+      [".br", "br", /(^|,) *br( *[,;]|$)/],
+      [".gz", "gzip", /(^|,) *gzip( *[,;]|$)/],
+    ]) {
+      if (!accepted.test(accepts)) continue;
+      const twin = file + ext;
+      if (!fs.existsSync(twin)) continue;
+      headers["Content-Encoding"] = encoding;
+      headers["Vary"] = "Accept-Encoding";
+      res.writeHead(status, headers);
+      return res.end(fs.readFileSync(twin));
+    }
+  }
+
   if (COMPRESSIBLE.test(type) && /\bgzip\b/.test(accepts) && body.length > 512) {
     const gzipped = zlib.gzipSync(body);
     headers["Content-Encoding"] = "gzip";
@@ -82,13 +102,13 @@ const server = http.createServer((req, res) => {
   ];
   for (const file of candidates) {
     if (fs.existsSync(file) && fs.statSync(file).isFile()) {
-      return send(res, 200, fs.readFileSync(file), TYPES[path.extname(file)] ?? "application/octet-stream", req);
+      return send(res, 200, fs.readFileSync(file), TYPES[path.extname(file)] ?? "application/octet-stream", req, file);
     }
   }
   if (!relative) {
     const index = path.join(ROOT, "index.html");
     if (fs.existsSync(index))
-      return send(res, 200, fs.readFileSync(index), TYPES[".html"], req);
+      return send(res, 200, fs.readFileSync(index), TYPES[".html"], req, index);
   }
   const notFound = path.join(ROOT, "404.html");
   return send(

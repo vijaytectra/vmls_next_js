@@ -343,6 +343,13 @@ export default function FloatingActions() {
       <div className="fixed left-0 top-[min(42vh,320px)] sm:top-[280px] md:top-1/2 z-[2000] md:-translate-y-1/2">
         <Link
           href="/chat-with-student"
+          // This tab is fixed in the viewport on every page, so Next prefetches
+          // its route as soon as it is in view. On the homepage that pulled
+          // four extra requests into the initial load - the route HTML plus
+          // three RSC payloads, ~36 KB - competing for one of the six
+          // connections an HTTP/1.1 server gives us. It is a low-intent tab;
+          // the navigation can pay its own cost.
+          prefetch={false}
           className="vertical-edge-btn vertical-edge-btn--chat font-inter"
         >
           Chat with a Student

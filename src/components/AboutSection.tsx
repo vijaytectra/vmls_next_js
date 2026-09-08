@@ -17,7 +17,13 @@ export default function AboutSection() {
       
       {/* Subtle University Watermark */}
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,720px)] h-[min(100%,720px)] opacity-[0.02] pointer-events-none z-0 bg-[url('/images/headerright.webp')] bg-contain bg-center bg-no-repeat grayscale"
+        // The same 256px variant the header fetches, so this costs no request
+        // at all. It used to point at the 24.7 KB original: a second,
+        // full-size download of a logo the header already had, on the initial
+        // load, for a watermark drawn at 2% opacity. Keep this in step with the
+        // width declared on the header logo in Header.tsx - that is what
+        // decides which variant next/image actually requests.
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(100%,720px)] h-[min(100%,720px)] opacity-[0.02] pointer-events-none z-0 bg-[url('/images/headerright-w256.webp')] bg-contain bg-center bg-no-repeat grayscale"
         aria-hidden
       />
 
