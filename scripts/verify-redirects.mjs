@@ -1,17 +1,35 @@
-// Checks every rule in src/data/redirects.ts against a running build:
-// the source must redirect permanently, to the declared destination, and
-// that destination must itself return 200.
+// Checks every redirect rule against a running build: the source must redirect
+// permanently, to the declared destination, and that destination must itself
+// return 200.
+//
+// Both rule files are read, in the same precedence the .htaccess generator
+// uses - src/data/redirects.manual.ts wins over the generated
+// src/data/redirects.ts on any duplicated source. Reading only the generated
+// file made every manual override look like a failure: the server correctly
+// followed the manual rule while this script expected the generated one.
 //
 // Usage: npm run build && npm start &   then: node scripts/verify-redirects.mjs
 import fs from "node:fs";
 
 const BASE = process.env.SEO_AUDIT_BASE ?? "http://localhost:3000";
 
-const src = fs.readFileSync("src/data/redirects.ts", "utf8");
 // Slice the array literal itself - "Redirect[]" in the type annotation would
 // otherwise be mistaken for the start of the data.
-const arrayStart = src.indexOf("= [", src.indexOf("export const REDIRECTS")) + 2;
-const rules = JSON.parse(src.slice(arrayStart, src.lastIndexOf("]") + 1));
+function readRules(file, exportName) {
+  const src = fs.readFileSync(file, "utf8");
+  const start = src.indexOf("= [", src.indexOf(exportName)) + 2;
+  return JSON.parse(src.slice(start, src.lastIndexOf("]") + 1));
+}
+
+// Manual first, so its entries claim each source before the generated ones.
+const bySource = new Map();
+for (const rule of [
+  ...readRules("src/data/redirects.manual.ts", "MANUAL_REDIRECTS"),
+  ...readRules("src/data/redirects.ts", "export const REDIRECTS"),
+]) {
+  if (!bySource.has(rule.source)) bySource.set(rule.source, rule);
+}
+const rules = [...bySource.values()];
 
 const errors = [];
 const statuses = new Map();
