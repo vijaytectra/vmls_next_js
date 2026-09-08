@@ -5,9 +5,10 @@
 // transfer restarts. Each part here stands alone, so a failed part is re-tried
 // on its own. cPanel's File Manager extracts .tar.gz natively (Extract button).
 //
-// Why .htaccess is last: until it is in place, extensionless URLs 404. Keeping
-// it in its own final part means the site only switches over once every asset
-// it references has already landed.
+// Why the overlay is last: .htaccess and robots.txt are the only two files that
+// differ between staging and production, and until .htaccess is in place every
+// extensionless URL 404s. Shipping them separately means the environment is
+// decided by which overlay is extracted, and only after every asset has landed.
 //
 // Run:  node scripts/pack-deploy.mjs [maxPartMB]
 import fs from "node:fs";
@@ -45,13 +46,22 @@ if (!fs.existsSync(SRC)) {
   process.exit(1);
 }
 
-const all = walk(SRC);
-const htaccess = all.filter((f) => f.rel === ".htaccess");
-const payload = all.filter((f) => f.rel !== ".htaccess");
+// The two files that differ between a staging and a production copy. They are
+// held out of the numbered parts and shipped as an overlay instead, so the
+// environment is decided by which overlay is extracted last - and so promoting
+// a tested staging directory to production cannot leave its "Disallow: /"
+// robots.txt behind and deindex the live site.
+const OVERLAY_FILES = new Set([".htaccess", "robots.txt"]);
 
-if (!htaccess.length) {
-  console.error("out/.htaccess is missing - run `node scripts/generate-htaccess.mjs` then rebuild.");
-  process.exit(1);
+const all = walk(SRC);
+const overlay = all.filter((f) => OVERLAY_FILES.has(f.rel));
+const payload = all.filter((f) => !OVERLAY_FILES.has(f.rel));
+
+for (const name of OVERLAY_FILES) {
+  if (!overlay.some((f) => f.rel === name)) {
+    console.error(`${SRC}/${name} is missing - run \`node scripts/generate-htaccess.mjs\` then rebuild.`);
+    process.exit(1);
+  }
 }
 
 /* ----------------------------------------------------------------- split */
@@ -95,12 +105,12 @@ function writeArchive(name, files) {
 }
 
 const width = String(parts.length).length;
-console.log(`Packing ${payload.length + 1} files into ${parts.length + 1} parts (max ${MAX_PART / 1024 / 1024} MB raw)\n`);
+console.log(`Packing ${payload.length + overlay.length} files into ${parts.length + 1} parts (max ${MAX_PART / 1024 / 1024} MB raw)\n`);
 
 const written = parts.map((part, i) =>
   writeArchive(`part-${String(i + 1).padStart(width, "0")}`, part.files)
 );
-written.push(writeArchive("part-99-htaccess", htaccess));
+written.push(writeArchive("production-overlay", overlay));
 
 /* --------------------------------------------------------- staging only */
 
@@ -109,7 +119,7 @@ written.push(writeArchive("part-99-htaccess", htaccess));
 // and prepends a noindex header to .htaccess. A Disallow on its own is not
 // enough - it stops crawling, not indexing - hence X-Robots-Tag as well.
 //
-// Extract this INSTEAD OF part-99 on staging, and NEVER on production.
+// Extract this INSTEAD OF production-overlay on staging, never alongside it.
 const STAGE = path.join(DEST, "staging-overlay");
 fs.rmSync(STAGE, { recursive: true, force: true });
 fs.mkdirSync(STAGE, { recursive: true });
@@ -126,7 +136,7 @@ execFileSync(
   { cwd: STAGE, input: "robots.txt\0.htaccess\0", stdio: ["pipe", "inherit", "inherit"] }
 );
 fs.rmSync(STAGE, { recursive: true, force: true });
-console.log(`  staging-overlay.tar.gz          2 files  (staging only - use instead of part-99)`);
+console.log(`  staging-overlay.tar.gz          2 files  (staging only - replaces production-overlay)`);
 
 /* -------------------------------------------------------------- manifest */
 
@@ -135,21 +145,21 @@ const manifest = [
   "VMLS static export - cPanel upload manifest",
   `Generated ${new Date().toISOString()}`,
   "",
-  `Files:  ${payload.length + 1}`,
+  `Files:  ${payload.length + overlay.length}`,
   `Parts:  ${written.length}`,
   `Upload: ${(totalArchived / 1024 / 1024).toFixed(1)} MB compressed`,
   "",
   "Upload every part to the target directory, Extract each one, then delete",
   "the .tar.gz files.",
   "",
-  "  Production: extract part-99-htaccess LAST.",
-  "  Staging:    extract staging-overlay LAST, and NOT part-99-htaccess.",
+  "  Production: extract production-overlay LAST.",
+  "  Staging:    extract staging-overlay LAST, and NOT production-overlay.",
   "              (It carries a noindex robots.txt and header so the staging",
   "               subdomain is never crawled as duplicate content.)",
   "",
   ...written.map((p) => `  ${p.name}.tar.gz  ${mb(p.archived)} MB  ${String(p.files).padStart(5)} files`),
   "",
-  `After extracting everything, this must report ${payload.length + 1}:`,
+  `After extracting everything, this must report ${payload.length + overlay.length}:`,
   "  find . -type f | wc -l",
 ].join("\n");
 

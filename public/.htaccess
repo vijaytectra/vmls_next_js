@@ -5,6 +5,16 @@
 
 Options -Indexes
 
+# mod_dir is what breaks a Next export on Apache. /about-vmls maps to the
+# about-vmls/ directory of RSC payloads, so DirectorySlash 301s it to
+# /about-vmls/, which holds no index.html - and no rewrite ordering trick
+# reliably beats it. Turning it off removes the redirect entirely, leaving the
+# rewrite below free to serve about-vmls.html.
+#
+# This applies to the whole document root, so the sibling apps lose the slash
+# redirect they rely on. The first RewriteRule below hands it back to them.
+DirectorySlash Off
+
 # index.php is listed because this .htaccess sits at the document root and is
 # therefore inherited by the sibling apps that share public_html (/exam, /vlat).
 # Those are PHP; without index.php here their directory URLs stop resolving.
@@ -18,7 +28,12 @@ DirectoryIndex index.html index.php
   # rewrite them. Without this, the trailing-slash rule would 301 their
   # virtual routes (/exam/results/ -> /exam/results) and break them.
   # ---------------------------------------------------------------------
-  RewriteRule ^(exam|vlat)(/|$) - [L]
+  # Restore the trailing slash that DirectorySlash Off took away, so /exam
+  # still reaches /exam/ and its DirectoryIndex. This must come first: the
+  # bypass rule below would otherwise end processing before it runs.
+  RewriteRule "^(exam|vlat|vlat-exam|vlat-exam21|wordpress blogs dont touch this)$" "/$1/" [R=301,L]
+
+  RewriteRule "^(exam|vlat|vlat-exam|vlat-exam21|wordpress blogs dont touch this)(/|$)" - [L]
 
   # ---------------------------------------------------------------------
   # Canonical host. Left commented out deliberately: switching these on
@@ -343,15 +358,40 @@ DirectoryIndex index.html index.php
   # Next.js static export: serve /about-vmls from about-vmls.html without
   # showing the extension, and send /about-vmls/ to the clean URL so the
   # two forms do not both resolve.
+  #
+  # Neither rule may test !-d. The export writes about-vmls.html AND an
+  # about-vmls/ directory of RSC payloads, so a !-d test skips exactly the
+  # paths that need rewriting - mod_dir then 301s /about-vmls to
+  # /about-vmls/, finds no index.html there, and serves 403.
+  #
+  # "does $1.html exist" is the correct guard instead, and it has to appear on
+  # the trailing-slash rule too: without it /images/ would be redirected to
+  # /images, which mod_dir would send straight back to /images/, forever.
+  #
+  # mod_rewrite runs before mod_dir, so the internal rewrite below wins and
+  # mod_dir never sees a directory to redirect to.
   # ---------------------------------------------------------------------
-  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteBase /
+
   RewriteCond %{REQUEST_URI} !^/_next/
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.+)/$ /$1 [R=301,L]
 
+  # The substitution below is RELATIVE on purpose. In per-directory context a
+  # substitution beginning with "/" is taken as a filesystem path, so "/$1.html"
+  # looked for /about-vmls.html at the server root, found nothing, and left the
+  # request pointing at the about-vmls/ directory - which mod_dir then 301'd to
+  # about-vmls/, straight into a loop with the rule above.
+  # [END], not [L]. [L] ends only this round: Apache then re-runs the whole
+  # file against the rewritten URI, where "library.html -> /library" above
+  # fires and 301s back to /library, forever. That loop hits exactly the pages
+  # whose legacy rule shares their name - library, blogs, student-affairs -
+  # and leaves ones like about.html -> /about-vmls working, which is what made
+  # it look like a partial failure. [END] stops per-directory reprocessing
+  # outright, so the legacy rules only ever see the original request.
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-  RewriteRule ^(.+?)/?$ /$1.html [L]
+  RewriteRule ^(.+?)/?$ $1.html [END]
 </IfModule>
 
 ErrorDocument 404 /404.html
