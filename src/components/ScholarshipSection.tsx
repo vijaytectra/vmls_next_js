@@ -11,7 +11,6 @@ export default function ScholarshipSection() {
           alt="Scholarships at VMLS"
           fill
           className="object-cover object-right"
-          priority
         />
         {/* Dark Overlay - Heavy on the left, clear on the right */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent lg:via-black/50 md:via-black/70"></div>

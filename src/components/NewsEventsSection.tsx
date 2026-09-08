@@ -51,7 +51,6 @@ export default function NewsEventsSection() {
                   height={1117}
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="w-full h-auto object-cover"
-                  priority
                 />
               </div>
               

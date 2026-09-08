@@ -39,7 +39,6 @@ export default function AboutSection() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="w-full h-auto object-contain"
                 style={{ width: '100%', height: 'auto' }}
-                priority
               />
             </div>
           </div>

@@ -13,7 +13,6 @@ export default function ExecutiveDeanSection() {
               fill
               sizes="(max-width: 1024px) 280px, 320px"
               className="object-cover object-[center_20%]"
-              priority
             />
           </div>
         </div>

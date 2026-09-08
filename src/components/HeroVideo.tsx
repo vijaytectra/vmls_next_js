@@ -113,13 +113,13 @@ export default function HeroVideo() {
         className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover z-0"
       />
 
-      {/* Preloaded so the poster is fetched at highest priority. */}
-      <link
-        rel="preload"
-        as="image"
-        href="/videos/vmls-hero-video-poster.webp"
-        fetchPriority="high"
-      />
+      {/*
+        No manual <link rel="preload"> here. The <Image priority> above already
+        emits one, and it carries the responsive imageSrcSet so a phone fetches
+        the 25 KB variant. A hand-written preload pointed at the original file
+        instead, so mobile downloaded BOTH - 78 KB of extra high-priority
+        bandwidth ahead of first paint.
+      */}
 
       {/* Overlay for better text readability */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/25 z-0" />

@@ -9,7 +9,11 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
-  preload: true,
+  // Not preloaded: the two font files were fetched together ahead of first
+  // paint, 86 KB competing with the CSS on a mobile connection. Inter carries
+  // the body text - including the element that measures as LCP - so it keeps
+  // its preload; the display face loads a moment later and swaps in.
+  preload: false,
 });
 
 const inter = Inter({
