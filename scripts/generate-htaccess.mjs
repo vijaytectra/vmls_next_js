@@ -182,7 +182,10 @@ ErrorDocument 404 /404.html
 # Fingerprinted build assets never change under the same name.
 <IfModule mod_expires.c>
   ExpiresActive On
-  <FilesMatch "\\.(js|css|woff2|webp|png|jpe?g|svg|ico)$">
+  # mp4/webm/pdf were missing, so the 12 MB hero video shipped with no cache
+  # headers at all - the largest single item in PageSpeed's "efficient cache
+  # lifetimes" report.
+  <FilesMatch "\\.(js|css|woff2|woff|ttf|webp|png|jpe?g|gif|svg|ico|mp4|webm|pdf)$">
     ExpiresDefault "access plus 1 year"
   </FilesMatch>
   <FilesMatch "\\.(html|xml|txt)$">
@@ -191,7 +194,10 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 <IfModule mod_headers.c>
-  <FilesMatch "^/_next/static/">
+  # FilesMatch tests the FILE NAME, never a path, so "^/_next/static/" matched
+  # nothing at all. Static assets here are content-hashed or versioned, so
+  # match them by extension instead.
+  <FilesMatch "\\.(js|css|woff2|woff|ttf|webp|png|jpe?g|gif|svg|ico|mp4|webm)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
 </IfModule>

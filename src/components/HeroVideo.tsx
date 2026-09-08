@@ -46,19 +46,33 @@ export default function HeroVideo() {
       });
     };
 
-    const afterLoad = () => {
+    // Wait for the visitor to do something before pulling 12 MB.
+    //
+    // Loading it automatically after `load` put the whole file on the wire for
+    // every desktop visit - a 13 MB page - and swapped the hero image for a
+    // video several seconds in, which is a large late visual change and wrecks
+    // Speed Index. On first scroll or pointer move the video attaches and
+    // plays; a visitor who never interacts simply keeps the poster.
+    const events = ["pointerdown", "pointermove", "keydown", "touchstart", "scroll", "wheel"];
+    let started = false;
+
+    const start = () => {
+      if (started) return;
+      started = true;
+      events.forEach((event) => window.removeEventListener(event, start));
       if (typeof window.requestIdleCallback === "function") {
-        idleId = window.requestIdleCallback(attach, { timeout: 3000 });
+        idleId = window.requestIdleCallback(attach, { timeout: 2000 });
       } else {
-        timeoutId = window.setTimeout(attach, 1200);
+        timeoutId = window.setTimeout(attach, 200);
       }
     };
 
-    if (document.readyState === "complete") afterLoad();
-    else window.addEventListener("load", afterLoad, { once: true });
+    events.forEach((event) =>
+      window.addEventListener(event, start, { passive: true, once: true })
+    );
 
     return () => {
-      window.removeEventListener("load", afterLoad);
+      events.forEach((event) => window.removeEventListener(event, start));
       if (idleId !== undefined && typeof window.cancelIdleCallback === "function") {
         window.cancelIdleCallback(idleId);
       }

@@ -121,7 +121,10 @@ html {
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
-  animation: vertical-btn-glow 2.4s ease-in-out infinite;
+  /* No permanent animation: these tabs sit in the first viewport, and a
+     never-ending glow means the frames never settle, which is what held
+     Speed Index at 5.4s on desktop and 8.8s on mobile. The effect now runs
+     on hover only. */
   transition:
     transform 0.25s ease,
     filter 0.25s ease;
@@ -139,7 +142,10 @@ html {
     transparent 100%
   );
   pointer-events: none;
-  animation: vertical-btn-shimmer 2.8s ease-in-out infinite;
+  /* Animating a gradient cannot be composited, so every frame repainted.
+     Hover only, for the same reason as the glow above. */
+  opacity: 0;
+  transition: opacity 0.25s ease;
 }
 
 @media (hover: hover) {
@@ -1039,4 +1045,17 @@ main > section:nth-of-type(n+3),
 main > div > section:nth-of-type(n+3) {
   content-visibility: auto;
   contain-intrinsic-size: 0 900px;
+}
+
+
+/* Motion on the edge tabs is now opt-in: it starts when a pointer is over
+   them, and never for visitors who ask for reduced motion. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .vertical-edge-btn:hover {
+    animation: vertical-btn-glow 2.4s ease-in-out infinite;
+  }
+  .vertical-edge-btn:hover::after {
+    opacity: 1;
+    animation: vertical-btn-shimmer 2.8s ease-in-out infinite;
+  }
 }
