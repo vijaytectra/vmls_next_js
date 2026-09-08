@@ -183,5 +183,150 @@ export const MANUAL_REDIRECTS: Redirect[] = [
     "source": "/news/students-secures-award-at-international-conference-on-women-and-ai.html",
     "destination": "/news/women-and-ai-conference",
     "permanent": true
+  },
+  {
+    "source": "/achievements.html",
+    "destination": "/faculty-achievements",
+    "permanent": true
+  },
+  {
+    "source": "/career-services-and-placement.html",
+    "destination": "/internship-and-career-services",
+    "permanent": true
+  },
+  {
+    "source": "/chat-with-a-student.html",
+    "destination": "/chat-with-student",
+    "permanent": true
+  },
+  {
+    "source": "/Collaborations.html",
+    "destination": "/collaborations",
+    "permanent": true
+  },
+  {
+    "source": "/news-and-events.html",
+    "destination": "/news",
+    "permanent": true
+  },
+  {
+    "source": "/governance-policy.html",
+    "destination": "/about-vmls",
+    "permanent": true
+  },
+  {
+    "source": "/legal-literacy-camp.html",
+    "destination": "/centre-for-access-to-justice",
+    "permanent": true
+  },
+  {
+    "source": "/professional-development-program.html",
+    "destination": "/iqac/workshops/pdp",
+    "permanent": true
+  },
+  {
+    "source": "/workshops-and-seminars.html",
+    "destination": "/iqac/workshops",
+    "permanent": true
+  },
+  {
+    "source": "/report-on-workshop.html",
+    "destination": "/iqac/workshops",
+    "permanent": true
+  },
+  {
+    "source": "/Justice-P.Kalaiyarasan.html",
+    "destination": "/board-of-advisors/justice-p-kalaiyarasan",
+    "permanent": true
+  },
+  {
+    "source": "/Mr.Abhijit-Mukhopadhyay.html",
+    "destination": "/board-of-advisors/mr-abhijit-mukhopadhyay",
+    "permanent": true
+  },
+  {
+    "source": "/Mr.Promod-Nair.html",
+    "destination": "/board-of-advisors/mr-promod-nair",
+    "permanent": true
+  },
+  {
+    "source": "/Padma-Sri-Dr.T.K.Viswanathan.html",
+    "destination": "/board-of-advisors/padma-sri-dr-tk-viswanathan",
+    "permanent": true
+  },
+  {
+    "source": "/Prof.Dr.Chockalingam.html",
+    "destination": "/board-of-advisors/prof-dr-chockalingam",
+    "permanent": true
+  },
+  {
+    "source": "/Mr.Sachinkumar.html",
+    "destination": "/faculty/sachinkumar-p-p",
+    "permanent": true
+  },
+  {
+    "source": "/full-time-phd-law-interdisciplinary-studies.html",
+    "destination": "/blogs/full-time-phd-in-law-and-interdisciplinary-studies",
+    "permanent": true
+  },
+  {
+    "source": "/part-time-phd-law-interdisciplinary-studies.html",
+    "destination": "/blogs/part-time-phd-in-law-and-interdisciplinary-studies",
+    "permanent": true
+  },
+  {
+    "source": "/vmrf-law-aptitude-test-vlat.html",
+    "destination": "/blogs/vmrf-law-aptitude-test-vlat",
+    "permanent": true
+  },
+  {
+    "source": "/vinayaka-missions-law-admission-test-VLAT.html",
+    "destination": "/blogs/vmrf-law-admission-test-vlat",
+    "permanent": true
+  },
+  {
+    "source": "/Dr.AnanthPadmanabhan.html",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
+    "source": "/Prof.Dr.Ananth-Padmanabhan.html",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
+    "source": "/jharna-jagtiani.html",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
+    "source": "/josna-m.html",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
+    "source": "/Ms.Shambhavi-Thakur.html",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
+    "source": "/najeed-naved-siddiqui.html",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
+    "source": "/blog/",
+    "destination": "/blogs",
+    "permanent": true
+  },
+  {
+    "source": "/faculty/",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
+    "source": "/help/",
+    "destination": "/anti-ragging",
+    "permanent": true
   }
 ];

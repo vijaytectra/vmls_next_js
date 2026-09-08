@@ -28,13 +28,21 @@ const SIBLING_APPS = [
 
 /* ------------------------------------------------------------- redirects */
 
-const redirectsSrc = fs.readFileSync("src/data/redirects.ts", "utf8");
-const rules = JSON.parse(
-  redirectsSrc.slice(
-    redirectsSrc.indexOf("= [", redirectsSrc.indexOf("export const REDIRECTS")) + 2,
-    redirectsSrc.lastIndexOf("]") + 1
-  )
-);
+/** Pull the array literal out of one of the generated redirect modules. */
+const readRedirects = (file, name) => {
+  const src = fs.readFileSync(file, "utf8");
+  return JSON.parse(src.slice(src.indexOf("= [", src.indexOf(name)) + 2, src.lastIndexOf("]") + 1));
+};
+
+// redirects.ts is rebuilt by generate-redirects.mjs, which needs a crawl of the
+// old site that is not in the repo. So read the hand-maintained file directly
+// too, rather than leaving new rules stranded until someone can run that.
+// Manual entries come first and win: a later duplicate source is dropped.
+const seenSource = new Set();
+const rules = [
+  ...readRedirects("src/data/redirects.manual.ts", "MANUAL_REDIRECTS"),
+  ...readRedirects("src/data/redirects.ts", "export const REDIRECTS"),
+].filter((r) => !seenSource.has(r.source) && seenSource.add(r.source));
 
 // The middleware's rules, kept in the parked file so they stay in one place.
 const legacySrc = fs.readFileSync("scripts/legacy-asset-redirects.ts.bak", "utf8");
