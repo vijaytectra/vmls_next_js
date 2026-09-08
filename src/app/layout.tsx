@@ -9,11 +9,15 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
-  // Not preloaded: the two font files were fetched together ahead of first
-  // paint, 86 KB competing with the CSS on a mobile connection. Inter carries
-  // the body text - including the element that measures as LCP - so it keeps
-  // its preload; the display face loads a moment later and swaps in.
-  preload: false,
+  // Preloaded, despite the bandwidth cost, because the hero <h1> and <h2> are
+  // both set in this face and fill the mobile viewport. Without the preload
+  // they paint in the fallback serif and re-paint when Playfair arrives - a
+  // large late change to the biggest text on screen, which is exactly what
+  // Speed Index measures. Turning this off took mobile SI from 8.8s to 12.0s.
+  //
+  // Only the latin subset is preloaded (~21 KB), not the 86 KB I once
+  // attributed to it - that figure was Inter and Playfair counted together.
+  preload: true,
 });
 
 const inter = Inter({

@@ -657,23 +657,11 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     1400,
     787
   ],
-  "/images/faculty/live/DSC00647_35.webp": [
-    1400,
-    787
-  ],
   "/images/faculty/live/DSC00648_14.webp": [
     1400,
     787
   ],
-  "/images/faculty/live/DSC00665_20.webp": [
-    1400,
-    787
-  ],
   "/images/faculty/live/DSC00674_9.webp": [
-    1400,
-    787
-  ],
-  "/images/faculty/live/DSC00677_31.webp": [
     1400,
     787
   ],
@@ -697,6 +685,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     1400,
     787
   ],
+  "/images/faculty/live/alisha-verma.webp": [
+    1101,
+    1200
+  ],
   "/images/faculty/live/hartej.webp": [
     500,
     500
@@ -716,6 +708,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
   "/images/faculty/live/r-sneha-live.jpeg": [
     676,
     861
+  ],
+  "/images/faculty/live/shubham-shukla.webp": [
+    1191,
+    1200
   ],
   "/images/foodc1.webp": [
     380,

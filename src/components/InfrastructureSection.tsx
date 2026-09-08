@@ -10,13 +10,24 @@ export default function InfrastructureSection() {
   useEffect(() => {
     // These eight tiles used to autoplay on page load, pulling tens of
     // megabytes before the visitor had scrolled anywhere near them. Each one
-    // now shows its poster until it actually enters the viewport, and only
-    // then is the source attached and played.
+    // now waits until it actually enters the viewport before its still and
+    // its source are attached.
+    //
+    // The still is held in data-poster rather than poster for the same reason.
+    // There is no lazy variant of the poster attribute - Chrome fetches every
+    // poster on the page immediately, at a higher priority than a lazy <img>.
+    // With eight of them that was ~180 KB of below-the-fold artwork racing the
+    // hero for a throttled mobile connection, and it was the reason first paint
+    // landed ~2s after the stylesheet and fonts had already arrived.
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue;
           const video = entry.target as HTMLVideoElement;
+          const poster = video.dataset.poster;
+          if (poster && !video.getAttribute("poster")) {
+            video.setAttribute("poster", poster);
+          }
           const source = video.querySelector("source");
           if (source && !source.getAttribute("src")) {
             source.setAttribute("src", source.dataset.src ?? "");
@@ -28,7 +39,10 @@ export default function InfrastructureSection() {
           observer.unobserve(video);
         }
       },
-      { rootMargin: "200px" }
+      // Wide enough that a still is decoded before the tile is actually
+      // looked at. The section sits several thousand pixels down, so this is
+      // still nowhere near the viewport during the initial paint.
+      { rootMargin: "600px" }
     );
 
     videoRefs.current.forEach((video) => video && observer.observe(video));
@@ -57,7 +71,10 @@ export default function InfrastructureSection() {
                 muted
                 playsInline
                 preload="none"
-                poster={item.image}
+                // Attached by the observer above. See the note there: a real
+                // poster attribute is fetched eagerly no matter where the
+                // element sits on the page.
+                data-poster={item.image}
                 className="absolute inset-0 w-full h-full object-cover scale-[1.01] transition-transform duration-700 group-hover:scale-105"
               >
                 {/* src is attached by the observer above, once in view */}

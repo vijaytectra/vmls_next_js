@@ -398,19 +398,6 @@ const facultyData: FacultyData[] = [
     ]
   },
   {
-    name: "Dr. Jacob Joseph",
-    role: "Professor of Law",
-    qualifications: "Ph.D. in Environmental Law from School of Legal Studies, Cochin University of Science and Technology, Kochi",
-    image: "/images/faculty/live/DSC00677_31.webp",
-    slug: "jacob-joseph",
-    email: "jacobjoseph@vmls.edu.in",
-    bio: [
-      "Dr. Jacob Joseph is a Professor of Law at Vinayaka Mission's Law School. He holds an LL.M. from the School of Legal Studies, Cochin University of Science and Technology, with dual specialisations in Criminal Law and Human Rights Law, and a Ph.D. in Environmental Law from the same university. With over two decades of experience in legal academia, Dr. Joseph has made significant contributions to teaching, research, and institutional development. He began his academic career at the West Bengal National University of Juridical Sciences (WBNUJS), Kolkata, and was subsequently part of the founding faculty at the National University of Advanced Legal Studies (NUALS), Kochi, where he played a key role in shaping the institution in its formative years.",
-      "Dr. Jacob Joseph has also served as Professor of Law and Associate Dean - Post Graduate Studies (Academics) at Saveetha School of Law, SIMATS (Deemed to be University), Chennai and also as the Head of the Post Graduate Studies and Research Department of Bharata Mata School of Legal Studies (BSOLS), Aluva, Kerala. Dr Jacob has delivered lectures as a visiting academic in various institutions, including a brief stint at the Australian National Centre for Ocean Resources and Security, University of Wollongong. An innovator in curriculum design, he has designed and introduced courses on fisheries law, food law and policy as well as national security and counter-terrorism laws. His research includes significant publications in fisheries law, environmental law, and criminal law, including the widely acclaimed book Select Legal and Policy Instruments on Marine Fisheries Conservation and Management.",
-      "Dr. Jacob has advised international organisations, government agencies and statutory authorities, including United Nations Office on Drugs and Crime (UNODC), the Kerala State Planning Board, and the Commissionerate of Food Safety, Kerala. He has contributed to legal and policy reforms through consultancy reports and submissions, notably to the Joint Parliamentary Committee on Biological Diversity (Amendment) Bill, 2021. His work spans capacity-building initiatives for government officials, law enforcement personnel, judicial officers, and policymakers. Dr. Joseph is deeply committed to advancing inclusivity and academic excellence, with a strong emphasis on equitable learning environments, intellectual rigour, and professional competence aligned with VMLS's vision."
-    ]
-  },
-  {
     name: "Abraham.S",
     role: "Assistant Professor",
     qualifications: "LL.M, School of excellence in law, Tamil Nadu Dr. Ambedkar Law University",

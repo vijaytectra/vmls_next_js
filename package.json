@@ -11,7 +11,9 @@
     "seo:check": "node scripts/check-lengths.mjs && node scripts/check-og-images.mjs && node scripts/check-blog-links.mjs",
     "seo:audit": "node scripts/seo-audit.mjs && node scripts/verify-redirects.mjs && node scripts/check-internal-links.mjs",
     "seo:redirects": "node scripts/generate-redirects.mjs",
-    "seo:links": "node scripts/add-internal-links.mjs"
+    "seo:links": "node scripts/add-internal-links.mjs",
+    "deploy:pack": "next build && node scripts/pack-delta.mjs",
+    "deploy:done": "node scripts/pack-delta.mjs --commit"
   },
   "dependencies": {
     "lucide-react": "^1.14.0",

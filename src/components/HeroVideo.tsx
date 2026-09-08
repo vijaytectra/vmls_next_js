@@ -184,10 +184,17 @@ export default function HeroVideo() {
           </div>
         </div>
 
-        {/* Mobile mentorship */}
+        {/* Mobile mentorship
+            loading="eager" rather than priority: on a 412x823 phone the hero
+            is 700px tall, so this bar is above the fold and lazy-loading left
+            three logos painting late in the measured viewport. `priority`
+            would fix that too, but it also emits <link rel=preload
+            fetchPriority=high>, which competes with the hero poster that is
+            the LCP element. Eager loads them at normal priority instead. */}
         <div className="md:hidden flex flex-col items-center gap-3 w-full">
           <div className="flex items-center justify-center gap-4">
             <Image
+              loading="eager"
               src="/images/opjindal.webp"
               alt="O.P. Jindal Global University"
               width={160}
@@ -195,6 +202,7 @@ export default function HeroVideo() {
               className="w-36 h-auto object-contain"
             />
             <Image
+              loading="eager"
               src="/images/jindal-global.webp"
               alt="Jindal Global Law School"
               width={56}
@@ -207,6 +215,7 @@ export default function HeroVideo() {
             (an Institution of Eminence) and Jindal Global Law School under an institutional mentorship agreement.
           </p>
           <Image
+              loading="eager"
             src="/images/approved.webp"
             alt="UGC and BCI Approved"
             width={180}

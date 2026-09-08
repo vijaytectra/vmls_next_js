@@ -50,6 +50,16 @@ export const MANUAL_REDIRECTS: Redirect[] = [
     "permanent": true
   },
   {
+    "source": "/faculty/jacob-joseph",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
+    "source": "/dr-jacob-joseph.html",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
     "source": "/blogs/full-time-phd-in-law-and-interdisciplinary-studies.html",
     "destination": "/blogs/full-time-phd-in-law-and-interdisciplinary-studies",
     "permanent": true

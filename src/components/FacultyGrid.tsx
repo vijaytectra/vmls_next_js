@@ -235,13 +235,6 @@ const facultyData: FacultyMember[] = [
     href: "/faculty/aamir-ali",
   },
   {
-    name: "Dr. Jacob Joseph",
-    role: "Professor of Law",
-    qualifications: "Ph.D. in Environmental Law from School of Legal Studies, Cochin University of Science and Technology, Kochi",
-    image: "/images/faculty/live/DSC00677_31.webp",
-    href: "/faculty/jacob-joseph",
-  },
-  {
     name: "Abraham.S",
     role: "Assistant Professor",
     qualifications: "LL.M, School of Excellence in Law, Tamil Nadu Dr. Ambedkar Law University",

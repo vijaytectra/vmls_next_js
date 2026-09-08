@@ -293,12 +293,28 @@ export default function FloatingActions() {
         });
       });
     };
-    const ambassadorObserver = new MutationObserver(polishAmbassador);
+    // polishAmbassador walks every <div> in the body and interleaves
+    // getComputedStyle reads with inline-style writes, so each run costs a
+    // synchronous layout. Fired straight off a subtree MutationObserver it ran
+    // once per inserted node while the third-party widgets built themselves
+    // out - which is where PageSpeed's "Forced reflow" and the long main-thread
+    // tasks came from. Coalescing to one pass per frame keeps the same result
+    // and collapses a burst of mutations into a single layout.
+    let polishScheduled = 0;
+    const schedulePolish = () => {
+      if (polishScheduled) return;
+      polishScheduled = window.requestAnimationFrame(() => {
+        polishScheduled = 0;
+        polishAmbassador();
+      });
+    };
+
+    const ambassadorObserver = new MutationObserver(schedulePolish);
     ambassadorObserver.observe(document.body, { childList: true, subtree: true });
     const ambassadorTimers = [500, 1500, 3000, 6000, 10000].map((ms) =>
-      window.setTimeout(polishAmbassador, ms)
+      window.setTimeout(schedulePolish, ms)
     );
-    window.addEventListener("resize", polishAmbassador);
+    window.addEventListener("resize", schedulePolish);
 
     return () => {
       appended.forEach((el) => {
@@ -312,7 +328,8 @@ export default function FloatingActions() {
       });
       ambassadorObserver.disconnect();
       ambassadorTimers.forEach((id) => window.clearTimeout(id));
-      window.removeEventListener("resize", polishAmbassador);
+      if (polishScheduled) window.cancelAnimationFrame(polishScheduled);
+      window.removeEventListener("resize", schedulePolish);
       enquireNodes().forEach((el) => {
         el.removeEventListener("pointerdown", onEnquireIntent);
         el.removeEventListener("focus", onEnquireIntent);

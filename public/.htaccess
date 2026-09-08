@@ -46,7 +46,7 @@ DirectoryIndex index.html index.php
   # RewriteRule ^(.*)$ https://vmls.edu.in/$1 [R=301,L]
 
   # ---------------------------------------------------------------------
-  # 301s from the previous static site. 333 rules.
+  # 301s from the previous static site. 334 rules.
   # These must stay ABOVE the extensionless-URL rewrite below.
   # ---------------------------------------------------------------------
   RewriteRule "^faculty$" "/faculty-profiles" [R=301,L,NE]
@@ -58,6 +58,8 @@ DirectoryIndex index.html index.php
   RewriteRule "^faculty/s-suganya$" "/faculty-profiles" [R=301,L,NE]
   RewriteRule "^faculty/tathagat-sharma$" "/faculty-profiles" [R=301,L,NE]
   RewriteRule "^faculty/kiran-jenifer$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^faculty/jacob-joseph$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^dr-jacob-joseph\.html$" "/faculty-profiles" [R=301,L,NE]
   RewriteRule "^blogs/full-time-phd-in-law-and-interdisciplinary-studies\.html$" "/blogs/full-time-phd-in-law-and-interdisciplinary-studies" [R=301,L,NE]
   RewriteRule "^blogs/part-time-phd-in-law-and-interdisciplinary-studies\.html$" "/blogs/part-time-phd-in-law-and-interdisciplinary-studies" [R=301,L,NE]
   RewriteRule "^blogs/clat-2026-exam-dates-eligibility-syllabus-and-admission\.html$" "/blogs/clat-2026-exam-dates-eligibility-syllabus-and-admission" [R=301,L,NE]
@@ -258,7 +260,6 @@ DirectoryIndex index.html index.php
   RewriteRule "^dr-anuttama-ghose\.html$" "/faculty/anuttama-ghose" [R=301,L,NE]
   RewriteRule "^dr-arun-d-raj\.html$" "/faculty/arun-d-raj" [R=301,L,NE]
   RewriteRule "^dr-gaurav-shukla\.html$" "/faculty/gaurav-shukla" [R=301,L,NE]
-  RewriteRule "^dr-jacob-joseph\.html$" "/faculty/jacob-joseph" [R=301,L,NE]
   RewriteRule "^dr-muthuvelu\.html$" "/faculty/muthuvelu" [R=301,L,NE]
   RewriteRule "^dr-s-suganya\.html$" "/faculty-profiles" [R=301,L,NE]
   RewriteRule "^dr-shabin-os\.html$" "/faculty/shabin-o-s" [R=301,L,NE]

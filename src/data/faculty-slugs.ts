@@ -30,7 +30,6 @@ export const facultySlugs: string[] = [
   "kush-tanvani",
   "akshara-nair",
   "stalin-harikaran-n",
-  "jacob-joseph",
   "abraham-s",
   "shabin-o-s",
   "yazhini-a",
