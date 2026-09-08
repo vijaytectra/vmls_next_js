@@ -112,7 +112,7 @@ const facultyData: FacultyMember[] = [
     name: "Shubham Shukla",
     role: "Assistant Dean PG Academics",
     qualifications: "LL.M. (Corporate and Commercial Laws) Maharashtra National Law University, Mumbai",
-    image: "/images/faculty/live/DSC00665_20.webp",
+    image: "/images/faculty/live/shubham-shukla.webp",
     href: "/faculty/shubham-shukla",
   },
   {
@@ -133,7 +133,7 @@ const facultyData: FacultyMember[] = [
     name: "Dr. Alisha Verma",
     role: "Associate Professor",
     qualifications: "Ph.D. from Amity University, Rajasthan",
-    image: "/images/faculty/live/DSC00647_35.webp",
+    image: "/images/faculty/live/alisha-verma.webp",
     href: "/faculty/alisha-verma",
   },
   {

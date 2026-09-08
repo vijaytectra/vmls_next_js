@@ -195,7 +195,7 @@ const facultyData: FacultyData[] = [
     name: "Shubham Shukla",
     role: "Assistant Dean PG Academics",
     qualifications: "LL.M. (Corporate and Commercial Laws) Maharashtra National Law University, Mumbai",
-    image: "/images/faculty/live/DSC00665_20.webp",
+    image: "/images/faculty/live/shubham-shukla.webp",
     slug: "shubham-shukla",
     email: "shubhamshukla@vmls.edu.in",
     bio: [
@@ -232,7 +232,7 @@ const facultyData: FacultyData[] = [
     name: "Dr. Alisha Verma",
     role: "Associate Professor",
     qualifications: "Ph.D. from Amity University, Rajasthan",
-    image: "/images/faculty/live/DSC00647_35.webp",
+    image: "/images/faculty/live/alisha-verma.webp",
     slug: "alisha-verma",
     email: "alishaverma@vmls.edu.in",
     bio: [
