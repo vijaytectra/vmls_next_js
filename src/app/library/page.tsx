@@ -213,7 +213,7 @@ export default function LibraryPage() {
                         { name: 'Manupatra', url: 'https://www.manupatrafast.com/Home.aspx' },
                         { name: 'LexisNexis', url: 'https://advance.lexis.com/in?identityprofileid=GFH88P68016' },
                       ].map((db) => (
-                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                           <span className="relative z-10">{db.name}</span>
                           <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                         </Link>
@@ -231,7 +231,7 @@ export default function LibraryPage() {
                         { name: 'Web of Science', url: 'https://www.webofscience.com/' },
                         { name: 'JSTOR', url: 'https://www.jstor.org/' },
                       ].map((db) => (
-                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                           <span className="relative z-10">{db.name}</span>
                           <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                         </Link>
@@ -884,7 +884,7 @@ export default function LibraryPage() {
                           { name: 'Manupatra', url: 'https://www.manupatrafast.com/Home.aspx' },
                           { name: 'LexisNexis', url: 'https://advance.lexis.com/in?identityprofileid=GFH88P68016' },
                         ].map((db) => (
-                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                             <span className="relative z-10">{db.name}</span>
                             <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                           </Link>
@@ -902,7 +902,7 @@ export default function LibraryPage() {
                           { name: 'Web of Science', url: 'https://www.webofscience.com/' },
                           { name: 'JSTOR', url: 'https://www.jstor.org/' },
                         ].map((db) => (
-                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                             <span className="relative z-10">{db.name}</span>
                             <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                           </Link>
@@ -1085,7 +1085,7 @@ export default function LibraryPage() {
                           { name: 'Manupatra', url: 'https://www.manupatrafast.com/Home.aspx' },
                           { name: 'LexisNexis', url: 'https://advance.lexis.com/in?identityprofileid=GFH88P68016' },
                         ].map((db) => (
-                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                             <span className="relative z-10">{db.name}</span>
                             <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                           </Link>
@@ -1103,7 +1103,7 @@ export default function LibraryPage() {
                           { name: 'Web of Science', url: 'https://www.webofscience.com/' },
                           { name: 'JSTOR', url: 'https://www.jstor.org/' },
                         ].map((db) => (
-                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[10px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                             <span className="relative z-10">{db.name}</span>
                             <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                           </Link>

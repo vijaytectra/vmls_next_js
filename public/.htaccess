@@ -408,59 +408,6 @@ DirectoryIndex index.html index.php
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.+)/$ /$1 [R=301,L]
 
-  # ---- Pre-compressed responses ---------------------------------------
-  # This host compresses application/javascript on the fly and hands Chrome
-  # *identity* for text/html, text/css and the RSC .txt payloads. That is not
-  # a guess: Chrome's DevTools log shows every request carrying
-  # "Accept-Encoding: gzip, deflate, br, zstd" and only the .js responses
-  # coming back with a Content-Encoding. The homepage therefore arrived as
-  # 201 KB instead of 29 KB and its stylesheet as 143 KB instead of 22 KB -
-  # 373 KiB of avoidable transfer, on a server that is still HTTP/1.1.
-  #
-  # curl gets gzip for the same URLs, so the fault is not reproducible from
-  # the shell and re-declaring AddOutputFilterByType does not fix it. Instead
-  # the build ships .br and .gz twins (scripts/precompress.mjs) and we serve
-  # those bytes directly, asking the server to compress nothing.
-  #
-  # Every rule requires the twin to exist on disk, so a missing, stale or
-  # never-uploaded twin falls through to the plain file and the site behaves
-  # exactly as it does today. These sit BEFORE the extensionless .html mapping
-  # because that rule ends with [END] - once it fires, nothing after it runs.
-
-  # An asset that exists as requested: /_next/.../main.css -> main.css.br
-  RewriteCond %{HTTP:Accept-Encoding} (^|,) *br( *[,;]|$)
-  RewriteCond %{REQUEST_FILENAME} -f
-  RewriteCond %{REQUEST_FILENAME}.br -f
-  RewriteRule ^(.+)$ $1.br [QSA,END]
-
-  RewriteCond %{HTTP:Accept-Encoding} (^|,) *gzip( *[,;]|$)
-  RewriteCond %{REQUEST_FILENAME} -f
-  RewriteCond %{REQUEST_FILENAME}.gz -f
-  RewriteRule ^(.+)$ $1.gz [QSA,END]
-
-  # The homepage, which arrives as "" after DirectoryIndex.
-  RewriteCond %{HTTP:Accept-Encoding} (^|,) *br( *[,;]|$)
-  RewriteCond %{DOCUMENT_ROOT}/index.html.br -f
-  RewriteRule ^$ index.html.br [QSA,END]
-
-  RewriteCond %{HTTP:Accept-Encoding} (^|,) *gzip( *[,;]|$)
-  RewriteCond %{DOCUMENT_ROOT}/index.html.gz -f
-  RewriteRule ^$ index.html.gz [QSA,END]
-
-  # An extensionless route: /about-vmls -> about-vmls.html.br
-  RewriteCond %{HTTP:Accept-Encoding} (^|,) *br( *[,;]|$)
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{DOCUMENT_ROOT}/$1.html.br -f
-  RewriteRule ^(.+?)/?$ $1.html.br [QSA,END]
-
-  RewriteCond %{HTTP:Accept-Encoding} (^|,) *gzip( *[,;]|$)
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{DOCUMENT_ROOT}/$1.html.gz -f
-  RewriteRule ^(.+?)/?$ $1.html.gz [QSA,END]
-
-  # The plain mapping, for clients that accept no encoding and for any page
-  # whose twins are not on the server yet.
-  #
   # The substitution below is RELATIVE on purpose. In per-directory context a
   # substitution beginning with "/" is taken as a filesystem path, so "/$1.html"
   # looked for /about-vmls.html at the server root, found nothing, and left the
@@ -486,76 +433,46 @@ ErrorDocument 404 /404.html
   # mp4/webm/pdf were missing, so the 12 MB hero video shipped with no cache
   # headers at all - the largest single item in PageSpeed's "efficient cache
   # lifetimes" report.
-  # The (\.(br|gz))? suffix matters: after the rewrites above the file Apache
-  # actually serves is main.css.br, and FilesMatch tests that name. Without it
-  # every pre-compressed response shipped with no caching at all.
-  <FilesMatch "\.(js|css|woff2|woff|ttf|webp|png|jpe?g|gif|svg|ico|mp4|webm|pdf)(\.(br|gz))?$">
+  <FilesMatch "\.(js|css|woff2|woff|ttf|webp|png|jpe?g|gif|svg|ico|mp4|webm|pdf)$">
     ExpiresDefault "access plus 1 year"
   </FilesMatch>
-  <FilesMatch "\.(html|xml|txt)(\.(br|gz))?$">
+  <FilesMatch "\.(html|xml|txt)$">
     ExpiresDefault "access plus 1 hour"
   </FilesMatch>
 </IfModule>
-
-# ---- Typing and labelling the pre-compressed twins ---------------------
-# A .br/.gz twin is served under its own filename, so without this Apache
-# would type main.css.br by its last extension and the browser would download
-# a file instead of applying a stylesheet.
-<IfModule mod_mime.c>
-  # Stop mod_mime reading ".gz" as "this is a gzip archive"; the encoding is
-  # declared explicitly below instead.
-  RemoveType .gz .br
-</IfModule>
-
-<FilesMatch "\.html\.(br|gz)$">
-  ForceType text/html
-</FilesMatch>
-<FilesMatch "\.css\.(br|gz)$">
-  ForceType text/css
-</FilesMatch>
-<FilesMatch "\.js\.(br|gz)$">
-  ForceType application/javascript
-</FilesMatch>
-<FilesMatch "\.txt\.(br|gz)$">
-  ForceType text/plain
-</FilesMatch>
-<FilesMatch "\.json\.(br|gz)$">
-  ForceType application/json
-</FilesMatch>
-<FilesMatch "\.xml\.(br|gz)$">
-  ForceType application/xml
-</FilesMatch>
-<FilesMatch "\.svg\.(br|gz)$">
-  ForceType image/svg+xml
-</FilesMatch>
 
 <IfModule mod_headers.c>
   # FilesMatch tests the FILE NAME, never a path, so "^/_next/static/" matched
   # nothing at all. Static assets here are content-hashed or versioned, so
   # match them by extension instead.
-  <FilesMatch "\.(js|css|woff2|woff|ttf|webp|png|jpe?g|gif|svg|ico|mp4|webm)(\.(br|gz))?$">
+  <FilesMatch "\.(js|css|woff2|woff|ttf|webp|png|jpe?g|gif|svg|ico|mp4|webm)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
-  </FilesMatch>
-
-  <FilesMatch "\.br$">
-    Header set Content-Encoding br
-    # Overwrites the "Accept-Encoding,User-Agent" the host adds by itself.
-    # Varying on User-Agent splits every cache - browser, proxy, CDN - into a
-    # separate entry per UA string, for a response that only ever differs by
-    # encoding.
-    Header set Vary Accept-Encoding
-  </FilesMatch>
-  <FilesMatch "\.gz$">
-    Header set Content-Encoding gzip
-    Header set Vary Accept-Encoding
   </FilesMatch>
 </IfModule>
 
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json application/xml image/svg+xml
-  # Never compress a body that is already compressed - doing so would produce
-  # gzip-wrapped brotli and an unreadable response.
-  <FilesMatch "\.(br|gz)$">
-    SetEnv no-gzip 1
+  # The host compresses application/javascript on the fly but hands Chrome
+  # *identity* for text/html, text/css and the RSC .txt payloads. PageSpeed
+  # measured a 202 KB document and a 144 KB stylesheet against this server,
+  # and that stylesheet alone blocks rendering for 1.2s - it is most of the
+  # gap between LCP 5.5s and a passing score.
+  #
+  # curl gets gzip for the same URLs, so the fault is invisible from the
+  # shell. It is real: Chrome's own DevTools log shows every request carrying
+  # "Accept-Encoding: gzip, deflate, br, zstd" and only .js coming back with a
+  # Content-Encoding.
+  #
+  # AddOutputFilterByType picks the filter by response content-type, and for
+  # these responses it is evidently not matching. SetOutputFilter picks by
+  # FILENAME and skips that negotiation entirely. Extensionless routes are
+  # internally rewritten to .html before the file is chosen, so /about-vmls is
+  # matched here as about-vmls.html.
+  #
+  # The two lists are deliberately disjoint. If a file could be selected by
+  # both mechanisms it would be gzipped twice and arrive undecodable.
+  AddOutputFilterByType DEFLATE application/javascript application/json application/xml image/svg+xml
+
+  <FilesMatch "\.(html|css|txt)$">
+    SetOutputFilter DEFLATE
   </FilesMatch>
 </IfModule>
