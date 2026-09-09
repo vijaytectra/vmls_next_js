@@ -3,21 +3,19 @@
 import { useEffect } from "react";
 
 /**
- * Loads Google Tag Manager and the NoPaperForms enquiry widget on the first
- * sign of a real visitor, instead of during page load.
+ * Loads the NoPaperForms enquiry widget on the first sign of a real visitor,
+ * instead of during page load.
  *
- * Both set third-party cookies and together cost roughly five seconds of main
- * thread time on a throttled phone, which caps Lighthouse Best Practices in
- * the mid-70s and drags Performance down with it. Loading them on the first
- * interaction - or after a short idle fallback, so visitors who never scroll
- * are still counted - keeps the initial page clean without dropping either
- * tool.
+ * The widget sets third-party cookies and costs meaningful main-thread time
+ * on a throttled phone, so it is held back until the visitor scrolls, taps
+ * or presses a key. Google Tag Manager used to be deferred here too, but is
+ * now loaded inline from <head> in the root layout so that
+ * bounce-without-interaction sessions are counted in GA.
  *
- * Trade-off to be aware of: a session that leaves before any interaction and
- * before the fallback fires is not recorded in GA.
+ * Trade-off to be aware of: a session that leaves before any interaction is
+ * never shown the enquiry widget.
  */
 
-const GTM_ID = "GTM-TDRKCK4P";
 const NPF = {
   domain: "https://admissions.vmls.edu.in",
   code: "5747",
@@ -25,33 +23,12 @@ const NPF = {
   script: "https://widgets.in8.nopaperforms.com/emwgts.js",
 };
 
-/**
- * Interaction only - there is deliberately no timer.
- *
- * A visitor who reads the page and leaves without scrolling, tapping or
- * pressing a key is therefore never recorded in GA and never sees the enquiry
- * widget. That is a known and accepted cost of keeping the initial page free
- * of third-party cookies and script execution.
- */
-
 declare global {
   interface Window {
-    dataLayer?: unknown[];
     npf_d?: string;
     npf_c?: string;
     npf_m?: string;
   }
-}
-
-function loadGtm() {
-  if (document.getElementById("gtm-script")) return;
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
-  const script = document.createElement("script");
-  script.id = "gtm-script";
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
-  document.head.appendChild(script);
 }
 
 function loadEnquiryWidget() {
@@ -75,7 +52,6 @@ export default function DeferredThirdParty() {
       if (done) return;
       done = true;
       events.forEach((event) => window.removeEventListener(event, start));
-      loadGtm();
       loadEnquiryWidget();
     };
 

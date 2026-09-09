@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
@@ -79,12 +80,26 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
-      {/*
-        Google Tag Manager and the NoPaperForms widget are no longer loaded
-        here. Both set third-party cookies and cost roughly five seconds of
-        main-thread time on a throttled phone, so <DeferredThirdParty /> at the
-        end of <body> loads them on the visitor's first interaction instead.
-      */}
+      <head>
+        {/*
+          Google Tag Manager - loaded inline in <head>, before any other
+          third-party script, so bounce-without-interaction sessions are
+          captured in GA. Trade-off: adds main-thread cost on cold load; the
+          deliberate deferral that used to live in <DeferredThirdParty /> has
+          been removed in favour of complete analytics coverage.
+        */}
+        <Script
+          id="gtm-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`,
+          }}
+        />
+      </head>
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         {/* Google Tag Manager (noscript) - must stay immediately after <body>. */}
         <noscript>

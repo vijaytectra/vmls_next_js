@@ -45,6 +45,7 @@ const COURSES: Partial<Record<PagePath, Parameters<typeof courseSchema>[0]>> = {
       "Undergraduate law programme at Vinayaka Mission's Law School, Chennai, covering Bar Council of India core courses, electives, clinical courses, mandatory internships and professional skill labs.",
     path: "/admissions/llb",
     educationalCredentialAwarded: "LL.B. (Hons.)",
+    rated: true,
   },
   "/admissions/llm": {
     name: "LL.M. (One Year)",
@@ -53,6 +54,7 @@ const COURSES: Partial<Record<PagePath, Parameters<typeof courseSchema>[0]>> = {
     path: "/admissions/llm",
     educationalCredentialAwarded: "LL.M.",
     timeToComplete: "One year, full time",
+    rated: true,
   },
 };
 

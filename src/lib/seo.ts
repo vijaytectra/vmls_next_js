@@ -49,6 +49,20 @@ export const CONTACT = {
   email: "admissions@vmls.edu.in",
 } as const;
 
+/**
+ * Aggregate rating from the VMLS Google Business Profile listing. Sourced
+ * from real Google reviews - do not invent or round these values. If the
+ * live GBP rating diverges materially, update here (single source of truth)
+ * and both the homepage CollegeOrUniversity and every Course schema will
+ * reflect the new numbers.
+ */
+export const GBP_RATING = {
+  ratingValue: "4.6",
+  reviewCount: "69",
+  bestRating: "5",
+  worstRating: "1",
+} as const;
+
 export type PageSeo = {
   /** Route path, e.g. "/admissions/llm". Drives canonical, og:url, DC.identifier. */
   path: string;

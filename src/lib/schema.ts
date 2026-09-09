@@ -2,11 +2,20 @@ import {
   CAMPUS_ADDRESS,
   CAMPUS_COORDS,
   CONTACT,
+  GBP_RATING,
   ORG_ID,
   SITE_URL,
   absoluteUrl,
   absoluteAssetUrl,
 } from "@/lib/seo";
+
+const aggregateRating = () => ({
+  "@type": "AggregateRating",
+  ratingValue: GBP_RATING.ratingValue,
+  reviewCount: GBP_RATING.reviewCount,
+  bestRating: GBP_RATING.bestRating,
+  worstRating: GBP_RATING.worstRating,
+});
 
 /**
  * JSON-LD builders.
@@ -49,6 +58,7 @@ export function organizationSchema(): Json {
     geo: { "@type": "GeoCoordinates", ...CAMPUS_COORDS },
     telephone: CONTACT.telephone,
     email: CONTACT.email,
+    aggregateRating: aggregateRating(),
     sameAs: [
       "https://www.facebook.com/vinayakamissionslawschool/",
       "https://www.instagram.com/vinayakamissionslawschool/",
@@ -83,6 +93,12 @@ export function courseSchema(input: {
   courseMode?: string;
   educationalCredentialAwarded?: string;
   timeToComplete?: string;
+  /**
+   * When true, attaches the shared institutional GBP AggregateRating to this
+   * Course. Off by default so pages without a legitimate rating basis do not
+   * silently pick one up.
+   */
+  rated?: boolean;
 }): Json {
   return {
     "@context": CONTEXT,
@@ -95,6 +111,7 @@ export function courseSchema(input: {
     ...(input.educationalCredentialAwarded
       ? { educationalCredentialAwarded: input.educationalCredentialAwarded }
       : {}),
+    ...(input.rated ? { aggregateRating: aggregateRating() } : {}),
     hasCourseInstance: {
       "@type": "CourseInstance",
       courseMode: input.courseMode ?? "Onsite",
