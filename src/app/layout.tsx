@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
@@ -82,15 +81,17 @@ export default function RootLayout({
     >
       <head>
         {/*
-          Google Tag Manager - loaded inline in <head>, before any other
-          third-party script, so bounce-without-interaction sessions are
-          captured in GA. Trade-off: adds main-thread cost on cold load; the
-          deliberate deferral that used to live in <DeferredThirdParty /> has
-          been removed in favour of complete analytics coverage.
+          Google Tag Manager - rendered as a raw inline <script> so it is
+          baked into every static-exported HTML file in <head> and executes
+          synchronously on first paint, before any other third-party script.
+          next/script with strategy="afterInteractive" was tried first but
+          only injects the tag after client hydration on `output: "export"`
+          builds, which defers GTM by seconds on slow devices and drops it
+          entirely on cold visits that leave before hydration. Trade-off:
+          adds main-thread cost on cold load; accepted for full analytics
+          coverage of bounce-without-interaction sessions.
         */}
-        <Script
-          id="gtm-init"
-          strategy="afterInteractive"
+        <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
