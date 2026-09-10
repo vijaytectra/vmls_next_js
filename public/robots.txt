@@ -1,0 +1,22 @@
+# robots.txt for https://vmls.edu.in
+# Last reviewed: 2026-09-10
+
+User-agent: *
+Allow: /
+
+# Next.js build internals — never crawlable, zero SEO value
+Disallow: /_next/
+Disallow: /api/
+
+# Common CMS/admin surfaces — verify actual path and uncomment/edit
+# Disallow: /admin/
+# Disallow: /wp-admin/
+# Disallow: /login/
+
+# Search/query params that create duplicate-content crawl traps
+Disallow: /*?*
+
+# Explicitly allow indexable PDFs (newsletters) rather than leaving them ambiguous
+Allow: /images/newsletter/*.pdf$
+
+Sitemap: https://vmls.edu.in/sitemap.xml

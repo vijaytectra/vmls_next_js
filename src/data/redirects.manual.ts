@@ -338,5 +338,35 @@ export const MANUAL_REDIRECTS: Redirect[] = [
     "source": "/help/",
     "destination": "/anti-ragging",
     "permanent": true
+  },
+  {
+    "source": "/faculty/c-fowmina",
+    "destination": "/faculty/fowmina",
+    "permanent": true
+  },
+  {
+    "source": "/blog/vinayaka-missions-law-school-signs-international-mou-with-university-of-san-diego-expanding-global-learning-opportunities",
+    "destination": "/blogs/vinayaka-missions-law-school-signs-international-mou-with-university-of-san-diego-expanding-global-learning-opportunities",
+    "permanent": true
+  },
+  {
+    "source": "/blog/what-is-a-moot-court/",
+    "destination": "/blogs/what-is-a-moot-court",
+    "permanent": true
+  },
+  {
+    "source": "/llm/",
+    "destination": "/admissions/llm",
+    "permanent": true
+  },
+  {
+    "source": "/academics.html",
+    "destination": "/admissions/llb",
+    "permanent": true
+  },
+  {
+    "source": "/contact.html",
+    "destination": "/contact-us",
+    "permanent": true
   }
 ];

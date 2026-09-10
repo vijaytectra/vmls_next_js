@@ -46,7 +46,7 @@ DirectoryIndex index.html index.php
   # RewriteRule ^(.*)$ https://vmls.edu.in/$1 [R=301,L]
 
   # ---------------------------------------------------------------------
-  # 301s from the previous static site. 334 rules.
+  # 301s from the previous static site. 339 rules.
   # These must stay ABOVE the extensionless-URL rewrite below.
   # ---------------------------------------------------------------------
   RewriteRule "^faculty$" "/faculty-profiles" [R=301,L,NE]
@@ -116,6 +116,12 @@ DirectoryIndex index.html index.php
   RewriteRule "^blog/$" "/blogs" [R=301,L,NE]
   RewriteRule "^faculty/$" "/faculty-profiles" [R=301,L,NE]
   RewriteRule "^help/$" "/anti-ragging" [R=301,L,NE]
+  RewriteRule "^faculty/c-fowmina$" "/faculty/fowmina" [R=301,L,NE]
+  RewriteRule "^blog/vinayaka-missions-law-school-signs-international-mou-with-university-of-san-diego-expanding-global-learning-opportunities$" "/blogs/vinayaka-missions-law-school-signs-international-mou-with-university-of-san-diego-expanding-global-learning-opportunities" [R=301,L,NE]
+  RewriteRule "^blog/what-is-a-moot-court/$" "/blogs/what-is-a-moot-court" [R=301,L,NE]
+  RewriteRule "^llm/$" "/admissions/llm" [R=301,L,NE]
+  RewriteRule "^academics\.html$" "/admissions/llb" [R=301,L,NE]
+  RewriteRule "^contact\.html$" "/contact-us" [R=301,L,NE]
   RewriteRule "^blogs/corporate-law-courses-in-india-degrees-eligibility-salary\.html$" "/blogs/corporate-law-courses-in-india-degrees-eligibility-salary" [R=301,L,NE]
   RewriteRule "^blogs/criminal-law-in-chennai-curriculum-degrees-careers\.html$" "/blogs/criminal-law-in-chennai-curriculum-degrees-careers" [R=301,L,NE]
   RewriteRule "^blogs/india-anti-paper-leak-law-2026-explained\.html$" "/blogs/india-anti-paper-leak-law-2026-explained" [R=301,L,NE]
@@ -371,7 +377,6 @@ DirectoryIndex index.html index.php
   RewriteRule "^blog/llb-hons-eligibility-admissions-syllabus$" "/blogs/llb-hons-eligibility-admissions-syllabus" [R=301,L,NE]
   RewriteRule "^blog/page/2$" "/blogs" [R=301,L,NE]
   RewriteRule "^blog/page/3$" "/blogs" [R=301,L,NE]
-  RewriteRule "^blog/vinayaka-missions-law-school-signs-international-mou-with-university-of-san-diego-expanding-global-learning-opportunities$" "/blogs/vinayaka-missions-law-school-signs-international-mou-with-university-of-san-diego-expanding-global-learning-opportunities" [R=301,L,NE]
   RewriteRule "^blog/what-is-a-moot-court$" "/blogs/what-is-a-moot-court" [R=301,L,NE]
   RewriteRule "^blog/why-distance-ll-b-degrees-are-not-approved-in-india$" "/blogs/why-distance-ll-b-degrees-are-not-approved-in-india" [R=301,L,NE]
   RewriteRule "^dr-kannan-kunnathully\.html$" "/faculty-profiles" [R=301,L,NE]
