@@ -25,7 +25,13 @@ const ROOT = "out";
 
 // Only text. Images, fonts (woff2 is already brotli) and video are already
 // compressed - a .gz twin of a .webp is bigger than the original.
-const EXTENSIONS = new Set([".html", ".css", ".js", ".txt", ".json", ".xml", ".svg", ".map"]);
+//
+// .xml is deliberately excluded. Precompressed sitemap.xml.br / .gz twins
+// broke Google Search Console ("Couldn't fetch"): Googlebot sends
+// Accept-Encoding: br and some Apache setups negotiate to the .br file while
+// serving it as application/xml *without* Content-Encoding, so the bot gets
+// binary junk and times out / fails to parse. Keep sitemaps as plain XML.
+const EXTENSIONS = new Set([".html", ".css", ".js", ".txt", ".json", ".svg", ".map"]);
 
 // Below this, the ~200 bytes of framing costs more than the saving, and every
 // extra file is another line in the manual cPanel upload.

@@ -1,22 +1,23 @@
 # robots.txt for https://vmls.edu.in
-# Last reviewed: 2026-09-10
+# Last reviewed: 2026-09-16
 
 User-agent: *
 Allow: /
 
 # Allow Next.js static assets so search engines can render the page
 Allow: /_next/
+
+# Explicitly allow the sitemap (must never be blocked)
+Allow: /sitemap.xml
+
 Disallow: /api/
+Disallow: /debug
+Disallow: /test-route
 
-# Common CMS/admin surfaces — verify actual path and uncomment/edit
-# Disallow: /admin/
-# Disallow: /wp-admin/
-# Disallow: /login/
-
-# Search/query params that create duplicate-content crawl traps
-Disallow: /*?*
-
-# Explicitly allow indexable PDFs (newsletters) rather than leaving them ambiguous
-Allow: /images/newsletter/*.pdf$
+# Kept blocked from the previous site (crawl, not index)
+Disallow: /blogs/part-time-phd-in-law-and-interdisciplinary-studies
+Disallow: /blogs/full-time-phd-in-law-and-interdisciplinary-studies
+Disallow: /blogs/part-time-phd-in-law-and-interdisciplinary-studies.html
+Disallow: /blogs/full-time-phd-in-law-and-interdisciplinary-studies.html
 
 Sitemap: https://vmls.edu.in/sitemap.xml

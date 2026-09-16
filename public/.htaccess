@@ -3,7 +3,11 @@
 #
 # Serves the Next.js static export (./out) from Apache on cPanel.
 
-Options -Indexes
+# -MultiViews matters for SEO: with MultiViews on, a request for
+# /sitemap.xml + Accept-Encoding: br can negotiate to sitemap.xml.br and
+# return brotli bytes as application/xml (no Content-Encoding). Googlebot
+# then reports "Couldn't fetch" in Search Console.
+Options -Indexes -MultiViews
 
 # mod_dir is what breaks a Next export on Apache. /about-vmls maps to the
 # about-vmls/ directory of RSC payloads, so DirectorySlash 301s it to
@@ -34,6 +38,16 @@ DirectoryIndex index.html index.php
   RewriteRule "^(exam|vlat|vlat-exam|vlat-exam21|wordpress blogs dont touch this)$" "/$1/" [R=301,L]
 
   RewriteRule "^(exam|vlat|vlat-exam|vlat-exam21|wordpress blogs dont touch this)(/|$)" - [L]
+
+  # ---------------------------------------------------------------------
+  # Sitemap must be reachable as plain HTTPS XML. Legacy precompress twins
+  # (sitemap.xml.br / .gz) poisoned Googlebot fetches — send them to the
+  # real sitemap, and force HTTPS for this one path even while the site-wide
+  # canonical host rules stay commented out.
+  # ---------------------------------------------------------------------
+  RewriteRule "^sitemap\.xml\.(br|gz)$" "/sitemap.xml" [R=301,L]
+  RewriteCond %{HTTPS} off
+  RewriteRule "^sitemap\.xml$" "https://vmls.edu.in/sitemap.xml" [R=301,L]
 
   # ---------------------------------------------------------------------
   # Canonical host. Left commented out deliberately: switching these on
@@ -445,6 +459,18 @@ ErrorDocument 404 /404.html
     ExpiresDefault "access plus 1 hour"
   </FilesMatch>
 </IfModule>
+
+# Google Search Console expects a fetchable sitemap with an XML content type.
+<IfModule mod_mime.c>
+  AddType application/xml .xml
+</IfModule>
+
+<Files "sitemap.xml">
+  <IfModule mod_headers.c>
+    Header set Content-Type "application/xml; charset=UTF-8"
+    Header set Cache-Control "public, max-age=3600"
+  </IfModule>
+</Files>
 
 <IfModule mod_headers.c>
   # Standard security headers to mitigate clickjacking, XSS, and downgrade attacks
