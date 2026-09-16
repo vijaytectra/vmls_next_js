@@ -78,7 +78,7 @@ for (const file of files) {
     if (fs.existsSync(out) && fs.statSync(out).mtimeMs >= fs.statSync(file).mtimeMs) {
       continue; // already current
     }
-    await sharp(file).resize({ width, withoutEnlargement: true }).webp({ quality: 78 }).toFile(out);
+    await sharp(file).resize({ width, withoutEnlargement: true }).webp({ quality: 75, effort: 6, smartSubsample: true }).toFile(out);
     bytesAdded += fs.statSync(out).size;
     generated++;
   }

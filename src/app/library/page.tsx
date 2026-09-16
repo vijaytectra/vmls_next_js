@@ -192,18 +192,18 @@ export default function LibraryPage() {
               </div>
 
               <div className="p-6 flex flex-col flex-1">
-                <p className="font-inter text-[13px] md:text-sm text-gray-700 leading-relaxed text-left mb-4">
+                <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed text-left mb-4">
                   Through the Digital Library platform, users can access various electronic resources (e-resources) both within the campus and remotely. When accessing from outside the campus, all VMLS users must sign in to the Digital Library platform to avail remote access to the subscribed e-resources.
                 </p>
 
                 <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-black text-white border border-black md:bg-gray-50 md:text-gray-800 md:border-gray-100 rounded-none mb-5 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34]">
-                  <span className="font-inter font-bold text-[13px] md:text-sm normal-case tracking-widest">Digital Library</span>
+                  <span className="font-inter font-bold text-sm md:text-base normal-case tracking-widest">Digital Library</span>
                   <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
 
                 <div className="space-y-5 flex-1 flex flex-col">
                   <div>
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                    <h4 className="text-[11px] md:text-xs font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
                       <span className="w-6 h-[1px] bg-black"></span> Law Databases (In-Campus Access)
                     </h4>
                     <div className="grid grid-cols-2 gap-2">
@@ -213,7 +213,7 @@ export default function LibraryPage() {
                         { name: 'Manupatra', url: 'https://www.manupatrafast.com/Home.aspx' },
                         { name: 'LexisNexis', url: 'https://advance.lexis.com/in?identityprofileid=GFH88P68016' },
                       ].map((db) => (
-                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[15px] md:text-base font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                           <span className="relative z-10">{db.name}</span>
                           <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                         </Link>
@@ -222,7 +222,7 @@ export default function LibraryPage() {
                   </div>
 
                   <div>
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                    <h4 className="text-[11px] md:text-xs font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
                       <span className="w-6 h-[1px] bg-black"></span> Other Databases
                     </h4>
                     <div className="grid grid-cols-2 gap-2">
@@ -231,7 +231,7 @@ export default function LibraryPage() {
                         { name: 'Web of Science', url: 'https://www.webofscience.com/' },
                         { name: 'JSTOR', url: 'https://www.jstor.org/' },
                       ].map((db) => (
-                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                        <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[15px] md:text-base font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                           <span className="relative z-10">{db.name}</span>
                           <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                         </Link>
@@ -239,7 +239,7 @@ export default function LibraryPage() {
                     </div>
                   </div>
 
-                  <p className="mt-auto text-[12px] md:text-[13px] leading-relaxed text-gray-700 bg-[#fef2f2] border-l-4 border-[#800000] px-3 py-2.5">
+                  <p className="mt-auto text-[13px] md:text-sm leading-relaxed text-gray-700 bg-[#fef2f2] border-l-4 border-[#800000] px-3 py-2.5">
                     <strong className="text-[#800000]">Note:</strong> To access the databases from outside the campus, users must log in through the Digital Library website and access the databases via remote access.
                   </p>
                 </div>
@@ -863,18 +863,18 @@ export default function LibraryPage() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
-                  <p className="font-inter text-[13px] md:text-sm text-gray-700 leading-relaxed text-left mb-4">
+                  <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed text-left mb-4">
                     Through the Digital Library platform, users can access various electronic resources (e-resources) both within the campus and remotely. When accessing from outside the campus, all VMLS users must sign in to the Digital Library platform to avail remote access to the subscribed e-resources.
                   </p>
 
                   <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-black text-white border border-black md:bg-gray-50 md:text-gray-800 md:border-gray-100 rounded-none mb-5 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34]">
-                    <span className="font-inter font-bold text-[13px] md:text-sm normal-case tracking-widest">Digital Library</span>
+                    <span className="font-inter font-bold text-sm md:text-base normal-case tracking-widest">Digital Library</span>
                     <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </Link>
 
                   <div className="space-y-5 flex-1 flex flex-col">
                     <div>
-                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                      <h4 className="text-[11px] md:text-xs font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
                         <span className="w-6 h-[1px] bg-black"></span> Law Databases (In-Campus Access)
                       </h4>
                       <div className="grid grid-cols-2 gap-2">
@@ -884,7 +884,7 @@ export default function LibraryPage() {
                           { name: 'Manupatra', url: 'https://www.manupatrafast.com/Home.aspx' },
                           { name: 'LexisNexis', url: 'https://advance.lexis.com/in?identityprofileid=GFH88P68016' },
                         ].map((db) => (
-                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[15px] md:text-base font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                             <span className="relative z-10">{db.name}</span>
                             <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                           </Link>
@@ -893,7 +893,7 @@ export default function LibraryPage() {
                     </div>
 
                     <div>
-                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                      <h4 className="text-[11px] md:text-xs font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
                         <span className="w-6 h-[1px] bg-black"></span> Other Databases
                       </h4>
                       <div className="grid grid-cols-2 gap-2">
@@ -902,7 +902,7 @@ export default function LibraryPage() {
                           { name: 'Web of Science', url: 'https://www.webofscience.com/' },
                           { name: 'JSTOR', url: 'https://www.jstor.org/' },
                         ].map((db) => (
-                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[15px] md:text-base font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                             <span className="relative z-10">{db.name}</span>
                             <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                           </Link>
@@ -910,7 +910,7 @@ export default function LibraryPage() {
                       </div>
                     </div>
 
-                    <p className="mt-auto text-[12px] md:text-[13px] leading-relaxed text-gray-700 bg-[#fef2f2] border-l-4 border-[#800000] px-3 py-2.5">
+                    <p className="mt-auto text-[13px] md:text-sm leading-relaxed text-gray-700 bg-[#fef2f2] border-l-4 border-[#800000] px-3 py-2.5">
                       <strong className="text-[#800000]">Note:</strong> To access the databases from outside the campus, users must log in through the Digital Library website and access the databases via remote access.
                     </p>
                   </div>
@@ -1064,18 +1064,18 @@ export default function LibraryPage() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
-                  <p className="font-inter text-[13px] md:text-sm text-gray-700 leading-relaxed text-left mb-4">
+                  <p className="font-inter text-sm md:text-base text-gray-700 leading-relaxed text-left mb-4">
                     Through the Digital Library platform, users can access various electronic resources (e-resources) both within the campus and remotely. When accessing from outside the campus, all VMLS users must sign in to the Digital Library platform to avail remote access to the subscribed e-resources.
                   </p>
 
                   <Link href="https://vmrf.refread.com/#/home" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between w-full p-4 bg-black text-white border border-black md:bg-gray-50 md:text-gray-800 md:border-gray-100 rounded-none mb-5 group/btn transition-all duration-300 hover:bg-[#a31f34] hover:text-white hover:border-[#a31f34]">
-                    <span className="font-inter font-bold text-[13px] md:text-sm normal-case tracking-widest">Digital Library</span>
+                    <span className="font-inter font-bold text-sm md:text-base normal-case tracking-widest">Digital Library</span>
                     <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                   </Link>
 
                   <div className="space-y-5 flex-1 flex flex-col">
                     <div>
-                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                      <h4 className="text-[11px] md:text-xs font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
                         <span className="w-6 h-[1px] bg-black"></span> Law Databases (In-Campus Access)
                       </h4>
                       <div className="grid grid-cols-2 gap-2">
@@ -1085,7 +1085,7 @@ export default function LibraryPage() {
                           { name: 'Manupatra', url: 'https://www.manupatrafast.com/Home.aspx' },
                           { name: 'LexisNexis', url: 'https://advance.lexis.com/in?identityprofileid=GFH88P68016' },
                         ].map((db) => (
-                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[15px] md:text-base font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                             <span className="relative z-10">{db.name}</span>
                             <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                           </Link>
@@ -1094,7 +1094,7 @@ export default function LibraryPage() {
                     </div>
 
                     <div>
-                      <h4 className="text-[10px] font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
+                      <h4 className="text-[11px] md:text-xs font-black uppercase tracking-[0.2em] text-black mb-3 flex items-center gap-2">
                         <span className="w-6 h-[1px] bg-black"></span> Other Databases
                       </h4>
                       <div className="grid grid-cols-2 gap-2">
@@ -1103,7 +1103,7 @@ export default function LibraryPage() {
                           { name: 'Web of Science', url: 'https://www.webofscience.com/' },
                           { name: 'JSTOR', url: 'https://www.jstor.org/' },
                         ].map((db) => (
-                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[14px] font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
+                          <Link key={db.name} href={db.url} target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-white border border-gray-100 text-gray-700 text-[15px] md:text-base font-bold text-center hover:border-[#a31f34] hover:text-[#a31f34] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-1.5 relative overflow-hidden group/db">
                             <span className="relative z-10">{db.name}</span>
                             <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#a31f34] transition-all duration-300 group-hover/db:w-full"></div>
                           </Link>
@@ -1111,7 +1111,7 @@ export default function LibraryPage() {
                       </div>
                     </div>
 
-                    <p className="mt-auto text-[12px] md:text-[13px] leading-relaxed text-gray-700 bg-[#fef2f2] border-l-4 border-[#800000] px-3 py-2.5">
+                    <p className="mt-auto text-[13px] md:text-sm leading-relaxed text-gray-700 bg-[#fef2f2] border-l-4 border-[#800000] px-3 py-2.5">
                       <strong className="text-[#800000]">Note:</strong> To access the databases from outside the campus, users must log in through the Digital Library website and access the databases via remote access.
                     </p>
                   </div>

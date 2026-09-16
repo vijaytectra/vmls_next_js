@@ -98,7 +98,7 @@ export default function DeanPage() {
 
               <div className="relative">
                 <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#a31f34]"></div>
-                <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic">
+                <p className="pl-6 md:pl-8 font-inter text-lg md:text-xl text-gray-800 leading-relaxed font-medium italic text-justify">
                   {introParagraph}
                 </p>
               </div>
@@ -124,7 +124,7 @@ export default function DeanPage() {
                 </h4>
               </div>
 
-              <div className="space-y-8 font-inter text-lg md:text-xl text-gray-700 leading-relaxed">
+              <div className="space-y-8 font-inter text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
                 {aboutParagraphs.map((paragraph) => (
                   <p key={paragraph.slice(0, 48)}>{paragraph}</p>
                 ))}

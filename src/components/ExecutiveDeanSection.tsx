@@ -12,7 +12,7 @@ export default function ExecutiveDeanSection() {
               alt="Mr. Siddharth Raja, Executive Dean"
               fill
               sizes="(max-width: 1024px) 280px, 320px"
-              className="object-cover object-[center_20%]"
+              className="object-cover object-center"
             />
           </div>
         </div>
@@ -35,7 +35,7 @@ export default function ExecutiveDeanSection() {
               </div>
             </header>
 
-            <div className="font-inter text-sm md:text-[15px] leading-relaxed text-gray-100 space-y-2.5 text-left">
+            <div className="font-inter text-sm md:text-[15px] leading-relaxed text-gray-100 space-y-2.5 text-justify">
               <p>
                 A professional law degree has become increasingly appealing to students since India&apos;s liberalization in the early 90s,
                 driven by the opening of domestic markets, the rise in global trade, and the complexities of the new economic order.
