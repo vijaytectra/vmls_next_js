@@ -100,6 +100,7 @@ export default function HeroVideo() {
         aria-hidden
         fill
         priority
+        fetchPriority="high"
         sizes="100vw"
         className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover z-0"
       />
@@ -110,6 +111,7 @@ export default function HeroVideo() {
         muted
         playsInline
         preload="none"
+        aria-hidden="true"
         className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover z-0"
       />
 

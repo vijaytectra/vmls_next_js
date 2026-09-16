@@ -4,8 +4,8 @@
 User-agent: *
 Allow: /
 
-# Next.js build internals — never crawlable, zero SEO value
-Disallow: /_next/
+# Allow Next.js static assets so search engines can render the page
+Allow: /_next/
 Disallow: /api/
 
 # Common CMS/admin surfaces — verify actual path and uncomment/edit

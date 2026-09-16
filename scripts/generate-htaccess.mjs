@@ -194,6 +194,13 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 <IfModule mod_headers.c>
+  # Standard security headers to mitigate clickjacking, XSS, and downgrade attacks
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+
   # FilesMatch tests the FILE NAME, never a path, so "^/_next/static/" matched
   # nothing at all. Static assets here are content-hashed or versioned, so
   # match them by extension instead.

@@ -43,13 +43,13 @@ export default function FacultySection() {
 
         {/* Right Side: Group Photo Card */}
         <div className="flex-1 w-full order-1 lg:order-2">
-          <div className="relative aspect-[4/3] overflow-hidden bg-white shadow-2xl group transition-transform duration-500 hover:-translate-y-2">
+          <div className="relative aspect-[21/9] overflow-hidden bg-white shadow-2xl group transition-transform duration-500 hover:-translate-y-2">
             <Image
-              src="/images/home-faculty.webp"
+              src="/images/home-faculty-new.jpeg"
               alt="Faculty Group Photo"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         </div>

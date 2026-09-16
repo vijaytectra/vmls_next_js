@@ -105,12 +105,9 @@ export default function NewsEventsSection() {
                   <p className="font-inter text-sm text-[#a31f34] font-bold uppercase tracking-wider">
                     {event.date}
                   </p>
-                  <h4 className="font-playfair text-2xl md:text-3xl text-gray-900 leading-tight group-hover:text-[#a31f34] transition-colors">
+                  <h4 className="font-playfair text-xl md:text-2xl text-gray-900 leading-tight group-hover:text-[#a31f34] transition-colors">
                     {event.title}
                   </h4>
-                  <p className="font-inter text-base text-gray-600 leading-relaxed line-clamp-3 text-left">
-                    {event.description}
-                  </p>
                   {/* "Read More" on its own describes nothing. The headline is
                       appended as screen-reader-only text rather than an
                       aria-label, because crawlers and the Lighthouse link-text

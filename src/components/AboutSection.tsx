@@ -42,7 +42,7 @@ export default function AboutSection() {
                 alt="Vinayaka Mission's Law School campus and Lady Justice statue" 
                 width={800} 
                 height={649} 
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 768px) 90vw, 600px"
                 className="w-full h-auto object-contain"
                 style={{ width: '100%', height: 'auto' }}
               />

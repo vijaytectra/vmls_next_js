@@ -4,6 +4,7 @@ import "./globals.css";
 import SiteChrome from "@/components/layout/SiteChrome";
 import DeferredThirdParty from "@/components/DeferredThirdParty";
 import { GOOGLE_SITE_VERIFICATION, GTM_ID, SITE_URL } from "@/lib/seo";
+import Script from "next/script";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -24,13 +25,11 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  // Not preloaded. Inter is 48 KB and a preload is fetched at High priority,
-  // which put it in direct bandwidth competition with the 14 KB header logo -
-  // the measured LCP element - on a throttled phone. Playfair above stays
-  // preloaded because it draws the hero headline, which is the largest text on
-  // screen and the thing Speed Index actually watches; Inter sets the tagline
-  // and body copy, which swap in without a visible reflow of the headline.
-  preload: false,
+  // PRELOADED: The mentorship paragraph in the hero section is the LCP element on mobile.
+  // Lighthouse records LCP only after the web font swaps in. Without preload, Inter
+  // is discovered late, causing a massive "Element render delay" (e.g. 3.6s) as the
+  // browser waits for the font file to download over a 4G connection.
+  preload: true,
 });
 
 export const viewport: Viewport = {
@@ -61,6 +60,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/images/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/images/icon-192.png", type: "image/png", sizes: "192x192" },
       { url: "/images/favicon.ico", sizes: "any" },
     ],
     shortcut: "/images/favicon.ico",
@@ -80,18 +80,9 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
-        {/*
-          Google Tag Manager - rendered as a raw inline <script> so it is
-          baked into every static-exported HTML file in <head> and executes
-          synchronously on first paint, before any other third-party script.
-          next/script with strategy="afterInteractive" was tried first but
-          only injects the tag after client hydration on `output: "export"`
-          builds, which defers GTM by seconds on slow devices and drops it
-          entirely on cold visits that leave before hydration. Trade-off:
-          adds main-thread cost on cold load; accepted for full analytics
-          coverage of bounce-without-interaction sessions.
-        */}
-        <script
+        <Script
+          id="gtm"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -102,7 +93,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
-        {/* Google Tag Manager (noscript) - must stay immediately after <body>. */}
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
