@@ -86,18 +86,19 @@ fs.mkdirSync(DEST, { recursive: true });
 
 const mb = (bytes) => (bytes / 1024 / 1024).toFixed(1).padStart(6);
 
-/** Writes a NUL-separated list so names with spaces and brackets survive. */
+/** Writes a newline-separated list (Windows bsdtar-safe; paths never contain newlines). */
 function writeArchive(name, files) {
   const listPath = path.join(DEST, `${name}.files`);
-  fs.writeFileSync(listPath, files.map((f) => f.rel).join("\0") + "\0");
-  // tar is run from inside out/ so the archive holds site-relative paths, and
-  // the two arguments below stay POSIX-separated because GNU tar reads a
-  // backslash as an escape, not as a directory separator.
-  execFileSync(
-    "tar",
-    ["-czf", `../${DEST}/${name}.tar.gz`, "--null", "-T", `../${DEST}/${name}.files`],
-    { cwd: SRC, stdio: "inherit" }
-  );
+  const names = files.map((f) => f.rel).filter(Boolean);
+  fs.writeFileSync(listPath, names.join("\n") + "\n");
+  // tar runs from inside out/ so the archive holds site-relative paths.
+  // Use absolute -f/-T paths — relative `../deploy/...` breaks under some cwd layouts.
+  const listAbs = path.resolve(listPath);
+  const archiveAbs = path.resolve(DEST, `${name}.tar.gz`);
+  execFileSync("tar", ["-czf", archiveAbs, "-T", listAbs], {
+    cwd: SRC,
+    stdio: "inherit",
+  });
   fs.unlinkSync(listPath);
   const archived = fs.statSync(path.join(DEST, `${name}.tar.gz`)).size;
   console.log(`  ${name}.tar.gz  ${mb(archived)} MB  ${String(files.length).padStart(5)} files`);

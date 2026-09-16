@@ -66,7 +66,9 @@ const deployed = JSON.parse(fs.readFileSync(MANIFEST, "utf8"));
 const added = Object.keys(current).filter((f) => !(f in deployed));
 const changed = Object.keys(current).filter((f) => f in deployed && deployed[f] !== current[f]);
 const removed = Object.keys(deployed).filter((f) => !(f in current));
-const upload = [...added, ...changed].sort();
+// Drop empties — Windows bsdtar treats a trailing NUL from `--null -T` as an
+// empty path and aborts with "Couldn't visit directory".
+const upload = [...added, ...changed].filter(Boolean).sort();
 
 fs.mkdirSync(DEST, { recursive: true });
 const archive = path.join(DEST, "delta.tar.gz");
@@ -74,8 +76,21 @@ fs.rmSync(archive, { force: true });
 
 if (upload.length) {
   const list = path.join(DEST, "delta.files");
-  fs.writeFileSync(list, upload.join("\0") + "\0");
-  execFileSync("tar", ["-czf", `../${DEST}/delta.tar.gz`, "--null", "-T", `../${DEST}/delta.files`], {
+  // Newline-separated list. Avoid `--null` + trailing NUL (breaks Windows bsdtar).
+  // Also skip blank lines. Filenames must be UTF-8 without NBSP — those make
+  // bsdtar report "Couldn't visit directory" with an empty path.
+  const safe = upload.filter((f) => f && !/[\u00a0\r\n\0]/.test(f));
+  const skipped = upload.filter((f) => f && /[\u00a0\r\n\0]/.test(f));
+  if (skipped.length) {
+    console.warn(
+      `WARNING: skipping ${skipped.length} path(s) with unsafe characters (rename the files):\n` +
+        skipped.map((f) => `  ${JSON.stringify(f)}`).join("\n")
+    );
+  }
+  fs.writeFileSync(list, safe.join("\n"));
+  const listAbs = path.resolve(list);
+  const archiveAbs = path.resolve(archive);
+  execFileSync("tar", ["-czf", archiveAbs, "-T", listAbs], {
     cwd: SRC,
     stdio: "inherit",
   });
