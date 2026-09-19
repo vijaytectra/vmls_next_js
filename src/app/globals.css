@@ -48,7 +48,7 @@ body {
 }
 
 .animate-page-fade {
-  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeIn 0.15s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes fadeInUp {
@@ -1042,9 +1042,11 @@ body {
    until they are scrolled near. Purely a rendering optimisation - the markup
    and appearance are unchanged. */
 main > section:nth-of-type(n+3),
-main > div > section:nth-of-type(n+3) {
+main > div > section:nth-of-type(n+3),
+main > div > .below-fold,
+.below-fold {
   content-visibility: auto;
-  contain-intrinsic-size: 0 900px;
+  contain-intrinsic-size: 0 500px;
 }
 
 

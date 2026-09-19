@@ -39,7 +39,7 @@ const QuoteSection = dynamic(() => import("@/components/QuoteSection"), {
 });
 export default function Home() {
   return (
-    <div>
+    <main>
       <PageSchema path="/" />
       <HeroVideo />
       <Announcements />
@@ -80,6 +80,6 @@ export default function Home() {
       <div className="below-fold">
         <QuoteSection />
       </div>
-    </div>
+    </main>
   );
 }

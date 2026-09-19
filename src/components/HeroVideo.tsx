@@ -101,7 +101,7 @@ export default function HeroVideo() {
         fill
         priority
         fetchPriority="high"
-        sizes="100vw"
+        sizes="(max-width: 640px) 640px, (max-width: 1024px) 828px, 100vw"
         className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover z-0"
       />
 
