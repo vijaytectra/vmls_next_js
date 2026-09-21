@@ -60,18 +60,18 @@ const escapeRe = (p) => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
  */
 const toRules = ({ source, destination, permanent }) => {
   const flags = permanent === false ? "R=302,L,NE" : "R=301,L,NE";
-  const bare = source.replace(/^\//, "");
+  const bare = source.replace(/^\//, "").replace(/\/$/, "");
   const forms = new Set([bare]);
   if (/%[0-9A-Fa-f]{2}/.test(bare)) {
     try {
-      forms.add(decodeURIComponent(bare));
+      forms.add(decodeURIComponent(bare).replace(/\/$/, ""));
     } catch {
       /* leave the encoded form alone if it will not decode */
     }
   }
   // Quote both sides: several legacy filenames contain spaces.
   return [...forms].map(
-    (form) => `RewriteRule "^${escapeRe(form)}$" "${destination}" [${flags}]`
+    (form) => `RewriteRule "^${escapeRe(form)}/?$" "${destination}" [${flags}]`
   );
 };
 
@@ -130,9 +130,9 @@ DirectoryIndex index.html index.php
   # real sitemap, and force HTTPS for this one path even while the site-wide
   # canonical host rules stay commented out.
   # ---------------------------------------------------------------------
-  RewriteRule "^sitemap\\.xml\\.(br|gz)$" "/sitemap.xml" [R=301,L]
+  RewriteRule "^sitemap\.xml\.(br|gz)$" "/sitemap.xml" [R=301,L]
   RewriteCond %{HTTPS} off
-  RewriteRule "^sitemap\\.xml$" "https://vmls.edu.in/sitemap.xml" [R=301,L]
+  RewriteRule "^sitemap\.xml$" "https://vmls.edu.in/sitemap.xml" [R=301,L]
 
   # ---------------------------------------------------------------------
   # Canonical host. Left commented out deliberately: switching these on
@@ -213,9 +213,12 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 <Files "sitemap.xml">
+  SetEnv no-gzip 1
+  SetEnv dont-vary 1
   <IfModule mod_headers.c>
     Header set Content-Type "application/xml; charset=UTF-8"
     Header set Cache-Control "public, max-age=3600"
+    Header unset Content-Encoding
   </IfModule>
 </Files>
 
@@ -255,7 +258,7 @@ ErrorDocument 404 /404.html
   #
   # The two lists are deliberately disjoint. If a file could be selected by
   # both mechanisms it would be gzipped twice and arrive undecodable.
-  AddOutputFilterByType DEFLATE application/javascript application/json application/xml image/svg+xml
+  AddOutputFilterByType DEFLATE application/javascript application/json image/svg+xml
 
   <FilesMatch "\\.(html|css|txt)$">
     SetOutputFilter DEFLATE
