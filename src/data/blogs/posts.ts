@@ -10,6 +10,16 @@ export interface BlogPostMeta {
 }
 
 export const ALL_BLOG_SLUGS: string[] = [
+  "digital-arrest-scams-india-cyber-law-explained",
+  "transition-ipc-to-bns-first-year-law-students-2026",
+  "cybercrime-digital-forensics-criminal-lawyers-india",
+  "vlat-2027-prep-strategy-crack-vmls-admissions-test",
+  "importance-of-moot-courts-first-year-law-students",
+  "uniform-civil-code-india-explained-law-students",
+  "online-gaming-law-india-2025-explained",
+  "sports-law-in-india-emerging-legal-career",
+  "insolvency-bankruptcy-law-careers-india-ibc",
+  "intellectual-property-law-careers-india-guide",
   "corporate-law-courses-in-india-degrees-eligibility-salary",
   "criminal-law-in-chennai-curriculum-degrees-careers",
   "supreme-court-handbook-judgments-gender-explained",

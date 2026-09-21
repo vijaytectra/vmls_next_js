@@ -1,6 +1,23 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail } from "lucide-react";
+
+/** Inline icons avoid pulling lucide-react into the global chrome bundle. */
+function PhoneIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect width="20" height="16" x="2" y="4" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   const campusMapUrl = "https://www.google.com/maps/place/AARUPADAI+VEEDU+INSTITUTE+OF+TECHNOLOGY/@12.65669,80.180111,12z/data=!4m6!3m5!1s0x3a52666a3b419c71:0xbf0f1882c4b4ceb1!8m2!3d12.65669!4d80.1801109!16s%2Fg%2F1tfkzmj4?hl=en&entry=ttu&g_ep=EgoyMDI2MDUxMi4wIKXMDSoASAFQAw%3D%3D";
@@ -18,8 +35,11 @@ export default function Footer() {
                 src="/images/footer/vmls-footer.webp" 
                 alt="VMLS Logo" 
                 width={220} 
-                height={80} 
+                height={80}
+                sizes="(max-width: 640px) 160px, (max-width: 768px) 200px, 220px"
                 className="object-contain w-[160px] sm:w-[200px] md:w-[220px] h-auto max-w-full"
+                loading="lazy"
+                decoding="async"
               />
               <p className="font-playfair text-[#a31f34] text-xl sm:text-2xl lg:text-3xl italic text-left">
                 Law School of the Future
@@ -134,13 +154,13 @@ export default function Footer() {
               <div className="space-y-4 text-left">
                 <Link href="tel:+917358201234" className="flex items-center justify-start gap-3 sm:gap-4 text-[#333] text-sm sm:text-base hover:text-[#a31f34] transition-colors group text-left">
                   <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300 shrink-0">
-                    <Phone size={18} />
+                    <PhoneIcon />
                   </div>
                   <span className="font-semibold tracking-wide">+91 73582 01234</span>
                 </Link>
                 <Link href="mailto:admissions@vmls.edu.in" className="flex items-center justify-start gap-2.5 sm:gap-3 text-[#333] hover:text-[#a31f34] transition-colors group min-w-0 text-left">
                   <div className="w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center text-[#a31f34] group-hover:bg-[#a31f34] group-hover:text-white transition-all duration-300">
-                    <Mail size={18} />
+                    <MailIcon />
                   </div>
                   <span className="font-semibold tracking-tight text-[12px] sm:text-xs md:text-[13px] lg:text-base whitespace-nowrap">admissions@vmls.edu.in</span>
                 </Link>

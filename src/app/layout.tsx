@@ -5,31 +5,23 @@ import SiteChrome from "@/components/layout/SiteChrome";
 import DeferredThirdParty from "@/components/DeferredThirdParty";
 import { GOOGLE_SITE_VERIFICATION, GTM_ID, SITE_URL } from "@/lib/seo";
 import Script from "next/script";
+// GTM container script is injected by DeferredThirdParty after LCP.
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
   display: "swap",
-  // Preloaded, despite the bandwidth cost, because the hero <h1> and <h2> are
-  // both set in this face and fill the mobile viewport. Without the preload
-  // they paint in the fallback serif and re-paint when Playfair arrives - a
-  // large late change to the biggest text on screen, which is exactly what
-  // Speed Index measures. Turning this off took mobile SI from 8.8s to 12.0s.
-  //
-  // Only the latin subset is preloaded (~21 KB), not the 86 KB I once
-  // attributed to it - that figure was Inter and Playfair counted together.
-  preload: true,
+  // Not preloaded: the mobile LCP is the hero poster. Preloading Playfair
+  // competed with that image on Slow 4G. Headings still swap in via CSS.
+  preload: false,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-  // PRELOADED: The mentorship paragraph in the hero section is the LCP element on mobile.
-  // Lighthouse records LCP only after the web font swaps in. Without preload, Inter
-  // is discovered late, causing a massive "Element render delay" (e.g. 3.6s) as the
-  // browser waits for the font file to download over a 4G connection.
-  preload: true,
+  // Not preloaded: must not compete with the hero poster on throttled mobile.
+  preload: false,
 });
 
 export const viewport: Viewport = {
@@ -80,17 +72,16 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
+        {/* Prime dataLayer immediately. gtm.js (GTM-TDRKCK4P + GA4 + Clarity)
+            is injected by DeferredThirdParty after interaction or a short
+            post-load delay so it does not compete with LCP on mobile. Queued
+            pushes flush when the container arrives. */}
         <Script
           id="gtm-init"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});`,
           }}
-        />
-        <Script
-          id="gtm-loader"
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
         />
       </head>
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>

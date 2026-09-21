@@ -19,11 +19,14 @@ const ROOT = "public/images";
 const MANIFEST = "src/data/image-variants.ts";
 const DRY = process.argv.includes("--dry");
 
-// Matches the device widths Next requests for a full-bleed image, trimmed to
-// what this design actually uses.
-const WIDTHS = [256, 384, 640, 828, 1200, 1920];
+// Matches the device / image widths Next requests, trimmed to what this
+// design actually uses. 128–192 cover header and mentorship logos; 700 is a
+// mid-size step for content images displayed around 600–650 CSS px.
+const WIDTHS = [128, 160, 192, 256, 384, 640, 700, 828, 1200, 1920];
 // Below this an image is already small enough that a variant saves nothing.
-const MIN_SOURCE_WIDTH = 300;
+// Kept under the smallest mentorship logo (~133–268 px) so those still get
+// retina-friendly smaller variants when the source is larger than 128.
+const MIN_SOURCE_WIDTH = 160;
 const IS_IMAGE = /\.(webp|png|jpe?g)$/i;
 const IS_VARIANT = /-w\d+\.webp$/i;
 
@@ -78,7 +81,21 @@ for (const file of files) {
     if (fs.existsSync(out) && fs.statSync(out).mtimeMs >= fs.statSync(file).mtimeMs) {
       continue; // already current
     }
-    await sharp(file).resize({ width, withoutEnlargement: true }).webp({ quality: 75, effort: 6, smartSubsample: true }).toFile(out);
+    // Small widths are mostly logos/UI marks: slightly higher quality keeps
+    // edges sharp at Retina without meaningful byte growth. Larger photo
+    // variants stay at 75.
+    const quality = width <= 256 ? 82 : 75;
+    await sharp(file)
+      .resize({ width, withoutEnlargement: true })
+      .webp({ quality, effort: 6, smartSubsample: true })
+      .toFile(out);
+    // Skip writing a variant that is larger than the original — that can
+    // happen near the source width when quality is raised for small logos.
+    if (fs.statSync(out).size >= fs.statSync(file).size) {
+      fs.unlinkSync(out);
+      available.pop();
+      continue;
+    }
     bytesAdded += fs.statSync(out).size;
     generated++;
   }

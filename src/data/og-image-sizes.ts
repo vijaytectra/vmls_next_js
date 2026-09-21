@@ -141,10 +141,6 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     1200,
     628
   ],
-  "/images/blogs/clinical-education-in-financial-frauds-white-collar-crimes__13.webp": [
-    1200,
-    628
-  ],
   "/images/blogs/clinical-legal-education-and-evidence-law-training-in-india__2.webp": [
     1200,
     628
@@ -173,19 +169,23 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     847,
     444
   ],
+  "/images/blogs/cybercrime-digital-forensics-criminal-lawyers-india__cybercrime-digital-forensics-criminal-lawyers-india.png": [
+    847,
+    444
+  ],
   "/images/blogs/decoding-competition-law-the-cle-approach__understanding-competition-law-via-cle.webp": [
     1200,
     628
+  ],
+  "/images/blogs/digital-arrest-scams-india-cyber-law-explained__digital-arrest-scams-india-cyber-law-explained.png": [
+    847,
+    444
   ],
   "/images/blogs/empowering-future-advocates-clinical-legal-education-initiative-at-vmls__12.webp": [
     1200,
     628
   ],
   "/images/blogs/empowering-migrant-labourers-in-chennai-through-clinical-legal-education-and-access-to-justice__wp.png": [
-    1200,
-    628
-  ],
-  "/images/blogs/empowering-women-through-clinical-legal-education-in-india__empowering-woman.webp": [
     1200,
     628
   ],
@@ -241,6 +241,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     847,
     444
   ],
+  "/images/blogs/importance-of-moot-courts-first-year-law-students__importance-of-moot-courts-first-year-law-students.png": [
+    847,
+    444
+  ],
   "/images/blogs/important-component-of-clinical-legal-education__18.webp": [
     1200,
     628
@@ -249,9 +253,13 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     847,
     444
   ],
-  "/images/blogs/indus-waters-treaty-suspension-lessons-for-law-students__indus-water.webp": [
-    1200,
-    628
+  "/images/blogs/insolvency-bankruptcy-law-careers-india-ibc__insolvency-bankruptcy-law-careers-india-ibc.png": [
+    847,
+    444
+  ],
+  "/images/blogs/intellectual-property-law-careers-india-guide__intellectual-property-law-careers-india-guide.png": [
+    847,
+    444
   ],
   "/images/blogs/justice-at-the-grassroots-clinical-legal-education-and-family-law-practice-in-india__justice-at-glassdoors.webp": [
     1200,
@@ -381,6 +389,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     1200,
     628
   ],
+  "/images/blogs/online-gaming-law-india-2025-explained__online-gaming-law-india-2025-explained.png": [
+    847,
+    444
+  ],
   "/images/blogs/part-time-phd-in-law-and-interdisciplinary-studies__fix.webp": [
     1200,
     628
@@ -400,6 +412,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
   "/images/blogs/shaping-legal-futures-cle-and-constitutional-law__shaping-legal.webp": [
     1200,
     628
+  ],
+  "/images/blogs/sports-law-in-india-emerging-legal-career__sports-law-in-india-emerging-legal-career.png": [
+    847,
+    444
   ],
   "/images/blogs/step-by-step-guide-to-law-college-admission__wp.png": [
     848,
@@ -453,6 +469,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     848,
     444
   ],
+  "/images/blogs/transition-ipc-to-bns-first-year-law-students-2026__transition-ipc-to-bns-first-year-law-students-2026.png": [
+    847,
+    444
+  ],
   "/images/blogs/tribunals-reforms-bill-2026-national-tribunals-commission__tribunals-reforms-bill-2026-national-tribunals-commission.png": [
     847,
     444
@@ -461,12 +481,20 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     602,
     315
   ],
+  "/images/blogs/uniform-civil-code-india-explained-law-students__uniform-civil-code-india-explained-law-students.png": [
+    847,
+    444
+  ],
   "/images/blogs/vinayaka-missions-law-admission-test-VLAT__vlat.png": [
     848,
     444
   ],
   "/images/blogs/vinayaka-missions-law-school-signs-international-mou-with-university-of-san-diego-expanding-global-learning-opportunities__wp.jpeg": [
     848,
+    444
+  ],
+  "/images/blogs/vlat-2027-prep-strategy-crack-vmls-admissions-test__vlat-2027-prep-strategy-crack-vmls-admissions-test.png": [
+    847,
     444
   ],
   "/images/blogs/vmls-open-day-2025__fix.webp": [
@@ -573,6 +601,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     289,
     289
   ],
+  "/images/faculty/live/Aamir.jpeg": [
+    1023,
+    1537
+  ],
   "/images/faculty/live/Anuttama.jpeg": [
     1396,
     1516
@@ -642,10 +674,6 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     787
   ],
   "/images/faculty/live/DSC00586_10.webp": [
-    1400,
-    787
-  ],
-  "/images/faculty/live/DSC00612_21.webp": [
     1400,
     787
   ],
@@ -752,10 +780,6 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
   "/images/iqac/iqac-1.webp": [
     1200,
     800
-  ],
-  "/images/iqac/report-on-workshop2.webp": [
-    1600,
-    1199
   ],
   "/images/justice/Frame53138.webp": [
     768,

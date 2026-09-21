@@ -26,11 +26,12 @@ export default function BlogsPage() {
           <div className="lg:w-[55%] relative min-h-[200px] sm:min-h-[240px] lg:min-h-[300px]">
             <Image
               src="/images/career-about-img.webp"
-              alt="VMLS Blogs"
+              alt="VMLS campus — Vinayaka Mission's Law School"
               fill
               priority
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 55vw"
+              quality={90}
             />
             <div className="absolute inset-0 bg-black/15"></div>
           </div>

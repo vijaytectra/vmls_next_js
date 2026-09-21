@@ -404,6 +404,10 @@ DirectoryIndex index.html index.php
   RewriteRule "^assets/images/newsletter/Newsletter_April_to_May_2026 \(T\)\.pdf$" "/images/newsletter/newsletter-april-to-may-2026-ta.pdf" [R=301,L,NE]
   RewriteRule "^public/newsletter/NewsLetterNovemberToDecember-2025 \(Tamil\)\.pdf$" "/images/newsletter/NewsLetterNovemberToDecember-2025 (Tamil).pdf" [R=301,L,NE]
 
+  # Legacy /blog → /blogs (optional trailing slash; runs after exact rules)
+  RewriteRule "^blog/(category|tag|page|author)(/.*)?/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^blog/(.+?)/?$" "/blogs/$1" [R=301,L,NE]
+
   # ---------------------------------------------------------------------
   # Next.js static export: serve /about-vmls from about-vmls.html without
   # showing the extension, and send /about-vmls/ to the clean URL so the
@@ -461,6 +465,9 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # Google Search Console expects a fetchable sitemap with an XML content type.
+# Keep this block minimal — SetEnv / RemoveOutputFilter / Header unset caused
+# a host-wide 500 on cPanel (AllowOverride). Compression of the sitemap is
+# avoided by omitting application/xml from AddOutputFilterByType below.
 <IfModule mod_mime.c>
   AddType application/xml .xml
 </IfModule>
@@ -508,7 +515,9 @@ ErrorDocument 404 /404.html
   #
   # The two lists are deliberately disjoint. If a file could be selected by
   # both mechanisms it would be gzipped twice and arrive undecodable.
-  AddOutputFilterByType DEFLATE application/javascript application/json application/xml image/svg+xml
+  # application/xml deliberately omitted — sitemap.xml must stay uncompressed
+  # for Google Search Console (see <Files "sitemap.xml"> above).
+  AddOutputFilterByType DEFLATE application/javascript application/json image/svg+xml
 
   <FilesMatch "\.(html|css|txt)$">
     SetOutputFilter DEFLATE
