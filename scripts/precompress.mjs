@@ -58,6 +58,7 @@ function walk(dir) {
       continue;
     }
     if (!entry.isFile()) continue;
+    if (!fs.existsSync(full)) continue;
     const ext = path.extname(entry.name);
     // Never compress a compressed twin from an earlier run.
     if (ext === ".br" || ext === ".gz") continue;

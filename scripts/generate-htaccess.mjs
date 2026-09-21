@@ -213,8 +213,15 @@ ErrorDocument 404 /404.html
   <FilesMatch "\\.(js|css|woff2|woff|ttf|webp|png|jpe?g|gif|svg|ico|mp4|webm|pdf)$">
     ExpiresDefault "access plus 1 year"
   </FilesMatch>
-  <FilesMatch "\\.(html|xml|txt)$">
+  <FilesMatch "\\.(xml|txt)$">
     ExpiresDefault "access plus 1 hour"
+  </FilesMatch>
+  <FilesMatch "\\.html$">
+    <IfModule mod_headers.c>
+      Header set Cache-Control "no-cache, no-store, must-revalidate"
+      Header set Pragma "no-cache"
+      Header set Expires "0"
+    </IfModule>
   </FilesMatch>
 </IfModule>
 
