@@ -45,10 +45,10 @@ export default function NewsEventsSection() {
             <div className="relative group">
               <div className="relative w-full mb-8 md:mb-10">
                 <Image
-                  src="/images/newsletter/vmls-april-may-cover.jpg"
-                  alt="VMLS Newsletter Issue 11 April to May 2026 Cover"
-                  width={1409}
-                  height={1117}
+                  src="/images/newsletter/vmls-july-september-cover.jpg"
+                  alt="VMLS Newsletter Issue 13 July to September 2026 Cover"
+                  width={1489}
+                  height={2106}
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="w-full h-auto object-cover"
                 />
@@ -56,30 +56,30 @@ export default function NewsEventsSection() {
               
               <div className="space-y-6">
                 <p className="font-inter text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em]">
-                  June 19, 2026
+                  September 16, 2026
                 </p>
                 <h3 className="font-playfair text-3xl md:text-5xl text-gray-900 leading-[1.1] mb-6">
-                  VMLS Newsletter: April to May 2026
+                  VMLS Newsletter: July to September 2026
                 </h3>
                 <p className="font-inter text-lg text-gray-700 leading-relaxed max-w-2xl text-left">
                   Fundamentum is the official monthly newsletter of Vinayaka Mission&apos;s Law School, 
                   capturing the vibrant academic and cultural life on campus. It highlights expert 
                   lectures, student initiatives, legal innovations, and institutional milestones.
                 </p>
-                <div className="flex flex-wrap gap-4 pt-8">
+                <div className="flex flex-row items-stretch gap-3 sm:gap-4 pt-8">
                   <a 
-                    href="/images/newsletter/newsletter-april-to-may-2026-en.pdf" 
+                    href="/images/newsletter/newsletter-july-to-september-2026-en.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
+                    className="flex-1 min-w-0 h-14 px-2 sm:px-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider text-center leading-tight transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
                   >
                     View English Newsletter
                   </a>
                   <a 
-                    href="/images/newsletter/newsletter-april-to-may-2026-ta.pdf" 
+                    href="/images/newsletter/newsletter-july-to-september-2026-ta.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="w-full md:w-[280px] h-14 bg-[#800000] text-white border-2 border-[#800000] font-inter text-sm font-bold uppercase tracking-wider transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
+                    className="flex-1 min-w-0 h-14 px-2 sm:px-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider text-center leading-tight transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
                   >
                     View Tamil Newsletter
                   </a>

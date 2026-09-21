@@ -1,12 +1,21 @@
 import dynamic from "next/dynamic";
 import HeroVideo from "@/components/HeroVideo";
-import Announcements from "@/components/Announcements";
-import AboutSection from "@/components/AboutSection";
 import { pageMetadata } from "@/lib/seo-pages";
 import PageSchema from "@/components/seo/PageSchema";
 
 export const metadata = pageMetadata("/");
 
+// Announcements is interactive but not the LCP element — keep it out of the
+// hero's critical JS chunk.
+const Announcements = dynamic(() => import("@/components/Announcements"), {
+  loading: () => <div className="w-full min-h-[80px] md:min-h-[60px] bg-[#a31f34]" />,
+});
+
+// Below the fold on mobile (and past first paint on desktop): keep out of the
+// initial JS/CSS critical path without changing layout (placeholder height).
+const AboutSection = dynamic(() => import("@/components/AboutSection"), {
+  loading: () => <div className="w-full min-h-[520px]" />,
+});
 const MentoringCommittee = dynamic(() => import("@/components/MentoringCommittee"), {
   loading: () => <div className="w-full min-h-[380px]" />
 });

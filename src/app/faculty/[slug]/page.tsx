@@ -452,7 +452,7 @@ const facultyData: FacultyData[] = [
     name: "S. M. Aamir Ali",
     role: "Assistant Professor (Senior Grade)",
     qualifications: "LL.M. in Human Rights Law from the National Law School of India University (NLSIU), Bengaluru",
-    image: "/images/faculty/live/DSC00612_21.webp",
+    image: "/images/faculty/live/Aamir.jpeg",
     slug: "aamir-ali",
     email: "smaamir@vmls.edu.in",
     bio: [

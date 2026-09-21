@@ -1,19 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
+import { GTM_ID } from "@/lib/seo";
 
 /**
- * Loads the NoPaperForms enquiry widget on the first sign of a real visitor,
- * instead of during page load.
+ * Defers non-critical third parties until after the first paint / LCP window.
  *
- * The widget sets third-party cookies and costs meaningful main-thread time
- * on a throttled phone, so it is held back until the visitor scrolls, taps
- * or presses a key. Google Tag Manager used to be deferred here too, but is
- * now loaded inline from <head> in the root layout so that
- * bounce-without-interaction sessions are counted in GA.
+ * GTM: dataLayer is primed in <head>. The container (and GA4/Clarity tags
+ * inside it) loads on first interaction OR ~5s after load — whichever comes
+ * first. Queued dataLayer events flush when gtm.js arrives, so page views are
+ * kept for normal sessions without blocking mobile LCP/TBT.
  *
- * Trade-off to be aware of: a session that leaves before any interaction is
- * never shown the enquiry widget.
+ * NoPaperForms enquiry widget: interaction-only (unchanged trade-off).
  */
 
 const NPF = {
@@ -23,12 +21,29 @@ const NPF = {
   script: "https://widgets.in8.nopaperforms.com/emwgts.js",
 };
 
+const GTM_SRC = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+const INTERACTION_EVENTS = ["pointerdown", "keydown", "touchstart", "scroll", "wheel"] as const;
+/** Wall-clock fallback so bounce-without-interaction sessions still get GA. */
+const GTM_FALLBACK_MS = 5000;
+
 declare global {
   interface Window {
     npf_d?: string;
     npf_c?: string;
     npf_m?: string;
+    __vmlsGtmLoading?: boolean;
   }
+}
+
+function loadGTM() {
+  if (typeof window === "undefined") return;
+  if (window.__vmlsGtmLoading) return;
+  if (document.querySelector(`script[src="${GTM_SRC}"]`)) return;
+  window.__vmlsGtmLoading = true;
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = GTM_SRC;
+  document.head.appendChild(script);
 }
 
 function loadEnquiryWidget() {
@@ -45,22 +60,62 @@ function loadEnquiryWidget() {
 
 export default function DeferredThirdParty() {
   useEffect(() => {
-    let done = false;
-    const events = ["pointerdown", "keydown", "touchstart", "scroll", "wheel"];
+    let gtmDone = false;
+    let npfDone = false;
+    let fallbackTimer: number | undefined;
+    let idleId: number | undefined;
 
-    const start = () => {
-      if (done) return;
-      done = true;
-      events.forEach((event) => window.removeEventListener(event, start));
-      loadEnquiryWidget();
+    const armGtm = () => {
+      if (gtmDone) return;
+      gtmDone = true;
+      INTERACTION_EVENTS.forEach((event) =>
+        window.removeEventListener(event, onInteract)
+      );
+      if (fallbackTimer !== undefined) window.clearTimeout(fallbackTimer);
+      if (idleId !== undefined && typeof window.cancelIdleCallback === "function") {
+        window.cancelIdleCallback(idleId);
+      }
+      loadGTM();
     };
 
-    events.forEach((event) =>
-      window.addEventListener(event, start, { passive: true, once: true })
+    const onInteract = () => {
+      armGtm();
+      if (!npfDone) {
+        npfDone = true;
+        loadEnquiryWidget();
+      }
+    };
+
+    INTERACTION_EVENTS.forEach((event) =>
+      window.addEventListener(event, onInteract, { passive: true, once: true })
     );
 
+    const scheduleFallback = () => {
+      const start = () => {
+        if (typeof window.requestIdleCallback === "function") {
+          idleId = window.requestIdleCallback(() => armGtm(), { timeout: 1500 });
+        } else {
+          armGtm();
+        }
+      };
+      // After load, wait so LCP/TBT settle, then bring GTM in for quiet sessions.
+      fallbackTimer = window.setTimeout(start, GTM_FALLBACK_MS);
+    };
+
+    if (document.readyState === "complete") {
+      scheduleFallback();
+    } else {
+      window.addEventListener("load", scheduleFallback, { once: true });
+    }
+
     return () => {
-      events.forEach((event) => window.removeEventListener(event, start));
+      INTERACTION_EVENTS.forEach((event) =>
+        window.removeEventListener(event, onInteract)
+      );
+      if (fallbackTimer !== undefined) window.clearTimeout(fallbackTimer);
+      if (idleId !== undefined && typeof window.cancelIdleCallback === "function") {
+        window.cancelIdleCallback(idleId);
+      }
     };
   }, []);
 

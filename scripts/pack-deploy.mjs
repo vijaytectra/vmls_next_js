@@ -95,10 +95,26 @@ function writeArchive(name, files) {
   // Use absolute -f/-T paths — relative `../deploy/...` breaks under some cwd layouts.
   const listAbs = path.resolve(listPath);
   const archiveAbs = path.resolve(DEST, `${name}.tar.gz`);
-  execFileSync("tar", ["-czf", archiveAbs, "-T", listAbs], {
-    cwd: SRC,
-    stdio: "inherit",
-  });
+  // macOS bsdtar: skip AppleDouble / provenance xattrs (avoids `tar: (null)`
+  // exit 1 and ._ companions that break Linux/cPanel extraction).
+  execFileSync(
+    "tar",
+    [
+      "--no-xattrs",
+      "--no-mac-metadata",
+      "--no-acls",
+      "--no-fflags",
+      "-czf",
+      archiveAbs,
+      "-T",
+      listAbs,
+    ],
+    {
+      cwd: SRC,
+      stdio: "inherit",
+      env: { ...process.env, COPYFILE_DISABLE: "1" },
+    }
+  );
   fs.unlinkSync(listPath);
   const archived = fs.statSync(path.join(DEST, `${name}.tar.gz`)).size;
   console.log(`  ${name}.tar.gz  ${mb(archived)} MB  ${String(files.length).padStart(5)} files`);

@@ -14,6 +14,286 @@ export type BlogSeo = {
 };
 
 export const BLOG_SEO: Record<string, BlogSeo> = {
+  "digital-arrest-scams-india-cyber-law-explained": {
+    "slug": "digital-arrest-scams-india-cyber-law-explained",
+    "title": "Digital Arrest Scams in India: How Cyber Laws and the Supreme Court are Responding",
+    "author": "VMLS Editorial",
+    "date": "September 21, 2026",
+    "image": "/images/blogs/digital-arrest-scams-india-cyber-law-explained__digital-arrest-scams-india-cyber-law-explained.png",
+    "description": "A digital arrest scam is a fraud in which criminals impersonate police, CBI, or customs officials on a video call and convince the victim they are under…",
+    "faqs": [
+      {
+        "q": "Is digital arrest a real legal procedure in India?",
+        "a": "No. There is no provision under Indian law — criminal or cyber law — that allows any authority to arrest, detain, or interrogate a person via video or voice call."
+      },
+      {
+        "q": "What is a digital arrest scam?",
+        "a": "A digital arrest scam is a fraud where criminals pose as police or government officials on a video call, falsely claim the victim is under investigation, and pressure them into transferring money to avoid a fake \"arrest.\""
+      },
+      {
+        "q": "Which law applies to digital arrest and cyber extortion cases?",
+        "a": "Such cases are typically prosecuted under the Information Technology Act, 2000 (including Section 66D on cheating by personation) along with extortion and cheating provisions of the Bharatiya Nyaya Sanhita."
+      },
+      {
+        "q": "What have Supreme Court rules said about digital arrest scams?",
+        "a": "Judicial observations have consistently clarified that no such thing as a \"digital arrest\" exists in Indian law, and have pushed for faster inter-agency coordination to trace scammers and block fraudulent accounts."
+      },
+      {
+        "q": "Where can I report a digital arrest or cyber extortion attempt?",
+        "a": "You can report it immediately on the National Cyber Crime Reporting Portal (cybercrime.gov.in) or call the helpline number 1930."
+      }
+    ]
+  },
+  "transition-ipc-to-bns-first-year-law-students-2026": {
+    "slug": "transition-ipc-to-bns-first-year-law-students-2026",
+    "title": "The Transition from IPC to BNS: What First-Year Law Students Need to Know in 2026",
+    "author": "VMLS Editorial",
+    "date": "September 18, 2026",
+    "image": "/images/blogs/transition-ipc-to-bns-first-year-law-students-2026__transition-ipc-to-bns-first-year-law-students-2026.png",
+    "description": "For over 160 years, the Indian Penal Code (IPC), 1860 served as the cornerstone of criminal jurisprudence in India. Effective 1 July 2024, the IPC was…",
+    "faqs": [
+      {
+        "q": "What is the legal nature of the BNS?",
+        "a": "The Bharatiya Nyaya Sanhita (BNS), 2023 is India's primary substantive penal code, replacing the Indian Penal Code, 1860 effective 1 July 2024."
+      },
+      {
+        "q": "Does the IPC retain legal applicability post-enactment of the BNS?",
+        "a": "Yes. The IPC remains applicable to offenses committed prior to 1 July 2024 and serves as essential legal context for analyzing historical judicial precedents."
+      },
+      {
+        "q": "Which statutory instruments comprise the 2024 criminal law reform package?",
+        "a": "The reform package consists of the Bharatiya Nyaya Sanhita (succeeding the IPC), the Bharatiya Nagarik Suraksha Sanhita (succeeding the CrPC), and the Bharatiya Sakshya Adhiniyam (succeeding the Indian Evidence Act)."
+      },
+      {
+        "q": "How do the structural dimensions of the BNS compare with those of the IPC?",
+        "a": "The IPC comprised 511 sections across 23 chapters, whereas the BNS contains 358 sections organized into 20 chapters."
+      },
+      {
+        "q": "Why is detailed command of the BNS critical for law students?",
+        "a": "The BNS serves as the operative penal code for all offenses committed post-1 July 2024, forming the core framework for academic study, legal advocacy, and litigation practice."
+      }
+    ]
+  },
+  "cybercrime-digital-forensics-criminal-lawyers-india": {
+    "slug": "cybercrime-digital-forensics-criminal-lawyers-india",
+    "title": "Cybercrime and Digital Forensics: The New Frontier for Criminal Lawyers in India",
+    "author": "VMLS Editorial",
+    "date": "September 17, 2026",
+    "image": "/images/blogs/cybercrime-digital-forensics-criminal-lawyers-india__cybercrime-digital-forensics-criminal-lawyers-india.png",
+    "description": "Criminal law in India is no longer confined to the courtroom drama of witness testimony and physical evidence. A growing share of criminal cases — from…",
+    "faqs": [
+      {
+        "q": "What is cybercrime law in India based on?",
+        "a": "Primarily the Information Technology Act, 2000, applied alongside the relevant offences under the Bharatiya Nyaya Sanhita."
+      },
+      {
+        "q": "What is digital forensics in the context of criminal law?",
+        "a": "The scientific process of identifying, preserving, and analysing electronic evidence so it can be reliably used in criminal investigation and prosecution."
+      },
+      {
+        "q": "Is a cyber law course useful for a criminal law career?",
+        "a": "Yes. It builds specialised knowledge of cyber statutes and technical literacy that generalist criminal law training does not always cover."
+      },
+      {
+        "q": "What does Section 66D of the IT Act punish?",
+        "a": "Cheating by personation using computer resources — commonly applied to scams involving impersonation of officials or institutions online."
+      },
+      {
+        "q": "What careers are open to cybercrime law specialists?",
+        "a": "Criminal litigation, corporate and fintech compliance roles, law enforcement consulting, and judicial service or public prosecution."
+      }
+    ]
+  },
+  "vlat-2027-prep-strategy-crack-vmls-admissions-test": {
+    "slug": "vlat-2027-prep-strategy-crack-vmls-admissions-test",
+    "title": "VLAT 2027 Prep Strategy: How to Crack Vinayaka Mission's Law Admissions Test",
+    "author": "VMLS Editorial",
+    "date": "September 16, 2026",
+    "image": "/images/blogs/vlat-2027-prep-strategy-crack-vmls-admissions-test__vlat-2027-prep-strategy-crack-vmls-admissions-test.png",
+    "description": "As one of India's most closely watched law entrance exams, VLAT (Vinayaka Mission's Law Admission Test) determines entry into the five-year integrated LLB…",
+    "faqs": [
+      {
+        "q": "What is VLAT?",
+        "a": "VLAT (Vinayaka Mission's Law Admission Test) is the entrance exam for admission to VMLS's LLB programmes."
+      },
+      {
+        "q": "What is the VLAT exam pattern?",
+        "a": "Typically 40 objective questions across English Comprehension and Logical Reasoning, to be completed in 60 minutes, with no negative marking."
+      },
+      {
+        "q": "How should I prepare for VLAT 2027?",
+        "a": "Start 3–4 months in advance with foundational practice, progress to timed mock tests 4–6 weeks out, and taper to revision in the final two weeks."
+      },
+      {
+        "q": "Is there negative marking in VLAT?",
+        "a": "No. Since there is no penalty for wrong answers, attempting every question is generally the right strategy."
+      },
+      {
+        "q": "Can I use CLAT or other scores instead of VLAT?",
+        "a": "Yes. VMLS also accepts valid scores from CLAT, LSAT-India, AILET, and MHCET for admission."
+      }
+    ]
+  },
+  "importance-of-moot-courts-first-year-law-students": {
+    "slug": "importance-of-moot-courts-first-year-law-students",
+    "title": "Why Practical Training Matters: The Importance of Moot Courts for First-Year Law Students",
+    "author": "VMLS Editorial",
+    "date": "September 15, 2026",
+    "image": "/images/blogs/importance-of-moot-courts-first-year-law-students__importance-of-moot-courts-first-year-law-students.png",
+    "description": "Reading a judgment and arguing one in front of a bench are two very different skills — and moot court is where every law student learns the difference. For a…",
+    "faqs": [
+      {
+        "q": "What is a moot court in simple terms?",
+        "a": "A simulated court proceeding where law students argue a hypothetical case before judges, following real courtroom procedure."
+      },
+      {
+        "q": "Why is moot court important for first-year law students?",
+        "a": "It builds research, drafting, and oral advocacy skills early, while making classroom theory concrete through practical application."
+      },
+      {
+        "q": "Do moot court competitions help with internships?",
+        "a": "Yes. Moot court participation and awards are often among the first substantive achievements first-year students can list on internship applications."
+      },
+      {
+        "q": "What skills does moot court build besides legal knowledge?",
+        "a": "Public speaking, time management, structured argumentation, and the ability to think on one's feet under questioning."
+      },
+      {
+        "q": "Does VMLS have dedicated moot court facilities?",
+        "a": "Yes, VMLS has a state-of-the-art Moot Court facility along with regular intra-college and national-level competitions."
+      }
+    ]
+  },
+  "uniform-civil-code-india-explained-law-students": {
+    "slug": "uniform-civil-code-india-explained-law-students",
+    "title": "Uniform Civil Code in India Explained: A Law Student's Guide",
+    "author": "VMLS Editorial",
+    "date": "September 14, 2026",
+    "image": "/images/blogs/uniform-civil-code-india-explained-law-students__uniform-civil-code-india-explained-law-students.png",
+    "description": "The Uniform Civil Code (UCC) is a proposed common set of personal laws — governing marriage, divorce, inheritance, and adoption — that would apply to all…",
+    "faqs": [
+      {
+        "q": "Which state was the first to implement the Uniform Civil Code in India?",
+        "a": "Uttarakhand, which implemented its Uniform Civil Code on 27 January 2025, becoming the first state in independent India to do so. Explore further postgraduate specialisations in our LL.M. in Corporate and Financial Laws overview."
+      },
+      {
+        "q": "Is the Uniform Civil Code mandatory under the Constitution?",
+        "a": "No. Article 44 is a Directive Principle of State Policy, meaning it guides government policy but is not judicially enforceable on its own."
+      },
+      {
+        "q": "Does the Uttarakhand UCC apply to everyone in the state?",
+        "a": "It applies broadly to residents of Uttarakhand but exempts Scheduled Tribe populations from its provisions."
+      },
+      {
+        "q": "What does the UCC change about marriage in Uttarakhand?",
+        "a": "It sets minimum marriage ages (21 for men, 18 for women), makes registration of marriages and live-in relationships mandatory, and bans bigamy, polygamy, triple talaq, nikah halala, and iddat."
+      }
+    ]
+  },
+  "online-gaming-law-india-2025-explained": {
+    "slug": "online-gaming-law-india-2025-explained",
+    "title": "Online Gaming Law in India 2025: The New Ban Explained",
+    "author": "VMLS Editorial",
+    "date": "September 11, 2026",
+    "image": "/images/blogs/online-gaming-law-india-2025-explained__online-gaming-law-india-2025-explained.png",
+    "description": "The Promotion and Regulation of Online Gaming Act, 2025, passed by Parliament in August 2025, prohibits almost all forms of online money games, whether based…",
+    "faqs": [
+      {
+        "q": "Is online real-money gaming banned in India?",
+        "a": "Yes. Under the Promotion and Regulation of Online Gaming Act, 2025, all online money games involving financial stakes are banned nationally, regardless of skill or chance classification."
+      },
+      {
+        "q": "Are fantasy sports platforms banned in India?",
+        "a": "Real-money fantasy sports formats are covered by the ban. Several major fantasy sports and card-gaming platforms suspended real-money operations in India following the Act. Read more about corporate law specialization ."
+      },
+      {
+        "q": "Is e-sports banned under the new law?",
+        "a": "No. E-sports and online social or educational games without monetary stakes are explicitly promoted, not banned, under the Act. Explore emerging tech fields in our LL.M. in AI and Tech Law overview."
+      },
+      {
+        "q": "Has the Online Gaming Act been challenged in court?",
+        "a": "Yes. The Act is being challenged on constitutional grounds, and the matter has been transferred to the Supreme Court of India for consolidated hearing. Learn how to prepare for competitive entrance tests in CLAT vs VLAT comparison ."
+      }
+    ]
+  },
+  "sports-law-in-india-emerging-legal-career": {
+    "slug": "sports-law-in-india-emerging-legal-career",
+    "title": "Sports Law in India: An Emerging Legal Career Path",
+    "author": "VMLS Editorial",
+    "date": "September 10, 2026",
+    "image": "/images/blogs/sports-law-in-india-emerging-legal-career__sports-law-in-india-emerging-legal-career.png",
+    "description": "Sports law in India covers the legal issues around athlete contracts, sports governance, broadcasting rights, sponsorship, anti-doping regulation, and…",
+    "faqs": [
+      {
+        "q": "What is sports law?",
+        "a": "Sports law is a cross-disciplinary practice area covering athlete contracts, sponsorship, broadcasting rights, anti-doping regulation, and sports governance disputes. Read about what is corporate law for foundational concepts."
+      },
+      {
+        "q": "Where are international sports disputes resolved?",
+        "a": "Most international disputes, including doping and eligibility cases, are ultimately resolved through the Court of Arbitration for Sport (CAS) in Lausanne, Switzerland. Learn more about financial concepts in what is financial law ."
+      },
+      {
+        "q": "Is sports law a recognised career specialisation in India?",
+        "a": "It is an emerging, growing niche rather than a large established field, driven mainly by the expansion of the IPL and other professional sports leagues and rising sports governance reform."
+      },
+      {
+        "q": "What legal skills are most useful for a sports law career?",
+        "a": "Strong contract drafting, arbitration and dispute resolution knowledge, and familiarity with intellectual property and image rights are the most valuable skills for aspiring sports lawyers."
+      }
+    ]
+  },
+  "insolvency-bankruptcy-law-careers-india-ibc": {
+    "slug": "insolvency-bankruptcy-law-careers-india-ibc",
+    "title": "Insolvency & Bankruptcy Law Careers in India: IBC Guide",
+    "author": "VMLS Editorial",
+    "date": "September 9, 2026",
+    "image": "/images/blogs/insolvency-bankruptcy-law-careers-india-ibc__insolvency-bankruptcy-law-careers-india-ibc.png",
+    "description": "The Insolvency and Bankruptcy Code, 2016 (IBC) is India's unified law for resolving corporate and individual insolvency in a time-bound manner, and it has…",
+    "faqs": [
+      {
+        "q": "What is the Insolvency and Bankruptcy Code, 2016?",
+        "a": "It is India's unified law consolidating insolvency resolution for companies, partnerships, and individuals into a single, time-bound process, primarily adjudicated before the NCLT. Read what is corporate law for more info."
+      },
+      {
+        "q": "What is the statutory timeline for resolving corporate insolvency under the IBC?",
+        "a": "The Corporate Insolvency Resolution Process is designed to be completed within 180 days, extendable in defined circumstances, though complex cases can run longer. Learn about third-party litigation funding in litigation."
+      },
+      {
+        "q": "Which forum handles IBC cases in India?",
+        "a": "The National Company Law Tribunal (NCLT) is the primary adjudicating authority, with appeals heard by the National Company Law Appellate Tribunal (NCLAT)."
+      },
+      {
+        "q": "Is insolvency law a good career specialisation for law graduates?",
+        "a": "Yes. It remains one of the most consistently active areas of Indian corporate litigation and transactional practice, with strong demand from law firms, banks, and financial institutions."
+      }
+    ]
+  },
+  "intellectual-property-law-careers-india-guide": {
+    "slug": "intellectual-property-law-careers-india-guide",
+    "title": "Intellectual Property Law Careers in India: Complete Guide",
+    "author": "VMLS Editorial",
+    "date": "September 8, 2026",
+    "image": "/images/blogs/intellectual-property-law-careers-india-guide__intellectual-property-law-careers-india-guide.png",
+    "description": "Intellectual Property (IP) law in India governs patents, trademarks, copyright, designs, and geographical indications, and it has become one of the country's…",
+    "faqs": [
+      {
+        "q": "What are the main areas of intellectual property law in India?",
+        "a": "Patents, trademarks, copyright, industrial designs, and geographical indications, each governed by a separate statute. Explore financial aspects in what is financial law ."
+      },
+      {
+        "q": "Which court handles most IP litigation in India?",
+        "a": "The Delhi High Court, through its specialised IP Division, handles a significant share of India's major patent and trademark litigation. Enhance litigation skills through moot court in law school ."
+      },
+      {
+        "q": "Do I need a science background to work in IP law?",
+        "a": "Not necessarily for trademark or copyright practice, but a science or engineering background is generally required to qualify as a registered Patent Agent handling patent prosecution."
+      },
+      {
+        "q": "Is IP law a good career choice for law graduates in India?",
+        "a": "Yes. Rising patent and trademark filings, growth in pharmaceuticals and technology, and new AI-related IP questions have made it one of India's most consistently in-demand legal specialisations."
+      }
+    ]
+  },
   "aibe-all-india-bar-exam-guide": {
     "slug": "aibe-all-india-bar-exam-guide",
     "title": "AIBE Guide: Eligibility, Pattern & Prep After Your LLB",

@@ -60,18 +60,18 @@ const escapeRe = (p) => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
  */
 const toRules = ({ source, destination, permanent }) => {
   const flags = permanent === false ? "R=302,L,NE" : "R=301,L,NE";
-  const bare = source.replace(/^\//, "").replace(/\/$/, "");
+  const bare = source.replace(/^\//, "");
   const forms = new Set([bare]);
   if (/%[0-9A-Fa-f]{2}/.test(bare)) {
     try {
-      forms.add(decodeURIComponent(bare).replace(/\/$/, ""));
+      forms.add(decodeURIComponent(bare));
     } catch {
       /* leave the encoded form alone if it will not decode */
     }
   }
   // Quote both sides: several legacy filenames contain spaces.
   return [...forms].map(
-    (form) => `RewriteRule "^${escapeRe(form)}/?$" "${destination}" [${flags}]`
+    (form) => `RewriteRule "^${escapeRe(form)}$" "${destination}" [${flags}]`
   );
 };
 
@@ -130,9 +130,9 @@ DirectoryIndex index.html index.php
   # real sitemap, and force HTTPS for this one path even while the site-wide
   # canonical host rules stay commented out.
   # ---------------------------------------------------------------------
-  RewriteRule "^sitemap\.xml\.(br|gz)$" "/sitemap.xml" [R=301,L]
+  RewriteRule "^sitemap\\.xml\\.(br|gz)$" "/sitemap.xml" [R=301,L]
   RewriteCond %{HTTPS} off
-  RewriteRule "^sitemap\.xml$" "https://vmls.edu.in/sitemap.xml" [R=301,L]
+  RewriteRule "^sitemap\\.xml$" "https://vmls.edu.in/sitemap.xml" [R=301,L]
 
   # ---------------------------------------------------------------------
   # Canonical host. Left commented out deliberately: switching these on
@@ -148,6 +148,17 @@ DirectoryIndex index.html index.php
   # 301s from the previous static site. ${all.length} rules.
   # These must stay ABOVE the extensionless-URL rewrite below.
   # ---------------------------------------------------------------------
+`;
+
+// WordPress used /blog/; this site uses /blogs/. Exact per-post rules above
+// only match the bare path, and the trailing-slash stripper only fires when
+// $1.html already exists — so /blog/slug/ never matched and 404'd. These
+// catch-alls (with optional trailing slash) close that gap for every post,
+// while keeping WP taxonomy URLs on the listing page.
+const blogCatchAll = `
+  # Legacy /blog → /blogs (optional trailing slash; runs after exact rules)
+  RewriteRule "^blog/(category|tag|page|author)(/.*)?/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^blog/(.+?)/?$" "/blogs/$1" [R=301,L,NE]
 `;
 
 const footer = `
@@ -208,17 +219,17 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # Google Search Console expects a fetchable sitemap with an XML content type.
+# Keep this block minimal — SetEnv / RemoveOutputFilter / Header unset caused
+# a host-wide 500 on cPanel (AllowOverride). Compression of the sitemap is
+# avoided by omitting application/xml from AddOutputFilterByType below.
 <IfModule mod_mime.c>
   AddType application/xml .xml
 </IfModule>
 
 <Files "sitemap.xml">
-  SetEnv no-gzip 1
-  SetEnv dont-vary 1
   <IfModule mod_headers.c>
     Header set Content-Type "application/xml; charset=UTF-8"
     Header set Cache-Control "public, max-age=3600"
-    Header unset Content-Encoding
   </IfModule>
 </Files>
 
@@ -258,6 +269,8 @@ ErrorDocument 404 /404.html
   #
   # The two lists are deliberately disjoint. If a file could be selected by
   # both mechanisms it would be gzipped twice and arrive undecodable.
+  # application/xml deliberately omitted — sitemap.xml must stay uncompressed
+  # for Google Search Console (see <Files "sitemap.xml"> above).
   AddOutputFilterByType DEFLATE application/javascript application/json image/svg+xml
 
   <FilesMatch "\\.(html|css|txt)$">
@@ -268,7 +281,11 @@ ErrorDocument 404 /404.html
 
 fs.writeFileSync(
   OUT,
-  header + all.flatMap((r) => toRules(r).map((rule) => `  ${rule}`)).join("\n") + "\n" + footer
+  header +
+    all.flatMap((r) => toRules(r).map((rule) => `  ${rule}`)).join("\n") +
+    "\n" +
+    blogCatchAll +
+    footer
 );
 
 console.log(`wrote ${OUT}: ${all.length} redirect rules (${rules.length} from the map, ${legacy.length} legacy assets)`);

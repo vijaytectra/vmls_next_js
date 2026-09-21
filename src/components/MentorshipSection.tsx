@@ -26,7 +26,8 @@ export default function MentorshipSection() {
               src="/images/opjindal.webp" 
               alt="O.P. Jindal Global University" 
               width={200} 
-              height={60} 
+              height={64}
+              sizes="200px"
               style={{ width: 'auto', height: 'auto' }}
               className="object-contain"
             />
@@ -46,7 +47,8 @@ export default function MentorshipSection() {
               src="/images/jindal-global.webp" 
               alt="Jindal Global Law School" 
               width={80} 
-              height={80} 
+              height={80}
+              sizes="80px"
               style={{ width: 'auto', height: 'auto' }}
               className="object-contain"
             />
@@ -57,9 +59,10 @@ export default function MentorshipSection() {
               <div style={{ textAlign: 'left' }}>
                 <Image 
                   src="/images/approved.webp" 
-                  alt="UGC and BCI Approved" 
+                  alt="UGC and BCI Approved"
                   width={150} 
-                  height={50} 
+                  height={50}
+                  sizes="150px"
                   style={{ width: 'auto', height: 'auto' }}
                   className="object-contain"
                 />

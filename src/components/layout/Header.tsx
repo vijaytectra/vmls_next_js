@@ -312,10 +312,13 @@ export default function Header() {
                 alt="Vinayaka Mission's Research Foundation"
                 height={95}
                 width={414}
-                sizes="(max-width: 640px) 256px, 414px"
+                // Not the LCP (hero poster is). Keep low so React 19 does not
+                // auto-preload this into the high-priority set beside the hero.
+                sizes="(max-width: 640px) 180px, (max-width: 1024px) 320px, 414px"
                 className="h-[2.25rem] sm:h-[3.75rem] md:h-[3.5rem] lg:h-[3.5rem] w-auto max-w-[min(72vw,320px)] sm:max-w-[380px] md:max-w-[440px] lg:max-w-[480px] object-contain object-left"
-                priority
-                fetchPriority="high"
+                loading="eager"
+                fetchPriority="low"
+                decoding="async"
               />
             </Link>
           </div>
@@ -326,11 +329,15 @@ export default function Header() {
                 <Image
                   src="/images/headerright.webp"
                   alt="VMLS Vinayaka Mission's Law School"
-                  height={42}
-                  width={120}
-                  sizes="(max-width: 640px) 256px, 384px"
+                  height={67}
+                  width={192}
+                  // Displayed ~78–120 CSS px (≈137×47 in Lighthouse). 192 covers
+                  // 2× Retina; avoid requesting 384/613.
+                  sizes="(max-width: 640px) 96px, (max-width: 1024px) 120px, 140px"
                   className="h-7 sm:h-8 md:h-9 lg:h-11 w-auto max-w-[78px] sm:max-w-[85px] md:max-w-[100px] lg:max-w-[120px] object-contain"
-                  priority
+                  loading="eager"
+                  fetchPriority="low"
+                  decoding="async"
                 />
               </Link>
             </div>
