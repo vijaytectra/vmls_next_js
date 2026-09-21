@@ -42,9 +42,13 @@ export default function AboutSection() {
                 alt="Vinayaka Mission's Law School campus and Lady Justice statue" 
                 width={800} 
                 height={649} 
-                sizes="(max-width: 768px) 90vw, 600px"
+                // max-w-[600px] column; mobile ~90vw. Prefer 640/700 variants
+                // over the full 800px source when the layout does not need it.
+                sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 600px"
                 className="w-full h-auto object-contain"
                 style={{ width: '100%', height: 'auto' }}
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

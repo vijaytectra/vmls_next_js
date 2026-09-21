@@ -1,132 +1,35 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import HeroVideoAttach from "@/components/HeroVideoAttach";
 
+/**
+ * Homepage hero — Server Component for the LCP poster and copy so that markup
+ * is in the first HTML byte without waiting on a client bundle. Only the
+ * desktop video attach logic is a client island.
+ */
 export default function HeroVideo() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const desktop = window.matchMedia("(min-width: 768px)").matches;
-
-    // Phones keep the poster still and never load the video.
-    //
-    // Measured reason: a full-viewport <video> becomes the Largest
-    // Contentful Paint element the moment it starts playing, whenever that
-    // happens. Loading it early costs 3.2 MB on a mobile connection; loading
-    // it late simply moves LCP out to 7s. Neither reaches a passing score, so
-    // on small screens the hero is the poster image.
-    if (!desktop) return;
-
-    const src = "/video/vmls-hero-video.mp4";
-
-    // The <video> element is server-rendered with its poster and no source,
-    // so the poster is what paints - and stays the Largest Contentful Paint
-    // element. Mounting the element later instead made things worse: it
-    // appeared after the poster had already painted and registered as a new,
-    // larger LCP at 7 seconds.
-    //
-    // The source is attached only once the page has finished loading, so the
-    // multi-MB download never competes with the paint.
-    let idleId: number | undefined;
-    let timeoutId: number | undefined;
-
-    const attach = () => {
-      if (video.querySelector("source")) return;
-      const source = document.createElement("source");
-      source.src = src;
-      source.type = "video/mp4";
-      video.appendChild(source);
-      video.load();
-      video.play().catch(() => {
-        /* autoplay may be blocked; the poster remains */
-      });
-    };
-
-    // Wait for the visitor to do something before pulling 12 MB.
-    //
-    // Loading it automatically after `load` put the whole file on the wire for
-    // every desktop visit - a 13 MB page - and swapped the hero image for a
-    // video several seconds in, which is a large late visual change and wrecks
-    // Speed Index. On first scroll or pointer move the video attaches and
-    // plays; a visitor who never interacts simply keeps the poster.
-    const events = ["pointerdown", "pointermove", "keydown", "touchstart", "scroll", "wheel"];
-    let started = false;
-
-    const start = () => {
-      if (started) return;
-      started = true;
-      events.forEach((event) => window.removeEventListener(event, start));
-      if (typeof window.requestIdleCallback === "function") {
-        idleId = window.requestIdleCallback(attach, { timeout: 2000 });
-      } else {
-        timeoutId = window.setTimeout(attach, 200);
-      }
-    };
-
-    events.forEach((event) =>
-      window.addEventListener(event, start, { passive: true, once: true })
-    );
-
-    return () => {
-      events.forEach((event) => window.removeEventListener(event, start));
-      if (idleId !== undefined && typeof window.cancelIdleCallback === "function") {
-        window.cancelIdleCallback(idleId);
-      }
-      if (timeoutId !== undefined) window.clearTimeout(timeoutId);
-    };
-  }, []);
-
   return (
     <section className="relative w-full h-[min(85vh,720px)] min-h-[520px] sm:min-h-[560px] md:h-[85vh] md:min-h-[600px] overflow-hidden flex flex-col justify-end text-white font-sans">
-      {/* Solid backdrop until the single viewport video is ready */}
       <div className="absolute inset-0 -z-10 bg-[#0c1218]" />
 
       {/*
-        The hero still. This is a real <img>, not the <video poster>
-        attribute: with preload="none" and no source attached, Chrome never
-        paints the poster at all, which left the mobile hero as a dark box and
-        pushed the Largest Contentful Paint onto the header logo at 5.6s.
-
-        On phones this image is the entire hero. On desktop the video is
-        layered over it once the page has loaded.
+        Mobile LCP — priority/high, no page opacity fade (see SiteChrome),
+        video hidden on mobile (see HeroVideoAttach). 1200px on small
+        viewports keeps the paint sharp without over-fetching.
       */}
       <Image
         src="/videos/vmls-hero-video-poster.webp"
-        alt=""
-        aria-hidden
+        alt="Vinayaka Mission's Law School"
         fill
         priority
         fetchPriority="high"
-        sizes="(max-width: 640px) 640px, (max-width: 1024px) 828px, 100vw"
+        sizes="(max-width: 768px) 1200px, (max-width: 1280px) 100vw, 1200px"
         className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover z-0"
       />
 
-      <video
-        ref={videoRef}
-        loop
-        muted
-        playsInline
-        preload="none"
-        aria-hidden="true"
-        className="absolute top-0 left-0 w-full h-full md:h-[100vh] object-cover z-0"
-      />
+      <HeroVideoAttach />
 
-      {/*
-        No manual <link rel="preload"> here. The <Image priority> above already
-        emits one, and it carries the responsive imageSrcSet so a phone fetches
-        the 25 KB variant. A hand-written preload pointed at the original file
-        instead, so mobile downloaded BOTH - 78 KB of extra high-priority
-        bandwidth ahead of first paint.
-      */}
-
-      {/* Overlay for better text readability */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/25 z-0" />
 
-      {/* Main Content — vertically centered on mobile; desktop position unchanged */}
       <div className="absolute inset-x-0 z-10 px-8 sm:px-10 md:px-[5%] top-[38%] min-[400px]:max-sm:top-[46%] sm:top-[40%] bottom-auto md:top-auto md:bottom-[30%] lg:bottom-[32%]">
         <div className="w-full mx-auto text-center md:text-left text-shadow-lg">
           <h1 className="text-[clamp(1.5rem,6vw,3.8rem)] font-normal mb-3.5 sm:mb-4 md:mb-[15px] leading-tight font-playfair text-center md:text-left">
@@ -143,7 +46,6 @@ export default function HeroVideo() {
         </div>
       </div>
 
-      {/* Mentorship bar — extra top gap on mobile so logos clear the headline */}
       <div className="relative z-10 w-full bg-gradient-to-t from-black/95 via-black/70 to-transparent px-8 sm:px-10 md:px-[5%] pt-10 pb-16 md:pt-4 md:pb-8">
         <div className="hidden md:grid grid-cols-1 lg:grid-cols-4 gap-5 lg:gap-6 items-center">
           <div className="relative col-span-3 flex items-center gap-5 xl:gap-6 lg:border-r lg:border-white/30 lg:pr-6 min-w-0">
@@ -151,9 +53,13 @@ export default function HeroVideo() {
               <Image
                 src="/images/opjindal.webp"
                 alt="O.P. Jindal Global University"
-                width={288}
-                height={60}
+                width={268}
+                height={86}
+                sizes="(max-width: 1280px) 224px, 256px"
                 className="w-44 lg:w-56 xl:w-64 h-auto object-contain"
+                loading="eager"
+                fetchPriority="low"
+                decoding="async"
               />
             </div>
 
@@ -168,9 +74,13 @@ export default function HeroVideo() {
               <Image
                 src="/images/jindal-global.webp"
                 alt="Jindal Global Law School"
-                width={96}
-                height={96}
+                width={133}
+                height={113}
+                sizes="96px"
                 className="w-16 lg:w-20 xl:w-24 h-auto object-contain"
+                loading="eager"
+                fetchPriority="low"
+                decoding="async"
               />
             </div>
           </div>
@@ -181,34 +91,37 @@ export default function HeroVideo() {
               alt="UGC and BCI Approved"
               width={220}
               height={70}
+              sizes="(max-width: 1280px) 176px, 208px"
               className="w-40 lg:w-44 xl:w-52 h-auto object-contain"
+              loading="eager"
+              fetchPriority="low"
+              decoding="async"
             />
           </div>
         </div>
 
-        {/* Mobile mentorship
-            loading="eager" rather than priority: on a 412x823 phone the hero
-            is 700px tall, so this bar is above the fold and lazy-loading left
-            three logos painting late in the measured viewport. `priority`
-            would fix that too, but it also emits <link rel=preload
-            fetchPriority=high>, which competes with the hero poster that is
-            the LCP element. Eager loads them at normal priority instead. */}
         <div className="md:hidden flex flex-col items-center gap-3 w-full">
           <div className="flex items-center justify-center gap-4">
             <Image
               loading="eager"
+              fetchPriority="low"
+              decoding="async"
               src="/images/opjindal.webp"
               alt="O.P. Jindal Global University"
               width={160}
-              height={48}
+              height={51}
+              sizes="144px"
               className="w-36 h-auto object-contain"
             />
             <Image
               loading="eager"
+              fetchPriority="low"
+              decoding="async"
               src="/images/jindal-global.webp"
               alt="Jindal Global Law School"
               width={56}
-              height={56}
+              height={48}
+              sizes="48px"
               className="w-12 h-12 object-contain"
             />
           </div>
@@ -217,11 +130,14 @@ export default function HeroVideo() {
             (an Institution of Eminence) and Jindal Global Law School under an institutional mentorship agreement.
           </p>
           <Image
-              loading="eager"
+            loading="eager"
+            fetchPriority="low"
+            decoding="async"
             src="/images/approved.webp"
             alt="UGC and BCI Approved"
             width={180}
             height={56}
+            sizes="176px"
             className="w-44 h-auto object-contain"
           />
         </div>

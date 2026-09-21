@@ -34,6 +34,7 @@ function hashTree(dir, rel = "", acc = {}) {
       if (!rel && EXCLUDE_DIRS.has(entry.name)) continue;
       hashTree(path.join(dir, entry.name), childRel, acc);
     } else if (entry.isFile()) {
+      if (entry.name === ".DS_Store") continue;
       acc[childRel] = sha1(path.join(dir, entry.name));
     }
   }
@@ -87,13 +88,30 @@ if (upload.length) {
         skipped.map((f) => `  ${JSON.stringify(f)}`).join("\n")
     );
   }
-  fs.writeFileSync(list, safe.join("\n"));
+  fs.writeFileSync(list, safe.join("\n") + "\n");
   const listAbs = path.resolve(list);
   const archiveAbs = path.resolve(archive);
-  execFileSync("tar", ["-czf", archiveAbs, "-T", listAbs], {
-    cwd: SRC,
-    stdio: "inherit",
-  });
+  // macOS bsdtar: skip AppleDouble / provenance xattrs. Without this, tar can
+  // emit `tar: (null)` and exit 1 after writing, and the archive gains ._ twins
+  // that break Linux/cPanel extraction.
+  execFileSync(
+    "tar",
+    [
+      "--no-xattrs",
+      "--no-mac-metadata",
+      "--no-acls",
+      "--no-fflags",
+      "-czf",
+      archiveAbs,
+      "-T",
+      listAbs,
+    ],
+    {
+      cwd: SRC,
+      stdio: "inherit",
+      env: { ...process.env, COPYFILE_DISABLE: "1" },
+    }
+  );
   fs.unlinkSync(list);
 }
 

@@ -150,6 +150,17 @@ DirectoryIndex index.html index.php
   # ---------------------------------------------------------------------
 `;
 
+// WordPress used /blog/; this site uses /blogs/. Exact per-post rules above
+// only match the bare path, and the trailing-slash stripper only fires when
+// $1.html already exists — so /blog/slug/ never matched and 404'd. These
+// catch-alls (with optional trailing slash) close that gap for every post,
+// while keeping WP taxonomy URLs on the listing page.
+const blogCatchAll = `
+  # Legacy /blog → /blogs (optional trailing slash; runs after exact rules)
+  RewriteRule "^blog/(category|tag|page|author)(/.*)?/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^blog/(.+?)/?$" "/blogs/$1" [R=301,L,NE]
+`;
+
 const footer = `
   # ---------------------------------------------------------------------
   # Next.js static export: serve /about-vmls from about-vmls.html without
@@ -208,6 +219,9 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # Google Search Console expects a fetchable sitemap with an XML content type.
+# Keep this block minimal — SetEnv / RemoveOutputFilter / Header unset caused
+# a host-wide 500 on cPanel (AllowOverride). Compression of the sitemap is
+# avoided by omitting application/xml from AddOutputFilterByType below.
 <IfModule mod_mime.c>
   AddType application/xml .xml
 </IfModule>
@@ -255,7 +269,9 @@ ErrorDocument 404 /404.html
   #
   # The two lists are deliberately disjoint. If a file could be selected by
   # both mechanisms it would be gzipped twice and arrive undecodable.
-  AddOutputFilterByType DEFLATE application/javascript application/json application/xml image/svg+xml
+  # application/xml deliberately omitted — sitemap.xml must stay uncompressed
+  # for Google Search Console (see <Files "sitemap.xml"> above).
+  AddOutputFilterByType DEFLATE application/javascript application/json image/svg+xml
 
   <FilesMatch "\\.(html|css|txt)$">
     SetOutputFilter DEFLATE
@@ -265,7 +281,11 @@ ErrorDocument 404 /404.html
 
 fs.writeFileSync(
   OUT,
-  header + all.flatMap((r) => toRules(r).map((rule) => `  ${rule}`)).join("\n") + "\n" + footer
+  header +
+    all.flatMap((r) => toRules(r).map((rule) => `  ${rule}`)).join("\n") +
+    "\n" +
+    blogCatchAll +
+    footer
 );
 
 console.log(`wrote ${OUT}: ${all.length} redirect rules (${rules.length} from the map, ${legacy.length} legacy assets)`);

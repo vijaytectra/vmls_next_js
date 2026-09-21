@@ -33,6 +33,14 @@ const ROOT = "out";
 // binary junk and times out / fails to parse. Keep sitemaps as plain XML.
 const EXTENSIONS = new Set([".html", ".css", ".js", ".txt", ".json", ".svg", ".map"]);
 
+// Remove any leftover sitemap compressed twins from older builds.
+for (const twin of ["out/sitemap.xml.br", "out/sitemap.xml.gz"]) {
+  if (fs.existsSync(twin)) {
+    fs.unlinkSync(twin);
+    console.log(`removed leftover ${twin}`);
+  }
+}
+
 // Below this, the ~200 bytes of framing costs more than the saving, and every
 // extra file is another line in the manual cPanel upload.
 const MIN_BYTES = 1024;
