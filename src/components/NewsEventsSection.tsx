@@ -43,23 +43,24 @@ export default function NewsEventsSection() {
           {/* Left Column: Featured Newsletter */}
           <div className="lg:w-[45%]">
             <div className="relative group">
-              <div className="relative w-full mb-8 md:mb-10">
+              <div className="relative w-full mb-8 md:mb-10 overflow-hidden rounded-sm shadow-lg bg-[#1a1a1a]">
                 <Image
-                  src="/images/newsletter/vmls-july-september-cover.jpg"
-                  alt="VMLS Newsletter Issue 13 July to September 2026 Cover"
-                  width={1489}
-                  height={2106}
+                  src="/images/newsletter/fundamentum-issue-13-july-september-2026-banner.jpg"
+                  alt="FUNDAMENTUM newsletter Issue 13, July–September 2026 — Vinayaka Mission's Law School"
+                  width={1024}
+                  height={811}
                   sizes="(max-width: 1024px) 100vw, 45vw"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-contain"
+                  priority
                 />
               </div>
               
               <div className="space-y-6">
                 <p className="font-inter text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em]">
-                  September 16, 2026
+                  Issue No. 13 · July – September 2026
                 </p>
                 <h3 className="font-playfair text-3xl md:text-5xl text-gray-900 leading-[1.1] mb-6">
-                  VMLS Newsletter: July to September 2026
+                  FUNDAMENTUM: July to September 2026
                 </h3>
                 <p className="font-inter text-lg text-gray-700 leading-relaxed max-w-2xl text-left">
                   Fundamentum is the official monthly newsletter of Vinayaka Mission&apos;s Law School, 
