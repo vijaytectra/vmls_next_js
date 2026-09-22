@@ -81,16 +81,16 @@ const facultyData: FacultyData[] = [
     ]
   },
   {
-    name: "Ms. Nabeela Siddiqui",
+    name: "Dr. Nabeela Siddiqui",
     role: "Assistant Professor",
     qualifications: "M.L. / LL.M (Constitutional Law and Public Order), University of Madras",
     image: "/images/faculty/live/DSC00449_4.webp",
     slug: "nabeela-siddiqui",
     email: "nabeela@vmls.edu.in",
     bio: [
-      "Ms. Nabeela Siddiqui is an accomplished academician with a strong focus on contemporary issues such as climate change, international water disputes, and cooperation. Throughout her impressive career, she has held esteemed positions at renowned institutions, including CHRIST (Deemed to be University), Dharamshastra National Law University (DNLU), and the National Green Tribunal, Principal Bench, New Delhi.",
-      "Ms. Siddiqui's dedication and commitment to her field have been recognized with prestigious honors, such as the President of India, Dr. Shankar Dayal Sharma Gold Medal, The Innes Prize, The Carmicheal Prize, and The V. Suresham Memorial Award, all of which she earned during her master's program at the esteemed University of Madras, Chennai.",
-      "As an avid researcher, Ms. Siddiqui has authored and co-authored numerous book chapters and articles, many of which are indexed in Scopus and listed in UGC CARE. Her expertise in legal matters and her insights into current affairs have garnered widespread recognition and she is a regular contributor to leading national newspapers and forums, including The Deccan Herald, The Hindu, Economic Political Weekly, Financial Express, among others."
+      "Dr. Nabeela Siddiqui is an accomplished academician with a strong focus on contemporary issues such as climate change, international water disputes, and cooperation. Throughout her impressive career, she has held esteemed positions at renowned institutions, including CHRIST (Deemed to be University), Dharamshastra National Law University (DNLU), and the National Green Tribunal, Principal Bench, New Delhi.",
+      "Dr. Siddiqui's dedication and commitment to her field have been recognized with prestigious honors, such as the President of India, Dr. Shankar Dayal Sharma Gold Medal, The Innes Prize, The Carmicheal Prize, and The V. Suresham Memorial Award, all of which she earned during her master's program at the esteemed University of Madras, Chennai.",
+      "As an avid researcher, Dr. Siddiqui has authored and co-authored numerous book chapters and articles, many of which are indexed in Scopus and listed in UGC CARE. Her expertise in legal matters and her insights into current affairs have garnered widespread recognition and she is a regular contributor to leading national newspapers and forums, including The Deccan Herald, The Hindu, Economic Political Weekly, Financial Express, among others."
     ]
   },
   {
@@ -299,13 +299,13 @@ const facultyData: FacultyData[] = [
     ]
   },
   {
-    name: "Aarthy Jonathan Kennedy",
+    name: "Dr. Aarthy Jonathan Kennedy",
     role: "Assistant Dean - Partnerships & Student Engagement",
     qualifications: "LL.M in Constitutional Law & Human Rights from School of Excellence",
     image: "/images/faculty/live/DSC00643_12.webp",
     slug: "aarthy-jonathan-kennedy",
     bio: [
-      "Ms. Aarthy completed her Bachelor's degree in Law under a Central Government Merit Scholarship from The Tamil Nadu Dr. Ambedkar Law University, School of Excellence in Law, and went on to pursue her Master's in Constitutional Law & Human Rights. She has also obtained an M.Sc. in Psychology from TNOU. In addition to her academic accomplishments, she co-founded Head to Heart (mental health services) and is currently pursuing her Ph.D."
+      "Dr. Aarthy completed her Bachelor's degree in Law under a Central Government Merit Scholarship from The Tamil Nadu Dr. Ambedkar Law University, School of Excellence in Law, and went on to pursue her Master's in Constitutional Law & Human Rights. She has also obtained an M.Sc. in Psychology from TNOU. In addition to her academic accomplishments, she co-founded Head to Heart (mental health services)."
     ]
   },
   {

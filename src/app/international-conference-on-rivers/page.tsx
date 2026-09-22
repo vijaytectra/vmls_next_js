@@ -507,7 +507,7 @@ export default function InternationalConferencePage() {
                 { name: "Navidreza Ahadi", role: "Srinakharinwirot University - SWU Thailand" },
                 { name: "Aurangzaib Alizai", role: "University of Balochistan- Pakisthan" },
                 { name: "Dr Sanga Mithra", role: "VMLS, Chennai" },
-                { name: "Nabeela Siddiqui", role: "VMLS, Chennai" },
+                { name: "Dr. Nabeela Siddiqui", role: "VMLS, Chennai" },
                 { name: "Shambhavi Thakur", role: "VMLS, Chennai" }
               ].map((member, idx) => (
                 <div key={idx} className="flex items-start gap-3">
@@ -539,7 +539,7 @@ export default function InternationalConferencePage() {
                 {
                   img: "/images/rivers/nabeela.webp",
                   badge: "CONFERENCE CHAIR",
-                  name: "Ms. Nabeela Siddiqui",
+                  name: "Dr. Nabeela Siddiqui",
                   role: "Assistant Professor, Vinayaka Mission's Law School"
                 },
                 {

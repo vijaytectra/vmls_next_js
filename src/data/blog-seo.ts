@@ -1045,7 +1045,7 @@ export const BLOG_SEO: Record<string, BlogSeo> = {
   "need-for-environmental-law-clinics-in-india": {
     "slug": "need-for-environmental-law-clinics-in-india",
     "title": "Need for Environmental Law Clinics in India",
-    "author": "Nabeela Siddiqui",
+    "author": "Dr. Nabeela Siddiqui",
     "date": "June 02, 2025",
     "image": "/images/blogs/need-for-environmental-law-clinics-in-india__environmental.webp",
     "description": "The importance of clinical legal education has been growing awareness as an essential component of modern legal training, where students can learn by…"

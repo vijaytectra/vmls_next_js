@@ -53,7 +53,7 @@ const facultyData: FacultyMember[] = [
     href: "/faculty/sinjini-sen",
   },
   {
-    name: "Nabeela Siddiqui",
+    name: "Dr. Nabeela Siddiqui",
     role: "Assistant Professor",
     qualifications: "M.L. / LL.M (Constitutional Law and Public Order), University of Madras",
     image: "/images/faculty/live/DSC00449_4.webp",
@@ -165,7 +165,7 @@ const facultyData: FacultyMember[] = [
     href: "/faculty/gaurav-shukla",
   },
   {
-    name: "Aarthy Jonathan Kennedy",
+    name: "Dr. Aarthy Jonathan Kennedy",
     role: "Assistant Dean - Partnerships & Student Engagement",
     qualifications: "LL.M in Constitutional Law & Human Rights from School of Excellence",
     image: "/images/faculty/live/DSC00643_12.webp",
