@@ -34,11 +34,27 @@ const ROOT = "out";
 const EXTENSIONS = new Set([".html", ".css", ".js", ".txt", ".json", ".svg", ".map"]);
 
 // Remove any leftover sitemap compressed twins from older builds.
-for (const twin of ["out/sitemap.xml.br", "out/sitemap.xml.gz"]) {
+for (const twin of [
+  "out/sitemap.xml.br",
+  "out/sitemap.xml.gz",
+  "out/sitemap-gsc.xml.br",
+  "out/sitemap-gsc.xml.gz",
+]) {
   if (fs.existsSync(twin)) {
     fs.unlinkSync(twin);
     console.log(`removed leftover ${twin}`);
   }
+}
+
+// Dedicated GSC sitemap (same idea as AVMC's sitemap-gsc.xml): a plain copy of
+// the Next-generated sitemap, always uncompressed, for Search Console submit.
+const sitemap = path.join(ROOT, "sitemap.xml");
+const sitemapGsc = path.join(ROOT, "sitemap-gsc.xml");
+if (fs.existsSync(sitemap)) {
+  fs.copyFileSync(sitemap, sitemapGsc);
+  console.log(`wrote ${sitemapGsc}`);
+} else {
+  console.warn("out/sitemap.xml missing — run next build before precompress");
 }
 
 // Below this, the ~200 bytes of framing costs more than the saving, and every

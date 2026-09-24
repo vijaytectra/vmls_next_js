@@ -368,5 +368,80 @@ export const MANUAL_REDIRECTS: Redirect[] = [
     "source": "/contact.html",
     "destination": "/contact-us",
     "permanent": true
+  },
+  {
+    "source": "/llb",
+    "destination": "/admissions/llb",
+    "permanent": true
+  },
+  {
+    "source": "/llb/",
+    "destination": "/admissions/llb",
+    "permanent": true
+  },
+  {
+    "source": "/llm",
+    "destination": "/admissions/llm",
+    "permanent": true
+  },
+  {
+    "source": "/admission",
+    "destination": "/admissions/process",
+    "permanent": true
+  },
+  {
+    "source": "/admission/",
+    "destination": "/admissions/process",
+    "permanent": true
+  },
+  {
+    "source": "/admissions",
+    "destination": "/admissions/process",
+    "permanent": true
+  },
+  {
+    "source": "/admissions/",
+    "destination": "/admissions/process",
+    "permanent": true
+  },
+  {
+    "source": "/ba-llb",
+    "destination": "/admissions/llb",
+    "permanent": true
+  },
+  {
+    "source": "/bba-llb",
+    "destination": "/admissions/llb",
+    "permanent": true
+  },
+  {
+    "source": "/help",
+    "destination": "/anti-ragging",
+    "permanent": true
+  },
+  {
+    "source": "/help/",
+    "destination": "/anti-ragging",
+    "permanent": true
+  },
+  {
+    "source": "/privacy",
+    "destination": "/privacy-policy",
+    "permanent": true
+  },
+  {
+    "source": "/terms",
+    "destination": "/terms-conditions",
+    "permanent": true
+  },
+  {
+    "source": "/home",
+    "destination": "/",
+    "permanent": true
+  },
+  {
+    "source": "/home/",
+    "destination": "/",
+    "permanent": true
   }
 ];

@@ -14,7 +14,7 @@ export default function TeachingLearningToolsPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/iqac/report-on-workshop2.webp"
+          src="/images/iqac/iqac-2.webp"
           alt="Teaching and Learning Tools Workshop"
           fill
           className="object-cover"
@@ -77,7 +77,7 @@ export default function TeachingLearningToolsPage() {
           <div className="lg:w-1/2 w-full">
             <div className="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
               <Image
-                src="/images/iqac/report-on-workshop2.webp"
+                src="/images/iqac/iqac-2.webp"
                 alt="AI Workshop Session"
                 fill
                 className="object-cover"
@@ -107,7 +107,7 @@ export default function TeachingLearningToolsPage() {
           <div className="lg:w-1/2 w-full">
             <div className="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/iqac/report-on-workshop1.webp"
+                src="/images/iqac/iqac-1.webp"
                 alt="AI Tools Demonstration"
                 fill
                 className="object-cover"

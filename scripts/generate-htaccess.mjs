@@ -44,6 +44,19 @@ const rules = [
   ...readRedirects("src/data/redirects.ts", "export const REDIRECTS"),
 ].filter((r) => !seenSource.has(r.source) && seenSource.add(r.source));
 
+// GSC "Not found (404)" under All known pages is driven by legacy bare paths
+// Google still knows (e.g. /contact, /about) while we only redirected the
+// .html twin (/contact.html). Emit a bare twin for every .html source that
+// does not already have one and is not already the destination page.
+for (const r of [...rules]) {
+  if (!r.source.endsWith(".html")) continue;
+  const bare = r.source.slice(0, -5);
+  if (!bare || bare === "/" || seenSource.has(bare)) continue;
+  if (bare === r.destination) continue;
+  rules.push({ source: bare, destination: r.destination, permanent: r.permanent });
+  seenSource.add(bare);
+}
+
 // The middleware's rules, kept in the parked file so they stay in one place.
 const legacySrc = fs.readFileSync("scripts/legacy-asset-redirects.ts.bak", "utf8");
 const legacy = [
@@ -125,14 +138,17 @@ DirectoryIndex index.html index.php
   RewriteRule "^(${SIBLING_APPS.join("|")})(/|$)" - [L]
 
   # ---------------------------------------------------------------------
-  # Sitemap must be reachable as plain HTTPS XML. Legacy precompress twins
-  # (sitemap.xml.br / .gz) poisoned Googlebot fetches — send them to the
-  # real sitemap, and force HTTPS for this one path even while the site-wide
-  # canonical host rules stay commented out.
+  # Sitemap must be reachable as plain HTTPS XML on the apex host.
+  # Legacy precompress twins (sitemap.xml.br / .gz) poisoned Googlebot
+  # fetches — send them to the real sitemap. Force HTTPS + apex for this
+  # path even while the site-wide canonical host rules stay commented out,
+  # so a www GSC property does not read apex URLs from a www sitemap URL.
+  # sitemap-gsc.xml is the dedicated Search Console copy (same pattern as AVMC).
   # ---------------------------------------------------------------------
-  RewriteRule "^sitemap\\.xml\\.(br|gz)$" "/sitemap.xml" [R=301,L]
-  RewriteCond %{HTTPS} off
-  RewriteRule "^sitemap\\.xml$" "https://vmls.edu.in/sitemap.xml" [R=301,L]
+  RewriteRule "^sitemap(-gsc)?\\.xml\\.(br|gz)$" "https://vmls.edu.in/sitemap$1.xml" [R=301,L]
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\\.vmls\\.edu\\.in$ [NC]
+  RewriteRule "^sitemap(-gsc)?\\.xml$" "https://vmls.edu.in/sitemap$1.xml" [R=301,L]
 
   # ---------------------------------------------------------------------
   # Canonical host. Left commented out deliberately: switching these on
@@ -151,14 +167,24 @@ DirectoryIndex index.html index.php
 `;
 
 // WordPress used /blog/; this site uses /blogs/. Exact per-post rules above
-// only match the bare path, and the trailing-slash stripper only fires when
-// $1.html already exists — so /blog/slug/ never matched and 404'd. These
-// catch-alls (with optional trailing slash) close that gap for every post,
-// while keeping WP taxonomy URLs on the listing page.
+// only match known slugs. Unknown /blog/<slug> used to 301 to
+// /blogs/<slug> and then 404 — that minted GSC "Not found" URLs. Only rewrite
+// when the destination page exists; otherwise send the visitor to /blogs.
 const blogCatchAll = `
   # Legacy /blog → /blogs (optional trailing slash; runs after exact rules)
-  RewriteRule "^blog/(category|tag|page|author)(/.*)?/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^blog/(category|tag|page|author|feed|amp|comments)(/.*)?/?$" "/blogs" [R=301,L,NE]
+  RewriteCond %{DOCUMENT_ROOT}/blogs/$1.html -f
   RewriteRule "^blog/(.+?)/?$" "/blogs/$1" [R=301,L,NE]
+  RewriteRule "^blog/(.+?)/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^blog/?$" "/blogs" [R=301,L,NE]
+
+  # Root WordPress taxonomy / feed URLs (not under /blog/)
+  RewriteRule "^(category|tag|author)(/.*)?/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^(feed|comments/feed)/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^wp-(admin|login\\.php|content|includes)(/.*)?$" "/" [R=301,L,NE]
+
+  # Directory without an index (DirectorySlash Off → 403 otherwise)
+  RewriteRule "^admissions/?$" "/admissions/process" [R=301,L,NE]
 `;
 
 const footer = `
@@ -226,19 +252,24 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # Google Search Console expects a fetchable sitemap with an XML content type.
-# Keep this block minimal — SetEnv / RemoveOutputFilter / Header unset caused
-# a host-wide 500 on cPanel (AllowOverride). Compression of the sitemap is
-# avoided by omitting application/xml from AddOutputFilterByType below.
+# Keep this block minimal — SetEnv / RemoveOutputFilter caused a host-wide
+# 500 on cPanel (AllowOverride). application/xml is omitted from
+# AddOutputFilterByType below; RequestHeader strips Accept-Encoding so a
+# parent/server-level DEFLATE filter cannot still gzip the sitemap for
+# Googlebot (gzipped XML has previously shown up as "Couldn't fetch").
 <IfModule mod_mime.c>
   AddType application/xml .xml
 </IfModule>
 
-<Files "sitemap.xml">
+<FilesMatch "^sitemap(-gsc)?\\.xml$">
   <IfModule mod_headers.c>
+    # Strip Accept-Encoding so parent/server DEFLATE cannot gzip this file.
+    # Do not use SetEnv/RemoveOutputFilter/Header unset — those 500 on this host.
+    RequestHeader unset Accept-Encoding
     Header set Content-Type "application/xml; charset=UTF-8"
     Header set Cache-Control "public, max-age=3600"
   </IfModule>
-</Files>
+</FilesMatch>
 
 <IfModule mod_headers.c>
   # Standard security headers to mitigate clickjacking, XSS, and downgrade attacks

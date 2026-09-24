@@ -40,14 +40,17 @@ DirectoryIndex index.html index.php
   RewriteRule "^(exam|vlat|vlat-exam|vlat-exam21|wordpress blogs dont touch this)(/|$)" - [L]
 
   # ---------------------------------------------------------------------
-  # Sitemap must be reachable as plain HTTPS XML. Legacy precompress twins
-  # (sitemap.xml.br / .gz) poisoned Googlebot fetches — send them to the
-  # real sitemap, and force HTTPS for this one path even while the site-wide
-  # canonical host rules stay commented out.
+  # Sitemap must be reachable as plain HTTPS XML on the apex host.
+  # Legacy precompress twins (sitemap.xml.br / .gz) poisoned Googlebot
+  # fetches — send them to the real sitemap. Force HTTPS + apex for this
+  # path even while the site-wide canonical host rules stay commented out,
+  # so a www GSC property does not read apex URLs from a www sitemap URL.
+  # sitemap-gsc.xml is the dedicated Search Console copy (same pattern as AVMC).
   # ---------------------------------------------------------------------
-  RewriteRule "^sitemap\.xml\.(br|gz)$" "/sitemap.xml" [R=301,L]
-  RewriteCond %{HTTPS} off
-  RewriteRule "^sitemap\.xml$" "https://vmls.edu.in/sitemap.xml" [R=301,L]
+  RewriteRule "^sitemap(-gsc)?\.xml\.(br|gz)$" "https://vmls.edu.in/sitemap$1.xml" [R=301,L]
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\.vmls\.edu\.in$ [NC]
+  RewriteRule "^sitemap(-gsc)?\.xml$" "https://vmls.edu.in/sitemap$1.xml" [R=301,L]
 
   # ---------------------------------------------------------------------
   # Canonical host. Left commented out deliberately: switching these on
@@ -60,7 +63,7 @@ DirectoryIndex index.html index.php
   # RewriteRule ^(.*)$ https://vmls.edu.in/$1 [R=301,L]
 
   # ---------------------------------------------------------------------
-  # 301s from the previous static site. 339 rules.
+  # 301s from the previous static site. 500 rules.
   # These must stay ABOVE the extensionless-URL rewrite below.
   # ---------------------------------------------------------------------
   RewriteRule "^faculty$" "/faculty-profiles" [R=301,L,NE]
@@ -136,6 +139,20 @@ DirectoryIndex index.html index.php
   RewriteRule "^llm/$" "/admissions/llm" [R=301,L,NE]
   RewriteRule "^academics\.html$" "/admissions/llb" [R=301,L,NE]
   RewriteRule "^contact\.html$" "/contact-us" [R=301,L,NE]
+  RewriteRule "^llb$" "/admissions/llb" [R=301,L,NE]
+  RewriteRule "^llb/$" "/admissions/llb" [R=301,L,NE]
+  RewriteRule "^llm$" "/admissions/llm" [R=301,L,NE]
+  RewriteRule "^admission$" "/admissions/process" [R=301,L,NE]
+  RewriteRule "^admission/$" "/admissions/process" [R=301,L,NE]
+  RewriteRule "^admissions$" "/admissions/process" [R=301,L,NE]
+  RewriteRule "^admissions/$" "/admissions/process" [R=301,L,NE]
+  RewriteRule "^ba-llb$" "/admissions/llb" [R=301,L,NE]
+  RewriteRule "^bba-llb$" "/admissions/llb" [R=301,L,NE]
+  RewriteRule "^help$" "/anti-ragging" [R=301,L,NE]
+  RewriteRule "^privacy$" "/privacy-policy" [R=301,L,NE]
+  RewriteRule "^terms$" "/terms-conditions" [R=301,L,NE]
+  RewriteRule "^home$" "/" [R=301,L,NE]
+  RewriteRule "^home/$" "/" [R=301,L,NE]
   RewriteRule "^blogs/corporate-law-courses-in-india-degrees-eligibility-salary\.html$" "/blogs/corporate-law-courses-in-india-degrees-eligibility-salary" [R=301,L,NE]
   RewriteRule "^blogs/criminal-law-in-chennai-curriculum-degrees-careers\.html$" "/blogs/criminal-law-in-chennai-curriculum-degrees-careers" [R=301,L,NE]
   RewriteRule "^blogs/india-anti-paper-leak-law-2026-explained\.html$" "/blogs/india-anti-paper-leak-law-2026-explained" [R=301,L,NE]
@@ -400,13 +417,172 @@ DirectoryIndex index.html index.php
   RewriteRule "^blogs/moot-court-law-school-why-it-matters\.html$" "/blogs/moot-court-law-school-why-it-matters" [R=301,L,NE]
   RewriteRule "^blogs/law-school-internships-year-by-year-guide\.html$" "/blogs/law-school-internships-year-by-year-guide" [R=301,L,NE]
   RewriteRule "^blogs/global-exposure-indian-law-schools-mentorship\.html$" "/blogs/global-exposure-indian-law-schools-mentorship" [R=301,L,NE]
+  RewriteRule "^dr-jacob-joseph$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^news/aarambh-the-freshers-fiesta$" "/news/aarambh-fiesta" [R=301,L,NE]
+  RewriteRule "^news/vmls-fest-2025-two-days-infinite-vibes-one-unforgettable-experience$" "/news/vmls-fest-2025" [R=301,L,NE]
+  RewriteRule "^news/lspl-where-law-meets-football-and-unity-scores-big$" "/news/lspl" [R=301,L,NE]
+  RewriteRule "^news/students-secures-award-at-international-conference-on-women-and-ai$" "/news/women-and-ai-conference" [R=301,L,NE]
+  RewriteRule "^achievements$" "/faculty-achievements" [R=301,L,NE]
+  RewriteRule "^career-services-and-placement$" "/internship-and-career-services" [R=301,L,NE]
+  RewriteRule "^chat-with-a-student$" "/chat-with-student" [R=301,L,NE]
+  RewriteRule "^Collaborations$" "/collaborations" [R=301,L,NE]
+  RewriteRule "^news-and-events$" "/news" [R=301,L,NE]
+  RewriteRule "^governance-policy$" "/about-vmls" [R=301,L,NE]
+  RewriteRule "^legal-literacy-camp$" "/centre-for-access-to-justice" [R=301,L,NE]
+  RewriteRule "^professional-development-program$" "/iqac/workshops/pdp" [R=301,L,NE]
+  RewriteRule "^workshops-and-seminars$" "/iqac/workshops" [R=301,L,NE]
+  RewriteRule "^report-on-workshop$" "/iqac/workshops" [R=301,L,NE]
+  RewriteRule "^Justice-P\.Kalaiyarasan$" "/board-of-advisors/justice-p-kalaiyarasan" [R=301,L,NE]
+  RewriteRule "^Mr\.Abhijit-Mukhopadhyay$" "/board-of-advisors/mr-abhijit-mukhopadhyay" [R=301,L,NE]
+  RewriteRule "^Mr\.Promod-Nair$" "/board-of-advisors/mr-promod-nair" [R=301,L,NE]
+  RewriteRule "^Padma-Sri-Dr\.T\.K\.Viswanathan$" "/board-of-advisors/padma-sri-dr-tk-viswanathan" [R=301,L,NE]
+  RewriteRule "^Prof\.Dr\.Chockalingam$" "/board-of-advisors/prof-dr-chockalingam" [R=301,L,NE]
+  RewriteRule "^Mr\.Sachinkumar$" "/faculty/sachinkumar-p-p" [R=301,L,NE]
+  RewriteRule "^full-time-phd-law-interdisciplinary-studies$" "/blogs/full-time-phd-in-law-and-interdisciplinary-studies" [R=301,L,NE]
+  RewriteRule "^part-time-phd-law-interdisciplinary-studies$" "/blogs/part-time-phd-in-law-and-interdisciplinary-studies" [R=301,L,NE]
+  RewriteRule "^vmrf-law-aptitude-test-vlat$" "/blogs/vmrf-law-aptitude-test-vlat" [R=301,L,NE]
+  RewriteRule "^vinayaka-missions-law-admission-test-VLAT$" "/blogs/vmrf-law-admission-test-vlat" [R=301,L,NE]
+  RewriteRule "^Dr\.AnanthPadmanabhan$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^Prof\.Dr\.Ananth-Padmanabhan$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^jharna-jagtiani$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^josna-m$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^Ms\.Shambhavi-Thakur$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^najeed-naved-siddiqui$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^academics$" "/admissions/llb" [R=301,L,NE]
+  RewriteRule "^contact$" "/contact-us" [R=301,L,NE]
+  RewriteRule "^vmls-open-day-2026$" "/blogs/vmls-open-day-2026" [R=301,L,NE]
+  RewriteRule "^About-VMRF$" "/about-vmrf" [R=301,L,NE]
+  RewriteRule "^Scholarships$" "/scholarships" [R=301,L,NE]
+  RewriteRule "^about$" "/about-vmls" [R=301,L,NE]
+  RewriteRule "^centre-for-maritime-law$" "/maritime-law" [R=301,L,NE]
+  RewriteRule "^centre-for-the-promotion-of-international-law$" "/cpil" [R=301,L,NE]
+  RewriteRule "^deans-desk$" "/dean" [R=301,L,NE]
+  RewriteRule "^news/1st-CJT-Lecture$" "/news" [R=301,L,NE]
+  RewriteRule "^news/appointment-of-executive-dean$" "/news" [R=301,L,NE]
+  RewriteRule "^news/bhagwan-shankar-lecture-vmls$" "/news" [R=301,L,NE]
+  RewriteRule "^news/career-prospects-in-the-banking-sector$" "/news" [R=301,L,NE]
+  RewriteRule "^news/digitalization-government-legal-concerns$" "/news" [R=301,L,NE]
+  RewriteRule "^news/empowering-justice-legal-aid-camp-vinayaka-missions$" "/news" [R=301,L,NE]
+  RewriteRule "^news/first-graduation-ceremony$" "/news" [R=301,L,NE]
+  RewriteRule "^news/fundamental-theories-corporate-governance$" "/news" [R=301,L,NE]
+  RewriteRule "^news/fundamentals-constitutional-law-theory-practice$" "/news" [R=301,L,NE]
+  RewriteRule "^news/giec-fireside-chat$" "/news" [R=301,L,NE]
+  RewriteRule "^news/guest-lecture-appreciating-modern-indian-company-law-key-foundational-principles$" "/news" [R=301,L,NE]
+  RewriteRule "^news/guest-lecture-rera-disputes$" "/news" [R=301,L,NE]
+  RewriteRule "^news/inauguration-and-commencement-programme-2025-26$" "/news" [R=301,L,NE]
+  RewriteRule "^news/inauguration-day$" "/news" [R=301,L,NE]
+  RewriteRule "^news/inauguration-of-legal-aid-clinic-at-vmls$" "/news" [R=301,L,NE]
+  RewriteRule "^news/indias-most-promising-emerging-law-school-2025$" "/news" [R=301,L,NE]
+  RewriteRule "^news/lecture-corporate-commercial-laws$" "/news" [R=301,L,NE]
+  RewriteRule "^news/lecture-ethics-of-research$" "/news" [R=301,L,NE]
+  RewriteRule "^news/legal-aid-cell-orientation-program$" "/news" [R=301,L,NE]
+  RewriteRule "^news/legal-awareness-rally$" "/news" [R=301,L,NE]
+  RewriteRule "^news/legal-design-competition$" "/news" [R=301,L,NE]
+  RewriteRule "^news/legal-literacy-camp$" "/news" [R=301,L,NE]
+  RewriteRule "^news/llm-inauguration$" "/news" [R=301,L,NE]
+  RewriteRule "^news/lspl-season-2$" "/news" [R=301,L,NE]
+  RewriteRule "^news/masterclass-natasha-varyani$" "/news" [R=301,L,NE]
+  RewriteRule "^news/moot-court-competitions$" "/news" [R=301,L,NE]
+  RewriteRule "^news/mou-with-roger-williams-university-school-of-law$" "/news" [R=301,L,NE]
+  RewriteRule "^news/mou-with-sri-ragini-dharmasthaapanam$" "/news" [R=301,L,NE]
+  RewriteRule "^news/nss-lake-cleaning-drive$" "/news" [R=301,L,NE]
+  RewriteRule "^news/onam-celebration-a-tapestry-of-tradition-unity-and-joy$" "/news" [R=301,L,NE]
+  RewriteRule "^news/one-day-life-at-vmls$" "/news" [R=301,L,NE]
+  RewriteRule "^news/professional-development-program-on-becoming-an-inspiring-teacher$" "/news" [R=301,L,NE]
+  RewriteRule "^news/research-importance-application-after-law-school$" "/news" [R=301,L,NE]
+  RewriteRule "^news/special-lecture-trial-advocacy-skills$" "/news" [R=301,L,NE]
+  RewriteRule "^news/student-immersion-program-jindal-global-law-school$" "/news" [R=301,L,NE]
+  RewriteRule "^news/students-won-best-presenter-awards-at-national-conference$" "/news" [R=301,L,NE]
+  RewriteRule "^news/the-free-legal-awareness-camp$" "/news" [R=301,L,NE]
+  RewriteRule "^news/vigneshwaran-k-wins-debate-competition-at-clcexcellence-2026$" "/news" [R=301,L,NE]
+  RewriteRule "^news/vinayaka-missions-law-school-inaugurates-2024-25-batch-with-distinguished-guests$" "/news" [R=301,L,NE]
+  RewriteRule "^news/virtual-panel-discussion-climate-change$" "/news" [R=301,L,NE]
+  RewriteRule "^news/vmls-75th-national-constitution-day$" "/news" [R=301,L,NE]
+  RewriteRule "^news/vmrf-signs-mou-with-k-kccs-india-to-strengthen-japan-pathways-for-students$" "/news" [R=301,L,NE]
+  RewriteRule "^seminar-halls$" "/seminar-hall" [R=301,L,NE]
+  RewriteRule "^Avni-Singh-Solanki$" "/faculty/avni-singh-solanki" [R=301,L,NE]
+  RewriteRule "^Dr\.A\.Francis-Julian$" "/mentoring-committee/dr-a-francis-julian" [R=301,L,NE]
+  RewriteRule "^Dr\.A\.S\.Ganesan$" "/chancellor" [R=301,L,NE]
+  RewriteRule "^Dr\.A\.Shanmugasundaram$" "/founder" [R=301,L,NE]
+  RewriteRule "^Dr\.Anuradha-Ganesan$" "/about-vmrf" [R=301,L,NE]
+  RewriteRule "^Dr\.Fowmina$" "/faculty/fowmina" [R=301,L,NE]
+  RewriteRule "^Dr\.Gnana-Sanga-Mithra\.S$" "/faculty/gnana-sanga-mithra" [R=301,L,NE]
+  RewriteRule "^Dr\.Padmanabha-Ramanunjam$" "/mentoring-committee/dr-padmanabha-ramanujam" [R=301,L,NE]
+  RewriteRule "^Dr\.Sachinkumar$" "/faculty/sachinkumar-p-p" [R=301,L,NE]
+  RewriteRule "^Dr\.Shenbagavalli$" "/faculty/shenbagavalli" [R=301,L,NE]
+  RewriteRule "^Mr\.Antony-R\.Julian$" "/mentoring-committee/mr-antony-r-julian" [R=301,L,NE]
+  RewriteRule "^Mr\.Edhaya-Chandran$" "/faculty/edhaya-chandran" [R=301,L,NE]
+  RewriteRule "^Mr\.J\.Suresh-Samuel$" "/mentoring-committee/mr-j-suresh-samuel" [R=301,L,NE]
+  RewriteRule "^Mr\.Krishna-Kishore-Padala$" "/faculty/krishna-kishore-padala" [R=301,L,NE]
+  RewriteRule "^Mr\.Vivek-Dhokalia$" "/mentoring-committee/mr-vivek-dhokalia" [R=301,L,NE]
+  RewriteRule "^Mr\.victor$" "/faculty/victor" [R=301,L,NE]
+  RewriteRule "^Mr_Siddharth_raja$" "/dean" [R=301,L,NE]
+  RewriteRule "^Ms\.Chesha-P\.Chellappan$" "/faculty/chesha-p-chellappan" [R=301,L,NE]
+  RewriteRule "^Ms\.Merlin-Stephen$" "/faculty/merlin-stephen" [R=301,L,NE]
+  RewriteRule "^Ms\.Nabeela-Siddiqui$" "/faculty/nabeela-siddiqui" [R=301,L,NE]
+  RewriteRule "^Ms\.Sinjini-Sen$" "/faculty/sinjini-sen" [R=301,L,NE]
+  RewriteRule "^Prof\.Anand-Prakash-Mishra$" "/mentoring-committee/prof-anand-prakash-mishra" [R=301,L,NE]
+  RewriteRule "^Prof\.Dr\.C\.Raj%20Kumar$" "/mentoring-committee/prof-dr-c-raj-kumar" [R=301,L,NE]
+  RewriteRule "^Prof\.Dr\.C\.Raj Kumar$" "/mentoring-committee/prof-dr-c-raj-kumar" [R=301,L,NE]
+  RewriteRule "^Prof\.Dr\.Sreejith-S\.G$" "/mentoring-committee/prof-dr-sreejith-sg" [R=301,L,NE]
+  RewriteRule "^Stalin-Harikaran-N$" "/faculty/stalin-harikaran-n" [R=301,L,NE]
+  RewriteRule "^abhinandita$" "/faculty/abhinandita-biswas" [R=301,L,NE]
+  RewriteRule "^abhinaya-ramesh$" "/faculty/abhinaya-ramesh" [R=301,L,NE]
+  RewriteRule "^abraham-s$" "/faculty/abraham-s" [R=301,L,NE]
+  RewriteRule "^akshara-nair$" "/faculty/akshara-nair" [R=301,L,NE]
+  RewriteRule "^ashwani-kumar-singh$" "/faculty/ashwani-kumar-singh" [R=301,L,NE]
+  RewriteRule "^dr-alisha-verma$" "/faculty/alisha-verma" [R=301,L,NE]
+  RewriteRule "^dr-anuttama-ghose$" "/faculty/anuttama-ghose" [R=301,L,NE]
+  RewriteRule "^dr-arun-d-raj$" "/faculty/arun-d-raj" [R=301,L,NE]
+  RewriteRule "^dr-gaurav-shukla$" "/faculty/gaurav-shukla" [R=301,L,NE]
+  RewriteRule "^dr-muthuvelu$" "/faculty/muthuvelu" [R=301,L,NE]
+  RewriteRule "^dr-s-suganya$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^dr-shabin-os$" "/faculty/shabin-o-s" [R=301,L,NE]
+  RewriteRule "^dr-yazhini-a$" "/faculty/yazhini-a" [R=301,L,NE]
+  RewriteRule "^hartej-singh$" "/faculty/hartej-singh" [R=301,L,NE]
+  RewriteRule "^kamala-priyadarshini$" "/faculty/kamala-priyadarshini" [R=301,L,NE]
+  RewriteRule "^kush-tanvani$" "/faculty/kush-tanvani" [R=301,L,NE]
+  RewriteRule "^luke-jackson$" "/faculty/luke-jackson" [R=301,L,NE]
+  RewriteRule "^mike-ruban$" "/faculty/mike-ruban" [R=301,L,NE]
+  RewriteRule "^ms-aarthy-jonathan-kennedy$" "/faculty/aarthy-jonathan-kennedy" [R=301,L,NE]
+  RewriteRule "^ms-kiran-jenifer$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^ms-r-sneha$" "/faculty/r-sneha" [R=301,L,NE]
+  RewriteRule "^narayanan-chandrasekar$" "/faculty/narayanan-chandrasekar" [R=301,L,NE]
+  RewriteRule "^news/vmls-signs-mou-with-university-of-san-diego$" "/news" [R=301,L,NE]
+  RewriteRule "^news/womens-hygiene-drive$" "/news" [R=301,L,NE]
+  RewriteRule "^shubham-shukla$" "/faculty/shubham-shukla" [R=301,L,NE]
+  RewriteRule "^sm-aamir-ali$" "/faculty/aamir-ali" [R=301,L,NE]
+  RewriteRule "^sowmiya-narayan-rajagopalan$" "/faculty/sowmiya-narayan-rajagopalan" [R=301,L,NE]
+  RewriteRule "^srinivas-raman$" "/faculty/srinivas-raman" [R=301,L,NE]
+  RewriteRule "^tathagat-sharma$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^winfred-chelliah$" "/faculty/winfred-chelliah" [R=301,L,NE]
+  RewriteRule "^llb-programme$" "/admissions/llb" [R=301,L,NE]
+  RewriteRule "^llm-programme$" "/admissions/llm" [R=301,L,NE]
+  RewriteRule "^Campus$" "/campus-life" [R=301,L,NE]
+  RewriteRule "^Contact-Us$" "/contact-us" [R=301,L,NE]
+  RewriteRule "^Mr\.Ananyo-Mitra$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^how-to-apply$" "/admissions/process" [R=301,L,NE]
+  RewriteRule "^Mr\.Saravanan-R$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^dr-kannan-kunnathully$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^ms-rudra-chandran-l$" "/faculty-profiles" [R=301,L,NE]
   RewriteRule "^assets/images/newsletter/Newsletter_April_to_May_2026 \(E\)\.pdf$" "/images/newsletter/newsletter-april-to-may-2026-en.pdf" [R=301,L,NE]
   RewriteRule "^assets/images/newsletter/Newsletter_April_to_May_2026 \(T\)\.pdf$" "/images/newsletter/newsletter-april-to-may-2026-ta.pdf" [R=301,L,NE]
   RewriteRule "^public/newsletter/NewsLetterNovemberToDecember-2025 \(Tamil\)\.pdf$" "/images/newsletter/NewsLetterNovemberToDecember-2025 (Tamil).pdf" [R=301,L,NE]
 
   # Legacy /blog → /blogs (optional trailing slash; runs after exact rules)
-  RewriteRule "^blog/(category|tag|page|author)(/.*)?/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^blog/(category|tag|page|author|feed|amp|comments)(/.*)?/?$" "/blogs" [R=301,L,NE]
+  RewriteCond %{DOCUMENT_ROOT}/blogs/$1.html -f
   RewriteRule "^blog/(.+?)/?$" "/blogs/$1" [R=301,L,NE]
+  RewriteRule "^blog/(.+?)/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^blog/?$" "/blogs" [R=301,L,NE]
+
+  # Root WordPress taxonomy / feed URLs (not under /blog/)
+  RewriteRule "^(category|tag|author)(/.*)?/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^(feed|comments/feed)/?$" "/blogs" [R=301,L,NE]
+  RewriteRule "^wp-(admin|login\.php|content|includes)(/.*)?$" "/" [R=301,L,NE]
+
+  # Directory without an index (DirectorySlash Off → 403 otherwise)
+  RewriteRule "^admissions/?$" "/admissions/process" [R=301,L,NE]
 
   # ---------------------------------------------------------------------
   # Next.js static export: serve /about-vmls from about-vmls.html without
@@ -472,19 +648,24 @@ ErrorDocument 404 /404.html
 </IfModule>
 
 # Google Search Console expects a fetchable sitemap with an XML content type.
-# Keep this block minimal — SetEnv / RemoveOutputFilter / Header unset caused
-# a host-wide 500 on cPanel (AllowOverride). Compression of the sitemap is
-# avoided by omitting application/xml from AddOutputFilterByType below.
+# Keep this block minimal — SetEnv / RemoveOutputFilter caused a host-wide
+# 500 on cPanel (AllowOverride). application/xml is omitted from
+# AddOutputFilterByType below; RequestHeader strips Accept-Encoding so a
+# parent/server-level DEFLATE filter cannot still gzip the sitemap for
+# Googlebot (gzipped XML has previously shown up as "Couldn't fetch").
 <IfModule mod_mime.c>
   AddType application/xml .xml
 </IfModule>
 
-<Files "sitemap.xml">
+<FilesMatch "^sitemap(-gsc)?\.xml$">
   <IfModule mod_headers.c>
+    # Strip Accept-Encoding so parent/server DEFLATE cannot gzip this file.
+    # Do not use SetEnv/RemoveOutputFilter/Header unset — those 500 on this host.
+    RequestHeader unset Accept-Encoding
     Header set Content-Type "application/xml; charset=UTF-8"
     Header set Cache-Control "public, max-age=3600"
   </IfModule>
-</Files>
+</FilesMatch>
 
 <IfModule mod_headers.c>
   # Standard security headers to mitigate clickjacking, XSS, and downgrade attacks

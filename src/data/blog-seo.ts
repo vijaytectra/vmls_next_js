@@ -926,7 +926,7 @@ export const BLOG_SEO: Record<string, BlogSeo> = {
     "slug": "law-and-economics-in-clinical-legal-education-recasting-experiential-learning-in-the-5-year-llb-program",
     "title": "Law and Economics in Clinical Legal Education",
     "author": "Tathagat Sharma",
-    "date": "June 31, 2025",
+    "date": "June 30, 2025",
     "image": "/images/blogs/law-and-economics-in-clinical-legal-education-recasting-experiential-learning-in-the-5-year-llb-program__law-and-economics-in-clinical-legal-education.webp",
     "description": "Clinical Legal Education (CLE) has become a cornerstone of professional legal training in India, particularly through the 5-Year Integrated LLB Program…"
   },
@@ -934,8 +934,8 @@ export const BLOG_SEO: Record<string, BlogSeo> = {
     "slug": "empowering-women-through-clinical-legal-education-in-india",
     "title": "Empowering Women through Clinical Legal Education in India",
     "author": "Mike Ruban",
-    "date": "June 31, 2025",
-    "image": "/images/blogs/empowering-women-through-clinical-legal-education-in-india__empowering-woman.webp",
+    "date": "June 30, 2025",
+    "image": "/images/blogs/why-clinical-legal-education-and-adr-are-crucial-for-indian-justice__cle-and-adr.webp",
     "description": "Patriarchy and casteism have a strong hold over rural and suburban Tamil Nadu, perpetuating deep-seated gender biases as well as social injustices directly…"
   },
   "why-clinical-legal-education-and-adr-are-crucial-for-indian-justice": {
@@ -1031,7 +1031,7 @@ export const BLOG_SEO: Record<string, BlogSeo> = {
     "title": "Clinical Education In Financial Frauds",
     "author": "Sowmiya Narayan",
     "date": "June 05, 2025",
-    "image": "/images/blogs/clinical-education-in-financial-frauds-white-collar-crimes__13.webp",
+    "image": "/images/blogs/why-clinical-legal-education-and-adr-are-crucial-for-indian-justice__cle-and-adr.webp",
     "description": "The Area of Financial and white collar crimes Is a very niche one and primarily the name and fascination with respect to scams and financial scandals…"
   },
   "law-in-practice-civil-procedure-learning-in-chennai-through-clinical-legal-education": {
@@ -1217,7 +1217,7 @@ export const BLOG_SEO: Record<string, BlogSeo> = {
     "title": "Water Wars and International Law",
     "author": "VMLS",
     "date": "April 24, 2025",
-    "image": "/images/blogs/indus-waters-treaty-suspension-lessons-for-law-students__indus-water.webp",
+    "image": "/images/blogs/why-clinical-legal-education-and-adr-are-crucial-for-indian-justice__cle-and-adr.webp",
     "description": "On April 23, 2025, India officially suspended the Indus Waters Treaty (IWT) with Pakistan following a deadly militant attack in Pahalgam, Jammu and Kashmir…"
   },
   "ex-ante-regulation": {
