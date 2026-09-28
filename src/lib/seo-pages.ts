@@ -881,7 +881,7 @@ export const PAGES = {
     ogTitle: "Teaching and Learning Tools Workshop",
     ogDescription:
       "How AI tools can reshape teaching methods – a VMLS faculty development workshop report.",
-    image: "/images/iqac/report-on-workshop2.webp",
+    image: "/images/iqac/iqac-2.webp",
     imageAlt: "Teaching and learning tools workshop at VMLS",
     ogType: "article",
     dcType: "Text.Article",

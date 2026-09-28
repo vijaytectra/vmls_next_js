@@ -11,12 +11,69 @@ import { absoluteUrl } from "@/lib/seo";
 // Emitted as a static file by `output: "export"`.
 export const dynamic = "force-static";
 
-/** Parse "September 21, 2026" (and ISO) to a Date for <lastmod>. */
-function parseBlogDate(raw: string | undefined): Date | undefined {
+/**
+ * Parse blog dates to a calendar YYYY-MM-DD for <lastmod>.
+ * Google Search Console is happiest with date-only lastmod; invalid calendar
+ * dates (e.g. "June 31") and unparseable strings are omitted rather than
+ * emitting Invalid Date / timezone-shifted ISO strings.
+ */
+function parseBlogDate(raw: string | undefined): string | undefined {
   if (!raw) return undefined;
-  const iso = Date.parse(raw);
-  if (!Number.isNaN(iso)) return new Date(iso);
-  return undefined;
+  const trimmed = raw.trim();
+
+  const isoDay = trimmed.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (isoDay) {
+    const y = Number(isoDay[1]);
+    const m = Number(isoDay[2]);
+    const d = Number(isoDay[3]);
+    if (isValidYmd(y, m, d)) return `${isoDay[1]}-${isoDay[2]}-${isoDay[3]}`;
+    return undefined;
+  }
+
+  const named = trimmed.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
+  if (named) {
+    const months: Record<string, number> = {
+      january: 1,
+      february: 2,
+      march: 3,
+      april: 4,
+      may: 5,
+      june: 6,
+      july: 7,
+      august: 8,
+      september: 9,
+      october: 10,
+      november: 11,
+      december: 12,
+    };
+    const m = months[named[1].toLowerCase()];
+    const d = Number(named[2]);
+    const y = Number(named[3]);
+    if (!m || !isValidYmd(y, m, d)) return undefined;
+    return `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+  }
+
+  const ms = Date.parse(trimmed);
+  if (Number.isNaN(ms)) return undefined;
+  const dt = new Date(ms);
+  const y = dt.getUTCFullYear();
+  const m = dt.getUTCMonth() + 1;
+  const d = dt.getUTCDate();
+  if (!isValidYmd(y, m, d)) return undefined;
+  return `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+}
+
+function isValidYmd(y: number, m: number, d: number): boolean {
+  if (!Number.isInteger(y) || !Number.isInteger(m) || !Number.isInteger(d)) return false;
+  if (m < 1 || m > 12 || d < 1 || d > 31) return false;
+  const dt = new Date(Date.UTC(y, m - 1, d));
+  return dt.getUTCFullYear() === y && dt.getUTCMonth() === m - 1 && dt.getUTCDate() === d;
+}
+
+function lastmodFromIso(raw: string | undefined): string | undefined {
+  if (!raw) return undefined;
+  const m = raw.match(/^(\d{4}-\d{2}-\d{2})/);
+  return m?.[1];
 }
 
 // Served at /sitemap.xml. Everything indexable, nothing that is noindex or
@@ -44,7 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (entry.noindex || isBlocked(path)) continue;
     entries.push({
       url: absoluteUrl(path),
-      lastModified: entry.publishedTime ? new Date(entry.publishedTime) : undefined,
+      lastModified: lastmodFromIso(entry.publishedTime),
       changeFrequency: entry.pageType === "news" ? "monthly" : "yearly",
       priority: priorityFor(entry.pageType),
     });
@@ -76,10 +133,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const slug of ALL_BLOG_SLUGS) {
     if (BLOCKED_BLOG_SLUGS.has(slug)) continue;
-    const published = parseBlogDate(contentMap[slug]?.date);
     entries.push({
       url: absoluteUrl(`/blogs/${slug}`),
-      lastModified: published,
+      lastModified: parseBlogDate(contentMap[slug]?.date),
       changeFrequency: "weekly",
       priority: 0.7,
     });

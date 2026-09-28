@@ -9,6 +9,7 @@ Allow: /_next/
 
 # Explicitly allow the sitemap (must never be blocked)
 Allow: /sitemap.xml
+Allow: /sitemap-gsc.xml
 
 Disallow: /api/
 Disallow: /debug
@@ -21,3 +22,4 @@ Disallow: /blogs/part-time-phd-in-law-and-interdisciplinary-studies.html
 Disallow: /blogs/full-time-phd-in-law-and-interdisciplinary-studies.html
 
 Sitemap: https://vmls.edu.in/sitemap.xml
+Sitemap: https://vmls.edu.in/sitemap-gsc.xml

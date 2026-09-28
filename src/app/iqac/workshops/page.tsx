@@ -22,7 +22,7 @@ const events = [
     slug: "teaching-learning-tools",
     date: "August 28, 2024",
     location: "VMLS Campus, Tamil Nadu",
-    image: "/images/iqac/report-on-workshop2.webp",
+    image: "/images/iqac/iqac-2.webp",
     description: "Workshop on modern pedagogical tools and innovative teaching methodologies for legal education."
   }
 ];
