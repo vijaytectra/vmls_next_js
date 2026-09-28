@@ -103,7 +103,7 @@ const facultyData: FacultyMember[] = [
   },
   {
     name: "Dr. Fowmina",
-    role: "Associate Dean (Inclusive Initiatives), Director, Centre for Access to Justice.",
+    role: "Associate Dean - Inclusive Initiatives & Student Affairs, Director - Centre for Access to Justice.",
     qualifications: "LLM - University of East London Uk,\nPhD - Vit Chennai",
     image: "/images/faculty/live/19.webp",
     href: "/faculty/fowmina",

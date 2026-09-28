@@ -130,7 +130,7 @@ export default function StudentAffairsPage() {
                   </div>
                   <h3 className="font-playfair text-2xl md:text-3xl font-bold mb-1">Dr. Fowmina</h3>
                   <p className="text-[#fbb03b] font-bold text-xs uppercase tracking-widest mb-6">
-                    Associate Dean of Student Affairs
+                    Associate Dean - Inclusive Initiatives & Student Affairs
                   </p>
 
                   <div className="space-y-3 w-full">
@@ -159,7 +159,7 @@ export default function StudentAffairsPage() {
               <div className="lg:w-[60%] xl:w-[65%] p-8 md:p-12 flex flex-col justify-center">
                 <div className="space-y-6 text-left">
                   <p className="font-inter text-base md:text-lg text-white/90 leading-relaxed">
-                    Dr. Fowmina, Associate Dean of Student Affairs, VMLS works passionately to ensure every student feels at home at VMLS, balancing academic growth with personal well-being and extracurricular engagement. Dr. Fowmina. C holds a distinguished academic record, including a PhD in International Humanitarian Law from Vellore Institute of Technology, Chennai. Additionally, she possesses an LL.M degree in International Law, an M.A in Human Rights from the Indian Institute of Human Rights in New Delhi, and a degree in Criminal Justice from the University of East London. Her academic journey also includes a B.A.LLB from Bishop Cotton Women&apos;s Christian College, Bangalore.
+                    Dr. Fowmina, Associate Dean - Inclusive Initiatives & Student Affairs, VMLS works passionately to ensure every student feels at home at VMLS, balancing academic growth with personal well-being and extracurricular engagement. Dr. Fowmina. C holds a distinguished academic record, including a PhD in International Humanitarian Law from Vellore Institute of Technology, Chennai. Additionally, she possesses an LL.M degree in International Law, an M.A in Human Rights from the Indian Institute of Human Rights in New Delhi, and a degree in Criminal Justice from the University of East London. Her academic journey also includes a B.A.LLB from Bishop Cotton Women&apos;s Christian College, Bangalore.
                   </p>
                   <div className="pt-4">
                     <Link
@@ -233,7 +233,7 @@ export default function StudentAffairsPage() {
             </div>
             <div className="mt-4 xl:mt-6 pt-3.5 xl:pt-4 border-t border-gray-200 text-left">
               <p className="font-playfair text-sm font-bold text-gray-900 mb-1 xl:mb-2 leading-snug text-left">
-                Contact: Dr. Fowmina, Associate Dean – Student Affairs
+                Contact: Dr. Fowmina, Associate Dean – Inclusive Initiatives & Student Affairs
               </p>
               <a href="mailto:ad.sa@vmls.edu.in" className="block text-xs xl:text-xs text-[#800000] font-semibold hover:text-[#a31f34] break-all text-left">
                 ad.sa@vmls.edu.in

@@ -115,7 +115,7 @@ export default function AntiRaggingPage() {
                 {[
                   { id: 2, name: "Prof. Mike Ruban", role: "Associate Dean UG Academics", mail: "mikeruban@vmls.edu.in", phone: "8870493346" },
                   { id: 3, name: "Prof. Sowmiya Narayanan", role: "Assistant Dean PG Academics", mail: "sowmiyanarayan@vmls.edu.in", phone: "9884503578" },
-                  { id: 4, name: "Dr. Fowmina", role: "Associate Dean Inclusivity", mail: "fowmina@vmls.edu.in", phone: "9884015285" },
+                  { id: 4, name: "Dr. Fowmina", role: "Associate Dean - Inclusive Initiatives & Student Affairs", mail: "fowmina@vmls.edu.in", phone: "9884015285" },
                   { id: 5, name: "Dr. Krishna Kishore", role: "Assistant Professor", mail: "krishnakishore@vmls.edu.in", phone: "8099346959" }
                 ].map((member) => (
                   <tr key={member.id} className="border-b border-gray-100 hover:bg-gray-50 transition-colors">
