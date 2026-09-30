@@ -1,9 +1,12 @@
 import Image from "next/image";
 
+import Link from "next/link";
+
 export default function ExecutiveDeanSection() {
   return (
-    <section className="relative w-full bg-[#800000] overflow-hidden px-[5%] py-6 md:py-8">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-5 md:gap-6 lg:gap-8 items-center lg:items-stretch">
+    <section className="relative w-full overflow-hidden px-[5%] py-6 md:py-8">
+      <Link href="/dean" className="block max-w-7xl mx-auto bg-[#800000] p-6 md:p-8 rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.01] transition-all duration-300 group">
+        <div className="flex flex-col lg:flex-row gap-5 md:gap-6 lg:gap-8 items-center lg:items-stretch">
         {/* Left: Contained portrait — respects site side padding */}
         <div className="w-full lg:w-[280px] xl:w-[320px] shrink-0">
           <div className="relative w-full max-w-[280px] xl:max-w-[320px] mx-auto lg:mx-0 aspect-[3/4] overflow-hidden shadow-2xl">
@@ -73,8 +76,9 @@ export default function ExecutiveDeanSection() {
               </li>
             </ul>
           </div>
+          </div>
         </div>
-      </div>
+      </Link>
     </section>
   );
 }

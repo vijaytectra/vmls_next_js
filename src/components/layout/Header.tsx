@@ -36,8 +36,8 @@ const menuItems = [
     name: "Academics",
     hasDropdown: true,
     subItems: [
-      { name: "Undergraduate Programme", href: "/admissions/llb" },
-      { name: "Postgraduate Programme", href: "/admissions/llm" },
+      { name: "Undergraduate Programme", href: "/blogs/three-year-llb-hons" },
+      { name: "Postgraduate Programme", href: "/blogs/llm-programme-in-india-2026-27" },
     ]
   },
   {
@@ -194,7 +194,7 @@ export default function Header() {
                           onClick={() => {
                             if (sub.href !== "#") closeMenu();
                           }}
-                          className="block py-3 px-6 text-base font-inter font-medium text-gray-600 hover:text-[#a31f34] hover:bg-gray-100 transition-all border-l-2 border-transparent hover:border-[#a31f34] w-full"
+                          className="block py-2.5 sm:py-3 px-4 sm:px-6 text-sm sm:text-base whitespace-nowrap overflow-hidden text-ellipsis font-inter font-medium text-gray-600 hover:text-[#a31f34] hover:bg-gray-100 transition-all border-l-2 border-transparent hover:border-[#a31f34] w-full"
                         >
                           {sub.name}
                         </Link>
@@ -306,7 +306,7 @@ export default function Header() {
       <header className="w-full bg-white sticky top-0 z-[3000] shadow-[0_2px_20px_-5px_rgba(0,0,0,0.1)] transition-all duration-300 px-0 md:px-0 md:pr-[5%] md:pl-0">
         <div className="w-full flex justify-between items-center h-[4.25rem] md:h-[5.75rem]">
           <div className="flex items-center shrink-0 pl-2 md:pl-12 lg:pl-16">
-            <Link href="/" className="block">
+            <Link href="https://vinayakamission.com/" className="block" target="_blank" rel="noopener noreferrer">
               <Image
                 src="/images/headerleft.webp"
                 alt="Vinayaka Mission's Research Foundation"
@@ -356,11 +356,11 @@ export default function Header() {
                 if (isMenuOpen) closeMenu();
                 else openMenu();
               }}
-              className="relative z-[3001] group flex items-center justify-center gap-2 md:gap-3 bg-[#a31f34] text-white min-h-[44px] min-w-[44px] px-3.5 md:px-6 py-2.5 md:py-3 rounded-full font-inter font-bold text-[10px] md:text-sm uppercase tracking-[0.15em] transition-all duration-500 hover:bg-[#801829] hover:shadow-[0_15px_30px_rgba(163,31,52,0.3)] hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)] active:scale-95 border border-[#fbb03b]/20 mr-2 md:mr-6"
+              className="relative z-[3001] group flex items-center justify-center gap-2 md:gap-3 bg-[#a31f34] text-white min-h-[48px] min-w-[48px] px-4 md:px-6 py-3 md:py-3.5 rounded-full font-inter font-bold text-[12px] md:text-sm uppercase tracking-[0.15em] transition-all duration-500 hover:bg-[#801829] hover:shadow-[0_15px_30px_rgba(163,31,52,0.3)] hover:-translate-y-1 shadow-[0_8px_20px_rgba(0,0,0,0.15)] active:scale-95 border border-[#fbb03b]/20 mr-2 md:mr-6"
             >
-              <span className="flex flex-col gap-1 md:gap-1.5 w-5 md:w-6 h-3 md:h-4 justify-center items-center pointer-events-none">
+              <span className="flex flex-col gap-1.5 md:gap-2 w-6 md:w-7 h-4 md:h-5 justify-center items-center pointer-events-none">
                 <span className="block h-0.5 w-full bg-white rounded-full group-hover:bg-[#fbb03b] transition-all duration-300"></span>
-                <span className="block h-0.5 w-3 md:w-4 bg-white rounded-full group-hover:w-full group-hover:bg-[#fbb03b] transition-all duration-300 ml-auto"></span>
+                <span className="block h-0.5 w-4 md:w-5 bg-white rounded-full group-hover:w-full group-hover:bg-[#fbb03b] transition-all duration-300 ml-auto"></span>
                 <span className="block h-0.5 w-full bg-white rounded-full group-hover:bg-[#fbb03b] transition-all duration-300"></span>
               </span>
               <span className="hidden md:inline group-hover:text-[#fbb03b] transition-colors duration-300 pointer-events-none">

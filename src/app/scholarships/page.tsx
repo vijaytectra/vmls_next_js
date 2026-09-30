@@ -11,7 +11,11 @@ export default function ScholarshipsPage() {
   const scholarshipCategories = [
     {
       title: "Merit-Based Scholarship",
-      description: "Awarded to students who achieve high marks in the VLAT entrance exam, recognizing academic prowess.",
+      description: "Awarded to students who achieve high marks in the VLAT entrance exam, recognizing academic prowess. Example scenarios include:",
+      examples: [
+        "If your VLAT score is 90% and above, you receive a 100% tuition fee waiver.",
+        "If your VLAT score is between 80-89%, you receive a 50% tuition fee waiver."
+      ]
     },
     {
       title: "Anuradha Shero Scholarship for Female Students",
@@ -141,15 +145,27 @@ export default function ScholarshipsPage() {
                   Scholarship programs
                 </h2>
 
-                <div className="space-y-8">
+                <div className="space-y-6">
                   {scholarshipCategories.map((cat) => (
-                    <div key={cat.title}>
+                    <div key={cat.title} className="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm relative">
                       <h3 className="font-playfair font-bold text-lg md:text-xl text-[#a31f34] mb-2 leading-snug">
-                        {cat.title}:
+                        {cat.title}
                       </h3>
-                      <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed hyphens-none [hyphens:none]">
+                      <p className="font-inter text-base md:text-lg text-gray-700 leading-relaxed hyphens-none [hyphens:none] mb-3">
                         {cat.description}
                       </p>
+                      {cat.examples && (
+                        <ul className="list-disc pl-5 mt-2 space-y-1 mb-4">
+                          {cat.examples.map((ex, i) => (
+                            <li key={i} className="font-inter text-sm md:text-base text-gray-700 leading-relaxed">{ex}</li>
+                          ))}
+                        </ul>
+                      )}
+                      <div className="mt-5">
+                        <Link href="https://admissions.vmls.edu.in/" target="_blank" className="inline-block px-6 py-2.5 bg-[#a31f34] text-white font-inter font-medium rounded-lg hover:bg-[#8a192c] transition-colors text-sm shadow-sm hover:shadow">
+                          Apply Now
+                        </Link>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -157,20 +173,66 @@ export default function ScholarshipsPage() {
             </div>
           </div>
 
-          {/* Right: Scholarship Testimonials video */}
-          <div className="lg:w-[52%] w-full shrink-0">
-            <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden bg-black">
-              <iframe
-                src="https://www.youtube.com/embed/LJAGaNiZ59U"
-                title="Scholarship Testimonials"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full border-0"
-              />
+          {/* Right: Scholarship Testimonials video & Ambassadors */}
+          <div className="lg:w-[52%] w-full shrink-0 flex flex-col gap-10">
+            <div>
+              <div className="relative w-full aspect-video shadow-[0_20px_50px_rgba(0,0,0,0.12)] overflow-hidden bg-black rounded-xl">
+                <iframe
+                  src="https://www.youtube.com/embed/LJAGaNiZ59U"
+                  title="Scholarship Testimonials"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              </div>
+              <h3 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mt-4 text-center lg:text-left">
+                Scholarship Testimonials
+              </h3>
             </div>
-            <h3 className="font-playfair text-xl md:text-2xl text-[#1a1a1a] mt-4 text-center lg:text-left">
-              Scholarship Testimonials
-            </h3>
+
+            {/* Ambassadors Section */}
+            <div>
+              <div className="relative">
+                <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#fbb03b]" />
+                <div className="pl-6 md:pl-10">
+                  <h3 className="font-playfair text-2xl md:text-3xl text-[#1a1a1a] mb-6 leading-tight">
+                    Our Scholarship Ambassadors
+                  </h3>
+                  <div className="space-y-6">
+                    {[
+                      {
+                        name: "Priya Sharma",
+                        program: "B.A. LL.B. (Hons.)",
+                        scholarship: "Merit-Based Scholarship (100%)",
+                        quote: "The 100% merit scholarship through VLAT allowed me to focus entirely on my legal studies without financial stress. It's truly empowering."
+                      },
+                      {
+                        name: "Ananya Iyer",
+                        program: "B.B.A. LL.B. (Hons.)",
+                        scholarship: "Anuradha Shero Scholarship",
+                        quote: "Receiving the Anuradha Shero Scholarship was a proud moment. It shows VMLS's commitment to supporting and advancing women in the legal profession."
+                      }
+                    ].map((ambassador, idx) => (
+                      <div key={idx} className="bg-gray-50 border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                        <p className="font-inter text-gray-700 italic mb-5 leading-relaxed">
+                          "{ambassador.quote}"
+                        </p>
+                        <div className="flex items-center gap-4">
+                          <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-[#a31f34] font-bold font-inter text-xl border border-[#a31f34]/20">
+                            {ambassador.name.charAt(0)}
+                          </div>
+                          <div>
+                            <h4 className="font-playfair font-bold text-gray-900 text-lg">{ambassador.name}</h4>
+                            <p className="text-sm font-inter text-[#a31f34] font-medium">{ambassador.scholarship}</p>
+                            <p className="text-xs font-inter text-gray-500 mt-0.5">{ambassador.program}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

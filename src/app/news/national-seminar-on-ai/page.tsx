@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo-pages";
 import PageSchema from "@/components/seo/PageSchema";
+import { blogPosts } from "@/data/blogs/posts";
 
 export const metadata = pageMetadata("/news/national-seminar-on-ai");
 
@@ -166,39 +167,27 @@ export default function AISeminarPage() {
           <aside className="lg:w-[30%]">
             <div className="sticky top-24">
               <h3 className="font-playfair text-2xl font-bold mb-8 text-gray-900 border-b border-gray-200 pb-4">
-                Today&apos;s top news
+                Latest Blogs
               </h3>
               <div className="space-y-0 border border-gray-100 shadow-sm">
-                {[
-                  {
-                    title:
-                      "LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights",
-                    href: "/blogs/llm-in-artificial-intelligence-emerging-technologies-and-intellectual-property-rights",
-                  },
-                  {
-                    title: "LLM in Criminal Law and Practice",
-                    href: "/blogs/llm-in-criminal-law-and-practice",
-                  },
-                  {
-                    title: "What is an LL.M.? Full Form, Programme, Course Duration, Admission 2025",
-                    href: "/blogs/what-is-llm-master-of-law-degree",
-                  },
-                  {
-                    title: "The Lack of Clinical Legal Education in India and its Implications",
-                    href: "/blogs/lack-of-clinical-legal-education-in-india",
-                  },
-                  {
-                    title:
-                      "Bringing Indian Contracts II to Life by Means of Clinical Legal Education for Law Students",
-                    href: "/blogs/bringing-indian-contracts-ii-to-life-clinical-legal-education-vmls",
-                  },
-                ].map((news, index) => (
+                {blogPosts.slice(0, 5).map((news, index) => (
                   <Link
                     key={index}
-                    href={news.href}
-                    className="block p-5 bg-gray-50/50 hover:bg-white border-b border-gray-100 text-sm font-inter text-gray-800 hover:text-[#a31f34] transition-all last:border-b-0 leading-relaxed"
+                    href={`/blogs/${news.slug}`}
+                    className="flex gap-4 p-5 bg-gray-50/50 hover:bg-white border-b border-gray-100 group transition-all last:border-b-0"
                   >
-                    {news.title}
+                    <div className="relative w-16 h-16 shrink-0 overflow-hidden rounded bg-gray-200">
+                      <Image
+                        src={news.image || "/images/career-about-img.webp"}
+                        alt={news.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="64px"
+                      />
+                    </div>
+                    <span className="text-sm font-inter text-gray-800 group-hover:text-[#a31f34] leading-relaxed line-clamp-3">
+                      {news.title}
+                    </span>
                   </Link>
                 ))}
               </div>

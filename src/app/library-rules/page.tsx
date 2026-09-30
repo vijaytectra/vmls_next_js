@@ -107,27 +107,30 @@ export default function LibraryRulesPage() {
                 ))}
               </tbody>
             </table>
-          </div>
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full">
-            {[
-              { k: 'TN', v: 'Total check-outs' },
-              { k: 'D', v: 'Duration (days)' },
-              { k: 'OD', v: 'Overdue Fine (per day)' },
-              { k: 'RD', v: 'Renewal duration' },
-              { k: 'H', v: 'No. of holds' }
-            ].map(key => (
-              <div key={key.k} className="p-3 bg-gray-50 border border-gray-100 w-full">
-                <span className="block font-bold text-[#a31f34] text-xs">{key.k}</span>
-                <span className="text-[10px] text-gray-500 uppercase font-medium">{key.v}</span>
+            
+            <div className="p-5 bg-white border-t border-gray-100">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full min-w-[760px]">
+                {[
+                  { k: 'TN', v: 'Total check-outs' },
+                  { k: 'D', v: 'Duration (days)' },
+                  { k: 'OD', v: 'Overdue Fine (per day)' },
+                  { k: 'RD', v: 'Renewal duration' },
+                  { k: 'H', v: 'No. of holds' }
+                ].map(key => (
+                  <div key={key.k} className="p-3 bg-gray-50 border border-gray-100 w-full rounded-md">
+                    <span className="block font-bold text-[#a31f34] text-xs">{key.k}</span>
+                    <span className="text-[10px] text-gray-500 uppercase font-medium">{key.v}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Policy Details: Accordion Style */}
       <section className="py-6 md:py-10 px-[5%] bg-gray-50">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a] font-bold mb-6">Library Policies</h2>
             <p className="text-gray-500 max-w-2xl mx-auto font-inter">
@@ -135,7 +138,7 @@ export default function LibraryRulesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
               {
                 id: '1', title: 'Item Type and Loan Rules',

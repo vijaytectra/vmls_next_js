@@ -95,7 +95,7 @@ export default function AdmissionProcessPage() {
               <div className="mb-6">
                 <h3 className="font-inter font-bold text-base text-gray-900 mb-3">Eligibility:</h3>
                 <ul className="space-y-3 font-inter text-gray-700 list-disc pl-5">
-                  <li>A pass in 10+2/Intermediate or equivalent examination. (Candidates appearing for April-May 2025 Examinations can also apply.)</li>
+                  <li>A Pass in 10+2/Intermediate or equivalent examination. (Candidates appearing for April-May 2025 Examinations can also apply.)</li>
                   <li>Not less than 45% marks for General Category, 42% for OBC and 40% for SC/ST.</li>
                 </ul>
               </div>

@@ -16,6 +16,9 @@ export default function VideoGallerySection() {
   return (
     <section className="pt-4 pb-6 px-[5%] bg-white">
       <div className="max-w-[1400px] mx-auto">
+        <h2 className="font-playfair text-3xl md:text-5xl text-[#1a1a1a] mb-6 md:mb-12 text-center">
+          Video Gallery
+        </h2>
         {/* Row 1: 3 Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6 mb-6">
           {row1.map((video) => (
@@ -23,22 +26,24 @@ export default function VideoGallerySection() {
               key={video.id} 
               href={video.href}
               target="_blank"
-              className="group relative aspect-video bg-gray-100 overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer block"
+              className="group relative aspect-video bg-white overflow-hidden rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_0_25px_rgba(0,0,0,0.15)] transition-all duration-500 cursor-pointer block p-2 sm:p-3"
             >
-              <Image 
-                src={video.thumbnail} 
-                alt={video.title} 
-                fill 
-                sizes="(max-width: 768px) 100vw, 33vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500"></div>
-              
-              {/* Play Button Icon */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-14 h-14 bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-[#a31f34] group-hover:border-[#a31f34] transition-all duration-500">
-                  <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
+              <div className="relative w-full h-full rounded-lg overflow-hidden bg-gray-100">
+                <Image 
+                  src={video.thumbnail} 
+                  alt={video.title} 
+                  fill 
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500"></div>
+                
+                {/* Play Button Icon */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-14 h-14 bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-[#a31f34] group-hover:border-[#a31f34] transition-all duration-500">
+                    <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
+                  </div>
                 </div>
               </div>
             </Link>
@@ -52,22 +57,24 @@ export default function VideoGallerySection() {
               key={video.id} 
               href={video.href}
               target="_blank"
-              className="group relative aspect-video bg-gray-100 overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer block"
+              className="group relative aspect-video bg-white overflow-hidden rounded-xl shadow-[0_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_0_25px_rgba(0,0,0,0.15)] transition-all duration-500 cursor-pointer block p-2 sm:p-3"
             >
-              <Image 
-                src={video.thumbnail} 
-                alt={video.title} 
-                fill 
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500"></div>
-              
-              {/* Play Button Icon */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-[#a31f34] group-hover:border-[#a31f34] transition-all duration-500">
-                  <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+              <div className="relative w-full h-full rounded-lg overflow-hidden bg-gray-100">
+                <Image 
+                  src={video.thumbnail} 
+                  alt={video.title} 
+                  fill 
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition-colors duration-500"></div>
+                
+                {/* Play Button Icon */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-black/40 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/40 group-hover:scale-110 group-hover:bg-[#a31f34] group-hover:border-[#a31f34] transition-all duration-500">
+                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                  </div>
                 </div>
               </div>
             </Link>

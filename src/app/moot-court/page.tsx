@@ -138,12 +138,12 @@ export default function MootCourtPage() {
                 {
                   title: "Technological Advancements",
                   desc: "The facility is equipped with modern technology to record proceedings, allowing for later review and critique, which is essential for the students' learning process.",
-                  image: "/images/mcourt3.webp"
+                  image: "/images/mcourt4.webp"
                 },
                 {
                   title: "Community Engagement",
                   desc: "It also acts as a venue for hosting moot court competitions, inviting participation from various law schools, thereby fostering a competitive yet collaborative learning environment.",
-                  image: "/images/mcourt2.webp"
+                  image: "/images/news/mcourt5.webp"
                 }
               ].map((feature, i) => (
                 <div key={i} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col border border-gray-100">

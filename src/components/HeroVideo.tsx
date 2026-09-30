@@ -89,10 +89,10 @@ export default function HeroVideo() {
             <Image
               src="/images/approved.webp"
               alt="UGC and BCI Approved"
-              width={220}
-              height={70}
-              sizes="(max-width: 1280px) 176px, 208px"
-              className="w-40 lg:w-44 xl:w-52 h-auto object-contain"
+              width={350}
+              height={110}
+              sizes="(max-width: 1280px) 288px, 320px"
+              className="w-64 lg:w-72 xl:w-80 h-auto object-contain"
               loading="eager"
               fetchPriority="low"
               decoding="async"
@@ -135,10 +135,10 @@ export default function HeroVideo() {
             decoding="async"
             src="/images/approved.webp"
             alt="UGC and BCI Approved"
-            width={180}
-            height={56}
-            sizes="176px"
-            className="w-44 h-auto object-contain"
+            width={250}
+            height={80}
+            sizes="256px"
+            className="w-64 sm:w-72 h-auto object-contain"
           />
         </div>
       </div>
