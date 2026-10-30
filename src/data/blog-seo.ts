@@ -14,6 +14,58 @@ export type BlogSeo = {
 };
 
 export const BLOG_SEO: Record<string, BlogSeo> = {
+  "effective-law-prep-tips": {
+    "slug": "effective-law-prep-tips",
+    "title": "Law Prep Tutorial: Essential Exam Strategies",
+    "author": "VMLS Editorial",
+    "date": "October 30, 2026",
+    "image": "/images/blogs/effective-law-prep-tips__essential-tips-for-effective-law-prep.png",
+    "description": "Master effective law prep with our comprehensive law prep tutorial. Discover exam preparation strategies tailored for law school and bar exam success.",
+    "faqs": [
+      {
+        "q": "What does effective law prep actually involve?",
+        "a": "Effective law prep combines understanding legal doctrines with regular practice in recognizing issues, applying rules to specific facts, and articulating clear conclusions within exam constraints rather than passive reading."
+      },
+      {
+        "q": "How do I create a usable law school study outline?",
+        "a": "A usable outline should be structured around decisions and applications: factual triggers, governing rules, required legal elements, recognized exceptions, and counterarguments, tested against real practice problems."
+      },
+      {
+        "q": "How should law students practice legal analysis under timed conditions?",
+        "a": "Draft complete written answers using an Issue-Rule-Application-Conclusion (IRAC) structure, tie facts directly to each legal element, address opposing arguments, and evaluate your work against sample solutions or rubrics."
+      },
+      {
+        "q": "Why is keeping an error log useful for law exams and bar prep?",
+        "a": "An error log categorizes mistakes—such as missing rules, missed issues, weak factual application, or timing troubles—into actionable patterns so you can assign targeted follow-up tasks before test day."
+      }
+    ]
+  },
+  "law-full-form": {
+    "slug": "law-full-form",
+    "title": "LAW Full Form Explained: Legal Terms & Definitions",
+    "author": "VMLS Editorial",
+    "date": "October 29, 2026",
+    "image": "/images/blogs/law-full-form__understanding-the-full-form-of-law.png",
+    "description": "Explore the true meaning of \"law full form\" and deepen your understanding of legal terms in this comprehensive guide. Discover why \"law\" isn't an acronym.",
+    "faqs": [
+      {
+        "q": "What is the full form of LAW?",
+        "a": "Law is an independent word derived from Old English (lagu) and Scandinavian roots, not an acronym. Therefore, it has no standard or official full form."
+      },
+      {
+        "q": "Why is LAW often written in capital letters?",
+        "a": "Writing LAW in capital letters is typically a stylistic choice in headings, titles, or search queries, but it does not make the English word an abbreviation or acronym."
+      },
+      {
+        "q": "What are the primary sources of law?",
+        "a": "Primary sources of law include constitutions, legislative statutes, administrative regulations, and judicial decisions (case law precedents)."
+      },
+      {
+        "q": "How is the rule of law different from law itself?",
+        "a": "While law refers to specific rules and statutes, the rule of law refers to the governance principle that all persons and institutions are accountable to publicly promulgated, equally enforced laws."
+      }
+    ]
+  },
   "digital-arrest-scams-india-cyber-law-explained": {
     "slug": "digital-arrest-scams-india-cyber-law-explained",
     "title": "Digital Arrest Scams in India: How Cyber Laws and the Supreme Court are Responding",
