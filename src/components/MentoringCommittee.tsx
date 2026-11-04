@@ -43,10 +43,11 @@ export default function MentoringCommittee() {
               </div>
 
               <div className="mt-12">
-                <Link href="/mentoring-committee">
-                  <button className="w-full sm:w-auto min-h-[48px] px-8 sm:px-10 py-3.5 sm:py-4 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-xl hover:-translate-y-1">
-                    Know More Details
-                  </button>
+                <Link 
+                  href="/mentoring-committee"
+                  className="inline-block w-full sm:w-auto min-h-[48px] px-8 sm:px-10 py-3.5 sm:py-4 bg-[#800000] text-white font-inter text-sm font-bold uppercase tracking-wider rounded-none transition-all duration-300 hover:bg-[#a31f34] hover:shadow-xl hover:-translate-y-1 text-center"
+                >
+                  View Details
                 </Link>
               </div>
             </div>

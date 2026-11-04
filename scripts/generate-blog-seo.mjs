@@ -57,11 +57,13 @@ for (const [slug, post] of Object.entries(posts)) {
 
   seo[slug] = {
     slug,
-    title: decode(post.title ?? slug),
+    title: decode(post.metaTitle ?? post.title ?? slug),
     author: decode(post.author ?? ""),
     date: post.date ?? "",
     image: post.image ?? "",
-    description: clamp(prose || decode(post.title ?? "")),
+    description: post.metaDescription
+      ? decode(post.metaDescription)
+      : clamp(prose || decode(post.title ?? "")),
     ...(faqs.length ? { faqs } : {}),
   };
 }

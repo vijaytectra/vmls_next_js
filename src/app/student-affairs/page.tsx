@@ -266,7 +266,7 @@ export default function StudentAffairsPage() {
               </ul>
             </div>
             <div className="mt-4 xl:mt-6 pt-3.5 xl:pt-4 border-t border-white/20 text-left">
-              <p className="font-playfair text-sm font-bold mb-1 xl:mb-2 leading-snug text-left">Counselling Support Contact: Dr. Saranya</p>
+              <p className="font-playfair text-sm font-bold mb-1 xl:mb-2 leading-snug text-left">Counselling Support Contact: Ms. Saranya Ganesan</p>
               <a href="tel:+919500049969" className="text-xs xl:text-xs text-white/90 hover:text-white text-left">
                 +91 95000 49969
               </a>

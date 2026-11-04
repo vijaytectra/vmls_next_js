@@ -1,0 +1,313 @@
+﻿Website Review: Feedback and Change Requests
+vmls.edu.in – Vinayaka Mission’s Law School
+Prepared by Jero Prince and the Media and Communications Committee (MCC) team for the web development team • 21 September 2026
+This report lists the changes requested after a review of the website. It contains 30 numbered requests, grouped by area of the site, and 34 screenshots. Each request gives the page concerned, the issue observed where one was noted, and the change requested. Screenshots marked as supplementary were sent separately from the original review file.
+Contents
+No.
+	Area
+	Request
+	1
+	Whole website
+	Uniform colour code across the website
+	2
+	Home page
+	Consistent logo size in the mentorship banner
+	3
+	Home page
+	Executive Dean section: link and alignment
+	4
+	Home page
+	News and Events section layout
+	5
+	Home page
+	Container width of the Scholarships at VMLS section
+	6
+	Home page
+	Videos hanging in the Our Infrastructure cards
+	7
+	Home page
+	Missing title after College Amenities
+	8
+	News, chat and scholarships
+	Today’s top news: blog images and section name
+	9
+	News, chat and scholarships
+	Chat with Student page: faculty tab
+	10
+	News, chat and scholarships
+	Scholarships page
+	11
+	Infrastructure and amenities
+	Gallery images for each amenity
+	12
+	Infrastructure and amenities
+	Main Building photo
+	13
+	Infrastructure and amenities
+	Library image
+	14
+	Infrastructure and amenities
+	Button text size
+	15
+	Infrastructure and amenities
+	Grid width on the Library policies page
+	16
+	Infrastructure and amenities
+	Moot Court: relevant pictures
+	17
+	Infrastructure and amenities
+	Hostel: dining and gym pictures
+	18
+	Leadership and faculty
+	Mentoring Committee: recent meeting pictures
+	19
+	Leadership and faculty
+	Latest News and Events: check and update
+	20
+	Leadership and faculty
+	Leadership pages: left alignment
+	21
+	Leadership and faculty
+	Faculty Achievements page
+	22
+	Leadership and faculty
+	Guest Lecturers page: photo crop
+	23
+	Student life
+	Campus Life: new images and gallery
+	24
+	Student life
+	Clubs: authority and student in charge
+	25
+	Navigation and images
+	Admission and Academics share a landing page
+	26
+	Navigation and images
+	Page-title images sharp on some pages, pixelated on others
+	27
+	Navigation and images
+	VMRF logo link in the header
+	28
+	Navigation and images
+	Programme buttons: link to the admissions registration page
+	29
+	Faculty and student support
+	Uniform presentation of faculty qualifications
+	30
+	Faculty and student support
+	Counsellor’s title
+	
+
+Whole website
+1. Uniform colour code across the website
+Page: All pages
+Requested change: Use one uniform colour code (a single defined palette) consistently throughout the website.
+Home page
+2. Consistent logo size in the mentorship banner
+Page: Home page (vmls.edu.in)
+Issue: The logos in the mentorship banner are shown at different sizes.
+Requested change: Display all logos in this banner at a consistent size.
+ Mentorship banner on the Home page. 
+
+Mentorship banner on the Home page.
+3. Executive Dean section: link and alignment
+Page: Home page (vmls.edu.in)
+Issue: The section is not properly aligned or boxed.
+Requested change: Make the section clickable so that it opens the Executive Dean’s page, and align and box it properly.
+ Executive Dean’s Desk section on the Home page. 
+
+Executive Dean’s Desk section on the Home page.
+4. News and Events section layout
+Page: Home page (vmls.edu.in)
+Requested change: Shorten the news entries, show more events, and fill the whole container. Use consistent button text. A reference design is shown in the second figure below.
+ Current News and Events section. 
+
+Current News and Events section.
+ Reference image provided for the news list. 
+
+Reference image provided for the news list.
+5. Container width of the Scholarships at VMLS section
+Page: Home page (vmls.edu.in)
+Requested change: Use the same container width across the sections, matching the Scholarships at VMLS section.
+ Scholarships at VMLS section and the sections around it. 
+
+Scholarships at VMLS section and the sections around it.
+6. Videos hanging in the Our Infrastructure cards
+Page: Home page (vmls.edu.in)
+Issue: The videos in each card (div) of the Our Infrastructure section hang.
+Requested change: Fix the video loading and playback in these cards.
+ Our Infrastructure section. 
+
+Our Infrastructure section.
+ Same section (supplementary screenshot). 
+
+Same section (supplementary screenshot).
+7. Missing title after College Amenities
+Page: Home page (vmls.edu.in)
+Requested change: Add a title to the section that follows College Amenities on the Home page.
+ Section following College Amenities. 
+
+Section following College Amenities.
+News, chat and scholarships
+8. Today’s top news: blog images and section name
+Page: News page (vmls.edu.in/news/national-seminar-on-ai)
+Requested change: Add the blog image to the entries in Today’s top news and change the name of this section. Keep a uniform count of images on this page.
+ News page with the Today’s top news panel. 
+
+News page with the Today’s top news panel.
+ Today’s top news panel, shown without images (supplementary screenshot). 
+
+Today’s top news panel, shown without images (supplementary screenshot).
+9. Chat with Student page: faculty tab
+Page: Chat with Student page (vmls.edu.in/chat-with-student)
+Issue: The faculty labels are inconsistent: Dr. Abhinaya’s card reads “VMLS” while the other cards read “Law”. Each card also carries too much empty space.
+Requested change: Make the labels consistent and reduce the empty space in each card. One suggestion is to mention “Chat with Student Ambassador” on the cards.
+ Faculty tab on the Chat with Student page. 
+
+Faculty tab on the Chat with Student page.
+10. Scholarships page
+Page: Scholarships page
+Requested change: List every scholarship by name with a short description and an Apply Now button that leads to the Registration page. Add the top students who received scholarships as scholarship ambassadors with their testimonials.
+ Scholarships page (supplementary screenshot). 
+
+Scholarships page (supplementary screenshot).
+Infrastructure and amenities
+11. Gallery images for each amenity
+Page: Amenity pages, for example Classroom (vmls.edu.in/classroom)
+Requested change: Add gallery images to the page of each college amenity.
+ Classroom page. 
+
+Classroom page.
+12. Main Building photo
+Page: Main Building page (vmls.edu.in/main-building)
+Requested change: Replace the current photo with the new photo of the main building that shows the LED letter board on top of the institution. This photo is available on the faculty profile page. And check all pages for any changes
+ Main Building page. 
+
+Main Building page.
+13. Library image
+Page: Library page (vmls.edu.in/library)
+Issue: The page uses a stock library image.
+Requested change: Use an image of our own library instead of the stock image.
+ Library page, top section. 
+
+Library page, top section.
+14. Button text size
+Page: Site-wide (example: Library page, vmls.edu.in/library)
+Requested change: Use the same font size for the text of all buttons.
+ Buttons on the Library page. 
+
+Buttons on the Library page.
+15. Grid width on the library policies page
+Page: Library rules page (vmls.edu.in/library-rules)
+Requested change: Make the grid length similar to the section above it.
+ Library policies page. 
+
+Library policies page.
+16. Moot Court: relevant pictures
+Page: Moot Court page (vmls.edu.in/moot-court)
+Requested change: Use relevant pictures for the cards. For Technological Advancements, use an image that highlights the camera at the top. For Community Engagement, use pictures from events that took place there.
+ Moot Court page. 
+
+Moot Court page.
+17. Hostel: dining and gym pictures
+Page: Hostel page (vmls.edu.in/hostel)
+Requested change: As on the Moot Court page, use pictures of the actual dining area and the gym for the Modern Dining and Recreation Hub cards.
+ Exclusive Amenities section on the Hostel page. 
+
+Exclusive Amenities section on the Hostel page.
+Leadership and faculty
+18. Mentoring Committee: recent meeting pictures
+Page: Mentoring Committee page (vmls.edu.in/mentoring-committee)
+Requested change: Add recent pictures of mentor meetings.
+ Mentoring Committee page. 
+
+Mentoring Committee page.
+19. Latest News and Events: check and update
+Page: Latest News and Events section
+Requested change: Cross-check each news item and event and make sure the section is up to date.
+Added while compiling: the newest item shown is dated January 15, 2025, and the photo on the third card carries a GPS stamp dated 19/10/23 although the card is dated September 10, 2024.
+ Latest News and Events section. 
+
+Latest News and Events section.
+20. Leadership pages: left alignment
+Page: Chancellor, Executive Dean and Founder pages
+Requested change: Left-align all content on the Chancellor page. The same applies to the Executive Dean page.
+ Chancellor page (vmls.edu.in/chancellor). 
+
+Chancellor page (vmls.edu.in/chancellor).
+ Executive Dean page (vmls.edu.in/dean). 
+
+Executive Dean page (vmls.edu.in/dean).
+ Founder page (vmls.edu.in/founder), supplementary screenshot. 
+
+Founder page (vmls.edu.in/founder), supplementary screenshot.
+21. Faculty Achievements page
+Page: Faculty Achievements page (vmls.edu.in/faculty-achievements)
+Requested change: List the achievements made by the faculty and promote them here.
+ Faculty Achievements page. 
+
+Faculty Achievements page.
+22. Guest Lecturers page: photo crop
+Page: Guest Lecturers page (vmls.edu.in/guest-lecturers)
+Issue: In the photo for the 2026 lecture the speaker is cropped at the top.
+Requested change: Change the picture, or tilt it down a bit.
+ Guest Lecturers page. 
+
+Guest Lecturers page.
+Student life
+23. Campus Life: new images and gallery
+Page: Campus Life page (vmls.edu.in/campus-life)
+Requested change: Add new images on the page and add a gallery further down the page.
+ Campus Life page. 
+
+Campus Life page.
+24. Clubs: authority and student in charge
+Page: Clubs page (vmls.edu.in/student-clubs)
+Requested change: As on the committee pages, please add faculty who is in charge of the club and students in charge of that club and activities schedule (eg: Friday 3:30 pm to 4:30 pm reading club)
+ Clubs at VMLS page. 
+
+Clubs at VMLS page.
+Navigation and images
+25. Admission and Academics share a landing page
+Page: Main menu
+Requested change: Explain why Admission and Academics lead to the same landing page, and separate them if they should not.
+ Main menu with Academics expanded (mobile width). 
+
+Main menu with Academics expanded (mobile width).
+26. Page-title images sharp on some pages, pixelated on others
+Page: Page title (hero) sections across the site, example: Blogs (vmls.edu.in/blogs)
+Issue: The same image looks high quality in some page-title sections and pixelated in others.
+Requested change: Use properly sized, high-resolution versions of these images in every page-title section.
+ Blogs page title section. 
+
+Blogs page title section.
+27. VMRF logo link in the header
+Page: Site header (all pages)
+Issue: The VMRF logo in the header does not lead to the VMRF website.
+Requested change: Link the VMRF logo in the header to the home page of the VMRF website.
+ Site header with the VMRF logo. 
+
+Site header with the VMRF logo.
+28. Programme buttons: link to the admissions registration page
+Page: Admissions pages, for example Undergraduate (vmls.edu.in/admissions/llb), and the PG admissions page
+Issue: The programme buttons lead to the blog.
+Requested change: Link each programme button to the Apply Now registration page (https://admissions.vmls.edu.in/#register). Do the same on the PG page, so that each PG programme button leads to the PG registration page.
+ Undergraduate Law Programmes buttons on the admissions page. 
+
+Undergraduate Law Programmes buttons on the admissions page.
+Faculty and student support
+29. Uniform presentation of faculty qualifications
+Page: Faculty page (Core Faculty section)
+Issue: Faculty qualifications are not presented uniformly, and no qualification is shown for the Executive Dean.
+Requested change: Add the Executive Dean’s qualifications and present the qualifications of all faculty members in one uniform format.
+ Core Faculty section on the Faculty page. 
+
+Core Faculty section on the Faculty page.
+30. Counsellor’s title
+Page: Student Affairs page (Student Support and Counselling section)
+Issue: The counsellor is listed as “Dr. Saranya”, but she has not yet completed her PhD.
+Requested change: Change the title to “Ms. Saranya Ganesan”.
+ Student Support and Counselling section. 
+
+Student Support and Counselling section.
+VMLS Website Review – Feedback and Change Requests        Page

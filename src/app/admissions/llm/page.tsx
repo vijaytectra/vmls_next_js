@@ -118,10 +118,10 @@ export default function LLMAdmissionsPage() {
             {/* Polished Flat Programme Buttons */}
             <div className="grid grid-cols-2 gap-3 md:flex md:flex-wrap md:justify-center md:gap-6">
               {[
-                { name: 'LL.M. in Corporate and Financial Laws', href: '/blogs/llm-in-corporate-financial-laws' },
-                { name: 'LL.M. in Commercial Dispute Resolution', href: '/blogs/llm-in-commercial-dispute-resolution' },
-                { name: 'LL.M. IN Criminal Law and Practice', href: '/blogs/llm-in-criminal-law-and-practice' },
-                { name: 'LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights', href: '/blogs/llm-in-artificial-intelligence-emerging-technologies-and-intellectual-property-rights' }
+                { name: 'LL.M. in Corporate and Financial Laws', href: 'https://admissions.vmls.edu.in/#register' },
+                { name: 'LL.M. in Commercial Dispute Resolution', href: 'https://admissions.vmls.edu.in/#register' },
+                { name: 'LL.M. IN Criminal Law and Practice', href: 'https://admissions.vmls.edu.in/#register' },
+                { name: 'LL.M. In Artificial Intelligence, Emerging Technologies and Intellectual Property Rights', href: 'https://admissions.vmls.edu.in/#register' }
               ].map((prog) => (
                 <Link
                   key={prog.name}

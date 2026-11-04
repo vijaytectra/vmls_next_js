@@ -29,7 +29,7 @@ export const infrastructureItems: InfrastructureItem[] = [
       "The main building of VMLS stands as a striking example of modern architecture, where functionality meets aesthetic precision.",
     href: "/main-building",
     video: "/videos/corridor.mp4",
-    image: "/images/mb1.webp",
+    image: "/images/vmls/frame-1@3x.webp",
   },
   {
     title: "Library",

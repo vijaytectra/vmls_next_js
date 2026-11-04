@@ -88,7 +88,7 @@ export default function GuestLecturersPage() {
               alt="Guest Lecturers at VMLS"
               fill
               priority
-              className="object-cover object-center"
+              className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 55vw"
             />
             <div className="absolute inset-0 bg-black/15" />

@@ -71,24 +71,24 @@ export default function DeanPage() {
             </div>
           </div>
 
-          <div className="flex-1 order-2 flex flex-col justify-center items-center text-center min-w-0 w-full">
-            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-2 md:mb-3 text-center">
+          <div className="flex-1 order-2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left min-w-0 w-full">
+            <h3 className="text-[#a31f34] uppercase tracking-[0.2em] text-xs md:text-sm font-bold mb-2 md:mb-3 text-center lg:text-left">
               Leadership
             </h3>
-            <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-3 md:mb-4 leading-tight text-center">
+            <h1 className="font-playfair text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-3 md:mb-4 leading-tight text-center lg:text-left">
               Mr. Siddharth Raja
             </h1>
 
-            <div className="space-y-4 md:space-y-6 w-full flex flex-col items-center text-center">
+            <div className="space-y-4 md:space-y-6 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
               <div>
-                <h4 className="font-inter text-lg md:text-2xl font-bold tracking-tight text-[#a31f34] mb-2 text-center">
+                <h4 className="font-inter text-lg md:text-2xl font-bold tracking-tight text-[#a31f34] mb-2 text-center lg:text-left">
                   Executive Dean
                 </h4>
-                <ul className="space-y-2 text-center">
+                <ul className="space-y-2 text-center lg:text-left">
                   {qualifications.map((item) => (
                     <li
                       key={item}
-                      className="font-inter text-base md:text-lg text-[#a31f34] leading-relaxed text-center"
+                      className="font-inter text-base md:text-lg text-[#a31f34] leading-relaxed text-center lg:text-left"
                     >
                       {item}
                     </li>

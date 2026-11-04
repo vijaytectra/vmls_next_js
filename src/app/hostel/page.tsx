@@ -80,7 +80,7 @@ export default function HostelPage() {
               
               <div className="space-y-6 font-inter text-gray-700 leading-relaxed text-left text-lg">
                 <p>
-                  We provide a comfortable and secure student environment. Our hostel offers various room categories to suit your preferences, including triple, and four-sharing room occupancy. You can choose between rooms with attached baths for added privacy or rooms with common bath facilities. Our commitment to your well-being extends beyond accommodation. The campus has high-speed Wi-Fi, student Safety is our top priority, with 24x7 security personnel and surveillance systems in place. We also have an in-house doctor on call to address any health concerns promptly. To satisfy your culinary needs, a food court is conveniently located within the campus. Additionally, an on-site ATM is available for your banking convenience.
+                  We provide a comfortable and secure student environment. Our hostel offers various room categories to suit your preferences: Single and Double occupancy rooms for Girls; Double and triple occupancy rooms for Boys. You can choose between rooms with attached baths for added privacy or rooms with common bath facilities. Our commitment to your well-being extends beyond accommodation. The campus has high-speed Wi-Fi, student Safety is our top priority, with 24x7 security personnel and surveillance systems in place. We also have an in-house doctor on call to address any health concerns promptly. To satisfy your culinary needs, a food court is conveniently located within the campus. Additionally, an on-site ATM is available for your banking convenience.
                 </p>
 
                 <div className="space-y-5">
@@ -128,12 +128,12 @@ export default function HostelPage() {
                 {
                   title: "Modern Dining",
                   desc: "A spacious food court offering a variety of nutritious culinary options prepared with the highest hygiene standards.",
-                  image: "/images/hostel3.webp"
+                  image: "/images/foodc2.webp"
                 },
                 {
                   title: "Recreation Hub",
                   desc: "Indoor games and a well-equipped gymnasium to ensure students maintain a balanced and active lifestyle.",
-                  image: "/images/hostel2.webp"
+                  image: "/images/gym-placeholder.jpg"
                 }
               ].map((feature, i) => (
                 <div key={i} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col border border-gray-100">

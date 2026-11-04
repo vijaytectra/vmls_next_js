@@ -40,7 +40,7 @@ export default function MainBuildingPage() {
             </div>
             <div className="hidden lg:block lg:w-[55%] relative min-h-[300px]">
               <Image
-                src="/images/mb1.webp"
+                src="/images/vmls/frame-1@3x.webp"
                 alt="VMLS Main Building"
                 fill
                 priority
@@ -107,7 +107,7 @@ export default function MainBuildingPage() {
                 {
                   title: "Modern Facade",
                   desc: "A unique blend of traditional brown brick and modern geometric rectangular structures signifying vision.",
-                  image: "/images/mb1.webp"
+                  image: "/images/vmls/frame-1@3x.webp"
                 },
                 {
                   title: "Aesthetic Precision",

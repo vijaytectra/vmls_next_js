@@ -181,6 +181,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     847,
     444
   ],
+  "/images/blogs/effective-law-prep-tips__essential-tips-for-effective-law-prep.png": [
+    847,
+    444
+  ],
   "/images/blogs/empowering-future-advocates-clinical-legal-education-initiative-at-vmls__12.webp": [
     1200,
     628
@@ -295,6 +299,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
   ],
   "/images/blogs/law-entrance-exams-in-india-2026-complete-guide__wp.png": [
     848,
+    444
+  ],
+  "/images/blogs/law-full-form__understanding-the-full-form-of-law.png": [
+    847,
     444
   ],
   "/images/blogs/law-in-practice-civil-procedure-learning-in-chennai-through-clinical-legal-education__civil-procedure.webp": [
@@ -778,6 +786,10 @@ export const OG_IMAGE_SIZES: Record<string, [number, number]> = {
     556
   ],
   "/images/iqac/iqac-1.webp": [
+    1200,
+    800
+  ],
+  "/images/iqac/iqac-2.webp": [
     1200,
     800
   ],

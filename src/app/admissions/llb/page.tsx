@@ -11,10 +11,10 @@ export const metadata = pageMetadata("/admissions/llb");
 
 export default function LLBAdmissionsPage() {
   const programmes = [
-    { name: "LL.B. (Hons.)", href: "/blogs/three-year-llb-hons" },
-    { name: "B.A. LL.B. (Hons.)", href: "/blogs/5-year-ba-llb-hons" },
-    { name: "B.B.A. LL.B. (Hons.)", href: "/blogs/5-year-bba-llb-hons" },
-    { name: "B.Com. LL.B. (Hons.)", href: "/blogs/5-year-bcom-llb-hons" },
+    { name: "LL.B. (Hons.)", href: "https://admissions.vmls.edu.in/#register" },
+    { name: "B.A. LL.B. (Hons.)", href: "https://admissions.vmls.edu.in/#register" },
+    { name: "B.B.A. LL.B. (Hons.)", href: "https://admissions.vmls.edu.in/#register" },
+    { name: "B.Com. LL.B. (Hons.)", href: "https://admissions.vmls.edu.in/#register" },
   ];
 
   return (

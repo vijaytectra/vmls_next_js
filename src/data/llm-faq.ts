@@ -43,5 +43,17 @@ export const LLM_FAQ: FaqItem[] = [
     {
       q: "How can I get more information or ask further questions about the VMLS LL.M. program?",
       a: "Prospective applicants can visit the official Vinayaka Mission's Law School website or contact the admissions team via email or phone for more personalized information."
+    },
+    {
+      q: "What are the hostel rules and regulations?",
+      a: "The hostel enforces a strict code of conduct, including fixed curfew timings, zero tolerance for ragging, and mandatory biometric attendance. Separate accommodations are provided for male and female students."
+    },
+    {
+      q: "Is there a prescribed dress code for students?",
+      a: "Yes, students are expected to dress professionally. On specific days, moot court sessions, and formal events, students must wear the designated formal attire (white shirt, black trousers/skirt, and black blazer)."
+    },
+    {
+      q: "What local transportation options are available?",
+      a: "VMLS provides dedicated bus services covering major routes in the city. The campus is also well-connected by public transport, including local buses and nearby railway stations."
     }
   ];

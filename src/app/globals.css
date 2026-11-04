@@ -1061,3 +1061,12 @@ main > div > .below-fold,
     animation: vertical-btn-shimmer 2.8s ease-in-out infinite;
   }
 }
+
+/* Fix for Bug 10: Left align all list items in blog/event details */
+.blog-article-content .blog-html ul,
+.blog-article-content .blog-html li,
+.blog-article-content .blog-html .info-list,
+.blog-article-content .blog-html .info-list li {
+  text-align: left !important;
+}
+

@@ -106,7 +106,7 @@ export default function LibraryPage() {
           </div>
           <div className="hidden lg:block lg:w-[55%] relative min-h-[300px]">
             <Image
-              src="/images/library-header-img.webp"
+              src="/images/library/library1.webp"
               alt="VMLS Library"
               fill
               priority
@@ -284,8 +284,8 @@ export default function LibraryPage() {
             <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
               <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">Facilities</h3>
               <div className="grid grid-cols-2 gap-3">
-                <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
-                <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
+                <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-sm font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
+                <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-sm font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
               </div>
             </div>
 
@@ -317,7 +317,7 @@ export default function LibraryPage() {
                   'Book Hold',
                   'New Arrivals'
                 ].map((label) => (
-                  <Link key={label} href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-[#800000] text-white text-[11px] md:text-[10px] font-bold text-center rounded shadow-sm hover:bg-[#a31f34] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-[50px]">
+                  <Link key={label} href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-[#800000] text-white text-xs font-bold text-center rounded shadow-sm hover:bg-[#a31f34] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-[50px]">
                     {label}
                   </Link>
                 ))}
@@ -387,7 +387,7 @@ export default function LibraryPage() {
                   'Remote Access', 'Inter-Library Loan', 'Book Display', 'Thematic Display',
                   'Career Corner', 'Excellence Collection', 'Textbook Procurement', 'Newspaper Service', 'Reprography Service'
                 ].map((service) => {
-                  const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-[11px] md:text-xs font-bold normal-case text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
+                  const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-xs md:text-sm font-bold normal-case text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
                   
                   if (service === 'Reference Service') {
                     return (
@@ -659,8 +659,8 @@ export default function LibraryPage() {
               <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
                 <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">Facilities</h3>
                 <div className="grid grid-cols-2 gap-3">
-                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
-                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
+                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-sm font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
+                  <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-sm font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
                 </div>
               </div>
 
@@ -678,7 +678,7 @@ export default function LibraryPage() {
                     'Remote Access', 'Inter-Library Loan', 'Book Display', 'Thematic Display',
                     'Career Corner', 'Excellence Collection', 'Textbook Procurement', 'Newspaper Service', 'Reprography Service'
                   ].map((service) => {
-                    const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-[11px] md:text-xs font-bold normal-case text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
+                    const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-xs md:text-sm font-bold normal-case text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
                     
                     if (service === 'Reference Service') {
                       return (
@@ -945,7 +945,7 @@ export default function LibraryPage() {
                     'Book Hold',
                     'New Arrivals'
                   ].map((label) => (
-                    <Link key={label} href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-[#800000] text-white text-[11px] md:text-[10px] font-bold text-center rounded shadow-sm hover:bg-[#a31f34] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-[50px]">
+                    <Link key={label} href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-[#800000] text-white text-xs font-bold text-center rounded shadow-sm hover:bg-[#a31f34] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-[50px]">
                       {label}
                     </Link>
                   ))}
@@ -1158,8 +1158,8 @@ export default function LibraryPage() {
                 <div className="bg-white p-6 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] border-t-4 border-[#a31f34]">
                   <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-4">Facilities</h3>
                   <div className="grid grid-cols-2 gap-3">
-                    <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
-                    <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-[11px] font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
+                    <button type="button" onClick={(e) => { e.preventDefault(); setIsDigitalAccessModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-sm font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Digital Access</button>
+                    <button type="button" onClick={(e) => { e.preventDefault(); setIsDiscussionRoomsModalOpen(true); }} className="p-3 bg-[#4a5568] text-white text-sm font-bold text-center rounded hover:bg-[#1a1a1a] hover:-translate-y-1 hover:shadow-md transition-all duration-300">Discussion Rooms</button>
                   </div>
                 </div>
               </div>
@@ -1299,7 +1299,7 @@ export default function LibraryPage() {
                     'Book Hold',
                     'New Arrivals'
                   ].map((label) => (
-                    <Link key={label} href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-[#800000] text-white text-[11px] md:text-[10px] font-bold text-center rounded shadow-sm hover:bg-[#a31f34] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-[50px]">
+                    <Link key={label} href="https://opac.vmls.edu.in/" target="_blank" rel="noopener noreferrer" className="py-3 px-3 bg-[#800000] text-white text-xs font-bold text-center rounded shadow-sm hover:bg-[#a31f34] hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center min-h-[50px]">
                       {label}
                     </Link>
                   ))}
@@ -1320,7 +1320,7 @@ export default function LibraryPage() {
                     'Remote Access', 'Inter-Library Loan', 'Book Display', 'Thematic Display',
                     'Career Corner', 'Excellence Collection', 'Textbook Procurement', 'Newspaper Service', 'Reprography Service'
                   ].map((service) => {
-                    const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-[11px] md:text-xs font-bold normal-case text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
+                    const buttonStyles = "p-2 bg-[#1a1a1a] text-white text-xs md:text-sm font-bold normal-case text-center rounded hover:bg-[#4a5568] hover:scale-[1.03] transition-all duration-300 flex items-center justify-center min-h-[45px] shadow-sm hover:shadow-md leading-tight";
                     
                     if (service === 'Reference Service') {
                       return (

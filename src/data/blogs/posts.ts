@@ -10,6 +10,8 @@ export interface BlogPostMeta {
 }
 
 export const ALL_BLOG_SLUGS: string[] = [
+  "effective-law-prep-tips",
+  "law-full-form",
   "digital-arrest-scams-india-cyber-law-explained",
   "transition-ipc-to-bns-first-year-law-students-2026",
   "cybercrime-digital-forensics-criminal-lawyers-india",

@@ -8,7 +8,7 @@ const events = [
     description:
       "Vinayaka Mission's Law School (VMLS), in collaboration with JGLS, JGU and the Cyril Shroff Centre for AI, Law and Regulation, hosted a National Seminar on AI, Law & Regulation in Chennai.",
     image: "/images/AI/national-seminar-on-ai-01.webp",
-    linkText: "Read Event Report",
+    linkText: "Read More",
     link: "/news/national-seminar-on-ai",
   },
   {
@@ -29,6 +29,22 @@ const events = [
     linkText: "Read More",
     link: "/news/copyright-and-emerging-issues-due-to-artificial-intelligence",
   },
+  {
+    date: "January 21, 2026",
+    title: "Vinayaka Mission’s Law School Signs International MoU with University of San Diego",
+    description: "",
+    image: "/images/blogs/vinayaka-missions-law-school-signs-international-mou-with-university-of-san-diego-expanding-global-learning-opportunities__wp.jpeg",
+    linkText: "Read More",
+    link: "/blogs/vinayaka-missions-law-school-signs-international-mou-with-university-of-san-diego-expanding-global-learning-opportunities",
+  },
+  {
+    date: "August 9, 2025",
+    title: "Vinayaka Mission's Law School (VMLS) Hosts Open Day 2025",
+    description: "",
+    image: "/images/blogs/vmls-open-day-2025__fix.webp",
+    linkText: "Read More",
+    link: "/blogs/vmls-open-day-2025",
+  },
 ];
 
 export default function NewsEventsSection() {
@@ -45,8 +61,8 @@ export default function NewsEventsSection() {
             <div className="relative group">
               <div className="relative w-full mb-8 md:mb-10 overflow-hidden rounded-sm shadow-lg bg-[#1a1a1a]">
                 <Image
-                  src="/images/newsletter/fundamentum-issue-13-july-september-2026-banner.jpg"
-                  alt="FUNDAMENTUM newsletter Issue 13, July–September 2026 — Vinayaka Mission's Law School"
+                  src="/images/newsletter/fundamentum-issue-14-august-september-2026-banner.jpg"
+                  alt="FUNDAMENTUM newsletter Issue 14, August–September 2026 — Vinayaka Mission's Law School"
                   width={1024}
                   height={811}
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -57,10 +73,10 @@ export default function NewsEventsSection() {
               
               <div className="space-y-6">
                 <p className="font-inter text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em]">
-                  Issue No. 13 · July – September 2026
+                  Issue No. 14 · August – September 2026
                 </p>
                 <h3 className="font-playfair text-3xl md:text-5xl text-gray-900 leading-[1.1] mb-6">
-                  FUNDAMENTUM: July to September 2026
+                  FUNDAMENTUM: August to September 2026
                 </h3>
                 <p className="font-inter text-lg text-gray-700 leading-relaxed max-w-2xl text-left">
                   Fundamentum is the official monthly newsletter of Vinayaka Mission&apos;s Law School, 
@@ -69,7 +85,7 @@ export default function NewsEventsSection() {
                 </p>
                 <div className="flex flex-row items-stretch gap-3 sm:gap-4 pt-8">
                   <a 
-                    href="/images/newsletter/newsletter-july-to-september-2026-en.pdf" 
+                    href="/images/newsletter/newsletter-august-to-september-2026-en.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex-1 min-w-0 h-14 px-2 sm:px-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider text-center leading-tight transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
@@ -77,7 +93,7 @@ export default function NewsEventsSection() {
                     View English Newsletter
                   </a>
                   <a 
-                    href="/images/newsletter/newsletter-july-to-september-2026-ta.pdf" 
+                    href="/images/newsletter/newsletter-august-to-september-2026-ta.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex-1 min-w-0 h-14 px-2 sm:px-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider text-center leading-tight transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
@@ -90,10 +106,10 @@ export default function NewsEventsSection() {
           </div>
 
           {/* Right Column: Events List */}
-          <div className="lg:w-[55%] space-y-16">
+          <div className="lg:w-[55%] space-y-8">
             {events.map((event, index) => (
-              <div key={index} className="flex flex-col md:flex-row gap-10 group">
-                <div className="md:w-[40%] aspect-video relative overflow-hidden bg-gray-100 shadow-md">
+              <div key={index} className="flex flex-col md:flex-row gap-6 group">
+                <div className="md:w-[35%] aspect-video relative overflow-hidden bg-gray-100 shadow-md">
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -102,21 +118,17 @@ export default function NewsEventsSection() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="md:w-[60%] space-y-4">
-                  <p className="font-inter text-sm text-[#a31f34] font-bold uppercase tracking-wider">
+                <div className="md:w-[65%] space-y-2">
+                  <p className="font-inter text-xs text-[#a31f34] font-bold uppercase tracking-wider">
                     {event.date}
                   </p>
-                  <h4 className="font-playfair text-xl md:text-2xl text-gray-900 leading-tight group-hover:text-[#a31f34] transition-colors">
+                  <h4 className="font-playfair text-lg md:text-xl text-gray-900 leading-tight group-hover:text-[#a31f34] transition-colors">
                     {event.title}
                   </h4>
-                  {/* "Read More" on its own describes nothing. The headline is
-                      appended as screen-reader-only text rather than an
-                      aria-label, because crawlers and the Lighthouse link-text
-                      audit read the visible text, not the label. */}
                   <Link href={event.link}>
                     <button
                       tabIndex={-1}
-                      className="mt-4 px-6 py-2.5 border-2 border-[#a31f34] text-[#a31f34] font-inter text-xs font-bold uppercase tracking-widest transition-all hover:bg-[#a31f34]/5"
+                      className="mt-2 px-5 py-2 border-2 border-[#a31f34] text-[#a31f34] font-inter text-xs font-bold uppercase tracking-widest transition-all hover:bg-[#a31f34]/5"
                     >
                       {event.linkText}
                       <span className="sr-only"> about {event.title}</span>

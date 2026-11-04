@@ -29,8 +29,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-16 mb-6 md:mb-12">
           
           {/* Brand Column */}
-          <div className="md:col-span-4 space-y-6 md:space-y-8 text-left flex flex-col items-start">
-            <div className="space-y-4 text-left">
+          <div className="md:col-span-4 space-y-6 md:space-y-8 text-center flex flex-col items-center">
+            <div className="space-y-4 text-center flex flex-col items-center">
               <Image 
                 src="/images/footer/vmls-footer.webp" 
                 alt="VMLS Logo" 
@@ -41,13 +41,13 @@ export default function Footer() {
                 loading="lazy"
                 decoding="async"
               />
-              <p className="font-playfair text-[#a31f34] text-xl sm:text-2xl lg:text-3xl italic text-left">
+              <p className="font-playfair text-[#a31f34] text-xl sm:text-2xl lg:text-3xl italic text-center">
                 Law School of the Future
               </p>
             </div>
             
             {/* Social Icons */}
-            <div className="flex flex-nowrap items-center gap-1.5 sm:gap-2.5 lg:gap-4 justify-start whitespace-nowrap">
+            <div className="flex flex-nowrap items-center gap-1.5 sm:gap-2.5 lg:gap-4 justify-center whitespace-nowrap">
               {[
                 { 
                   name: "Facebook", 
