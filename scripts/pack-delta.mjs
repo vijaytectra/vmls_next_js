@@ -94,13 +94,14 @@ if (upload.length) {
   // macOS bsdtar: skip AppleDouble / provenance xattrs. Without this, tar can
   // emit `tar: (null)` and exit 1 after writing, and the archive gains ._ twins
   // that break Linux/cPanel extraction.
+  const macFlags =
+    process.platform === "darwin"
+      ? ["--no-xattrs", "--no-mac-metadata", "--no-acls", "--no-fflags"]
+      : [];
   execFileSync(
     "tar",
     [
-      "--no-xattrs",
-      "--no-mac-metadata",
-      "--no-acls",
-      "--no-fflags",
+      ...macFlags,
       "-czf",
       archiveAbs,
       "-T",

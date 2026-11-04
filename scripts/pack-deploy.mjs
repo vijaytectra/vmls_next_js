@@ -97,13 +97,14 @@ function writeArchive(name, files) {
   const archiveAbs = path.resolve(DEST, `${name}.tar.gz`);
   // macOS bsdtar: skip AppleDouble / provenance xattrs (avoids `tar: (null)`
   // exit 1 and ._ companions that break Linux/cPanel extraction).
+  const macFlags =
+    process.platform === "darwin"
+      ? ["--no-xattrs", "--no-mac-metadata", "--no-acls", "--no-fflags"]
+      : [];
   execFileSync(
     "tar",
     [
-      "--no-xattrs",
-      "--no-mac-metadata",
-      "--no-acls",
-      "--no-fflags",
+      ...macFlags,
       "-czf",
       archiveAbs,
       "-T",

@@ -284,6 +284,22 @@ export const PAGES = {
       { name: "Achievements" },
     ],
   },
+  "/research": {
+    pageType: "faculty-index",
+    title: "Research & Publications – VMLS Chennai",
+    description:
+      "Explore SCOPUS-indexed research publications, book chapters, conference proceedings and legal scholarship by faculty members at Vinayaka Mission's Law School.",
+    ogTitle: "VMLS Faculty Research & SCOPUS Publications",
+    ogDescription:
+      "SCOPUS-indexed research publications, articles, book chapters and conference papers from VMLS faculty.",
+    image: "/images/faculty/live/DSC00716_19.webp",
+    imageAlt: "VMLS faculty research and SCOPUS publications",
+    breadcrumb: [
+      { name: "Home", path: "/" },
+      { name: "Faculty", path: "/faculty-profiles" },
+      { name: "Research & Publications" },
+    ],
+  },
   "/guest-lecturers": {
     pageType: "faculty-index",
     title: "Guest Lecturers & Visiting Faculty – VMLS Chennai",

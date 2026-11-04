@@ -54,6 +54,7 @@ const menuItems = [
     subItems: [
       { name: "Faculty Profiles", href: "/faculty-profiles" },
       { name: "Faculty Achievements", href: "/faculty-achievements" },
+      { name: "Research & Publications", href: "/research" },
       { name: "Guest Lecturers", href: "/guest-lecturers" },
     ]
   },
