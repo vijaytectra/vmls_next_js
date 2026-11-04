@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { pageMetadata } from "@/lib/seo-pages";
 import PageSchema from "@/components/seo/PageSchema";
+import { blogPosts } from "@/data/blogs/posts";
 
 export const metadata = pageMetadata("/news/vmls-fest-2025");
 

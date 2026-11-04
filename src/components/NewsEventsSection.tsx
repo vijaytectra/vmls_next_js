@@ -61,8 +61,8 @@ export default function NewsEventsSection() {
             <div className="relative group">
               <div className="relative w-full mb-8 md:mb-10 overflow-hidden rounded-sm shadow-lg bg-[#1a1a1a]">
                 <Image
-                  src="/images/newsletter/fundamentum-issue-13-july-september-2026-banner.jpg"
-                  alt="FUNDAMENTUM newsletter Issue 13, July–September 2026 — Vinayaka Mission's Law School"
+                  src="/images/newsletter/fundamentum-issue-14-august-september-2026-banner.jpg"
+                  alt="FUNDAMENTUM newsletter Issue 14, August–September 2026 — Vinayaka Mission's Law School"
                   width={1024}
                   height={811}
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -73,10 +73,10 @@ export default function NewsEventsSection() {
               
               <div className="space-y-6">
                 <p className="font-inter text-sm text-[#a31f34] font-bold uppercase tracking-[0.2em]">
-                  Issue No. 13 · July – September 2026
+                  Issue No. 14 · August – September 2026
                 </p>
                 <h3 className="font-playfair text-3xl md:text-5xl text-gray-900 leading-[1.1] mb-6">
-                  FUNDAMENTUM: July to September 2026
+                  FUNDAMENTUM: August to September 2026
                 </h3>
                 <p className="font-inter text-lg text-gray-700 leading-relaxed max-w-2xl text-left">
                   Fundamentum is the official monthly newsletter of Vinayaka Mission&apos;s Law School, 
@@ -85,7 +85,7 @@ export default function NewsEventsSection() {
                 </p>
                 <div className="flex flex-row items-stretch gap-3 sm:gap-4 pt-8">
                   <a 
-                    href="/images/newsletter/newsletter-july-to-september-2026-en.pdf" 
+                    href="/images/newsletter/newsletter-august-to-september-2026-en.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex-1 min-w-0 h-14 px-2 sm:px-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider text-center leading-tight transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
@@ -93,7 +93,7 @@ export default function NewsEventsSection() {
                     View English Newsletter
                   </a>
                   <a 
-                    href="/images/newsletter/newsletter-july-to-september-2026-ta.pdf" 
+                    href="/images/newsletter/newsletter-august-to-september-2026-ta.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex-1 min-w-0 h-14 px-2 sm:px-4 bg-[#800000] text-white border-2 border-[#800000] font-inter text-xs sm:text-sm font-bold uppercase tracking-wide sm:tracking-wider text-center leading-tight transition-all duration-300 hover:bg-white hover:text-[#800000] hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
