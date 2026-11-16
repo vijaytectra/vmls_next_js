@@ -53,17 +53,21 @@ DirectoryIndex index.html index.php
   RewriteRule "^sitemap(-gsc)?\.xml$" "https://vmls.edu.in/sitemap$1.xml" [R=301,L]
 
   # ---------------------------------------------------------------------
-  # Canonical host. Left commented out deliberately: switching these on
-  # changes which hostname the site answers on, so enable them only when
-  # the DNS and SSL for that host are confirmed.
+  # Canonical host: Force HTTPS and non-www apex domain (https://vmls.edu.in)
+  # DNS and SSL are confirmed. Consolidates http:// and www. into apex.
   # ---------------------------------------------------------------------
-  # RewriteCond %{HTTPS} off
-  # RewriteRule ^(.*)$ https://vmls.edu.in/$1 [R=301,L]
-  # RewriteCond %{HTTP_HOST} ^www\.vmls\.edu\.in$ [NC]
-  # RewriteRule ^(.*)$ https://vmls.edu.in/$1 [R=301,L]
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\.vmls\.edu\.in$ [NC]
+  RewriteRule ^(.*)$ https://vmls.edu.in/$1 [R=301,L]
 
   # ---------------------------------------------------------------------
-  # 301s from the previous static site. 500 rules.
+  # Clean homepage: redirect direct requests for /index.html to /
+  # ---------------------------------------------------------------------
+  RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+  RewriteRule "^index.html$" "https://vmls.edu.in/" [R=301,L]
+
+  # ---------------------------------------------------------------------
+  # 301s from the previous static site. 505 rules.
   # These must stay ABOVE the extensionless-URL rewrite below.
   # ---------------------------------------------------------------------
   RewriteRule "^faculty$" "/faculty-profiles" [R=301,L,NE]
@@ -153,6 +157,11 @@ DirectoryIndex index.html index.php
   RewriteRule "^terms$" "/terms-conditions" [R=301,L,NE]
   RewriteRule "^home$" "/" [R=301,L,NE]
   RewriteRule "^home/$" "/" [R=301,L,NE]
+  RewriteRule "^iqac\.html$" "/iqac" [R=301,L,NE]
+  RewriteRule "^board-of-advisors\.html$" "/board-of-advisors" [R=301,L,NE]
+  RewriteRule "^faculty-profiles\.html$" "/faculty-profiles" [R=301,L,NE]
+  RewriteRule "^campus-life\.html$" "/campus-life" [R=301,L,NE]
+  RewriteRule "^research\.html$" "/research" [R=301,L,NE]
   RewriteRule "^blogs/corporate-law-courses-in-india-degrees-eligibility-salary\.html$" "/blogs/corporate-law-courses-in-india-degrees-eligibility-salary" [R=301,L,NE]
   RewriteRule "^blogs/criminal-law-in-chennai-curriculum-degrees-careers\.html$" "/blogs/criminal-law-in-chennai-curriculum-degrees-careers" [R=301,L,NE]
   RewriteRule "^blogs/india-anti-paper-leak-law-2026-explained\.html$" "/blogs/india-anti-paper-leak-law-2026-explained" [R=301,L,NE]
@@ -569,7 +578,17 @@ DirectoryIndex index.html index.php
   RewriteRule "^assets/images/newsletter/Newsletter_April_to_May_2026 \(T\)\.pdf$" "/images/newsletter/newsletter-april-to-may-2026-ta.pdf" [R=301,L,NE]
   RewriteRule "^public/newsletter/NewsLetterNovemberToDecember-2025 \(Tamil\)\.pdf$" "/images/newsletter/NewsLetterNovemberToDecember-2025 (Tamil).pdf" [R=301,L,NE]
 
+  # ---------------------------------------------------------------------
+  # Clean URLs: Strip .html extension from direct requests
+  # (Runs after specific 301s above. Uses %{THE_REQUEST} so internal rewrites
+  # to .html for extensionless routes never trigger this redirect)
+  # ---------------------------------------------------------------------
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteCond %{REQUEST_URI} !^/_next/
+  RewriteRule "^(.+?)\.html$" "https://vmls.edu.in/$1" [R=301,L]
+
   # Legacy /blog → /blogs (optional trailing slash; runs after exact rules)
+  RewriteRule "^blog/(.+?)/feed/?$" "/blogs/$1" [R=301,L,NE]
   RewriteRule "^blog/(category|tag|page|author|feed|amp|comments)(/.*)?/?$" "/blogs" [R=301,L,NE]
   RewriteCond %{DOCUMENT_ROOT}/blogs/$1.html -f
   RewriteRule "^blog/(.+?)/?$" "/blogs/$1" [R=301,L,NE]

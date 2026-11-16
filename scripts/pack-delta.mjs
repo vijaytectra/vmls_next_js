@@ -98,8 +98,14 @@ if (upload.length) {
     process.platform === "darwin"
       ? ["--no-xattrs", "--no-mac-metadata", "--no-acls", "--no-fflags"]
       : [];
+  // Prefer Windows built-in System32 bsdtar to prevent Git's GNU tar from treating
+  // Windows drive letters (C:\...) as remote SSH hosts and failing.
+  const tarBin =
+    process.platform === "win32" && fs.existsSync("C:\\Windows\\System32\\tar.exe")
+      ? "C:\\Windows\\System32\\tar.exe"
+      : "tar";
   execFileSync(
-    "tar",
+    tarBin,
     [
       ...macFlags,
       "-czf",

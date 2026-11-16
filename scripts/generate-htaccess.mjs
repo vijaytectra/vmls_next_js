@@ -151,14 +151,18 @@ DirectoryIndex index.html index.php
   RewriteRule "^sitemap(-gsc)?\\.xml$" "https://vmls.edu.in/sitemap$1.xml" [R=301,L]
 
   # ---------------------------------------------------------------------
-  # Canonical host. Left commented out deliberately: switching these on
-  # changes which hostname the site answers on, so enable them only when
-  # the DNS and SSL for that host are confirmed.
+  # Canonical host: Force HTTPS and non-www apex domain (https://vmls.edu.in)
+  # DNS and SSL are confirmed. Consolidates http:// and www. into apex.
   # ---------------------------------------------------------------------
-  # RewriteCond %{HTTPS} off
-  # RewriteRule ^(.*)$ https://vmls.edu.in/$1 [R=301,L]
-  # RewriteCond %{HTTP_HOST} ^www\\.vmls\\.edu\\.in$ [NC]
-  # RewriteRule ^(.*)$ https://vmls.edu.in/$1 [R=301,L]
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\\.vmls\\.edu\\.in$ [NC]
+  RewriteRule ^(.*)$ https://vmls.edu.in/$1 [R=301,L]
+
+  # ---------------------------------------------------------------------
+  # Clean homepage: redirect direct requests for /index.html to /
+  # ---------------------------------------------------------------------
+  RewriteCond %{THE_REQUEST} \\s/+index\\.html[\\s?] [NC]
+  RewriteRule "^index\.html$" "https://vmls.edu.in/" [R=301,L]
 
   # ---------------------------------------------------------------------
   # 301s from the previous static site. ${all.length} rules.
@@ -171,7 +175,17 @@ DirectoryIndex index.html index.php
 // /blogs/<slug> and then 404 — that minted GSC "Not found" URLs. Only rewrite
 // when the destination page exists; otherwise send the visitor to /blogs.
 const blogCatchAll = `
+  # ---------------------------------------------------------------------
+  # Clean URLs: Strip .html extension from direct requests
+  # (Runs after specific 301s above. Uses %{THE_REQUEST} so internal rewrites
+  # to .html for extensionless routes never trigger this redirect)
+  # ---------------------------------------------------------------------
+  RewriteCond %{THE_REQUEST} \\s/+(.+?)\\.html[\\s?] [NC]
+  RewriteCond %{REQUEST_URI} !^/_next/
+  RewriteRule "^(.+?)\\.html$" "https://vmls.edu.in/$1" [R=301,L]
+
   # Legacy /blog → /blogs (optional trailing slash; runs after exact rules)
+  RewriteRule "^blog/(.+?)/feed/?$" "/blogs/$1" [R=301,L,NE]
   RewriteRule "^blog/(category|tag|page|author|feed|amp|comments)(/.*)?/?$" "/blogs" [R=301,L,NE]
   RewriteCond %{DOCUMENT_ROOT}/blogs/$1.html -f
   RewriteRule "^blog/(.+?)/?$" "/blogs/$1" [R=301,L,NE]

@@ -443,5 +443,30 @@ export const MANUAL_REDIRECTS: Redirect[] = [
     "source": "/home/",
     "destination": "/",
     "permanent": true
+  },
+  {
+    "source": "/iqac.html",
+    "destination": "/iqac",
+    "permanent": true
+  },
+  {
+    "source": "/board-of-advisors.html",
+    "destination": "/board-of-advisors",
+    "permanent": true
+  },
+  {
+    "source": "/faculty-profiles.html",
+    "destination": "/faculty-profiles",
+    "permanent": true
+  },
+  {
+    "source": "/campus-life.html",
+    "destination": "/campus-life",
+    "permanent": true
+  },
+  {
+    "source": "/research.html",
+    "destination": "/research",
+    "permanent": true
   }
 ];
