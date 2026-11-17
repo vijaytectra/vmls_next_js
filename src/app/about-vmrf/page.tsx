@@ -175,7 +175,7 @@ export default function AboutVMRF() {
               <div className="relative aspect-square shadow-[0_15px_35px_rgba(0,0,0,0.1)] group-hover:shadow-2xl transition-all duration-300 overflow-hidden rounded-xl">
                 <Image
                   src="/images/vmrf/image-100.webp"
-                  alt="Dr. Annapoorani Ganesan"
+                  alt="Dr. Anuradha Ganesan"
                   fill
                   sizes="280px"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -183,7 +183,7 @@ export default function AboutVMRF() {
               </div>
               <div className="mt-4 text-center flex flex-col items-center">
                 <h3 className="person-card-name font-playfair text-lg md:text-[15px] lg:text-xl md:whitespace-nowrap font-bold text-[#1a1a1a] group-hover:text-[#a31f34] transition-colors !mt-0 !mb-0 !min-h-0">
-                  Dr. Annapoorani Ganesan
+                  Dr. Anuradha Ganesan
                 </h3>
                 <p className="person-card-role font-inter text-sm text-gray-500 text-center !mb-0 !mt-0 !min-h-0">Trustee</p>
               </div>
