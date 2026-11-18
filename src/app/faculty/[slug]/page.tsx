@@ -304,6 +304,7 @@ const facultyData: FacultyData[] = [
     qualifications: "LL.M in Constitutional Law & Human Rights from School of Excellence",
     image: "/images/faculty/live/DSC00643_12.webp",
     slug: "aarthy-jonathan-kennedy",
+    email: "aarthyjonathan@vmls.edu.in",
     bio: [
       "Dr. Aarthy completed her Bachelor's degree in Law under a Central Government Merit Scholarship from The Tamil Nadu Dr. Ambedkar Law University, School of Excellence in Law, and went on to pursue her Master's in Constitutional Law & Human Rights. She has also obtained an M.Sc. in Psychology from TNOU. In addition to her academic accomplishments, she co-founded Head to Heart (mental health services)."
     ]
